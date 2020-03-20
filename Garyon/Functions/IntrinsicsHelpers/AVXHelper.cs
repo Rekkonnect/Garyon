@@ -60,37 +60,11 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
 
         #region Vector256
-        #region T* -> byte*
-        public static void StoreVector256(byte* origin, byte* target, uint index)
-        {
-            if (Avx.IsSupported)
-                Avx.Store(&target[index], Avx.LoadVector256(&origin[index]));
-        }
-        #endregion
-        #region T* -> short*
-        public static void StoreVector256(short* origin, short* target, uint index)
-        {
-            if (Avx.IsSupported)
-                Avx.Store(&target[index], Avx.LoadVector256(&origin[index]));
-        }
-        #endregion
         #region T* -> int*
         public static void StoreVector256(float* origin, int* target, uint index)
         {
             if (Avx.IsSupported)
                 Avx.Store(&target[index], ConvertToVector256Int32(origin, index));
-        }
-        public static void StoreVector256(int* origin, int* target, uint index)
-        {
-            if (Avx.IsSupported)
-                Avx.Store(&target[index], Avx.LoadVector256(&origin[index]));
-        }
-        #endregion
-        #region T* -> long*
-        public static void StoreVector256(long* origin, long* target, uint index)
-        {
-            if (Avx.IsSupported)
-                Avx.Store(&target[index], Avx.LoadVector256(&origin[index]));
         }
         #endregion
         #region T* -> float*
@@ -98,11 +72,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
         {
             if (Avx.IsSupported)
                 Avx.Store(&target[index], ConvertToVector256Single(origin, index));
-        }
-        public static void StoreVector256(float* origin, float* target, uint index)
-        {
-            if (Avx.IsSupported)
-                Avx.Store(&target[index], Avx.LoadVector256(&origin[index]));
         }
         #endregion
         #region T* -> double*
@@ -127,6 +96,13 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Avx.Store(&target[index], ConvertToVector256Double(origin, index));
         }
         #endregion
+        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        public static void StoreVector256<T>(T* origin, T* target, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                Avx.Store((byte*)&target[index], Avx.LoadVector256((byte*)&origin[index]));
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
         public static void Store<TTarget, TNew>(Vector256<TTarget> vector, TTarget* target, uint index)

@@ -113,26 +113,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #endregion
 
         #region Vector128
-        #region T* -> byte*
-        public static void StoreVector128(byte* origin, byte* target, uint index)
-        {
-            if (Sse2.IsSupported)
-                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
-        }
-        #endregion
-        #region T* -> short*
-        public static void StoreVector128(short* origin, short* target, uint index)
-        {
-            if (Sse2.IsSupported)
-                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
-        }
-        #endregion
         #region T* -> int*
-        public static void StoreVector128(int* origin, int* target, uint index)
-        {
-            if (Sse2.IsSupported)
-                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
-        }
         public static void StoreVector128(float* origin, int* target, uint index)
         {
             if (Sse2.IsSupported)
@@ -142,13 +123,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
         {
             if (Sse2.IsSupported)
                 Sse2.Store(&target[index], Sse2.ConvertToVector128Int32(Sse2.LoadVector128(&origin[index])));
-        }
-        #endregion
-        #region T* -> long*
-        public static void StoreVector128(long* origin, long* target, uint index)
-        {
-            if (Sse2.IsSupported)
-                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
         }
         #endregion
         #region T* -> float*
@@ -170,6 +144,12 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
         }
         #endregion
+        public static void StoreVector128<T>(T* origin, T* target, uint index)
+            where T : unmanaged
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store((byte*)&target[index], Sse2.LoadVector128((byte*)&origin[index]));
+        }
         #endregion
 
         #region Vector64
