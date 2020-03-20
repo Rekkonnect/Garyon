@@ -1,0 +1,206 @@
+﻿#define PRAGMA
+
+using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.Intrinsics;
+using System.Runtime.Intrinsics.X86;
+
+namespace Garyon.Functions.IntrinsicsHelpers
+{
+    /// <summary>Provides helper functions for the SSE2 CPU instruction set. Every function checks whether the SSE2 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
+    public unsafe class SSE2Helper : SSEHelper
+    {
+        #region Vector128 Shuffle Masks
+        protected static readonly byte[] ShuffleMaskBytesVector128i64i32 = new byte[16];
+        protected static readonly byte[] ShuffleMaskBytesVector128i64i16 = new byte[16];
+        protected static readonly byte[] ShuffleMaskBytesVector128i64i8 = new byte[16];
+        protected static readonly byte[] ShuffleMaskBytesVector128i32i16 = new byte[16];
+        protected static readonly byte[] ShuffleMaskBytesVector128i32i8 = new byte[16];
+        protected static readonly byte[] ShuffleMaskBytesVector128i16i8 = new byte[16];
+
+        protected static Vector128<byte> ShuffleMaskVector128i64i32;
+        protected static Vector128<byte> ShuffleMaskVector128i64i16;
+        protected static Vector128<byte> ShuffleMaskVector128i64i8;
+        protected static Vector128<byte> ShuffleMaskVector128i32i16;
+        protected static Vector128<byte> ShuffleMaskVector128i32i8;
+        protected static Vector128<byte> ShuffleMaskVector128i16i8;
+        #endregion
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        static SSE2Helper()
+        {
+            if (Sse2.IsSupported)
+                GenerateMasks();
+
+            // Local Functions
+
+            static void GenerateMasks()
+            {
+                GenerateMask<long, int>(ShuffleMaskBytesVector128i64i32, ref ShuffleMaskVector128i64i32);
+                GenerateMask<long, short>(ShuffleMaskBytesVector128i64i16, ref ShuffleMaskVector128i64i16);
+                GenerateMask<long, byte>(ShuffleMaskBytesVector128i64i8, ref ShuffleMaskVector128i64i8);
+                GenerateMask<int, short>(ShuffleMaskBytesVector128i32i16, ref ShuffleMaskVector128i32i16);
+                GenerateMask<int, byte>(ShuffleMaskBytesVector128i32i8, ref ShuffleMaskVector128i32i8);
+                GenerateMask<short, byte>(ShuffleMaskBytesVector128i16i8, ref ShuffleMaskVector128i16i8);
+            }
+
+            static void GenerateMask<TFrom, TTo>(byte[] maskBytes, ref Vector128<byte> mask)
+                where TFrom : unmanaged
+                where TTo : unmanaged
+            {
+                // Generate mask
+                Array.Fill(maskBytes, (byte)0b1_000_0000);
+
+                for (int i = 0; i < sizeof(TFrom) / sizeof(TTo); i++)
+                    for (int j = 0; j < sizeof(TTo); j++)
+                        maskBytes[i * sizeof(TTo) + j] = (byte)(i * sizeof(TFrom) + j);
+
+                // Interpret mask as Vector128
+                fixed (byte* bytes = maskBytes)
+                    mask = Sse2.LoadVector128(bytes);
+            }
+        }
+
+        #region Vector256
+        /// <summary>Stores the last elements of a sequence into the target sequence of the same element type, using SSE2 CPU instructions. This function is made with regards to storing elements through <seealso cref="Vector256"/>s, thus storing up to 31 bytes that remain to be processed from the original sequence.</summary>
+        /// <typeparam name="T">The type of the elements in the sequences. Its size in bytes has to be a power of 2, up to 16.</typeparam>
+        /// <param name="origin">The origin sequence, passed as a pointer.</param>
+        /// <param name="target">The target sequence, passed as a pointer.</param>
+        /// <param name="index">The first index of the sequence that will be processed.</param>
+        /// <param name="length">The length of the sequence.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        public static void StoreLastElementsVector256<T>(T* origin, T* target, uint index, uint length)
+            where T : unmanaged
+        {
+            if (!Sse2.IsSupported)
+                return;
+
+            origin += index;
+            target += index;
+
+            uint count = length - index;
+
+            if (sizeof(T) <= sizeof(byte))
+                StoreRemainingElements(ref origin, ref target, count, 16);
+
+            if (sizeof(T) == sizeof(byte))
+                StoreLastElementsVector128((byte*)origin, (byte*)target, length);
+            if (sizeof(T) == sizeof(short))
+                StoreLastElementsVector128((short*)origin, (short*)target, length);
+            if (sizeof(T) == sizeof(int))
+                StoreLastElementsVector128((int*)origin, (int*)target, length);
+            if (sizeof(T) == sizeof(long))
+                StoreLastElementsVector128((long*)origin, (long*)target, length);
+        }
+
+        private static unsafe void StoreRemainingElements<T>(ref T* origin, ref T* target, uint count, uint remainder)
+            where T : unmanaged
+        {
+            if ((count & remainder) > 0)
+            {
+                if (sizeof(T) == sizeof(byte))
+                    StoreRemainingByte((byte*)origin, (byte*)target, count, remainder);
+
+                origin += remainder;
+                target += remainder;
+            }
+        }
+        private static unsafe void StoreRemainingByte(byte* origin, byte* target, uint count, uint remainder)
+        {
+            if (remainder == 16)
+                StoreVector128(origin, target, count);
+        }
+        #endregion
+
+        #region Vector128
+        #region T* -> byte*
+        public static void StoreVector128(byte* origin, byte* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
+        }
+        #endregion
+        #region T* -> short*
+        public static void StoreVector128(short* origin, short* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
+        }
+        #endregion
+        #region T* -> int*
+        public static void StoreVector128(int* origin, int* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
+        }
+        public static void StoreVector128(float* origin, int* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.ConvertToVector128Int32(Sse2.LoadVector128(&origin[index])));
+        }
+        public static void StoreVector128(double* origin, int* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.ConvertToVector128Int32(Sse2.LoadVector128(&origin[index])));
+        }
+        #endregion
+        #region T* -> long*
+        public static void StoreVector128(long* origin, long* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.LoadVector128(&origin[index]));
+        }
+        #endregion
+        #region T* -> float*
+        public static void StoreVector128(int* origin, float* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index])));
+        }
+        #endregion
+        #region T* -> double*
+        public static void StoreVector128(int* origin, double* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
+        }
+        public static void StoreVector128(float* origin, double* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
+        }
+        #endregion
+        #endregion
+
+        #region Vector64
+        #region T* -> int*
+        public static void StoreVector64(float* origin, int* target, uint index)
+        {
+            if (!Sse2.IsSupported)
+                return;
+
+            var vec = Sse2.ConvertToVector128Int32(Sse2.LoadVector128(&origin[index]));
+            *(long*)(target + index) = *(long*)&vec;
+        }
+        public static void StoreVector64(double* origin, int* target, uint index)
+        {
+            if (!Sse2.IsSupported)
+                return;
+
+            var vec = Sse2.ConvertToVector128Int32(Sse2.LoadVector128(&origin[index]));
+            *(long*)(target + index) = *(long*)&vec;
+        }
+        #endregion
+        #region T* -> float*
+        public static void StoreVector64(int* origin, float* target, uint index)
+        {
+            if (!Sse2.IsSupported)
+                return;
+
+            var vec = Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index]));
+            *(long*)(target + index) = *(long*)&vec;
+        }
+        #endregion
+        #endregion
+    }
+}
