@@ -92,7 +92,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-        public static void StoreLastElementsVector128<T>(T* origin, byte* target, uint index, uint length)
+        public static void StoreLastElementsVector128Downcast<T>(T* origin, byte* target, uint index, uint length)
             where T : unmanaged
         {
             if (!Ssse3.IsSupported)
@@ -117,7 +117,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             }
             void StoreRemainingInt16(uint remainder)
             {
-                if (remainder == 2)
+                if (remainder == 4)
                     StoreVector32((short*)origin, target, index);
                 if (remainder == 2)
                     StoreVector16((short*)origin, target, index);
@@ -180,6 +180,41 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (Ssse3.IsSupported)
                 Store<short, int>(ConvertToVector128Int16(origin, index), target, index);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        public static void StoreLastElementsVector128Downcast<T>(T* origin, short* target, uint index, uint length)
+            where T : unmanaged
+        {
+            if (!Ssse3.IsSupported)
+                return;
+
+            StoreRemainingElements(2);
+            StoreRemainingElements(1);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    if (typeof(T) == typeof(int))
+                        StoreRemainingInt32(remainder);
+                    if (typeof(T) == typeof(long))
+                        StoreRemainingInt64(remainder);
+                    index |= remainder;
+                }
+            }
+            void StoreRemainingInt32(uint remainder)
+            {
+                if (remainder == 2)
+                    StoreVector32((int*)origin, target, index);
+                if (remainder == 1)
+                    target[index] = (byte)((int*)origin)[index];
+            }
+            void StoreRemainingInt64(uint remainder)
+            {
+                if (remainder == 1)
+                    target[index] = (byte)((long*)origin)[index];
+            }
+        }
         #endregion
         #region T* -> int*
         /// <summary>Converts a Vector128 of <seealso cref="long"/> into a Vector64 of <seealso cref="int"/> and stores it in the given address, based on the given sequences.</summary>
@@ -191,6 +226,31 @@ namespace Garyon.Functions.IntrinsicsHelpers
         {
             if (Ssse3.IsSupported)
                 Store<int, long>(ConvertToVector128Int32(origin, index), target, index);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        public static void StoreLastElementsVector128Downcast<T>(T* origin, int* target, uint index, uint length)
+            where T : unmanaged
+        {
+            if (!Ssse3.IsSupported)
+                return;
+
+            StoreRemainingElements(1);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    if (typeof(T) == typeof(long))
+                        StoreRemainingInt64(remainder);
+                    index |= remainder;
+                }
+            }
+            void StoreRemainingInt64(uint remainder)
+            {
+                if (remainder == 1)
+                    target[index] = (byte)((long*)origin)[index];
+            }
         }
         #endregion
         #endregion

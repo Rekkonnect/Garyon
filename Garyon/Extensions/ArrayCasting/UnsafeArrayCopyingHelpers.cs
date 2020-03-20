@@ -720,12 +720,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += size)
                 SSSE3Helper.StoreVector64(origin, target, i);
-
-            if ((length & 0b1) > 0)
-            {
-                var vec = Ssse3.LoadVector128(origin + i);
-                Ssse3.Store(target + i, Ssse3.Shuffle(vec.AsByte(), shuffleMaskVector128i64i32).AsInt32());
-            }
+            SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
             return true;
         }
@@ -782,15 +777,9 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)(sizeof(Vector128<short>) / sizeof(int));
 
             uint i = 0;
-
             for (; i < length; i += size)
                 SSSE3Helper.StoreVector64(origin, target, i);
-
-            if ((length & 0b10) > 0)
-                SSSE3Helper.StoreVector32(origin, target, i);
-
-            if ((length & 0b1) > 0)
-                target[i] = (short)origin[i];
+            SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
             return true;
         }
@@ -807,12 +796,9 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)(sizeof(Vector128<short>) / sizeof(long));
 
             uint i = 0;
-
             for (; i < length; i += size)
                 SSSE3Helper.StoreVector32(origin, target, i);
-
-            if ((length & 0b1) > 0)
-                    target[i] = (short)origin[i];
+            SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
             return true;
         }
@@ -850,20 +836,10 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)(sizeof(Vector128<byte>) / sizeof(short));
 
             uint i = 0;
-
             for (; i < length; i += size)
                 SSSE3Helper.StoreVector64(origin, target, i);
-            SSSE3Helper.StoreLastElementsVector128(origin, target, i, length);
+            SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
-            if ((length & 0b100) > 0)
-                SSSE3Helper.StoreVector32(origin, target, i);
-            
-            if ((length & 0b10) > 0)
-                SSSE3Helper.StoreVector16(origin, target, i);
-            
-            if ((length & 0b1) > 0)
-                target[i] = (byte)origin[i];
-            
             return true;
         }
         /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: SSSE3.</summary>
@@ -879,15 +855,9 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)(sizeof(Vector128<byte>) / sizeof(int));
 
             uint i = 0;
-
             for (; i < length; i += size)
                 SSSE3Helper.StoreVector32(origin, target, i);
-
-            if ((length & 0b10) > 0)
-                SSSE3Helper.StoreVector16(origin, target, i);
-
-            if ((length & 0b1) > 0)
-                target[i] = (byte)origin[i];
+            SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
             return true;
         }
@@ -904,12 +874,9 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)(sizeof(Vector128<byte>) / sizeof(long));
 
             uint i = 0;
-
             for (; i < length; i += size)
                 SSSE3Helper.StoreVector16(origin, target, i);
-
-            if ((length & 0b1) > 0)
-                target[i] = (byte)origin[i];
+            SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
             return true;
         }
