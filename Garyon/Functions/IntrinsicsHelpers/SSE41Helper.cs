@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 
 namespace Garyon.Functions.IntrinsicsHelpers
@@ -6,9 +7,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
     /// <summary>Provides helper functions for the SSE4.1 CPU instruction set. Every function checks whether the SSE4.1 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
     public unsafe class SSE41Helper : SSSE3Helper
     {
-        #region Vector256
-        #endregion
-
+        #region Store
         #region Vector128
         #region T* -> short*
         public static void StoreVector128(byte* origin, short* target, uint index)
@@ -358,47 +357,32 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #region T* -> short*
         public static void StoreVector64(byte* origin, short* target, uint index)
         {
-            if (!Sse41.IsSupported)
-                return;
-
-            var vec = Sse41.ConvertToVector128Int16(&origin[index]);
-            *(long*)(target + index) = *(long*)&vec;
+            if (Sse41.IsSupported)
+                Store<short, long>(Sse41.ConvertToVector128Int16(&origin[index]), target, index);
         }
         #endregion
         #region T* -> int*
         public static void StoreVector64(byte* origin, int* target, uint index)
         {
-            if (!Sse41.IsSupported)
-                return;
-
-            var vec = Sse41.ConvertToVector128Int32(&origin[index]);
-            *(long*)(target + index) = *(long*)&vec;
+            if (Sse41.IsSupported)
+                Store<int, long>(Sse41.ConvertToVector128Int32(&origin[index]), target, index);
         }
         public static void StoreVector64(short* origin, int* target, uint index)
         {
-            if (!Sse41.IsSupported)
-                return;
-
-            var vec = Sse41.ConvertToVector128Int32(&origin[index]);
-            *(long*)(target + index) = *(long*)&vec;
+            if (Sse41.IsSupported)
+                Store<int, long>(Sse41.ConvertToVector128Int32(&origin[index]), target, index);
         }
         #endregion
         #region T* -> float*
         public static void StoreVector64(byte* origin, float* target, uint index)
         {
-            if (!Sse41.IsSupported)
-                return;
-
-            var vec = Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
-            *(long*)(target + index) = *(long*)&vec;
+            if (Sse41.IsSupported)
+                Store<float, long>(ConvertToVector128Single(origin, index), target, index);
         }
         public static void StoreVector64(short* origin, float* target, uint index)
         {
-            if (!Sse41.IsSupported)
-                return;
-
-            var vec = Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
-            *(long*)(target + index) = *(long*)&vec;
+            if (Sse41.IsSupported)
+                Store<float, long>(ConvertToVector128Single(origin, index), target, index);
         }
         #endregion
         #endregion
@@ -407,11 +391,40 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #region T* -> short*
         public static void StoreVector32(byte* origin, short* target, uint index)
         {
-            if (!Sse41.IsSupported)
-                return;
+            if (Sse41.IsSupported)
+                Store<short, int>(Sse41.ConvertToVector128Int16(&origin[index]), target, index);
+        }
+        #endregion
+        #endregion
+        #endregion
 
-            var vec = Sse41.ConvertToVector128Int16(&origin[index]);
-            *(int*)(target + index) = *(int*)&vec;
+        #region Convert
+        #region T* -> float*
+        public static Vector128<float> ConvertToVector128Single(byte* origin, uint index)
+        {
+            if (Sse41.IsSupported)
+                return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
+            return default;
+        }
+        public static Vector128<float> ConvertToVector128Single(short* origin, uint index)
+        {
+            if (Sse41.IsSupported)
+                return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
+            return default;
+        }
+        #endregion
+        #region T* -> double*
+        public static Vector128<double> ConvertToVector128Double(byte* origin, uint index)
+        {
+            if (Sse41.IsSupported)
+                return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index]));
+            return default;
+        }
+        public static Vector128<double> ConvertToVector128Double(short* origin, uint index)
+        {
+            if (Sse41.IsSupported)
+                return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index]));
+            return default;
         }
         #endregion
         #endregion
