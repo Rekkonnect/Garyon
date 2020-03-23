@@ -4,7 +4,7 @@ using Garyon.Extensions;
 using Garyon.QualityControl.Extensions;
 using static Garyon.Extensions.ArrayCasting.UnsafeArrayCopyingHelpers;
 
-namespace Garyon.Tests.Extensions
+namespace Garyon.Benchmarking.Extensions
 {
     public class ArrayCopyingHelpersVector128 : ArrayCopyingExtensionsQualityControlAsset
     {
