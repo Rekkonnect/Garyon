@@ -14,7 +14,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="short"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreFromVector128<TPortionSize>(short* origin, byte* target, uint index)
             where TPortionSize : unmanaged
         {
@@ -25,7 +25,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="short"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector64(short* origin, byte* target, uint index)
         {
             StoreFromVector128<long>(origin, target, index);
@@ -34,7 +34,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="short"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector32(short* origin, byte* target, uint index)
         {
             StoreFromVector128<int>(origin, target, index);
@@ -43,7 +43,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="short"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector16(short* origin, byte* target, uint index)
         {
             StoreFromVector128<short>(origin, target, index);
@@ -54,7 +54,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreFromVector128<TPortionSize>(int* origin, byte* target, uint index)
             where TPortionSize : unmanaged
         {
@@ -65,7 +65,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector32(int* origin, byte* target, uint index)
         {
             StoreFromVector128<int>(origin, target, index);
@@ -74,7 +74,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector16(int* origin, byte* target, uint index)
         {
             StoreFromVector128<short>(origin, target, index);
@@ -84,14 +84,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector16(long* origin, byte* target, uint index)
         {
             if (Ssse3.IsSupported)
                 Store<byte, short>(ConvertToVector128Byte(origin, index), target, index);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128Downcast<T>(T* origin, byte* target, uint index, uint length)
             where T : unmanaged
         {
@@ -144,7 +144,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="short"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreFromVector128<TPortionSize>(int* origin, short* target, uint index)
             where TPortionSize : unmanaged
         {
@@ -155,7 +155,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="short"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector64(int* origin, short* target, uint index)
         {
             StoreFromVector128<long>(origin, target, index);
@@ -164,7 +164,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="short"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector32(int* origin, short* target, uint index)
         {
             StoreFromVector128<int>(origin, target, index);
@@ -174,14 +174,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
         /// <param name="target">The target <seealso cref="short"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector32(long* origin, short* target, uint index)
         {
             if (Ssse3.IsSupported)
                 Store<short, int>(ConvertToVector128Int16(origin, index), target, index);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128Downcast<T>(T* origin, short* target, uint index, uint length)
             where T : unmanaged
         {
@@ -221,14 +221,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
         /// <param name="target">The target <seealso cref="int"/> sequence.</param>
         /// <param name="index">The index of the sequences.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector64(long* origin, int* target, uint index)
         {
             if (Ssse3.IsSupported)
                 Store<int, long>(ConvertToVector128Int32(origin, index), target, index);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128Downcast<T>(T* origin, int* target, uint index, uint length)
             where T : unmanaged
         {
@@ -242,14 +242,9 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 if ((length & remainder) > 0)
                 {
                     if (typeof(T) == typeof(long))
-                        StoreRemainingInt64(remainder);
+                        target[index] = (byte)((long*)origin)[index];
                     index |= remainder;
                 }
-            }
-            void StoreRemainingInt64(uint remainder)
-            {
-                if (remainder == 1)
-                    target[index] = (byte)((long*)origin)[index];
             }
         }
         #endregion
@@ -258,21 +253,21 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #region Convert
         #region Vector128
         #region T* -> byte*
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<byte> ConvertToVector128Byte(short* origin, uint index)
         {
             if (Ssse3.IsSupported)
                 return ConvertToVector128<byte>(origin + index, ShuffleMaskVector128i16i8);
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<byte> ConvertToVector128Byte(int* origin, uint index)
         {
             if (Ssse3.IsSupported)
                 return ConvertToVector128<byte>(origin + index, ShuffleMaskVector128i32i8);
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<byte> ConvertToVector128Byte(long* origin, uint index)
         {
             if (Ssse3.IsSupported)
@@ -281,14 +276,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
         #region T* -> short*
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<short> ConvertToVector128Int16(int* origin, uint index)
         {
             if (Ssse3.IsSupported)
                 return ConvertToVector128<short>(origin + index, ShuffleMaskVector128i32i16);
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<short> ConvertToVector128Int16(long* origin, uint index)
         {
             if (Ssse3.IsSupported)
@@ -297,7 +292,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
         #region T* -> int*
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<int> ConvertToVector128Int32(long* origin, uint index)
         {
             if (Ssse3.IsSupported)
@@ -306,7 +301,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<T> ConvertToVector128<T>(void* origin, Vector128<byte> shuffleMask)
             where T : unmanaged
         {

@@ -51,7 +51,8 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 // Generate mask
                 Array.Fill(maskBytes, (byte)0b1_000_0000);
 
-                for (int i = 0; i < sizeof(TFrom) / sizeof(TTo); i++)
+                // Assume that sizeof(TFrom) > sizeof(TTo)
+                for (int i = 0; i < sizeof(Vector128<TFrom>) / sizeof(TFrom); i++)
                     for (int j = 0; j < sizeof(TTo); j++)
                         maskBytes[i * sizeof(TTo) + j] = (byte)(i * sizeof(TFrom) + j);
 
@@ -68,7 +69,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="target">The target sequence, passed as a pointer.</param>
         /// <param name="index">The first index of the sequence that will be processed.</param>
         /// <param name="length">The length of the sequence.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector256<T>(T* origin, T* target, uint index, uint length)
             where T : unmanaged
         {
@@ -131,6 +132,50 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (Sse2.IsSupported)
                 Sse2.Store(&target[index], Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index])));
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreLastElementsVector256(int* origin, float* target, uint index, uint length)
+        {
+            if (!Sse41.IsSupported)
+                return;
+
+            StoreRemainingElements(4);
+            StoreLastElementsVector128(origin, target, index, length);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    StoreVector128(origin, target, index);
+                    index |= remainder;
+                }
+            }
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreLastElementsVector128(int* origin, float* target, uint index, uint length)
+        {
+            if (!Sse41.IsSupported)
+                return;
+
+            StoreRemainingElements(2);
+            StoreRemainingElements(1);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    StoreRemainingInt32(remainder);
+                    index |= remainder;
+                }
+            }
+            void StoreRemainingInt32(uint remainder)
+            {
+                if (remainder == 2)
+                    StoreVector64(origin, target, index);
+                if (remainder == 1)
+                    target[index] = origin[index];
+            }
+        }
         #endregion
         #region T* -> double*
         public static void StoreVector128(int* origin, double* target, uint index)
@@ -143,12 +188,51 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (Sse2.IsSupported)
                 Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
         }
+
         #endregion
-        public static void StoreVector128<T>(T* origin, T* target, uint index)
-            where T : unmanaged
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreLastElementsVector256(float* origin, int* target, uint index, uint length)
         {
-            if (Sse2.IsSupported)
-                Sse2.Store((byte*)&target[index], Sse2.LoadVector128((byte*)&origin[index]));
+            if (!Sse41.IsSupported)
+                return;
+
+            StoreRemainingElements(4);
+            StoreLastElementsVector128(origin, target, index, length);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    StoreVector128(origin, target, index);
+                    index |= remainder;
+                }
+            }
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreLastElementsVector128(float* origin, int* target, uint index, uint length)
+        {
+            if (!Sse2.IsSupported)
+                return;
+
+            StoreRemainingElements(2);
+            StoreRemainingElements(1);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    StoreRemainingSingle(remainder);
+                    index |= remainder;
+                }
+            }
+            void StoreRemainingSingle(uint remainder)
+            {
+                if (remainder == 2)
+                    StoreVector64(origin, target, index);
+                if (remainder == 1)
+                    target[index] = (int)origin[index];
+            }
         }
         #endregion
 

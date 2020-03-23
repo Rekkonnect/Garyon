@@ -22,7 +22,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="target">The target sequence, passed as a pointer.</param>
         /// <param name="index">The first index of the sequence that will be processed.</param>
         /// <param name="length">The length of the sequence.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector256<T>(T* origin, short* target, uint index, uint length)
             where T : unmanaged
         {
@@ -53,7 +53,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="target">The target sequence, passed as a pointer.</param>
         /// <param name="index">The first index of the sequence that will be processed.</param>
         /// <param name="length">The length of the sequence.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128<T>(T* origin, short* target, uint index, uint length)
             where T : unmanaged
         {
@@ -97,7 +97,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Sse41.Store(&target[index], Sse41.ConvertToVector128Int32(&origin[index]));
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector256<T>(T* origin, int* target, uint index, uint length)
             where T : unmanaged
         {
@@ -115,14 +115,23 @@ namespace Garyon.Functions.IntrinsicsHelpers
                         StoreVector128((byte*)origin, target, index);
                     else if (typeof(T) == typeof(short))
                         StoreVector128((short*)origin, target, index);
+                    else if (typeof(T) == typeof(float))
+                        StoreVector128((float*)origin, target, index);
+                    else if (typeof(T) == typeof(double))
+                        StoreVector128((double*)origin, target, index);
                     index |= remainder;
                 }
             }
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128<T>(T* origin, int* target, uint index, uint length)
             where T : unmanaged
         {
+            if (typeof(T) == typeof(float))
+                StoreLastElementsVector128((float*)origin, target, index, length);
+            if (typeof(T) == typeof(double))
+                StoreLastElementsVector128((double*)origin, target, index, length);
+
             if (!Sse41.IsSupported)
                 return;
 
@@ -173,7 +182,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(&origin[index]));
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector256<T>(T* origin, long* target, uint index, uint length)
             where T : unmanaged
         {
@@ -194,7 +203,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 }
             }
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128<T>(T* origin, long* target, uint index, uint length)
             where T : unmanaged
         {
@@ -227,7 +236,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index])));
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector256<T>(T* origin, float* target, uint index, uint length)
             where T : unmanaged
         {
@@ -259,7 +268,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                     StoreVector128((short*)origin, target, index);
             }
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128<T>(T* origin, float* target, uint index, uint length)
             where T : unmanaged
         {
@@ -308,46 +317,28 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Sse41.Store(&target[index], Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index])));
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector256<T>(T* origin, double* target, uint index, uint length)
             where T : unmanaged
         {
             StoreRemainingElements(2);
-            StoreRemainingElements(1);
+
+            StoreLastElementsVector128(origin, target, index, length);
 
             void StoreRemainingElements(uint remainder)
             {
                 if ((length & remainder) > 0)
                 {
                     if (typeof(T) == typeof(byte))
-                        StoreRemainingByte(remainder);
+                        StoreVector128((byte*)origin, target, index);
                     else if (typeof(T) == typeof(short))
-                        StoreRemainingInt16(remainder);
+                        StoreVector128((short*)origin, target, index);
                     else if (typeof(T) == typeof(int))
-                        StoreRemainingInt32(remainder);
+                        StoreVector128((int*)origin, target, index);
+                    else if (typeof(T) == typeof(float))
+                        StoreVector128((float*)origin, target, index);
                     index |= remainder;
                 }
-            }
-            void StoreRemainingByte(uint remainder)
-            {
-                if (remainder == 2)
-                    StoreVector128((byte*)origin, target, index);
-                if (remainder == 1)
-                    target[index] = ((byte*)origin)[index];
-            }
-            void StoreRemainingInt16(uint remainder)
-            {
-                if (remainder == 2)
-                    StoreVector128((short*)origin, target, index);
-                if (remainder == 1)
-                    target[index] = ((short*)origin)[index];
-            }
-            void StoreRemainingInt32(uint remainder)
-            {
-                if (remainder == 2)
-                    StoreVector128((int*)origin, target, index);
-                if (remainder == 1)
-                    target[index] = ((int*)origin)[index];
             }
         }
         #endregion

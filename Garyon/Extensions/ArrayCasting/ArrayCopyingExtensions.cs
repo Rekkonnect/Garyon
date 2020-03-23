@@ -14,7 +14,7 @@ namespace Garyon.Extensions.ArrayCasting
         /// <typeparam name="TTo">The numerical type of the elemnets in the new array.</typeparam>
         /// <param name="a">The <typeparamref name="TFrom"/>[] whose elements to copy.</param>
         /// <returns>The resulting array.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TTo[] CopyToNumericalArray<TFrom, TTo>(this TFrom[] a)
             where TFrom : unmanaged
             where TTo : unmanaged
@@ -27,7 +27,7 @@ namespace Garyon.Extensions.ArrayCasting
                 var origin = a.GetPointer();
                 var target = result.GetPointer();
 
-                if (CopyToNumericalArray(origin, target, length))
+                if (CopyToSIMD(origin, target, length))
                     return result;
 
                 CopyTo(origin, target, length);
@@ -35,7 +35,7 @@ namespace Garyon.Extensions.ArrayCasting
             }
         }
 
-        private static unsafe bool CopyToNumericalArray<TFrom, TTo>(TFrom* origin, TTo* target, uint length)
+        private static unsafe bool CopyToSIMD<TFrom, TTo>(TFrom* origin, TTo* target, uint length)
             where TFrom : unmanaged
             where TTo : unmanaged
         {
@@ -61,8 +61,10 @@ namespace Garyon.Extensions.ArrayCasting
 
             if (GenericArrayExtensions.IsArrayOfByte<TArrayFrom>())
             {
-
                 if (GenericArrayExtensions.IsArrayOfByte<TArrayTo>())
+                {
+
+                }
             }
         }
 

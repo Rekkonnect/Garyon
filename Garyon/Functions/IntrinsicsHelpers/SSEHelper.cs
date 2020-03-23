@@ -5,18 +5,18 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the SSE CPU instruction set. Every function checks whether the SSE2 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class SSEHelper : IntrinsicsHelper
+    public unsafe class SSEHelper : SIMDIntrinsicsHelper
     {
         #region Vector128
-        #region T* -> float*
-        public static void StoreVector128(float* origin, float* target, uint index)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreVector128<T>(T* origin, T* target, uint index)
+            where T : unmanaged
         {
             if (Sse.IsSupported)
-                Sse.Store(&target[index], Sse.LoadVector128(&origin[index]));
+                Sse.Store((float*)&target[index], Sse.LoadVector128((float*)&origin[index]));
         }
-        #endregion
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Store<TTarget, TNew>(Vector128<TTarget> vector, TTarget* target, uint index)
             where TTarget : unmanaged
             where TNew : unmanaged

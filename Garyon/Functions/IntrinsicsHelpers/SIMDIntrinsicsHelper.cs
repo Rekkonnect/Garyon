@@ -3,8 +3,8 @@ using System.Runtime.Intrinsics;
 
 namespace Garyon.Functions.IntrinsicsHelpers
 {
-    /// <summary>Provides helper functions for intrinsics.</summary>
-    public abstract unsafe class IntrinsicsHelper
+    /// <summary>Provides helper functions for SIMD intrinsics.</summary>
+    public abstract unsafe class SIMDIntrinsicsHelper
     {
         #region Last Element Storing
         /// <summary>Stores the last elements of a sequence into the target sequence of the same element type. This function is made with regards to storing elements through <seealso cref="Vector128"/>s, thus storing up to 15 bytes that remain to be processed from the original sequence.</summary>
@@ -12,7 +12,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="origin">The origin sequence, passed as a pointer.</param>
         /// <param name="target">The target sequence, passed as a pointer.</param>
         /// <param name="length">The length of the sequence.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128<T>(T* origin, T* target, uint length)
             where T : unmanaged
         {
@@ -24,7 +24,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         /// <param name="target">The target sequence, passed as a pointer.</param>
         /// <param name="index">The first index of the sequence that will be processed.</param>
         /// <param name="length">The length of the sequence.</param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128<T>(T* origin, T* target, uint index, uint length)
             where T : unmanaged
         {
@@ -43,7 +43,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 StoreRemainingElements(ref origin, ref target, count, 1);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void StoreRemainingElements<T>(ref T* origin, ref T* target, uint count, uint remainder)
             where T : unmanaged
         {
@@ -63,7 +63,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             }
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void StoreRemainingByte(byte* origin, byte* target, uint remainder)
         {
             if (remainder == 8)
@@ -75,7 +75,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             else if (remainder == 1)
                 Store<byte, byte>(origin, target);
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void StoreRemainingInt16(short* origin, short* target, uint remainder)
         {
             if (remainder == 4)
@@ -85,7 +85,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             else if (remainder == 1)
                 Store<short, short>(origin, target);
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void StoreRemainingInt32(int* origin, int* target, uint remainder)
         {
             if (remainder == 2)
@@ -93,11 +93,48 @@ namespace Garyon.Functions.IntrinsicsHelpers
             else if (remainder == 1)
                 Store<int, int>(origin, target);
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void StoreRemainingInt64(long* origin, long* target, uint remainder)
         {
             if (remainder == 1)
                 Store<long, long>(origin, target);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreLastElementsVector128<T>(T* origin, double* target, uint index, uint length)
+            where T : unmanaged
+        {
+            StoreRemainingElements(1);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    if (typeof(T) == typeof(byte))
+                        target[index] = ((byte*)origin)[index];
+                    else if (typeof(T) == typeof(short))
+                        target[index] = ((short*)origin)[index];
+                    else if (typeof(T) == typeof(int))
+                        target[index] = ((int*)origin)[index];
+                    else if (typeof(T) == typeof(float))
+                        target[index] = ((float*)origin)[index];
+                    index |= remainder;
+                }
+            }
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StoreLastElementsVector128(double* origin, int* target, uint index, uint length)
+        {
+            StoreRemainingElements(1);
+
+            void StoreRemainingElements(uint remainder)
+            {
+                if ((length & remainder) > 0)
+                {
+                    target[index] = (int)origin[index];
+                    index |= remainder;
+                }
+            }
         }
         #endregion
 
