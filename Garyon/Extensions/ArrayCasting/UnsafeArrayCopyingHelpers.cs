@@ -1347,7 +1347,7 @@ namespace Garyon.Extensions.ArrayCasting
             where TTo : unmanaged
         {
             if (typeof(TFrom) == typeof(TTo))
-                return Sse2.IsSupported;
+                return Sse.IsSupported;
 
             if (typeof(TTo) == typeof(float))
             {
@@ -1428,7 +1428,7 @@ namespace Garyon.Extensions.ArrayCasting
             // Directly copy their bytes, allowing custom unmanaged structs to be copied through this method
             // Attempt to optimize few CPU cycles
             if (typeof(TFrom) == typeof(TTo))
-                SSE2Helper.StoreVector128(origin, (TFrom*)target, length);
+                SSEHelper.StoreVector128(origin, (TFrom*)target, length);
 
             if (typeof(TTo) == typeof(float))
             {
