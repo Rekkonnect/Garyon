@@ -1,5 +1,6 @@
-﻿using Garyon.Extensions;
-using System;
+﻿using BenchmarkDotNet.Running;
+using Garyon.Benchmarking.Extensions;
+using Garyon.Tests.Extensions;
 
 namespace Garyon.Benchmarking
 {
@@ -7,7 +8,7 @@ namespace Garyon.Benchmarking
     {
         public static void Main(string[] args)
         {
-            GenericArrayExtensions.IsArrayOfType<object[], object>();
+            BenchmarkRunner.Run<ArrayCopyingHelpersVector128>();
         }
     }
 }
