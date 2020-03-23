@@ -953,7 +953,7 @@ namespace Garyon.Extensions.ArrayCasting
 
             return true;
         }
-        /// <summary>Copies the elements of a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>* into a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>*. Minimum required instruction set: SSE2.</summary>
+        /// <summary>Copies the elements of a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>* into a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>*. Minimum required instruction set: SSE.</summary>
         /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
         /// <param name="target">The target <seealso cref="long"/> sequence.</param>
         /// <param name="length">The length of the origin sequence.</param>
@@ -961,15 +961,15 @@ namespace Garyon.Extensions.ArrayCasting
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CopyToInt64ArrayVector128(long* origin, long* target, uint length)
         {
-            if (!Sse2.IsSupported)
+            if (!Sse.IsSupported)
                 return false;
 
             uint size = (uint)(sizeof(Vector128<long>) / sizeof(long));
 
             uint i = 0;
             for (; i < length; i += size)
-                SSE2Helper.StoreVector128(origin, target, i);
-            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
+                SSEHelper.StoreVector128(origin, target, i);
+            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1077,7 +1077,7 @@ namespace Garyon.Extensions.ArrayCasting
 
             return true;
         }
-        /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>*. Minimum required instruction set: SSE2.</summary>
+        /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>*. Minimum required instruction set: SSE.</summary>
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="int"/> sequence.</param>
         /// <param name="length">The length of the origin sequence.</param>
@@ -1085,15 +1085,15 @@ namespace Garyon.Extensions.ArrayCasting
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CopyToInt32ArrayVector128(int* origin, int* target, uint length)
         {
-            if (!Sse2.IsSupported)
+            if (!Sse.IsSupported)
                 return false;
 
             uint size = (uint)(sizeof(Vector128<int>) / sizeof(int));
 
             uint i = 0;
             for (; i < length; i += size)
-                SSE2Helper.StoreVector128(origin, target, i);
-            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
+                SSEHelper.StoreVector128(origin, target, i);
+            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1179,7 +1179,7 @@ namespace Garyon.Extensions.ArrayCasting
 
             return true;
         }
-        /// <summary>Copies the elements of a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>* into a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>*. Minimum required instruction set: SSE2.</summary>
+        /// <summary>Copies the elements of a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>* into a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>*. Minimum required instruction set: SSE.</summary>
         /// <param name="origin">The origin <seealso cref="short"/> sequence.</param>
         /// <param name="target">The target <seealso cref="short"/> sequence.</param>
         /// <param name="length">The length of the origin sequence.</param>
@@ -1187,15 +1187,15 @@ namespace Garyon.Extensions.ArrayCasting
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CopyToInt16ArrayVector128(short* origin, short* target, uint length)
         {
-            if (!Sse2.IsSupported)
+            if (!Sse.IsSupported)
                 return false;
 
             uint size = (uint)(sizeof(Vector128<short>) / sizeof(short));
 
             uint i = 0;
             for (; i < length; i += size)
-                SSE2Helper.StoreVector128(origin, target, i);
-            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
+                SSEHelper.StoreVector128(origin, target, i);
+            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1241,7 +1241,7 @@ namespace Garyon.Extensions.ArrayCasting
         }
         #endregion
         #region T* -> byte*
-        /// <summary>Copies the elements of a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: SSE2.</summary>
+        /// <summary>Copies the elements of a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: SSE.</summary>
         /// <param name="origin">The origin <seealso cref="byte"/> sequence.</param>
         /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
         /// <param name="length">The length of the origin sequence.</param>
@@ -1249,15 +1249,15 @@ namespace Garyon.Extensions.ArrayCasting
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CopyToByteArrayVector128(byte* origin, byte* target, uint length)
         {
-            if (!Sse2.IsSupported)
+            if (!Sse.IsSupported)
                 return false;
 
             uint size = (uint)(sizeof(Vector128<byte>) / sizeof(byte));
 
             uint i = 0;
             for (; i < length; i += size)
-                SSE2Helper.StoreVector128(origin, target, i);
-            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
+                SSEHelper.StoreVector128(origin, target, i);
+            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
