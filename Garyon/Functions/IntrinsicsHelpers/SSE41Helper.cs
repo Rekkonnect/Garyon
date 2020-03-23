@@ -128,9 +128,9 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where T : unmanaged
         {
             if (typeof(T) == typeof(float))
-                StoreLastElementsVector128((float*)origin, target, index, length);
+                SSE2Helper.StoreLastElementsVector128((float*)origin, target, index, length);
             if (typeof(T) == typeof(double))
-                StoreLastElementsVector128((double*)origin, target, index, length);
+                SIMDIntrinsicsHelper.StoreLastElementsVector128((double*)origin, target, index, length);
 
             if (!Sse41.IsSupported)
                 return;
