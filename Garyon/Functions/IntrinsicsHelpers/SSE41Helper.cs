@@ -13,7 +13,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreVector128(byte* origin, short* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Int16(&origin[index]));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Int16(CreateVector128From64(origin, index)));
         }
 
         /// <summary>Stores the last elements of a sequence into the target sequence of <seealso cref="short"/>, using AVX2 CPU instructions. This function is made with regards to storing elements through <seealso cref="Vector256"/>s, thus storing up to 31 bytes that remain to be processed from the original sequence.</summary>
@@ -89,12 +89,12 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreVector128(byte* origin, int* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Int32(&origin[index]));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Int32(CreateVector128From32(origin, index)));
         }
         public static void StoreVector128(short* origin, int* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Int32(&origin[index]));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Int32(CreateVector128From64(origin, index)));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -169,17 +169,17 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreVector128(byte* origin, long* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(&origin[index]));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(CreateVector128From16(origin, index)));
         }
         public static void StoreVector128(short* origin, long* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(&origin[index]));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(CreateVector128From32(origin, index)));
         }
         public static void StoreVector128(int* origin, long* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(&origin[index]));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Int64(CreateVector128From64(origin, index)));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -187,7 +187,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where T : unmanaged
         {
             StoreRemainingElements(2);
-            StoreLastElementsVector128((long*)origin, target, index, length);
+            StoreLastElementsVector128(origin, target, index, length);
 
             void StoreRemainingElements(uint remainder)
             {
@@ -228,12 +228,12 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreVector128(byte* origin, float* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index])));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(CreateVector128From32(origin, index))));
         }
         public static void StoreVector128(short* origin, float* target, uint index)
         {
             if (Sse41.IsSupported)
-                Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index])));
+                Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(CreateVector128From64(origin, index))));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -349,19 +349,19 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreVector64(byte* origin, short* target, uint index)
         {
             if (Sse41.IsSupported)
-                Store<short, long>(Sse41.ConvertToVector128Int16(&origin[index]), target, index);
+                Store<short, long>(Sse41.ConvertToVector128Int16(CreateVector128From32(origin, index)), target, index);
         }
         #endregion
         #region T* -> int*
         public static void StoreVector64(byte* origin, int* target, uint index)
         {
             if (Sse41.IsSupported)
-                Store<int, long>(Sse41.ConvertToVector128Int32(&origin[index]), target, index);
+                Store<int, long>(Sse41.ConvertToVector128Int32(CreateVector128From16(origin, index)), target, index);
         }
         public static void StoreVector64(short* origin, int* target, uint index)
         {
             if (Sse41.IsSupported)
-                Store<int, long>(Sse41.ConvertToVector128Int32(&origin[index]), target, index);
+                Store<int, long>(Sse41.ConvertToVector128Int32(CreateVector128From32(origin, index)), target, index);
         }
         #endregion
         #region T* -> float*
@@ -383,7 +383,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreVector32(byte* origin, short* target, uint index)
         {
             if (Sse41.IsSupported)
-                Store<short, int>(Sse41.ConvertToVector128Int16(&origin[index]), target, index);
+                Store<short, int>(Sse41.ConvertToVector128Int16(CreateVector128From16(origin, index)), target, index);
         }
         #endregion
         #endregion
@@ -394,13 +394,13 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static Vector128<float> ConvertToVector128Single(byte* origin, uint index)
         {
             if (Sse41.IsSupported)
-                return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
+                return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(CreateVector128From32(origin, index)));
             return default;
         }
         public static Vector128<float> ConvertToVector128Single(short* origin, uint index)
         {
             if (Sse41.IsSupported)
-                return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
+                return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(CreateVector128From64(origin, index)));
             return default;
         }
         #endregion
@@ -408,13 +408,13 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static Vector128<double> ConvertToVector128Double(byte* origin, uint index)
         {
             if (Sse41.IsSupported)
-                return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index]));
+                return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(CreateVector128From32(origin, index)));
             return default;
         }
         public static Vector128<double> ConvertToVector128Double(short* origin, uint index)
         {
             if (Sse41.IsSupported)
-                return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index]));
+                return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(CreateVector128From64(origin, index)));
             return default;
         }
         #endregion
