@@ -10,61 +10,6 @@ namespace Garyon.Extensions.ArrayCasting
     /// <summary>Contains unsafe helper functions for array copying using specialized CPU instructions. All functions check whether the minimum supported instruction set is included; in the case that the set is unavailable, the functions simply do nothing.</summary>
     public static unsafe class UnsafeArrayCopyingHelpers
     {
-        // TODO: Get rid of those, use ones created in SSE2Helper
-        #region Vector128 Shuffle Masks
-        private static readonly byte[] shuffleMaskBytesVector128i64i32 = new byte[16];
-        private static readonly byte[] shuffleMaskBytesVector128i64i16 = new byte[16];
-        private static readonly byte[] shuffleMaskBytesVector128i64i8 = new byte[16];
-        private static readonly byte[] shuffleMaskBytesVector128i32i16 = new byte[16];
-        private static readonly byte[] shuffleMaskBytesVector128i32i8 = new byte[16];
-        private static readonly byte[] shuffleMaskBytesVector128i16i8 = new byte[16];
-
-        private static Vector128<byte> shuffleMaskVector128i64i32;
-        private static Vector128<byte> shuffleMaskVector128i64i16;
-        private static Vector128<byte> shuffleMaskVector128i64i8;
-        private static Vector128<byte> shuffleMaskVector128i32i16;
-        private static Vector128<byte> shuffleMaskVector128i32i8;
-        private static Vector128<byte> shuffleMaskVector128i16i8;
-        #endregion
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        static UnsafeArrayCopyingHelpers()
-        {
-            if (Sse2.IsSupported)
-                GenerateMasks();
-
-            // Local Functions
-
-            static void GenerateMasks()
-            {
-                GenerateMask<long, int>(shuffleMaskBytesVector128i64i32, ref shuffleMaskVector128i64i32);
-                GenerateMask<long, short>(shuffleMaskBytesVector128i64i16, ref shuffleMaskVector128i64i16);
-                GenerateMask<long, byte>(shuffleMaskBytesVector128i64i8, ref shuffleMaskVector128i64i8);
-                GenerateMask<int, short>(shuffleMaskBytesVector128i32i16, ref shuffleMaskVector128i32i16);
-                GenerateMask<int, byte>(shuffleMaskBytesVector128i32i8, ref shuffleMaskVector128i32i8);
-                GenerateMask<short, byte>(shuffleMaskBytesVector128i16i8, ref shuffleMaskVector128i16i8);
-            }
-
-            static void GenerateMask<TFrom, TTo>(byte[] maskBytes, ref Vector128<byte> mask)
-                where TFrom : unmanaged
-                where TTo : unmanaged
-            {
-                // Generate mask
-                Array.Fill(maskBytes, (byte)0b1_000_0000);
-
-                for (int i = 0; i < sizeof(TFrom) / sizeof(TTo); i++)
-                    for (int j = 0; j < sizeof(TTo); j++)
-                        maskBytes[i * sizeof(TTo) + j] = (byte)(i * sizeof(TFrom) + j);
-
-                // Interpret mask as Vector128
-                fixed (byte* bytes = maskBytes)
-                    mask = Sse2.LoadVector128(bytes);
-            }
-        }
-
-        // TODO: Attempt generalization to the most feasible without hurting performance
-        // TODO: Support floats/doubles
-
         // Copying from T1* to T2* where sizeof(T1) > sizeof(T2) is not supported with Vector256, consider using once new intrinsics support this feature more optimally
         #region Vector256
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
