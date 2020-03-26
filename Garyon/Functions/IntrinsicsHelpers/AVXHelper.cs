@@ -49,7 +49,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 // Generate mask
                 Array.Fill(maskBytes, (byte)0b1_000_0000);
 
-                for (int i = 0; i < sizeof(TFrom) / sizeof(TTo); i++)
+                for (int i = 0; i < sizeof(Vector256<TFrom>) / sizeof(TFrom); i++)
                     for (int j = 0; j < sizeof(TTo); j++)
                         maskBytes[i * sizeof(TTo) + j] = (byte)(i * sizeof(TFrom) + j);
 
@@ -66,12 +66,22 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (Avx.IsSupported)
                 Avx.Store(&target[index], ConvertToVector256Int32(origin, index));
         }
+        public static void StoreVector256(double* origin, int* target, uint index)
+        {
+            if (Avx.IsSupported)
+                Avx.Store(&target[index], ConvertToVector128Int32(origin, index));
+        }
         #endregion
         #region T* -> float*
         public static void StoreVector256(int* origin, float* target, uint index)
         {
             if (Avx.IsSupported)
                 Avx.Store(&target[index], ConvertToVector256Single(origin, index));
+        }
+        public static void StoreVector256(double* origin, float* target, uint index)
+        {
+            if (Avx.IsSupported)
+                Avx.Store(&target[index], ConvertToVector128Single(origin, index));
         }
         #endregion
         #region T* -> double*
@@ -96,7 +106,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Avx.Store(&target[index], ConvertToVector256Double(origin, index));
         }
         #endregion
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector256<T>(T* origin, T* target, uint index)
             where T : unmanaged
         {
@@ -104,7 +114,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 Avx.Store((byte*)&target[index], Avx.LoadVector256((byte*)&origin[index]));
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Store<TTarget, TNew>(Vector256<TTarget> vector, TTarget* target, uint index)
             where TTarget : unmanaged
             where TNew : unmanaged
@@ -116,7 +126,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #region Convert
         #region Vector256
         #region T* -> int*
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<int> ConvertToVector256Int32(float* origin, uint index)
         {
             if (Avx.IsSupported)
@@ -125,7 +135,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
         #region T* -> float*
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<float> ConvertToVector256Single(int* origin, uint index)
         {
             if (Avx.IsSupported)
@@ -134,28 +144,28 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
         #region T* -> double*
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> ConvertToVector256Double(byte* origin, uint index)
         {
             if (Avx.IsSupported)
                 return Avx.ConvertToVector256Double(Avx.ConvertToVector128Int32(&origin[index]));
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> ConvertToVector256Double(short* origin, uint index)
         {
             if (Avx.IsSupported)
                 return Avx.ConvertToVector256Double(Avx.ConvertToVector128Int32(&origin[index]));
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> ConvertToVector256Double(int* origin, uint index)
         {
             if (Avx.IsSupported)
                 return Avx.ConvertToVector256Double(Avx.LoadVector128(&origin[index]));
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> ConvertToVector256Double(float* origin, uint index)
         {
             if (Avx.IsSupported)
@@ -163,6 +173,23 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         #endregion
+        #endregion
+
+        #region Vector128
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<int> ConvertToVector128Int32(double* origin, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.ConvertToVector128Int32(Avx.LoadVector256(&origin[index]));
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<float> ConvertToVector128Single(double* origin, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.ConvertToVector128Single(Avx.LoadVector256(&origin[index]));
+            return default;
+        }
         #endregion
         #endregion
     }
