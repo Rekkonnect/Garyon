@@ -16,23 +16,18 @@ namespace Garyon.Functions.IntrinsicsHelpers
         protected static readonly byte[] ShuffleMaskBytesVector256i32i8 = new byte[32];
         protected static readonly byte[] ShuffleMaskBytesVector256i16i8 = new byte[32];
 
-        protected static Vector256<byte> ShuffleMaskVector256i64i32;
-        protected static Vector256<byte> ShuffleMaskVector256i64i16;
-        protected static Vector256<byte> ShuffleMaskVector256i64i8;
-        protected static Vector256<byte> ShuffleMaskVector256i32i16;
-        protected static Vector256<byte> ShuffleMaskVector256i32i8;
-        protected static Vector256<byte> ShuffleMaskVector256i16i8;
+        protected static readonly Vector256<byte> ShuffleMaskVector256i64i32;
+        protected static readonly Vector256<byte> ShuffleMaskVector256i64i16;
+        protected static readonly Vector256<byte> ShuffleMaskVector256i64i8;
+        protected static readonly Vector256<byte> ShuffleMaskVector256i32i16;
+        protected static readonly Vector256<byte> ShuffleMaskVector256i32i8;
+        protected static readonly Vector256<byte> ShuffleMaskVector256i16i8;
         #endregion
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static AVXHelper()
         {
             if (Avx.IsSupported)
-                GenerateMasks();
-
-            // Local Functions
-
-            static void GenerateMasks()
             {
                 GenerateMask<long, int>(ShuffleMaskBytesVector256i64i32, ref ShuffleMaskVector256i64i32);
                 GenerateMask<long, short>(ShuffleMaskBytesVector256i64i16, ref ShuffleMaskVector256i64i16);

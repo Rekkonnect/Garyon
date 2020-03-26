@@ -18,23 +18,18 @@ namespace Garyon.Functions.IntrinsicsHelpers
         protected static readonly byte[] ShuffleMaskBytesVector128i32i8 = new byte[16];
         protected static readonly byte[] ShuffleMaskBytesVector128i16i8 = new byte[16];
 
-        protected static Vector128<byte> ShuffleMaskVector128i64i32;
-        protected static Vector128<byte> ShuffleMaskVector128i64i16;
-        protected static Vector128<byte> ShuffleMaskVector128i64i8;
-        protected static Vector128<byte> ShuffleMaskVector128i32i16;
-        protected static Vector128<byte> ShuffleMaskVector128i32i8;
-        protected static Vector128<byte> ShuffleMaskVector128i16i8;
+        protected static readonly Vector128<byte> ShuffleMaskVector128i64i32;
+        protected static readonly Vector128<byte> ShuffleMaskVector128i64i16;
+        protected static readonly Vector128<byte> ShuffleMaskVector128i64i8;
+        protected static readonly Vector128<byte> ShuffleMaskVector128i32i16;
+        protected static readonly Vector128<byte> ShuffleMaskVector128i32i8;
+        protected static readonly Vector128<byte> ShuffleMaskVector128i16i8;
         #endregion
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static SSE2Helper()
         {
             if (Sse2.IsSupported)
-                GenerateMasks();
-
-            // Local Functions
-
-            static void GenerateMasks()
             {
                 GenerateMask<long, int>(ShuffleMaskBytesVector128i64i32, ref ShuffleMaskVector128i64i32);
                 GenerateMask<long, short>(ShuffleMaskBytesVector128i64i16, ref ShuffleMaskVector128i64i16);
