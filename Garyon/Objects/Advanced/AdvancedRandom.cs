@@ -176,14 +176,14 @@ namespace Garyon.Objects.Advanced
         protected virtual long ExtendSample(long result)
         {
             int leadingZeroes = BitOperations.LeadingZeroCount((ulong)result);
-            if (leadingZeroes <= 64 - 52)
+            if (leadingZeroes > 64 - 52)
                 result += Next(Math.Min((int)(long.MaxValue - result), 1 << leadingZeroes));
             return result;
         }
         protected virtual ulong ExtendSample(ulong result)
         {
             int leadingZeroes = BitOperations.LeadingZeroCount(result);
-            if (leadingZeroes <= 64 - 52)
+            if (leadingZeroes > 64 - 52)
                 result += NextUInt32(Math.Min((uint)(ulong.MaxValue - result), 1u << leadingZeroes));
             return result;
         }
