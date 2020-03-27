@@ -44,7 +44,8 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 // Generate mask
                 Array.Fill(maskBytes, (byte)0b1_000_0000);
 
-                for (int i = 0; i < sizeof(Vector256<TFrom>) / sizeof(TFrom); i++)
+                // Assume that sizeof(TFrom) > sizeof(TTo)
+                for (int i = 0; i < Vector256<TFrom>.Count; i++)
                     for (int j = 0; j < sizeof(TTo); j++)
                         maskBytes[i * sizeof(TTo) + j] = (byte)(i * sizeof(TFrom) + j);
 
