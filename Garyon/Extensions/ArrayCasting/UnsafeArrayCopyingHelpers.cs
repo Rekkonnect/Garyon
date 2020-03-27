@@ -120,6 +120,261 @@ namespace Garyon.Extensions.ArrayCasting
             return false;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool CopyToArrayVector256Generic<TFrom, TTo>(TFrom* origin, TTo* target, uint length)
+            where TFrom : unmanaged
+            where TTo : unmanaged
+        {
+            if (!GetSupportedInstructionSetVector256<TFrom, TTo>())
+                return false;
+
+            uint size = (uint)Math.Min(Vector256<TFrom>.Count, Vector256<TTo>.Count);
+
+            uint i = 0;
+            for (; i < length; i += size)
+                PerformCurrentConversionIterationVector256(origin, target, i, length);
+            StoreLastElementsVector256(origin, target, i, length);
+
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool GetSupportedInstructionSetVector256<TFrom, TTo>()
+            where TFrom : unmanaged
+            where TTo : unmanaged
+        {
+            if (typeof(TFrom) == typeof(TTo))
+                return Avx.IsSupported;
+
+            if (typeof(TTo) == typeof(float))
+            {
+                if (sizeof(TFrom) == sizeof(byte))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(short))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(int))
+                    return Avx.IsSupported;
+
+                return false;
+            }
+            if (typeof(TTo) == typeof(double))
+            {
+                if (typeof(TFrom) == typeof(float))
+                    return Avx.IsSupported;
+
+                if (sizeof(TFrom) == sizeof(byte))
+                    return Avx.IsSupported;
+                if (sizeof(TFrom) == sizeof(short))
+                    return Avx.IsSupported;
+                if (sizeof(TFrom) == sizeof(int))
+                    return Avx.IsSupported;
+
+                return false;
+            }
+
+            if (sizeof(TTo) == sizeof(byte))
+            {
+                if (sizeof(TFrom) == sizeof(short))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(int))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(long))
+                    return Avx2.IsSupported;
+            }
+            if (sizeof(TTo) == sizeof(short))
+            {
+                if (sizeof(TFrom) == sizeof(byte))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(int))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(long))
+                    return Avx2.IsSupported;
+            }
+            if (sizeof(TTo) == sizeof(int))
+            {
+                if (typeof(TFrom) == typeof(float))
+                    return Avx.IsSupported;
+                if (typeof(TFrom) == typeof(double))
+                    return Avx.IsSupported;
+
+                if (sizeof(TFrom) == sizeof(byte))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(short))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(long))
+                    return Avx2.IsSupported;
+            }
+            if (sizeof(TTo) == sizeof(long))
+            {
+                if (sizeof(TFrom) == sizeof(byte))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(short))
+                    return Avx2.IsSupported;
+                if (sizeof(TFrom) == sizeof(int))
+                    return Avx2.IsSupported;
+            }
+
+            return false;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void PerformCurrentConversionIterationVector256<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
+            where TFrom : unmanaged
+            where TTo : unmanaged
+        {
+            // Directly copy their bytes, allowing custom unmanaged structs to be copied through this method
+            if (typeof(TFrom) == typeof(TTo))
+                AVXHelper.StoreVector256(origin, (TFrom*)target, length);
+            else if (typeof(TTo) == typeof(float))
+            {
+                if (sizeof(TFrom) == sizeof(byte))
+                    AVX2Helper.StoreVector256((byte*)origin, (float*)target, index);
+                if (sizeof(TFrom) == sizeof(short))
+                    AVX2Helper.StoreVector256((short*)origin, (float*)target, index);
+                if (sizeof(TFrom) == sizeof(int))
+                    AVXHelper.StoreVector256((int*)origin, (float*)target, index);
+            }
+            else if (typeof(TTo) == typeof(double))
+            {
+                if (typeof(TFrom) == typeof(float))
+                    AVXHelper.StoreVector256((float*)origin, (double*)target, index);
+                else
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        AVXHelper.StoreVector256((byte*)origin, (double*)target, index);
+                    if (sizeof(TFrom) == sizeof(short))
+                        AVXHelper.StoreVector256((short*)origin, (double*)target, index);
+                    if (sizeof(TFrom) == sizeof(int))
+                        AVXHelper.StoreVector256((int*)origin, (double*)target, index);
+                }
+            }
+            else
+            {
+                if (sizeof(TTo) == sizeof(byte))
+                {
+                    if (sizeof(TFrom) == sizeof(short))
+                        AVX2Helper.StoreVector128((short*)origin, (byte*)target, index);
+                    if (sizeof(TFrom) == sizeof(int))
+                        AVX2Helper.StoreVector64((int*)origin, (byte*)target, index);
+                    if (sizeof(TFrom) == sizeof(long))
+                        AVX2Helper.StoreVector32((long*)origin, (byte*)target, index);
+                }
+                if (sizeof(TTo) == sizeof(short))
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        AVX2Helper.StoreVector256((byte*)origin, (short*)target, index);
+                    if (sizeof(TFrom) == sizeof(int))
+                        AVX2Helper.StoreVector128((int*)origin, (short*)target, index);
+                    if (sizeof(TFrom) == sizeof(long))
+                        AVX2Helper.StoreVector64((long*)origin, (short*)target, index);
+                }
+                if (sizeof(TTo) == sizeof(int))
+                {
+                    if (typeof(TFrom) == typeof(float))
+                        AVXHelper.StoreVector256((float*)origin, (int*)target, index);
+                    else if (typeof(TFrom) == typeof(double))
+                        AVXHelper.StoreVector256((double*)origin, (int*)target, index);
+                    else
+                    {
+                        if (sizeof(TFrom) == sizeof(byte))
+                            AVX2Helper.StoreVector256((byte*)origin, (int*)target, index);
+                        if (sizeof(TFrom) == sizeof(short))
+                            AVX2Helper.StoreVector256((short*)origin, (int*)target, index);
+                        if (sizeof(TFrom) == sizeof(long))
+                            AVX2Helper.StoreVector128((long*)origin, (int*)target, index);
+                    }
+                }
+                if (sizeof(TTo) == sizeof(long))
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        AVX2Helper.StoreVector256((byte*)origin, (long*)target, index);
+                    if (sizeof(TFrom) == sizeof(short))
+                        AVX2Helper.StoreVector256((short*)origin, (long*)target, index);
+                    if (sizeof(TFrom) == sizeof(int))
+                        AVX2Helper.StoreVector256((int*)origin, (long*)target, index);
+                }
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void StoreLastElementsVector256<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
+            where TFrom : unmanaged
+            where TTo : unmanaged
+        {
+            // Directly copy their bytes, allowing custom unmanaged structs to be copied through this method
+            if (typeof(TFrom) == typeof(TTo))
+                SSE2Helper.StoreLastElementsVector256(origin, (TFrom*)target, index, length);
+            else if (typeof(TTo) == typeof(float))
+            {
+                if (sizeof(TFrom) == sizeof(byte))
+                    SSE41Helper.StoreLastElementsVector256((byte*)origin, (float*)target, index, length);
+                if (sizeof(TFrom) == sizeof(short))
+                    SSE41Helper.StoreLastElementsVector256((short*)origin, (float*)target, index, length);
+                if (sizeof(TFrom) == sizeof(int))
+                    SSE2Helper.StoreLastElementsVector256((int*)origin, (float*)target, index, length);
+            }
+            else if (typeof(TTo) == typeof(double))
+            {
+                if (typeof(TFrom) == typeof(float))
+                    SSE41Helper.StoreLastElementsVector256((float*)origin, (double*)target, index, length);
+                else
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        SSE41Helper.StoreLastElementsVector256((byte*)origin, (double*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(short))
+                        SSE41Helper.StoreLastElementsVector256((short*)origin, (double*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(int))
+                        SSE41Helper.StoreLastElementsVector256((int*)origin, (double*)target, index, length);
+                }
+            }
+            else
+            {
+                if (sizeof(TTo) == sizeof(byte))
+                {
+                    if (sizeof(TFrom) == sizeof(short))
+                        AVX2Helper.StoreLastElementsVector256Downcast((short*)origin, (byte*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(int))
+                        AVX2Helper.StoreLastElementsVector256Downcast((int*)origin, (byte*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(long))
+                        AVX2Helper.StoreLastElementsVector256Downcast((long*)origin, (byte*)target, index, length);
+                }
+                if (sizeof(TTo) == sizeof(short))
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        SSE41Helper.StoreLastElementsVector256((byte*)origin, (short*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(int))
+                        AVX2Helper.StoreLastElementsVector256Downcast((int*)origin, (short*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(long))
+                        AVX2Helper.StoreLastElementsVector256Downcast((long*)origin, (short*)target, index, length);
+                }
+                if (sizeof(TTo) == sizeof(int))
+                {
+                    if (typeof(TFrom) == typeof(float))
+                        SSE2Helper.StoreLastElementsVector256((float*)origin, (int*)target, index, length);
+                    else if (typeof(TFrom) == typeof(double))
+                        SSE41Helper.StoreLastElementsVector256((double*)origin, (int*)target, index, length);
+                    else
+                    {
+                        if (sizeof(TFrom) == sizeof(byte))
+                            SSE41Helper.StoreLastElementsVector256((byte*)origin, (int*)target, index, length);
+                        if (sizeof(TFrom) == sizeof(short))
+                            SSE41Helper.StoreLastElementsVector256((short*)origin, (int*)target, index, length);
+                        if (sizeof(TFrom) == sizeof(long))
+                            AVX2Helper.StoreLastElementsVector256Downcast((long*)origin, (int*)target, index, length);
+                    }
+                }
+                if (sizeof(TTo) == sizeof(long))
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        SSE41Helper.StoreLastElementsVector256((byte*)origin, (long*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(short))
+                        SSE41Helper.StoreLastElementsVector256((short*)origin, (long*)target, index, length);
+                    if (sizeof(TFrom) == sizeof(int))
+                        SSE41Helper.StoreLastElementsVector256((int*)origin, (long*)target, index, length);
+                }
+            }
+        }
+
         #region T* -> long*
         /// <summary>Copies the elements of a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>* into a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>*. Minimum required instruction set: AVX2.</summary>
         /// <param name="origin">The origin <seealso cref="byte"/> sequence.</param>
@@ -1451,7 +1706,7 @@ namespace Garyon.Extensions.ArrayCasting
         {
             // Directly copy their bytes, allowing custom unmanaged structs to be copied through this method
             if (typeof(TFrom) == typeof(TTo))
-                SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, length);
+                SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
             else if (typeof(TTo) == typeof(float))
             {
                 if (sizeof(TFrom) == sizeof(byte))
