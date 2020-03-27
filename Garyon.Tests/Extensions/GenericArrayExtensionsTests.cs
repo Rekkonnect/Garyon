@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Text;
-using Garyon.Extensions;
+﻿using Garyon.Extensions;
 using NUnit.Framework;
 
 namespace Garyon.Tests.Extensions

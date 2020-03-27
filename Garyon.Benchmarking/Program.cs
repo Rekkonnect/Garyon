@@ -7,7 +7,7 @@ namespace Garyon.Benchmarking
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<ArrayCopyingHelpersVector128>();
+            BenchmarkRunner.Run<ArrayTypeComparison>();
         }
     }
 }
