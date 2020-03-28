@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the AVX2 CPU instruction set. Every function checks whether the AVX2 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class AVX2Helper : AVXHelper
+    public abstract unsafe class AVX2Helper : AVXHelper
     {
         #region Store
         #region Vector256

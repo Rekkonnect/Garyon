@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the SSE4.1 CPU instruction set. Every function checks whether the SSE4.1 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class SSE41Helper : SSSE3Helper
+    public abstract unsafe class SSE41Helper : SSSE3Helper
     {
         #region Store
         #region Vector128

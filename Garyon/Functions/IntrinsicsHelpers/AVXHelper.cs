@@ -6,7 +6,7 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the AVX CPU instruction set. Every function checks whether the AVX CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class AVXHelper : SSE42Helper
+    public abstract unsafe class AVXHelper : SSE42Helper
     {
         #region Vector256
         #region T* -> int*

@@ -1,6 +1,4 @@
-﻿#define PRAGMA
-
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
@@ -8,7 +6,7 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the SSE2 CPU instruction set. Every function checks whether the SSE2 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class SSE2Helper : SSEHelper
+    public abstract unsafe class SSE2Helper : SSEHelper
     {
         #region Vector128 Shuffle Masks
         protected static readonly byte[] ShuffleMaskBytesVector128i64i32 = new byte[16];

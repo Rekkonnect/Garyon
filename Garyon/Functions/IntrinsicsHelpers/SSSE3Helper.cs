@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the SSSE3 CPU instruction set. Every function checks whether the SSSE3 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class SSSE3Helper : SSE3Helper
+    public abstract unsafe class SSSE3Helper : SSE3Helper
     {
         #region Store
         #region T* -> byte*

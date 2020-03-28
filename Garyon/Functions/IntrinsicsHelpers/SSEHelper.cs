@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics.X86;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the SSE CPU instruction set. Every function checks whether the SSE2 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
-    public unsafe class SSEHelper : SIMDIntrinsicsHelper
+    public abstract unsafe class SSEHelper : SIMDIntrinsicsHelper
     {
         #region Store
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
