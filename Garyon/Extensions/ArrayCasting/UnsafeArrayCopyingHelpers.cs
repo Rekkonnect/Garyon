@@ -133,9 +133,9 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)Math.Min(Vector256<TFrom>.Count, Vector256<TTo>.Count);
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<short>.Count)
+            for (; i < length; i += size)
                 PerformCurrentConversionIterationVector256(origin, target, i, length);
-            StoreLastElementsVector256(origin, target, i, length);
+            ConvertLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -273,7 +273,7 @@ namespace Garyon.Extensions.ArrayCasting
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void StoreLastElementsVector256<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
+        private static void ConvertLastElementsVector256<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
             where TFrom : unmanaged
             where TTo : unmanaged
         {
@@ -1290,10 +1290,12 @@ namespace Garyon.Extensions.ArrayCasting
             if (!GetSupportedInstructionSetVector128<TFrom, TTo>())
                 return false;
 
+            uint size = (uint)Math.Min(Vector128<TFrom>.Count, Vector128<TTo>.Count);
+
             uint i = 0;
-                StoreCurrentIteration(origin, target, i, length);
-            for (; i < length; i += (uint)Vector128<short>.Count)
-            StoreLastElementsVector128(origin, target, i, length);
+            for (; i < length; i += size)
+                PerformCurrentConversionIterationVector128(origin, target, i, length);
+            ConvertLastElementsVector128(origin, target, i, length);
             
             return true;
         }
@@ -1378,7 +1380,7 @@ namespace Garyon.Extensions.ArrayCasting
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void StoreCurrentIteration<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
+        private static void PerformCurrentConversionIterationVector128<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
             where TFrom : unmanaged
             where TTo : unmanaged
         {
@@ -1457,7 +1459,7 @@ namespace Garyon.Extensions.ArrayCasting
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void StoreLastElementsVector128<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
+        private static void ConvertLastElementsVector128<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
             where TFrom : unmanaged
             where TTo : unmanaged
         {
