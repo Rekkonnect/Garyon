@@ -67,15 +67,6 @@ namespace Garyon.Tests.Extensions
 
         #region short[] -> T[]
         [Test]
-        public unsafe void Int16ToByteArrayUnsafe()
-        {
-            if (!CopyToByteArrayVector256(OriginalInt16Array.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetByteArray[i]);
-        }
-        [Test]
         public unsafe void Int16ToInt16ArrayUnsafe()
         {
             if (!CopyToInt16ArrayVector256(OriginalInt16Array.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
@@ -124,24 +115,6 @@ namespace Garyon.Tests.Extensions
 
         #region int[] -> T[]
         [Test]
-        public unsafe void Int32ToByteArrayUnsafe()
-        {
-            if (!CopyToByteArrayVector256(OriginalInt32Array.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetByteArray[i]);
-        }
-        [Test]
-        public unsafe void Int32ToInt16ArrayUnsafe()
-        {
-            if (!CopyToInt16ArrayVector256(OriginalInt32Array.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetInt16Array[i]);
-        }
-        [Test]
         public unsafe void Int32ToInt32ArrayUnsafe()
         {
             if (!CopyToInt32ArrayVector256(OriginalInt32Array.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
@@ -180,33 +153,6 @@ namespace Garyon.Tests.Extensions
         #endregion
 
         #region long[] -> T[]
-        [Test]
-        public unsafe void Int64ToByteArrayUnsafe()
-        {
-            if (!CopyToByteArrayVector256(OriginalInt64Array.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetByteArray[i]);
-        }
-        [Test]
-        public unsafe void Int64ToInt16ArrayUnsafe()
-        {
-            if (!CopyToInt16ArrayVector256(OriginalInt64Array.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetInt16Array[i]);
-        }
-        [Test]
-        public unsafe void Int64ToInt32ArrayUnsafe()
-        {
-            if (!CopyToInt32ArrayVector256(OriginalInt64Array.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetInt32Array[i]);
-        }
         [Test]
         public unsafe void Int64ToInt64ArrayUnsafe()
         {
