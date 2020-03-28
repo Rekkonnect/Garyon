@@ -17,8 +17,10 @@ namespace Garyon.Extensions.ArrayCasting
             where TFrom : unmanaged
             where TTo : unmanaged
         {
-            // Downcasting elements in AVX2 is probably inefficient enough to not care enough
-            // TODO: Reconsider
+            // This is unsupported because downcasting would require interacting with two Vector128s, since
+            // the instructions are implemented through 2 128-bit lanes, in which case using normal Vector128
+            // instructions can be more viable and requires less time to develop while offering the same, if not
+            // better, performance
             if (sizeof(TFrom) > sizeof(TTo))
                 return false;
 
@@ -172,22 +174,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
             }
 
-            if (sizeof(TTo) == sizeof(byte))
-            {
-                if (sizeof(TFrom) == sizeof(short))
-                    return Avx2.IsSupported;
-                if (sizeof(TFrom) == sizeof(int))
-                    return Avx2.IsSupported;
-                if (sizeof(TFrom) == sizeof(long))
-                    return Avx2.IsSupported;
-            }
+            if (typeof(TTo) == typeof(byte))
+                return Avx.IsSupported;
             if (sizeof(TTo) == sizeof(short))
             {
                 if (sizeof(TFrom) == sizeof(byte))
-                    return Avx2.IsSupported;
-                if (sizeof(TFrom) == sizeof(int))
-                    return Avx2.IsSupported;
-                if (sizeof(TFrom) == sizeof(long))
                     return Avx2.IsSupported;
             }
             if (sizeof(TTo) == sizeof(int))
@@ -200,8 +191,6 @@ namespace Garyon.Extensions.ArrayCasting
                 if (sizeof(TFrom) == sizeof(byte))
                     return Avx2.IsSupported;
                 if (sizeof(TFrom) == sizeof(short))
-                    return Avx2.IsSupported;
-                if (sizeof(TFrom) == sizeof(long))
                     return Avx2.IsSupported;
             }
             if (sizeof(TTo) == sizeof(long))
@@ -250,23 +239,12 @@ namespace Garyon.Extensions.ArrayCasting
             }
             else
             {
-                if (sizeof(TTo) == sizeof(byte))
-                {
-                    if (sizeof(TFrom) == sizeof(short))
-                        AVX2Helper.StoreVector128((short*)origin, (byte*)target, index);
-                    if (sizeof(TFrom) == sizeof(int))
-                        AVX2Helper.StoreVector64((int*)origin, (byte*)target, index);
-                    if (sizeof(TFrom) == sizeof(long))
-                        AVX2Helper.StoreVector32((long*)origin, (byte*)target, index);
-                }
+                if (sizeof(TFrom) == sizeof(TTo))
+                    AVXHelper.StoreVector256(origin, (TFrom*)target, length);
                 if (sizeof(TTo) == sizeof(short))
                 {
                     if (sizeof(TFrom) == sizeof(byte))
                         AVX2Helper.StoreVector256((byte*)origin, (short*)target, index);
-                    if (sizeof(TFrom) == sizeof(int))
-                        AVX2Helper.StoreVector128((int*)origin, (short*)target, index);
-                    if (sizeof(TFrom) == sizeof(long))
-                        AVX2Helper.StoreVector64((long*)origin, (short*)target, index);
                 }
                 if (sizeof(TTo) == sizeof(int))
                 {
@@ -280,8 +258,6 @@ namespace Garyon.Extensions.ArrayCasting
                             AVX2Helper.StoreVector256((byte*)origin, (int*)target, index);
                         if (sizeof(TFrom) == sizeof(short))
                             AVX2Helper.StoreVector256((short*)origin, (int*)target, index);
-                        if (sizeof(TFrom) == sizeof(long))
-                            AVX2Helper.StoreVector128((long*)origin, (int*)target, index);
                     }
                 }
                 if (sizeof(TTo) == sizeof(long))
@@ -329,23 +305,12 @@ namespace Garyon.Extensions.ArrayCasting
             }
             else
             {
-                if (sizeof(TTo) == sizeof(byte))
-                {
-                    if (sizeof(TFrom) == sizeof(short))
-                        AVX2Helper.StoreLastElementsVector256Downcast((short*)origin, (byte*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(int))
-                        AVX2Helper.StoreLastElementsVector256Downcast((int*)origin, (byte*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(long))
-                        AVX2Helper.StoreLastElementsVector256Downcast((long*)origin, (byte*)target, index, length);
-                }
+                if (sizeof(TFrom) == sizeof(TTo))
+                    SSE2Helper.StoreLastElementsVector256(origin, (TFrom*)target, index, length);
                 if (sizeof(TTo) == sizeof(short))
                 {
                     if (sizeof(TFrom) == sizeof(byte))
                         SSE41Helper.StoreLastElementsVector256((byte*)origin, (short*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(int))
-                        AVX2Helper.StoreLastElementsVector256Downcast((int*)origin, (short*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(long))
-                        AVX2Helper.StoreLastElementsVector256Downcast((long*)origin, (short*)target, index, length);
                 }
                 if (sizeof(TTo) == sizeof(int))
                 {
@@ -359,8 +324,6 @@ namespace Garyon.Extensions.ArrayCasting
                             SSE41Helper.StoreLastElementsVector256((byte*)origin, (int*)target, index, length);
                         if (sizeof(TFrom) == sizeof(short))
                             SSE41Helper.StoreLastElementsVector256((short*)origin, (int*)target, index, length);
-                        if (sizeof(TFrom) == sizeof(long))
-                            AVX2Helper.StoreLastElementsVector256Downcast((long*)origin, (int*)target, index, length);
                     }
                 }
                 if (sizeof(TTo) == sizeof(long))
@@ -511,25 +474,6 @@ namespace Garyon.Extensions.ArrayCasting
 
             return true;
         }
-        /// <summary>Copies the elements of a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>* into a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>*. Minimum required instruction set: AVX.</summary>
-        /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
-        /// <param name="target">The target <seealso cref="int"/> sequence.</param>
-        /// <param name="length">The length of the origin sequence.</param>
-        /// <returns>A value determining whether the operation succeeded, which is determined by the availability of the minimum required CPU instruction set.</returns>
-        public static bool CopyToInt32ArrayVector256(long* origin, int* target, uint length)
-        {
-            if (!Avx2.IsSupported)
-                return false;
-
-            uint size = (uint)(sizeof(Vector256<int>) / sizeof(long));
-
-            uint i = 0;
-            for (; i < length; i += size)
-                AVX2Helper.StoreVector128(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256Downcast(origin, target, i, length);
-
-            return true;
-        }
         /// <summary>Copies the elements of a <seealso cref="float"/> sequence passed as a <seealso cref="float"/>* into a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>*. Minimum required instruction set: AVX.</summary>
         /// <param name="origin">The origin <seealso cref="float"/> sequence.</param>
         /// <param name="target">The target <seealso cref="int"/> sequence.</param>
@@ -608,44 +552,6 @@ namespace Garyon.Extensions.ArrayCasting
 
             return true;
         }
-        /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>*. Minimum required instruction set: AVX2.</summary>
-        /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
-        /// <param name="target">The target <seealso cref="short"/> sequence.</param>
-        /// <param name="length">The length of the origin sequence.</param>
-        /// <returns>A value determining whether the operation succeeded, which is determined by the availability of the minimum required CPU instruction set.</returns>
-        public static bool CopyToInt16ArrayVector256(int* origin, short* target, uint length)
-        {
-            if (!Avx2.IsSupported)
-                return false;
-
-            uint size = (uint)(sizeof(Vector256<short>) / sizeof(int));
-
-            uint i = 0;
-            for (; i < length; i += size)
-                AVX2Helper.StoreVector128(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256Downcast(origin, target, i, length);
-
-            return true;
-        }
-        /// <summary>Copies the elements of a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>* into a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>*. Minimum required instruction set: AVX2.</summary>
-        /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
-        /// <param name="target">The target <seealso cref="short"/> sequence.</param>
-        /// <param name="length">The length of the origin sequence.</param>
-        /// <returns>A value determining whether the operation succeeded, which is determined by the availability of the minimum required CPU instruction set.</returns>
-        public static bool CopyToInt16ArrayVector256(long* origin, short* target, uint length)
-        {
-            if (!Avx2.IsSupported)
-                return false;
-
-            uint size = (uint)(sizeof(Vector256<short>) / sizeof(long));
-
-            uint i = 0;
-            for (; i < length; i += size)
-                AVX2Helper.StoreVector64(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256Downcast(origin, target, i, length);
-
-            return true;
-        }
         #endregion
         #region T* -> byte*
         /// <summary>Copies the elements of a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: AVX.</summary>
@@ -664,63 +570,6 @@ namespace Garyon.Extensions.ArrayCasting
             for (; i < length; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             AVXHelper.StoreLastElementsVector256(origin, target, i, length);
-
-            return true;
-        }
-        /// <summary>Copies the elements of a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: AVX.</summary>
-        /// <param name="origin">The origin <seealso cref="short"/> sequence.</param>
-        /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
-        /// <param name="length">The length of the origin sequence.</param>
-        /// <returns>A value determining whether the operation succeeded, which is determined by the availability of the minimum required CPU instruction set.</returns>
-        public static bool CopyToByteArrayVector256(short* origin, byte* target, uint length)
-        {
-            if (!Avx2.IsSupported)
-                return false;
-
-            uint size = (uint)(sizeof(Vector256<byte>) / sizeof(short));
-
-            uint i = 0;
-            for (; i < length; i += size)
-                AVX2Helper.StoreVector128(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256Downcast(origin, target, i, length);
-
-            return true;
-        }
-        /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: AVX.</summary>
-        /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
-        /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
-        /// <param name="length">The length of the origin sequence.</param>
-        /// <returns>A value determining whether the operation succeeded, which is determined by the availability of the minimum required CPU instruction set.</returns>
-        public static bool CopyToByteArrayVector256(int* origin, byte* target, uint length)
-        {
-            if (!Avx2.IsSupported)
-                return false;
-
-            uint size = (uint)(sizeof(Vector256<byte>) / sizeof(int));
-
-            uint i = 0;
-            for (; i < length; i += size)
-                AVX2Helper.StoreVector64(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256Downcast(origin, target, i, length);
-
-            return true;
-        }
-        /// <summary>Copies the elements of a <seealso cref="long"/> sequence passed as a <seealso cref="long"/>* into a <seealso cref="byte"/> sequence passed as a <seealso cref="byte"/>*. Minimum required instruction set: AVX.</summary>
-        /// <param name="origin">The origin <seealso cref="long"/> sequence.</param>
-        /// <param name="target">The target <seealso cref="byte"/> sequence.</param>
-        /// <param name="length">The length of the origin sequence.</param>
-        /// <returns>A value determining whether the operation succeeded, which is determined by the availability of the minimum required CPU instruction set.</returns>
-        public static bool CopyToByteArrayVector256(long* origin, byte* target, uint length)
-        {
-            if (!Avx2.IsSupported)
-                return false;
-
-            uint size = (uint)(sizeof(Vector256<byte>) / sizeof(long));
-
-            uint i = 0;
-            for (; i < length; i += size)
-                AVX2Helper.StoreVector32(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256Downcast(origin, target, i, length);
 
             return true;
         }
@@ -797,7 +646,7 @@ namespace Garyon.Extensions.ArrayCasting
 
             uint i = 0;
             for (; i < length; i += size)
-                AVXHelper.StoreVector256(origin, target, i);
+                AVXHelper.StoreVector128(origin, target, i);
             AVXHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;

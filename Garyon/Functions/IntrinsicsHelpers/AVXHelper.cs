@@ -8,53 +8,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
     /// <summary>Provides helper functions for the AVX CPU instruction set. Every function checks whether the AVX CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
     public unsafe class AVXHelper : SSE42Helper
     {
-        #region Vector256 Shuffle Masks
-        protected static readonly byte[] ShuffleMaskBytesVector256i64i32 = new byte[32];
-        protected static readonly byte[] ShuffleMaskBytesVector256i64i16 = new byte[32];
-        protected static readonly byte[] ShuffleMaskBytesVector256i64i8 = new byte[32];
-        protected static readonly byte[] ShuffleMaskBytesVector256i32i16 = new byte[32];
-        protected static readonly byte[] ShuffleMaskBytesVector256i32i8 = new byte[32];
-        protected static readonly byte[] ShuffleMaskBytesVector256i16i8 = new byte[32];
-
-        protected static readonly Vector256<byte> ShuffleMaskVector256i64i32;
-        protected static readonly Vector256<byte> ShuffleMaskVector256i64i16;
-        protected static readonly Vector256<byte> ShuffleMaskVector256i64i8;
-        protected static readonly Vector256<byte> ShuffleMaskVector256i32i16;
-        protected static readonly Vector256<byte> ShuffleMaskVector256i32i8;
-        protected static readonly Vector256<byte> ShuffleMaskVector256i16i8;
-        #endregion
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        static AVXHelper()
-        {
-            if (Avx.IsSupported)
-            {
-                GenerateMask<long, int>(ShuffleMaskBytesVector256i64i32, ref ShuffleMaskVector256i64i32);
-                GenerateMask<long, short>(ShuffleMaskBytesVector256i64i16, ref ShuffleMaskVector256i64i16);
-                GenerateMask<long, byte>(ShuffleMaskBytesVector256i64i8, ref ShuffleMaskVector256i64i8);
-                GenerateMask<int, short>(ShuffleMaskBytesVector256i32i16, ref ShuffleMaskVector256i32i16);
-                GenerateMask<int, byte>(ShuffleMaskBytesVector256i32i8, ref ShuffleMaskVector256i32i8);
-                GenerateMask<short, byte>(ShuffleMaskBytesVector256i16i8, ref ShuffleMaskVector256i16i8);
-            }
-
-            static void GenerateMask<TFrom, TTo>(byte[] maskBytes, ref Vector256<byte> mask)
-                where TFrom : unmanaged
-                where TTo : unmanaged
-            {
-                // Generate mask
-                Array.Fill(maskBytes, (byte)0b1_000_0000);
-
-                // Assume that sizeof(TFrom) > sizeof(TTo)
-                for (int i = 0; i < Vector256<TFrom>.Count; i++)
-                    for (int j = 0; j < sizeof(TTo); j++)
-                        maskBytes[i * sizeof(TTo) + j] = (byte)(i * sizeof(TFrom) + j);
-
-                // Interpret mask as Vector256
-                fixed (byte* bytes = maskBytes)
-                    mask = Avx.LoadVector256(bytes);
-            }
-        }
-
         #region Vector256
         #region T* -> int*
         public static void StoreVector256(float* origin, int* target, uint index)
@@ -74,7 +27,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (Avx.IsSupported)
                 Avx.Store(&target[index], ConvertToVector256Single(origin, index));
         }
-        public static void StoreVector256(double* origin, float* target, uint index)
+        public static void StoreVector128(double* origin, float* target, uint index)
         {
             if (Avx.IsSupported)
                 Avx.Store(&target[index], ConvertToVector128Single(origin, index));
