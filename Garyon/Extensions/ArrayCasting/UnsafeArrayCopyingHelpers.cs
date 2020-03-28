@@ -1282,7 +1282,6 @@ namespace Garyon.Extensions.ArrayCasting
         }
         #endregion
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CopyToArrayVector128Generic<TFrom, TTo>(TFrom* origin, TTo* target, uint length)
             where TFrom : unmanaged
             where TTo : unmanaged
@@ -1296,7 +1295,7 @@ namespace Garyon.Extensions.ArrayCasting
             for (; i < length; i += size)
                 PerformCurrentConversionIterationVector128(origin, target, i, length);
             ConvertLastElementsVector128(origin, target, i, length);
-            
+
             return true;
         }
 
@@ -1334,6 +1333,8 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
             }
 
+            if (sizeof(TFrom) == sizeof(TTo))
+                return Sse.IsSupported;
             if (sizeof(TTo) == sizeof(byte))
             {
                 if (sizeof(TFrom) == sizeof(short))
@@ -1412,6 +1413,8 @@ namespace Garyon.Extensions.ArrayCasting
             }
             else
             {
+                if (sizeof(TFrom) == sizeof(TTo))
+                    SSEHelper.StoreVector128(origin, (TFrom*)target, length);
                 if (sizeof(TTo) == sizeof(byte))
                 {
                     if (sizeof(TFrom) == sizeof(short))
@@ -1491,6 +1494,8 @@ namespace Garyon.Extensions.ArrayCasting
             }
             else
             {
+                if (sizeof(TFrom) == sizeof(TTo))
+                    SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
                 if (sizeof(TTo) == sizeof(byte))
                 {
                     if (sizeof(TFrom) == sizeof(short))
