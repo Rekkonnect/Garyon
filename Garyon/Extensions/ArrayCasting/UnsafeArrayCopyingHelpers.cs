@@ -1197,7 +1197,7 @@ namespace Garyon.Extensions.ArrayCasting
             if (!Sse41.IsSupported)
                 return false;
 
-            uint size = (uint)(sizeof(Vector128<double>) / sizeof(int));
+            uint size = (uint)(sizeof(Vector128<double>) / sizeof(double));
 
             uint i = 0;
             for (; i < length; i += size)
