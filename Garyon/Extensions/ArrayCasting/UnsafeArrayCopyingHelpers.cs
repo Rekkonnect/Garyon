@@ -133,7 +133,8 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)Math.Min(Vector256<TFrom>.Count, Vector256<TTo>.Count);
 
             uint i = 0;
-            for (; i < length; i += size)
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 PerformCurrentConversionIterationVector256(origin, target, i, length);
             ConvertLastElementsVector256(origin, target, i, length);
 
@@ -213,7 +214,7 @@ namespace Garyon.Extensions.ArrayCasting
         {
             // Directly copy their bytes, allowing custom unmanaged structs to be copied through this method
             if (typeof(TFrom) == typeof(TTo))
-                AVXHelper.StoreVector256(origin, (TFrom*)target, length);
+                AVXHelper.StoreVector256(origin, (TFrom*)target, index);
             else if (typeof(TTo) == typeof(float))
             {
                 if (sizeof(TFrom) == sizeof(byte))
@@ -240,7 +241,7 @@ namespace Garyon.Extensions.ArrayCasting
             else
             {
                 if (sizeof(TFrom) == sizeof(TTo))
-                    AVXHelper.StoreVector256(origin, (TFrom*)target, length);
+                    AVXHelper.StoreVector256(origin, (TFrom*)target, index);
                 if (sizeof(TTo) == sizeof(short))
                 {
                     if (sizeof(TFrom) == sizeof(byte))
@@ -1292,7 +1293,8 @@ namespace Garyon.Extensions.ArrayCasting
             uint size = (uint)Math.Min(Vector128<TFrom>.Count, Vector128<TTo>.Count);
 
             uint i = 0;
-            for (; i < length; i += size)
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 PerformCurrentConversionIterationVector128(origin, target, i, length);
             ConvertLastElementsVector128(origin, target, i, length);
 
@@ -1387,7 +1389,7 @@ namespace Garyon.Extensions.ArrayCasting
         {
             // Directly copy their bytes, allowing custom unmanaged structs to be copied through this method
             if (typeof(TFrom) == typeof(TTo))
-                SSEHelper.StoreVector128(origin, (TFrom*)target, length);
+                SSEHelper.StoreVector128(origin, (TFrom*)target, index);
             else if (typeof(TTo) == typeof(float))
             {
                 if (sizeof(TFrom) == sizeof(byte))
@@ -1414,7 +1416,7 @@ namespace Garyon.Extensions.ArrayCasting
             else
             {
                 if (sizeof(TFrom) == sizeof(TTo))
-                    SSEHelper.StoreVector128(origin, (TFrom*)target, length);
+                    SSEHelper.StoreVector128(origin, (TFrom*)target, index);
                 if (sizeof(TTo) == sizeof(byte))
                 {
                     if (sizeof(TFrom) == sizeof(short))
