@@ -98,24 +98,24 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Ssse3.IsSupported)
                 return;
 
-            StoreRemainingElements(4);
-            StoreRemainingElements(2);
-            StoreRemainingElements(1);
+            StoreRemainingElements(4, origin, target, index, length);
+            StoreRemainingElements(2, origin, target, index, length);
+            StoreRemainingElements(1, origin, target, index, length);
 
-            void StoreRemainingElements(uint remainder)
+            static void StoreRemainingElements(uint remainder, T* origin, byte* target, uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
                     if (typeof(T) == typeof(short))
-                        StoreRemainingInt16(remainder);
+                        StoreRemainingInt16(remainder, origin, target, index);
                     if (typeof(T) == typeof(int))
-                        StoreRemainingInt32(remainder);
+                        StoreRemainingInt32(remainder, origin, target, index);
                     if (typeof(T) == typeof(long))
-                        StoreRemainingInt64(remainder);
+                        StoreRemainingInt64(remainder, origin, target, index);
                     index |= remainder;
                 }
             }
-            void StoreRemainingInt16(uint remainder)
+            static void StoreRemainingInt16(uint remainder, T* origin, byte* target, uint index)
             {
                 if (remainder == 4)
                     StoreVector32((short*)origin, target, index);
@@ -124,14 +124,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 if (remainder == 1)
                     target[index] = (byte)((short*)origin)[index];
             }
-            void StoreRemainingInt32(uint remainder)
+            static void StoreRemainingInt32(uint remainder, T* origin, byte* target, uint index)
             {
                 if (remainder == 2)
                     StoreVector16((int*)origin, target, index);
                 if (remainder == 1)
                     target[index] = (byte)((int*)origin)[index];
             }
-            void StoreRemainingInt64(uint remainder)
+            static void StoreRemainingInt64(uint remainder, T* origin, byte* target, uint index)
             {
                 if (remainder == 1)
                     target[index] = (byte)((long*)origin)[index];
@@ -188,28 +188,28 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Ssse3.IsSupported)
                 return;
 
-            StoreRemainingElements(2);
-            StoreRemainingElements(1);
+            StoreRemainingElements(2, origin, target, index, length);
+            StoreRemainingElements(1, origin, target, index, length);
 
-            void StoreRemainingElements(uint remainder)
+            static void StoreRemainingElements(uint remainder, T* origin, short* target, uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
                     if (typeof(T) == typeof(int))
-                        StoreRemainingInt32(remainder);
+                        StoreRemainingInt32(remainder, origin, target, index);
                     if (typeof(T) == typeof(long))
-                        StoreRemainingInt64(remainder);
+                        StoreRemainingInt64(remainder, origin, target, index);
                     index |= remainder;
                 }
             }
-            void StoreRemainingInt32(uint remainder)
+            static void StoreRemainingInt32(uint remainder, T* origin, short* target, uint index)
             {
                 if (remainder == 2)
                     StoreVector32((int*)origin, target, index);
                 if (remainder == 1)
                     target[index] = (byte)((int*)origin)[index];
             }
-            void StoreRemainingInt64(uint remainder)
+            static void StoreRemainingInt64(uint remainder, T* origin, short* target, uint index)
             {
                 if (remainder == 1)
                     target[index] = (byte)((long*)origin)[index];
@@ -235,9 +235,9 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Ssse3.IsSupported)
                 return;
 
-            StoreRemainingElements(1);
+            StoreRemainingElements(1, origin, target, index, length);
 
-            void StoreRemainingElements(uint remainder)
+            static void StoreRemainingElements(uint remainder, T* origin, int* target, uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {

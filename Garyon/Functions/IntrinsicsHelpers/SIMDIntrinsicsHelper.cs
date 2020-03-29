@@ -125,9 +125,9 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128(double* origin, int* target, uint index, uint length)
         {
-            StoreRemainingElements(1);
+            StoreRemainingElements(1, origin, target, index, length);
 
-            void StoreRemainingElements(uint remainder)
+            static void StoreRemainingElements(uint remainder, double* origin, int* target, uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
