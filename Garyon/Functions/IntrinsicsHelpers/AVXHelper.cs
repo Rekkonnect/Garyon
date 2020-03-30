@@ -8,7 +8,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
     /// <summary>Provides helper functions for the AVX CPU instruction set. Every function checks whether the AVX CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
     public abstract unsafe class AVXHelper : SSE42Helper
     {
-        #region Vector256
+        #region Store
         #region T* -> int*
         public static void StoreVector256(float* origin, int* target, uint index)
         {
@@ -69,6 +69,32 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where TNew : unmanaged
         {
             Store<TTarget, TTarget, TNew>((TTarget*)&vector, target + index);
+        }
+        #endregion
+
+        #region Zeroing Out
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ZeroOutVector256<T>(T* pointer, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                Avx.Store((byte*)&pointer[index], Vector256<byte>.Zero);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ZeroOutLastBytesVector256(byte* pointer, uint index, uint length)
+        {
+            ZeroOutRemainingElements(16, pointer, ref index, length);
+            ZeroOutLastBytesVector128(pointer, index, length);
+
+            static void ZeroOutRemainingElements(uint remainder, byte* pointer, ref uint index, uint length)
+            {
+                if ((length & remainder) > 0)
+                {
+                    ZeroOutVector128(pointer, index);
+                    index |= remainder;
+                }
+            }
         }
         #endregion
 

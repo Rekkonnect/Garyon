@@ -25,6 +25,35 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
 
+        #region Zeroing Out
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ZeroOutVector128<T>(T* pointer, uint index)
+            where T : unmanaged
+        {
+            if (Sse.IsSupported)
+                Sse.Store((float*)&pointer[index], Vector128<float>.Zero);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ZeroOutLastBytesVector128(byte* pointer, uint index, uint length)
+        {
+            ZeroOutRemainingElements<long>(pointer, ref index, length);
+            ZeroOutRemainingElements<int>(pointer, ref index, length);
+            ZeroOutRemainingElements<short>(pointer, ref index, length);
+            ZeroOutRemainingElements<byte>(pointer, ref index, length);
+
+            static void ZeroOutRemainingElements<T>(byte* pointer, ref uint index, uint length)
+                where T : unmanaged
+            {
+                if ((length & sizeof(T)) > 0)
+                {
+                    *(T*)&pointer[index] = default;
+                    index |= (uint)sizeof(T);
+                }
+            }
+        }
+        #endregion
+
         #region Create
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 64 bits of the provided sequence at the specified index.</summary>
         /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
