@@ -132,10 +132,10 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse41.IsSupported)
                 return;
 
-            StoreRemainingElements(4, origin, target, index, length);
+            StoreRemainingElements(4, origin, target, ref index, length);
             StoreLastElementsVector128(origin, target, index, length);
 
-            static void StoreRemainingElements(uint remainder, int* origin, float* target, uint index, uint length)
+            static void StoreRemainingElements(uint remainder, int* origin, float* target, ref uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
@@ -150,10 +150,10 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse41.IsSupported)
                 return;
 
-            StoreRemainingElements(2, origin, target, index, length);
-            StoreRemainingElements(1, origin, target, index, length);
+            StoreRemainingElements(2, origin, target, ref index, length);
+            StoreRemainingElements(1, origin, target, ref index, length);
 
-            static void StoreRemainingElements(uint remainder, int* origin, float* target, uint index, uint length)
+            static void StoreRemainingElements(uint remainder, int* origin, float* target, ref uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
@@ -190,10 +190,10 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse41.IsSupported)
                 return;
 
-            StoreRemainingElements(4, origin, target, index, length);
+            StoreRemainingElements(4, origin, target, ref index, length);
             StoreLastElementsVector128(origin, target, index, length);
 
-            static void StoreRemainingElements(uint remainder, float* origin, int* target, uint index, uint length)
+            static void StoreRemainingElements(uint remainder, float* origin, int* target, ref uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
@@ -208,10 +208,10 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse2.IsSupported)
                 return;
 
-            StoreRemainingElements(2, origin, target, index, length);
-            StoreRemainingElements(1, origin, target, index, length);
+            StoreRemainingElements(2, origin, target, ref index, length);
+            StoreRemainingElements(1, origin, target, ref index, length);
 
-            static void StoreRemainingElements(uint remainder, float* origin, int* target, uint index, uint length)
+            static void StoreRemainingElements(uint remainder, float* origin, int* target, ref uint index, uint length)
             {
                 if ((length & remainder) > 0)
                 {
