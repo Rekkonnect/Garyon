@@ -1,7 +1,8 @@
 using Garyon.Extensions;
+using Garyon.Extensions.ArrayExtensions;
 using Garyon.QualityControl.Extensions;
 using NUnit.Framework;
-using static Garyon.Extensions.ArrayCasting.UnsafeArrayCopyingHelpers;
+using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions
@@ -12,8 +13,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToByteArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalByteArray.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (byte* o = OriginalByteArray)
+            fixed (byte* t = TargetByteArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalByteArray[i] == TargetByteArray[i]);
@@ -21,8 +24,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToInt16ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalByteArray.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (byte* o = OriginalByteArray)
+            fixed (short* t = TargetInt16Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalByteArray[i] == TargetInt16Array[i]);
@@ -30,8 +35,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToInt32ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalByteArray.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (byte* o = OriginalByteArray)
+            fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalByteArray[i] == TargetInt32Array[i]);
@@ -39,8 +46,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToInt64ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalByteArray.GetPointer(), TargetInt64Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (byte* o = OriginalByteArray)
+            fixed (long* t = TargetInt64Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalByteArray[i] == TargetInt64Array[i]);
@@ -48,8 +57,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToSingleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalByteArray.GetPointer(), TargetSingleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (byte* o = OriginalByteArray)
+            fixed (float* t = TargetSingleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalByteArray[i] == TargetSingleArray[i]);
@@ -57,8 +68,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToDoubleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalByteArray.GetPointer(), TargetDoubleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (byte* o = OriginalByteArray)
+            fixed (double* t = TargetDoubleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalByteArray[i] == TargetDoubleArray[i]);
@@ -69,8 +82,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToByteArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt16Array.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (short* o = OriginalInt16Array)
+            fixed (byte* t = TargetByteArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt16Array[i] == TargetByteArray[i]);
@@ -78,8 +93,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToInt16ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt16Array.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (short* o = OriginalInt16Array)
+            fixed (short* t = TargetInt16Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt16Array[i] == TargetInt16Array[i]);
@@ -87,8 +104,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToInt32ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt16Array.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (short* o = OriginalInt16Array)
+            fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt16Array[i] == TargetInt32Array[i]);
@@ -96,8 +115,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToInt64ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt16Array.GetPointer(), TargetInt64Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (short* o = OriginalInt16Array)
+            fixed (long* t = TargetInt64Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt16Array[i] == TargetInt64Array[i]);
@@ -105,8 +126,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToSingleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt16Array.GetPointer(), TargetSingleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (short* o = OriginalInt16Array)
+            fixed (float* t = TargetSingleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt16Array[i] == TargetSingleArray[i]);
@@ -114,8 +137,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToDoubleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt16Array.GetPointer(), TargetDoubleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (short* o = OriginalInt16Array)
+            fixed (double* t = TargetDoubleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt16Array[i] == TargetDoubleArray[i]);
@@ -126,8 +151,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToByteArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt32Array.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (int* o = OriginalInt32Array)
+            fixed (byte* t = TargetByteArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt32Array[i] == TargetByteArray[i]);
@@ -135,8 +162,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToInt16ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt32Array.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (int* o = OriginalInt32Array)
+            fixed (short* t = TargetInt16Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt32Array[i] == TargetInt16Array[i]);
@@ -144,8 +173,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToInt32ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt32Array.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (int* o = OriginalInt32Array)
+            fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt32Array[i] == TargetInt32Array[i]);
@@ -153,8 +184,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToInt64ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt32Array.GetPointer(), TargetInt64Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (int* o = OriginalInt32Array)
+            fixed (long* t = TargetInt64Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt32Array[i] == TargetInt64Array[i]);
@@ -162,8 +195,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToSingleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt32Array.GetPointer(), TargetSingleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (int* o = OriginalInt32Array)
+            fixed (float* t = TargetSingleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt32Array[i] == TargetSingleArray[i]);
@@ -171,8 +206,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToDoubleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt32Array.GetPointer(), TargetDoubleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (int* o = OriginalInt32Array)
+            fixed (double* t = TargetDoubleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt32Array[i] == TargetDoubleArray[i]);
@@ -183,8 +220,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int64ToByteArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt64Array.GetPointer(), TargetByteArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (long* o = OriginalInt64Array)
+            fixed (byte* t = TargetByteArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt64Array[i] == TargetByteArray[i]);
@@ -192,8 +231,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int64ToInt16ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt64Array.GetPointer(), TargetInt16Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (long* o = OriginalInt64Array)
+            fixed (short* t = TargetInt16Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt64Array[i] == TargetInt16Array[i]);
@@ -201,8 +242,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int64ToInt32ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt64Array.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (long* o = OriginalInt64Array)
+            fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt64Array[i] == TargetInt32Array[i]);
@@ -210,8 +253,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int64ToInt64ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalInt64Array.GetPointer(), TargetInt64Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (long* o = OriginalInt64Array)
+            fixed (long* t = TargetInt64Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalInt64Array[i] == TargetInt64Array[i]);
@@ -222,8 +267,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void SingleToInt32ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalSingleArray.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (float* o = OriginalSingleArray)
+            fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalSingleArray[i] == TargetInt32Array[i]);
@@ -231,8 +278,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void SingleToDoubleArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalSingleArray.GetPointer(), TargetDoubleArray.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (float* o = OriginalSingleArray)
+            fixed (double* t = TargetDoubleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalSingleArray[i] == TargetDoubleArray[i]);
@@ -243,8 +292,10 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void DoubleToInt32ArrayUnsafe()
         {
-            if (!CopyToArrayVector128Generic(OriginalDoubleArray.GetPointer(), TargetInt32Array.GetPointer(), ArrayLength))
-                UnsupportedInstructionSet();
+            fixed (double* o = OriginalDoubleArray)
+            fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
                 Assert.IsTrue(OriginalDoubleArray[i] == TargetInt32Array[i]);
