@@ -1,5 +1,6 @@
 ﻿using System;
 using Garyon.Extensions;
+using Garyon.Extensions.ArrayExtensions;
 
 namespace Garyon.Objects.Enumerators.ArrayEnumerators
 {
