@@ -1,7 +1,7 @@
 using BenchmarkDotNet.Attributes;
 using Garyon.Benchmarking.Exceptions;
 using Garyon.QualityControl.Extensions;
-using static Garyon.Extensions.ArrayCasting.UnsafeArrayCopyingHelpers;
+using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 using static Garyon.Exceptions.ThrowHelper;
 
 namespace Garyon.Benchmarking.Extensions

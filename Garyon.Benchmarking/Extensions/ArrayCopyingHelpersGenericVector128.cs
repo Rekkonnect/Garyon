@@ -6,7 +6,7 @@ using static Garyon.Exceptions.ThrowHelper;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    public class ArrayCopyingHelpersVector128 : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersGenericVector128 : ArrayCopyingExtensionsQualityControlAsset
     {
         #region Generic
         #region byte[] -> T[]
@@ -42,7 +42,7 @@ namespace Garyon.Benchmarking.Extensions
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
-        [Benchmark]
+        //[Benchmark]
         public unsafe void ByteToSingleArrayUnsafeGeneric()
         {
             fixed (byte* o = OriginalByteArray)
@@ -50,7 +50,7 @@ namespace Garyon.Benchmarking.Extensions
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
-        [Benchmark]
+        //[Benchmark]
         public unsafe void ByteToDoubleArrayUnsafeGeneric()
         {
             fixed (byte* o = OriginalByteArray)
@@ -93,7 +93,7 @@ namespace Garyon.Benchmarking.Extensions
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
-        [Benchmark]
+        //[Benchmark]
         public unsafe void Int16ToSingleArrayUnsafeGeneric()
         {
             fixed (short* o = OriginalInt16Array)
@@ -101,7 +101,7 @@ namespace Garyon.Benchmarking.Extensions
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
-        [Benchmark]
+        //[Benchmark]
         public unsafe void Int16ToDoubleArrayUnsafeGeneric()
         {
             fixed (short* o = OriginalInt16Array)
@@ -144,7 +144,7 @@ namespace Garyon.Benchmarking.Extensions
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
-        [Benchmark]
+        //[Benchmark]
         public unsafe void Int32ToSingleArrayUnsafeGeneric()
         {
             fixed (int* o = OriginalInt32Array)
@@ -152,7 +152,7 @@ namespace Garyon.Benchmarking.Extensions
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
-        [Benchmark]
+        //[Benchmark]
         public unsafe void Int32ToDoubleArrayUnsafeGeneric()
         {
             fixed (int* o = OriginalInt32Array)
@@ -198,11 +198,19 @@ namespace Garyon.Benchmarking.Extensions
         #endregion
 
         #region float[] -> T[]
-        [Benchmark]
+        //[Benchmark]
         public unsafe void SingleToInt32ArrayUnsafeGeneric()
         {
             fixed (float* o = OriginalSingleArray)
             fixed (int* t = TargetInt32Array)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        public unsafe void SingleToSingleArrayUnsafeGeneric()
+        {
+            fixed (float* o = OriginalSingleArray)
+            fixed (float* t = TargetSingleArray)
                 if (!CopyToArrayVector128Generic(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
@@ -218,6 +226,14 @@ namespace Garyon.Benchmarking.Extensions
 
         #region double[] -> T[]
         [Benchmark]
+        public unsafe void DoubleToDoubleArrayUnsafeGeneric()
+        {
+            fixed (double* o = OriginalDoubleArray)
+            fixed (double* t = TargetDoubleArray)
+                if (!CopyToArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        //[Benchmark]
         public unsafe void DoubleToInt32ArrayUnsafeGeneric()
         {
             fixed (double* o = OriginalDoubleArray)
@@ -228,222 +244,109 @@ namespace Garyon.Benchmarking.Extensions
         #endregion
         #endregion
 
-        #region Non-Generic
+        #region Manual
         #region byte[] -> T[]
         [Benchmark]
-        public unsafe void ByteToByteArrayUnsafe()
+        public void ByteToByteArray()
         {
-            fixed (byte* o = OriginalByteArray)
-            fixed (byte* t = TargetByteArray)
-                if (!CopyToByteArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetByteArray[i] = OriginalByteArray[i];
         }
         [Benchmark]
-        public unsafe void ByteToInt16ArrayUnsafe()
+        public void ByteToInt16Array()
         {
-            fixed (byte* o = OriginalByteArray)
-            fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt16Array[i] = OriginalByteArray[i];
         }
         [Benchmark]
-        public unsafe void ByteToInt32ArrayUnsafe()
+        public void ByteToInt32Array()
         {
-            fixed (byte* o = OriginalByteArray)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt32Array[i] = OriginalByteArray[i];
         }
         [Benchmark]
-        public unsafe void ByteToInt64ArrayUnsafe()
+        public void ByteToInt64Array()
         {
-            fixed (byte* o = OriginalByteArray)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void ByteToSingleArrayUnsafe()
-        {
-            fixed (byte* o = OriginalByteArray)
-            fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void ByteToDoubleArrayUnsafe()
-        {
-            fixed (byte* o = OriginalByteArray)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt64Array[i] = OriginalByteArray[i];
         }
         #endregion
-
-        #region short[] -> T[]
+        #region byte[] -> T[]
         [Benchmark]
-        public unsafe void Int16ToByteArrayUnsafe()
+        public void Int16ToByteArray()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (byte* t = TargetByteArray)
-                if (!CopyToByteArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetByteArray[i] = (byte)OriginalInt16Array[i];
         }
         [Benchmark]
-        public unsafe void Int16ToInt16ArrayUnsafe()
+        public void Int16ToInt16Array()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt16Array[i] = OriginalInt16Array[i];
         }
         [Benchmark]
-        public unsafe void Int16ToInt32ArrayUnsafe()
+        public void Int16ToInt32Array()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt32Array[i] = OriginalInt16Array[i];
         }
         [Benchmark]
-        public unsafe void Int16ToInt64ArrayUnsafe()
+        public void Int16ToInt64Array()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void Int16ToSingleArrayUnsafe()
-        {
-            fixed (short* o = OriginalInt16Array)
-            fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void Int16ToDoubleArrayUnsafe()
-        {
-            fixed (short* o = OriginalInt16Array)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt64Array[i] = OriginalInt16Array[i];
         }
         #endregion
-
-        #region int[] -> T[]
+        #region byte[] -> T[]
         [Benchmark]
-        public unsafe void Int32ToByteArrayUnsafe()
+        public void Int32ToByteArray()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (byte* t = TargetByteArray)
-                if (!CopyToByteArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetByteArray[i] = (byte)OriginalInt32Array[i];
         }
         [Benchmark]
-        public unsafe void Int32ToInt16ArrayUnsafe()
+        public void Int32ToInt16Array()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt16Array[i] = (short)OriginalInt32Array[i];
         }
         [Benchmark]
-        public unsafe void Int32ToInt32ArrayUnsafe()
+        public void Int32ToInt32Array()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt32Array[i] = OriginalInt32Array[i];
         }
         [Benchmark]
-        public unsafe void Int32ToInt64ArrayUnsafe()
+        public void Int32ToInt64Array()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void Int32ToSingleArrayUnsafe()
-        {
-            fixed (int* o = OriginalInt32Array)
-            fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void Int32ToDoubleArrayUnsafe()
-        {
-            fixed (int* o = OriginalInt32Array)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt64Array[i] = OriginalInt32Array[i];
         }
         #endregion
-
-        #region long[] -> T[]
+        #region byte[] -> T[]
         [Benchmark]
-        public unsafe void Int64ToByteArrayUnsafe()
+        public void Int64ToByteArray()
         {
-            fixed (long* o = OriginalInt64Array)
-            fixed (byte* t = TargetByteArray)
-                if (!CopyToByteArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetByteArray[i] = (byte)OriginalInt64Array[i];
         }
         [Benchmark]
-        public unsafe void Int64ToInt16ArrayUnsafe()
+        public void Int64ToInt16Array()
         {
-            fixed (long* o = OriginalInt64Array)
-            fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt16Array[i] = (short)OriginalInt64Array[i];
         }
         [Benchmark]
-        public unsafe void Int64ToInt32ArrayUnsafe()
+        public void Int64ToInt32Array()
         {
-            fixed (long* o = OriginalInt64Array)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt32Array[i] = (int)OriginalInt64Array[i];
         }
         [Benchmark]
-        public unsafe void Int64ToInt64ArrayUnsafe()
+        public void Int64ToInt64Array()
         {
-            fixed (long* o = OriginalInt64Array)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        #endregion
-
-        #region float[] -> T[]
-        [Benchmark]
-        public unsafe void SingleToInt32ArrayUnsafe()
-        {
-            fixed (float* o = OriginalSingleArray)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        public unsafe void SingleToDoubleArrayUnsafe()
-        {
-            fixed (float* o = OriginalSingleArray)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        #endregion
-
-        #region double[] -> T[]
-        [Benchmark]
-        public unsafe void DoubleToInt32ArrayUnsafe()
-        {
-            fixed (double* o = OriginalDoubleArray)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector128(o, t, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt64Array[i] = (long)OriginalInt64Array[i];
         }
         #endregion
         #endregion
