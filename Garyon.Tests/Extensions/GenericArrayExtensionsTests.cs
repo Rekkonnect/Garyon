@@ -1,4 +1,5 @@
 ﻿using Garyon.Extensions;
+using Garyon.Extensions.ArrayExtensions;
 using NUnit.Framework;
 
 namespace Garyon.Tests.Extensions
