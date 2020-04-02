@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Functions.PointerHelpers;
+using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
@@ -69,8 +70,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse2.IsSupported)
                 return;
 
-            origin += index;
-            target += index;
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
             uint count = length - index;
 

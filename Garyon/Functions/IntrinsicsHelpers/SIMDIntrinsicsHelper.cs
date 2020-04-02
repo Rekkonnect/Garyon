@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using Garyon.Functions.PointerHelpers;
+using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 
 namespace Garyon.Functions.IntrinsicsHelpers
@@ -28,8 +29,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector128<T>(T* origin, T* target, uint index, uint length)
             where T : unmanaged
         {
-            origin += index;
-            target += index;
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
             uint count = length - index;
 

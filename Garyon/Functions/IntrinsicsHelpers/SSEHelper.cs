@@ -67,7 +67,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where TReinterpret : unmanaged
         {
             if (Sse.IsSupported)
-                return Vector128.Create(*(long*)(origin + index), 0).As<long, TReinterpret>();
+                return Vector128.CreateScalar(*(long*)(origin + index)).As<long, TReinterpret>();
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 64 bits of the provided sequence at the specified index.</summary>
@@ -93,7 +93,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where TReinterpret : unmanaged
         {
             if (Sse.IsSupported)
-                return Vector128.Create(*(int*)(origin + index), 0, 0, 0).As<int, TReinterpret>();
+                return Vector128.CreateScalar(*(int*)(origin + index)).As<int, TReinterpret>();
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 32 bits of the provided sequence at the specified index.</summary>
@@ -119,7 +119,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where TReinterpret : unmanaged
         {
             if (Sse.IsSupported)
-                return Vector128.Create(*(short*)(origin + index), 0, 0, 0, 0, 0, 0, 0).As<short, TReinterpret>();
+                return Vector128.CreateScalar(*(short*)(origin + index)).As<short, TReinterpret>();
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 16 bits of the provided sequence at the specified index.</summary>
@@ -145,7 +145,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where TReinterpret : unmanaged
         {
             if (Sse.IsSupported)
-                return Vector128.Create(*(byte*)(origin + index), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0).As<byte, TReinterpret>();
+                return Vector128.CreateScalar(*(byte*)(origin + index)).As<byte, TReinterpret>();
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 8 bits of the provided sequence at the specified index.</summary>
