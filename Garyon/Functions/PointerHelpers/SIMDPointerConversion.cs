@@ -1,14 +1,13 @@
-﻿using Garyon.Functions.IntrinsicsHelpers;
-using Microsoft.VisualBasic.CompilerServices;
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
+using Garyon.Functions.IntrinsicsHelpers;
 
-namespace Garyon.Extensions.ArrayCasting
+namespace Garyon.Functions.PointerHelpers
 {
-    /// <summary>Contains unsafe helper functions for array copying using specialized CPU instructions. All functions check whether the minimum supported instruction set is included; in the case that the set is unavailable, the functions simply do nothing.</summary>
-    public static unsafe class UnsafeArrayCopyingHelpers
+    /// <summary>Contains unsafe helper functions for array copying using SIMD. All functions check whether the minimum supported instruction set is included; in the case that the set is unavailable, the functions simply do nothing.</summary>
+    public static unsafe class SIMDPointerConversion
     {
         // Copying from T1* to T2* where sizeof(T1) > sizeof(T2) is not supported with Vector256, consider using once new intrinsics support this feature more optimally
         #region Vector256
@@ -57,10 +56,8 @@ namespace Garyon.Extensions.ArrayCasting
             }
 
             if (sizeof(TTo) == sizeof(short))
-            {
                 if (sizeof(TFrom) == sizeof(byte))
                     return CopyToInt16ArrayVector256((byte*)origin, (short*)target, length);
-            }
             if (sizeof(TTo) == sizeof(int))
             {
                 if (typeof(TFrom) == typeof(float))
@@ -178,10 +175,8 @@ namespace Garyon.Extensions.ArrayCasting
             if (typeof(TTo) == typeof(byte))
                 return Avx.IsSupported;
             if (sizeof(TTo) == sizeof(short))
-            {
                 if (sizeof(TFrom) == sizeof(byte))
                     return Avx2.IsSupported;
-            }
             if (sizeof(TTo) == sizeof(int))
             {
                 if (typeof(TFrom) == typeof(float))
@@ -225,7 +220,6 @@ namespace Garyon.Extensions.ArrayCasting
                     AVXHelper.StoreVector256((int*)origin, (float*)target, index);
             }
             else if (typeof(TTo) == typeof(double))
-            {
                 if (typeof(TFrom) == typeof(float))
                     AVXHelper.StoreVector256((float*)origin, (double*)target, index);
                 else
@@ -237,18 +231,14 @@ namespace Garyon.Extensions.ArrayCasting
                     if (sizeof(TFrom) == sizeof(int))
                         AVXHelper.StoreVector256((int*)origin, (double*)target, index);
                 }
-            }
             else
             {
                 if (sizeof(TFrom) == sizeof(TTo))
                     AVXHelper.StoreVector256(origin, (TFrom*)target, index);
                 if (sizeof(TTo) == sizeof(short))
-                {
                     if (sizeof(TFrom) == sizeof(byte))
                         AVX2Helper.StoreVector256((byte*)origin, (short*)target, index);
-                }
                 if (sizeof(TTo) == sizeof(int))
-                {
                     if (typeof(TFrom) == typeof(float))
                         AVXHelper.StoreVector256((float*)origin, (int*)target, index);
                     else if (typeof(TFrom) == typeof(double))
@@ -260,7 +250,6 @@ namespace Garyon.Extensions.ArrayCasting
                         if (sizeof(TFrom) == sizeof(short))
                             AVX2Helper.StoreVector256((short*)origin, (int*)target, index);
                     }
-                }
                 if (sizeof(TTo) == sizeof(long))
                 {
                     if (sizeof(TFrom) == sizeof(byte))
@@ -291,7 +280,6 @@ namespace Garyon.Extensions.ArrayCasting
                     SSE2Helper.StoreLastElementsVector256((int*)origin, (float*)target, index, length);
             }
             else if (typeof(TTo) == typeof(double))
-            {
                 if (typeof(TFrom) == typeof(float))
                     SSE41Helper.StoreLastElementsVector256((float*)origin, (double*)target, index, length);
                 else
@@ -303,18 +291,14 @@ namespace Garyon.Extensions.ArrayCasting
                     if (sizeof(TFrom) == sizeof(int))
                         SSE41Helper.StoreLastElementsVector256((int*)origin, (double*)target, index, length);
                 }
-            }
             else
             {
                 if (sizeof(TFrom) == sizeof(TTo))
                     SSE2Helper.StoreLastElementsVector256(origin, (TFrom*)target, index, length);
                 if (sizeof(TTo) == sizeof(short))
-                {
                     if (sizeof(TFrom) == sizeof(byte))
                         SSE41Helper.StoreLastElementsVector256((byte*)origin, (short*)target, index, length);
-                }
                 if (sizeof(TTo) == sizeof(int))
-                {
                     if (typeof(TFrom) == typeof(float))
                         SSE2Helper.StoreLastElementsVector256((float*)origin, (int*)target, index, length);
                     else if (typeof(TFrom) == typeof(double))
@@ -326,7 +310,6 @@ namespace Garyon.Extensions.ArrayCasting
                         if (sizeof(TFrom) == sizeof(short))
                             SSE41Helper.StoreLastElementsVector256((short*)origin, (int*)target, index, length);
                     }
-                }
                 if (sizeof(TTo) == sizeof(long))
                 {
                     if (sizeof(TFrom) == sizeof(byte))
@@ -353,7 +336,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<long>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -370,7 +353,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<long>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -387,7 +370,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<long>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -404,7 +387,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<long>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -423,7 +406,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<int>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -440,7 +423,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<int>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -457,7 +440,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<int>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -474,7 +457,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<float>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -491,7 +474,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<double>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -510,7 +493,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<short>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -527,7 +510,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<short>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -546,7 +529,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<byte>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE2Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -565,7 +548,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<float>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -582,7 +565,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<float>.Count)
                 AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -599,7 +582,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<float>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -616,7 +599,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<double>.Count)
                 AVXHelper.StoreVector128(origin, target, i);
-            AVXHelper.StoreLastElementsVector128(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -635,7 +618,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<double>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -651,8 +634,8 @@ namespace Garyon.Extensions.ArrayCasting
 
             uint i = 0;
             for (; i < length; i += (uint)Vector256<double>.Count)
-                AVX2Helper.StoreVector256(origin, target, i);
-            AVX2Helper.StoreLastElementsVector256(origin, target, i, length);
+                AVXHelper.StoreVector256(origin, target, i);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -669,7 +652,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<double>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -686,7 +669,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             for (; i < length; i += (uint)Vector256<double>.Count)
                 AVXHelper.StoreVector256(origin, target, i);
-            AVXHelper.StoreLastElementsVector256(origin, target, i, length);
+            SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
             return true;
         }
@@ -833,9 +816,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<double>.Count)
+            uint size = (uint)Vector128<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<double>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
-            SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -851,9 +836,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<double>.Count)
+            uint size = (uint)Vector128<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<double>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
-            SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -869,9 +856,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<double>.Count)
+            uint size = (uint)Vector128<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<double>.Count)
                 SSE2Helper.StoreVector128(origin, target, i);
-            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -887,9 +876,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<double>.Count)
+            uint size = (uint)Vector128<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<double>.Count)
                 SSE2Helper.StoreVector128(origin, target, i);
-            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -907,7 +898,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -925,7 +918,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -943,7 +938,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -961,9 +958,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSEHelper.StoreVector128(origin, target, i);
-            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -981,7 +980,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<float>.Count)
+            uint size = (uint)Vector128<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<float>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -999,7 +1000,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<float>.Count)
+            uint size = (uint)Vector128<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<float>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -1013,13 +1016,15 @@ namespace Garyon.Extensions.ArrayCasting
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CopyToSingleArrayVector128(int* origin, float* target, uint length)
         {
-            if (!Sse41.IsSupported)
+            if (!Sse2.IsSupported)
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<float>.Count)
-                SSE41Helper.StoreVector128(origin, target, i);
-            SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
+            uint size = (uint)Vector128<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<float>.Count)
+                SSE2Helper.StoreVector128(origin, target, i);
+            SSE2Helper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1037,7 +1042,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<int>.Count)
+            uint size = (uint)Vector128<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<int>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -1055,7 +1062,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<int>.Count)
+            uint size = (uint)Vector128<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<int>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -1073,9 +1082,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<int>.Count)
+            uint size = (uint)Vector128<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<int>.Count)
                 SSEHelper.StoreVector128(origin, target, i);
-            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1091,8 +1102,10 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<float>.Count)
-                SSE41Helper.StoreVector128(origin, target, i);
+            uint size = (uint)Vector128<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<float>.Count)
+                SSE2Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
@@ -1109,7 +1122,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSSE3Helper.StoreVector64(origin, target, i);
             SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
@@ -1127,8 +1142,10 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<double>.Count)
-                SSE41Helper.StoreVector128(origin, target, i);
+            uint size = (uint)Vector128<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<double>.Count)
+                SSE2Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
@@ -1147,7 +1164,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<short>.Count)
+            uint size = (uint)Vector128<short>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<short>.Count)
                 SSE41Helper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -1165,9 +1184,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<short>.Count)
+            uint size = (uint)Vector128<short>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<short>.Count)
                 SSEHelper.StoreVector128(origin, target, i);
-            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1183,7 +1204,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<int>.Count)
+            uint size = (uint)Vector128<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<int>.Count)
                 SSSE3Helper.StoreVector64(origin, target, i);
             SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
@@ -1201,7 +1224,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSSE3Helper.StoreVector32(origin, target, i);
             SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
@@ -1221,9 +1246,11 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<byte>.Count)
+            uint size = (uint)Vector128<byte>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<byte>.Count)
                 SSEHelper.StoreVector128(origin, target, i);
-            SSEHelper.StoreLastElementsVector128(origin, target, i, length);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, target, i, length);
 
             return true;
         }
@@ -1239,7 +1266,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<short>.Count)
+            uint size = (uint)Vector128<short>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<short>.Count)
                 SSSE3Helper.StoreVector64(origin, target, i);
             SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
@@ -1257,7 +1286,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<int>.Count)
+            uint size = (uint)Vector128<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<int>.Count)
                 SSSE3Helper.StoreVector32(origin, target, i);
             SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
@@ -1275,7 +1306,9 @@ namespace Garyon.Extensions.ArrayCasting
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector128<long>.Count)
+            uint size = (uint)Vector128<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += (uint)Vector128<long>.Count)
                 SSSE3Helper.StoreVector16(origin, target, i);
             SSSE3Helper.StoreLastElementsVector128Downcast(origin, target, i, length);
 
@@ -1295,7 +1328,7 @@ namespace Garyon.Extensions.ArrayCasting
             uint i = 0;
             uint limit = length & ~(size - 1);
             for (; i < limit; i += size)
-                PerformCurrentConversionIterationVector128(origin, target, i, length);
+                PerformCurrentConversionIterationVector128(origin, target, i);
             ConvertLastElementsVector128(origin, target, i, length);
 
             return true;
@@ -1383,7 +1416,7 @@ namespace Garyon.Extensions.ArrayCasting
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentConversionIterationVector128<TFrom, TTo>(TFrom* origin, TTo* target, uint index, uint length)
+        private static void PerformCurrentConversionIterationVector128<TFrom, TTo>(TFrom* origin, TTo* target, uint index)
             where TFrom : unmanaged
             where TTo : unmanaged
         {
@@ -1391,76 +1424,75 @@ namespace Garyon.Extensions.ArrayCasting
             if (typeof(TFrom) == typeof(TTo))
                 SSEHelper.StoreVector128(origin, (TFrom*)target, index);
             else if (typeof(TTo) == typeof(float))
-            {
                 if (sizeof(TFrom) == sizeof(byte))
                     SSE41Helper.StoreVector128((byte*)origin, (float*)target, index);
-                if (sizeof(TFrom) == sizeof(short))
+                else if (sizeof(TFrom) == sizeof(short))
                     SSE41Helper.StoreVector128((short*)origin, (float*)target, index);
-                if (sizeof(TFrom) == sizeof(int))
+                else if (sizeof(TFrom) == sizeof(int))
                     SSE2Helper.StoreVector128((int*)origin, (float*)target, index);
-            }
             else if (typeof(TTo) == typeof(double))
-            {
                 if (typeof(TFrom) == typeof(float))
                     SSE2Helper.StoreVector128((float*)origin, (double*)target, index);
                 else
-                {
                     if (sizeof(TFrom) == sizeof(byte))
-                        SSE41Helper.StoreVector128((byte*)origin, (double*)target, index);
-                    if (sizeof(TFrom) == sizeof(short))
-                        SSE41Helper.StoreVector128((short*)origin, (double*)target, index);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSE2Helper.StoreVector128((int*)origin, (double*)target, index);
-                }
-            }
+                    SSE41Helper.StoreVector128((byte*)origin, (double*)target, index);
+                else if (sizeof(TFrom) == sizeof(short))
+                    SSE41Helper.StoreVector128((short*)origin, (double*)target, index);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSE2Helper.StoreVector128((int*)origin, (double*)target, index);
             else
-            {
-                if (sizeof(TFrom) == sizeof(TTo))
-                    SSEHelper.StoreVector128(origin, (TFrom*)target, index);
+                // Controversial functionality; consider providing that feature through the following design:
+                /*  
+                 *  Permitting all types of the same size (int -> T, uint -> T, float(?) -> T, vice versable)
+                 *  interface IUnsafelyConvertibleFrom
+                 *  interface IUnsafelyConvertibleTo
+                 *  interface IUnsafelyConvertible : IUnsafelyConvertibleFrom, IUnsafelyConvertibleTo
+                 *  
+                 *  Permitting only select types of the same size
+                 *  interface IUnsafelyConvertibleFrom<TFrom>
+                 *  interface IUnsafelyConvertibleTo<TTo>
+                 *  interface IUnsafelyConvertible<T> : IUnsafelyConvertibleFrom<T>, IUnsafelyConvertibleTo<T>
+                 */
+                // Useful for cases where:
+                // - a custom struct wraps a single predefined struct (a single int for instance)
+                // - two custom structs have the exact same memory layout (float, int in both structs)
+
+                //if (sizeof(TFrom) == sizeof(TTo))
+                //    SSEHelper.StoreVector128(origin, (TFrom*)target, index);
+
                 if (sizeof(TTo) == sizeof(byte))
-                {
-                    if (sizeof(TFrom) == sizeof(short))
-                        SSSE3Helper.StoreVector64((short*)origin, (byte*)target, index);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSSE3Helper.StoreVector32((int*)origin, (byte*)target, index);
-                    if (sizeof(TFrom) == sizeof(long))
-                        SSSE3Helper.StoreVector16((long*)origin, (byte*)target, index);
-                }
-                if (sizeof(TTo) == sizeof(short))
-                {
+                if (sizeof(TFrom) == sizeof(short))
+                    SSSE3Helper.StoreVector64((short*)origin, (byte*)target, index);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSSE3Helper.StoreVector32((int*)origin, (byte*)target, index);
+                else if (sizeof(TFrom) == sizeof(long))
+                    SSSE3Helper.StoreVector16((long*)origin, (byte*)target, index);
+            else if (sizeof(TTo) == sizeof(short))
+                if (sizeof(TFrom) == sizeof(byte))
+                    SSE41Helper.StoreVector128((byte*)origin, (short*)target, index);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSSE3Helper.StoreVector64((int*)origin, (short*)target, index);
+                else if (sizeof(TFrom) == sizeof(long))
+                    SSSE3Helper.StoreVector32((long*)origin, (short*)target, index);
+            else if (sizeof(TTo) == sizeof(int))
+                if (typeof(TFrom) == typeof(float))
+                    SSE2Helper.StoreVector128((float*)origin, (int*)target, index);
+                else if (typeof(TFrom) == typeof(double))
+                    SSE2Helper.StoreVector128((double*)origin, (int*)target, index);
+                else
                     if (sizeof(TFrom) == sizeof(byte))
-                        SSE41Helper.StoreVector128((byte*)origin, (short*)target, index);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSSE3Helper.StoreVector64((int*)origin, (short*)target, index);
-                    if (sizeof(TFrom) == sizeof(long))
-                        SSSE3Helper.StoreVector32((long*)origin, (short*)target, index);
-                }
-                if (sizeof(TTo) == sizeof(int))
-                {
-                    if (typeof(TFrom) == typeof(float))
-                        SSE2Helper.StoreVector128((float*)origin, (int*)target, index);
-                    else if (typeof(TFrom) == typeof(double))
-                        SSE2Helper.StoreVector128((double*)origin, (int*)target, index);
-                    else
-                    {
-                        if (sizeof(TFrom) == sizeof(byte))
-                            SSE41Helper.StoreVector128((byte*)origin, (int*)target, index);
-                        if (sizeof(TFrom) == sizeof(short))
-                            SSE41Helper.StoreVector128((short*)origin, (int*)target, index);
-                        if (sizeof(TFrom) == sizeof(long))
-                            SSSE3Helper.StoreVector64((long*)origin, (int*)target, index);
-                    }
-                }
-                if (sizeof(TTo) == sizeof(long))
-                {
-                    if (sizeof(TFrom) == sizeof(byte))
-                        SSE41Helper.StoreVector128((byte*)origin, (long*)target, index);
-                    if (sizeof(TFrom) == sizeof(short))
-                        SSE41Helper.StoreVector128((short*)origin, (long*)target, index);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSE41Helper.StoreVector128((int*)origin, (long*)target, index);
-                }
-            }
+                    SSE41Helper.StoreVector128((byte*)origin, (int*)target, index);
+                else if (sizeof(TFrom) == sizeof(short))
+                    SSE41Helper.StoreVector128((short*)origin, (int*)target, index);
+                else if (sizeof(TFrom) == sizeof(long))
+                    SSSE3Helper.StoreVector64((long*)origin, (int*)target, index);
+            else if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TFrom) == sizeof(byte))
+                    SSE41Helper.StoreVector128((byte*)origin, (long*)target, index);
+                else if (sizeof(TFrom) == sizeof(short))
+                    SSE41Helper.StoreVector128((short*)origin, (long*)target, index);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSE41Helper.StoreVector128((int*)origin, (long*)target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1472,76 +1504,59 @@ namespace Garyon.Extensions.ArrayCasting
             if (typeof(TFrom) == typeof(TTo))
                 SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
             else if (typeof(TTo) == typeof(float))
-            {
                 if (sizeof(TFrom) == sizeof(byte))
                     SSE41Helper.StoreLastElementsVector128((byte*)origin, (float*)target, index, length);
-                if (sizeof(TFrom) == sizeof(short))
+                else if (sizeof(TFrom) == sizeof(short))
                     SSE41Helper.StoreLastElementsVector128((short*)origin, (float*)target, index, length);
-                if (sizeof(TFrom) == sizeof(int))
+                else if (sizeof(TFrom) == sizeof(int))
                     SSE2Helper.StoreLastElementsVector128((int*)origin, (float*)target, index, length);
-            }
             else if (typeof(TTo) == typeof(double))
-            {
                 if (typeof(TFrom) == typeof(float))
                     SIMDIntrinsicsHelper.StoreLastElementsVector128((float*)origin, (double*)target, index, length);
                 else
-                {
                     if (sizeof(TFrom) == sizeof(byte))
-                        SIMDIntrinsicsHelper.StoreLastElementsVector128((byte*)origin, (double*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(short))
-                        SIMDIntrinsicsHelper.StoreLastElementsVector128((short*)origin, (double*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SIMDIntrinsicsHelper.StoreLastElementsVector128((int*)origin, (double*)target, index, length);
-                }
-            }
+                    SIMDIntrinsicsHelper.StoreLastElementsVector128((byte*)origin, (double*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(short))
+                    SIMDIntrinsicsHelper.StoreLastElementsVector128((short*)origin, (double*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SIMDIntrinsicsHelper.StoreLastElementsVector128((int*)origin, (double*)target, index, length);
             else
-            {
-                if (sizeof(TFrom) == sizeof(TTo))
-                    SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
+                // Refer to comments in the above function, at the respective location
+                //if (sizeof(TFrom) == sizeof(TTo))
+                //    SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
                 if (sizeof(TTo) == sizeof(byte))
-                {
-                    if (sizeof(TFrom) == sizeof(short))
-                        SSSE3Helper.StoreLastElementsVector128Downcast((short*)origin, (byte*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (byte*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(long))
-                        SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (byte*)target, index, length);
-                }
-                if (sizeof(TTo) == sizeof(short))
-                {
+                if (sizeof(TFrom) == sizeof(short))
+                    SSSE3Helper.StoreLastElementsVector128Downcast((short*)origin, (byte*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (byte*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(long))
+                    SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (byte*)target, index, length);
+            else if (sizeof(TTo) == sizeof(short))
+                if (sizeof(TFrom) == sizeof(byte))
+                    SSE41Helper.StoreLastElementsVector128((byte*)origin, (short*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (short*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(long))
+                    SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (short*)target, index, length);
+            else if (sizeof(TTo) == sizeof(int))
+                if (typeof(TFrom) == typeof(float))
+                    SSE2Helper.StoreLastElementsVector128((float*)origin, (int*)target, index, length);
+                else if (typeof(TFrom) == typeof(double))
+                    SIMDIntrinsicsHelper.StoreLastElementsVector128((double*)origin, (int*)target, index, length);
+                else
                     if (sizeof(TFrom) == sizeof(byte))
-                        SSE41Helper.StoreLastElementsVector128((byte*)origin, (short*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (short*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(long))
-                        SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (short*)target, index, length);
-                }
-                if (sizeof(TTo) == sizeof(int))
-                {
-                    if (typeof(TFrom) == typeof(float))
-                        SSE2Helper.StoreLastElementsVector128((float*)origin, (int*)target, index, length);
-                    else if (typeof(TFrom) == typeof(double))
-                        SIMDIntrinsicsHelper.StoreLastElementsVector128((double*)origin, (int*)target, index, length);
-                    else
-                    {
-                        if (sizeof(TFrom) == sizeof(byte))
-                            SSE41Helper.StoreLastElementsVector128((byte*)origin, (int*)target, index, length);
-                        if (sizeof(TFrom) == sizeof(short))
-                            SSE41Helper.StoreLastElementsVector128((short*)origin, (int*)target, index, length);
-                        if (sizeof(TFrom) == sizeof(long))
-                            SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (int*)target, index, length);
-                    }
-                }
-                if (sizeof(TTo) == sizeof(long))
-                {
-                    if (sizeof(TFrom) == sizeof(byte))
-                        SSE41Helper.StoreLastElementsVector128((byte*)origin, (long*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(short))
-                        SSE41Helper.StoreLastElementsVector128((short*)origin, (long*)target, index, length);
-                    if (sizeof(TFrom) == sizeof(int))
-                        SSE41Helper.StoreLastElementsVector128((int*)origin, (long*)target, index, length);
-                }
-            }
+                    SSE41Helper.StoreLastElementsVector128((byte*)origin, (int*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(short))
+                    SSE41Helper.StoreLastElementsVector128((short*)origin, (int*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(long))
+                    SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (int*)target, index, length);
+            else if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TFrom) == sizeof(byte))
+                    SSE41Helper.StoreLastElementsVector128((byte*)origin, (long*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(short))
+                    SSE41Helper.StoreLastElementsVector128((short*)origin, (long*)target, index, length);
+                else if (sizeof(TFrom) == sizeof(int))
+                    SSE41Helper.StoreLastElementsVector128((int*)origin, (long*)target, index, length);
         }
         #endregion
     }

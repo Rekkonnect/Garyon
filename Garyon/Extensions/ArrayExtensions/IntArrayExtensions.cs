@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-namespace Garyon.Extensions
+namespace Garyon.Extensions.ArrayExtensions
 {
+    // TODO: Consider implementing some of that functionality using the intrinsic acceleration pattern
+    // Examples including incrementation, array addition, subtraction, etc.
+
     /// <summary>Provides generic extension methods for <seealso cref="int"/> arrays.</summary>
     public static class IntArrayExtensions
     {

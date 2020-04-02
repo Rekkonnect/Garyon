@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Garyon.Extensions
+namespace Garyon.Extensions.ArrayExtensions
 {
     public static class ArrayConversionExtensions
     {
