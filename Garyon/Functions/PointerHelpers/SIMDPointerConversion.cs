@@ -1424,13 +1424,16 @@ namespace Garyon.Functions.PointerHelpers
             if (typeof(TFrom) == typeof(TTo))
                 SSEHelper.StoreVector128(origin, (TFrom*)target, index);
             else if (typeof(TTo) == typeof(float))
+            {
                 if (sizeof(TFrom) == sizeof(byte))
                     SSE41Helper.StoreVector128((byte*)origin, (float*)target, index);
                 else if (sizeof(TFrom) == sizeof(short))
                     SSE41Helper.StoreVector128((short*)origin, (float*)target, index);
                 else if (sizeof(TFrom) == sizeof(int))
                     SSE2Helper.StoreVector128((int*)origin, (float*)target, index);
+            }
             else if (typeof(TTo) == typeof(double))
+            {
                 if (typeof(TFrom) == typeof(float))
                     SSE2Helper.StoreVector128((float*)origin, (double*)target, index);
                 else
@@ -1440,7 +1443,9 @@ namespace Garyon.Functions.PointerHelpers
                     SSE41Helper.StoreVector128((short*)origin, (double*)target, index);
                 else if (sizeof(TFrom) == sizeof(int))
                     SSE2Helper.StoreVector128((int*)origin, (double*)target, index);
+            }
             else
+            {
                 // Controversial functionality; consider providing that feature through the following design:
                 /*  
                  *  Permitting all types of the same size (int -> T, uint -> T, float(?) -> T, vice versable)
@@ -1461,38 +1466,49 @@ namespace Garyon.Functions.PointerHelpers
                 //    SSEHelper.StoreVector128(origin, (TFrom*)target, index);
 
                 if (sizeof(TTo) == sizeof(byte))
-                if (sizeof(TFrom) == sizeof(short))
-                    SSSE3Helper.StoreVector64((short*)origin, (byte*)target, index);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SSSE3Helper.StoreVector32((int*)origin, (byte*)target, index);
-                else if (sizeof(TFrom) == sizeof(long))
-                    SSSE3Helper.StoreVector16((long*)origin, (byte*)target, index);
-            else if (sizeof(TTo) == sizeof(short))
-                if (sizeof(TFrom) == sizeof(byte))
-                    SSE41Helper.StoreVector128((byte*)origin, (short*)target, index);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SSSE3Helper.StoreVector64((int*)origin, (short*)target, index);
-                else if (sizeof(TFrom) == sizeof(long))
-                    SSSE3Helper.StoreVector32((long*)origin, (short*)target, index);
-            else if (sizeof(TTo) == sizeof(int))
-                if (typeof(TFrom) == typeof(float))
-                    SSE2Helper.StoreVector128((float*)origin, (int*)target, index);
-                else if (typeof(TFrom) == typeof(double))
-                    SSE2Helper.StoreVector128((double*)origin, (int*)target, index);
-                else
+                {
+                    if (sizeof(TFrom) == sizeof(short))
+                        SSSE3Helper.StoreVector64((short*)origin, (byte*)target, index);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SSSE3Helper.StoreVector32((int*)origin, (byte*)target, index);
+                    else if (sizeof(TFrom) == sizeof(long))
+                        SSSE3Helper.StoreVector16((long*)origin, (byte*)target, index);
+                }
+                else if (sizeof(TTo) == sizeof(short))
+                {
                     if (sizeof(TFrom) == sizeof(byte))
-                    SSE41Helper.StoreVector128((byte*)origin, (int*)target, index);
-                else if (sizeof(TFrom) == sizeof(short))
-                    SSE41Helper.StoreVector128((short*)origin, (int*)target, index);
-                else if (sizeof(TFrom) == sizeof(long))
-                    SSSE3Helper.StoreVector64((long*)origin, (int*)target, index);
-            else if (sizeof(TTo) == sizeof(long))
-                if (sizeof(TFrom) == sizeof(byte))
-                    SSE41Helper.StoreVector128((byte*)origin, (long*)target, index);
-                else if (sizeof(TFrom) == sizeof(short))
-                    SSE41Helper.StoreVector128((short*)origin, (long*)target, index);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SSE41Helper.StoreVector128((int*)origin, (long*)target, index);
+                        SSE41Helper.StoreVector128((byte*)origin, (short*)target, index);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SSSE3Helper.StoreVector64((int*)origin, (short*)target, index);
+                    else if (sizeof(TFrom) == sizeof(long))
+                        SSSE3Helper.StoreVector32((long*)origin, (short*)target, index);
+                }
+                else if (sizeof(TTo) == sizeof(int))
+                {
+                    if (typeof(TFrom) == typeof(float))
+                        SSE2Helper.StoreVector128((float*)origin, (int*)target, index);
+                    else if (typeof(TFrom) == typeof(double))
+                        SSE2Helper.StoreVector128((double*)origin, (int*)target, index);
+                    else
+                    {
+                        if (sizeof(TFrom) == sizeof(byte))
+                            SSE41Helper.StoreVector128((byte*)origin, (int*)target, index);
+                        else if (sizeof(TFrom) == sizeof(short))
+                            SSE41Helper.StoreVector128((short*)origin, (int*)target, index);
+                        else if (sizeof(TFrom) == sizeof(long))
+                            SSSE3Helper.StoreVector64((long*)origin, (int*)target, index);
+                    }
+                }
+                else if (sizeof(TTo) == sizeof(long))
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        SSE41Helper.StoreVector128((byte*)origin, (long*)target, index);
+                    else if (sizeof(TFrom) == sizeof(short))
+                        SSE41Helper.StoreVector128((short*)origin, (long*)target, index);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SSE41Helper.StoreVector128((int*)origin, (long*)target, index);
+                }
+            }
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1504,59 +1520,77 @@ namespace Garyon.Functions.PointerHelpers
             if (typeof(TFrom) == typeof(TTo))
                 SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
             else if (typeof(TTo) == typeof(float))
+            {
                 if (sizeof(TFrom) == sizeof(byte))
                     SSE41Helper.StoreLastElementsVector128((byte*)origin, (float*)target, index, length);
                 else if (sizeof(TFrom) == sizeof(short))
                     SSE41Helper.StoreLastElementsVector128((short*)origin, (float*)target, index, length);
                 else if (sizeof(TFrom) == sizeof(int))
                     SSE2Helper.StoreLastElementsVector128((int*)origin, (float*)target, index, length);
+            }
             else if (typeof(TTo) == typeof(double))
+            {
                 if (typeof(TFrom) == typeof(float))
                     SIMDIntrinsicsHelper.StoreLastElementsVector128((float*)origin, (double*)target, index, length);
                 else
+                {
                     if (sizeof(TFrom) == sizeof(byte))
-                    SIMDIntrinsicsHelper.StoreLastElementsVector128((byte*)origin, (double*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(short))
-                    SIMDIntrinsicsHelper.StoreLastElementsVector128((short*)origin, (double*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SIMDIntrinsicsHelper.StoreLastElementsVector128((int*)origin, (double*)target, index, length);
+                        SIMDIntrinsicsHelper.StoreLastElementsVector128((byte*)origin, (double*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(short))
+                        SIMDIntrinsicsHelper.StoreLastElementsVector128((short*)origin, (double*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SIMDIntrinsicsHelper.StoreLastElementsVector128((int*)origin, (double*)target, index, length);
+                }
+            }
             else
+            {
                 // Refer to comments in the above function, at the respective location
                 //if (sizeof(TFrom) == sizeof(TTo))
                 //    SIMDIntrinsicsHelper.StoreLastElementsVector128(origin, (TFrom*)target, index, length);
                 if (sizeof(TTo) == sizeof(byte))
-                if (sizeof(TFrom) == sizeof(short))
-                    SSSE3Helper.StoreLastElementsVector128Downcast((short*)origin, (byte*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (byte*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(long))
-                    SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (byte*)target, index, length);
-            else if (sizeof(TTo) == sizeof(short))
-                if (sizeof(TFrom) == sizeof(byte))
-                    SSE41Helper.StoreLastElementsVector128((byte*)origin, (short*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (short*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(long))
-                    SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (short*)target, index, length);
-            else if (sizeof(TTo) == sizeof(int))
-                if (typeof(TFrom) == typeof(float))
-                    SSE2Helper.StoreLastElementsVector128((float*)origin, (int*)target, index, length);
-                else if (typeof(TFrom) == typeof(double))
-                    SIMDIntrinsicsHelper.StoreLastElementsVector128((double*)origin, (int*)target, index, length);
-                else
+                {
+                    if (sizeof(TFrom) == sizeof(short))
+                        SSSE3Helper.StoreLastElementsVector128Downcast((short*)origin, (byte*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (byte*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(long))
+                        SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (byte*)target, index, length);
+                }
+                else if (sizeof(TTo) == sizeof(short))
+                {
                     if (sizeof(TFrom) == sizeof(byte))
-                    SSE41Helper.StoreLastElementsVector128((byte*)origin, (int*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(short))
-                    SSE41Helper.StoreLastElementsVector128((short*)origin, (int*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(long))
-                    SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (int*)target, index, length);
-            else if (sizeof(TTo) == sizeof(long))
-                if (sizeof(TFrom) == sizeof(byte))
-                    SSE41Helper.StoreLastElementsVector128((byte*)origin, (long*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(short))
-                    SSE41Helper.StoreLastElementsVector128((short*)origin, (long*)target, index, length);
-                else if (sizeof(TFrom) == sizeof(int))
-                    SSE41Helper.StoreLastElementsVector128((int*)origin, (long*)target, index, length);
+                        SSE41Helper.StoreLastElementsVector128((byte*)origin, (short*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SSSE3Helper.StoreLastElementsVector128Downcast((int*)origin, (short*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(long))
+                        SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (short*)target, index, length);
+                }
+                else if (sizeof(TTo) == sizeof(int))
+                {
+                    if (typeof(TFrom) == typeof(float))
+                        SSE2Helper.StoreLastElementsVector128((float*)origin, (int*)target, index, length);
+                    else if (typeof(TFrom) == typeof(double))
+                        SIMDIntrinsicsHelper.StoreLastElementsVector128((double*)origin, (int*)target, index, length);
+                    else
+                    {
+                        if (sizeof(TFrom) == sizeof(byte))
+                            SSE41Helper.StoreLastElementsVector128((byte*)origin, (int*)target, index, length);
+                        else if (sizeof(TFrom) == sizeof(short))
+                            SSE41Helper.StoreLastElementsVector128((short*)origin, (int*)target, index, length);
+                        else if (sizeof(TFrom) == sizeof(long))
+                            SSSE3Helper.StoreLastElementsVector128Downcast((long*)origin, (int*)target, index, length);
+                    }
+                }
+                else if (sizeof(TTo) == sizeof(long))
+                {
+                    if (sizeof(TFrom) == sizeof(byte))
+                        SSE41Helper.StoreLastElementsVector128((byte*)origin, (long*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(short))
+                        SSE41Helper.StoreLastElementsVector128((short*)origin, (long*)target, index, length);
+                    else if (sizeof(TFrom) == sizeof(int))
+                        SSE41Helper.StoreLastElementsVector128((int*)origin, (long*)target, index, length);
+                }
+            }
         }
         #endregion
     }
