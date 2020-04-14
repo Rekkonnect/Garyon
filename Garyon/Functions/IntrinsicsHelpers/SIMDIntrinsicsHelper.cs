@@ -58,8 +58,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 if (sizeof(T) == sizeof(long))
                     StoreRemainingInt64((long*)origin, (long*)target, remainder);
 
-                origin += remainder;
-                target += remainder;
+                PointerArithmetic.Increment(ref origin, ref target, remainder);
             }
         }
 
@@ -104,35 +103,44 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector128<T>(T* origin, double* target, uint index, uint length)
             where T : unmanaged
         {
-            StoreRemainingElements(1, origin, target, ref index, length);
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
-            static void StoreRemainingElements(uint remainder, T* origin, double* target, ref uint index, uint length)
+            uint count = length - index;
+
+            StoreRemainingElements(1, ref origin, ref target, length);
+
+            static void StoreRemainingElements(uint remainder, ref T* origin, ref double* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
                     if (typeof(T) == typeof(byte))
-                        target[index] = ((byte*)origin)[index];
+                        *target = *(byte*)origin;
                     else if (typeof(T) == typeof(short))
-                        target[index] = ((short*)origin)[index];
+                        *target = *(short*)origin;
                     else if (typeof(T) == typeof(int))
-                        target[index] = ((int*)origin)[index];
+                        *target = *(int*)origin;
                     else if (typeof(T) == typeof(float))
-                        target[index] = ((float*)origin)[index];
-                    index |= remainder;
+                        *target = *(float*)origin;
+
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLastElementsVector128(double* origin, int* target, uint index, uint length)
         {
-            StoreRemainingElements(1, origin, target, ref index, length);
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
-            static void StoreRemainingElements(uint remainder, double* origin, int* target, ref uint index, uint length)
+            uint count = length - index;
+
+            StoreRemainingElements(1, ref origin, ref target, count);
+
+            static void StoreRemainingElements(uint remainder, ref double* origin, ref int* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
-                    target[index] = (int)origin[index];
-                    index |= remainder;
+                    *target = *(int*)origin;
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
         }

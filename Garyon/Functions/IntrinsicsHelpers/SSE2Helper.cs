@@ -76,33 +76,23 @@ namespace Garyon.Functions.IntrinsicsHelpers
 
             if (sizeof(T) <= sizeof(byte))
                 StoreRemainingElements(ref origin, ref target, count, 16);
+            StoreLastElementsVector128(origin, target, count);
 
-            if (sizeof(T) == sizeof(byte))
-                StoreLastElementsVector128((byte*)origin, (byte*)target, length);
-            if (sizeof(T) == sizeof(short))
-                StoreLastElementsVector128((short*)origin, (short*)target, length);
-            if (sizeof(T) == sizeof(int))
-                StoreLastElementsVector128((int*)origin, (int*)target, length);
-            if (sizeof(T) == sizeof(long))
-                StoreLastElementsVector128((long*)origin, (long*)target, length);
-        }
-
-        private static unsafe void StoreRemainingElements<T>(ref T* origin, ref T* target, uint count, uint remainder)
-            where T : unmanaged
-        {
-            if ((count & remainder) > 0)
+            static void StoreRemainingElements(ref T* origin, ref T* target, uint count, uint remainder)
             {
-                if (sizeof(T) == sizeof(byte))
-                    StoreRemainingByte((byte*)origin, (byte*)target, count, remainder);
+                if ((count & remainder) > 0)
+                {
+                    if (sizeof(T) == sizeof(byte))
+                        StoreRemainingByte((byte*)origin, (byte*)target, count, remainder);
 
-                origin += remainder;
-                target += remainder;
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
+                }
             }
-        }
-        private static unsafe void StoreRemainingByte(byte* origin, byte* target, uint count, uint remainder)
-        {
-            if (remainder == 16)
-                StoreVector128(origin, target, count);
+            static void StoreRemainingByte(byte* origin, byte* target, uint count, uint remainder)
+            {
+                if (remainder == 16)
+                    StoreVector128(origin, target, count);
+            }
         }
         #endregion
 
@@ -132,15 +122,19 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse41.IsSupported)
                 return;
 
-            StoreRemainingElements(4, origin, target, ref index, length);
-            StoreLastElementsVector128(origin, target, index, length);
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
-            static void StoreRemainingElements(uint remainder, int* origin, float* target, ref uint index, uint length)
+            uint count = length - index;
+
+            StoreRemainingElements(4, ref origin, ref target, count);
+            StoreLastElementsVector128(origin, target, index, count);
+
+            static void StoreRemainingElements(uint remainder, ref int* origin, ref float* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
-                    StoreVector128(origin, target, index);
-                    index |= remainder;
+                    StoreVector128(origin, target, 0);
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
         }
@@ -150,23 +144,27 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse41.IsSupported)
                 return;
 
-            StoreRemainingElements(2, origin, target, ref index, length);
-            StoreRemainingElements(1, origin, target, ref index, length);
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
-            static void StoreRemainingElements(uint remainder, int* origin, float* target, ref uint index, uint length)
+            uint count = length - index;
+
+            StoreRemainingElements(2, ref origin, ref target, count);
+            StoreRemainingElements(1, ref origin, ref target, count);
+
+            static void StoreRemainingElements(uint remainder, ref int* origin, ref float* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
-                    StoreRemainingInt32(remainder, origin, target, index);
-                    index |= remainder;
+                    StoreRemainingInt32(remainder, origin, target);
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
-            static void StoreRemainingInt32(uint remainder, int* origin, float* target, uint index)
+            static void StoreRemainingInt32(uint remainder, int* origin, float* target)
             {
                 if (remainder == 2)
-                    StoreVector64(origin, target, index);
+                    StoreVector64(origin, target, 0);
                 if (remainder == 1)
-                    target[index] = origin[index];
+                    *target = *origin;
             }
         }
         #endregion
@@ -190,15 +188,19 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse41.IsSupported)
                 return;
 
-            StoreRemainingElements(4, origin, target, ref index, length);
-            StoreLastElementsVector128(origin, target, index, length);
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
-            static void StoreRemainingElements(uint remainder, float* origin, int* target, ref uint index, uint length)
+            uint count = length - index;
+
+            StoreRemainingElements(4, ref origin, ref target, count);
+            StoreLastElementsVector128(origin, target, 0, count);
+
+            static void StoreRemainingElements(uint remainder, ref float* origin, ref int* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
-                    StoreVector128(origin, target, index);
-                    index |= remainder;
+                    StoreVector128(origin, target, 0);
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
         }
@@ -208,23 +210,27 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (!Sse2.IsSupported)
                 return;
 
-            StoreRemainingElements(2, origin, target, ref index, length);
-            StoreRemainingElements(1, origin, target, ref index, length);
+            PointerArithmetic.Increment(ref origin, ref target, index);
 
-            static void StoreRemainingElements(uint remainder, float* origin, int* target, ref uint index, uint length)
+            uint count = length - index;
+
+            StoreRemainingElements(2, ref origin, ref target, count);
+            StoreRemainingElements(1, ref origin, ref target, count);
+
+            static void StoreRemainingElements(uint remainder, ref float* origin, ref int* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
-                    StoreRemainingSingle(remainder, origin, target, index);
-                    index |= remainder;
+                    StoreRemainingSingle(remainder, origin, target);
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
-            static void StoreRemainingSingle(uint remainder, float* origin, int* target, uint index)
+            static void StoreRemainingSingle(uint remainder, float* origin, int* target)
             {
                 if (remainder == 2)
-                    StoreVector64(origin, target, index);
+                    StoreVector64(origin, target, 0);
                 if (remainder == 1)
-                    target[index] = (int)origin[index];
+                    *target = (int)*origin;
             }
         }
         #endregion

@@ -27,7 +27,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
 
         #region Zeroing Out
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void ZeroOutVector128<T>(T* pointer, uint index)
+        public static void ZeroOutVector128<T>(T* pointer, uint index = 0)
             where T : unmanaged
         {
             if (Sse.IsSupported)
@@ -35,20 +35,43 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ZeroOutLastBytesVector256(byte* pointer, uint index, uint length)
+        {
+            pointer += index;
+
+            uint count = length - index;
+
+            ZeroOutRemainingElements(16, ref pointer, count);
+            ZeroOutLastBytesVector128(pointer, 0, count);
+
+            static void ZeroOutRemainingElements(uint remainder, ref byte* pointer, uint count)
+            {
+                if ((count & remainder) > 0)
+                {
+                    ZeroOutVector128(pointer, 0);
+                    pointer += remainder;
+                }
+            }
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ZeroOutLastBytesVector128(byte* pointer, uint index, uint length)
         {
-            ZeroOutRemainingElements<long>(pointer, ref index, length);
-            ZeroOutRemainingElements<int>(pointer, ref index, length);
-            ZeroOutRemainingElements<short>(pointer, ref index, length);
-            ZeroOutRemainingElements<byte>(pointer, ref index, length);
+            pointer += index;
 
-            static void ZeroOutRemainingElements<T>(byte* pointer, ref uint index, uint length)
+            uint count = length - index;
+
+            ZeroOutRemainingElements<long>(ref pointer, count);
+            ZeroOutRemainingElements<int>(ref pointer, count);
+            ZeroOutRemainingElements<short>(ref pointer, count);
+            ZeroOutRemainingElements<byte>(ref pointer, count);
+
+            static void ZeroOutRemainingElements<T>(ref byte* pointer, uint count)
                 where T : unmanaged
             {
-                if ((length & sizeof(T)) > 0)
+                if ((count & sizeof(T)) > 0)
                 {
-                    *(T*)&pointer[index] = default;
-                    index |= (uint)sizeof(T);
+                    *(T*)pointer = default;
+                    pointer += (uint)sizeof(T);
                 }
             }
         }

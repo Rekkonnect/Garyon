@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Functions.PointerHelpers;
+using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
@@ -79,22 +80,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
         {
             if (Avx.IsSupported)
                 Avx.Store((byte*)&pointer[index], Vector256<byte>.Zero);
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void ZeroOutLastBytesVector256(byte* pointer, uint index, uint length)
-        {
-            ZeroOutRemainingElements(16, pointer, ref index, length);
-            ZeroOutLastBytesVector128(pointer, index, length);
-
-            static void ZeroOutRemainingElements(uint remainder, byte* pointer, ref uint index, uint length)
-            {
-                if ((length & remainder) > 0)
-                {
-                    ZeroOutVector128(pointer, index);
-                    index |= remainder;
-                }
-            }
         }
         #endregion
 
