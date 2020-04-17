@@ -421,6 +421,9 @@ namespace Garyon.Extensions
                 str = str.Append(s[i]);
             return str.ToString();
         }
+        /// <summary>Combines the strings of a string array and returns the new string.</summary>
+        /// <param name="s">The array of strings.</param>
+        public static string CombineWords(this string[] s) => s.Aggregate(WordAggregator);
         /// <summary>Combines the strings of a string array with a separator and returns the new string.</summary>
         /// <param name="s">The array of strings.</param>
         /// <param name="separator">The separator of the strings.</param>
@@ -453,20 +456,26 @@ namespace Garyon.Extensions
             return separated;
         }
 
+        /// <summary>Returns the words of a string in PascalCase in a single string.</summary>
+        /// <param name="s">The string in PascalCase whose words to get.</param>
+        public static string GetPascalCaseWordsString(this string s, bool separateDigits = true) => s.GetPascalCaseWords(separateDigits).CombineWords();
         /// <summary>Returns the words of a string in PascalCase.</summary>
         /// <param name="s">The string in PascalCase whose words to get.</param>
-        public static string[] GetPascalCaseWords(this string s)
+        public static string[] GetPascalCaseWords(this string s, bool separateDigits = true)
         {
-            var indices = new List<int>(s.Length / 7) { 0 }; // estimated word count
+            var indices = new List<int>(s.Length / 5) { 0 }; // estimated word count
 
             bool wasLastCharacterUpper = true;
+            bool wasLastCharacterDigit = false;
             bool isCurrentCharacterUpper;
+            bool isCurrentCharacterDigit;
             int continuousUpperCases = 0;
-            for (int i = 1; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                isCurrentCharacterUpper = s[i].IsUpperCaseLetter();
+                isCurrentCharacterUpper = char.IsUpper(s[i]);
+                isCurrentCharacterDigit = separateDigits && char.IsDigit(s[i]);
 
-                if (!wasLastCharacterUpper && isCurrentCharacterUpper)
+                if ((!wasLastCharacterUpper && isCurrentCharacterUpper) || (!wasLastCharacterDigit && isCurrentCharacterDigit))
                     indices.Add(i);
                 else if (continuousUpperCases > 1 && !isCurrentCharacterUpper)
                     indices.Add(i - 1);
@@ -477,11 +486,14 @@ namespace Garyon.Extensions
                     continuousUpperCases = 0;
 
                 wasLastCharacterUpper = isCurrentCharacterUpper;
+                wasLastCharacterDigit = isCurrentCharacterDigit;
             }
 
-            string[] words = new string[indices.Count];
-            for (int i = 0; i < indices.Count; i++)
-                words[i] = s[indices[i]..(i + 1 < indices.Count ? indices[i + 1] : s.Length)];
+            indices.Add(s.Length);
+
+            string[] words = new string[indices.Count - 1];
+            for (int i = 0; i < words.Length; i++)
+                words[i] = s[indices[i]..indices[i + 1]];
             return words;
         }
         /// <summary>Returns the lines of a string.</summary>
@@ -507,6 +519,10 @@ namespace Garyon.Extensions
         /// <param name="strings">The strings to aggregate.</param>
         /// <param name="aggregator">The aggregator function to use when aggregating the strings.</param>
         public static string AggregateIfContains(this IEnumerable<string> strings, Func<string, string, string> aggregator) => strings.Any() ? strings.Aggregate(aggregator) : "";
+        #endregion
+
+        #region Aggregators
+        public static string WordAggregator(string a, string b) => $"{a} {b}";
         #endregion
     }
 }
