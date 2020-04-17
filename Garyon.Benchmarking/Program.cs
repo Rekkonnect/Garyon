@@ -7,7 +7,7 @@ namespace Garyon.Benchmarking
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<ArrayTypeComparison>();
+            BenchmarkRunningFunctions.RunArrayCopyingHelpers();
         }
     }
 }
