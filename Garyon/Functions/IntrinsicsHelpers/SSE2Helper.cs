@@ -139,7 +139,8 @@ namespace Garyon.Functions.IntrinsicsHelpers
             }
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void StoreLastElementsVector128(int* origin, float* target, uint index, uint length)
+        public static void StoreLastElementsVector128<T>(T* origin, float* target, uint index, uint length)
+            where T : unmanaged
         {
             if (!Sse41.IsSupported)
                 return;
@@ -151,11 +152,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
             StoreRemainingElements(2, ref origin, ref target, count);
             StoreRemainingElements(1, ref origin, ref target, count);
 
-            static void StoreRemainingElements(uint remainder, ref int* origin, ref float* target, uint count)
+            static void StoreRemainingElements(uint remainder, ref T* origin, ref float* target, uint count)
             {
                 if ((count & remainder) > 0)
                 {
-                    StoreRemainingInt32(remainder, origin, target);
+                    if (typeof(T) == typeof(int))
+                        StoreRemainingInt32(remainder, (int*)origin, target);
+                    else if (typeof(T) == typeof(double))
+                        StoreRemainingDouble(remainder, (double*)origin, target);
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
@@ -165,6 +169,11 @@ namespace Garyon.Functions.IntrinsicsHelpers
                     StoreVector64(origin, target, 0);
                 if (remainder == 1)
                     *target = *origin;
+            }
+            static void StoreRemainingDouble(uint remainder, double* origin, float* target)
+            {
+                if (remainder == 1)
+                    *target = *(float*)origin;
             }
         }
         #endregion
@@ -257,11 +266,13 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #region T* -> float*
         public static void StoreVector64(int* origin, float* target, uint index)
         {
-            if (!Sse2.IsSupported)
-                return;
-
-            var vec = Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index]));
-            *(long*)(target + index) = *(long*)&vec;
+            if (Sse2.IsSupported)
+                Store<float, long>(Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index])), target, index);
+        }
+        public static void StoreVector64(double* origin, float* target, uint index)
+        {
+            if (Sse2.IsSupported)
+                Store<float, long>(Sse2.ConvertToVector128Single(CreateVector128From64(origin, index)), target, index);
         }
         #endregion
         #endregion

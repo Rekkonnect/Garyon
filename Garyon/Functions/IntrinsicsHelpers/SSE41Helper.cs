@@ -316,6 +316,13 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector128<T>(T* origin, float* target, uint index, uint length)
             where T : unmanaged
         {
+            // Fallback to already handled cases from lower requirements
+            if (typeof(T) == typeof(int) || typeof(T) == typeof(double))
+            {
+                SSE2Helper.StoreLastElementsVector128(origin, target, index, length);
+                return;
+            }
+
             if (!Sse41.IsSupported)
                 return;
 
