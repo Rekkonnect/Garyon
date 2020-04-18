@@ -4,6 +4,7 @@ using BenchmarkDotNet.Reports;
 using BenchmarkDotNet.Running;
 using Garyon.Benchmarking.Extensions;
 using OfficeOpenXml;
+using OfficeOpenXml.ConditionalFormatting;
 using OfficeOpenXml.Style;
 using System.Collections.Generic;
 using System.Drawing;
@@ -42,10 +43,13 @@ namespace Garyon.Benchmarking
 
                 var cells = worksheet.Cells;
 
-                worksheet.Row(1).Style.Font.Bold = true;
-                worksheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                worksheet.Row(2).Style.Font.Bold = true;
-                worksheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                for (int i = 1; i <= 2; i++)
+                {
+                    var row = worksheet.Row(i);
+                    row.Style.Font.Bold = true;
+                    row.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                    row.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                }
 
                 cells["A1"].Value = "Method";
                 cells["A1:A2"].Merge = true;
@@ -102,7 +106,7 @@ namespace Garyon.Benchmarking
                     //var ratiosRange = cells[3, baseColumn + 3, lastRow, baseColumn + 3];
 
                     if (i == baselineIndex)
-                        cells[3, baseColumn, lastRow, baseColumn].ConditionalFormatting.AddDatabar(Color.FromArgb(0, 176, 240));
+                        AddDatabar(0, 176, 240);
                     else
                     {
                         var ratioRule = cells[3, baseColumn + 3, lastRow, baseColumn + 3].ConditionalFormatting.AddGreaterThan();
@@ -110,12 +114,21 @@ namespace Garyon.Benchmarking
                         ratioRule.Style.Fill.BackgroundColor.Color = Color.FromArgb(255, 199, 206);
                         ratioRule.Style.Font.Color.Color = Color.FromArgb(156, 0, 0);
 
-                        var bar = cells[3, baseColumn, lastRow, baseColumn].ConditionalFormatting.AddDatabar(Color.FromArgb(0, 218, 100));
-                        // cannot set the data bar to a solid color :(
+                        AddDatabar(0, 218, 100);
                     }
 
                     cells[3, baseColumn, lastRow, baseColumn + 2].Style.Numberformat.Format = "#,##0.00";
                     cells[3, baseColumn + 3, lastRow, baseColumn + 3].Style.Numberformat.Format = "0.0000";
+
+                    void AddDatabar(int r, int g, int b)
+                    {
+                        var bar = cells[3, baseColumn, lastRow, baseColumn].ConditionalFormatting.AddDatabar(Color.FromArgb(r, g, b));
+                        // Hope that this indicates automatic
+                        bar.HighValue.Type = (eExcelConditionalFormattingValueObjectType)6;
+                        bar.LowValue.Type = (eExcelConditionalFormattingValueObjectType)6;
+                        bar.Style.Fill.PatternType = ExcelFillStyle.Solid;
+                        // cannot set the data bar to a solid color? :(?
+                    }
                 }
 
                 // Set some document properties
