@@ -16,12 +16,16 @@ namespace Garyon.Benchmarking
 
         public static void RunArrayCopyingHelpers()
         {
-            var nonGeneric = BenchmarkRunner.Run<ArrayCopyingHelpersVector128>();
-            var generic = BenchmarkRunner.Run<ArrayCopyingHelpersGenericVector128>();
+            var genericUnsafe128 = BenchmarkRunner.Run<ArrayCopyingHelpersGenericVector128>();
+            var unsafe128 = BenchmarkRunner.Run<ArrayCopyingHelpersVector128>();
             var manual = BenchmarkRunner.Run<ArrayCopyingHelpersUnoptimized>();
+            var genericUnsafe256 = BenchmarkRunner.Run<ArrayCopyingHelpersGenericVector256>();
+            var unsafe256 = BenchmarkRunner.Run<ArrayCopyingHelpersVector256>();
 
-            MarkdownExporter.Default.ExportToFiles(nonGeneric, new ConsoleLogger());
-            MarkdownExporter.Default.ExportToFiles(generic, new ConsoleLogger());
+            MarkdownExporter.Default.ExportToFiles(genericUnsafe128, new ConsoleLogger());
+            MarkdownExporter.Default.ExportToFiles(unsafe128, new ConsoleLogger());
+            MarkdownExporter.Default.ExportToFiles(genericUnsafe256, new ConsoleLogger());
+            MarkdownExporter.Default.ExportToFiles(unsafe256, new ConsoleLogger());
             MarkdownExporter.Default.ExportToFiles(manual, new ConsoleLogger());
 
             SummaryExporter.ExportSummaries(4, NanoSecondsDivisor, genericUnsafe128, unsafe128, genericUnsafe256, unsafe256, manual);
