@@ -1,4 +1,5 @@
-﻿using Garyon.Functions.PointerHelpers;
+﻿using Garyon.Functions.Arrays;
+using Garyon.Functions.PointerHelpers;
 using System;
 using System.CodeDom.Compiler;
 using System.Net.NetworkInformation;
@@ -54,9 +55,9 @@ namespace Garyon.Extensions.ArrayExtensions.ArrayConverting
 
             unsafe
             {
-                if (GenericArrayExtensions.IsArrayOfByte<TArrayFrom>())
+                if (ArrayIdentification.IsArrayOfByte<TArrayFrom>())
                 {
-                    if (GenericArrayExtensions.IsArrayOfByte<TArrayTo>())
+                    if (ArrayIdentification.IsArrayOfByte<TArrayTo>())
                     {
                         
                     }
