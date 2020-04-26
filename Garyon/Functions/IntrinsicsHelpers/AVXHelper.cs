@@ -65,11 +65,17 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Store<TTarget>(Vector256<TTarget> vector, TTarget* target, uint index)
+            where TTarget : unmanaged
+        {
+            StoreVector256((TTarget*)&vector, target + index, 0);
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Store<TTarget, TNew>(Vector256<TTarget> vector, TTarget* target, uint index)
             where TTarget : unmanaged
             where TNew : unmanaged
         {
-            Store<TTarget, TTarget, TNew>((TTarget*)&vector, target + index);
+            Store<TTarget, TNew>((TTarget*)&vector, target + index);
         }
         #endregion
 
@@ -151,6 +157,120 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         #endregion
+        #endregion
+
+        #region AND
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> ANDVector256<T>(T* origin, Vector256<T> and, uint index)
+            where T : unmanaged
+        {
+            if (sizeof(T) == sizeof(int))
+                return ANDVector256((int*)origin, and.As<T, int>(), index).As<int, T>();
+            if (sizeof(T) == sizeof(long))
+                return ANDVector256((long*)origin, and.As<T, long>(), index).As<long, T>();
+
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<int> ANDVector256(int* origin, Vector256<int> and, uint index)
+        {
+            return ANDVector256((float*)origin, and.As<int, float>(), index).As<float, int>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<long> ANDVector256(long* origin, Vector256<long> and, uint index)
+        {
+            return ANDVector256((double*)origin, and.As<long, double>(), index).As<double, long>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<float> ANDVector256(float* origin, Vector256<float> and, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.And(Avx.LoadVector256(origin + index), and);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<double> ANDVector256(double* origin, Vector256<double> and, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.And(Avx.LoadVector256(origin + index), and);
+            return default;
+        }
+        #endregion
+
+        #region OR
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> ORVector256<T>(T* origin, Vector256<T> or, uint index)
+            where T : unmanaged
+        {
+            if (sizeof(T) == sizeof(int))
+                return ORVector256((int*)origin, or.As<T, int>(), index).As<int, T>();
+            if (sizeof(T) == sizeof(long))
+                return ORVector256((long*)origin, or.As<T, long>(), index).As<long, T>();
+
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<int> ORVector256(int* origin, Vector256<int> or, uint index)
+        {
+            return ORVector256((float*)origin, or.As<int, float>(), index).As<float, int>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<long> ORVector256(long* origin, Vector256<long> or, uint index)
+        {
+            return ORVector256((double*)origin, or.As<long, double>(), index).As<double, long>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<float> ORVector256(float* origin, Vector256<float> or, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.Or(Avx.LoadVector256(origin + index), or);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<double> ORVector256(double* origin, Vector256<double> or, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.Or(Avx.LoadVector256(origin + index), or);
+            return default;
+        }
+        #endregion
+
+        #region XOR
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> XORVector256<T>(T* origin, Vector256<T> xor, uint index)
+            where T : unmanaged
+        {
+            if (sizeof(T) == sizeof(int))
+                return XORVector256((int*)origin, xor.As<T, int>(), index).As<int, T>();
+            if (sizeof(T) == sizeof(long))
+                return XORVector256((long*)origin, xor.As<T, long>(), index).As<long, T>();
+
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<int> XORVector256(int* origin, Vector256<int> xor, uint index)
+        {
+            return XORVector256((float*)origin, xor.As<int, float>(), index).As<float, int>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<long> XORVector256(long* origin, Vector256<long> xor, uint index)
+        {
+            return XORVector256((double*)origin, xor.As<long, double>(), index).As<double, long>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<float> XORVector256(float* origin, Vector256<float> xor, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.Xor(Avx.LoadVector256(origin + index), xor);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<double> XORVector256(double* origin, Vector256<double> xor, uint index)
+        {
+            if (Avx.IsSupported)
+                return Avx.Xor(Avx.LoadVector256(origin + index), xor);
+            return default;
+        }
         #endregion
     }
 }

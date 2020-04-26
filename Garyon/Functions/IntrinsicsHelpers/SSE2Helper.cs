@@ -242,6 +242,132 @@ namespace Garyon.Functions.IntrinsicsHelpers
                     *target = (int)*origin;
             }
         }
+
+        #region AND
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static new Vector128<T> ANDVector128<T>(T* origin, Vector128<T> and, uint index)
+            where T : unmanaged
+        {
+            if (sizeof(T) == sizeof(byte))
+                return ANDVector128((byte*)origin, and.As<T, byte>(), index).As<byte, T>();
+            if (sizeof(T) == sizeof(short))
+                return ANDVector128((short*)origin, and.As<T, short>(), index).As<short, T>();
+            if (sizeof(T) == sizeof(long))
+                return ANDVector128((long*)origin, and.As<T, long>(), index).As<long, T>();
+
+            return SSEHelper.ANDVector128(origin, and, index);
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<byte> ANDVector128(byte* origin, Vector128<byte> and, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.And(Sse2.LoadVector128(origin + index), and);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<short> ANDVector128(short* origin, Vector128<short> and, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.And(Sse2.LoadVector128(origin + index), and);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<long> ANDVector128(long* origin, Vector128<long> and, uint index)
+        {
+            return ANDVector128((double*)origin, and.As<long, double>(), index).As<double, long>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<double> ANDVector128(double* origin, Vector128<double> and, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.And(Sse2.LoadVector128(origin + index), and);
+            return default;
+        }
+        #endregion
+
+        #region OR
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static new Vector128<T> ORVector128<T>(T* origin, Vector128<T> or, uint index)
+            where T : unmanaged
+        {
+            if (sizeof(T) == sizeof(byte))
+                return ORVector128((byte*)origin, or.As<T, byte>(), index).As<byte, T>();
+            if (sizeof(T) == sizeof(short))
+                return ORVector128((short*)origin, or.As<T, short>(), index).As<short, T>();
+            if (sizeof(T) == sizeof(long))
+                return ORVector128((long*)origin, or.As<T, long>(), index).As<long, T>();
+
+            return SSEHelper.ORVector128(origin, or, index);
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<byte> ORVector128(byte* origin, Vector128<byte> or, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.Or(Sse2.LoadVector128(origin + index), or);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<short> ORVector128(short* origin, Vector128<short> or, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.Or(Sse2.LoadVector128(origin + index), or);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<long> ORVector128(long* origin, Vector128<long> or, uint index)
+        {
+            return ORVector128((double*)origin, or.As<long, double>(), index).As<double, long>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<double> ORVector128(double* origin, Vector128<double> or, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.Or(Sse2.LoadVector128(origin + index), or);
+            return default;
+        }
+        #endregion
+
+        #region XOR
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static new Vector128<T> XORVector128<T>(T* origin, Vector128<T> xor, uint index)
+            where T : unmanaged
+        {
+            if (sizeof(T) == sizeof(byte))
+                return XORVector128((byte*)origin, xor.As<T, byte>(), index).As<byte, T>();
+            if (sizeof(T) == sizeof(short))
+                return XORVector128((short*)origin, xor.As<T, short>(), index).As<short, T>();
+            if (sizeof(T) == sizeof(long))
+                return XORVector128((long*)origin, xor.As<T, long>(), index).As<long, T>();
+
+            return SSEHelper.XORVector128(origin, xor, index);
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<byte> XORVector128(byte* origin, Vector128<byte> xor, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.Xor(Sse2.LoadVector128(origin + index), xor);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<short> XORVector128(short* origin, Vector128<short> xor, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.Xor(Sse2.LoadVector128(origin + index), xor);
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<long> XORVector128(long* origin, Vector128<long> xor, uint index)
+        {
+            return XORVector128((double*)origin, xor.As<long, double>(), index).As<double, long>();
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<double> XORVector128(double* origin, Vector128<double> xor, uint index)
+        {
+            if (Sse2.IsSupported)
+                return Sse2.Xor(Sse2.LoadVector128(origin + index), xor);
+            return default;
+        }
+        #endregion
         #endregion
 
         #region Vector64
