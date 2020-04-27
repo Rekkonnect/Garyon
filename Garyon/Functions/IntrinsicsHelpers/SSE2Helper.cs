@@ -74,8 +74,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
 
             uint count = length - index;
 
-            if (sizeof(T) <= sizeof(byte))
+            if (sizeof(T) == sizeof(byte))
                 StoreRemainingElements(ref origin, ref target, count, 16);
+            if (sizeof(T) == sizeof(short))
+                StoreRemainingElements(ref origin, ref target, count, 8);
+            if (sizeof(T) == sizeof(int))
+                StoreRemainingElements(ref origin, ref target, count, 4);
+            if (sizeof(T) == sizeof(long))
+                StoreRemainingElements(ref origin, ref target, count, 2);
             StoreLastElementsVector128(origin, target, count);
 
             static void StoreRemainingElements(ref T* origin, ref T* target, uint count, uint remainder)
@@ -83,15 +89,36 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 if ((count & remainder) > 0)
                 {
                     if (sizeof(T) == sizeof(byte))
-                        StoreRemainingByte((byte*)origin, (byte*)target, count, remainder);
+                        StoreRemainingByte((byte*)origin, (byte*)target, remainder);
+                    if (sizeof(T) == sizeof(short))
+                        StoreRemainingInt16((short*)origin, (short*)target, remainder);
+                    if (sizeof(T) == sizeof(int))
+                        StoreRemainingInt32((int*)origin, (int*)target, remainder);
+                    if (sizeof(T) == sizeof(long))
+                        StoreRemainingInt64((long*)origin, (long*)target, remainder);
 
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
-            static void StoreRemainingByte(byte* origin, byte* target, uint count, uint remainder)
+            static void StoreRemainingByte(byte* origin, byte* target, uint remainder)
             {
                 if (remainder == 16)
-                    StoreVector128(origin, target, count);
+                    StoreVector128(origin, target, 0);
+            }
+            static void StoreRemainingInt16(short* origin, short* target, uint remainder)
+            {
+                if (remainder == 8)
+                    StoreVector128(origin, target, 0);
+            }
+            static void StoreRemainingInt32(int* origin, int* target, uint remainder)
+            {
+                if (remainder == 4)
+                    StoreVector128(origin, target, 0);
+            }
+            static void StoreRemainingInt64(long* origin, long* target, uint remainder)
+            {
+                if (remainder == 2)
+                    StoreVector128(origin, target, 0);
             }
         }
         #endregion
