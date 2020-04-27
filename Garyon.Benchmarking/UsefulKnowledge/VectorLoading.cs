@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics.X86;
 
 namespace Garyon.Benchmarking.UsefulKnowledge
 {
-    public class VectorLoading : ArrayCopyingExtensionsQualityControlAsset
+    public class VectorLoading : ArrayManipulationExtensionsQualityControlAsset
     {
         [Benchmark]
         public unsafe void PointerAlignmentOverhead()

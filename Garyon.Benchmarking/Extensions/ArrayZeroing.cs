@@ -8,7 +8,7 @@ using static Garyon.Extensions.ArrayExtensions.UnsafeArrayZeroingHelpers;
 namespace Garyon.Benchmarking.Extensions
 {
     [IterationCount(25)]
-    public class ArrayZeroing : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayZeroing : ArrayManipulationExtensionsQualityControlAsset
     {
         [Benchmark]
         public unsafe void ByteArrayZeroingVector256()

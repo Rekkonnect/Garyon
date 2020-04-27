@@ -6,7 +6,7 @@ using static Garyon.Exceptions.ThrowHelper;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    public class ArrayCopyingHelpersGenericVector256 : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersGenericVector256 : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
         [Benchmark]

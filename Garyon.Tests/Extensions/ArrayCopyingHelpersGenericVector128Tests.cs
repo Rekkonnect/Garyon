@@ -7,7 +7,7 @@ using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions
 {
-    public class ArrayCopyingHelpersGenericVector128Tests : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersGenericVector128Tests : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
         [Test]

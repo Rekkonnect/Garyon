@@ -3,7 +3,7 @@ using System;
 
 namespace Garyon.QualityControl.Extensions
 {
-    public class ArrayCopyingExtensionsQualityControlAsset : QualityControlAsset
+    public class ArrayManipulationExtensionsQualityControlAsset : QualityControlAsset
     {
         // The length is explicitly set as this to better test the remainders
         protected const int BaseArrayLength = 21 * 32;
@@ -40,7 +40,7 @@ namespace Garyon.QualityControl.Extensions
         protected static bool[] TargetBoolArray;
         protected static char[] TargetCharArray;
 
-        static ArrayCopyingExtensionsQualityControlAsset()
+        static ArrayManipulationExtensionsQualityControlAsset()
         {
             Initialize(ref OriginalByteArray);
             Initialize(ref OriginalInt16Array);

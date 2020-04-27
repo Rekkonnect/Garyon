@@ -6,7 +6,7 @@ using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    public class ArrayCopyingHelpersGenericVector128 : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersGenericVector128 : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
         [Benchmark]

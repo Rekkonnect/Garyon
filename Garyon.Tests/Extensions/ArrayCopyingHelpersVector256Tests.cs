@@ -8,7 +8,7 @@ using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions
 {
-    public class ArrayCopyingHelpersVector256Tests : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersVector256Tests : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
         [Test]

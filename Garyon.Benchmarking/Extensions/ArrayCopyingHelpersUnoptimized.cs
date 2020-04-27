@@ -3,7 +3,7 @@ using Garyon.QualityControl.Extensions;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    public class ArrayCopyingHelpersUnoptimized : ArrayCopyingExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersUnoptimized : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
         [Benchmark]
