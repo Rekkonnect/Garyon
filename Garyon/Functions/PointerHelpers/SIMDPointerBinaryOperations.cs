@@ -92,7 +92,7 @@ namespace Garyon.Functions.PointerHelpers
         private static void PerformCurrentANDIterationVector256<T>(T* origin, T* target, Vector256<T> and, uint index, uint length)
             where T : unmanaged
         {
-            AVXHelper.Store(AVX2Helper.ANDVector256(origin, and, index), target, index);
+            AVXHelper.Store(AVXHelper.ANDVector256(origin, and, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -100,7 +100,7 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = AVX2Helper.ANDVector256(origin, and, index);
+            var anded = AVXHelper.ANDVector256(origin, and, index);
             SSE2Helper.StoreLastElementsVector256((T*)&anded, target + index, 0, count);
         }
         #endregion
@@ -128,7 +128,7 @@ namespace Garyon.Functions.PointerHelpers
         private static void PerformCurrentORIterationVector256<T>(T* origin, T* target, Vector256<T> or, uint index, uint length)
             where T : unmanaged
         {
-            AVXHelper.Store(AVX2Helper.ORVector256(origin, or, index), target, index);
+            AVXHelper.Store(AVXHelper.ORVector256(origin, or, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -136,7 +136,7 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var ored = AVX2Helper.ORVector256(origin, or, index);
+            var ored = AVXHelper.ORVector256(origin, or, index);
             SSE2Helper.StoreLastElementsVector256((T*)&ored, target + index, 0, count);
         }
         #endregion
@@ -164,7 +164,7 @@ namespace Garyon.Functions.PointerHelpers
         private static void PerformCurrentXORIterationVector256<T>(T* origin, T* target, Vector256<T> xor, uint index, uint length)
             where T : unmanaged
         {
-            AVXHelper.Store(AVX2Helper.XORVector256(origin, xor, index), target, index);
+            AVXHelper.Store(AVXHelper.XORVector256(origin, xor, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -172,7 +172,7 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var xored = AVX2Helper.XORVector256(origin, xor, index);
+            var xored = AVXHelper.XORVector256(origin, xor, index);
             SSE2Helper.StoreLastElementsVector256((T*)&xored, target + index, 0, count);
         }
         #endregion
@@ -180,11 +180,7 @@ namespace Garyon.Functions.PointerHelpers
         private static bool GetSupportedInstructionSetVector256<T>()
             where T : unmanaged
         {
-            if (sizeof(T) == sizeof(double))
-                return Avx.IsSupported;
-            if (sizeof(T) == sizeof(float))
-                return Avx.IsSupported;
-            return Avx2.IsSupported;
+            return Avx.IsSupported;
         }
         #endregion
 
@@ -269,7 +265,7 @@ namespace Garyon.Functions.PointerHelpers
         private static void PerformCurrentANDIterationVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
             where T : unmanaged
         {
-            SSEHelper.Store(SSE2Helper.ANDVector128(origin, and, index), target, index);
+            SSEHelper.Store(SSEHelper.ANDVector128(origin, and, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -277,7 +273,7 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = SSE2Helper.ANDVector128(origin, and, index);
+            var anded = SSEHelper.ANDVector128(origin, and, index);
             SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
         }
         #endregion
@@ -305,7 +301,7 @@ namespace Garyon.Functions.PointerHelpers
         private static void PerformCurrentORIterationVector128<T>(T* origin, T* target, Vector128<T> or, uint index, uint length)
             where T : unmanaged
         {
-            SSEHelper.Store(SSE2Helper.ORVector128(origin, or, index), target, index);
+            SSEHelper.Store(SSEHelper.ORVector128(origin, or, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -313,7 +309,7 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var ored = SSE2Helper.ORVector128(origin, or, index);
+            var ored = SSEHelper.ORVector128(origin, or, index);
             SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&ored, target + index, 0, count);
         }
         #endregion
@@ -341,7 +337,7 @@ namespace Garyon.Functions.PointerHelpers
         private static void PerformCurrentXORIterationVector128<T>(T* origin, T* target, Vector128<T> xor, uint index, uint length)
             where T : unmanaged
         {
-            SSEHelper.Store(SSE2Helper.XORVector128(origin, xor, index), target, index);
+            SSEHelper.Store(SSEHelper.XORVector128(origin, xor, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -349,7 +345,7 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var xored = SSE2Helper.XORVector128(origin, xor, index);
+            var xored = SSEHelper.XORVector128(origin, xor, index);
             SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&xored, target + index, 0, count);
         }
         #endregion
@@ -357,9 +353,7 @@ namespace Garyon.Functions.PointerHelpers
         private static bool GetSupportedInstructionSetVector128<T>()
             where T : unmanaged
         {
-            if (sizeof(T) == sizeof(float))
-                return Sse.IsSupported;
-            return Sse2.IsSupported;
+            return Sse.IsSupported;
         }
         #endregion
     }

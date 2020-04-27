@@ -313,7 +313,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             }
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void StoreLastElementsVector128<T>(T* origin, float* target, uint index, uint length)
+        public static new void StoreLastElementsVector128<T>(T* origin, float* target, uint index, uint length)
             where T : unmanaged
         {
             // Fallback to already handled cases from lower requirements
