@@ -178,22 +178,22 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<byte> ANDVector256(byte* origin, Vector256<byte> mask, uint index)
         {
-            return ANDVector256((float*)origin, mask.As<byte, float>(), index).As<float, byte>();
+            return ANDVector256((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<short> ANDVector256(short* origin, Vector256<short> mask, uint index)
         {
-            return ANDVector256((float*)origin, mask.As<short, float>(), index).As<float, short>();
+            return ANDVector256((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<int> ANDVector256(int* origin, Vector256<int> mask, uint index)
         {
-            return ANDVector256((float*)origin, mask.As<int, float>(), index).As<float, int>();
+            return ANDVector256((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<long> ANDVector256(long* origin, Vector256<long> mask, uint index)
         {
-            return ANDVector256((double*)origin, mask.As<long, double>(), index).As<double, long>();
+            return ANDVector256((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<float> ANDVector256(float* origin, Vector256<float> mask, uint index)
@@ -205,9 +205,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> ANDVector256(double* origin, Vector256<double> mask, uint index)
         {
-            if (Avx.IsSupported)
-                return Avx.And(Avx.LoadVector256(origin + index), mask);
-            return default;
+            return ANDVector256((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
 
@@ -230,22 +228,22 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<byte> ORVector256(byte* origin, Vector256<byte> mask, uint index)
         {
-            return ORVector256((float*)origin, mask.As<byte, float>(), index).As<float, byte>();
+            return ORVector256((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<short> ORVector256(short* origin, Vector256<short> mask, uint index)
         {
-            return ORVector256((float*)origin, mask.As<short, float>(), index).As<float, short>();
+            return ORVector256((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<int> ORVector256(int* origin, Vector256<int> mask, uint index)
         {
-            return ORVector256((float*)origin, mask.As<int, float>(), index).As<float, int>();
+            return ORVector256((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<long> ORVector256(long* origin, Vector256<long> mask, uint index)
         {
-            return ORVector256((double*)origin, mask.As<long, double>(), index).As<double, long>();
+            return ORVector256((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<float> ORVector256(float* origin, Vector256<float> mask, uint index)
@@ -257,9 +255,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> ORVector256(double* origin, Vector256<double> mask, uint index)
         {
-            if (Avx.IsSupported)
-                return Avx.Or(Avx.LoadVector256(origin + index), mask);
-            return default;
+            return ORVector256((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
 
@@ -282,22 +278,22 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<byte> XORVector256(byte* origin, Vector256<byte> mask, uint index)
         {
-            return XORVector256((float*)origin, mask.As<byte, float>(), index).As<float, byte>();
+            return XORVector256((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<short> XORVector256(short* origin, Vector256<short> mask, uint index)
         {
-            return XORVector256((float*)origin, mask.As<short, float>(), index).As<float, short>();
+            return XORVector256((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<int> XORVector256(int* origin, Vector256<int> mask, uint index)
         {
-            return XORVector256((float*)origin, mask.As<int, float>(), index).As<float, int>();
+            return XORVector256((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<long> XORVector256(long* origin, Vector256<long> mask, uint index)
         {
-            return XORVector256((double*)origin, mask.As<long, double>(), index).As<double, long>();
+            return XORVector256((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<float> XORVector256(float* origin, Vector256<float> mask, uint index)
@@ -309,9 +305,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<double> XORVector256(double* origin, Vector256<double> mask, uint index)
         {
-            if (Avx.IsSupported)
-                return Avx.Xor(Avx.LoadVector256(origin + index), mask);
-            return default;
+            return XORVector256((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
 

@@ -88,30 +88,36 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static Vector128<T> ANDVector128<T>(T* origin, Vector128<T> mask, uint index)
             where T : unmanaged
         {
+            if (sizeof(T) == sizeof(byte))
+                return ANDVector128((byte*)origin, mask.As<T, byte>(), index).As<byte, T>();
+            if (sizeof(T) == sizeof(short))
+                return ANDVector128((short*)origin, mask.As<T, short>(), index).As<short, T>();
             if (sizeof(T) == sizeof(int))
                 return ANDVector128((int*)origin, mask.As<T, int>(), index).As<int, T>();
+            if (sizeof(T) == sizeof(long))
+                return ANDVector128((long*)origin, mask.As<T, long>(), index).As<long, T>();
 
             return default;
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<byte> ANDVector128(byte* origin, Vector128<byte> mask, uint index)
         {
-            return ANDVector128((float*)origin, mask.As<byte, float>(), index).As<float, byte>();
+            return ANDVector128((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<short> ANDVector128(short* origin, Vector128<short> mask, uint index)
         {
-            return ANDVector128((float*)origin, mask.As<short, float>(), index).As<float, short>();
+            return ANDVector128((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<int> ANDVector128(int* origin, Vector128<int> mask, uint index)
         {
-            return ANDVector128((float*)origin, mask.As<int, float>(), index).As<float, int>();
+            return ANDVector128((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<long> ANDVector128(long* origin, Vector128<long> mask, uint index)
         {
-            return ANDVector128((float*)origin, mask.As<long, float>(), index).As<float, long>();
+            return ANDVector128((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<float> ANDVector128(float* origin, Vector128<float> mask, uint index)
@@ -123,7 +129,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<double> ANDVector128(double* origin, Vector128<double> mask, uint index)
         {
-            return ANDVector128((float*)origin, mask.As<double, float>(), index).As<float, double>();
+            return ANDVector128((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
 
@@ -146,22 +152,22 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<byte> ORVector128(byte* origin, Vector128<byte> mask, uint index)
         {
-            return ORVector128((float*)origin, mask.As<byte, float>(), index).As<float, byte>();
+            return ORVector128((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<short> ORVector128(short* origin, Vector128<short> mask, uint index)
         {
-            return ORVector128((float*)origin, mask.As<short, float>(), index).As<float, short>();
+            return ORVector128((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<int> ORVector128(int* origin, Vector128<int> mask, uint index)
         {
-            return ORVector128((float*)origin, mask.As<int, float>(), index).As<float, int>();
+            return ORVector128((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<long> ORVector128(long* origin, Vector128<long> mask, uint index)
         {
-            return ORVector128((float*)origin, mask.As<long, float>(), index).As<float, long>();
+            return ORVector128((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<float> ORVector128(float* origin, Vector128<float> mask, uint index)
@@ -173,7 +179,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<double> ORVector128(double* origin, Vector128<double> mask, uint index)
         {
-            return ORVector128((float*)origin, mask.As<double, float>(), index).As<float, double>();
+            return ORVector128((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
 
@@ -196,22 +202,22 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<byte> XORVector128(byte* origin, Vector128<byte> mask, uint index)
         {
-            return XORVector128((float*)origin, mask.As<byte, float>(), index).As<float, byte>();
+            return XORVector128((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<short> XORVector128(short* origin, Vector128<short> mask, uint index)
         {
-            return XORVector128((float*)origin, mask.As<short, float>(), index).As<float, short>();
+            return XORVector128((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<int> XORVector128(int* origin, Vector128<int> mask, uint index)
         {
-            return XORVector128((float*)origin, mask.As<int, float>(), index).As<float, int>();
+            return XORVector128((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<long> XORVector128(long* origin, Vector128<long> mask, uint index)
         {
-            return XORVector128((float*)origin, mask.As<long, float>(), index).As<float, long>();
+            return XORVector128((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<float> XORVector128(float* origin, Vector128<float> mask, uint index)
@@ -223,7 +229,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<double> XORVector128(double* origin, Vector128<double> mask, uint index)
         {
-            return XORVector128((float*)origin, mask.As<double, float>(), index).As<float, double>();
+            return XORVector128((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
 
