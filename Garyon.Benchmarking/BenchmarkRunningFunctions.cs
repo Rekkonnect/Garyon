@@ -30,5 +30,17 @@ namespace Garyon.Benchmarking
 
             SummaryExporter.ExportSummaries(4, NanoSecondsDivisor, genericUnsafe128, unsafe128, genericUnsafe256, unsafe256, manual);
         }
+        public static void RunArrayBinaryOperationsHelpers()
+        {
+            var unsafe128 = BenchmarkRunner.Run<ArrayBinaryOperationsHelpersVector128>();
+            var manual = BenchmarkRunner.Run<ArrayBinaryOperationsHelpersUnoptimized>();
+            var unsafe256 = BenchmarkRunner.Run<ArrayBinaryOperationsHelpersVector256>();
+
+            MarkdownExporter.Default.ExportToFiles(unsafe128, new ConsoleLogger());
+            MarkdownExporter.Default.ExportToFiles(unsafe256, new ConsoleLogger());
+            MarkdownExporter.Default.ExportToFiles(manual, new ConsoleLogger());
+
+            SummaryExporter.ExportSummaries(2, NanoSecondsDivisor, unsafe128, unsafe256, manual);
+        }
     }
 }
