@@ -103,14 +103,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector128<T> NANDVector128<T>(T* origin, Vector128<T> mask, uint index)
-            where T : unmanaged
-        {
-            if (Sse.IsSupported)
-                return NOTVector128(ANDVector128(origin, mask, index));
-            return default;
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector128<T> ANDVector128<T>(T* origin, Vector128<T> mask, uint index)
             where T : unmanaged
         {
@@ -132,6 +124,30 @@ namespace Garyon.Functions.IntrinsicsHelpers
         {
             if (Sse.IsSupported)
                 return Sse.Xor(Sse.LoadVector128((float*)(origin + index)), mask.AsSingle()).As<float, T>();
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<T> NANDVector128<T>(T* origin, Vector128<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Sse.IsSupported)
+                return NOTVector128(ANDVector128(origin, mask, index));
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<T> NORVector128<T>(T* origin, Vector128<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Sse.IsSupported)
+                return NOTVector128(ORVector128(origin, mask, index));
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector128<T> XNORVector128<T>(T* origin, Vector128<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Sse.IsSupported)
+                return NOTVector128(XORVector128(origin, mask, index));
             return default;
         }
         #endregion

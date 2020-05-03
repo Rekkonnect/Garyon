@@ -177,14 +177,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<T> NANDVector256<T>(T* origin, Vector256<T> mask, uint index)
-            where T : unmanaged
-        {
-            if (Avx.IsSupported)
-                return NOTVector256(ANDVector256(origin, mask, index));
-            return default;
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<T> ANDVector256<T>(T* origin, Vector256<T> mask, uint index)
             where T : unmanaged
         {
@@ -206,6 +198,30 @@ namespace Garyon.Functions.IntrinsicsHelpers
         {
             if (Avx.IsSupported)
                 return Avx.Xor(Avx.LoadVector256((float*)(origin + index)), mask.AsSingle()).As<float, T>();
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> NANDVector256<T>(T* origin, Vector256<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                return NOTVector256(ANDVector256(origin, mask, index));
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> NORVector256<T>(T* origin, Vector256<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                return NOTVector256(ORVector256(origin, mask, index));
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> XNORVector256<T>(T* origin, Vector256<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                return NOTVector256(XORVector256(origin, mask, index));
             return default;
         }
         #endregion

@@ -85,81 +85,6 @@ namespace Garyon.Benchmarking.Extensions
         }
         #endregion
 
-        #region NAND
-        [Benchmark]
-        [BenchmarkCategory("NAND Byte", "Unsafe Vector256")]
-        public unsafe void NANDByteArray()
-        {
-            fixed (byte* o = OriginalByteArray)
-            fixed (byte* t = TargetByteArray)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND Int16", "Unsafe Vector256")]
-        public unsafe void NANDInt16Array()
-        {
-            fixed (short* o = OriginalInt16Array)
-            fixed (short* t = TargetInt16Array)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND Int32", "Unsafe Vector256")]
-        public unsafe void NANDInt32Array()
-        {
-            fixed (int* o = OriginalInt32Array)
-            fixed (int* t = TargetInt32Array)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND Int64", "Unsafe Vector256")]
-        public unsafe void NANDInt64Array()
-        {
-            fixed (long* o = OriginalInt64Array)
-            fixed (long* t = TargetInt64Array)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND SByte", "Unsafe Vector256")]
-        public unsafe void NANDSByteArray()
-        {
-            fixed (sbyte* o = OriginalSByteArray)
-            fixed (sbyte* t = TargetSByteArray)
-                if (!NANDArrayVector256Generic(o, t, (sbyte)mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND UInt16", "Unsafe Vector256")]
-        public unsafe void NANDUInt16Array()
-        {
-            fixed (ushort* o = OriginalUInt16Array)
-            fixed (ushort* t = TargetUInt16Array)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND UInt32", "Unsafe Vector256")]
-        public unsafe void NANDUInt32Array()
-        {
-            fixed (uint* o = OriginalUInt32Array)
-            fixed (uint* t = TargetUInt32Array)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        [Benchmark]
-        [BenchmarkCategory("NAND UInt64", "Unsafe Vector256")]
-        public unsafe void NANDUInt64Array()
-        {
-            fixed (ulong* o = OriginalUInt64Array)
-            fixed (ulong* t = TargetUInt64Array)
-                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
-                    Throw<InstructionSetBenchmarkException>();
-        }
-        #endregion
-
         #region AND
         [Benchmark]
         [BenchmarkCategory("AND Byte", "Unsafe Vector256")]
@@ -381,6 +306,231 @@ namespace Garyon.Benchmarking.Extensions
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
                 if (!XORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        #endregion
+
+        #region NAND
+        [Benchmark]
+        [BenchmarkCategory("NAND Byte", "Unsafe Vector256")]
+        public unsafe void NANDByteArray()
+        {
+            fixed (byte* o = OriginalByteArray)
+            fixed (byte* t = TargetByteArray)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int16", "Unsafe Vector256")]
+        public unsafe void NANDInt16Array()
+        {
+            fixed (short* o = OriginalInt16Array)
+            fixed (short* t = TargetInt16Array)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int32", "Unsafe Vector256")]
+        public unsafe void NANDInt32Array()
+        {
+            fixed (int* o = OriginalInt32Array)
+            fixed (int* t = TargetInt32Array)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int64", "Unsafe Vector256")]
+        public unsafe void NANDInt64Array()
+        {
+            fixed (long* o = OriginalInt64Array)
+            fixed (long* t = TargetInt64Array)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND SByte", "Unsafe Vector256")]
+        public unsafe void NANDSByteArray()
+        {
+            fixed (sbyte* o = OriginalSByteArray)
+            fixed (sbyte* t = TargetSByteArray)
+                if (!NANDArrayVector256Generic(o, t, (sbyte)mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt16", "Unsafe Vector256")]
+        public unsafe void NANDUInt16Array()
+        {
+            fixed (ushort* o = OriginalUInt16Array)
+            fixed (ushort* t = TargetUInt16Array)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt32", "Unsafe Vector256")]
+        public unsafe void NANDUInt32Array()
+        {
+            fixed (uint* o = OriginalUInt32Array)
+            fixed (uint* t = TargetUInt32Array)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt64", "Unsafe Vector256")]
+        public unsafe void NANDUInt64Array()
+        {
+            fixed (ulong* o = OriginalUInt64Array)
+            fixed (ulong* t = TargetUInt64Array)
+                if (!NANDArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        #endregion
+
+        #region NOR
+        [Benchmark]
+        [BenchmarkCategory("NOR Byte", "Unsafe Vector256")]
+        public unsafe void NORByteArray()
+        {
+            fixed (byte* o = OriginalByteArray)
+            fixed (byte* t = TargetByteArray)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR Int16", "Unsafe Vector256")]
+        public unsafe void NORInt16Array()
+        {
+            fixed (short* o = OriginalInt16Array)
+            fixed (short* t = TargetInt16Array)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR Int32", "Unsafe Vector256")]
+        public unsafe void NORInt32Array()
+        {
+            fixed (int* o = OriginalInt32Array)
+            fixed (int* t = TargetInt32Array)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR Int64", "Unsafe Vector256")]
+        public unsafe void NORInt64Array()
+        {
+            fixed (long* o = OriginalInt64Array)
+            fixed (long* t = TargetInt64Array)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR SByte", "Unsafe Vector256")]
+        public unsafe void NORSByteArray()
+        {
+            fixed (sbyte* o = OriginalSByteArray)
+            fixed (sbyte* t = TargetSByteArray)
+                if (!NORArrayVector256Generic(o, t, (sbyte)mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR UInt16", "Unsafe Vector256")]
+        public unsafe void NORUInt16Array()
+        {
+            fixed (ushort* o = OriginalUInt16Array)
+            fixed (ushort* t = TargetUInt16Array)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR UInt32", "Unsafe Vector256")]
+        public unsafe void NORUInt32Array()
+        {
+            fixed (uint* o = OriginalUInt32Array)
+            fixed (uint* t = TargetUInt32Array)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOR UInt64", "Unsafe Vector256")]
+        public unsafe void NORUInt64Array()
+        {
+            fixed (ulong* o = OriginalUInt64Array)
+            fixed (ulong* t = TargetUInt64Array)
+                if (!NORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        #endregion
+
+        #region XNOR
+        [Benchmark]
+        [BenchmarkCategory("XNOR Byte", "Unsafe Vector256")]
+        public unsafe void XNORByteArray()
+        {
+            fixed (byte* o = OriginalByteArray)
+            fixed (byte* t = TargetByteArray)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR Int16", "Unsafe Vector256")]
+        public unsafe void XNORInt16Array()
+        {
+            fixed (short* o = OriginalInt16Array)
+            fixed (short* t = TargetInt16Array)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR Int32", "Unsafe Vector256")]
+        public unsafe void XNORInt32Array()
+        {
+            fixed (int* o = OriginalInt32Array)
+            fixed (int* t = TargetInt32Array)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR Int64", "Unsafe Vector256")]
+        public unsafe void XNORInt64Array()
+        {
+            fixed (long* o = OriginalInt64Array)
+            fixed (long* t = TargetInt64Array)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR SByte", "Unsafe Vector256")]
+        public unsafe void XNORSByteArray()
+        {
+            fixed (sbyte* o = OriginalSByteArray)
+            fixed (sbyte* t = TargetSByteArray)
+                if (!XNORArrayVector256Generic(o, t, (sbyte)mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR UInt16", "Unsafe Vector256")]
+        public unsafe void XNORUInt16Array()
+        {
+            fixed (ushort* o = OriginalUInt16Array)
+            fixed (ushort* t = TargetUInt16Array)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR UInt32", "Unsafe Vector256")]
+        public unsafe void XNORUInt32Array()
+        {
+            fixed (uint* o = OriginalUInt32Array)
+            fixed (uint* t = TargetUInt32Array)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("XNOR UInt64", "Unsafe Vector256")]
+        public unsafe void XNORUInt64Array()
+        {
+            fixed (ulong* o = OriginalUInt64Array)
+            fixed (ulong* t = TargetUInt64Array)
+                if (!XNORArrayVector256Generic(o, t, mask, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
