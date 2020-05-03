@@ -1,6 +1,4 @@
-﻿using Garyon.Functions.PointerHelpers;
-using System;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 
@@ -9,6 +7,8 @@ namespace Garyon.Functions.IntrinsicsHelpers
     /// <summary>Provides helper functions for the AVX CPU instruction set. Every function checks whether the AVX CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
     public abstract unsafe class AVXHelper : SSE42Helper
     {
+        protected static readonly Vector256<byte> Vector256Max = Vector256.Create(byte.MaxValue);
+
         #region Store
         #region T* -> int*
         public static void StoreVector256(float* origin, int* target, uint index)
@@ -159,155 +159,55 @@ namespace Garyon.Functions.IntrinsicsHelpers
         #endregion
         #endregion
 
-        #region AND
+        #region Bitwise Operations
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> NOTVector256<T>(T* origin, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                return NOTVector256(Avx.LoadVector256((float*)(origin + index))).As<float, T>();
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> NOTVector256<T>(Vector256<T> vector)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                return Avx.Xor(vector.AsSingle(), Vector256Max.AsSingle()).As<float, T>();
+            return default;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector256<T> NANDVector256<T>(T* origin, Vector256<T> mask, uint index)
+            where T : unmanaged
+        {
+            if (Avx.IsSupported)
+                return NOTVector256(ANDVector256(origin, mask, index));
+            return default;
+        }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<T> ANDVector256<T>(T* origin, Vector256<T> mask, uint index)
             where T : unmanaged
         {
-            if (sizeof(T) == sizeof(byte))
-                return ANDVector256((byte*)origin, mask.As<T, byte>(), index).As<byte, T>();
-            if (sizeof(T) == sizeof(short))
-                return ANDVector256((short*)origin, mask.As<T, short>(), index).As<short, T>();
-            if (sizeof(T) == sizeof(int))
-                return ANDVector256((int*)origin, mask.As<T, int>(), index).As<int, T>();
-            if (sizeof(T) == sizeof(long))
-                return ANDVector256((long*)origin, mask.As<T, long>(), index).As<long, T>();
-
-            return default;
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<byte> ANDVector256(byte* origin, Vector256<byte> mask, uint index)
-        {
-            return ANDVector256((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<short> ANDVector256(short* origin, Vector256<short> mask, uint index)
-        {
-            return ANDVector256((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<int> ANDVector256(int* origin, Vector256<int> mask, uint index)
-        {
-            return ANDVector256((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<long> ANDVector256(long* origin, Vector256<long> mask, uint index)
-        {
-            return ANDVector256((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<float> ANDVector256(float* origin, Vector256<float> mask, uint index)
-        {
             if (Avx.IsSupported)
-                return Avx.And(Avx.LoadVector256(origin + index), mask);
+                return Avx.And(Avx.LoadVector256((float*)(origin + index)), mask.AsSingle()).As<float, T>();
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<double> ANDVector256(double* origin, Vector256<double> mask, uint index)
-        {
-            return ANDVector256((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
-        }
-        #endregion
-
-        #region OR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<T> ORVector256<T>(T* origin, Vector256<T> mask, uint index)
             where T : unmanaged
         {
-            if (sizeof(T) == sizeof(byte))
-                return ORVector256((byte*)origin, mask.As<T, byte>(), index).As<byte, T>();
-            if (sizeof(T) == sizeof(short))
-                return ORVector256((short*)origin, mask.As<T, short>(), index).As<short, T>();
-            if (sizeof(T) == sizeof(int))
-                return ORVector256((int*)origin, mask.As<T, int>(), index).As<int, T>();
-            if (sizeof(T) == sizeof(long))
-                return ORVector256((long*)origin, mask.As<T, long>(), index).As<long, T>();
-
-            return default;
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<byte> ORVector256(byte* origin, Vector256<byte> mask, uint index)
-        {
-            return ORVector256((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<short> ORVector256(short* origin, Vector256<short> mask, uint index)
-        {
-            return ORVector256((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<int> ORVector256(int* origin, Vector256<int> mask, uint index)
-        {
-            return ORVector256((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<long> ORVector256(long* origin, Vector256<long> mask, uint index)
-        {
-            return ORVector256((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<float> ORVector256(float* origin, Vector256<float> mask, uint index)
-        {
             if (Avx.IsSupported)
-                return Avx.Or(Avx.LoadVector256(origin + index), mask);
+                return Avx.Or(Avx.LoadVector256((float*)(origin + index)), mask.AsSingle()).As<float, T>();
             return default;
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<double> ORVector256(double* origin, Vector256<double> mask, uint index)
-        {
-            return ORVector256((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
-        }
-        #endregion
-
-        #region XOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector256<T> XORVector256<T>(T* origin, Vector256<T> mask, uint index)
             where T : unmanaged
         {
-            if (sizeof(T) == sizeof(byte))
-                return XORVector256((byte*)origin, mask.As<T, byte>(), index).As<byte, T>();
-            if (sizeof(T) == sizeof(short))
-                return XORVector256((short*)origin, mask.As<T, short>(), index).As<short, T>();
-            if (sizeof(T) == sizeof(int))
-                return XORVector256((int*)origin, mask.As<T, int>(), index).As<int, T>();
-            if (sizeof(T) == sizeof(long))
-                return XORVector256((long*)origin, mask.As<T, long>(), index).As<long, T>();
-
-            return default;
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<byte> XORVector256(byte* origin, Vector256<byte> mask, uint index)
-        {
-            return XORVector256((float*)(origin + index), mask.As<byte, float>(), 0).As<float, byte>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<short> XORVector256(short* origin, Vector256<short> mask, uint index)
-        {
-            return XORVector256((float*)(origin + index), mask.As<short, float>(), 0).As<float, short>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<int> XORVector256(int* origin, Vector256<int> mask, uint index)
-        {
-            return XORVector256((float*)(origin + index), mask.As<int, float>(), 0).As<float, int>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<long> XORVector256(long* origin, Vector256<long> mask, uint index)
-        {
-            return XORVector256((float*)(origin + index), mask.As<long, float>(), 0).As<float, long>();
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<float> XORVector256(float* origin, Vector256<float> mask, uint index)
-        {
             if (Avx.IsSupported)
-                return Avx.Xor(Avx.LoadVector256(origin + index), mask);
+                return Avx.Xor(Avx.LoadVector256((float*)(origin + index)), mask.AsSingle()).As<float, T>();
             return default;
-        }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector256<double> XORVector256(double* origin, Vector256<double> mask, uint index)
-        {
-            return XORVector256((float*)(origin + index), mask.As<double, float>(), 0).As<float, double>();
         }
         #endregion
-
     }
 }

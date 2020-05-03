@@ -10,6 +10,156 @@ namespace Garyon.Benchmarking.Extensions
     {
         private const byte mask = 11;
 
+        #region NOT
+        [Benchmark]
+        [BenchmarkCategory("NOT Byte", "Unsafe Vector128")]
+        public unsafe void NOTByteArray()
+        {
+            fixed (byte* o = OriginalByteArray)
+            fixed (byte* t = TargetByteArray)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT Int16", "Unsafe Vector128")]
+        public unsafe void NOTInt16Array()
+        {
+            fixed (short* o = OriginalInt16Array)
+            fixed (short* t = TargetInt16Array)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT Int32", "Unsafe Vector128")]
+        public unsafe void NOTInt32Array()
+        {
+            fixed (int* o = OriginalInt32Array)
+            fixed (int* t = TargetInt32Array)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT Int64", "Unsafe Vector128")]
+        public unsafe void NOTInt64Array()
+        {
+            fixed (long* o = OriginalInt64Array)
+            fixed (long* t = TargetInt64Array)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT SByte", "Unsafe Vector128")]
+        public unsafe void NOTSByteArray()
+        {
+            fixed (sbyte* o = OriginalSByteArray)
+            fixed (sbyte* t = TargetSByteArray)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT UInt16", "Unsafe Vector128")]
+        public unsafe void NOTUInt16Array()
+        {
+            fixed (ushort* o = OriginalUInt16Array)
+            fixed (ushort* t = TargetUInt16Array)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT UInt32", "Unsafe Vector128")]
+        public unsafe void NOTUInt32Array()
+        {
+            fixed (uint* o = OriginalUInt32Array)
+            fixed (uint* t = TargetUInt32Array)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT UInt64", "Unsafe Vector128")]
+        public unsafe void NOTUInt64Array()
+        {
+            fixed (ulong* o = OriginalUInt64Array)
+            fixed (ulong* t = TargetUInt64Array)
+                if (!NOTArrayVector128Generic(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        #endregion
+
+        #region NAND
+        [Benchmark]
+        [BenchmarkCategory("NAND Byte", "Unsafe Vector128")]
+        public unsafe void NANDByteArray()
+        {
+            fixed (byte* o = OriginalByteArray)
+            fixed (byte* t = TargetByteArray)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int16", "Unsafe Vector128")]
+        public unsafe void NANDInt16Array()
+        {
+            fixed (short* o = OriginalInt16Array)
+            fixed (short* t = TargetInt16Array)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int32", "Unsafe Vector128")]
+        public unsafe void NANDInt32Array()
+        {
+            fixed (int* o = OriginalInt32Array)
+            fixed (int* t = TargetInt32Array)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int64", "Unsafe Vector128")]
+        public unsafe void NANDInt64Array()
+        {
+            fixed (long* o = OriginalInt64Array)
+            fixed (long* t = TargetInt64Array)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND SByte", "Unsafe Vector128")]
+        public unsafe void NANDSByteArray()
+        {
+            fixed (sbyte* o = OriginalSByteArray)
+            fixed (sbyte* t = TargetSByteArray)
+                if (!NANDArrayVector128Generic(o, t, (sbyte)mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt16", "Unsafe Vector128")]
+        public unsafe void NANDUInt16Array()
+        {
+            fixed (ushort* o = OriginalUInt16Array)
+            fixed (ushort* t = TargetUInt16Array)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt32", "Unsafe Vector128")]
+        public unsafe void NANDUInt32Array()
+        {
+            fixed (uint* o = OriginalUInt32Array)
+            fixed (uint* t = TargetUInt32Array)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt64", "Unsafe Vector128")]
+        public unsafe void NANDUInt64Array()
+        {
+            fixed (ulong* o = OriginalUInt64Array)
+            fixed (ulong* t = TargetUInt64Array)
+                if (!NANDArrayVector128Generic(o, t, mask, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        #endregion
+
         #region AND
         [Benchmark]
         [BenchmarkCategory("AND Byte", "Unsafe Vector128")]

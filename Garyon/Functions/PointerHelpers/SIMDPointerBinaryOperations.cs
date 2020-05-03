@@ -67,6 +67,77 @@ namespace Garyon.Functions.PointerHelpers
         }
         #endregion
 
+        #region NOT
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NOTArrayVector256Generic<T>(T* origin, T* target, uint length)
+            where T : unmanaged
+        {
+            if (!GetSupportedInstructionSetVector256<T>())
+                return false;
+
+            uint size = (uint)Vector256<T>.Count;
+
+            uint i = 0;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
+                PerformCurrentNOTIterationVector256(origin, target, i, length);
+            NOTLastElementsVector256(origin, target, i, length);
+
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void PerformCurrentNOTIterationVector256<T>(T* origin, T* target, uint index, uint length)
+            where T : unmanaged
+        {
+            AVXHelper.Store(AVXHelper.NOTVector256(origin, index), target, index);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void NOTLastElementsVector256<T>(T* origin, T* target, uint index, uint length)
+            where T : unmanaged
+        {
+            uint count = length - index;
+            var anded = AVXHelper.NOTVector256(origin, index);
+            SSE2Helper.StoreLastElementsVector256((T*)&anded, target + index, 0, count);
+        }
+        #endregion
+        #region NAND
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NANDArrayVector256Generic<T>(T* origin, T* target, T mask, uint length)
+            where T : unmanaged
+        {
+            if (!GetSupportedInstructionSetVector256<T>())
+                return false;
+
+            uint size = (uint)Vector256<T>.Count;
+
+            uint i = 0;
+            uint limit = length & ~(size - 1);
+            var maskVector = Vector256Helper.Create(mask);
+            for (; i < limit; i += size)
+                PerformCurrentNANDIterationVector256(origin, target, maskVector, i, length);
+            NANDLastElementsVector256(origin, target, maskVector, i, length);
+
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void PerformCurrentNANDIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
+            where T : unmanaged
+        {
+            AVXHelper.Store(AVXHelper.NANDVector256(origin, mask, index), target, index);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void NANDLastElementsVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
+            where T : unmanaged
+        {
+            uint count = length - index;
+            var masked = AVXHelper.NANDVector256(origin, mask, index);
+            SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
+        }
+        #endregion
         #region AND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool ANDArrayVector256Generic<T>(T* origin, T* target, T and, uint length)
@@ -86,7 +157,6 @@ namespace Garyon.Functions.PointerHelpers
 
             return true;
         }
-
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void PerformCurrentANDIterationVector256<T>(T* origin, T* target, Vector256<T> and, uint index, uint length)
@@ -241,6 +311,77 @@ namespace Garyon.Functions.PointerHelpers
         }
         #endregion
 
+        #region NOT
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NOTArrayVector128Generic<T>(T* origin, T* target, uint length)
+            where T : unmanaged
+        {
+            if (!GetSupportedInstructionSetVector128<T>())
+                return false;
+
+            uint size = (uint)Vector128<T>.Count;
+
+            uint i = 0;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
+                PerformCurrentNOTIterationVector128(origin, target, i, length);
+            NOTLastElementsVector128(origin, target, i, length);
+
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void PerformCurrentNOTIterationVector128<T>(T* origin, T* target, uint index, uint length)
+            where T : unmanaged
+        {
+            SSEHelper.Store(SSEHelper.NOTVector128(origin, index), target, index);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void NOTLastElementsVector128<T>(T* origin, T* target, uint index, uint length)
+            where T : unmanaged
+        {
+            uint count = length - index;
+            var anded = SSEHelper.NOTVector128(origin, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+        }
+        #endregion
+        #region NAND
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NANDArrayVector128Generic<T>(T* origin, T* target, T and, uint length)
+            where T : unmanaged
+        {
+            if (!GetSupportedInstructionSetVector128<T>())
+                return false;
+
+            uint size = (uint)Vector128<T>.Count;
+
+            uint i = 0;
+            uint limit = length & ~(size - 1);
+            var andVector = Vector128Helper.Create(and);
+            for (; i < limit; i += size)
+                PerformCurrentNANDIterationVector128(origin, target, andVector, i, length);
+            NANDLastElementsVector128(origin, target, andVector, i, length);
+
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void PerformCurrentNANDIterationVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+            where T : unmanaged
+        {
+            SSEHelper.Store(SSEHelper.NANDVector128(origin, and, index), target, index);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void NANDLastElementsVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+            where T : unmanaged
+        {
+            uint count = length - index;
+            var anded = SSEHelper.NANDVector128(origin, and, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+        }
+        #endregion
         #region AND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool ANDArrayVector128Generic<T>(T* origin, T* target, T and, uint length)

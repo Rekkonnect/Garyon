@@ -1,14 +1,129 @@
 using BenchmarkDotNet.Attributes;
-using Garyon.Benchmarking.Exceptions;
 using Garyon.QualityControl.Extensions;
-using static Garyon.Exceptions.ThrowHelper;
-using static Garyon.Functions.PointerHelpers.SIMDPointerBinaryOperations;
 
 namespace Garyon.Benchmarking.Extensions
 {
     public class ArrayBinaryOperationsHelpersUnoptimized : ArrayManipulationExtensionsQualityControlAsset
     {
         private const byte mask = 11;
+
+        #region NOT
+        [Benchmark]
+        [BenchmarkCategory("NOT Byte", "Unoptimized")]
+        public unsafe void NOTByteArray()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetByteArray[i] = (byte)~OriginalByteArray[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT Int16", "Unoptimized")]
+        public unsafe void NOTInt16Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt16Array[i] = (short)~OriginalInt16Array[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT Int32", "Unoptimized")]
+        public unsafe void NOTInt32Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt32Array[i] = ~OriginalInt32Array[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT Int64", "Unoptimized")]
+        public unsafe void NOTInt64Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt64Array[i] = ~OriginalInt64Array[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT SByte", "Unoptimized")]
+        public unsafe void NOTSByteArray()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetSByteArray[i] = (sbyte)~OriginalSByteArray[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT UInt16", "Unoptimized")]
+        public unsafe void NOTUInt16Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetUInt16Array[i] = (ushort)~OriginalUInt16Array[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT UInt32", "Unoptimized")]
+        public unsafe void NOTUInt32Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetUInt32Array[i] = ~OriginalUInt32Array[i];
+        }
+        [Benchmark]
+        [BenchmarkCategory("NOT UInt64", "Unoptimized")]
+        public unsafe void NOTUInt64Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetUInt64Array[i] = ~OriginalUInt64Array[i];
+        }
+        #endregion
+
+        #region NAND
+        [Benchmark]
+        [BenchmarkCategory("NAND Byte", "Unoptimized")]
+        public unsafe void NANDByteArray()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetByteArray[i] = (byte)~(OriginalByteArray[i] & mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int16", "Unoptimized")]
+        public unsafe void NANDInt16Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt16Array[i] = (short)~(OriginalInt16Array[i] & mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int32", "Unoptimized")]
+        public unsafe void NANDInt32Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt32Array[i] = ~(OriginalInt32Array[i] & mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND Int64", "Unoptimized")]
+        public unsafe void NANDInt64Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetInt64Array[i] = ~(OriginalInt64Array[i] & mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND SByte", "Unoptimized")]
+        public unsafe void NANDSByteArray()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetSByteArray[i] = (sbyte)~(OriginalSByteArray[i] & (sbyte)mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt16", "Unoptimized")]
+        public unsafe void NANDUInt16Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetUInt16Array[i] = (ushort)~(OriginalUInt16Array[i] & mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt32", "Unoptimized")]
+        public unsafe void NANDUInt32Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetUInt32Array[i] = ~(OriginalUInt32Array[i] & mask);
+        }
+        [Benchmark]
+        [BenchmarkCategory("NAND UInt64", "Unoptimized")]
+        public unsafe void NANDUInt64Array()
+        {
+            for (int i = 0; i < ArrayLength; i++)
+                TargetUInt64Array[i] = ~(OriginalUInt64Array[i] & mask);
+        }
+        #endregion
 
         #region AND
         [Benchmark]
