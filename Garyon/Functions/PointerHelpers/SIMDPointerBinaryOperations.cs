@@ -62,7 +62,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region AND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ANDArrayVector256<T>(T* origin, T* target, T and, uint length)
+        public static bool ANDArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -72,7 +72,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector256Helper.Create(and);
+            var maskVector = Vector256Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentANDIterationVector256(origin, target, maskVector, i);
             ANDLastElementsVector256(origin, target, maskVector, i, length);
@@ -98,7 +98,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region OR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ORArrayVector256<T>(T* origin, T* target, T or, uint length)
+        public static bool ORArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -108,7 +108,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector256Helper.Create(or);
+            var maskVector = Vector256Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentORIterationVector256(origin, target, maskVector, i);
             ORLastElementsVector256(origin, target, maskVector, i, length);
@@ -134,7 +134,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region XOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XORArrayVector256<T>(T* origin, T* target, T xor, uint length)
+        public static bool XORArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -144,7 +144,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector256Helper.Create(xor);
+            var maskVector = Vector256Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentXORIterationVector256(origin, target, maskVector, i);
             XORLastElementsVector256(origin, target, maskVector, i, length);
@@ -348,7 +348,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region AND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ANDArrayVector128<T>(T* origin, T* target, T and, uint length)
+        public static bool ANDArrayVector128<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -358,7 +358,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentANDIterationVector128(origin, target, maskVector, i);
             ANDLastElementsVector128(origin, target, maskVector, i, length);
@@ -384,7 +384,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region OR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ORArrayVector128<T>(T* origin, T* target, T or, uint length)
+        public static bool ORArrayVector128<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -394,7 +394,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector128Helper.Create(or);
+            var maskVector = Vector128Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentORIterationVector128(origin, target, maskVector, i);
             ORLastElementsVector128(origin, target, maskVector, i, length);
@@ -420,7 +420,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region XOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XORArrayVector128<T>(T* origin, T* target, T xor, uint length)
+        public static bool XORArrayVector128<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -430,7 +430,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector128Helper.Create(xor);
+            var maskVector = Vector128Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentXORIterationVector128(origin, target, maskVector, i);
             XORLastElementsVector128(origin, target, maskVector, i, length);
@@ -456,7 +456,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region NAND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NANDArrayVector128<T>(T* origin, T* target, T and, uint length)
+        public static bool NANDArrayVector128<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -466,7 +466,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentNANDIterationVector128(origin, target, maskVector, i);
             NANDLastElementsVector128(origin, target, maskVector, i, length);
@@ -492,7 +492,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region NOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NORArrayVector128<T>(T* origin, T* target, T and, uint length)
+        public static bool NORArrayVector128<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -502,7 +502,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentNORIterationVector128(origin, target, maskVector, i);
             NORLastElementsVector128(origin, target, maskVector, i, length);
@@ -528,7 +528,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region XNOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XNORArrayVector128<T>(T* origin, T* target, T and, uint length)
+        public static bool XNORArrayVector128<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -538,7 +538,7 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var maskVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(mask);
             for (; i < limit; i += size)
                 PerformCurrentXNORIterationVector128(origin, target, maskVector, i);
             XNORLastElementsVector128(origin, target, maskVector, i, length);
