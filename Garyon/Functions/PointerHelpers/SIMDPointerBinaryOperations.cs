@@ -11,65 +11,23 @@ namespace Garyon.Functions.PointerHelpers
     public static unsafe class SIMDPointerBinaryOperations
     {
         #region Vector256
-        #region Decide on keeping or not
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XORArrayVector256<T>(T* origin, T* target, T xor, uint length)
-            where T : unmanaged
-        {
-            if (sizeof(T) == sizeof(byte))
-            {
-
-            }
-            if (sizeof(T) == sizeof(short))
-            {
-
-            }
-            if (sizeof(T) == sizeof(int))
-            {
-
-            }
-            if (sizeof(T) == sizeof(long))
-            {
-
-            }
-
-            return false;
-        }
-
-        // TODO: Do something about non-binary-sized data types
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool CopyToArrayVector256<T>(T* origin, T* target, uint length)
-            where T : unmanaged
-        {
-            if (CopyToArrayVector256<T, long>(origin, target, length))
-                return true;
-            if (CopyToArrayVector256<T, int>(origin, target, length))
-                return true;
-            if (CopyToArrayVector256<T, short>(origin, target, length))
-                return true;
-            return CopyToArrayVector256<T, byte>(origin, target, length);
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static bool CopyToArrayVector256<TPointer, TReinterpret>(TPointer* origin, TPointer* target, uint length)
-            where TPointer : unmanaged
-            where TReinterpret : unmanaged
-        {
-            if (sizeof(TPointer) % sizeof(TReinterpret) == 0)
-                return CopyToReinterpretedArrayVector256((TReinterpret*)origin, (TReinterpret*)target, length * (uint)sizeof(TPointer) / (uint)sizeof(TReinterpret));
-            return false;
-        }
-        private static bool CopyToReinterpretedArrayVector256<T>(T* origin, T* target, uint length)
-            where T : unmanaged
-        {
-            // ?
-            return false;
-        }
-        #endregion
-
         #region NOT
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NOTArrayVector256Generic<T>(T* origin, T* target, uint length)
+        public static bool NOTArrayVector256CustomType<T>(T* origin, T* target, uint length)
+            where T : unmanaged
+        {
+            switch (sizeof(T))
+            {
+                case sizeof(byte):
+                case sizeof(short):
+                case sizeof(int):
+                case sizeof(long):
+                    return NOTArrayVector256(origin, target, length);
+            }
+            return NOTArrayVector256((byte*)origin, (byte*)target, length * (uint)sizeof(T));
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NOTArrayVector256<T>(T* origin, T* target, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -80,14 +38,14 @@ namespace Garyon.Functions.PointerHelpers
             uint i = 0;
             uint limit = length & ~(size - 1);
             for (; i < limit; i += size)
-                PerformCurrentNOTIterationVector256(origin, target, i, length);
+                PerformCurrentNOTIterationVector256(origin, target, i);
             NOTLastElementsVector256(origin, target, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentNOTIterationVector256<T>(T* origin, T* target, uint index, uint length)
+        private static void PerformCurrentNOTIterationVector256<T>(T* origin, T* target, uint index)
             where T : unmanaged
         {
             AVXHelper.Store(AVXHelper.NOTVector256(origin, index), target, index);
@@ -98,13 +56,13 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = AVXHelper.NOTVector256(origin, index);
-            SSE2Helper.StoreLastElementsVector256((T*)&anded, target + index, 0, count);
+            var masked = AVXHelper.NOTVector256(origin, index);
+            SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region AND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ANDArrayVector256Generic<T>(T* origin, T* target, T and, uint length)
+        public static bool ANDArrayVector256<T>(T* origin, T* target, T and, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -114,33 +72,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var andVector = Vector256Helper.Create(and);
+            var maskVector = Vector256Helper.Create(and);
             for (; i < limit; i += size)
-                PerformCurrentANDIterationVector256(origin, target, andVector, i, length);
-            ANDLastElementsVector256(origin, target, andVector, i, length);
+                PerformCurrentANDIterationVector256(origin, target, maskVector, i);
+            ANDLastElementsVector256(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentANDIterationVector256<T>(T* origin, T* target, Vector256<T> and, uint index, uint length)
+        private static void PerformCurrentANDIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index)
             where T : unmanaged
         {
-            AVXHelper.Store(AVXHelper.ANDVector256(origin, and, index), target, index);
+            AVXHelper.Store(AVXHelper.ANDVector256(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void ANDLastElementsVector256<T>(T* origin, T* target, Vector256<T> and, uint index, uint length)
+        private static void ANDLastElementsVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = AVXHelper.ANDVector256(origin, and, index);
-            SSE2Helper.StoreLastElementsVector256((T*)&anded, target + index, 0, count);
+            var masked = AVXHelper.ANDVector256(origin, mask, index);
+            SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region OR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ORArrayVector256Generic<T>(T* origin, T* target, T or, uint length)
+        public static bool ORArrayVector256<T>(T* origin, T* target, T or, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -150,33 +108,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var orVector = Vector256Helper.Create(or);
+            var maskVector = Vector256Helper.Create(or);
             for (; i < limit; i += size)
-                PerformCurrentORIterationVector256(origin, target, orVector, i, length);
-            ORLastElementsVector256(origin, target, orVector, i, length);
+                PerformCurrentORIterationVector256(origin, target, maskVector, i);
+            ORLastElementsVector256(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentORIterationVector256<T>(T* origin, T* target, Vector256<T> or, uint index, uint length)
+        private static void PerformCurrentORIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index)
             where T : unmanaged
         {
-            AVXHelper.Store(AVXHelper.ORVector256(origin, or, index), target, index);
+            AVXHelper.Store(AVXHelper.ORVector256(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void ORLastElementsVector256<T>(T* origin, T* target, Vector256<T> or, uint index, uint length)
+        private static void ORLastElementsVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var ored = AVXHelper.ORVector256(origin, or, index);
-            SSE2Helper.StoreLastElementsVector256((T*)&ored, target + index, 0, count);
+            var masked = AVXHelper.ORVector256(origin, mask, index);
+            SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region XOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XORArrayVector256Generic<T>(T* origin, T* target, T xor, uint length)
+        public static bool XORArrayVector256<T>(T* origin, T* target, T xor, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -186,33 +144,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var xorVector = Vector256Helper.Create(xor);
+            var maskVector = Vector256Helper.Create(xor);
             for (; i < limit; i += size)
-                PerformCurrentXORIterationVector256(origin, target, xorVector, i, length);
-            XORLastElementsVector256(origin, target, xorVector, i, length);
+                PerformCurrentXORIterationVector256(origin, target, maskVector, i);
+            XORLastElementsVector256(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentXORIterationVector256<T>(T* origin, T* target, Vector256<T> xor, uint index, uint length)
+        private static void PerformCurrentXORIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index)
             where T : unmanaged
         {
-            AVXHelper.Store(AVXHelper.XORVector256(origin, xor, index), target, index);
+            AVXHelper.Store(AVXHelper.XORVector256(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void XORLastElementsVector256<T>(T* origin, T* target, Vector256<T> xor, uint index, uint length)
+        private static void XORLastElementsVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var xored = AVXHelper.XORVector256(origin, xor, index);
-            SSE2Helper.StoreLastElementsVector256((T*)&xored, target + index, 0, count);
+            var masked = AVXHelper.XORVector256(origin, mask, index);
+            SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region NAND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NANDArrayVector256Generic<T>(T* origin, T* target, T mask, uint length)
+        public static bool NANDArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -224,14 +182,14 @@ namespace Garyon.Functions.PointerHelpers
             uint limit = length & ~(size - 1);
             var maskVector = Vector256Helper.Create(mask);
             for (; i < limit; i += size)
-                PerformCurrentNANDIterationVector256(origin, target, maskVector, i, length);
+                PerformCurrentNANDIterationVector256(origin, target, maskVector, i);
             NANDLastElementsVector256(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentNANDIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
+        private static void PerformCurrentNANDIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index)
             where T : unmanaged
         {
             AVXHelper.Store(AVXHelper.NANDVector256(origin, mask, index), target, index);
@@ -248,7 +206,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region NOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NORArrayVector256Generic<T>(T* origin, T* target, T mask, uint length)
+        public static bool NORArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -260,14 +218,14 @@ namespace Garyon.Functions.PointerHelpers
             uint limit = length & ~(size - 1);
             var maskVector = Vector256Helper.Create(mask);
             for (; i < limit; i += size)
-                PerformCurrentNORIterationVector256(origin, target, maskVector, i, length);
+                PerformCurrentNORIterationVector256(origin, target, maskVector, i);
             NORLastElementsVector256(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentNORIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
+        private static void PerformCurrentNORIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index)
             where T : unmanaged
         {
             AVXHelper.Store(AVXHelper.NORVector256(origin, mask, index), target, index);
@@ -284,7 +242,7 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
         #region XNOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XNORArrayVector256Generic<T>(T* origin, T* target, T mask, uint length)
+        public static bool XNORArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector256<T>())
@@ -296,14 +254,14 @@ namespace Garyon.Functions.PointerHelpers
             uint limit = length & ~(size - 1);
             var maskVector = Vector256Helper.Create(mask);
             for (; i < limit; i += size)
-                PerformCurrentXNORIterationVector256(origin, target, maskVector, i, length);
+                PerformCurrentXNORIterationVector256(origin, target, maskVector, i);
             XNORLastElementsVector256(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentXNORIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index, uint length)
+        private static void PerformCurrentXNORIterationVector256<T>(T* origin, T* target, Vector256<T> mask, uint index)
             where T : unmanaged
         {
             AVXHelper.Store(AVXHelper.XNORVector256(origin, mask, index), target, index);
@@ -327,65 +285,35 @@ namespace Garyon.Functions.PointerHelpers
         #endregion
 
         #region Vector128
-        #region Decide on keeping or not
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XORArrayVector128<T>(T* origin, T* target, T xor, uint length)
-            where T : unmanaged
-        {
-            if (sizeof(T) == sizeof(byte))
-            {
-
-            }
-            if (sizeof(T) == sizeof(short))
-            {
-
-            }
-            if (sizeof(T) == sizeof(int))
-            {
-
-            }
-            if (sizeof(T) == sizeof(long))
-            {
-
-            }
-
-            return false;
-        }
-
-        // TODO: Do something about non-binary-sized data types
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool CopyToArrayVector128<T>(T* origin, T* target, uint length)
-            where T : unmanaged
-        {
-            if (CopyToArrayVector128<T, long>(origin, target, length))
-                return true;
-            if (CopyToArrayVector128<T, int>(origin, target, length))
-                return true;
-            if (CopyToArrayVector128<T, short>(origin, target, length))
-                return true;
-            return CopyToArrayVector128<T, byte>(origin, target, length);
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static bool CopyToArrayVector128<TPointer, TReinterpret>(TPointer* origin, TPointer* target, uint length)
-            where TPointer : unmanaged
-            where TReinterpret : unmanaged
-        {
-            if (sizeof(TPointer) % sizeof(TReinterpret) == 0)
-                return CopyToReinterpretedArrayVector128((TReinterpret*)origin, (TReinterpret*)target, length * (uint)sizeof(TPointer) / (uint)sizeof(TReinterpret));
-            return false;
-        }
-        private static bool CopyToReinterpretedArrayVector128<T>(T* origin, T* target, uint length)
-            where T : unmanaged
-        {
-            // ?
-            return false;
-        }
-        #endregion
-
         #region NOT
+        /// <summary>Performs the bitwise NOT operation to all the elements of the origin array and stores the results into the target array using SIMD instructions. Minimum instruction set: SSE.</summary>
+        /// <typeparam name="T">The type of the elements of the array. It must be one of the supported types for <seealso cref="Vector128{T}"/>; for other types consider using <seealso cref="NOTArrayVector128CustomType{T}(T*, T*, uint)"/>.</typeparam>
+        /// <param name="origin">The origin array of the elements to perform the NOT operation on, passed as a pointer.</param>
+        /// <param name="target">The target array to store the results, passed as a pointer.</param>
+        /// <param name="length">The length of both arrays.</param>
+        /// <returns>Whether the operation was successful or not.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NOTArrayVector128Generic<T>(T* origin, T* target, uint length)
+        public static bool NOTArrayVector128CustomType<T>(T* origin, T* target, uint length)
+            where T : unmanaged
+        {
+            switch (sizeof(T))
+            {
+                case sizeof(byte):
+                case sizeof(short):
+                case sizeof(int):
+                case sizeof(long):
+                    return NOTArrayVector128(origin, target, length);
+            }
+            return NOTArrayVector128((byte*)origin, (byte*)target, length * (uint)sizeof(T));
+        }
+        /// <summary>Performs the bitwise NOT operation to all the elements of the origin array and stores the results into the target array using SIMD instructions. Minimum instruction set: SSE.</summary>
+        /// <typeparam name="T">The type of the elements of the array. It must be one of the supported types for <seealso cref="Vector128{T}"/>; for other types consider using <seealso cref="NOTArrayVector128CustomType{T}(T*, T*, uint)"/>.</typeparam>
+        /// <param name="origin">The origin array of the elements to perform the NOT operation on, passed as a pointer.</param>
+        /// <param name="target">The target array to store the results, passed as a pointer.</param>
+        /// <param name="length">The length of both arrays.</param>
+        /// <returns>Whether the operation was successful or not.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NOTArrayVector128<T>(T* origin, T* target, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -396,14 +324,14 @@ namespace Garyon.Functions.PointerHelpers
             uint i = 0;
             uint limit = length & ~(size - 1);
             for (; i < limit; i += size)
-                PerformCurrentNOTIterationVector128(origin, target, i, length);
+                PerformCurrentNOTIterationVector128(origin, target, i);
             NOTLastElementsVector128(origin, target, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentNOTIterationVector128<T>(T* origin, T* target, uint index, uint length)
+        private static void PerformCurrentNOTIterationVector128<T>(T* origin, T* target, uint index)
             where T : unmanaged
         {
             SSEHelper.Store(SSEHelper.NOTVector128(origin, index), target, index);
@@ -414,13 +342,13 @@ namespace Garyon.Functions.PointerHelpers
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = SSEHelper.NOTVector128(origin, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+            var masked = SSEHelper.NOTVector128(origin, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region AND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ANDArrayVector128Generic<T>(T* origin, T* target, T and, uint length)
+        public static bool ANDArrayVector128<T>(T* origin, T* target, T and, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -430,33 +358,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var andVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(and);
             for (; i < limit; i += size)
-                PerformCurrentANDIterationVector128(origin, target, andVector, i, length);
-            ANDLastElementsVector128(origin, target, andVector, i, length);
+                PerformCurrentANDIterationVector128(origin, target, maskVector, i);
+            ANDLastElementsVector128(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentANDIterationVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void PerformCurrentANDIterationVector128<T>(T* origin, T* target, Vector128<T> mask, uint index)
             where T : unmanaged
         {
-            SSEHelper.Store(SSEHelper.ANDVector128(origin, and, index), target, index);
+            SSEHelper.Store(SSEHelper.ANDVector128(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void ANDLastElementsVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void ANDLastElementsVector128<T>(T* origin, T* target, Vector128<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = SSEHelper.ANDVector128(origin, and, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+            var masked = SSEHelper.ANDVector128(origin, mask, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region OR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool ORArrayVector128Generic<T>(T* origin, T* target, T or, uint length)
+        public static bool ORArrayVector128<T>(T* origin, T* target, T or, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -466,33 +394,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var orVector = Vector128Helper.Create(or);
+            var maskVector = Vector128Helper.Create(or);
             for (; i < limit; i += size)
-                PerformCurrentORIterationVector128(origin, target, orVector, i, length);
-            ORLastElementsVector128(origin, target, orVector, i, length);
+                PerformCurrentORIterationVector128(origin, target, maskVector, i);
+            ORLastElementsVector128(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentORIterationVector128<T>(T* origin, T* target, Vector128<T> or, uint index, uint length)
+        private static void PerformCurrentORIterationVector128<T>(T* origin, T* target, Vector128<T> mask, uint index)
             where T : unmanaged
         {
-            SSEHelper.Store(SSEHelper.ORVector128(origin, or, index), target, index);
+            SSEHelper.Store(SSEHelper.ORVector128(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void ORLastElementsVector128<T>(T* origin, T* target, Vector128<T> or, uint index, uint length)
+        private static void ORLastElementsVector128<T>(T* origin, T* target, Vector128<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var ored = SSEHelper.ORVector128(origin, or, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&ored, target + index, 0, count);
+            var masked = SSEHelper.ORVector128(origin, mask, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region XOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XORArrayVector128Generic<T>(T* origin, T* target, T xor, uint length)
+        public static bool XORArrayVector128<T>(T* origin, T* target, T xor, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -502,33 +430,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var xorVector = Vector128Helper.Create(xor);
+            var maskVector = Vector128Helper.Create(xor);
             for (; i < limit; i += size)
-                PerformCurrentXORIterationVector128(origin, target, xorVector, i, length);
-            XORLastElementsVector128(origin, target, xorVector, i, length);
+                PerformCurrentXORIterationVector128(origin, target, maskVector, i);
+            XORLastElementsVector128(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentXORIterationVector128<T>(T* origin, T* target, Vector128<T> xor, uint index, uint length)
+        private static void PerformCurrentXORIterationVector128<T>(T* origin, T* target, Vector128<T> mask, uint index)
             where T : unmanaged
         {
-            SSEHelper.Store(SSEHelper.XORVector128(origin, xor, index), target, index);
+            SSEHelper.Store(SSEHelper.XORVector128(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void XORLastElementsVector128<T>(T* origin, T* target, Vector128<T> xor, uint index, uint length)
+        private static void XORLastElementsVector128<T>(T* origin, T* target, Vector128<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var xored = SSEHelper.XORVector128(origin, xor, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&xored, target + index, 0, count);
+            var masked = SSEHelper.XORVector128(origin, mask, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region NAND
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NANDArrayVector128Generic<T>(T* origin, T* target, T and, uint length)
+        public static bool NANDArrayVector128<T>(T* origin, T* target, T and, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -538,33 +466,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var andVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(and);
             for (; i < limit; i += size)
-                PerformCurrentNANDIterationVector128(origin, target, andVector, i, length);
-            NANDLastElementsVector128(origin, target, andVector, i, length);
+                PerformCurrentNANDIterationVector128(origin, target, maskVector, i);
+            NANDLastElementsVector128(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentNANDIterationVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void PerformCurrentNANDIterationVector128<T>(T* origin, T* target, Vector128<T> mask, uint index)
             where T : unmanaged
         {
-            SSEHelper.Store(SSEHelper.NANDVector128(origin, and, index), target, index);
+            SSEHelper.Store(SSEHelper.NANDVector128(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void NANDLastElementsVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void NANDLastElementsVector128<T>(T* origin, T* target, Vector128<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = SSEHelper.NANDVector128(origin, and, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+            var masked = SSEHelper.NANDVector128(origin, mask, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region NOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool NORArrayVector128Generic<T>(T* origin, T* target, T and, uint length)
+        public static bool NORArrayVector128<T>(T* origin, T* target, T and, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -574,33 +502,33 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var andVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(and);
             for (; i < limit; i += size)
-                PerformCurrentNORIterationVector128(origin, target, andVector, i, length);
-            NORLastElementsVector128(origin, target, andVector, i, length);
+                PerformCurrentNORIterationVector128(origin, target, maskVector, i);
+            NORLastElementsVector128(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentNORIterationVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void PerformCurrentNORIterationVector128<T>(T* origin, T* target, Vector128<T> mask, uint index)
             where T : unmanaged
         {
-            SSEHelper.Store(SSEHelper.NORVector128(origin, and, index), target, index);
+            SSEHelper.Store(SSEHelper.NORVector128(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void NORLastElementsVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void NORLastElementsVector128<T>(T* origin, T* target, Vector128<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = SSEHelper.NORVector128(origin, and, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+            var masked = SSEHelper.NORVector128(origin, mask, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         #region XNOR
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool XNORArrayVector128Generic<T>(T* origin, T* target, T and, uint length)
+        public static bool XNORArrayVector128<T>(T* origin, T* target, T and, uint length)
             where T : unmanaged
         {
             if (!GetSupportedInstructionSetVector128<T>())
@@ -610,28 +538,28 @@ namespace Garyon.Functions.PointerHelpers
 
             uint i = 0;
             uint limit = length & ~(size - 1);
-            var andVector = Vector128Helper.Create(and);
+            var maskVector = Vector128Helper.Create(and);
             for (; i < limit; i += size)
-                PerformCurrentXNORIterationVector128(origin, target, andVector, i, length);
-            XNORLastElementsVector128(origin, target, andVector, i, length);
+                PerformCurrentXNORIterationVector128(origin, target, maskVector, i);
+            XNORLastElementsVector128(origin, target, maskVector, i, length);
 
             return true;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void PerformCurrentXNORIterationVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void PerformCurrentXNORIterationVector128<T>(T* origin, T* target, Vector128<T> mask, uint index)
             where T : unmanaged
         {
-            SSEHelper.Store(SSEHelper.XNORVector128(origin, and, index), target, index);
+            SSEHelper.Store(SSEHelper.XNORVector128(origin, mask, index), target, index);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void XNORLastElementsVector128<T>(T* origin, T* target, Vector128<T> and, uint index, uint length)
+        private static void XNORLastElementsVector128<T>(T* origin, T* target, Vector128<T> mask, uint index, uint length)
             where T : unmanaged
         {
             uint count = length - index;
-            var anded = SSEHelper.XNORVector128(origin, and, index);
-            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&anded, target + index, 0, count);
+            var masked = SSEHelper.XNORVector128(origin, mask, index);
+            SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
