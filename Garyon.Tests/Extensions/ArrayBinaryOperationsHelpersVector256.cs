@@ -1,4 +1,5 @@
 using Garyon.QualityControl.Extensions;
+using Garyon.Tests.Resources.SizedStructs;
 using NUnit.Framework;
 using static Garyon.Functions.PointerHelpers.SIMDPointerBinaryOperations;
 using static Garyon.Tests.Resources.AssertionHelpers;
@@ -8,6 +9,347 @@ namespace Garyon.Tests.Extensions
     public class ArrayBinaryOperationsHelpersVector256 : ArrayManipulationExtensionsQualityControlAsset
     {
         private const byte mask = 11;
+
+        #region Custom Sized Structs NOT
+        [Test]
+        public unsafe void NOTStruct3Array()
+        {
+            var origin = new Struct3[ArrayLength];
+            var target = new Struct3[ArrayLength];
+            fixed (Struct3* o = origin)
+            fixed (Struct3* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct5Array()
+        {
+            var origin = new Struct5[ArrayLength];
+            var target = new Struct5[ArrayLength];
+            fixed (Struct5* o = origin)
+            fixed (Struct5* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct6Array()
+        {
+            var origin = new Struct6[ArrayLength];
+            var target = new Struct6[ArrayLength];
+            fixed (Struct6* o = origin)
+            fixed (Struct6* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct7Array()
+        {
+            var origin = new Struct7[ArrayLength];
+            var target = new Struct7[ArrayLength];
+            fixed (Struct7* o = origin)
+            fixed (Struct7* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct9Array()
+        {
+            var origin = new Struct9[ArrayLength];
+            var target = new Struct9[ArrayLength];
+            fixed (Struct9* o = origin)
+            fixed (Struct9* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct10Array()
+        {
+            var origin = new Struct10[ArrayLength];
+            var target = new Struct10[ArrayLength];
+            fixed (Struct10* o = origin)
+            fixed (Struct10* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct11Array()
+        {
+            var origin = new Struct11[ArrayLength];
+            var target = new Struct11[ArrayLength];
+            fixed (Struct11* o = origin)
+            fixed (Struct11* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct12Array()
+        {
+            var origin = new Struct12[ArrayLength];
+            var target = new Struct12[ArrayLength];
+            fixed (Struct12* o = origin)
+            fixed (Struct12* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct13Array()
+        {
+            var origin = new Struct13[ArrayLength];
+            var target = new Struct13[ArrayLength];
+            fixed (Struct13* o = origin)
+            fixed (Struct13* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct14Array()
+        {
+            var origin = new Struct14[ArrayLength];
+            var target = new Struct14[ArrayLength];
+            fixed (Struct14* o = origin)
+            fixed (Struct14* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct15Array()
+        {
+            var origin = new Struct15[ArrayLength];
+            var target = new Struct15[ArrayLength];
+            fixed (Struct15* o = origin)
+            fixed (Struct15* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct17Array()
+        {
+            var origin = new Struct17[ArrayLength];
+            var target = new Struct17[ArrayLength];
+            fixed (Struct17* o = origin)
+            fixed (Struct17* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct18Array()
+        {
+            var origin = new Struct18[ArrayLength];
+            var target = new Struct18[ArrayLength];
+            fixed (Struct18* o = origin)
+            fixed (Struct18* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct19Array()
+        {
+            var origin = new Struct19[ArrayLength];
+            var target = new Struct19[ArrayLength];
+            fixed (Struct19* o = origin)
+            fixed (Struct19* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct20Array()
+        {
+            var origin = new Struct20[ArrayLength];
+            var target = new Struct20[ArrayLength];
+            fixed (Struct20* o = origin)
+            fixed (Struct20* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct21Array()
+        {
+            var origin = new Struct21[ArrayLength];
+            var target = new Struct21[ArrayLength];
+            fixed (Struct21* o = origin)
+            fixed (Struct21* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct22Array()
+        {
+            var origin = new Struct22[ArrayLength];
+            var target = new Struct22[ArrayLength];
+            fixed (Struct22* o = origin)
+            fixed (Struct22* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct23Array()
+        {
+            var origin = new Struct23[ArrayLength];
+            var target = new Struct23[ArrayLength];
+            fixed (Struct23* o = origin)
+            fixed (Struct23* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct24Array()
+        {
+            var origin = new Struct24[ArrayLength];
+            var target = new Struct24[ArrayLength];
+            fixed (Struct24* o = origin)
+            fixed (Struct24* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct25Array()
+        {
+            var origin = new Struct25[ArrayLength];
+            var target = new Struct25[ArrayLength];
+            fixed (Struct25* o = origin)
+            fixed (Struct25* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct26Array()
+        {
+            var origin = new Struct26[ArrayLength];
+            var target = new Struct26[ArrayLength];
+            fixed (Struct26* o = origin)
+            fixed (Struct26* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct27Array()
+        {
+            var origin = new Struct27[ArrayLength];
+            var target = new Struct27[ArrayLength];
+            fixed (Struct27* o = origin)
+            fixed (Struct27* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct28Array()
+        {
+            var origin = new Struct28[ArrayLength];
+            var target = new Struct28[ArrayLength];
+            fixed (Struct28* o = origin)
+            fixed (Struct28* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct29Array()
+        {
+            var origin = new Struct29[ArrayLength];
+            var target = new Struct29[ArrayLength];
+            fixed (Struct29* o = origin)
+            fixed (Struct29* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct30Array()
+        {
+            var origin = new Struct30[ArrayLength];
+            var target = new Struct30[ArrayLength];
+            fixed (Struct30* o = origin)
+            fixed (Struct30* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        [Test]
+        public unsafe void NOTStruct31Array()
+        {
+            var origin = new Struct31[ArrayLength];
+            var target = new Struct31[ArrayLength];
+            fixed (Struct31* o = origin)
+            fixed (Struct31* t = target)
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
+                    UnsupportedInstructionSet();
+
+            for (int i = 0; i < ArrayLength; i++)
+                Assert.AreEqual(~origin[i], target[i]);
+        }
+        #endregion
 
         #region NOT
         [Test]
