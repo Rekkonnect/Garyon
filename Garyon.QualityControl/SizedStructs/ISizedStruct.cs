@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Garyon.Tests.Resources.SizedStructs
+namespace Garyon.QualityControl.SizedStructs
 {
     /// <summary>Represents a sized struct.</summary>
     public interface ISizedStruct { }

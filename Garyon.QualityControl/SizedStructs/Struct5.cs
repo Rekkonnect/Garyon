@@ -1,7 +1,7 @@
-using Garyon.Attributes;
 using System.Runtime.InteropServices;
+using Garyon.Attributes;
 
-namespace Garyon.Tests.Resources.SizedStructs
+namespace Garyon.QualityControl.SizedStructs
 {
     /// <summary>A struct with a size of 5 bytes.</summary>
     [StructLayout(LayoutKind.Sequential, Size = elementCount)]

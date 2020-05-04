@@ -1,4 +1,5 @@
 ﻿using Garyon.Attributes;
+using Garyon.QualityControl.SizedStructs;
 using NUnit.Framework;
 
 namespace Garyon.Tests.Resources.SizedStructs

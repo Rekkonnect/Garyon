@@ -1,4 +1,5 @@
 using Garyon.QualityControl.Extensions;
+using Garyon.QualityControl.SizedStructs;
 using Garyon.Tests.Resources.SizedStructs;
 using NUnit.Framework;
 using static Garyon.Functions.PointerHelpers.SIMDPointerBinaryOperations;
