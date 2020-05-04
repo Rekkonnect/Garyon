@@ -19,7 +19,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalByteArray[i] == TargetByteArray[i]);
+                Assert.AreEqual(OriginalByteArray[i], TargetByteArray[i]);
         }
         [Test]
         public unsafe void ByteToInt16ArrayUnsafe()
@@ -30,7 +30,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalByteArray[i] == TargetInt16Array[i]);
+                Assert.AreEqual(OriginalByteArray[i], TargetInt16Array[i]);
         }
         [Test]
         public unsafe void ByteToInt32ArrayUnsafe()
@@ -41,7 +41,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalByteArray[i] == TargetInt32Array[i]);
+                Assert.AreEqual(OriginalByteArray[i], TargetInt32Array[i]);
         }
         [Test]
         public unsafe void ByteToInt64ArrayUnsafe()
@@ -52,7 +52,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalByteArray[i] == TargetInt64Array[i]);
+                Assert.AreEqual(OriginalByteArray[i], TargetInt64Array[i]);
         }
         [Test]
         public unsafe void ByteToSingleArrayUnsafe()
@@ -63,7 +63,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalByteArray[i] == TargetSingleArray[i]);
+                Assert.AreEqual(OriginalByteArray[i], TargetSingleArray[i]);
         }
         [Test]
         public unsafe void ByteToDoubleArrayUnsafe()
@@ -74,7 +74,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalByteArray[i] == TargetDoubleArray[i]);
+                Assert.AreEqual(OriginalByteArray[i], TargetDoubleArray[i]);
         }
         #endregion
 
@@ -88,7 +88,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetByteArray[i]);
+                Assert.AreEqual(OriginalInt16Array[i], TargetByteArray[i]);
         }
         [Test]
         public unsafe void Int16ToInt16ArrayUnsafe()
@@ -99,7 +99,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetInt16Array[i]);
+                Assert.AreEqual(OriginalInt16Array[i], TargetInt16Array[i]);
         }
         [Test]
         public unsafe void Int16ToInt32ArrayUnsafe()
@@ -110,7 +110,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetInt32Array[i]);
+                Assert.AreEqual(OriginalInt16Array[i], TargetInt32Array[i]);
         }
         [Test]
         public unsafe void Int16ToInt64ArrayUnsafe()
@@ -121,7 +121,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetInt64Array[i]);
+                Assert.AreEqual(OriginalInt16Array[i], TargetInt64Array[i]);
         }
         [Test]
         public unsafe void Int16ToSingleArrayUnsafe()
@@ -132,7 +132,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetSingleArray[i]);
+                Assert.AreEqual(OriginalInt16Array[i], TargetSingleArray[i]);
         }
         [Test]
         public unsafe void Int16ToDoubleArrayUnsafe()
@@ -143,7 +143,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt16Array[i] == TargetDoubleArray[i]);
+                Assert.AreEqual(OriginalInt16Array[i], TargetDoubleArray[i]);
         }
         #endregion
 
@@ -157,7 +157,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetByteArray[i]);
+                Assert.AreEqual(OriginalInt32Array[i], TargetByteArray[i]);
         }
         [Test]
         public unsafe void Int32ToInt16ArrayUnsafe()
@@ -168,7 +168,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetInt16Array[i]);
+                Assert.AreEqual(OriginalInt32Array[i], TargetInt16Array[i]);
         }
         [Test]
         public unsafe void Int32ToInt32ArrayUnsafe()
@@ -179,7 +179,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetInt32Array[i]);
+                Assert.AreEqual(OriginalInt32Array[i], TargetInt32Array[i]);
         }
         [Test]
         public unsafe void Int32ToInt64ArrayUnsafe()
@@ -190,7 +190,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetInt64Array[i]);
+                Assert.AreEqual(OriginalInt32Array[i], TargetInt64Array[i]);
         }
         [Test]
         public unsafe void Int32ToSingleArrayUnsafe()
@@ -201,7 +201,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetSingleArray[i]);
+                Assert.AreEqual(OriginalInt32Array[i], TargetSingleArray[i]);
         }
         [Test]
         public unsafe void Int32ToDoubleArrayUnsafe()
@@ -212,7 +212,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt32Array[i] == TargetDoubleArray[i]);
+                Assert.AreEqual(OriginalInt32Array[i], TargetDoubleArray[i]);
         }
         #endregion
 
@@ -226,7 +226,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetByteArray[i]);
+                Assert.AreEqual(OriginalInt64Array[i], TargetByteArray[i]);
         }
         [Test]
         public unsafe void Int64ToInt16ArrayUnsafe()
@@ -237,7 +237,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetInt16Array[i]);
+                Assert.AreEqual(OriginalInt64Array[i], TargetInt16Array[i]);
         }
         [Test]
         public unsafe void Int64ToInt32ArrayUnsafe()
@@ -248,7 +248,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetInt32Array[i]);
+                Assert.AreEqual(OriginalInt64Array[i], TargetInt32Array[i]);
         }
         [Test]
         public unsafe void Int64ToInt64ArrayUnsafe()
@@ -259,7 +259,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalInt64Array[i] == TargetInt64Array[i]);
+                Assert.AreEqual(OriginalInt64Array[i], TargetInt64Array[i]);
         }
         #endregion
 
@@ -273,7 +273,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalSingleArray[i] == TargetInt32Array[i]);
+                Assert.AreEqual(OriginalSingleArray[i], TargetInt32Array[i]);
         }
         [Test]
         public unsafe void SingleToDoubleArrayUnsafe()
@@ -284,7 +284,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalSingleArray[i] == TargetDoubleArray[i]);
+                Assert.AreEqual(OriginalSingleArray[i], TargetDoubleArray[i]);
         }
         #endregion
 
@@ -298,7 +298,7 @@ namespace Garyon.Tests.Extensions
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
-                Assert.IsTrue(OriginalDoubleArray[i] == TargetInt32Array[i]);
+                Assert.AreEqual(OriginalDoubleArray[i], TargetInt32Array[i]);
         }
         #endregion
     }
