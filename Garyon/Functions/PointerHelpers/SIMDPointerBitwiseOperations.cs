@@ -1,15 +1,83 @@
-﻿using System;
+﻿using Garyon.Functions.IntrinsicsHelpers;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
-using Garyon.Functions.IntrinsicsHelpers;
 
 namespace Garyon.Functions.PointerHelpers
 {
-    /// <summary>Contains unsafe helper functions for binary operations using SIMD. All functions check whether the minimum supported instruction set is included; in the case that the set is unavailable, the functions simply do nothing.</summary>
-    public static unsafe class SIMDPointerBinaryOperations
+    /// <summary>Contains unsafe helper functions for bitwise operations using SIMD. All functions check whether the minimum supported instruction set is included; in the case that the set is unavailable, the functions simply do nothing.</summary>
+    public abstract unsafe class SIMDPointerBitwiseOperations
     {
+        private delegate bool ArrayBitwiseOperationPerformer<TOrigin, TNew>(TOrigin* origin, TOrigin* target, TOrigin* mask, uint length, BitwiseOperation operation)
+            where TOrigin : unmanaged
+            where TNew : unmanaged;
+        private delegate bool ArrayBitwiseOperationUnboundGenericPerformer<T>(T* origin, T* target, T* mask, uint length, BitwiseOperation operation)
+            where T : unmanaged;
+        private delegate bool ArrayBitwiseOperation<T>(T* origin, T* target, T mask, uint length)
+            where T : unmanaged;
+        private delegate ArrayBitwiseOperation<T> ArrayBitwiseOperationDelegateReturner<T>(BitwiseOperation operation)
+            where T : unmanaged;
+
+        private enum BitwiseOperation
+        {
+            AND,
+            OR,
+            XOR,
+            NAND,
+            NOR,
+            XNOR
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool PerformBitwiseOperationAs<TOrigin, TNew>(TOrigin* origin, TOrigin* target, TOrigin* mask, uint length, BitwiseOperation operation, ArrayBitwiseOperationDelegateReturner<TNew> delegateReturner)
+            where TOrigin : unmanaged
+            where TNew : unmanaged
+        {
+            uint newLength = length * (uint)sizeof(TOrigin) / (uint)sizeof(TNew);
+            return delegateReturner(operation)?.Invoke((TNew*)origin, (TNew*)target, *(TNew*)mask, newLength) == true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool EvaluateMaskConvertibility<TOrigin, TNew>(TOrigin* mask)
+            where TOrigin : unmanaged
+            where TNew : unmanaged
+        {
+            for (int i = sizeof(TNew); i < sizeof(TOrigin); i += sizeof(TNew))
+                if (!((TNew*)mask)[i].Equals(((TNew*)mask)[0]))
+                    return false;
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool PerformArrayBitwiseOperationVector256CustomType<T>(T* origin, T* target, T mask, uint length, BitwiseOperation operation)
+            where T : unmanaged
+        {
+            if (EvaluateMaskConvertibility<T, byte>(&mask))
+                return PerformBitwiseOperationVector256As<T, byte>(origin, target, &mask, length, operation);
+            if (EvaluateMaskConvertibility<T, short>(&mask))
+                return PerformBitwiseOperationVector256As<T, short>(origin, target, &mask, length, operation);
+            if (EvaluateMaskConvertibility<T, int>(&mask))
+                return PerformBitwiseOperationVector256As<T, int>(origin, target, &mask, length, operation);
+            if (EvaluateMaskConvertibility<T, long>(&mask))
+                return PerformBitwiseOperationVector256As<T, long>(origin, target, &mask, length, operation);
+
+            return false;
+        }
+
+        private static ArrayBitwiseOperationDelegateReturner<T> GetBitwiseOperationDelegate<T>(SIMDVectorType vectorType)
+            where T : unmanaged
+        {
+            switch (vectorType)
+            {
+                case SIMDVectorType.Vector128:
+                    return GetBitwiseOperationDelegateVector128<T>;
+                case SIMDVectorType.Vector256:
+                    return GetBitwiseOperationDelegateVector256<T>;
+            }
+            return null;
+        }
+
         #region Vector256
         #region NOT
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -60,7 +128,54 @@ namespace Garyon.Functions.PointerHelpers
             SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
         }
         #endregion
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool PerformBitwiseOperationVector256As<TOrigin, TNew>(TOrigin* origin, TOrigin* target, TOrigin* mask, uint length, BitwiseOperation operation)
+            where TOrigin : unmanaged
+            where TNew : unmanaged
+        {
+            return PerformBitwiseOperationAs(origin, target, mask, length, operation, GetBitwiseOperationDelegateVector256<TNew>);
+        }
+
         #region AND
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool ANDArrayVector256CustomTypeEnum<T>(T* origin, T* target, T mask, uint length)
+            where T : unmanaged
+        {
+            if (EvaluateMaskConvertibility<T, byte>(&mask))
+                return PerformBitwiseOperationVector256As<T, byte>(origin, target, &mask, length, BitwiseOperation.AND);
+            if (EvaluateMaskConvertibility<T, short>(&mask))
+                return PerformBitwiseOperationVector256As<T, short>(origin, target, &mask, length, BitwiseOperation.AND);
+            if (EvaluateMaskConvertibility<T, int>(&mask))
+                return PerformBitwiseOperationVector256As<T, int>(origin, target, &mask, length, BitwiseOperation.AND);
+            if (EvaluateMaskConvertibility<T, long>(&mask))
+                return PerformBitwiseOperationVector256As<T, long>(origin, target, &mask, length, BitwiseOperation.AND);
+
+            return false;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool ANDArrayVector256CustomType<T>(T* origin, T* target, T mask, uint length)
+            where T : unmanaged
+        {
+            if (EvaluateMaskConvertibility<T, byte>(&mask))
+                return ANDArrayVector256As<T, byte>(origin, target, &mask, length);
+            if (EvaluateMaskConvertibility<T, short>(&mask))
+                return ANDArrayVector256As<T, short>(origin, target, &mask, length);
+            if (EvaluateMaskConvertibility<T, int>(&mask))
+                return ANDArrayVector256As<T, int>(origin, target, &mask, length);
+            if (EvaluateMaskConvertibility<T, long>(&mask))
+                return ANDArrayVector256As<T, long>(origin, target, &mask, length);
+
+            return false;
+        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool ANDArrayVector256As<TOrigin, TNew>(TOrigin* origin, TOrigin* target, TOrigin* mask, uint length)
+            where TOrigin : unmanaged
+            where TNew : unmanaged
+        {
+            return ANDArrayVector256((TNew*)origin, (TNew*)target, *(TNew*)mask, length * (uint)sizeof(TOrigin) / (uint)sizeof(TNew));
+        }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool ANDArrayVector256<T>(T* origin, T* target, T mask, uint length)
             where T : unmanaged
@@ -276,11 +391,33 @@ namespace Garyon.Functions.PointerHelpers
             SSE2Helper.StoreLastElementsVector256((T*)&masked, target + index, 0, count);
         }
         #endregion
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool GetSupportedInstructionSetVector256<T>()
             where T : unmanaged
         {
             return Avx.IsSupported;
+        }
+
+        private static ArrayBitwiseOperation<T> GetBitwiseOperationDelegateVector256<T>(BitwiseOperation operation)
+            where T : unmanaged
+        {
+            switch (operation)
+            {
+                case BitwiseOperation.AND:
+                    return ANDArrayVector256;
+                case BitwiseOperation.OR:
+                    return ORArrayVector256;
+                case BitwiseOperation.XOR:
+                    return XORArrayVector256;
+                case BitwiseOperation.NAND:
+                    return NANDArrayVector256;
+                case BitwiseOperation.NOR:
+                    return NORArrayVector256;
+                case BitwiseOperation.XNOR:
+                    return XNORArrayVector256;
+            }
+            return null;
         }
         #endregion
 
@@ -562,11 +699,33 @@ namespace Garyon.Functions.PointerHelpers
             SIMDIntrinsicsHelper.StoreLastElementsVector128((T*)&masked, target + index, 0, count);
         }
         #endregion
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool GetSupportedInstructionSetVector128<T>()
             where T : unmanaged
         {
             return Sse.IsSupported;
+        }
+
+        private static ArrayBitwiseOperation<T> GetBitwiseOperationDelegateVector128<T>(BitwiseOperation operation)
+            where T : unmanaged
+        {
+            switch (operation)
+            {
+                case BitwiseOperation.AND:
+                    return ANDArrayVector128;
+                case BitwiseOperation.OR:
+                    return ORArrayVector128;
+                case BitwiseOperation.XOR:
+                    return XORArrayVector128;
+                case BitwiseOperation.NAND:
+                    return NANDArrayVector128;
+                case BitwiseOperation.NOR:
+                    return NORArrayVector128;
+                case BitwiseOperation.XNOR:
+                    return XNORArrayVector128;
+            }
+            return null;
         }
         #endregion
     }

@@ -1,13 +1,12 @@
 using Garyon.QualityControl.Extensions;
 using Garyon.QualityControl.SizedStructs;
-using Garyon.Tests.Resources.SizedStructs;
 using NUnit.Framework;
-using static Garyon.Functions.PointerHelpers.SIMDPointerBinaryOperations;
+using static Garyon.Functions.PointerHelpers.SIMDPointerBitwiseOperations;
 using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions
 {
-    public class ArrayBinaryOperationsHelpersVector128 : ArrayManipulationExtensionsQualityControlAsset
+    public class ArrayBitwiseOperationsHelpersVector128 : ArrayManipulationExtensionsQualityControlAsset
     {
         private const byte mask = 11;
 

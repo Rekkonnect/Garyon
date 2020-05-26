@@ -3,7 +3,7 @@ using Garyon.QualityControl.Extensions;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    public class ArrayBinaryOperationsHelpersUnoptimized : ArrayManipulationExtensionsQualityControlAsset
+    public class ArrayBitwiseOperationsHelpersUnoptimized : ArrayManipulationExtensionsQualityControlAsset
     {
         private const byte mask = 11;
 
