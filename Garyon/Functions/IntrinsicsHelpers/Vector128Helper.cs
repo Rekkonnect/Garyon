@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics;
 namespace Garyon.Functions.IntrinsicsHelpers
 {
     /// <summary>Provides helper functions for the <seealso cref="Vector128{T}"/> type.</summary>
-    public static unsafe class Vector128Helper
+    public abstract unsafe class Vector128Helper : SIMDVectorHelper
     {
         /// <summary>Creates a new <seealso cref="Vector128{T}"/> instance with all elements initialized to the specified value.</summary>
         /// <typeparam name="T">The type of the elements the <seealso cref="Vector128{T}"/> contains. Must have a size of 1, 2, 4 or 8.</typeparam>
