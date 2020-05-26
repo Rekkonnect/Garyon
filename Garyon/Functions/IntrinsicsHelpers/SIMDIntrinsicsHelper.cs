@@ -139,7 +139,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             {
                 if ((count & remainder) > 0)
                 {
-                    *target = *(int*)origin;
+                    *target = (int)*origin;
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }

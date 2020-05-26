@@ -154,7 +154,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             uint count = length - index;
 
             StoreRemainingElements(4, ref origin, ref target, count);
-            StoreLastElementsVector128(origin, target, index, count);
+            StoreLastElementsVector128(origin, target, 0, count);
 
             static void StoreRemainingElements(uint remainder, ref int* origin, ref float* target, uint count)
             {

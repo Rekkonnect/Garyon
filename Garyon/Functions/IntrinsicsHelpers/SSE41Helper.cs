@@ -53,7 +53,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                     StoreVector128((byte*)origin, target, 0);
             }
         }
-        /// <summary>Stores the last elements of a sequence into the target sequence of <seealso cref="short"/>, using AVX2 CPU instructions. This function is made with regards to storing elements through <seealso cref="Vector256"/>s, thus storing up to 31 bytes that remain to be processed from the original sequence.</summary>
+        /// <summary>Stores the last elements of a sequence into the target sequence of <seealso cref="short"/>, using SSE4.1 CPU instructions. This function is made with regards to storing elements through <seealso cref="Vector128"/>s, thus storing up to 15 bytes that remain to be processed from the original sequence.</summary>
         /// <typeparam name="T">The type of the elements in the origin sequence. Its size in bytes has to be a power of 2, up to 8.</typeparam>
         /// <param name="origin">The origin sequence, passed as a pointer.</param>
         /// <param name="target">The target sequence, passed as a pointer.</param>
@@ -120,7 +120,10 @@ namespace Garyon.Functions.IntrinsicsHelpers
 
             uint count = length - index;
 
-            StoreRemainingElements(4, ref origin, ref target, count);
+            if (sizeof(T) <= sizeof(int))
+                StoreRemainingElements(4, ref origin, ref target, count);
+            else
+                StoreRemainingElements8(2, ref origin, ref target, count);
             StoreLastElementsVector128(origin, target, 0, count);
 
             static void StoreRemainingElements(uint remainder, ref T* origin, ref int* target, uint count)
@@ -133,7 +136,14 @@ namespace Garyon.Functions.IntrinsicsHelpers
                         StoreVector128((short*)origin, target, 0);
                     else if (typeof(T) == typeof(float))
                         StoreVector128((float*)origin, target, 0);
-                    else if (typeof(T) == typeof(double))
+                    PointerArithmetic.Increment(ref origin, ref target, remainder);
+                }
+            }
+            static void StoreRemainingElements8(uint remainder, ref T* origin, ref int* target, uint count)
+            {
+                if ((count & remainder) > 0)
+                {
+                    if (typeof(T) == typeof(double))
                         StoreVector128((double*)origin, target, 0);
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
@@ -247,18 +257,18 @@ namespace Garyon.Functions.IntrinsicsHelpers
 
             uint count = length - index;
 
-            StoreRemainingElements(1, origin, target, ref index, length);
+            StoreRemainingElements(1, origin, target, count);
 
-            static void StoreRemainingElements(uint remainder, T* origin, long* target, ref uint index, uint length)
+            static void StoreRemainingElements(uint remainder, T* origin, long* target, uint count)
             {
-                if ((length & remainder) > 0)
+                if ((count & remainder) > 0)
                 {
                     if (typeof(T) == typeof(byte))
-                        target[index] = ((byte*)origin)[index];
+                        *target = *(byte*)origin;
                     else if (typeof(T) == typeof(short))
-                        target[index] = ((short*)origin)[index];
+                        *target = *(short*)origin;
                     else if (typeof(T) == typeof(int))
-                        target[index] = ((int*)origin)[index];
+                        *target = *(int*)origin;
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
@@ -288,28 +298,18 @@ namespace Garyon.Functions.IntrinsicsHelpers
             uint count = length - index;
 
             StoreRemainingElements(4, ref origin, ref target, count);
-            StoreLastElementsVector128(origin, target, index, count);
+            StoreLastElementsVector128(origin, target, 0, count);
 
             static void StoreRemainingElements(uint remainder, ref T* origin, ref float* target, uint count)
             {
                 if ((count & remainder) > 0)
                 {
                     if (typeof(T) == typeof(byte))
-                        StoreRemainingByte(remainder, origin, target);
+                        StoreVector128((byte*)origin, target, 0);
                     else if (typeof(T) == typeof(short))
-                        StoreRemainingInt16(remainder, origin, target);
+                        StoreVector128((short*)origin, target, 0);
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
-            }
-            static void StoreRemainingByte(uint remainder, T* origin, float* target)
-            {
-                if (remainder == 4)
-                    StoreVector128((byte*)origin, target, 0);
-            }
-            static void StoreRemainingInt16(uint remainder, T* origin, float* target)
-            {
-                if (remainder == 4)
-                    StoreVector128((short*)origin, target, 0);
             }
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

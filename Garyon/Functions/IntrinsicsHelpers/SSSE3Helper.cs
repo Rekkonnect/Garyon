@@ -200,25 +200,26 @@ namespace Garyon.Functions.IntrinsicsHelpers
                 if ((count & remainder) > 0)
                 {
                     if (remainder == 1)
-                        *target = *(byte*)origin;
-                    else
-                    {
-                        if (typeof(T) == typeof(int))
-                            StoreRemainingInt32(remainder, origin, target);
-                    }
+                        *target = *(short*)origin;
+                    if (typeof(T) == typeof(int))
+                        StoreRemainingInt32(remainder, (int*)origin, target);
+                    if (typeof(T) == typeof(long))
+                        StoreRemainingInt64(remainder, (long*)origin, target);
 
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
-            static void StoreRemainingInt32(uint remainder, T* origin, short* target)
+            static void StoreRemainingInt32(uint remainder, int* origin, short* target)
             {
                 if (remainder == 2)
-                    StoreVector32((int*)origin, target, 0);
+                    StoreVector32(origin, target, 0);
+                if (remainder == 1)
+                    *target = (short)*origin;
             }
-            static void StoreRemainingInt64(uint remainder, T* origin, short* target)
+            static void StoreRemainingInt64(uint remainder, long* origin, short* target)
             {
                 if (remainder == 1)
-                    *target = *(byte*)origin;
+                    *target = (short)*origin;
             }
         }
         #endregion
