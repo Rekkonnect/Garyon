@@ -146,18 +146,23 @@ namespace Garyon.Functions.IntrinsicsHelpers
         }
         #endregion
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Store<TOriginal, TNew>(TOriginal* origin, TOriginal* target)
             where TOriginal : unmanaged
             where TNew : unmanaged
         {
-            *(TNew*)target = *(TNew*)origin;
+            Store<TOriginal, TNew>(origin, target, 0);
         }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Store<TOriginal, TNew>(TOriginal* origin, TOriginal* target, uint index)
             where TOriginal : unmanaged
             where TNew : unmanaged
         {
-            *(TNew*)(target + index) = *(TNew*)(origin + index);
+            var o = (TNew*)(origin + index);
+            var t = (TNew*)(target + index);
+            *t = *o;
         }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Store<TOrigin, TTarget, TNew>(TOrigin* origin, TTarget* target)
             where TOrigin : unmanaged
             where TTarget : unmanaged

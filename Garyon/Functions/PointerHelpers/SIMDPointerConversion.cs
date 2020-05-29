@@ -281,6 +281,7 @@ namespace Garyon.Functions.PointerHelpers
                     SSE2Helper.StoreLastElementsVector256((int*)origin, (float*)target, index, length);
             }
             else if (typeof(TTo) == typeof(double))
+            {
                 if (typeof(TFrom) == typeof(float))
                     SSE41Helper.StoreLastElementsVector256((float*)origin, (double*)target, index, length);
                 else
@@ -292,6 +293,7 @@ namespace Garyon.Functions.PointerHelpers
                     if (sizeof(TFrom) == sizeof(int))
                         SSE41Helper.StoreLastElementsVector256((int*)origin, (double*)target, index, length);
                 }
+            }
             else
             {
                 if (sizeof(TFrom) == sizeof(TTo))
@@ -300,6 +302,7 @@ namespace Garyon.Functions.PointerHelpers
                     if (sizeof(TFrom) == sizeof(byte))
                         SSE41Helper.StoreLastElementsVector256((byte*)origin, (short*)target, index, length);
                 if (sizeof(TTo) == sizeof(int))
+                {
                     if (typeof(TFrom) == typeof(float))
                         SSE2Helper.StoreLastElementsVector256((float*)origin, (int*)target, index, length);
                     else if (typeof(TFrom) == typeof(double))
@@ -311,6 +314,7 @@ namespace Garyon.Functions.PointerHelpers
                         if (sizeof(TFrom) == sizeof(short))
                             SSE41Helper.StoreLastElementsVector256((short*)origin, (int*)target, index, length);
                     }
+                }
                 if (sizeof(TTo) == sizeof(long))
                 {
                     if (sizeof(TFrom) == sizeof(byte))
@@ -335,7 +339,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<long>.Count)
+            uint size = (uint)Vector256<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -352,7 +358,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<long>.Count)
+            uint size = (uint)Vector256<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -369,7 +377,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<long>.Count)
+            uint size = (uint)Vector256<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -386,7 +396,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<long>.Count)
+            uint size = (uint)Vector256<long>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -405,7 +417,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<int>.Count)
+            uint size = (uint)Vector256<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -422,7 +436,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<int>.Count)
+            uint size = (uint)Vector256<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -439,7 +455,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<int>.Count)
+            uint size = (uint)Vector256<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -456,7 +474,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<float>.Count)
+            uint size = (uint)Vector256<int>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -473,7 +493,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<double>.Count)
+            uint size = (uint)Vector256<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -492,7 +514,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<short>.Count)
+            uint size = (uint)Vector256<short>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -509,7 +533,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<short>.Count)
+            uint size = (uint)Vector256<short>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -528,7 +554,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<byte>.Count)
+            uint size = (uint)Vector256<byte>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE2Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -547,7 +575,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<float>.Count)
+            uint size = (uint)Vector256<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -564,7 +594,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<float>.Count)
+            uint size = (uint)Vector256<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVX2Helper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -581,7 +613,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<float>.Count)
+            uint size = (uint)Vector256<float>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -598,7 +632,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<double>.Count)
+            uint size = (uint)Vector256<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector128(origin, target, i);
             SSE41Helper.StoreLastElementsVector128(origin, target, i, length);
 
@@ -617,7 +653,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<double>.Count)
+            uint size = (uint)Vector256<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -634,7 +672,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<double>.Count)
+            uint size = (uint)Vector256<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -651,7 +691,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<double>.Count)
+            uint size = (uint)Vector256<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -668,7 +710,9 @@ namespace Garyon.Functions.PointerHelpers
                 return false;
 
             uint i = 0;
-            for (; i < length; i += (uint)Vector256<double>.Count)
+            uint size = (uint)Vector256<double>.Count;
+            uint limit = length & ~(size - 1);
+            for (; i < limit; i += size)
                 AVXHelper.StoreVector256(origin, target, i);
             SSE41Helper.StoreLastElementsVector256(origin, target, i, length);
 
@@ -1213,7 +1257,7 @@ namespace Garyon.Functions.PointerHelpers
 
             return true;
         }
-        /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>*. Minimum required instruction set: SSE2.</summary>
+        /// <summary>Copies the elements of a <seealso cref="int"/> sequence passed as a <seealso cref="int"/>* into a <seealso cref="short"/> sequence passed as a <seealso cref="short"/>*. Minimum required instruction set: SSSE3.</summary>
         /// <param name="origin">The origin <seealso cref="int"/> sequence.</param>
         /// <param name="target">The target <seealso cref="short"/> sequence.</param>
         /// <param name="length">The length of the origin sequence.</param>

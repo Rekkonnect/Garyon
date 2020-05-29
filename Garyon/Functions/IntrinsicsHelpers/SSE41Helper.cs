@@ -123,7 +123,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (sizeof(T) <= sizeof(int))
                 StoreRemainingElements(4, ref origin, ref target, count);
             else
-                StoreRemainingElements8(2, ref origin, ref target, count);
+                StoreRemainingElementsDouble(2, ref origin, ref target, count);
             StoreLastElementsVector128(origin, target, 0, count);
 
             static void StoreRemainingElements(uint remainder, ref T* origin, ref int* target, uint count)
@@ -139,7 +139,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
-            static void StoreRemainingElements8(uint remainder, ref T* origin, ref int* target, uint count)
+            static void StoreRemainingElementsDouble(uint remainder, ref T* origin, ref int* target, uint count)
             {
                 if ((count & remainder) > 0)
                 {

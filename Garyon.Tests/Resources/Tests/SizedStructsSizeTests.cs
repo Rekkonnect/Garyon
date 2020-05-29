@@ -2,7 +2,7 @@
 using Garyon.QualityControl.SizedStructs;
 using NUnit.Framework;
 
-namespace Garyon.Tests.Resources.SizedStructs
+namespace Garyon.Tests.Resources.Tests
 {
     public class SizedStructsSizeTests
     {
