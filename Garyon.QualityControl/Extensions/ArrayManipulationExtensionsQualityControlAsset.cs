@@ -1,5 +1,4 @@
 ﻿using Garyon.Objects.Advanced;
-using System;
 
 namespace Garyon.QualityControl.Extensions
 {

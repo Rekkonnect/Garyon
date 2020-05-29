@@ -6,7 +6,7 @@ using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions
 {
-    public class ArrayBitwiseOperationsHelpersVector128 : ArrayManipulationExtensionsQualityControlAsset
+    public class ArrayBitwiseOperationsHelpersVector256 : ArrayManipulationExtensionsQualityControlAsset
     {
         private const byte mask = 11;
 
@@ -18,7 +18,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct3[ArrayLength];
             fixed (Struct3* o = origin)
             fixed (Struct3* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -31,7 +31,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct5[ArrayLength];
             fixed (Struct5* o = origin)
             fixed (Struct5* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -44,7 +44,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct6[ArrayLength];
             fixed (Struct6* o = origin)
             fixed (Struct6* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -57,7 +57,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct7[ArrayLength];
             fixed (Struct7* o = origin)
             fixed (Struct7* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -70,7 +70,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct9[ArrayLength];
             fixed (Struct9* o = origin)
             fixed (Struct9* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -83,7 +83,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct10[ArrayLength];
             fixed (Struct10* o = origin)
             fixed (Struct10* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -96,7 +96,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct11[ArrayLength];
             fixed (Struct11* o = origin)
             fixed (Struct11* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -109,7 +109,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct12[ArrayLength];
             fixed (Struct12* o = origin)
             fixed (Struct12* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -122,7 +122,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct13[ArrayLength];
             fixed (Struct13* o = origin)
             fixed (Struct13* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -135,7 +135,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct14[ArrayLength];
             fixed (Struct14* o = origin)
             fixed (Struct14* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -148,7 +148,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct15[ArrayLength];
             fixed (Struct15* o = origin)
             fixed (Struct15* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -161,7 +161,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct17[ArrayLength];
             fixed (Struct17* o = origin)
             fixed (Struct17* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -174,7 +174,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct18[ArrayLength];
             fixed (Struct18* o = origin)
             fixed (Struct18* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -187,7 +187,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct19[ArrayLength];
             fixed (Struct19* o = origin)
             fixed (Struct19* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -200,7 +200,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct20[ArrayLength];
             fixed (Struct20* o = origin)
             fixed (Struct20* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -213,7 +213,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct21[ArrayLength];
             fixed (Struct21* o = origin)
             fixed (Struct21* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -226,7 +226,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct22[ArrayLength];
             fixed (Struct22* o = origin)
             fixed (Struct22* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -239,7 +239,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct23[ArrayLength];
             fixed (Struct23* o = origin)
             fixed (Struct23* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -252,7 +252,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct24[ArrayLength];
             fixed (Struct24* o = origin)
             fixed (Struct24* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -265,7 +265,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct25[ArrayLength];
             fixed (Struct25* o = origin)
             fixed (Struct25* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -278,7 +278,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct26[ArrayLength];
             fixed (Struct26* o = origin)
             fixed (Struct26* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -291,7 +291,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct27[ArrayLength];
             fixed (Struct27* o = origin)
             fixed (Struct27* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -304,7 +304,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct28[ArrayLength];
             fixed (Struct28* o = origin)
             fixed (Struct28* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -317,7 +317,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct29[ArrayLength];
             fixed (Struct29* o = origin)
             fixed (Struct29* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -330,7 +330,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct30[ArrayLength];
             fixed (Struct30* o = origin)
             fixed (Struct30* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -343,7 +343,7 @@ namespace Garyon.Tests.Extensions
             var target = new Struct31[ArrayLength];
             fixed (Struct31* o = origin)
             fixed (Struct31* t = target)
-                if (!NOTArrayVector128CustomType(o, t, ArrayLength))
+                if (!NOTArrayVector256CustomType(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -357,7 +357,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -368,7 +368,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -379,7 +379,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -390,7 +390,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -401,7 +401,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -412,7 +412,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -423,7 +423,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -434,7 +434,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!NOTArrayVector128(o, t, ArrayLength))
+                if (!NOTArrayVector256(o, t, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -448,7 +448,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -459,7 +459,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -470,7 +470,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -481,7 +481,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -492,7 +492,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!ANDArrayVector128(o, t, (sbyte)mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, (sbyte)mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -503,7 +503,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -514,7 +514,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -525,7 +525,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!ANDArrayVector128(o, t, mask, ArrayLength))
+                if (!ANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -539,7 +539,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -550,7 +550,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -561,7 +561,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -572,7 +572,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -583,7 +583,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!ORArrayVector128(o, t, (sbyte)mask, ArrayLength))
+                if (!ORArrayVector256(o, t, (sbyte)mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -594,7 +594,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -605,7 +605,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -616,7 +616,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!ORArrayVector128(o, t, mask, ArrayLength))
+                if (!ORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -630,7 +630,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -641,7 +641,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -652,7 +652,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -663,7 +663,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -674,7 +674,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!XORArrayVector128(o, t, (sbyte)mask, ArrayLength))
+                if (!XORArrayVector256(o, t, (sbyte)mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -685,7 +685,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -696,7 +696,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -707,7 +707,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!XORArrayVector128(o, t, mask, ArrayLength))
+                if (!XORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -721,7 +721,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -732,7 +732,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -743,7 +743,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -754,7 +754,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -765,7 +765,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!NANDArrayVector128(o, t, (sbyte)mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, (sbyte)mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -776,7 +776,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -787,7 +787,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -798,7 +798,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!NANDArrayVector128(o, t, mask, ArrayLength))
+                if (!NANDArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -812,7 +812,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -823,7 +823,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -834,7 +834,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -845,7 +845,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -856,7 +856,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!NORArrayVector128(o, t, (sbyte)mask, ArrayLength))
+                if (!NORArrayVector256(o, t, (sbyte)mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -867,7 +867,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -878,7 +878,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -889,7 +889,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!NORArrayVector128(o, t, mask, ArrayLength))
+                if (!NORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -903,7 +903,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -914,7 +914,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -925,7 +925,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -936,7 +936,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -947,7 +947,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (sbyte* o = OriginalSByteArray)
             fixed (sbyte* t = TargetSByteArray)
-                if (!XNORArrayVector128(o, t, (sbyte)mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, (sbyte)mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -958,7 +958,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ushort* o = OriginalUInt16Array)
             fixed (ushort* t = TargetUInt16Array)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -969,7 +969,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (uint* o = OriginalUInt32Array)
             fixed (uint* t = TargetUInt32Array)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)
@@ -980,7 +980,7 @@ namespace Garyon.Tests.Extensions
         {
             fixed (ulong* o = OriginalUInt64Array)
             fixed (ulong* t = TargetUInt64Array)
-                if (!XNORArrayVector128(o, t, mask, ArrayLength))
+                if (!XNORArrayVector256(o, t, mask, ArrayLength))
                     UnsupportedInstructionSet();
 
             for (int i = 0; i < ArrayLength; i++)

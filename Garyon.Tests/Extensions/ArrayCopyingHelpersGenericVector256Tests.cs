@@ -3,9 +3,9 @@ using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 
 namespace Garyon.Tests.Extensions
 {
-    public class ArrayCopyingHelpersGenericVector128Tests : ArrayCopyingHelpersTestsBase
+    public class ArrayCopyingHelpersGenericVector256Tests : ArrayCopyingHelpersTestsBase
     {
-        protected unsafe override ArrayManipulationOperation<TOrigin, TTarget> GetArrayManipulationOperationDelegate<TOrigin, TTarget>() => CopyToArrayVector128Generic;
+        protected unsafe override ArrayManipulationOperation<TOrigin, TTarget> GetArrayManipulationOperationDelegate<TOrigin, TTarget>() => CopyToArrayVector256Generic;
 
         #region byte[] -> T[]
         [Test]
@@ -42,11 +42,6 @@ namespace Garyon.Tests.Extensions
 
         #region short[] -> T[]
         [Test]
-        public unsafe void Int16ToByteArrayUnsafe()
-        {
-            PerformManipulation(OriginalInt16Array, TargetByteArray);
-        }
-        [Test]
         public unsafe void Int16ToInt16ArrayUnsafe()
         {
             PerformManipulation(OriginalInt16Array, TargetInt16Array);
@@ -75,16 +70,6 @@ namespace Garyon.Tests.Extensions
 
         #region int[] -> T[]
         [Test]
-        public unsafe void Int32ToByteArrayUnsafe()
-        {
-            PerformManipulation(OriginalInt32Array, TargetByteArray);
-        }
-        [Test]
-        public unsafe void Int32ToInt16ArrayUnsafe()
-        {
-            PerformManipulation(OriginalInt32Array, TargetInt16Array);
-        }
-        [Test]
         public unsafe void Int32ToInt32ArrayUnsafe()
         {
             PerformManipulation(OriginalInt32Array, TargetInt32Array);
@@ -107,21 +92,6 @@ namespace Garyon.Tests.Extensions
         #endregion
 
         #region long[] -> T[]
-        [Test]
-        public unsafe void Int64ToByteArrayUnsafe()
-        {
-            PerformManipulation(OriginalInt64Array, TargetByteArray);
-        }
-        [Test]
-        public unsafe void Int64ToInt16ArrayUnsafe()
-        {
-            PerformManipulation(OriginalInt64Array, TargetInt16Array);
-        }
-        [Test]
-        public unsafe void Int64ToInt32ArrayUnsafe()
-        {
-            PerformManipulation(OriginalInt64Array, TargetInt32Array);
-        }
         [Test]
         public unsafe void Int64ToInt64ArrayUnsafe()
         {

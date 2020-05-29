@@ -1,85 +1,40 @@
-using Garyon.QualityControl.Extensions;
-using Garyon.Tests.Resources;
 using NUnit.Framework;
-using System.Diagnostics;
-using System.Threading;
 using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
-using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions
 {
-    public class ArrayCopyingHelpersVector256Tests : ArrayManipulationExtensionsQualityControlAsset
+    public class ArrayCopyingHelpersVector256Tests : ArrayCopyingHelpersTestsBase
     {
         #region byte[] -> T[]
         [Test]
         public unsafe void ByteToByteArrayUnsafe()
         {
-            DebugAssertionHelpers.TestArrays(OriginalByteArray, TargetByteArray);
-            fixed (byte* o = OriginalByteArray)
-            fixed (byte* t = TargetByteArray)
-                if (!CopyToByteArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalByteArray[i], TargetByteArray[i]);
+            PerformManipulation(OriginalByteArray, TargetByteArray, CopyToByteArrayVector256);
         }
         [Test]
         public unsafe void ByteToInt16ArrayUnsafe()
         {
-            DebugAssertionHelpers.TestArrays(OriginalByteArray, TargetInt16Array);
-            fixed (byte* o = OriginalByteArray)
-            fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalByteArray[i], TargetInt16Array[i]);
+            PerformManipulation(OriginalByteArray, TargetInt16Array, CopyToInt16ArrayVector256);
         }
         [Test]
         public unsafe void ByteToInt32ArrayUnsafe()
         {
-            DebugAssertionHelpers.TestArrays(OriginalByteArray, TargetInt32Array);
-            fixed (byte* o = OriginalByteArray)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalByteArray[i], TargetInt32Array[i]);
+            PerformManipulation(OriginalByteArray, TargetInt32Array, CopyToInt32ArrayVector256);
         }
         [Test]
         public unsafe void ByteToInt64ArrayUnsafe()
         {
-            DebugAssertionHelpers.TestArrays(OriginalByteArray, TargetInt64Array);
-            fixed (byte* o = OriginalByteArray)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalByteArray[i], TargetInt64Array[i]);
+            PerformManipulation(OriginalByteArray, TargetInt64Array, CopyToInt64ArrayVector256);
         }
         [Test]
         public unsafe void ByteToSingleArrayUnsafe()
         {
-            fixed (byte* o = OriginalByteArray)
-            fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalByteArray[i], TargetSingleArray[i]);
+            PerformManipulation(OriginalByteArray, TargetSingleArray, CopyToSingleArrayVector256);
         }
         [Test]
         public unsafe void ByteToDoubleArrayUnsafe()
         {
-            fixed (byte* o = OriginalByteArray)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalByteArray[i], TargetDoubleArray[i]);
+            PerformManipulation(OriginalByteArray, TargetDoubleArray, CopyToDoubleArrayVector256);
         }
         #endregion
 
@@ -87,57 +42,27 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToInt16ArrayUnsafe()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt16Array[i], TargetInt16Array[i]);
+            PerformManipulation(OriginalInt16Array, TargetInt16Array, CopyToInt16ArrayVector256);
         }
         [Test]
         public unsafe void Int16ToInt32ArrayUnsafe()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt16Array[i], TargetInt32Array[i]);
+            PerformManipulation(OriginalInt16Array, TargetInt32Array, CopyToInt32ArrayVector256);
         }
         [Test]
         public unsafe void Int16ToInt64ArrayUnsafe()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt16Array[i], TargetInt64Array[i]);
+            PerformManipulation(OriginalInt16Array, TargetInt64Array, CopyToInt64ArrayVector256);
         }
         [Test]
         public unsafe void Int16ToSingleArrayUnsafe()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt16Array[i], TargetSingleArray[i]);
+            PerformManipulation(OriginalInt16Array, TargetSingleArray, CopyToSingleArrayVector256);
         }
         [Test]
         public unsafe void Int16ToDoubleArrayUnsafe()
         {
-            fixed (short* o = OriginalInt16Array)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt16Array[i], TargetDoubleArray[i]);
+            PerformManipulation(OriginalInt16Array, TargetDoubleArray, CopyToDoubleArrayVector256);
         }
         #endregion
 
@@ -145,46 +70,22 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToInt32ArrayUnsafe()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt32Array[i], TargetInt32Array[i]);
+            PerformManipulation(OriginalInt32Array, TargetInt32Array, CopyToInt32ArrayVector256);
         }
         [Test]
         public unsafe void Int32ToInt64ArrayUnsafe()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt32Array[i], TargetInt64Array[i]);
+            PerformManipulation(OriginalInt32Array, TargetInt64Array, CopyToInt64ArrayVector256);
         }
         [Test]
         public unsafe void Int32ToSingleArrayUnsafe()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt32Array[i], TargetSingleArray[i]);
+            PerformManipulation(OriginalInt32Array, TargetSingleArray, CopyToSingleArrayVector256);
         }
         [Test]
         public unsafe void Int32ToDoubleArrayUnsafe()
         {
-            fixed (int* o = OriginalInt32Array)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt32Array[i], TargetDoubleArray[i]);
+            PerformManipulation(OriginalInt32Array, TargetDoubleArray, CopyToDoubleArrayVector256);
         }
         #endregion
 
@@ -192,13 +93,7 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int64ToInt64ArrayUnsafe()
         {
-            fixed (long* o = OriginalInt64Array)
-            fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalInt64Array[i], TargetInt64Array[i]);
+            PerformManipulation(OriginalInt64Array, TargetInt64Array, CopyToInt64ArrayVector256);
         }
         #endregion
 
@@ -206,24 +101,12 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void SingleToInt32ArrayUnsafe()
         {
-            fixed (float* o = OriginalSingleArray)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalSingleArray[i], TargetInt32Array[i]);
+            PerformManipulation(OriginalSingleArray, TargetInt32Array, CopyToInt32ArrayVector256);
         }
         [Test]
         public unsafe void SingleToDoubleArrayUnsafe()
         {
-            fixed (float* o = OriginalSingleArray)
-            fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalSingleArray[i], TargetDoubleArray[i]);
+            PerformManipulation(OriginalSingleArray, TargetDoubleArray, CopyToDoubleArrayVector256);
         }
         #endregion
 
@@ -231,13 +114,7 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void DoubleToInt32ArrayUnsafe()
         {
-            fixed (double* o = OriginalDoubleArray)
-            fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
-                    UnsupportedInstructionSet();
-
-            for (int i = 0; i < ArrayLength; i++)
-                Assert.AreEqual(OriginalDoubleArray[i], TargetInt32Array[i]);
+            PerformManipulation(OriginalDoubleArray, TargetInt32Array, CopyToInt32ArrayVector256);
         }
         #endregion
     }
