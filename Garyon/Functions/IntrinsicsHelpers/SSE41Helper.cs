@@ -28,6 +28,12 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector256<T>(T* origin, short* target, uint index, uint length)
             where T : unmanaged
         {
+            if (typeof(T) == typeof(short))
+            {
+                SSE2Helper.StoreLastElementsVector256((short*)origin, target, index, length);
+                return;
+            }
+
             if (!Sse41.IsSupported)
                 return;
 
@@ -113,6 +119,12 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector256<T>(T* origin, int* target, uint index, uint length)
             where T : unmanaged
         {
+            if (typeof(T) == typeof(int))
+            {
+                SSE2Helper.StoreLastElementsVector256((int*)origin, target, index, length);
+                return;
+            }
+
             if (!Sse41.IsSupported)
                 return;
 
@@ -225,6 +237,12 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector256<T>(T* origin, long* target, uint index, uint length)
             where T : unmanaged
         {
+            if (typeof(T) == typeof(long))
+            {
+                SSE2Helper.StoreLastElementsVector256((long*)origin, target, index, length);
+                return;
+            }    
+
             if (!Sse41.IsSupported)
                 return;
 
@@ -308,6 +326,8 @@ namespace Garyon.Functions.IntrinsicsHelpers
                         StoreVector128((byte*)origin, target, 0);
                     else if (typeof(T) == typeof(short))
                         StoreVector128((short*)origin, target, 0);
+                    else if (typeof(T) == typeof(int))
+                        StoreVector128((int*)origin, target, 0);
                     PointerArithmetic.Increment(ref origin, ref target, remainder);
                 }
             }
