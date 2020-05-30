@@ -8,7 +8,7 @@ namespace Garyon.Functions.PointerHelpers
     public static unsafe class PointerConversion
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void ConvertTo<TFrom, TTo>(TFrom* origin, TTo* target, int length)
+        public static void ConvertTo<TFrom, TTo>(TFrom* origin, TTo* target, uint length)
             where TFrom : unmanaged
             where TTo : unmanaged
         {
@@ -369,14 +369,14 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void CopyElements<T>(T* origin, T* target, int length)
+        public static void CopyElements<T>(T* origin, T* target, uint length)
             where T : unmanaged
         {
             uint bytes = (uint)(length * sizeof(T));
-            Copy64Chunks((long*)origin, (long*)target, bytes / sizeof(long));
+            Copy64BitChunks((long*)origin, (long*)target, bytes / sizeof(long));
             CopyRemainingBytes((byte*)origin, (byte*)target, bytes);
         }
-        private static void Copy64Chunks(long* origin, long* target, uint chunks)
+        private static void Copy64BitChunks(long* origin, long* target, uint chunks)
         {
             for (uint i = 0; i < chunks; i++)
                 target[i] = origin[i];
@@ -406,108 +406,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(byte* origin, short* target, int length)
+        public static void ConvertToInt16Elements(byte* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(byte* origin, int* target, int length)
+        public static void ConvertToInt32Elements(byte* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(byte* origin, long* target, int length)
+        public static void ConvertToInt64Elements(byte* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(byte* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(byte* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(byte* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(byte* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(byte* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(byte* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(byte* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(byte* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(byte* origin, float* target, int length)
+        public static void ConvertToSingleElements(byte* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(byte* origin, double* target, int length)
+        public static void ConvertToDoubleElements(byte* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(byte* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(byte* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(byte* origin, char* target, int length)
+        public static void ConvertToCharElements(byte* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="byte"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="byte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(byte* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(byte* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -517,108 +517,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(short* origin, byte* target, int length)
+        public static void ConvertToByteElements(short* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(short* origin, int* target, int length)
+        public static void ConvertToInt32Elements(short* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(short* origin, long* target, int length)
+        public static void ConvertToInt64Elements(short* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(short* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(short* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(short* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(short* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(short* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(short* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(short* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(short* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(short* origin, float* target, int length)
+        public static void ConvertToSingleElements(short* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(short* origin, double* target, int length)
+        public static void ConvertToDoubleElements(short* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(short* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(short* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(short* origin, char* target, int length)
+        public static void ConvertToCharElements(short* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="short"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="short"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(short* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(short* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -628,108 +628,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(int* origin, byte* target, int length)
+        public static void ConvertToByteElements(int* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(int* origin, short* target, int length)
+        public static void ConvertToInt16Elements(int* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(int* origin, long* target, int length)
+        public static void ConvertToInt64Elements(int* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(int* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(int* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(int* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(int* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(int* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(int* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(int* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(int* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(int* origin, float* target, int length)
+        public static void ConvertToSingleElements(int* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(int* origin, double* target, int length)
+        public static void ConvertToDoubleElements(int* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(int* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(int* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(int* origin, char* target, int length)
+        public static void ConvertToCharElements(int* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="int"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="int"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(int* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(int* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -739,108 +739,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(long* origin, byte* target, int length)
+        public static void ConvertToByteElements(long* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(long* origin, short* target, int length)
+        public static void ConvertToInt16Elements(long* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(long* origin, int* target, int length)
+        public static void ConvertToInt32Elements(long* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(long* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(long* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(long* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(long* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(long* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(long* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(long* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(long* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(long* origin, float* target, int length)
+        public static void ConvertToSingleElements(long* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(long* origin, double* target, int length)
+        public static void ConvertToDoubleElements(long* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(long* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(long* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(long* origin, char* target, int length)
+        public static void ConvertToCharElements(long* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="long"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="long"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(long* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(long* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -850,108 +850,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(sbyte* origin, byte* target, int length)
+        public static void ConvertToByteElements(sbyte* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(sbyte* origin, short* target, int length)
+        public static void ConvertToInt16Elements(sbyte* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(sbyte* origin, int* target, int length)
+        public static void ConvertToInt32Elements(sbyte* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(sbyte* origin, long* target, int length)
+        public static void ConvertToInt64Elements(sbyte* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(sbyte* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(sbyte* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(sbyte* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(sbyte* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(sbyte* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(sbyte* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(sbyte* origin, float* target, int length)
+        public static void ConvertToSingleElements(sbyte* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(sbyte* origin, double* target, int length)
+        public static void ConvertToDoubleElements(sbyte* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(sbyte* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(sbyte* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(sbyte* origin, char* target, int length)
+        public static void ConvertToCharElements(sbyte* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="sbyte"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="sbyte"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(sbyte* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(sbyte* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -961,108 +961,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(ushort* origin, byte* target, int length)
+        public static void ConvertToByteElements(ushort* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(ushort* origin, short* target, int length)
+        public static void ConvertToInt16Elements(ushort* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(ushort* origin, int* target, int length)
+        public static void ConvertToInt32Elements(ushort* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(ushort* origin, long* target, int length)
+        public static void ConvertToInt64Elements(ushort* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(ushort* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(ushort* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(ushort* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(ushort* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(ushort* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(ushort* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(ushort* origin, float* target, int length)
+        public static void ConvertToSingleElements(ushort* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(ushort* origin, double* target, int length)
+        public static void ConvertToDoubleElements(ushort* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(ushort* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(ushort* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(ushort* origin, char* target, int length)
+        public static void ConvertToCharElements(ushort* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ushort"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ushort"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(ushort* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(ushort* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1072,108 +1072,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(uint* origin, byte* target, int length)
+        public static void ConvertToByteElements(uint* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(uint* origin, short* target, int length)
+        public static void ConvertToInt16Elements(uint* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(uint* origin, int* target, int length)
+        public static void ConvertToInt32Elements(uint* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(uint* origin, long* target, int length)
+        public static void ConvertToInt64Elements(uint* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(uint* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(uint* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(uint* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(uint* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(uint* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(uint* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(uint* origin, float* target, int length)
+        public static void ConvertToSingleElements(uint* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(uint* origin, double* target, int length)
+        public static void ConvertToDoubleElements(uint* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(uint* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(uint* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(uint* origin, char* target, int length)
+        public static void ConvertToCharElements(uint* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="uint"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="uint"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(uint* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(uint* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1183,108 +1183,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(ulong* origin, byte* target, int length)
+        public static void ConvertToByteElements(ulong* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(ulong* origin, short* target, int length)
+        public static void ConvertToInt16Elements(ulong* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(ulong* origin, int* target, int length)
+        public static void ConvertToInt32Elements(ulong* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(ulong* origin, long* target, int length)
+        public static void ConvertToInt64Elements(ulong* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(ulong* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(ulong* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(ulong* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(ulong* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(ulong* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(ulong* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(ulong* origin, float* target, int length)
+        public static void ConvertToSingleElements(ulong* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(ulong* origin, double* target, int length)
+        public static void ConvertToDoubleElements(ulong* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(ulong* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(ulong* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(ulong* origin, char* target, int length)
+        public static void ConvertToCharElements(ulong* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="ulong"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="ulong"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(ulong* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(ulong* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1294,108 +1294,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(float* origin, byte* target, int length)
+        public static void ConvertToByteElements(float* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(float* origin, short* target, int length)
+        public static void ConvertToInt16Elements(float* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(float* origin, int* target, int length)
+        public static void ConvertToInt32Elements(float* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(float* origin, long* target, int length)
+        public static void ConvertToInt64Elements(float* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(float* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(float* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(float* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(float* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(float* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(float* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(float* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(float* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(float* origin, double* target, int length)
+        public static void ConvertToDoubleElements(float* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(float* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(float* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(float* origin, char* target, int length)
+        public static void ConvertToCharElements(float* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="float"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="float"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(float* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(float* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1405,108 +1405,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(double* origin, byte* target, int length)
+        public static void ConvertToByteElements(double* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(double* origin, short* target, int length)
+        public static void ConvertToInt16Elements(double* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(double* origin, int* target, int length)
+        public static void ConvertToInt32Elements(double* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(double* origin, long* target, int length)
+        public static void ConvertToInt64Elements(double* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(double* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(double* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(double* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(double* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(double* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(double* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(double* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(double* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(double* origin, float* target, int length)
+        public static void ConvertToSingleElements(double* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(double* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(double* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(double* origin, char* target, int length)
+        public static void ConvertToCharElements(double* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="double"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="double"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(double* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(double* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1516,108 +1516,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(decimal* origin, byte* target, int length)
+        public static void ConvertToByteElements(decimal* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(decimal* origin, short* target, int length)
+        public static void ConvertToInt16Elements(decimal* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(decimal* origin, int* target, int length)
+        public static void ConvertToInt32Elements(decimal* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(decimal* origin, long* target, int length)
+        public static void ConvertToInt64Elements(decimal* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(decimal* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(decimal* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(decimal* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(decimal* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(decimal* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(decimal* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(decimal* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(decimal* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(decimal* origin, float* target, int length)
+        public static void ConvertToSingleElements(decimal* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(decimal* origin, double* target, int length)
+        public static void ConvertToDoubleElements(decimal* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(decimal* origin, char* target, int length)
+        public static void ConvertToCharElements(decimal* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="decimal"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="decimal"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(decimal* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(decimal* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1627,108 +1627,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(char* origin, byte* target, int length)
+        public static void ConvertToByteElements(char* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(char* origin, short* target, int length)
+        public static void ConvertToInt16Elements(char* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(char* origin, int* target, int length)
+        public static void ConvertToInt32Elements(char* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(char* origin, long* target, int length)
+        public static void ConvertToInt64Elements(char* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(char* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(char* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(char* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(char* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(char* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(char* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(char* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(char* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(char* origin, float* target, int length)
+        public static void ConvertToSingleElements(char* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(char* origin, double* target, int length)
+        public static void ConvertToDoubleElements(char* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(char* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(char* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)origin[i];
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="char"/>* to elements of <seealso cref="bool"/> stored in a given sequence as a <seealso cref="bool"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="char"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="bool"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToBooleanElements(char* origin, bool* target, int length)
+        public static void ConvertToBooleanElements(char* origin, bool* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = origin[i] != 0;
         }
         #endregion
@@ -1738,108 +1738,108 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="byte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToByteElements(bool* origin, byte* target, int length)
+        public static void ConvertToByteElements(bool* origin, byte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (byte)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="short"/> stored in a given sequence as a <seealso cref="short"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="short"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt16Elements(bool* origin, short* target, int length)
+        public static void ConvertToInt16Elements(bool* origin, short* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (short)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="int"/> stored in a given sequence as a <seealso cref="int"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="int"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt32Elements(bool* origin, int* target, int length)
+        public static void ConvertToInt32Elements(bool* origin, int* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (int)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="long"/> stored in a given sequence as a <seealso cref="long"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="long"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToInt64Elements(bool* origin, long* target, int length)
+        public static void ConvertToInt64Elements(bool* origin, long* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (long)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="sbyte"/> stored in a given sequence as a <seealso cref="sbyte"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="sbyte"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSByteElements(bool* origin, sbyte* target, int length)
+        public static void ConvertToSByteElements(bool* origin, sbyte* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (sbyte)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="ushort"/> stored in a given sequence as a <seealso cref="ushort"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ushort"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt16Elements(bool* origin, ushort* target, int length)
+        public static void ConvertToUInt16Elements(bool* origin, ushort* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ushort)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="uint"/> stored in a given sequence as a <seealso cref="uint"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="uint"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt32Elements(bool* origin, uint* target, int length)
+        public static void ConvertToUInt32Elements(bool* origin, uint* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (uint)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="ulong"/> stored in a given sequence as a <seealso cref="ulong"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="ulong"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToUInt64Elements(bool* origin, ulong* target, int length)
+        public static void ConvertToUInt64Elements(bool* origin, ulong* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (ulong)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="float"/> stored in a given sequence as a <seealso cref="float"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="float"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToSingleElements(bool* origin, float* target, int length)
+        public static void ConvertToSingleElements(bool* origin, float* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (float)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="double"/> stored in a given sequence as a <seealso cref="double"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="double"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDoubleElements(bool* origin, double* target, int length)
+        public static void ConvertToDoubleElements(bool* origin, double* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (double)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="decimal"/> stored in a given sequence as a <seealso cref="decimal"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="decimal"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToDecimalElements(bool* origin, decimal* target, int length)
+        public static void ConvertToDecimalElements(bool* origin, decimal* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (decimal)(origin[i] ? 1 : 0);
         }
         /// <summary>Converts a number of elements from a sequence given as a <seealso cref="bool"/>* to elements of <seealso cref="char"/> stored in a given sequence as a <seealso cref="char"/>*.</summary>
         /// <param name="origin">The origin sequence as a <seealso cref="bool"/>* whose elements to convert.</param>
         /// <param name="target">The target sequence as a <seealso cref="char"/>* that will contain the converted elements.</param>
         /// <param name="length">The length of both sequences.</param>
-        public static void ConvertToCharElements(bool* origin, char* target, int length)
+        public static void ConvertToCharElements(bool* origin, char* target, uint length)
         {
-            for (uint i = 0; i < (uint)length; i++)
+            for (uint i = 0; i < length; i++)
                 target[i] = (char)(origin[i] ? 1 : 0);
         }
         #endregion

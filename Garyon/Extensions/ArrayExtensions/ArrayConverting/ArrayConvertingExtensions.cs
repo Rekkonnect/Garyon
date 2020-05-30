@@ -29,7 +29,7 @@ namespace Garyon.Extensions.ArrayExtensions.ArrayConverting
                 if (CopyToSIMD(origin, target, length))
                     return result;
 
-                PointerConversion.ConvertTo(origin, target, (int)length);
+                PointerConversion.ConvertTo(origin, target, length);
             }
 
             return result;
