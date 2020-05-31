@@ -189,7 +189,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p1">The 1st pointer to increment.</typeparam>
         /// <param name="p2">The 2nd pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, uint increment = 1)
+        public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
         {
@@ -204,7 +204,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p2">The 2nd pointer to increment.</typeparam>
         /// <param name="p3">The 3rd pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, uint increment = 1)
+        public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -223,7 +223,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p3">The 3rd pointer to increment.</typeparam>
         /// <param name="p4">The 4th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, uint increment = 1)
+        public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -246,7 +246,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p4">The 4th pointer to increment.</typeparam>
         /// <param name="p5">The 5th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, uint increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -273,7 +273,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p5">The 5th pointer to increment.</typeparam>
         /// <param name="p6">The 6th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, uint increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -304,7 +304,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p6">The 6th pointer to increment.</typeparam>
         /// <param name="p7">The 7th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, uint increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -339,7 +339,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p7">The 7th pointer to increment.</typeparam>
         /// <param name="p8">The 8th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, uint increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, uint increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -365,7 +365,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p1">The 1st pointer to increment.</typeparam>
         /// <param name="p2">The 2nd pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, long increment = 1)
+        public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
         {
@@ -380,7 +380,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p2">The 2nd pointer to increment.</typeparam>
         /// <param name="p3">The 3rd pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, long increment = 1)
+        public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -399,7 +399,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p3">The 3rd pointer to increment.</typeparam>
         /// <param name="p4">The 4th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, long increment = 1)
+        public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -422,7 +422,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p4">The 4th pointer to increment.</typeparam>
         /// <param name="p5">The 5th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, long increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -449,7 +449,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p5">The 5th pointer to increment.</typeparam>
         /// <param name="p6">The 6th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, long increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -480,7 +480,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p6">The 6th pointer to increment.</typeparam>
         /// <param name="p7">The 7th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, long increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -515,7 +515,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p7">The 7th pointer to increment.</typeparam>
         /// <param name="p8">The 8th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, long increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, long increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -541,7 +541,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p1">The 1st pointer to increment.</typeparam>
         /// <param name="p2">The 2nd pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, ulong increment = 1)
+        public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
         {
@@ -556,7 +556,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p2">The 2nd pointer to increment.</typeparam>
         /// <param name="p3">The 3rd pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, ulong increment = 1)
+        public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -575,7 +575,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p3">The 3rd pointer to increment.</typeparam>
         /// <param name="p4">The 4th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ulong increment = 1)
+        public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -598,7 +598,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p4">The 4th pointer to increment.</typeparam>
         /// <param name="p5">The 5th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ulong increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -625,7 +625,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p5">The 5th pointer to increment.</typeparam>
         /// <param name="p6">The 6th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ulong increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -656,7 +656,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p6">The 6th pointer to increment.</typeparam>
         /// <param name="p7">The 7th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ulong increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -691,7 +691,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p7">The 7th pointer to increment.</typeparam>
         /// <param name="p8">The 8th pointer to increment.</typeparam>
         /// <param name="increment">The amount to increment the pointers by.</param>
-        public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, ulong increment = 1)
+        public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, ulong increment)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -895,7 +895,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p1">The 1st pointer to decrement.</typeparam>
         /// <param name="p2">The 2nd pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, uint decrement = 1)
+        public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
         {
@@ -910,7 +910,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p2">The 2nd pointer to decrement.</typeparam>
         /// <param name="p3">The 3rd pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, uint decrement = 1)
+        public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -929,7 +929,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p3">The 3rd pointer to decrement.</typeparam>
         /// <param name="p4">The 4th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, uint decrement = 1)
+        public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -952,7 +952,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p4">The 4th pointer to decrement.</typeparam>
         /// <param name="p5">The 5th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, uint decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -979,7 +979,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p5">The 5th pointer to decrement.</typeparam>
         /// <param name="p6">The 6th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, uint decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1010,7 +1010,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p6">The 6th pointer to decrement.</typeparam>
         /// <param name="p7">The 7th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, uint decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1045,7 +1045,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p7">The 7th pointer to decrement.</typeparam>
         /// <param name="p8">The 8th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, uint decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, uint decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1071,7 +1071,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p1">The 1st pointer to decrement.</typeparam>
         /// <param name="p2">The 2nd pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, long decrement = 1)
+        public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
         {
@@ -1086,7 +1086,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p2">The 2nd pointer to decrement.</typeparam>
         /// <param name="p3">The 3rd pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, long decrement = 1)
+        public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1105,7 +1105,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p3">The 3rd pointer to decrement.</typeparam>
         /// <param name="p4">The 4th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, long decrement = 1)
+        public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1128,7 +1128,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p4">The 4th pointer to decrement.</typeparam>
         /// <param name="p5">The 5th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, long decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1155,7 +1155,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p5">The 5th pointer to decrement.</typeparam>
         /// <param name="p6">The 6th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, long decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1186,7 +1186,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p6">The 6th pointer to decrement.</typeparam>
         /// <param name="p7">The 7th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, long decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1221,7 +1221,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p7">The 7th pointer to decrement.</typeparam>
         /// <param name="p8">The 8th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, long decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, long decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1247,7 +1247,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p1">The 1st pointer to decrement.</typeparam>
         /// <param name="p2">The 2nd pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, ulong decrement = 1)
+        public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
         {
@@ -1262,7 +1262,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p2">The 2nd pointer to decrement.</typeparam>
         /// <param name="p3">The 3rd pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, ulong decrement = 1)
+        public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1281,7 +1281,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p3">The 3rd pointer to decrement.</typeparam>
         /// <param name="p4">The 4th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ulong decrement = 1)
+        public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1304,7 +1304,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p4">The 4th pointer to decrement.</typeparam>
         /// <param name="p5">The 5th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ulong decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1331,7 +1331,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p5">The 5th pointer to decrement.</typeparam>
         /// <param name="p6">The 6th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ulong decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1362,7 +1362,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p6">The 6th pointer to decrement.</typeparam>
         /// <param name="p7">The 7th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ulong decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
@@ -1397,7 +1397,7 @@ namespace Garyon.Functions.PointerHelpers
         /// <param name="p7">The 7th pointer to decrement.</typeparam>
         /// <param name="p8">The 8th pointer to decrement.</typeparam>
         /// <param name="decrement">The amount to decrement the pointers by.</param>
-        public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, ulong decrement = 1)
+        public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, ulong decrement)
             where T1 : unmanaged
             where T2 : unmanaged
             where T3 : unmanaged
