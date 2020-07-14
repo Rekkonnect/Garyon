@@ -187,6 +187,5 @@ namespace Garyon.Functions.Arrays
             return false;
         }
         #endregion
-
     }
 }

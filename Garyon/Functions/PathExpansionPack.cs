@@ -35,7 +35,7 @@ namespace Garyon.Functions
 
         /// <summary>Analyzes the provided path by splitting the individual item names by the directory separator character and returns the array of the names that form the path. The path is automatically converted to its appropriate platform-specific form.</summary>
         /// <param name="path">The path to analyze.</param>
-        public static string[] AnalyzePath(string path) => FixPath(path).Split(DirectorySeparatorChar).RemoveEmptyElements();
+        public static string[] AnalyzePath(string path) => FixPath(path).Split(DirectorySeparatorChar).RemoveEmptyElements().ToArray();
         /// <summary>Returns a concatenated string version of the provided directory collection including the directory separator character.</summary>
         /// <param name="directories">The directories to concatenate.</param>
         public static string ConcatenateDirectoryPath(IEnumerable<string> directories) => $@"{directories.ToList().ConvertAll(AddDirectorySuffix).AggregateIfContains(AggregateDirectories)}";

@@ -303,6 +303,10 @@ namespace Garyon.Extensions
                         }
             return originalString;
         }
+        /// <summary>Normalizes the line separators of a string to \n.</summary>
+        /// <param name="s">The string whose line separators to normalize.</param>
+        /// <returns>The string with normalized line separators.</returns>
+        public static string NormalizeLineSeparators(this string s) => s.Replace("\r\n", "\n").Replace('\r', '\n');
         #endregion
 
         #region Checks
@@ -338,124 +342,8 @@ namespace Garyon.Extensions
             return s.ToLower() == match.ToLower();
         }
         #endregion
-        #endregion
 
-        #region String[]
-        /// <summary>Finds the occurrences of a string in a string array and returns an array containing the indices of each occurrence in the original array.</summary>
-        /// <param name="a">The array containing the strings which will be evaluated.</param>
-        /// <param name="match">The string to match.</param>
-        public static int[] FindOccurrences(this string[] a, string match)
-        {
-            if (a == null)
-                return new int[0];
-
-            var occurrences = new List<int>();
-            for (int i = 0; i < a.Length; i++)
-                if (a[i] == match)
-                    occurrences.Add(i);
-            return occurrences.ToArray();
-        }
-        /// <summary>Replaces the characters of an array of strings and returns the new array.</summary>
-        /// <param name="a">The array containing the strings which will be replaced.</param>
-        /// <param name="oldChar">The old character.</param>
-        /// <param name="newChar">The new character.</param>
-        public static string[] Replace(this string[] a, char oldChar, char newChar)
-        {
-            for (int i = 0; i < a.Length; i++)
-                a[i] = a[i].Replace(oldChar, newChar);
-            return a;
-        }
-        /// <summary>Replaces the strings of an array of strings and returns the new array.</summary>
-        /// <param name="a">The array containing the strings which will be replaced.</param>
-        /// <param name="oldString">The old string.</param>
-        /// <param name="newString">The new string.</param>
-        public static string[] Replace(this string[] a, string oldString, string newString)
-        {
-            for (int i = 0; i < a.Length; i++)
-                a[i] = a[i].Replace(oldString, newString);
-            return a;
-        }
-        /// <summary>Replaces whole words of the strings of an array of strings and returns the new array.</summary>
-        /// <param name="a">The array containing the strings which will be replaced.</param>
-        /// <param name="oldString">The old string.</param>
-        /// <param name="newString">The new string.</param>
-        public static string[] ReplaceWholeWord(this string[] a, string oldString, string newString)
-        {
-            for (int i = 0; i < a.Length; i++)
-                a[i] = a[i].ReplaceWholeWord(oldString, newString);
-            return a;
-        }
-        /// <summary>Removes the empty elements of a string array and returns the new array.</summary>
-        /// <param name="a">The array of strings.</param>
-        public static string[] RemoveEmptyElements(this string[] a) => RemoveEmptyElements(a.ToList()).ToArray();
-        /// <summary>Determines whether there is at least one occurrence of a string in a string of the string array.</summary>
-        /// <param name="a">The array of strings.</param>
-        /// <param name="match">The string to match.</param>
-        public static bool ContainsAtLeast(this string[] a, string match)
-        {
-            if (a == null)
-                return false;
-            for (int i = 0; i < a.Length; i++)
-                if (a[i].Contains(match))
-                    return true;
-            return false;
-        }
-        /// <summary>Determines whether there is at least one occurrence of a string as a whole word in a string of the string array.</summary>
-        /// <param name="a">The array of strings.</param>
-        /// <param name="match">The string to match.</param>
-        public static bool ContainsAtLeastWholeWord(this string[] a, string match)
-        {
-            if (a != null)
-                return false;
-            for (int i = 0; i < a.Length; i++)
-                if (a[i].ContainsWholeWord(match))
-                    return true;
-            return false;
-        }
-        /// <summary>Combines the strings of a string array and returns the new string.</summary>
-        /// <param name="s">The array of strings.</param>
-        public static string Combine(this string[] s)
-        {
-            var str = new StringBuilder();
-            for (int i = 0; i < s.Length; i++)
-                str = str.Append(s[i]);
-            return str.ToString();
-        }
-        /// <summary>Combines the strings of a string array and returns the new string.</summary>
-        /// <param name="s">The array of strings.</param>
-        public static string CombineWords(this string[] s) => s.Aggregate(WordAggregator);
-        /// <summary>Combines the strings of a string array with a separator and returns the new string.</summary>
-        /// <param name="s">The array of strings.</param>
-        /// <param name="separator">The separator of the strings.</param>
-        public static string Combine(this string[] s, string separator)
-        {
-            if (s?.Length == 0)
-                return "";
-            var str = new StringBuilder();
-            for (int i = 0; i < s.Length; i++)
-                str = str.Append(s[i] + separator);
-            str = str.Remove(str.Length - separator.Length, separator.Length);
-            return str.ToString();
-        }
-        /// <summary>Splits an array of strings and returns a new two-dimensiional array containing the split strings. With indexing [i, j], i is the index of the string in the original array and j is the index of the split string.</summary>
-        /// <param name="s">The array of strings.</param>
-        /// <param name="separator">The separator of the strings.</param>
-        public static string[,] Split(this string[] s, char separator) => s.SplitAsList(separator).ToTwoDimensionalArray();
-        /// <summary>Splits an array of strings and returns a new two-dimensiional jagged array containing the split strings. With indexing [i][j], i is the index of the string in the original array and j is the index of the split string.</summary>
-        /// <param name="s">The array of strings.</param>
-        /// <param name="separator">The separator of the strings.</param>
-        public static string[][] SplitAsJagged(this string[] s, char separator) => s.SplitAsList(separator).ToArray();
-        /// <summary>Splits an array of strings and returns a new list of string arrays containing the split strings. With indexing [i][j], i is the index of the string in the original array and j is the index of the split string.</summary>
-        /// <param name="s">The array of strings.</param>
-        /// <param name="separator">The separator of the strings.</param>
-        public static List<string[]> SplitAsList(this string[] s, char separator)
-        {
-            var separated = new List<string[]>();
-            for (int i = 0; i < s.Length; i++)
-                separated.Add(s[i].Split(separator));
-            return separated;
-        }
-
+        #region Casing
         /// <summary>Returns the words of a string in PascalCase in a single string.</summary>
         /// <param name="s">The string in PascalCase whose words to get.</param>
         public static string GetPascalCaseWordsString(this string s, bool separateDigits = true) => s.GetPascalCaseWords(separateDigits).CombineWords();
@@ -496,25 +384,191 @@ namespace Garyon.Extensions
                 words[i] = s[indices[i]..indices[i + 1]];
             return words;
         }
+        #endregion
         /// <summary>Returns the lines of a string.</summary>
         /// <param name="s">The string whose lines to get.</param>
-        public static string[] GetLines(this string s) => s.Split('\n');
+        /// <param name="normalizeLineSeparators">Determines whether the line separators of the original string will be normalized before the splitting occurs. Helpful to improve performance on an already normalized string to avoid unnecessary line separator replacements from the normalization.</param>
+        public static string[] GetLines(this string s, bool normalizeLineSeparators = true) => (normalizeLineSeparators ? s.NormalizeLineSeparators() : s).Split('\n');
         #endregion
 
-        #region List<string>
-        /// <summary>Removes the empty elements of a string list and returns the new list.</summary>
-        /// <param name="a">The list of strings.</param>
-        public static List<string> RemoveEmptyElements(this List<string> a)
+        #region String[]
+        /// <summary>Splits an array of strings and returns a new two-dimensiional array containing the split strings. With indexing [i, j], i is the index of the string in the original array and j is the index of the split string.</summary>
+        /// <param name="s">The array of strings.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static string[,] Split(this string[] s, char separator) => s.SplitAsList(separator).ToTwoDimensionalArray();
+        /// <summary>Splits an array of strings and returns a new two-dimensiional jagged array containing the split strings. With indexing [i][j], i is the index of the string in the original array and j is the index of the split string.</summary>
+        /// <param name="s">The array of strings.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static string[][] SplitAsJagged(this string[] s, char separator) => s.SplitAsList(separator).ToArray();
+        /// <summary>Splits an array of strings and returns a new list of string arrays containing the split strings. With indexing [i][j], i is the index of the string in the original array and j is the index of the split string.</summary>
+        /// <param name="s">The array of strings.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static List<string[]> SplitAsList(this string[] s, char separator)
         {
-            var result = new List<string>();
-            for (int i = 0; i < a.Count; i++)
-                if (a[i].Length > 0)
-                    result.Add(a[i]);
-            return result;
+            var separated = new List<string[]>();
+            for (int i = 0; i < s.Length; i++)
+                separated.Add(s[i].Split(separator));
+            return separated;
         }
         #endregion
 
         #region IEnumerable<string>
+        /// <summary>Finds the occurrences of a string in a string array and returns an array containing the indices of each occurrence in the original array.</summary>
+        /// <param name="strings">The array containing the strings which will be evaluated.</param>
+        /// <param name="match">The string to match.</param>
+        public static int[] FindOccurrences(this IEnumerable<string> strings, string match)
+        {
+            if (strings == null)
+                return Array.Empty<int>();
+
+            var occurrences = new List<int>();
+            
+            int i = 0;
+            foreach (var s in strings)
+            {
+                if (s == match)
+                    occurrences.Add(i);
+                i++;
+            }
+
+            return occurrences.ToArray();
+        }
+        /// <summary>Replaces the characters of an array of strings and returns the new array.</summary>
+        /// <param name="a">The array containing the strings which will be replaced.</param>
+        /// <param name="oldChar">The old character.</param>
+        /// <param name="newChar">The new character.</param>
+        public static string[] Replace(this IEnumerable<string> strings, char oldChar, char newChar)
+        {
+            var result = new string[strings.Count()];
+            int i = 0;
+            foreach (var s in strings)
+            {
+                result[i] = s.Replace(oldChar, newChar);
+                i++;
+            }
+            return result;
+        }
+        /// <summary>Replaces the strings of an array of strings and returns the new array.</summary>
+        /// <param name="a">The array containing the strings which will be replaced.</param>
+        /// <param name="oldString">The old string.</param>
+        /// <param name="newString">The new string.</param>
+        public static string[] Replace(this IEnumerable<string> strings, string oldString, string newString)
+        {
+            var result = new string[strings.Count()];
+            int i = 0;
+            foreach (var s in strings)
+            {
+                result[i] = s.Replace(oldString, newString);
+                i++;
+            }
+            return result;
+        }
+        /// <summary>Replaces whole words of the strings of an array of strings and returns the new array.</summary>
+        /// <param name="a">The array containing the strings which will be replaced.</param>
+        /// <param name="oldString">The old string.</param>
+        /// <param name="newString">The new string.</param>
+        public static string[] ReplaceWholeWord(this IEnumerable<string> strings, string oldString, string newString)
+        {
+            var result = new string[strings.Count()];
+            int i = 0;
+            foreach (var s in strings)
+            {
+                result[i] = s.ReplaceWholeWord(oldString, newString);
+                i++;
+            }
+            return result;
+        }
+        /// <summary>Determines whether there is at least one occurrence of a string in a string of the string array.</summary>
+        /// <param name="strings">The array of strings.</param>
+        /// <param name="match">The string to match.</param>
+        public static bool ContainsSubstringAtLeastOnce(this IEnumerable<string> strings, string match)
+        {
+            if (strings == null)
+                return false;
+            foreach (var s in strings)
+                if (s.Contains(match))
+                    return true;
+            return false;
+        }
+        /// <summary>Determines whether there is at least one occurrence of a string as a whole word in a string of the string array.</summary>
+        /// <param name="strings">The array of strings.</param>
+        /// <param name="match">The string to match.</param>
+        public static bool ContainsWholeWordSubstringAtLeastOnce(this IEnumerable<string> strings, string match)
+        {
+            if (strings == null)
+                return false;
+            foreach (var s in strings)
+                if (s.ContainsWholeWord(match))
+                    return true;
+            return false;
+        }
+        /// <summary>Removes the empty elements of a string list and returns the new list.</summary>
+        /// <param name="strings">The list of strings.</param>
+        public static IEnumerable<string> RemoveEmptyElements(this IEnumerable<string> strings)
+        {
+            var result = new List<string>();
+            foreach (var s in strings)
+                if (s.Any())
+                    result.Add(s);
+            return result;
+        }
+        /// <summary>Combines the strings of a string array and returns the new string.</summary>
+        /// <param name="strings">The array of strings.</param>
+        public static string CombineWords(this IEnumerable<string> strings) => strings.Combine(" ");
+        /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
+        /// <param name="strings">The array of strings.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static string Combine(this IEnumerable<string> strings, char separator)
+        {
+            if (!strings?.Any() ?? true)
+                return "";
+
+            int capacity = 0;
+            foreach (var s in strings)
+                capacity += s.Length + 1;
+
+            var result = new StringBuilder(capacity);
+            foreach (var s in strings)
+                result.Append(s).Append(separator);
+            return result.Remove(result.Length - 1, 1).ToString();
+        }
+        /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
+        /// <param name="strings">The array of strings.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static string Combine(this IEnumerable<string> strings, string separator)
+        {
+            if (!strings?.Any() ?? true)
+                return "";
+
+            int capacity = 0;
+            foreach (var s in strings)
+                capacity += s.Length + separator.Length;
+
+            var result = new StringBuilder(capacity);
+            foreach (var s in strings)
+                result.Append(s).Append(separator);
+            return result.Remove(result.Length - separator.Length, separator.Length).ToString();
+        }
+        /// <summary>Combines the strings of a string collection and returns the new string.</summary>
+        /// <param name="strings">The array of strings.</param>
+        public static string Combine(this IEnumerable<string> strings)
+        {
+            if (!strings?.Any() ?? true)
+                return "";
+
+            var result = new StringBuilder();
+            foreach (var s in strings)
+                result.Append(s);
+            return result.ToString();
+        }
+        /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
+        /// <param name="s">The array of strings.</param>
+        /// <param name="predicate">The predicate which determines which strings will be combined.</param>
+        /// <param name="separator">The separator of the strings.</param>
+        public static string Combine(this IEnumerable<string> s, Func<string, bool> predicate, string separator)
+        {
+            return s.Where(predicate).Combine(separator);
+        }
         /// <summary>Aggregates the provided items with the provided aggregator function if the items' count is greater than 0, otherwise returns an empty string.</summary>
         /// <param name="strings">The strings to aggregate.</param>
         /// <param name="aggregator">The aggregator function to use when aggregating the strings.</param>
@@ -522,6 +576,10 @@ namespace Garyon.Extensions
         #endregion
 
         #region Aggregators
+        /// <summary>Aggregates two strings and splits them by a space.</summary>
+        /// <param name="a">The first string to aggregate.</param>
+        /// <param name="b">The second string to aggregate.</param>
+        /// <returns>The aggregated string.</returns>
         public static string WordAggregator(string a, string b) => $"{a} {b}";
         #endregion
     }
