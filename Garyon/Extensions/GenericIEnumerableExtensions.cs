@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Garyon.Extensions
@@ -16,6 +17,29 @@ namespace Garyon.Extensions
             for (int i = 0; i < others.Length; i++)
                 concated = concated.Concat(others[i]);
             return concated;
+        }
+        /// <summary>Gets the count of elements that satisfy a condition.</summary>
+        /// <typeparam name="T">The type of the elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
+        /// <param name="enumerable">The <seealso cref="IEnumerable{T}"/> whose elements to iterate.</param>
+        /// <param name="predicate">The condition that the elements must meet.</param>
+        /// <returns>The total number of elements that satisfy the provided condition.</returns>
+        public static int WhereCount<T>(this IEnumerable<T> enumerable, Predicate<T> predicate)
+        {
+            int count = 0;
+            foreach (var e in enumerable)
+                if (predicate(e))
+                    count++;
+            return count;
+        }
+        /// <summary>Gets the count of elements that are not <see langword="null"/>.</summary>
+        /// <typeparam name="T">The type of the elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
+        /// <param name="enumerable">The <seealso cref="IEnumerable{T}"/> whose elements to iterate.</param>
+        /// <returns>The total number of elements that are not <see langword="null"/>.</returns>
+        public static int NotNullCount<T>(this IEnumerable<T> enumerable)
+        {
+            return WhereCount(enumerable, NotNullPredicate);
+
+            static bool NotNullPredicate(T element) => element != null;
         }
     }
 }

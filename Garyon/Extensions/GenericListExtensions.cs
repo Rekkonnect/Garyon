@@ -107,15 +107,21 @@ namespace Garyon.Extensions
         /// <param name="containedList">The list other list to check.</param>
         public static bool ContainsOrdered<T>(this List<T> list, List<T> containedList)
         {
-            for (int i = 0; i < list.Count - containedList.Count; i++)
+            int originalIndex = 0;
+
+            for (int i = 0; i < containedList.Count; i++)
             {
-                bool found = true;
-                for (int j = 0; j < containedList.Count && found; j++)
-                    found = list[i + j].Equals(containedList[j]);
-                if (found)
-                    return true;
+                while (originalIndex < list.Count - i)
+                {
+                    if (list[originalIndex].Equals(containedList[i]))
+                        break;
+                    originalIndex++;
+                }
+
+                originalIndex++;
             }
-            return false;
+
+            return true;
         }
         /// <summary>Determines whether the list contains all the elements of an other list in any order.</summary>
         /// <typeparam name="T">The type of the list elements.</typeparam>
