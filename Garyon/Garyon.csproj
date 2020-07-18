@@ -6,8 +6,4 @@
     <Nullable>annotations</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="DataStructures\" />
-  </ItemGroup>
-
 </Project>
