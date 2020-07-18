@@ -162,7 +162,7 @@ namespace Garyon.Extensions
         public static int GetLastNumber(this string s)
         {
             int i = s.Length;
-            while (i > 0 && s[i - 1].IsNumber())
+            while (i > 0 && s[i - 1].IsDigit())
                 i--;
             if (i < s.Length)
                 return int.Parse(s.Substring(i));
@@ -173,7 +173,7 @@ namespace Garyon.Extensions
         public static string RemoveLastNumber(this string s)
         {
             int i = s.Length;
-            while (i > 0 && s[i - 1].IsNumber())
+            while (i > 0 && s[i - 1].IsDigit())
                 i--;
             return s.Substring(0, i);
         }
@@ -190,7 +190,7 @@ namespace Garyon.Extensions
             while (continueChecking)
             {
                 char c = s[s.Length - lastNumber - 1];
-                if (continueChecking = c.IsNumber())
+                if (continueChecking = c.IsDigit())
                     lastNumber++;
                 else if (continueChecking = !c.IsBase64Character())
                     lastInvalidCharacter = ++lastNumber;
@@ -295,8 +295,8 @@ namespace Garyon.Extensions
         {
             for (int i = originalString.Length - oldString.Length; i >= 0; i--)
                 if (originalString.Substring(i, oldString.Length) == oldString)
-                    if (i == 0 || !originalString[i - 1].IsLetterOrNumber())
-                        if (i >= originalString.Length - oldString.Length || !originalString[i + oldString.Length].IsLetterOrNumber())
+                    if (i == 0 || !originalString[i - 1].IsLetterOrDigit())
+                        if (i >= originalString.Length - oldString.Length || !originalString[i + oldString.Length].IsLetterOrDigit())
                         {
                             originalString = originalString.Replace(newString, i, oldString.Length);
                             i -= oldString.Length;
@@ -328,7 +328,7 @@ namespace Garyon.Extensions
         {
             for (int i = s.Length - match.Length; i >= 0; i--)
                 if (s.Substring(i, match.Length) == match)
-                    if ((i == 0 || (!s[i - 1].IsLetterOrNumber())) && (i >= s.Length - match.Length || (!s[i + match.Length].IsLetterOrNumber())))
+                    if ((i == 0 || (!s[i - 1].IsLetterOrDigit())) && (i >= s.Length - match.Length || (!s[i + match.Length].IsLetterOrDigit())))
                         return true;
             return false;
         }
