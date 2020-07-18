@@ -65,6 +65,9 @@ namespace Garyon.DataStructures
         bool ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue> item) => (dictionary as IDictionary<TKey, TValue>).Remove(item);
         #endregion
 
+        /// <summary>Gets or sets the value of the specified key. If the key does not exist, it will be added to the dictionary.</summary>
+        /// <param name="key">The key whose value to get or set.</param>
+        /// <returns>The value of the key. When getting a non-existent key, it will have <typeparamref name="TValue"/>'s <see langword="default"/> value.</returns>
         public virtual TValue this[TKey key]
         {
             get
