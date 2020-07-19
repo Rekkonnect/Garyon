@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Functions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
@@ -24,7 +25,7 @@ namespace Garyon.Reflection
             where TEnum : struct, Enum
             where TAttribute : Attribute
         {
-            return GetEnumFieldDictionary<TEnum, TAttribute, TAttribute>(d => d);
+            return GetEnumFieldDictionary<TEnum, TAttribute, TAttribute>(Selectors.SelfObjectReturner);
         }
         /// <summary>Constructs a <seealso cref="Dictionary{TKey, TValue}"/> mapping the provided enum's fields to a value provided from a sought attribute.</summary>
         /// <typeparam name="TEnum">The type of the enum whose fields to construct the dictionary of.</typeparam>

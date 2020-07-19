@@ -4,8 +4,8 @@ using static System.IO.File;
 
 namespace Garyon.Functions
 {
-    /// <summary>Provides generally useful functions.</summary>
-    public static class UsefulFunctions
+    /// <summary>Provides functions related to reading or writing files.</summary>
+    public static class FileHandling
     {
         /// <summary>Writes all lines without the final newline at the end of the file.</summary>
         /// <param name="path">The path of the file to write the lines to.</param>

@@ -18,10 +18,21 @@ namespace Garyon.RegularExpressions
         /// <returns>The constructed <seealso cref="Regex"/> that matches the specified character.</returns>
         public static Regex CharacterPattern(char c) => new Regex(c.ToString());
 
-        // TODO: Documentation
+        /// <summary>Gets the consecutive character pattern part "{<paramref name="min"/>,<paramref name="max"/>}".</summary>
+        /// <param name="min">The minimum number of occurrences that the pattern will match.</param>
+        /// <param name="max">The maximum number of occurrences that the pattern will match.</param>
+        /// <returns>The pattern part that indicates matching consecutive characters.</returns>
         public static Regex ConsecutivePatternPart(int min, int max) => new Regex($"{{{min},{max}}}");
+        /// <summary>Gets the consecutive character pattern part "{<paramref name="occurrences"/>}".</summary>
+        /// <param name="occurrences">The exact number of occurrences that the pattern will match.</param>
+        /// <returns>The pattern part that indicates matching consecutive characters.</returns>
         public static Regex ExactConsecutivePatternPart(int occurrences) => new Regex($"{{{occurrences}}}");
+        /// <summary>Gets the consecutive character pattern part "{<paramref name="min"/>,}".</summary>
+        /// <param name="min">The minimum number of occurrences that the pattern will match.</param>
         public static Regex AtLeastConsecutivePatternPart(int min) => new Regex($"{{{min},}}");
+        /// <summary>Gets the consecutive character pattern part "{,<paramref name="max"/>}".</summary>
+        /// <param name="max">The maximum number of occurrences that the pattern will match.</param>
+        /// <returns>The pattern part that indicates matching consecutive characters.</returns>
         public static Regex AtMostConsecutivePatternPart(int max) => new Regex($"{{,{max}}}");
 
         // TODO: Add more pattern constructors

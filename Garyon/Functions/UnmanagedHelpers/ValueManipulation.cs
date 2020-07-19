@@ -1,9 +1,6 @@
 ﻿using Garyon.Exceptions;
-using Garyon.Functions.IntrinsicsHelpers;
 using Garyon.Functions.PointerHelpers;
 using System;
-using System.Numerics;
-using System.Reflection.Metadata;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 

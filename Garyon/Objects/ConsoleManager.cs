@@ -26,11 +26,25 @@ namespace Garyon.Objects
             set => (OutputColorSet, InputColorSet) = (value, value);
         }
 
-        // TODO: Clean constructors
+        /// <summary>Initializes a new instance of the <seealso cref="ConsoleManager"/> class with <seealso cref="ConsoleColorSet.Default"/> being used for both input and output.</summary>
         public ConsoleManager() : this(ConsoleColorSet.Default) { }
+
+        /// <summary>Initializes a new instance of the <seealso cref="ConsoleManager"/> class with <seealso cref="ConsoleColorSet.Default"/> being used for input and a custom set for output.</summary>
+        /// <param name="outputForeground">The <seealso cref="ConsoleColor"/> that will be used for the foreground color during output.</param>
+        /// <param name="outputBackground">The <seealso cref="ConsoleColor"/> that will be used for the background color during output.</param>
+        /// <param name="resetColorAfterOperation">Determines whether the console color will be reset after each operation.</param>
         public ConsoleManager(ConsoleColor outputForeground, ConsoleColor outputBackground = ConsoleColor.Black, bool resetColorAfterOperation = false)
             : this(new ConsoleColorSet(outputForeground, outputBackground), resetColorAfterOperation) { }
-        public ConsoleManager(ConsoleColorSet outputColorSet, bool resetColorAfterOperation = false) => (OutputColorSet, ResetColorAfterOperation) = (outputColorSet, resetColorAfterOperation);
+
+        /// <summary>Initializes a new instance of the <seealso cref="ConsoleManager"/> class with <seealso cref="ConsoleColorSet.Default"/> being used for input and a <seealso cref="ConsoleColorSet"/> for output.</summary>
+        /// <param name="outputColorSet">The <seealso cref="ConsoleColorSet"/> that will be used for the console color during output.</param>
+        /// <param name="resetColorAfterOperation">Determines whether the console color will be reset after each operation.</param>
+        public ConsoleManager(ConsoleColorSet outputColorSet, bool resetColorAfterOperation = false) : this(outputColorSet, ConsoleColorSet.Default, resetColorAfterOperation) { }
+
+        /// <summary>Initializes a new instance of the <seealso cref="ConsoleManager"/> class with custom <seealso cref="ConsoleColorSet"/>s being used for input and output.</summary>
+        /// <param name="outputColorSet">The <seealso cref="ConsoleColorSet"/> that will be used for the console color during output.</param>
+        /// <param name="inputColorSet">The <seealso cref="ConsoleColorSet"/> that will be used for the console color during input.</param>
+        /// <param name="resetColorAfterOperation">Determines whether the console color will be reset after each operation.</param>
         public ConsoleManager(ConsoleColorSet outputColorSet, ConsoleColorSet inputColorSet, bool resetColorAfterOperation = false)
         {
             OutputColorSet = outputColorSet;

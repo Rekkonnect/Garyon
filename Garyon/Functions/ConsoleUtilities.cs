@@ -4,7 +4,6 @@ using static System.Console;
 
 namespace Garyon.Functions
 {
-    // TODO: Create a ConsoleWriter object utilizing those functions
     /// <summary>Contains utilities for the <seealso cref="Console"/> class.</summary>
     public static class ConsoleUtilities
     {
