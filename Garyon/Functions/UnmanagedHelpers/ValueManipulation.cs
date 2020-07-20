@@ -36,12 +36,18 @@ namespace Garyon.Functions.UnmanagedHelpers
                 if (Avx.IsSupported)
                     return UseVector256(value);
 
-            if (Sse.IsSupported)
-                return UseVector128(value);
+            if (sizeof(T) > sizeof(ulong))
+                if (Sse.IsSupported)
+                    return UseVector128(value);
 
-            ThrowHelper.Throw<PlatformNotSupportedException>("Get a new CPU");
-            return default;
+            return UseVector64(value);
 
+            static T UseVector64(T value)
+            {
+                T result = default;
+                PointerBitwiseOperations.NOTByteArray((byte*)&value, (byte*)&result, (uint)sizeof(T));
+                return result;
+            }
             static T UseVector128(T value)
             {
                 T result = default;
