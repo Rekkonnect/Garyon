@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Garyon.Exceptions
@@ -44,7 +45,7 @@ namespace Garyon.Exceptions
         public static void ThrowAggregate<T>(string message, params Exception[] innerExceptions)
             where T : AggregateException
         {
-            Throw<T, IEnumerable<Exception>>(message, innerExceptions);
+            ThrowAggregate<T>(message, innerExceptions, innerExceptions);
         }
         /// <summary>Throws a new aggregate exception of the type <typeparamref name="T"/>.</summary>
         /// <typeparam name="T">The exception type to throw.</typeparam>
@@ -54,15 +55,33 @@ namespace Garyon.Exceptions
         public static void ThrowAggregate<T>(string message, IEnumerable<Exception> innerExceptions)
             where T : AggregateException
         {
-            Throw<T, IEnumerable<Exception>>(message, innerExceptions);
+            ThrowAggregate<T>(message, innerExceptions, null);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void ThrowAggregate<T>(string message, IEnumerable<Exception> enumerableInner, Exception[]? arrayInner)
+            where T : AggregateException
+        {
+            var resulting = GetThrowableException<T, IEnumerable<Exception>>(message, enumerableInner);
+            if (resulting == null)
+                resulting = GetThrowableException<T, Exception[]>(message, arrayInner ?? enumerableInner.ToArray());
+            if (resulting == null)
+                Throw<MissingMethodException>("The provided AggregateException type does not provide a constructor with an 'IEnumerable<Exception>' or an 'Exception[]' as the second argument.");
+            throw resulting;
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void Throw<TException, TInner>(string message, TInner inner)
             where TException : Exception
         {
+            throw GetThrowableException<TException, TInner>(message, inner);
+        }
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static TException? GetThrowableException<TException, TInner>(string message, TInner inner)
+            where TException : Exception
+        {
             var constructor = typeof(TException).GetConstructor(new Type[] { typeof(string), typeof(TInner) });
-            throw constructor.Invoke(new object[] { message, inner }) as TException;
+            return constructor?.Invoke(new object[] { message, inner }) as TException;
         }
         #endregion
 
