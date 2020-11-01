@@ -1,10 +1,23 @@
-﻿using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Net.Sockets;
+using System.Text;
 
 namespace Garyon.Extensions
 {
     /// <summary>Provides extension methods for the <seealso cref="StringBuilder"/> class.</summary>
     public static class StringBuilderExtensions
     {
+        /// <summary>Copies this <seealso cref="StringBuilder"/> into a new instance.</summary>
+        /// <param name="s">The <seealso cref="StringBuilder"/> to copy.</param>
+        /// <returns>The new copied <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder Copy(this StringBuilder s)
+        {
+            var result = new StringBuilder(s.Length);
+            foreach (var c in s.GetChunks())
+                result.Append(c);
+            return result;
+        }
+
         /// <summary>Removes a range of characters from the specified starting index to the end of the string.</summary>
         /// <param name="s">The <seealso cref="StringBuilder"/> whose range of characters to remove.</param>
         /// <param name="startingIndex">The starting index from which to remove all characters.</param>
@@ -53,9 +66,32 @@ namespace Garyon.Extensions
         /// <param name="length">The number of characters of the substring.</param>
         public static StringBuilder SubstringBuilder(this StringBuilder s, int startingIndex, int length)
         {
-            var result = new StringBuilder(length);
-            for (int i = 0; i < length; i++)
-                result[i] = s[i + startingIndex];
+            var result = new StringBuilder(s.Length);
+            int currentIndex = 0;
+            int remaining = length;
+            foreach (var c in s.GetChunks())
+            {
+                int chunkStart = startingIndex - currentIndex;
+
+                if (chunkStart < 0)
+                    return result;
+
+                if (chunkStart < c.Length)
+                {
+                    int chunkEnd = chunkStart + remaining;
+                    if (chunkEnd > c.Length)
+                        chunkEnd = c.Length;
+                    int chunkLength = chunkEnd - chunkStart;
+
+                    result.Append(c.Slice(chunkStart, chunkLength));
+                    remaining -= chunkLength;
+
+                    if (remaining <= 0)
+                        return result;
+                }
+
+                currentIndex += c.Length;
+            }
             return result;
         }
         /// <summary>Returns a substring of this string with the specified number of characters from its start.</summary>
@@ -74,5 +110,28 @@ namespace Garyon.Extensions
         /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
         /// <param name="length">The number of characters of the substring.</param>
         public static StringBuilder SubstringLastBuilder(this StringBuilder s, int length) => s.SubstringBuilder(s.Length - length, length);
+
+        /// <summary>Removes the all leading whitespace characters from the current <see cref="StringBuilder"/>.</summary>
+        /// <param name="s">The <see cref="StringBuilder"/> from which to remove all leading whitespace characters.</param>
+        /// <returns>The original <see cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder TrimStart(this StringBuilder s)
+        {
+            int index = 0;
+            int length = s.Length;
+            while (index < length && s[index].IsWhiteSpace())
+                index++;
+            return s.Remove(0, index);
+        }
+        /// <summary>Removes the all leading whitespace characters from the current <see cref="StringBuilder"/>.</summary>
+        /// <param name="s">The <see cref="StringBuilder"/> from which to remove all leading whitespace characters.</param>
+        /// <returns>The original <see cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder TrimEnd(this StringBuilder s)
+        {
+            int toRemove = 0;
+            int length = s.Length;
+            while (toRemove < length && s[^(toRemove + 1)].IsWhiteSpace())
+                toRemove++;
+            return s.RemoveLast(toRemove);
+        }
     }
 }

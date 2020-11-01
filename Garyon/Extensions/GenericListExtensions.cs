@@ -24,6 +24,28 @@ namespace Garyon.Extensions
         #endregion
 
         #region Operations
+        /// <summary>Removes a collection of elements from a list and returns a new list that does not contain the removed elements.</summary>
+        /// <typeparam name="T">The type of the elements that are stored in the list.</typeparam>
+        /// <param name="l">The list whose elements to remove.</param>
+        /// <param name="elements">The elements to remove.</param>
+        /// <returns>A new copy of the list that does not contain the removed elements.</returns>
+        public static List<T> RemoveRange<T>(this List<T> l, IEnumerable<T> elements)
+        {
+            return l.RemoveRange(elements, out _);
+        }
+        /// <summary>Removes a collection of elements from a list and returns a new list that does not contain the removed elements.</summary>
+        /// <typeparam name="T">The type of the elements that are stored in the list.</typeparam>
+        /// <param name="l">The list whose elements to remove.</param>
+        /// <param name="elements">The elements to remove.</param>
+        /// <param name="removedElements">The number of elements that were removed from the list.</param>
+        /// <returns>A new copy of the list that does not contain the removed elements.</returns>
+        public static List<T> RemoveRange<T>(this List<T> l, IEnumerable<T> elements, out int removedElements)
+        {
+            var result = new List<T>(l);
+            removedElements = result.RemoveAll(e => elements.Contains(e));
+            return result;
+        }
+
         /// <summary>Inserts an element at the start of the <seealso cref="List{T}"/>.</summary>
         /// <typeparam name="T">The type of the elements contained in the <seealso cref="List{T}"/>.</typeparam>
         /// <param name="l">The <seealso cref="List{T}"/> at whose start to insert the element.</param>

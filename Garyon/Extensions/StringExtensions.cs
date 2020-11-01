@@ -157,8 +157,8 @@ namespace Garyon.Extensions
 
         #region Number-Related
         /// <summary>Converts the number found in the end of the string into an <seealso cref="int"/>.</summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
+        /// <param name="s">The string on which the last decimal number to detect.</param>
+        /// <returns>The last detected decimal number.</returns>
         public static int GetLastNumber(this string s)
         {
             int i = s.Length;
@@ -175,6 +175,22 @@ namespace Garyon.Extensions
             int i = s.Length;
             while (i > 0 && s[i - 1].IsDigit())
                 i--;
+            return s.Substring(0, i);
+        }
+        /// <summary>Removes the number found in the end of the string.</summary>
+        /// <param name="s">The string whose number in the end to remove.</param>
+        /// <param name="removedNumber">The number that was removed from the string.</param>
+        public static string RemoveLastNumber(this string s, out int removedNumber)
+        {
+            int i = s.Length;
+            while (i > 0 && s[i - 1].IsDigit())
+                i--;
+
+            if (i < s.Length)
+                removedNumber = int.Parse(s.Substring(i));
+            else
+                removedNumber = 0;
+
             return s.Substring(0, i);
         }
         #endregion
@@ -201,50 +217,15 @@ namespace Garyon.Extensions
         #endregion
 
         #region Manipulation
-        /// <summary>Determines whether the specified string matches search criteria with another.</summary>
-        /// <param name="s">The searching string.</param>
-        /// <param name="target">The target string to search for.</param>
-        public static bool MatchesSearchCriteria(this string s, string target)
-        {
-            // TODO: No bad algorithm?
-            if (s.Length == 0)
-                return true;
-            var splitA = s.ToLower().Split(' ');
-            var splitB = target.ToLower().Split(' ');
-            int difference = splitB.Length - splitA.Length;
-            bool valid = true;
-            if (difference >= 0)
-            {
-                Dictionary<char, int> a, b;
-                int end = splitB.Length - difference;
-                for (int i = 0; i < end && valid; i++)
-                {
-                    string wordA = splitA[i];
-                    string wordB = splitB[i];
-                    a = wordA.GetCharacterOccurences();
-                    b = wordB.GetCharacterOccurences();
-                    if (valid = a.Count > b.Count)
-                        continue;
-                    int count = 0;
-                    foreach (var kvp in a)
-                    {
-                        b.TryGetValue(kvp.Key, out int value);
-                        if (!(valid = kvp.Value <= value))
-                            break;
-                        count++;
-                    }
-                    double ratio = (double)b.Count / count;
-                    int d = b.Count - a.Count;
-                    // TODO: Tweak?
-                    if (valid && (count == a.Count || (1 <= ratio && ratio < 1.75 && d < 5)))
-                        return true;
-                }
-                if (valid)
-                    return true;
-            }
-            //return false;
-            return target.RemoveCharacterRepetitions() == s.RemoveCharacterRepetitions();
-        }
+        /// <summary>Removes one character from the end of the string.</summary>
+        /// <param name="s">The string whose last character to remove.</param>
+        /// <returns>The string without the removed last character.</returns>
+        public static string RemoveLast(this string s) => s.RemoveLast(1);
+        /// <summary>Removes a number of characters from the end of the string.</summary>
+        /// <param name="s">The string whose last characters to remove.</param>
+        /// <param name="characters">The number of characters to remove.</param>
+        /// <returns>The string without the removed last characters.</returns>
+        public static string RemoveLast(this string s, int characters) => s.Remove(s.Length - characters);
         /// <summary>Returns a string that removes repetitions of the same character. Example: <code>RemoveCharacterRepetitions("aabcc") = "abc"</code>.</summary>
         /// <param name="s">The string to remove the character repetitions from.</param>
         public static string RemoveCharacterRepetitions(this string s)
