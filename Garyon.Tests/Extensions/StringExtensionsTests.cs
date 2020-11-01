@@ -3,7 +3,8 @@ using NUnit.Framework;
 
 namespace Garyon.Tests.Extensions
 {
-    public class StringExtensions
+    [Parallelizable(ParallelScope.Children)]
+    public class StringExtensionsTests
     {
         [Test]
         public void GetPascalCaseWords()
