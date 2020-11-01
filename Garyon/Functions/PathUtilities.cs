@@ -7,8 +7,8 @@ using static System.String;
 
 namespace Garyon.Functions
 {
-    /// <summary>This limited edition expansion pack provides more useful functions for path handling.</summary>
-    public static class PathExpansionPack
+    /// <summary>Provides useful functions for path handling.</summary>
+    public static class PathUtilities
     {
         /// <summary>Normalizes the path by making the directory separators consistent depending on the platform and returns the replaced string.</summary>
         /// <param name="path">The path to normalize.</param>
