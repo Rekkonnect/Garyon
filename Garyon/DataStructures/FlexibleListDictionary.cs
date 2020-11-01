@@ -8,13 +8,20 @@ namespace Garyon.DataStructures
     public class FlexibleListDictionary<TKey, TObject> : FlexibleDictionary<TKey, List<TObject>>
     {
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleListDictionary{TKey, TObject}"/> class with the default initial capacity (16).</summary>
-        public FlexibleListDictionary() : base() { }
+        public FlexibleListDictionary()
+            : base() { }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleListDictionary{TKey, TObject}"/> class.</summary>
         /// <param name="capacity">The capacity of the dictionary.</param>
-        public FlexibleListDictionary(int capacity) : base(capacity) { }
+        public FlexibleListDictionary(int capacity)
+            : base(capacity) { }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleListDictionary{TKey, TObject}"/> class.</summary>
         /// <param name="collection">The collection to initialize the dictionary from. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TValue"/> type.</param>
-        public FlexibleListDictionary(IEnumerable<TKey> collection) : base(collection) { }
+        public FlexibleListDictionary(IEnumerable<TKey> collection)
+            : base()
+        {
+            foreach (var k in collection)
+                Add(k, new List<TObject>());
+        }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleListDictionary{TKey, TObject}"/> class out of another <seealso cref="FlexibleListDictionary{TKey, TObject}"/> instance.</summary>
         /// <param name="other">The other <seealso cref="FlexibleListDictionary{TKey, TObject}"/> whose key-value pairs to copy.</param>
         public FlexibleListDictionary(FlexibleListDictionary<TKey, TObject> other)
@@ -42,7 +49,7 @@ namespace Garyon.DataStructures
         public bool TryGetValue(TKey key, int index, out TObject value)
         {
             value = default;
-            if (TryGetValue(key, out var list))
+            if (!TryGetValue(key, out var list))
                 return false;
             if (index >= list.Count)
                 return false;
@@ -50,21 +57,6 @@ namespace Garyon.DataStructures
             return true;
         }
 
-        public override List<TObject> this[TKey key]
-        {
-            get
-            {
-                if (!ContainsKey(key))
-                    base.Add(key, new List<TObject>());
-                return base[key];
-            }
-            set
-            {
-                if (!ContainsKey(key))
-                    base.Add(key, value);
-                else
-                    base[key] = value;
-            }
-        }
+        protected override List<TObject> GetNewEntryInitializationValue() => new List<TObject>();
     }
 }

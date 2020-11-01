@@ -7,16 +7,29 @@ namespace Garyon.DataStructures
     public class ValueCounterDictionary<TKey> : FlexibleDictionary<TKey, int>
     {
         /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class with the default initial capacity (16).</summary>
-        public ValueCounterDictionary() : base() { }
+        public ValueCounterDictionary()
+            : base() { }
         /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class.</summary>
         /// <param name="capacity">The capacity of the dictionary.</param>
-        public ValueCounterDictionary(int capacity) : base(capacity) { }
+        public ValueCounterDictionary(int capacity)
+            : base(capacity) { }
+        /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class. Each item in the provided collection is added as a key and is mapped to the value of 1.</summary>
+        /// <param name="collection">The collection to initialize the dictionary from.</param>
+        public ValueCounterDictionary(IEnumerable<TKey> collection)
+            : base(collection, 1) { }
+        /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class. Each item in the provided collection is added as a key and is mapped to the specified value.</summary>
+        /// <param name="collection">The collection to initialize the dictionary from.</param>
+        /// <param name="initialValue">The initial value to map each key to.</param>
+        public ValueCounterDictionary(IEnumerable<TKey> collection, int initialValue)
+            : base(collection, initialValue) { }
         /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class.</summary>
-        /// <param name="collection">The collection to initialize the dictionary from. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TValue"/> type.</param>
-        public ValueCounterDictionary(IEnumerable<TKey> collection) : base(collection) { }
+        /// <param name="kvps">The collection of <seealso cref="KeyValuePair{TKey, int}"/> objects to initialize the dictionary from.</param>
+        public ValueCounterDictionary(IEnumerable<KeyValuePair<TKey, int>> kvps)
+            : base(kvps) { }
         /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class out of another <seealso cref="ValueCounterDictionary{TKey}"/> instance.</summary>
         /// <param name="other">The other <seealso cref="ValueCounterDictionary{TKey}"/> whose key-value pairs to copy.</param>
-        public ValueCounterDictionary(ValueCounterDictionary<TKey> other) : base(other) { }
+        public ValueCounterDictionary(ValueCounterDictionary<TKey> other)
+            : base(other) { }
 
         /// <summary>Adds a value to a key's counter.</summary>
         /// <param name="key">The key whose counter to add a value to.</param>
@@ -26,7 +39,7 @@ namespace Garyon.DataStructures
         /// <param name="key">The key whose counter to subtract a value from.</param>
         /// <param name="value">The value to subtract from the key's counter.</param>
         public void Subtract(TKey key, int value = 1) => this[key] -= value;
-        /// <summary>Subtracts a value from the counter of the one key and adds that value on the counter of another key.</summary>
+        /// <summary>Subtracts a value from the counter of one key and adds that value on the counter of another key.</summary>
         /// <param name="from">The key whose counter to subtract the value from.</param>
         /// <param name="to">The key whose counter to add the value to.</param>
         /// <param name="adjustment">The value to adjust the counters by.</param>
@@ -34,12 +47,6 @@ namespace Garyon.DataStructures
         {
             Subtract(from, adjustment);
             Add(to, adjustment);
-        }
-
-        public override int this[TKey key]
-        {
-            get => base[key];
-            set => base[key] = value;
         }
     }
 }

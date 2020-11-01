@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Garyon.DataStructures
 {
@@ -8,62 +9,94 @@ namespace Garyon.DataStructures
     /// <typeparam name="TValue">The type of the values that are being paired with the keys in the dictionary.</typeparam>
     public class FlexibleDictionary<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>, IDictionary<TKey, TValue>
     {
-        private Dictionary<TKey, TValue> dictionary;
+        /// <summary>The internal <seealso cref="Dictionary{TKey, TValue}"/> instance.</summary>
+        protected readonly Dictionary<TKey, TValue> Dictionary;
 
         #region Hidden Interface Properties
         bool ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly => false;
         #endregion
 
-        public int Count => dictionary.Count;
+        public int Count => Dictionary.Count;
 
-        public ICollection<TKey> Keys => dictionary.Keys;
-        public ICollection<TValue> Values => dictionary.Values;
+        public ICollection<TKey> Keys => Dictionary.Keys;
+        public ICollection<TValue> Values => Dictionary.Values;
 
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class with the default initial capacity (16).</summary>
-        public FlexibleDictionary() : this(16) { }
+        public FlexibleDictionary()
+            : this(16) { }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class.</summary>
         /// <param name="capacity">The capacity of the dictionary.</param>
         public FlexibleDictionary(int capacity)
         {
-            dictionary = new Dictionary<TKey, TValue>(capacity);
+            Dictionary = new Dictionary<TKey, TValue>(capacity);
         }
-        /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class.</summary>
-        /// <param name="collection">The collection to initialize the dictionary from. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TValue"/> type.</param>
+        /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TValue"/> type.</summary>
+        /// <param name="collection">The collection to initialize the dictionary from.</param>
         public FlexibleDictionary(IEnumerable<TKey> collection)
-            : this()
+            : this(collection, default) { }
+        /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class. Each item in the provided collection is added as a key and is mapped to the specified value of the <typeparamref name="TValue"/> type.</summary>
+        /// <param name="collection">The collection to initialize the dictionary from.</param>
+        /// <param name="initialValue">The initial value to map each key to.</param>
+        public FlexibleDictionary(IEnumerable<TKey> collection, TValue initialValue)
+            : this(collection.Count())
         {
             foreach (var v in collection)
-                Add(v);
+                Add(v, initialValue);
+        }
+        /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class.</summary>
+        /// <param name="kvps">The collection of <seealso cref="KeyValuePair{TKey, TValue}"/> objects to initialize the dictionary from.</param>
+        public FlexibleDictionary(IEnumerable<KeyValuePair<TKey, TValue>> kvps)
+        {
+            Dictionary = new Dictionary<TKey, TValue>(kvps);
         }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class out of another <seealso cref="FlexibleDictionary{TKey, TValue}"/> instance.</summary>
         /// <param name="other">The other <seealso cref="FlexibleDictionary{TKey, TValue}"/> whose key-value pairs to copy.</param>
         public FlexibleDictionary(FlexibleDictionary<TKey, TValue> other)
-            : this(other.Count)
         {
-            foreach (var kvp in other.dictionary)
-                dictionary.Add(kvp.Key, kvp.Value);
+            Dictionary = new Dictionary<TKey, TValue>(other.Dictionary);
         }
 
-        public virtual void Add(TKey key, TValue value = default) => dictionary.TryAdd(key, value);
-        public virtual void Add(KeyValuePair<TKey, TValue> kvp) => dictionary.Add(kvp.Key, kvp.Value);
-        public virtual bool Remove(TKey key) => dictionary.Remove(key);
-        public void Clear() => dictionary.Clear();
+        public virtual void Add(TKey key, TValue value = default) => Dictionary.TryAdd(key, value);
+        public virtual void Add(KeyValuePair<TKey, TValue> kvp) => Dictionary.Add(kvp.Key, kvp.Value);
+
+        public virtual bool Remove(TKey key) => Dictionary.Remove(key);
+        /// <summary>Removes a collection of keys from this <seealso cref="FlexibleDictionary{TKey, TValue}"/>. Keys that are not present will be simply ignored.</summary>
+        /// <param name="keys">The keys to remove. Must not be <see langword="null"/>.</param>
+        /// <returns>The number of keys that were removed.</returns>
+        public int RemoveKeys(params TKey[] keys) => RemoveKeys((IEnumerable<TKey>)keys);
+        /// <summary>Removes a collection of keys from this <seealso cref="FlexibleDictionary{TKey, TValue}"/>. Keys that are not present will be simply ignored.</summary>
+        /// <param name="keys">The keys to remove. Must not be <see langword="null"/>.</param>
+        /// <returns>The number of keys that were removed.</returns>
+        public int RemoveKeys(IEnumerable<TKey> keys)
+        {
+            int count = 0;
+            foreach (var k in keys)
+                if (Dictionary.Remove(k))
+                    count++;
+            return count;
+        }
+
+        public void Clear() => Dictionary.Clear();
 
         /// <summary>Clones this <seealso cref="FlexibleDictionary{TKey, TValue}"/> and adds all its keys to the resulting instance.</summary>
         /// <returns>The cloned instance containing the same key-value pairs.</returns>
         public virtual FlexibleDictionary<TKey, TValue> Clone() => new FlexibleDictionary<TKey, TValue>(this);
 
-        public bool ContainsKey(TKey key) => dictionary.ContainsKey(key);
-        public bool TryGetValue(TKey key, out TValue value) => dictionary.TryGetValue(key, out value);
+        public bool ContainsKey(TKey key) => Dictionary.ContainsKey(key);
+        public bool TryGetValue(TKey key, out TValue value) => Dictionary.TryGetValue(key, out value);
 
-        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => dictionary.GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => dictionary.GetEnumerator();
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => Dictionary.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => Dictionary.GetEnumerator();
 
         #region Hidden Interface Methods
-        bool ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue> item) => (dictionary as IDictionary<TKey, TValue>).Contains(item);
-        void ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) => (dictionary as IDictionary<TKey, TValue>).CopyTo(array, arrayIndex);
-        bool ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue> item) => (dictionary as IDictionary<TKey, TValue>).Remove(item);
+        bool ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue> item) => (Dictionary as IDictionary<TKey, TValue>).Contains(item);
+        void ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) => (Dictionary as IDictionary<TKey, TValue>).CopyTo(array, arrayIndex);
+        bool ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue> item) => (Dictionary as IDictionary<TKey, TValue>).Remove(item);
         #endregion
+
+        /// <summary>Gets the value that will be stored by default upon creating a new entry through the <see langword="this"/> accessor. This does not affect the <see cref="Add(TKey, TValue)"/> function.</summary>
+        /// <returns>The new value that will be stored in the new entry.</returns>
+        protected virtual TValue GetNewEntryInitializationValue() => default;
 
         /// <summary>Gets or sets the value of the specified key. If the key does not exist, it will be added to the dictionary.</summary>
         /// <param name="key">The key whose value to get or set.</param>
@@ -73,15 +106,15 @@ namespace Garyon.DataStructures
             get
             {
                 if (!ContainsKey(key))
-                    dictionary.Add(key, default);
-                return dictionary[key];
+                    Dictionary.Add(key, GetNewEntryInitializationValue());
+                return Dictionary[key];
             }
             set
             {
                 if (!ContainsKey(key))
-                    dictionary.Add(key, value);
+                    Dictionary.Add(key, value);
                 else
-                    dictionary[key] = value;
+                    Dictionary[key] = value;
             }
         }
     }
