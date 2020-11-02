@@ -41,5 +41,16 @@ namespace Garyon.Extensions
 
             static bool NotNullPredicate(T element) => element != null;
         }
+
+        /// <summary>Determines whether all the elements of a collection are equal to all the respective elements of another collection in any order.</summary>
+        /// <param name="a">The first collection.</param>
+        /// <param name="other">The second collection.</param>
+        /// <returns><see langword="true"/> if all the elements of any of the collections match exactly one unique element in the other collection, otherwise <see langword="false"/>. This is determined by whether both collections are subsets of each other.</returns>
+        public static bool EqualsUnordered<T>(this IEnumerable<T> a, IEnumerable<T> other)
+        {
+            var s = new HashSet<T>(a);
+            var t = new HashSet<T>(other);
+            return s.IsSubsetOf(t) && t.IsSubsetOf(s);
+        }
     }
 }

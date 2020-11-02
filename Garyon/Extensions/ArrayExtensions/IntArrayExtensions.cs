@@ -174,50 +174,5 @@ namespace Garyon.Extensions.ArrayExtensions
                     indices.Add(i);
             return indices.ToArray();
         }
-
-        /// <summary>Determines whether all the elements of the <seealso cref="short"/>[] are equal to all the respective elements <seealso cref="short"/>[] in any order.</summary>
-        /// <param name="a">The first array to check for unordered equality.</param>
-        /// <param name="other">The second array to check for unordered equality.</param>
-        public static bool EqualsUnordered(this short[] a, short[] other)
-        {
-            if (a.Length != other.Length)
-                return false;
-            var cloned = other.CopyArray();
-            bool found = false;
-            for (int i = 0; i < a.Length; i++)
-            {
-                for (int j = i; j < a.Length; j++)
-                    if (found = a[i] == cloned[j])
-                    {
-                        cloned.Swap(i, j);
-                        break;
-                    }
-                if (!found)
-                    return false;
-            }
-            return true;
-        }
-        /// <summary>Determines whether all the elements of the <seealso cref="int"/>[] are equal to all the respective elements <seealso cref="int"/>[] in any order.</summary>
-        /// <param name="a">The first array to check for unordered equality.</param>
-        /// <param name="other">The second array to check for unordered equality.</param>
-        public static bool EqualsUnordered(this int[] a, int[] other)
-        {
-            if (a.Length != other.Length)
-                return false;
-            var cloned = other.CopyArray();
-            bool found = false;
-            for (int i = 0; i < a.Length; i++)
-            {
-                for (int j = i; j < a.Length; j++)
-                    if (found = a[i] == cloned[j])
-                    {
-                        cloned.Swap(i, j);
-                        break;
-                    }
-                if (!found)
-                    return false;
-            }
-            return true;
-        }
     }
 }
