@@ -1,9 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>annotations</Nullable>
+    <PackageTags>common, extensions, utilities, library, reflection, simd, array</PackageTags>
+    <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
+    <Copyright>© 2020, Alex Kalfakakos</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
+    <Authors>Alex Kalfakakos</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Company />
+    <Version>1.0.0-alpha.0</Version>
   </PropertyGroup>
 
 </Project>
