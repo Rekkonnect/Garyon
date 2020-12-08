@@ -11,32 +11,32 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void ByteToByteArrayUnsafe()
         {
-            PerformManipulation(OriginalByteArray, TargetByteArray);
+            CopyArray(OriginalByteArray, TargetByteArray);
         }
         [Test]
         public unsafe void ByteToInt16ArrayUnsafe()
         {
-            PerformManipulation(OriginalByteArray, TargetInt16Array);
+            CopyArray(OriginalByteArray, TargetInt16Array);
         }
         [Test]
         public unsafe void ByteToInt32ArrayUnsafe()
         {
-            PerformManipulation(OriginalByteArray, TargetInt32Array);
+            CopyArray(OriginalByteArray, TargetInt32Array);
         }
         [Test]
         public unsafe void ByteToInt64ArrayUnsafe()
         {
-            PerformManipulation(OriginalByteArray, TargetInt64Array);
+            CopyArray(OriginalByteArray, TargetInt64Array);
         }
         [Test]
         public unsafe void ByteToSingleArrayUnsafe()
         {
-            PerformManipulation(OriginalByteArray, TargetSingleArray);
+            CopyArray(OriginalByteArray, TargetSingleArray);
         }
         [Test]
         public unsafe void ByteToDoubleArrayUnsafe()
         {
-            PerformManipulation(OriginalByteArray, TargetDoubleArray);
+            CopyArray(OriginalByteArray, TargetDoubleArray);
         }
         #endregion
 
@@ -44,32 +44,32 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int16ToByteArrayUnsafe()
         {
-            PerformManipulation(OriginalInt16Array, TargetByteArray);
+            CopyArray(OriginalInt16Array, TargetByteArray);
         }
         [Test]
         public unsafe void Int16ToInt16ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt16Array, TargetInt16Array);
+            CopyArray(OriginalInt16Array, TargetInt16Array);
         }
         [Test]
         public unsafe void Int16ToInt32ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt16Array, TargetInt32Array);
+            CopyArray(OriginalInt16Array, TargetInt32Array);
         }
         [Test]
         public unsafe void Int16ToInt64ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt16Array, TargetInt64Array);
+            CopyArray(OriginalInt16Array, TargetInt64Array);
         }
         [Test]
         public unsafe void Int16ToSingleArrayUnsafe()
         {
-            PerformManipulation(OriginalInt16Array, TargetSingleArray);
+            CopyArray(OriginalInt16Array, TargetSingleArray);
         }
         [Test]
         public unsafe void Int16ToDoubleArrayUnsafe()
         {
-            PerformManipulation(OriginalInt16Array, TargetDoubleArray);
+            CopyArray(OriginalInt16Array, TargetDoubleArray);
         }
         #endregion
 
@@ -77,32 +77,32 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int32ToByteArrayUnsafe()
         {
-            PerformManipulation(OriginalInt32Array, TargetByteArray);
+            CopyArray(OriginalInt32Array, TargetByteArray);
         }
         [Test]
         public unsafe void Int32ToInt16ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt32Array, TargetInt16Array);
+            CopyArray(OriginalInt32Array, TargetInt16Array);
         }
         [Test]
         public unsafe void Int32ToInt32ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt32Array, TargetInt32Array);
+            CopyArray(OriginalInt32Array, TargetInt32Array);
         }
         [Test]
         public unsafe void Int32ToInt64ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt32Array, TargetInt64Array);
+            CopyArray(OriginalInt32Array, TargetInt64Array);
         }
         [Test]
         public unsafe void Int32ToSingleArrayUnsafe()
         {
-            PerformManipulation(OriginalInt32Array, TargetSingleArray);
+            CopyArray(OriginalInt32Array, TargetSingleArray);
         }
         [Test]
         public unsafe void Int32ToDoubleArrayUnsafe()
         {
-            PerformManipulation(OriginalInt32Array, TargetDoubleArray);
+            CopyArray(OriginalInt32Array, TargetDoubleArray);
         }
         #endregion
 
@@ -110,22 +110,22 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void Int64ToByteArrayUnsafe()
         {
-            PerformManipulation(OriginalInt64Array, TargetByteArray);
+            CopyArray(OriginalInt64Array, TargetByteArray);
         }
         [Test]
         public unsafe void Int64ToInt16ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt64Array, TargetInt16Array);
+            CopyArray(OriginalInt64Array, TargetInt16Array);
         }
         [Test]
         public unsafe void Int64ToInt32ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt64Array, TargetInt32Array);
+            CopyArray(OriginalInt64Array, TargetInt32Array);
         }
         [Test]
         public unsafe void Int64ToInt64ArrayUnsafe()
         {
-            PerformManipulation(OriginalInt64Array, TargetInt64Array);
+            CopyArray(OriginalInt64Array, TargetInt64Array);
         }
         #endregion
 
@@ -133,17 +133,17 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void SingleToInt32ArrayUnsafe()
         {
-            PerformManipulation(OriginalSingleArray, TargetInt32Array);
+            CopyArray(OriginalSingleArray, TargetInt32Array);
         }
         [Test]
         public unsafe void SingleToSingleArrayUnsafe()
         {
-            PerformManipulation(OriginalSingleArray, TargetSingleArray);
+            CopyArray(OriginalSingleArray, TargetSingleArray);
         }
         [Test]
         public unsafe void SingleToDoubleArrayUnsafe()
         {
-            PerformManipulation(OriginalSingleArray, TargetDoubleArray);
+            CopyArray(OriginalSingleArray, TargetDoubleArray);
         }
         #endregion
 
@@ -151,12 +151,12 @@ namespace Garyon.Tests.Extensions
         [Test]
         public unsafe void DoubleToInt32ArrayUnsafe()
         {
-            PerformManipulation(OriginalDoubleArray, TargetInt32Array);
+            CopyArray(OriginalDoubleArray, TargetInt32Array);
         }
         [Test]
         public unsafe void DoubleToDoubleArrayUnsafe()
         {
-            PerformManipulation(OriginalDoubleArray, TargetDoubleArray);
+            CopyArray(OriginalDoubleArray, TargetDoubleArray);
         }
         #endregion
     }

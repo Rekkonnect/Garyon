@@ -78,7 +78,7 @@ namespace Garyon.Functions.PointerHelpers
         // This function only exists to be considered an ArrayBitwiseOperation<T>
         private static bool NOTUInt64Array(ulong* origin, ulong* target, ulong mask, uint length)
         {
-            return NOTUInt64Array(origin, target, default, length);
+            return NOTUInt64Array(origin, target, length);
         }
         #endregion
         #region AND
@@ -544,6 +544,7 @@ namespace Garyon.Functions.PointerHelpers
                 BitwiseOperation.NAND => NAND(origin, target, mask, length),
                 BitwiseOperation.NOR => NOR(origin, target, mask, length),
                 BitwiseOperation.XNOR => XNOR(origin, target, mask, length),
+                _ => false,
             };
         }
 
@@ -558,6 +559,7 @@ namespace Garyon.Functions.PointerHelpers
                 BitwiseOperation.NAND => NANDUInt64Array,
                 BitwiseOperation.NOR => NORUInt64Array,
                 BitwiseOperation.XNOR => XNORUInt64Array,
+                _ => null,
             };
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -622,6 +624,7 @@ namespace Garyon.Functions.PointerHelpers
                 BitwiseOperation.NAND => ~(a & b),
                 BitwiseOperation.NOR => ~(a | b),
                 BitwiseOperation.XNOR => ~(a ^ b),
+                _ => default,
             };
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -1,14 +1,34 @@
-﻿using NUnit.Framework;
+﻿using Garyon.Functions.UnmanagedHelpers;
+using NUnit.Framework;
 using static Garyon.Functions.PointerHelpers.SIMDPointerBitwiseOperations;
 using static Garyon.Tests.Resources.AssertionHelpers;
 
 namespace Garyon.Tests.Extensions.ArrayBitwiseOperations
 {
-    public class ArrayNOT : ArrayBitwiseOperationsHelpersVector128
+    public class ArrayNOTVector128 : ArrayManipulationHelpersTestsBase
     {
+        protected unsafe void NOTArray<TStruct>()
+            where TStruct : unmanaged
+        {
+            PerformManipulationArray<TStruct>(NOTArrayVector128CustomType);
+        }
+        protected unsafe void PerformManipulationArray<TStruct>(ArrayManipulationOperation<TStruct, TStruct> operation)
+            where TStruct : unmanaged
+        {
+            PerformManipulation(new TStruct[ArrayLength], new TStruct[ArrayLength], operation);
+        }
+        protected unsafe void PerformManipulationArray<TStruct>(MaskableArrayManipulationOperation<TStruct> operation)
+            where TStruct : unmanaged
+        {
+            PerformManipulation(new TStruct[ArrayLength], new TStruct[ArrayLength], operation);
+        }
+
+        protected override unsafe object GetExpectedResult<TOrigin, TTarget>(TOrigin* origin, int index) => ValueManipulation.NOT((TTarget)base.GetExpectedResult<TOrigin, TTarget>(origin, index));
+
         [Test]
         public unsafe void NOTByteArray()
         {
+            NOTArray<byte>();
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
                 if (!NOTArrayVector128(o, t, ArrayLength))

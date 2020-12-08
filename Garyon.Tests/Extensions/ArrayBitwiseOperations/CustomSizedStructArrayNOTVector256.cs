@@ -5,46 +5,44 @@ using static Garyon.Functions.PointerHelpers.SIMDPointerBitwiseOperations;
 
 namespace Garyon.Tests.Extensions.ArrayBitwiseOperations
 {
-    public class CustomSizedStructArrayNOT : ArrayBitwiseOperationsHelpersVector128
+    public class CustomSizedStructArrayNOTVector256 : ArrayManipulationHelpersTestsBase
     {
         protected unsafe void NOTCustomStructArray<TStruct>()
             where TStruct : unmanaged, ISizedStruct
         {
-            PerformManipulationCustomStructArray<TStruct>(NOTArrayVector128CustomType);
-        }
-        protected unsafe void PerformManipulationCustomStructArray<TStruct>(ArrayManipulationOperation<TStruct, TStruct> operation)
-            where TStruct : unmanaged, ISizedStruct
-        {
-            PerformManipulation(new TStruct[ArrayLength], new TStruct[ArrayLength], operation);
-        }
-        protected unsafe void PerformManipulationCustomStructArray<TStruct>(MaskableArrayManipulationOperation<TStruct> operation)
-            where TStruct : unmanaged, ISizedStruct
-        {
-            PerformManipulation(new TStruct[ArrayLength], new TStruct[ArrayLength], operation);
+            PerformManipulationArray<TStruct>(NOTArrayVector256CustomType);
         }
 
         protected override unsafe object GetExpectedResult<TOrigin, TTarget>(TOrigin* origin, int index) => ValueManipulation.NOT((TTarget)base.GetExpectedResult<TOrigin, TTarget>(origin, index));
 
+        #region Breaking tests
+        private const string NUnitSmallStructReason = "Custom struct with non-binary size <8 breaks NUnit";
         [Test]
+        [Ignore(NUnitSmallStructReason)]
         public unsafe void NOTStruct3Array()
         {
             NOTCustomStructArray<Struct3>();
         }
         [Test]
+        [Ignore(NUnitSmallStructReason)]
         public unsafe void NOTStruct5Array()
         {
             NOTCustomStructArray<Struct5>();
         }
         [Test]
+        [Ignore(NUnitSmallStructReason)]
         public unsafe void NOTStruct6Array()
         {
             NOTCustomStructArray<Struct6>();
         }
         [Test]
+        [Ignore(NUnitSmallStructReason)]
         public unsafe void NOTStruct7Array()
         {
             NOTCustomStructArray<Struct7>();
         }
+        #endregion
+
         [Test]
         public unsafe void NOTStruct9Array()
         {
