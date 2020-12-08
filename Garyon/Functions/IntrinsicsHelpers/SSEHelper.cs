@@ -154,7 +154,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
 
         #region Create
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 64 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <typeparam name="TReinterpret">The type of the elements that are contained in the <seealso cref="Vector128"/>.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
@@ -169,7 +169,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 64 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
         /// <returns>The <seealso cref="Vector128"/> containing the first 64 bits of the sequence, with the rest being zero.</returns>
@@ -180,7 +180,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return CreateVector128From64<TPointer, TPointer>(origin, index);
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 32 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <typeparam name="TReinterpret">The type of the elements that are contained in the <seealso cref="Vector128"/>.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
@@ -195,7 +195,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 32 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
         /// <returns>The <seealso cref="Vector128"/> containing the first 32 bits of the sequence, with the rest being zero.</returns>
@@ -206,7 +206,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return CreateVector128From32<TPointer, TPointer>(origin, index);
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 16 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <typeparam name="TReinterpret">The type of the elements that are contained in the <seealso cref="Vector128"/>.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
@@ -221,7 +221,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 16 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
         /// <returns>The <seealso cref="Vector128"/> containing the first 16 bits of the sequence, with the rest being zero.</returns>
@@ -232,7 +232,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return CreateVector128From16<TPointer, TPointer>(origin, index);
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 8 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <typeparam name="TReinterpret">The type of the elements that are contained in the <seealso cref="Vector128"/>.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
@@ -247,7 +247,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             return default;
         }
         /// <summary>Creates a new <seealso cref="Vector128"/> out of the first 8 bits of the provided sequence at the specified index.</summary>
-        /// <typeparam name="TPointer">The type of the elements in the provied sequence.</typeparam>
+        /// <typeparam name="TPointer">The type of the elements in the provided sequence.</typeparam>
         /// <param name="origin">The origin sequence.</param>
         /// <param name="index">The index at the origin sequence.</param>
         /// <returns>The <seealso cref="Vector128"/> containing the first 8 bits of the sequence, with the rest being zero.</returns>
