@@ -76,10 +76,10 @@ namespace Garyon.Extensions
         #region OneOrGreater
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
         /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static byte OneOrGreater(this byte a) => a < 1 ? (byte)1 : a;
+        public static byte OneOrGreater(this byte a) => a < 1 ? 1 : a;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
         /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static short OneOrGreater(this short a) => a < 1 ? (short)1 : a;
+        public static short OneOrGreater(this short a) => a < 1 ? 1 : a;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
         /// <param name="d">The value to determine whether it is ≥1.</param>
         public static int OneOrGreater(this int a) => a < 1 ? 1 : a;
@@ -88,10 +88,10 @@ namespace Garyon.Extensions
         public static long OneOrGreater(this long a) => a < 1 ? 1 : a;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
         /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static sbyte OneOrGreater(this sbyte a) => a < 1 ? (sbyte)1 : a;
+        public static sbyte OneOrGreater(this sbyte a) => a < 1 ? 1 : a;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
         /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static ushort OneOrGreater(this ushort a) => a < 1 ? (ushort)1 : a;
+        public static ushort OneOrGreater(this ushort a) => a < 1 ? 1 : a;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
         /// <param name="d">The value to determine whether it is ≥1.</param>
         public static uint OneOrGreater(this uint a) => a < 1 ? 1 : a;
@@ -112,10 +112,10 @@ namespace Garyon.Extensions
         #region ZeroOrGreater
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
         /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static byte ZeroOrGreater(this byte a) => a < 0 ? (byte)0 : a;
+        public static byte ZeroOrGreater(this byte a) => a < 0 ? 0 : a;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
         /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static short ZeroOrGreater(this short a) => a < 0 ? (short)0 : a;
+        public static short ZeroOrGreater(this short a) => a < 0 ? 0 : a;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
         /// <param name="d">The value to determine whether it is ≥0.</param>
         public static int ZeroOrGreater(this int a) => a < 0 ? 0 : a;
@@ -124,10 +124,10 @@ namespace Garyon.Extensions
         public static long ZeroOrGreater(this long a) => a < 0 ? 0 : a;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
         /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static sbyte ZeroOrGreater(this sbyte a) => a < 0 ? (sbyte)0 : a;
+        public static sbyte ZeroOrGreater(this sbyte a) => a < 0 ? 0 : a;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
         /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static ushort ZeroOrGreater(this ushort a) => a < 0 ? (ushort)0 : a;
+        public static ushort ZeroOrGreater(this ushort a) => a < 0 ? 0 : a;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
         /// <param name="d">The value to determine whether it is ≥0.</param>
         public static uint ZeroOrGreater(this uint a) => a < 0 ? 0 : a;
