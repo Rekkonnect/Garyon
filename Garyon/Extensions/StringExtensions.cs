@@ -284,10 +284,10 @@ namespace Garyon.Extensions
                         }
             return originalString;
         }
-        /// <summary>Normalizes the line separators of a string to \n.</summary>
-        /// <param name="s">The string whose line separators to normalize.</param>
-        /// <returns>The string with normalized line separators.</returns>
-        public static string NormalizeLineSeparators(this string s) => s.Replace("\r\n", "\n").Replace('\r', '\n');
+        /// <summary>Normalizes the line endings of a string to \n.</summary>
+        /// <param name="s">The string whose line endings to normalize.</param>
+        /// <returns>The string with normalized line endings.</returns>
+        public static string NormalizeLineEndings(this string s) => s.Replace("\r\n", "\n").Replace('\r', '\n');
         #endregion
 
         #region Checks
@@ -321,6 +321,21 @@ namespace Garyon.Extensions
             if (s.Length != match.Length)
                 return false;
             return s.ToLower() == match.ToLower();
+        }
+        /// <summary>Gets the occurrences of a specific character within the given string.</summary>
+        /// <param name="s">The string.</param>
+        /// <param name="match">The matching character to find in the string.</param>
+        /// <returns>The number of occurrences of the character in the string.</returns>
+        public static int GetCharacterOccurences(this string s, char match)
+        {
+            return s.WhereCount(c => c == match);
+        }
+        /// <summary>Determines whether the string is a valid hex string.</summary>
+        /// <param name="hex">The string.</param>
+        /// <returns><see langword="true"/> if the string is a valid hex string; that is, it only consists of valid hex characters, otherwise <see langword="false"/>.</returns>
+        public static bool IsValidHexString(this string hex)
+        {
+            return !hex.Any(c => !c.IsValidHexCharacter());
         }
         #endregion
 
@@ -366,10 +381,11 @@ namespace Garyon.Extensions
             return words;
         }
         #endregion
+
         /// <summary>Returns the lines of a string.</summary>
         /// <param name="s">The string whose lines to get.</param>
-        /// <param name="normalizeLineSeparators">Determines whether the line separators of the original string will be normalized before the splitting occurs. Helpful to improve performance on an already normalized string to avoid unnecessary line separator replacements from the normalization.</param>
-        public static string[] GetLines(this string s, bool normalizeLineSeparators = true) => (normalizeLineSeparators ? s.NormalizeLineSeparators() : s).Split('\n');
+        /// <param name="normalizeLineEndings">Determines whether the line endings of the original string will be normalized before the splitting occurs. Helpful to improve performance on an already normalized string to avoid unnecessary line ending replacements from the normalization.</param>
+        public static string[] GetLines(this string s, bool normalizeLineEndings = true) => (normalizeLineEndings ? s.NormalizeLineEndings() : s).Split('\n');
         #endregion
 
         #region String[]

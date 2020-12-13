@@ -25,6 +25,17 @@ namespace Garyon.Extensions
         public static int GetNumericValueInteger(this char c) => IsDigit(c) ? c - '0' : -1;
         #endregion
 
+        #region Misc
+        /// <summary>Gets the numerical value of the decimal digit character.</summary>
+        /// <param name="c">The decimal digit character.</param>
+        /// <returns>The numerical value.</returns>
+        public static int GetNumericalValue(this char c) => c - '0';
+        /// <summary>Determines whether the character is a valid hex character.</summary>
+        /// <param name="c">The character.</param>
+        /// <returns><see langword="true"/> if the character is a valid hex character; equivalent to the regular expression [0-9a-fA-F], otherwise <see langword="false"/>.</returns>
+        public static bool IsValidHexCharacter(this char c) => char.IsDigit(c) || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F');
+        #endregion
+
         #region Extension Variants
         /// <inheritdoc cref="char.GetNumericValue(char)"/>
         public static double GetNumericValue(this char c) => char.GetNumericValue(c);
