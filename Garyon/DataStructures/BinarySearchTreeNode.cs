@@ -238,10 +238,11 @@ namespace Garyon.DataStructures
 
                 parent = currentNode;
 
-                if (comparison == ComparisonResult.Less)
-                    currentNode = currentNode.LeftChild;
-                else
-                    currentNode = currentNode.RightChild;
+                currentNode = comparison switch
+                {
+                    ComparisonResult.Less => currentNode.LeftChild,
+                    _ => currentNode.RightChild,
+                };
             }
             while (currentNode != null);
 

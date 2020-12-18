@@ -245,9 +245,29 @@ namespace Garyon.DataStructures
         }
 
         #region Traversal
+        /// <summary>Traverses the subtree with this node as a root using pre-order. The elements are returned with <see langword="yield return"/>.</summary>
+        /// <returns>The yielded values.</returns>
+        public IEnumerable<TValue> TraverseInOrder()
+        {
+            foreach (var n in TraverseInOrderNodes())
+                yield return n.Value;
+        }
+
         // Local static functions not created to avoid abusing recursive yield returns
+        /// <summary>Traverses the subtree with this node as a root using in-order. The nodes are returned with <see langword="yield return"/>.</summary>
+        /// <returns>The yielded nodes.</returns>
+        public IEnumerable<TTreeNode> TraverseInOrderNodes()
+        {
+            if (LeftChild != null)
+                foreach (var e in LeftChild.TraverseInOrderNodes())
+                    yield return e;
+            yield return This;
+            if (RightChild != null)
+                foreach (var e in RightChild.TraverseInOrderNodes())
+                    yield return e;
+        }
         /// <summary>Traverses the subtree with this node as a root using pre-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded nodes.</returns>
+        /// <returns>The yielded nodes.</returns>
         public override IEnumerable<TTreeNode> TraversePreOrderNodes()
         {
             yield return This;
@@ -259,7 +279,7 @@ namespace Garyon.DataStructures
                     yield return e;
         }
         /// <summary>Traverses the subtree with this node as a root using post-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded nodes.</returns>
+        /// <returns>The yielded nodes.</returns>
         public override IEnumerable<TTreeNode> TraversePostOrderNodes()
         {
             if (LeftChild != null)
@@ -271,7 +291,7 @@ namespace Garyon.DataStructures
             yield return This;
         }
         /// <summary>Traverses the subtree with this node as a root using level-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded nodes.</returns>
+        /// <returns>The yielded nodes.</returns>
         public override IEnumerable<TTreeNode> TraverseLevelOrderNodes()
         {
             yield return This;
@@ -339,6 +359,5 @@ namespace Garyon.DataStructures
         {
             RemoveChildren((IEnumerable<TValue>)values);
         }
-
     }
 }

@@ -59,6 +59,9 @@ namespace Garyon.DataStructures
         protected BinarySearchTree(TTree tree)
             : base(tree) { }
 
+        /// <summary>Attempts to find a node with the specified value within this tree.</summary>
+        /// <param name="value">The value of the node to be found.</param>
+        /// <returns>The node within this tree that has the specified value, if found, otherwise <see langword="null"/>.</returns>
         public TTreeNode Find(TValue value)
         {
             return Root.Find(value);

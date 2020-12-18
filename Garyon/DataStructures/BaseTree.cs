@@ -204,23 +204,23 @@ namespace Garyon.DataStructures
         }
 
         /// <summary>Traverses the tree from the root using pre-order. The elements are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded values.</returns>
+        /// <returns>The yielded values.</returns>
         public IEnumerable<TValue> TraversePreOrder() => InternalRoot.TraversePreOrder();
         /// <summary>Traverses the tree from the root using post-order. The elements are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded values.</returns>
+        /// <returns>The yielded values.</returns>
         public IEnumerable<TValue> TraversePostOrder() => InternalRoot.TraversePostOrder();
         /// <summary>Traverses the tree from the root using level-order. The elements are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded values.</returns>
+        /// <returns>The yielded values.</returns>
         public IEnumerable<TValue> TraverseLevelOrder() => InternalRoot.TraverseLevelOrder();
 
         /// <summary>Traverses the tree from the root using pre-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded nodes.</returns>
+        /// <returns>The yielded nodes.</returns>
         public IEnumerable<TTreeNode> TraversePreOrderNodes() => InternalRoot.TraversePreOrderNodes();
         /// <summary>Traverses the tree from the root using post-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded nodes.</returns>
+        /// <returns>The yielded nodes.</returns>
         public IEnumerable<TTreeNode> TraversePostOrderNodes() => InternalRoot.TraversePostOrderNodes();
         /// <summary>Traverses the tree from the root using level-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the yielded nodes.</returns>
+        /// <returns>The yielded nodes.</returns>
         public IEnumerable<TTreeNode> TraverseLevelOrderNodes() => InternalRoot.TraverseLevelOrderNodes();
 
         /// <summary>Gets the tree view of this tree node as a subtree.</summary>
