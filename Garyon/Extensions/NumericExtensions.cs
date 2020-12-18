@@ -75,74 +75,74 @@ namespace Garyon.Extensions
 
         #region OneOrGreater
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static byte OneOrGreater(this byte a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static byte OneOrGreater(this byte value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static short OneOrGreater(this short a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static short OneOrGreater(this short value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static int OneOrGreater(this int a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static int OneOrGreater(this int value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static long OneOrGreater(this long a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static long OneOrGreater(this long value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static sbyte OneOrGreater(this sbyte a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static sbyte OneOrGreater(this sbyte value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static ushort OneOrGreater(this ushort a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static ushort OneOrGreater(this ushort value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static uint OneOrGreater(this uint a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static uint OneOrGreater(this uint value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static ulong OneOrGreater(this ulong a) => a < 1 ? 1 : a;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static ulong OneOrGreater(this ulong value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static float OneOrGreater(this float d) => d < 1 ? 1 : d;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static float OneOrGreater(this float value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static double OneOrGreater(this double d) => d < 1 ? 1 : d;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static double OneOrGreater(this double value) => value < 1 ? 1 : value;
         /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
-        /// <param name="d">The value to determine whether it is ≥1.</param>
-        public static decimal OneOrGreater(this decimal d) => d < 1 ? 1 : d;
+        /// <param name="value">The value to determine whether it is ≥1.</param>
+        public static decimal OneOrGreater(this decimal value) => value < 1 ? 1 : value;
         #endregion
 
         #region ZeroOrGreater
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static byte ZeroOrGreater(this byte a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static byte ZeroOrGreater(this byte value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static short ZeroOrGreater(this short a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static short ZeroOrGreater(this short value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static int ZeroOrGreater(this int a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static int ZeroOrGreater(this int value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static long ZeroOrGreater(this long a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static long ZeroOrGreater(this long value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static sbyte ZeroOrGreater(this sbyte a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static sbyte ZeroOrGreater(this sbyte value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static ushort ZeroOrGreater(this ushort a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static ushort ZeroOrGreater(this ushort value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static uint ZeroOrGreater(this uint a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static uint ZeroOrGreater(this uint value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static ulong ZeroOrGreater(this ulong a) => a < 0 ? 0 : a;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static ulong ZeroOrGreater(this ulong value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static float ZeroOrGreater(this float d) => d < 0 ? 0 : d;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static float ZeroOrGreater(this float value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static double ZeroOrGreater(this double d) => d < 0 ? 0 : d;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static double ZeroOrGreater(this double value) => value < 0 ? 0 : value;
         /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
-        /// <param name="d">The value to determine whether it is ≥0.</param>
-        public static decimal ZeroOrGreater(this decimal d) => d < 0 ? 0 : d;
+        /// <param name="value">The value to determine whether it is ≥0.</param>
+        public static decimal ZeroOrGreater(this decimal value) => value < 0 ? 0 : value;
         #endregion
     }
 }
