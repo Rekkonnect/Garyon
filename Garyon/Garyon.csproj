@@ -7,12 +7,18 @@
     <PackageTags>common, extensions, utilities, library, reflection, simd, array</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
     <Copyright>© 2020, Alex Kalfakakos</Copyright>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Company />
-    <Version>1.0.0-alpha.0</Version>
+    <Version>0.1.2</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Garyon.xml</DocumentationFile>
+    <OutputPath></OutputPath>
   </PropertyGroup>
 
 </Project>
