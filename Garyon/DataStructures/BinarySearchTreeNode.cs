@@ -14,20 +14,24 @@ namespace Garyon.DataStructures
         where T : IComparable<T>
     {
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(T value = default)
             : base(value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
         /// <param name="baseTree">The base tree that contains this node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(BinarySearchTree<T> baseTree, T value = default)
             : base(baseTree, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(BinarySearchTreeNode<T> parentNode, T value = default)
             : base(parentNode, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
         /// <param name="child1">The first child node.</param>
         /// <param name="child2">The second child node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(BinarySearchTreeNode<T> parentNode, BinarySearchTreeNode<T> child1, BinarySearchTreeNode<T> child2, T value = default)
             : base(parentNode, child1, child2, value) { }
 
@@ -77,20 +81,24 @@ namespace Garyon.DataStructures
         }
 
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(TValue value = default)
             : base(value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
         /// <param name="baseTree">The base tree that contains this node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(TTree baseTree, TValue value = default)
             : base(baseTree, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(TTreeNode parentNode, TValue value = default)
             : base(parentNode, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
         /// <param name="child1">The first child node.</param>
         /// <param name="child2">The second child node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinarySearchTreeNode(TTreeNode parentNode, TTreeNode child1, TTreeNode child2, TValue value = default)
             : base(parentNode, value)
         {

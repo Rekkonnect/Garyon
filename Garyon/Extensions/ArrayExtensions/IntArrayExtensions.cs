@@ -155,6 +155,7 @@ namespace Garyon.Extensions.ArrayExtensions
         }
         /// <summary>Returns a new array whose integer values are different than their respective indices in the original array counting from the last index.</summary>
         /// <param name="a">The array whose integer values matching their respective indices counting from the last index will be removed.</param>
+        /// <param name="length"></param>
         public static int[] RemoveElementsMatchingIndicesFromEnd(this int[] a, int length)
         {
             var result = new List<int>();

@@ -159,7 +159,7 @@ namespace Garyon.Extensions.ArrayExtensions
         }
         /// <summary>Reverses the elements of the array. Returns the instance of the original array.</summary>
         /// <typeparam name="T">The type of the array elements.</typeparam>
-        /// <param name="ar">The original array to reverse.</param>
+        /// <param name="a">The original array to reverse.</param>
         public static T[] Reverse<T>(this T[] a)
         {
             for (int i = 0; i < a.Length / 2; i++)
@@ -179,7 +179,7 @@ namespace Garyon.Extensions.ArrayExtensions
         /// <typeparam name="T">The type of the array elements.</typeparam>
         /// <param name="ar">The array whose elements to swap.</param>
         /// <param name="a">The index of the first element to swap.</param>
-        /// <param name="a">The index of the second element to swap.</param>
+        /// <param name="b">The index of the second element to swap.</param>
         public static T[] Swap<T>(this T[] ar, int a, int b)
         {
             T t = ar[a];

@@ -38,7 +38,7 @@ namespace Garyon.Extensions
         public static StringBuilder RemoveLastIfEndsWith(this StringBuilder s, char lastCharacter) => s.RemoveLast(s.EndsWith(lastCharacter) ? 1 : 0);
         /// <summary>Removes the last character of the string if it ends with the requested character, otherwise none.</summary>
         /// <param name="s">The <seealso cref="StringBuilder"/> whose last character to remove, if the condition is met.</param>
-        /// <param name="lastCharacter">The character that should be the last character of the string to remove the last character.</param>
+        /// <param name="lastCharacters">The characters that should be the last characters of the string to remove them.</param>
         public static StringBuilder RemoveLastIfEndsWith(this StringBuilder s, string lastCharacters) => s.RemoveLast(s.EndsWith(lastCharacters) ? lastCharacters.Length : 0);
 
         /// <summary>Retrieves the last character of the string.</summary>
@@ -46,13 +46,15 @@ namespace Garyon.Extensions
         public static char Last(this StringBuilder s) => s[^1];
         /// <summary>Retrieves the last character of the string if the string has any characters, otherwise returns <see langword="null"/> if the <seealso cref="StringBuilder"/> is <see langword="null"/> or if it has no characters.</summary>
         /// <param name="s">The <seealso cref="StringBuilder"/> whose last character to retrieve.</param>
-        public static char? LastOrNull(this StringBuilder s) => s?.Length > 0 ? s[^1] : (char?)null;
+        public static char? LastOrNull(this StringBuilder s) => s?.Length > 0 ? s[^1] : null;
 
         /// <summary>Determines whether the string ends with the specified character.</summary>
         /// <param name="s">The <seealso cref="StringBuilder"/> to check whether it ends with the specified character.</param>
+        /// <param name="lastCharacter">The character to check if it is the last character of the string.</param>
         public static bool EndsWith(this StringBuilder s, char lastCharacter) => s[^1] == lastCharacter;
         /// <summary>Determines whether the string ends with the specified substring.</summary>
         /// <param name="s">The <seealso cref="StringBuilder"/> to check whether it ends with the specified substring.</param>
+        /// <param name="lastCharacters">The characters to check if they are the last characters of the string.</param>
         public static bool EndsWith(this StringBuilder s, string lastCharacters) => s.SubstringLast(lastCharacters.Length) == lastCharacters;
 
         /// <summary>Returns a substring of this string with the specified number of characters from a starting index.</summary>

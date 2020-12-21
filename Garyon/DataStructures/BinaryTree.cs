@@ -186,12 +186,6 @@ namespace Garyon.DataStructures
 
         /// <summary>Traverses the tree from the root using pre-order. The nodes are returned with <see langword="yield return"/>.</summary>
         /// <returns>The yielded nodes.</returns>
-        public IEnumerable<TTreeNode> TraversePreOrderNodes() => InternalRoot.TraversePreOrderNodes();
-        /// <summary>Traverses the tree from the root using post-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>The yielded nodes.</returns>
-        public IEnumerable<TTreeNode> TraversePostOrderNodes() => InternalRoot.TraversePostOrderNodes();
-        /// <summary>Traverses the tree from the root using level-order. The nodes are returned with <see langword="yield return"/>.</summary>
-        /// <returns>The yielded nodes.</returns>
-        public IEnumerable<TTreeNode> TraverseLevelOrderNodes() => InternalRoot.TraverseLevelOrderNodes();
+        public IEnumerable<TTreeNode> TraverseInOrderNodes() => InternalRoot.TraverseInOrderNodes();
     }
 }

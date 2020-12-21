@@ -135,20 +135,24 @@ namespace Garyon.DataStructures
         }
 
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(TValue value = default)
             : base(value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
         /// <param name="baseTree">The base tree that contains this node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(TTree baseTree, TValue value = default)
             : base(baseTree, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(TTreeNode parentNode, TValue value = default)
             : base(parentNode, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
         /// <param name="leftChild">The left child node.</param>
         /// <param name="rightChild">The right child node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(TTreeNode parentNode, TTreeNode leftChild, TTreeNode rightChild, TValue value = default)
             : base(parentNode, value)
         {

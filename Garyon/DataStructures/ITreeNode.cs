@@ -31,7 +31,7 @@ namespace Garyon.DataStructures
         /// <summary>Determines whether this node is a leaf; that is, it has no children.</summary>
         bool IsLeaf { get; }
 
-        /// <summary>Gets the height of this tree node's base tree height. It is equal to the sum of this tree node's height and depth. Prefer calling this instead of the <see cref="Height"/> property on <see cref="TTree.Root"/>.</summary>
+        /// <summary>Gets the height of this tree node's base tree height. It is equal to the sum of this tree node's height and depth. Prefer calling this instead of the <see cref="Height"/> property on <see cref="BaseTree{TValue, TTree, TTreeNode}.Root"/>.</summary>
         int BaseTreeHeight { get; }
         /// <summary>Gets the height of this tree node's subtree.</summary>
         int Height { get; }
@@ -46,11 +46,11 @@ namespace Garyon.DataStructures
         #region Nodes
         /// <summary>Gets a direct child of this node that has the specified value.</summary>
         /// <param name="value">The value of the direct child node to find.</param>
-        /// <returns>The <seealso cref="TTreeNode"/> with the specified value, if found; otherwise <see langword="false"/>.</returns>
+        /// <returns>The <typeparamref name="TTreeNode"/> with the specified value, if found; otherwise <see langword="false"/>.</returns>
         TTreeNode GetChild(TValue value);
         /// <summary>Gets a node from the subtree with this tree node as a root node that has the specified value.</summary>
         /// <param name="value">The value of the tree node to find.</param>
-        /// <returns>The <seealso cref="TTreeNode"/> with the specified value, if found; otherwise <see langword="false"/>.</returns>
+        /// <returns>The <typeparamref name="TTreeNode"/> with the specified value, if found; otherwise <see langword="false"/>.</returns>
         TTreeNode GetNode(TValue value);
 
         /// <summary>Removes a node that has the specified value. This includes any node that is within the subtree with this tree node as the root.</summary>
@@ -85,8 +85,8 @@ namespace Garyon.DataStructures
         void MakeParentOf(TTreeNode other);
         #endregion
 
-        /// <summary>Clones this <seealso cref="TTreeNode"/> and all its children recursively.</summary>
-        /// <returns>The cloned <seealso cref="TTreeNode"/>. Its base tree is also equal to the original <seealso cref="TTreeNode"/>'s base tree.</returns>
+        /// <summary>Clones this <typeparamref name="TTreeNode"/> and all its children recursively.</summary>
+        /// <returns>The cloned <typeparamref name="TTreeNode"/>. Its base tree is also equal to the original <typeparamref name="TTreeNode"/>'s base tree.</returns>
         TTreeNode Clone();
 
         #region Traversal

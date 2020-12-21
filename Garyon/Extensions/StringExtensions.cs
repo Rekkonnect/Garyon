@@ -87,9 +87,9 @@ namespace Garyon.Extensions
         /// <param name="s">The string within which the search will be performed.</param>
         /// <param name="match">The substring to match from the original string.</param>
         /// <param name="occurrence">The single-based (starting from 1) index of the occurrence to find.</param>
-        public static int FindFromEnd(this string s, string match, int occurence)
+        public static int FindFromEnd(this string s, string match, int occurrence)
         {
-            int occurences = 0;
+            int occurrences = 0;
             for (int i = s.Length - match.Length; i >= 0; i--)
             {
                 bool found = true;
@@ -98,8 +98,8 @@ namespace Garyon.Extensions
                         found = false;
                 if (found)
                 {
-                    occurences++;
-                    if (occurences == occurence)
+                    occurrences++;
+                    if (occurrences == occurrence)
                         return i;
                 }
             }
@@ -314,8 +314,8 @@ namespace Garyon.Extensions
             return false;
         }
         /// <summary>Checks whether this string matches another string regardless of its character casing.</summary>
-        /// <param name="s">The first string.</param>
-        /// <param name="c">The second string.</param>
+        /// <param name="s">The original string.</param>
+        /// <param name="match">The string to match.</param>
         public static bool MatchesStringCaseFree(this string s, string match)
         {
             if (s.Length != match.Length)
@@ -342,10 +342,12 @@ namespace Garyon.Extensions
         #region Casing
         /// <summary>Returns the words of a string in PascalCase in a single string.</summary>
         /// <param name="s">The string in PascalCase whose words to get.</param>
-        public static string GetPascalCaseWordsString(this string s, bool separateDigits = true) => s.GetPascalCaseWords(separateDigits).CombineWords();
+        /// <param name="separateDigitSequences">Determines whether numerical digit sequences will be treated as a new word.</param>
+        public static string GetPascalCaseWordsString(this string s, bool separateDigitSequences = true) => s.GetPascalCaseWords(separateDigitSequences).CombineWords();
         /// <summary>Returns the words of a string in PascalCase.</summary>
         /// <param name="s">The string in PascalCase whose words to get.</param>
-        public static string[] GetPascalCaseWords(this string s, bool separateDigits = true)
+        /// <param name="separateDigitSequences">Determines whether numerical digit sequences will be treated as a new word.</param>
+        public static string[] GetPascalCaseWords(this string s, bool separateDigitSequences = true)
         {
             var indices = new List<int>(s.Length / 5) { 0 }; // estimated word count
 
@@ -357,7 +359,7 @@ namespace Garyon.Extensions
             for (int i = 0; i < s.Length; i++)
             {
                 isCurrentCharacterUpper = char.IsUpper(s[i]);
-                isCurrentCharacterDigit = separateDigits && char.IsDigit(s[i]);
+                isCurrentCharacterDigit = separateDigitSequences && char.IsDigit(s[i]);
 
                 if ((!wasLastCharacterUpper && isCurrentCharacterUpper) || (!wasLastCharacterDigit && isCurrentCharacterDigit))
                     indices.Add(i);
@@ -431,7 +433,7 @@ namespace Garyon.Extensions
             return occurrences.ToArray();
         }
         /// <summary>Replaces the characters of an array of strings and returns the new array.</summary>
-        /// <param name="a">The array containing the strings which will be replaced.</param>
+        /// <param name="strings">The strings which will be replaced.</param>
         /// <param name="oldChar">The old character.</param>
         /// <param name="newChar">The new character.</param>
         public static string[] Replace(this IEnumerable<string> strings, char oldChar, char newChar)
@@ -446,7 +448,7 @@ namespace Garyon.Extensions
             return result;
         }
         /// <summary>Replaces the strings of an array of strings and returns the new array.</summary>
-        /// <param name="a">The array containing the strings which will be replaced.</param>
+        /// <param name="strings">The strings which will be replaced.</param>
         /// <param name="oldString">The old string.</param>
         /// <param name="newString">The new string.</param>
         public static string[] Replace(this IEnumerable<string> strings, string oldString, string newString)
@@ -461,7 +463,7 @@ namespace Garyon.Extensions
             return result;
         }
         /// <summary>Replaces whole words of the strings of an array of strings and returns the new array.</summary>
-        /// <param name="a">The array containing the strings which will be replaced.</param>
+        /// <param name="strings">The strings which will be replaced.</param>
         /// <param name="oldString">The old string.</param>
         /// <param name="newString">The new string.</param>
         public static string[] ReplaceWholeWord(this IEnumerable<string> strings, string oldString, string newString)
@@ -476,7 +478,7 @@ namespace Garyon.Extensions
             return result;
         }
         /// <summary>Determines whether there is at least one occurrence of a string in a string of the string array.</summary>
-        /// <param name="strings">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         /// <param name="match">The string to match.</param>
         public static bool ContainsSubstringAtLeastOnce(this IEnumerable<string> strings, string match)
         {
@@ -488,7 +490,7 @@ namespace Garyon.Extensions
             return false;
         }
         /// <summary>Determines whether there is at least one occurrence of a string as a whole word in a string of the string array.</summary>
-        /// <param name="strings">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         /// <param name="match">The string to match.</param>
         public static bool ContainsWholeWordSubstringAtLeastOnce(this IEnumerable<string> strings, string match)
         {
@@ -500,7 +502,7 @@ namespace Garyon.Extensions
             return false;
         }
         /// <summary>Removes the empty elements of a string list and returns the new list.</summary>
-        /// <param name="strings">The list of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         public static IEnumerable<string> RemoveEmptyElements(this IEnumerable<string> strings)
         {
             var result = new List<string>();
@@ -510,10 +512,10 @@ namespace Garyon.Extensions
             return result;
         }
         /// <summary>Combines the strings of a string array and returns the new string.</summary>
-        /// <param name="strings">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         public static string CombineWords(this IEnumerable<string> strings) => strings.Combine(" ");
         /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
-        /// <param name="strings">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         /// <param name="separator">The separator of the strings.</param>
         public static string Combine(this IEnumerable<string> strings, char separator)
         {
@@ -530,7 +532,7 @@ namespace Garyon.Extensions
             return result.Remove(result.Length - 1, 1).ToString();
         }
         /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
-        /// <param name="strings">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         /// <param name="separator">The separator of the strings.</param>
         public static string Combine(this IEnumerable<string> strings, string separator)
         {
@@ -547,7 +549,7 @@ namespace Garyon.Extensions
             return result.Remove(result.Length - separator.Length, separator.Length).ToString();
         }
         /// <summary>Combines the strings of a string collection and returns the new string.</summary>
-        /// <param name="strings">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         public static string Combine(this IEnumerable<string> strings)
         {
             if (!strings?.Any() ?? true)
@@ -559,12 +561,12 @@ namespace Garyon.Extensions
             return result.ToString();
         }
         /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
-        /// <param name="s">The array of strings.</param>
+        /// <param name="strings">The collection of strings.</param>
         /// <param name="predicate">The predicate which determines which strings will be combined.</param>
         /// <param name="separator">The separator of the strings.</param>
-        public static string Combine(this IEnumerable<string> s, Func<string, bool> predicate, string separator)
+        public static string Combine(this IEnumerable<string> strings, Func<string, bool> predicate, string separator)
         {
-            return s.Where(predicate).Combine(separator);
+            return strings.Where(predicate).Combine(separator);
         }
         /// <summary>Aggregates the provided items with the provided aggregator function if the items' count is greater than 0, otherwise returns an empty string.</summary>
         /// <param name="strings">The strings to aggregate.</param>

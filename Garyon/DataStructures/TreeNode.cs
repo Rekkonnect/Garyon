@@ -11,19 +11,23 @@ namespace Garyon.DataStructures
     public class TreeNode<T> : TreeNode<T, Tree<T>, TreeNode<T>>
     {
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(T value = default)
             : base(value) { }
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
         /// <param name="baseTree">The base tree that contains this node.</param>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(Tree<T> baseTree, T value = default)
             : base(baseTree, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(TreeNode<T> parentNode, T value = default)
             : base(parentNode, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
         /// <param name="childrenNodes">The children nodes.</param>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(TreeNode<T> parentNode, List<TreeNode<T>> childrenNodes, T value = default)
             : base(parentNode, childrenNodes, value) { }
 
@@ -109,6 +113,7 @@ namespace Garyon.DataStructures
         }
 
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(TValue value = default)
             : base(value)
         {
@@ -116,6 +121,7 @@ namespace Garyon.DataStructures
         }
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
         /// <param name="baseTree">The base tree that contains this node.</param>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(TTree baseTree, TValue value = default)
             : base(baseTree, value)
         {
@@ -123,6 +129,7 @@ namespace Garyon.DataStructures
         }
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(TTreeNode parentNode, TValue value = default)
             : base(parentNode, value)
         {
@@ -131,6 +138,7 @@ namespace Garyon.DataStructures
         /// <summary>Initializes a new instance of the <seealso cref="TreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
         /// <param name="childrenNodes">The children nodes.</param>
+        /// <param name="value">The value of the node.</param>
         public TreeNode(TTreeNode parentNode, List<TTreeNode> childrenNodes, TValue value = default)
             : base(parentNode, value)
         {
@@ -200,8 +208,7 @@ namespace Garyon.DataStructures
             addedChild.InternalParent = this as TTreeNode;
             InternalBaseTree?.AddChild(This, addedChild, false);
         }
-        /// <summary>Clones this tree node's children to the cloned instance that is created within the <seealso cref="Clone()"/> method.</summary>
-        /// <param name="result">The resulting instance to which to ad</param>
+
         protected override void AddChildrenToClonedInstance(TTreeNode result)
         {
             foreach (var c in InternalChildren)

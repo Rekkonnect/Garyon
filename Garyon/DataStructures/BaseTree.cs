@@ -116,21 +116,25 @@ namespace Garyon.DataStructures
 
         /// <summary>Removes a child within this tree.</summary>
         /// <param name="value">The value of the child to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TTreeNode.RemoveChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BaseTreeNode{TValue, TTree, TTreeNode}.RemoveChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         /// <returns><see langword="true"/> if the node was successfully removed, otherwise <see langword="false"/>.</returns>
         public bool RemoveNode(TValue value, bool propagate)
         {
             return RemoveNode(GetNode(value), propagate);
         }
+        /// <summary>Removes a child within this tree.</summary>
+        /// <param name="value">The value of the child to remove from the node.</param>
         public bool RemoveNode(TValue value) => RemoveNode(value, true);
         /// <summary>Removes a child within this tree.</summary>
         /// <param name="childToRemove">The child to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TTreeNode.RemoveChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BaseTreeNode{TValue, TTree, TTreeNode}.RemoveChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         /// <returns><see langword="true"/> if the node was successfully removed, otherwise <see langword="false"/>.</returns>
         public bool RemoveNode(TTreeNode childToRemove, bool propagate)
         {
             return RemoveChild(childToRemove.Parent, childToRemove, propagate);
         }
+        /// <summary>Removes a child within this tree.</summary>
+        /// <param name="childToRemove">The child to remove from the node.</param>
         public bool RemoveNode(TTreeNode childToRemove) => RemoveNode(childToRemove, true);
         /// <summary>Removes nodes within this tree that contain the specified values.</summary>
         /// <param name="values">The values of the children to remove.</param>
@@ -146,7 +150,7 @@ namespace Garyon.DataStructures
         /// <summary>Removes a child from a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
         /// <param name="childToRemove">The child to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TTreeNode.RemoveChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BaseTreeNode{TValue, TTree, TTreeNode}.RemoveChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         /// <returns><see langword="true"/> if the child was sucessfully removed from the node, otherwise <see langword="false"/>.</returns>
         public bool RemoveChild(TTreeNode node, TTreeNode childToRemove, bool propagate)
         {
@@ -175,16 +179,20 @@ namespace Garyon.DataStructures
 
         /// <summary>Clears the children of a node with the specified value, that is within this tree.</summary>
         /// <param name="value">The value of the parent node whose children to clear. The node must be within this tree.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TTreeNode.Children"/> property. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BaseTreeNode{TValue, TTree, TTreeNode}.Children"/> property. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void ClearChildren(TValue value, bool propagate)
         {
             ClearChildren(GetNode(value), propagate);
         }
+        /// <summary>Clears the children of a node with the specified value, that is within this tree.</summary>
+        /// <param name="value">The value of the parent node whose children to clear. The node must be within this tree.</param>
         public void ClearChildren(TValue value) => ClearChildren(value, true);
         /// <summary>Clears the children of a node within this tree.</summary>
         /// <param name="node">The parent node whose children to clear. The node must be within this tree.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TTreeNode.Children"/> property. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BaseTreeNode{TValue, TTree, TTreeNode}.Children"/> property. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public abstract void ClearChildren(TTreeNode node, bool propagate);
+        /// <summary>Clears the children of a node within this tree.</summary>
+        /// <param name="node">The parent node whose children to clear. The node must be within this tree.</param>
         public void ClearChildren(TTreeNode node) => ClearChildren(node, true);
 
         /// <summary>Clears all this tree's nodes, including its root.</summary>

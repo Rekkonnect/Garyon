@@ -48,7 +48,6 @@ namespace Garyon.Extensions
             return MatchesComparisonResult(value.CompareTo(other), result);
         }
         /// <summary>Determines the result of the comparison of <paramref name="value"/> with <paramref name="other"/>.</summary>
-        /// <typeparam name="object">The type of the value that <paramref name="value"/> can be compared with.</typeparam>
         /// <param name="value">The provided value to compare.</param>
         /// <param name="other">The other value to compare.</param>
         /// <returns>A <seealso cref="ComparisonResult"/> representing the result of the comparison of <paramref name="value"/> with <paramref name="other"/>.</returns>

@@ -15,7 +15,7 @@ namespace Garyon.DataStructures
         public FlexibleListDictionary(int capacity)
             : base(capacity) { }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleListDictionary{TKey, TObject}"/> class.</summary>
-        /// <param name="collection">The collection to initialize the dictionary from. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TValue"/> type.</param>
+        /// <param name="collection">The collection to initialize the dictionary from. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TObject"/> type.</param>
         public FlexibleListDictionary(IEnumerable<TKey> collection)
             : base()
         {

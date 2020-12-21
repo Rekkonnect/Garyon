@@ -43,7 +43,7 @@ namespace Garyon.Objects.Enumerators
         /// <param name="enumerable1">The first enumerable.</param>
         /// <param name="enumerable2">The second enumerable.</param>
         /// <param name="enumerable3">The third enumerable.</param>
-        /// <param name="enumerable3">The fourth enumerable.</param>
+        /// <param name="enumerable4">The fourth enumerable.</param>
         public ParallelEnumerator(IEnumerable<T1> enumerable1, IEnumerable<T2> enumerable2, IEnumerable<T3> enumerable3, IEnumerable<T4> enumerable4)
             : base(enumerable1, enumerable2, enumerable3, enumerable4) { }
     }

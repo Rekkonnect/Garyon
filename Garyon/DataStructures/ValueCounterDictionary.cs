@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http.Headers;
 
 namespace Garyon.DataStructures
 {
@@ -23,7 +24,7 @@ namespace Garyon.DataStructures
         public ValueCounterDictionary(IEnumerable<TKey> collection, int initialValue)
             : base(collection, initialValue) { }
         /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class.</summary>
-        /// <param name="kvps">The collection of <seealso cref="KeyValuePair{TKey, int}"/> objects to initialize the dictionary from.</param>
+        /// <param name="kvps">The collection of value counters, represented as <seealso cref="KeyValuePair{TKey, TValue}"/> objects, to initialize the dictionary from.</param>
         public ValueCounterDictionary(IEnumerable<KeyValuePair<TKey, int>> kvps)
             : base(kvps) { }
         /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class out of another <seealso cref="ValueCounterDictionary{TKey}"/> instance.</summary>
