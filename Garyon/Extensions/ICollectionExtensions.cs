@@ -4,7 +4,7 @@ using System.Linq;
 namespace Garyon.Extensions
 {
     /// <summary>Contains extension functions for the <seealso cref="ICollection{T}"/> interface.</summary>
-    public static class GenericICollectionExtensions
+    public static class ICollectionExtensions
     {
         /// <summary>Adds a range of elements into an <seealso cref="ICollection{T}"/>.</summary>
         /// <typeparam name="T">The type of elements stored in the <seealso cref="ICollection{T}"/>.</typeparam>

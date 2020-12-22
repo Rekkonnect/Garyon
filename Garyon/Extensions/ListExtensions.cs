@@ -3,8 +3,8 @@ using System.Linq;
 
 namespace Garyon.Extensions
 {
-    /// <summary>Provides generic extension methods for lists.</summary>
-    public static class GenericListExtensions
+    /// <summary>Provides extension methods for the <seealso cref="List{T}"/> class.</summary>
+    public static class ListExtensions
     {
         #region Cloning
         /// <summary>Clones a list.</summary>

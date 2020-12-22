@@ -328,7 +328,7 @@ namespace Garyon.Extensions
         /// <returns>The number of occurrences of the character in the string.</returns>
         public static int GetCharacterOccurences(this string s, char match)
         {
-            return s.WhereCount(c => c == match);
+            return s.Count(c => c == match);
         }
         /// <summary>Determines whether the string is a valid hex string.</summary>
         /// <param name="hex">The string.</param>
