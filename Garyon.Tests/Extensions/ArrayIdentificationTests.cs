@@ -1,10 +1,9 @@
-﻿using Garyon.Extensions;
-using Garyon.Extensions.ArrayExtensions;
-using Garyon.Functions.Arrays;
+﻿using Garyon.Functions.Arrays;
 using NUnit.Framework;
 
 namespace Garyon.Tests.Extensions
 {
+    [Parallelizable(ParallelScope.Children)]
     public class ArrayIdentificationTests
     {
         [Test]
@@ -47,6 +46,7 @@ namespace Garyon.Tests.Extensions
             Assert.IsFalse(ArrayIdentification.IsArrayOfType<object[][][][], object>(2));
             Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[][][][], object>(4));
             Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[][][][][], object>(6));
+            Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,,,][,][,,,][,,,,,,][,,], object>(6));
         }
     }
 }
