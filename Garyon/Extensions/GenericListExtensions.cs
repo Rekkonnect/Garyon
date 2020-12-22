@@ -92,19 +92,6 @@ namespace Garyon.Extensions
             l.RemoveAt(from + 1);
             return l;
         }
-        /// <summary>Swaps two elements in the <seealso cref="List{T}"/>.</summary>
-        /// <typeparam name="T">The type of the elements contained in the <seealso cref="List{T}"/>.</typeparam>
-        /// <param name="l">The <seealso cref="List{T}"/> within which to swap two elements.</param>
-        /// <param name="a">The index of the first element to swap.</param>
-        /// <param name="b">The index of the second element to swap.</param>
-        /// <returns>The instance of the <seealso cref="List{T}"/> in which two elements were swapped.</returns>
-        public static List<T> Swap<T>(this List<T> l, int a, int b)
-        {
-            T t = l[a];
-            l[a] = l[b];
-            l[b] = t;
-            return l;
-        }
         #endregion
 
         #region Contain Checks
