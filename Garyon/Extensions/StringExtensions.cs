@@ -195,27 +195,6 @@ namespace Garyon.Extensions
         }
         #endregion
 
-        #region Base 64
-        /// <summary>Fixes the Base 64 string that is provided. Returns an instance referring to the original string instance.</summary>
-        /// <param name="s">The Base 64 string to fix.</param>
-        public static string FixBase64String(this string s)
-        {
-            int lastNumber = 0;
-            int lastInvalidCharacter = 0;
-            bool continueChecking = true;
-            while (continueChecking)
-            {
-                char c = s[s.Length - lastNumber - 1];
-                if (continueChecking = c.IsDigit())
-                    lastNumber++;
-                else if (continueChecking = !c.IsBase64Character())
-                    lastInvalidCharacter = ++lastNumber;
-            }
-            int finalLength = s.Length - lastInvalidCharacter;
-            return $"{s.Substring(0, finalLength)}{new string('=', 3 - finalLength % 4)}";
-        }
-        #endregion
-
         #region Manipulation
         /// <summary>Removes one character from the end of the string.</summary>
         /// <param name="s">The string whose last character to remove.</param>
@@ -382,6 +361,109 @@ namespace Garyon.Extensions
                 words[i] = s[indices[i]..indices[i + 1]];
             return words;
         }
+        #endregion
+
+        #region Parsing
+        /// <summary>Parses the <seealso cref="byte"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="byte"/> value of the <seealso cref="string"/>.</returns>
+        public static byte ParseByte(this string s) => byte.Parse(s);
+        /// <summary>Parses the <seealso cref="sbyte"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="sbyte"/> value of the <seealso cref="string"/>.</returns>
+        public static sbyte ParseSByte(this string s) => sbyte.Parse(s);
+        /// <summary>Parses the <seealso cref="short"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="short"/> value of the <seealso cref="string"/>.</returns>
+        public static short ParseInt16(this string s) => short.Parse(s);
+        /// <summary>Parses the <seealso cref="ushort"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="ushort"/> value of the <seealso cref="string"/>.</returns>
+        public static ushort ParseUInt16(this string s) => ushort.Parse(s);
+        /// <summary>Parses the <seealso cref="int"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="int"/> value of the <seealso cref="string"/>.</returns>
+        public static int ParseInt32(this string s) => int.Parse(s);
+        /// <summary>Parses the <seealso cref="uint"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="uint"/> value of the <seealso cref="string"/>.</returns>
+        public static uint ParseUInt32(this string s) => uint.Parse(s);
+        /// <summary>Parses the <seealso cref="long"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="long"/> value of the <seealso cref="string"/>.</returns>
+        public static long ParseInt64(this string s) => long.Parse(s);
+        /// <summary>Parses the <seealso cref="ulong"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="ulong"/> value of the <seealso cref="string"/>.</returns>
+        public static ulong ParseUInt64(this string s) => ulong.Parse(s);
+        /// <summary>Parses the <seealso cref="float"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="float"/> value of the <seealso cref="string"/>.</returns>
+        public static float ParseSingle(this string s) => float.Parse(s);
+        /// <summary>Parses the <seealso cref="double"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="double"/> value of the <seealso cref="string"/>.</returns>
+        public static double ParseDouble(this string s) => double.Parse(s);
+        /// <summary>Parses the <seealso cref="decimal"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to parse.</param>
+        /// <returns>The <seealso cref="decimal"/> value of the <seealso cref="string"/>.</returns>
+        public static decimal ParseDecimal(this string s) => decimal.Parse(s);
+
+        /// <summary>Tries to parse the <seealso cref="byte"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="byte"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseByte(this string s, out byte value) => byte.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="sbyte"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="sbyte"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseSByte(this string s, out sbyte value) => sbyte.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="short"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="short"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseInt16(this string s, out short value) => short.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="ushort"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="ushort"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseUInt16(this string s, out ushort value) => ushort.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="int"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="int"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseInt32(this string s, out int value) => int.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="uint"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="uint"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseUInt32(this string s, out uint value) => uint.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="long"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="long"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseInt64(this string s, out long value) => long.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="ulong"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="ulong"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseUInt64(this string s, out ulong value) => ulong.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="float"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="float"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseSingle(this string s, out float value) => float.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="double"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="double"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseDouble(this string s, out double value) => double.TryParse(s, out value);
+        /// <summary>Tries to parse the <seealso cref="decimal"/> value of the specified <seealso cref="string"/>.</summary>
+        /// <param name="s">The <seealso cref="string"/> to try to parse.</param>
+        /// <param name="value">The <seealso cref="decimal"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
+        /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
+        public static bool TryParseDecimal(this string s, out decimal value) => decimal.TryParse(s, out value);
         #endregion
 
         /// <summary>Returns the lines of a string.</summary>
@@ -575,6 +657,7 @@ namespace Garyon.Extensions
         #endregion
 
         #region Aggregators
+        // TODO: Move that into Aggregators
         /// <summary>Aggregates two strings and splits them by a space.</summary>
         /// <param name="a">The first string to aggregate.</param>
         /// <param name="b">The second string to aggregate.</param>

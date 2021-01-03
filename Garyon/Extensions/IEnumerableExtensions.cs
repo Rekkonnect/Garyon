@@ -33,11 +33,11 @@ namespace Garyon.Extensions
 
         /// <summary>Flattens a collection of collections into a single collection. The resulting elements are contained in the order they are enumerated.</summary>
         /// <typeparam name="T">The type of elements contained in the collections.</typeparam>
-        /// <param name="enumerable">The collection of collections.</param>
+        /// <param name="source">The collection of collections.</param>
         /// <returns>The flattened collection.</returns>
-        public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> enumerable)
+        public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> source)
         {
-            foreach (var e in enumerable)
+            foreach (var e in source)
                 foreach (var v in e)
                     yield return v;
         }
@@ -601,6 +601,31 @@ namespace Garyon.Extensions
         public static MinMaxResult<decimal?> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
         {
             return MinMax(source.Select(selector));
+        }
+        #endregion
+
+        #region For Each
+        /// <summary>Performs an action on each of the elements contained in the collection.</summary>
+        /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
+        /// <param name="source">The source collection.</param>
+        /// <param name="action">The action to perform on each of the elements.</param>
+        public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
+        {
+            foreach (T e in source)
+                action(e);
+        }
+        /// <summary>Performs an action on each of the elements contained in the collection.</summary>
+        /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
+        /// <param name="source">The source collection.</param>
+        /// <param name="action">The action to perform on each of the elements.</param>
+        public static void ForEach<T>(this IEnumerable<T> source, IndexedEnumeratedElementAction<T> action)
+        {
+            int index = 0;
+            foreach (T e in source)
+            {
+                action(index, e);
+                index++;
+            }
         }
         #endregion
 
