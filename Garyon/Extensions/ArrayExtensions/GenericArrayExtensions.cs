@@ -1,9 +1,6 @@
-﻿using Garyon.Attributes;
-using Garyon.Functions.Arrays;
+﻿using Garyon.Functions.Arrays;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Garyon.Extensions.ArrayExtensions
 {
@@ -166,14 +163,13 @@ namespace Garyon.Extensions.ArrayExtensions
                 a.Swap(i, a.Length - 1 - i);
             return a;
         }
-        /// <summary>Sorts the array without affecting the original array. Returns a new instance containing the elements of the original array sorted.</summary>
+        /// <summary>Sorts the array, affecting the original array. Returns the instance of the original array.</summary>
         /// <typeparam name="T">The type of the array elements.</typeparam>
         /// <param name="ar">The original array to sort.</param>
         public static T[] Sort<T>(this T[] ar)
         {
-            var sorted = ar.ToList();
-            sorted.Sort();
-            return sorted.ToArray();
+            Array.Sort(ar);
+            return ar;
         }
         /// <summary>Swaps two elements in the array. Returns the instance of the original array.</summary>
         /// <typeparam name="T">The type of the array elements.</typeparam>
@@ -188,36 +184,33 @@ namespace Garyon.Extensions.ArrayExtensions
             return ar;
         }
 
-        #region Array identification extensions
-        public static bool IsArrayOfByte<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, byte>();
-        public static bool IsArrayOfInt16<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, short>();
-        public static bool IsArrayOfInt32<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, int>();
-        public static bool IsArrayOfInt64<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, long>();
-        public static bool IsArrayOfSByte<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, sbyte>();
-        public static bool IsArrayOfUInt16<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, ushort>();
-        public static bool IsArrayOfUInt32<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, uint>();
-        public static bool IsArrayOfUInt64<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, ulong>();
-        public static bool IsArrayOfSingle<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, float>();
-        public static bool IsArrayOfDouble<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, double>();
-        public static bool IsArrayOfDecimal<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, decimal>();
-        public static bool IsArrayOfChar<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, char>();
-        public static bool IsArrayOfBoolean<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, bool>();
-        public static bool IsArrayOfString<TArray>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, string>();
+        #region Array Identification Extensions
+        public static bool IsArrayOfByte(this Array arr) => ArrayIdentification.IsArrayOfType<byte>(arr.GetType());
+        public static bool IsArrayOfInt16(this Array arr) => ArrayIdentification.IsArrayOfType<short>(arr.GetType());
+        public static bool IsArrayOfInt32(this Array arr) => ArrayIdentification.IsArrayOfType<int>(arr.GetType());
+        public static bool IsArrayOfInt64(this Array arr) => ArrayIdentification.IsArrayOfType<long>(arr.GetType());
+        public static bool IsArrayOfSByte(this Array arr) => ArrayIdentification.IsArrayOfType<sbyte>(arr.GetType());
+        public static bool IsArrayOfUInt16(this Array arr) => ArrayIdentification.IsArrayOfType<ushort>(arr.GetType());
+        public static bool IsArrayOfUInt32(this Array arr) => ArrayIdentification.IsArrayOfType<uint>(arr.GetType());
+        public static bool IsArrayOfUInt64(this Array arr) => ArrayIdentification.IsArrayOfType<ulong>(arr.GetType());
+        public static bool IsArrayOfSingle(this Array arr) => ArrayIdentification.IsArrayOfType<float>(arr.GetType());
+        public static bool IsArrayOfDouble(this Array arr) => ArrayIdentification.IsArrayOfType<double>(arr.GetType());
+        public static bool IsArrayOfDecimal(this Array arr) => ArrayIdentification.IsArrayOfType<decimal>(arr.GetType());
+        public static bool IsArrayOfChar(this Array arr) => ArrayIdentification.IsArrayOfType<char>(arr.GetType());
+        public static bool IsArrayOfBoolean(this Array arr) => ArrayIdentification.IsArrayOfType<bool>(arr.GetType());
+        public static bool IsArrayOfString(this Array arr) => ArrayIdentification.IsArrayOfType<string>(arr.GetType());
 
         /// <summary>Determines whether an array type contains elements of the provided type. It only checks for multidimensional arrays (of the form [(,)*]). Jagged arrays are not taken into consideration in this implementation. Also built as an extension method to allow per-instance call.</summary>
-        /// <typeparam name="TArray">The type of the array.</typeparam>
         /// <typeparam name="TElement">The type of the element the array stores.</typeparam>
         /// <param name="arr">The array whose type to examine.</param>
         /// <returns>Whether the given array type stores elements of the <typeparamref name="TElement"/> type.</returns>
-        [Autogenerated]
-        public static bool IsArrayOfType<TArray, TElement>(this TArray arr) => ArrayIdentification.IsArrayOfType<TArray, TElement>();
+        public static bool IsArrayOfType<TElement>(this Array arr) => ArrayIdentification.IsArrayOfType<TElement>(arr.GetType());
         /// <summary>Determines whether an array type contains elements of the provided type. It also checks for jagged arrays up to a maximum jagging level. Also built as an extension method to allow per-instance call.</summary>
-        /// <typeparam name="TArray">The type of the array.</typeparam>
         /// <typeparam name="TElement">The type of the element the array stores.</typeparam>
         /// <param name="arr">The array whose type to examine.</param>
         /// <param name="maxJaggingLevel">The maximum jagging level of the array (1 means up to [], 2 means up to [][], etc.).</param>
         /// <returns>Whether the given array type stores elements of the <typeparamref name="TElement"/> type.</returns>
-        public static bool IsArrayOfType<TArray, TElement>(this TArray arr, int maxJaggingLevel) => ArrayIdentification.IsArrayOfType<TArray, TElement>(maxJaggingLevel);
+        public static bool IsArrayOfType<TElement>(this Array arr, int maxJaggingLevel) => ArrayIdentification.IsArrayOfType<TElement>(arr.GetType(), maxJaggingLevel);
         #endregion
 
         #region Array
@@ -230,6 +223,12 @@ namespace Garyon.Extensions.ArrayExtensions
             for (int i = 0; i < ar.Rank; i++)
                 lengths[i] = ar.GetLength(i);
             return lengths;
+        }
+        /// <summary>Clears the array by zeroing out all its elements. This affects the original instance.</summary>
+        /// <param name="ar">The array to clear.</param>
+        public static void Clear(this Array ar)
+        {
+            Array.Clear(ar, 0, ar.Length);
         }
         #endregion
     }
