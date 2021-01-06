@@ -2,6 +2,15 @@
 
 A C# library aiming to offer multi-dimensional functionality.
 
+## Pre-Release Notice
+
+This project is not yet ready for an actual release. All the code is still in pre-release, thus it might contain bugs, some APIs might be
+renamed, refactored, reimplemented, or even **removed entirely** in future releases. Please keep that in mind and always ensure that your
+implementations are up-to-date after updating the library.
+
+After the initial release, there will be **no such issues**. All the new APIs will be properly tested, constructed and organized before
+making it to production.
+
 ## Why is it here?
 
 Many parts of the standard library are either incomplete or not as well-designed. This library offers further helpers and overall
