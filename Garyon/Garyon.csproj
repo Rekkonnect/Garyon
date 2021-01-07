@@ -6,13 +6,13 @@
     <Nullable>annotations</Nullable>
     <PackageTags>common, extensions, utilities, library, reflection, simd, array</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
-    <Copyright>© 2020, Alex Kalfakakos</Copyright>
+    <Copyright>© 2020-2021, Alex Kalfakakos</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Company />
-    <Version>0.1.2</Version>
+    <Version>0.2.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
