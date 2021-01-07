@@ -31,10 +31,10 @@ namespace Garyon.DataStructures
                 Add(kvp.Key, new List<TObject>(kvp.Value));
         }
 
-        /// <summary>Adds a new key entry and initializes the list it maps to with only the provided object.</summary>
+        /// <summary>Adds the provided object to the list the provided key maps to. If the list did not exist, it is initialized with that object, otherwise it is simply added.</summary>
         /// <param name="key">The key to add to the dictionary.</param>
         /// <param name="value">The single object that will be added to the list the provided key will map to.</param>
-        public virtual void Add(TKey key, TObject value = default) => base.Add(key, new List<TObject> { value });
+        public virtual void Add(TKey key, TObject value = default) => this[key].Add(value);
         /// <summary>Adds a new key entry and initializes the list it maps to with only the provided object.</summary>
         /// <param name="kvp">The <seealso cref="KeyValuePair{TKey, TValue}"/> containing the key and the value within the list that will be added to the dictionary.</param>
         public virtual void Add(KeyValuePair<TKey, TObject> kvp) => Add(kvp.Key, kvp.Value);

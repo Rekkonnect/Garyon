@@ -55,6 +55,16 @@ namespace Garyon.Tests.DataStructures
         }
 
         [Test]
+        public void AddTest()
+        {
+            var dictionary = new FlexibleListDictionary<int, char>();
+            dictionary.Add(1, 'a');
+            dictionary.Add(1, 'b');
+            Assert.IsTrue(dictionary[1].Contains('a'));
+            Assert.IsTrue(dictionary[1].Contains('b'));
+        }
+
+        [Test]
         public void TryGetValueTest()
         {
             var d = new FlexibleListDictionary<string, int>
