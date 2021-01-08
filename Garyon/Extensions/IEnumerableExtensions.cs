@@ -643,7 +643,7 @@ namespace Garyon.Extensions
 
         private static void VerifyNonEmptyCollection<T>(IEnumerable<T> source)
         {
-            if (source?.Any() ?? false)
+            if (source?.Any() != true)
                 ThrowHelper.Throw<ArgumentException>("The collection must be non-null and contain at least one element.");
         }
     }
