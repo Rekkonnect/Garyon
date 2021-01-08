@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Garyon.Objects;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,7 +35,7 @@ namespace Garyon.DataStructures
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class. Each item in the provided collection is added as a key and is mapped to the default value of the <typeparamref name="TValue"/> type.</summary>
         /// <param name="collection">The collection to initialize the dictionary from.</param>
         public FlexibleDictionary(IEnumerable<TKey> collection)
-            : this(collection, default) { }
+            : this(collection, default(TValue)) { }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class. Each item in the provided collection is added as a key and is mapped to the specified value of the <typeparamref name="TValue"/> type.</summary>
         /// <param name="collection">The collection to initialize the dictionary from.</param>
         /// <param name="initialValue">The initial value to map each key to.</param>
@@ -42,6 +44,24 @@ namespace Garyon.DataStructures
         {
             foreach (var v in collection)
                 Add(v, initialValue);
+        }
+        /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class. Each key in the provided collection is transformed with <paramref name="valueSelector"/> and added to the dictionary.</summary>
+        /// <param name="keyCollection">The collection of keys to initialize the dictionary from.</param>
+        /// <param name="valueSelector">The selector that transforms a <typeparamref name="TKey"/> into a <typeparamref name="TValue"/>.</param>
+        public FlexibleDictionary(IEnumerable<TKey> keyCollection, ValueSelector<TKey, TValue> valueSelector)
+            : this()
+        {
+            foreach (var key in keyCollection)
+                Add(key, valueSelector(key));
+        }
+        /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class. Each item in the provided collection is transformed with <paramref name="keySelector"/> and added to the dictionary.</summary>
+        /// <param name="valueCollection">The collection of values to initialize the dictionary from.</param>
+        /// <param name="keySelector">The selector that transforms a <typeparamref name="TValue"/> into a <typeparamref name="TKey"/>.</param>
+        public FlexibleDictionary(IEnumerable<TValue> valueCollection, KeySelector<TKey, TValue> keySelector)
+            : this()
+        {
+            foreach (var value in valueCollection)
+                Add(keySelector(value), value);
         }
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class.</summary>
         /// <param name="kvps">The collection of <seealso cref="KeyValuePair{TKey, TValue}"/> objects to initialize the dictionary from.</param>
