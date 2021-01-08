@@ -1,6 +1,7 @@
 ﻿using Garyon.Exceptions;
 using Garyon.Functions;
 using Garyon.Objects;
+using Garyon.Objects.Enumerators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -620,12 +621,19 @@ namespace Garyon.Extensions
         /// <param name="action">The action to perform on each of the elements.</param>
         public static void ForEach<T>(this IEnumerable<T> source, IndexedEnumeratedElementAction<T> action)
         {
-            int index = 0;
-            foreach (T e in source)
-            {
+            foreach (var (index, e) in source.WithIndex())
                 action(index, e);
-                index++;
-            }
+        }
+        #endregion
+
+        #region Enumeration
+        /// <summary>Wraps the <seealso cref="IEnumerable{T}"/> into an <seealso cref="IndexedEnumerable{T}"/> for enumeration with index.</summary>
+        /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
+        /// <param name="enumerable">The <seealso cref="IEnumerable{T}"/> to enumerate with index.</param>
+        /// <returns></returns>
+        public static IndexedEnumerable<T> WithIndex<T>(this IEnumerable<T> enumerable)
+        {
+            return new IndexedEnumerable<T>(enumerable);
         }
         #endregion
 
