@@ -626,6 +626,38 @@ namespace Garyon.Extensions
         }
         #endregion
 
+        #region LINQ-Like Operations
+        /// <summary>Filters out the provided collection's elements based on the given predicate, and separates the matched from the unmatched ones, storing them in the respective collections.</summary>
+        /// <typeparam name="T">The type of the elements that are contained in the <seealso cref="IEnumerable{T}"/>.</typeparam>
+        /// <param name="collection">The collection whose elements to filter out.</param>
+        /// <param name="predicate">The predicate based on which to filter the elements out.</param>
+        /// <param name="matched">The new collection that will contain the elements that matched the predicate.</param>
+        /// <param name="unmatched">The new collection that will contain the elements that did not match the predicate.</param>
+        public static void Dissect<T>(this IEnumerable<T> collection, Predicate<T> predicate, out IEnumerable<T> matched, out IEnumerable<T> unmatched)
+        {
+            if (!collection.Any())
+            {
+                matched = Enumerable.Empty<T>();
+                unmatched = Enumerable.Empty<T>();
+                return;
+            }
+
+            var matchedList = new List<T>();
+            var unmatchedList = new List<T>();
+
+            matched = matchedList;
+            unmatched = unmatchedList;
+
+            foreach (var e in collection)
+            {
+                if (predicate(e))
+                    matchedList.Add(e);
+                else
+                    unmatchedList.Add(e);
+            }
+        }
+        #endregion
+
         #region Enumeration
         /// <summary>Wraps the <seealso cref="IEnumerable{T}"/> into an <seealso cref="IndexedEnumerable{T}"/> for enumeration with index.</summary>
         /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
