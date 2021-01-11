@@ -630,7 +630,7 @@ namespace Garyon.Extensions
         /// <summary>Wraps the <seealso cref="IEnumerable{T}"/> into an <seealso cref="IndexedEnumerable{T}"/> for enumeration with index.</summary>
         /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
         /// <param name="enumerable">The <seealso cref="IEnumerable{T}"/> to enumerate with index.</param>
-        /// <returns></returns>
+        /// <returns>The <seealso cref="IndexedEnumerable{T}"/> that wraps the <paramref name="enumerable"/> for indexed enumeration.</returns>
         public static IndexedEnumerable<T> WithIndex<T>(this IEnumerable<T> enumerable)
         {
             return new IndexedEnumerable<T>(enumerable);
