@@ -5,7 +5,7 @@ namespace Garyon.DataStructures
     /// <summary>Represents a flexible dictionary that maps a key to a list of objects.</summary>
     /// <typeparam name="TKey">The type of the key to index the dictionary contents by.</typeparam>
     /// <typeparam name="TObject">The type of objects to be stored in the list of objects each key is mapped to.</typeparam>
-    public class FlexibleListDictionary<TKey, TObject> : FlexibleDictionary<TKey, List<TObject>>
+    public class FlexibleListDictionary<TKey, TObject> : FlexibleInitializableValueDictionary<TKey, List<TObject>>
     {
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleListDictionary{TKey, TObject}"/> class with the default initial capacity (16).</summary>
         public FlexibleListDictionary()
@@ -48,7 +48,5 @@ namespace Garyon.DataStructures
             value = list[index];
             return true;
         }
-
-        protected override List<TObject> GetNewEntryInitializationValue() => new List<TObject>();
     }
 }
