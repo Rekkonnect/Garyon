@@ -102,17 +102,9 @@ namespace Garyon.Extensions
             return mid;
         }
 
-        public static HashSet<T> Clone<T>(this HashSet<T> s) => new HashSet<T>(s.ToArray());
-        public static SortedSet<T> Clone<T>(this SortedSet<T> s) => new SortedSet<T>(s.ToArray());
+        public static HashSet<T> Clone<T>(this HashSet<T> s) => new HashSet<T>(s);
+        public static SortedSet<T> Clone<T>(this SortedSet<T> s) => new SortedSet<T>(s);
 
-        public static int[] GetIndicesOfMatchingValues(this bool[] a, bool value)
-        {
-            var indices = new List<int>();
-            for (int i = 0; i < a.Length; i++)
-                if (a[i] == value)
-                    indices.Add(i);
-            return indices.ToArray();
-        }
 
         public static int[] GetInt32ArrayFromMultidimensionalInt32Array(int[,] a, int dimension, int index)
         {

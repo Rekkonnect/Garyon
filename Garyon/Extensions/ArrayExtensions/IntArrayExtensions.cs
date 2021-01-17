@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Garyon.Exceptions;
+using Garyon.Extensions.ArrayExtensions.ArrayConverting;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,40 +13,71 @@ namespace Garyon.Extensions.ArrayExtensions
     public static class IntArrayExtensions
     {
         /// <summary>Returns a string containing the ranges of an array of integers in a formatted way.</summary>
-        /// <param name="s">The array of integers containing the values whose ranges to retrieve.</param>
+        /// <param name="s">The array of integers containing the values whose ranges to retrieve. The array must only contain distinct elements. The array will be sorted without affecting the original instance.</param>
         public static string ShowValuesWithRanges(this int[] s)
         {
-            s = s.Sort(); // Sort the values
+            s = s.CopyAccelerated().Sort(); // Sort the values
             var result = new StringBuilder();
             if (s.Length > 0)
             {
                 int lastShownValue = s[0];
                 int lastValueInCombo = s[0];
                 result.Append(lastShownValue);
-                for (int i = 0; i < s.Length; i++)
+                for (int i = 1; i < s.Length; i++)
                 {
-                    if (s[i] > lastValueInCombo) // Determines whether the next value is not in a row
+                    if (s[i] > lastValueInCombo + 1)
                     {
-                        result.Append($"{(result[^1] == '-' ? s[i - 1].ToString() : "")}, {s[i]}");
-                        lastValueInCombo = lastShownValue = s[i] + 1;
+                        if (result.Last() == '-')
+                            result.Append(s[i - 1]);
+                        result.Append($", {s[i]}");
+                        lastValueInCombo = lastShownValue = s[i];
                     }
-                    else if (s[i] == lastValueInCombo) // Determines whether the next value is in a row
+                    else if (s[i] == lastValueInCombo + 1)
                     {
-                        if (i < s.Length - 1) // Determines whether the current index is not the last value
-                            if (lastShownValue == lastValueInCombo) // Determines whether this is the start of a new combo
-                                result.Append("-");
-                    }
-                    else if (i == s.Length - 1) // Determines whether the current index is the last value
-                    {
-                        result.Append(s[i]);
-                        lastValueInCombo = s[i] + 1; // Set the last index in the combo to the current index
+                        if (lastShownValue == lastValueInCombo)
+                            result.Append('-');
+                        lastValueInCombo = s[i];
                     }
                 }
+                if (result.Last() == '-')
+                    result.Append(lastValueInCombo);
+            }
+            return result.ToString();
+        }
+        /// <summary>Returns a string containing the ranges of an array of integers in a formatted way.</summary>
+        /// <param name="s">The array of integers containing the values whose ranges to retrieve. The array must only contain distinct elements. The array will be sorted without affecting the original instance.</param>
+        public static string ShowSortedValuesWithRanges(this int[] s)
+        {
+
+            s = s.CopyAccelerated().Sort(); // Sort the values
+            var result = new StringBuilder();
+            if (s.Length > 0)
+            {
+                int lastShownValue = s[0];
+                int lastValueInCombo = s[0];
+                result.Append(lastShownValue);
+                for (int i = 1; i < s.Length; i++)
+                {
+                    if (s[i] > lastValueInCombo + 1)
+                    {
+                        if (result.Last() == '-')
+                            result.Append(s[i - 1]);
+                        result.Append($", {s[i]}");
+                        lastValueInCombo = lastShownValue = s[i];
+                    }
+                    else if (s[i] == lastValueInCombo + 1)
+                    {
+                        if (lastShownValue == lastValueInCombo)
+                            result.Append('-');
+                        lastValueInCombo = s[i];
+                    }
+                }
+                if (result.Last() == '-')
+                    result.Append(lastValueInCombo);
             }
             return result.ToString();
         }
 
-        // TODO: Autogenerate
         /// <summary>Decrements all the integers of the array by a value.</summary>
         /// <param name="a">The array of integers whose values to decrement.</param>
         /// <param name="decrement">The value to decrement the integers by.</param>
@@ -122,14 +155,20 @@ namespace Garyon.Extensions.ArrayExtensions
             return a;
         }
 
-        public static int[] Subtract(this int[] a, int[] b)
+        /// <summary>Creates a new array containing the results of the subtractions of the two arrays' respective values.</summary>
+        /// <param name="minuends">The minuend array, containing the original values.</param>
+        /// <param name="subtrahends">The subtrahend array, containing the values that will be subtracted from the minuends.</param>
+        /// <returns>The resulting array containing the differences of each respective pair of elements.</returns>
+        public static int[] Subtract(this int[] minuends, int[] subtrahends)
         {
-            if (a.Length != b.Length)
-                throw new ArgumentException("Both arrays must have the same length.");
+            if (minuends is null || subtrahends is null)
+                ThrowHelper.Throw<ArgumentException>("Both arrays must be non-null.");
+            if (minuends?.Length != subtrahends?.Length)
+                ThrowHelper.Throw<ArgumentException>("Both arrays must have the same length.");
 
-            int[] result = new int[a.Length];
+            int[] result = new int[minuends.Length];
             for (int i = 0; i < result.Length; i++)
-                result[i] = a[i] - b[i];
+                result[i] = minuends[i] - subtrahends[i];
             return result;
         }
 
@@ -150,17 +189,6 @@ namespace Garyon.Extensions.ArrayExtensions
             var result = new List<int>();
             for (int i = 0; i < a.Length; i++)
                 if (a[i] != i)
-                    result.Add(a[i]);
-            return result.ToArray();
-        }
-        /// <summary>Returns a new array whose integer values are different than their respective indices in the original array counting from the last index.</summary>
-        /// <param name="a">The array whose integer values matching their respective indices counting from the last index will be removed.</param>
-        /// <param name="length"></param>
-        public static int[] RemoveElementsMatchingIndicesFromEnd(this int[] a, int length)
-        {
-            var result = new List<int>();
-            for (int i = 0; i < a.Length; i++)
-                if (a[i] != length - a.Length + i)
                     result.Add(a[i]);
             return result.ToArray();
         }
