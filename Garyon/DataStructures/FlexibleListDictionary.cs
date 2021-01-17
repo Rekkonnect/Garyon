@@ -31,14 +31,6 @@ namespace Garyon.DataStructures
                 Add(kvp.Key, new List<TObject>(kvp.Value));
         }
 
-        /// <summary>Adds the provided object to the list the provided key maps to. If the list did not exist, it is initialized with that object, otherwise it is simply added.</summary>
-        /// <param name="key">The key to add to the dictionary.</param>
-        /// <param name="value">The single object that will be added to the list the provided key will map to.</param>
-        public virtual void Add(TKey key, TObject value = default) => this[key].Add(value);
-        /// <summary>Adds the provided <seealso cref="KeyValuePair{TKey, TValue}"/> to the list the provided key maps to. If the list did not exist, it is initialized with that object, otherwise it is simply added.</summary>
-        /// <param name="kvp">The <seealso cref="KeyValuePair{TKey, TValue}"/> containing the key and the value within the list that will be added to the dictionary.</param>
-        public virtual void Add(KeyValuePair<TKey, TObject> kvp) => Add(kvp.Key, kvp.Value);
-
         public override FlexibleListDictionary<TKey, TObject> Clone() => new FlexibleListDictionary<TKey, TObject>(this);
 
         /// <summary>Attempts to get a value within the mapped list from a provided key and with an index within the list.</summary>

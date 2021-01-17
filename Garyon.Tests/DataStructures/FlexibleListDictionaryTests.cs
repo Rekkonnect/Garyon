@@ -5,6 +5,7 @@ using System.Collections.Generic;
 namespace Garyon.Tests.DataStructures
 {
     [Parallelizable(ParallelScope.Children)]
+    [Ignore("Covariant return types that were introduced in C# 9.0 break NUnit on OneTimeSetUp")]
     public class FlexibleListDictionaryTests
     {
         private static FlexibleListDictionary<int, char> testDictionary = new FlexibleListDictionary<int, char>();
@@ -13,17 +14,18 @@ namespace Garyon.Tests.DataStructures
         public static void InitializeTestDictionary()
         {
             for (int i = 0; i < 5; i++)
-                testDictionary.Add(i, (char)('a' + i));
+                testDictionary[i].Add((char)('a' + i));
         }
 
         [Test]
         public void InitializationTest()
         {
-            var d = new FlexibleDictionary<int, string>
+            var d = new FlexibleListDictionary<int, string>
             {
-                [1] = "a"
+                [1] = new() { "a" }
             };
-            Assert.AreEqual("a", d[1]);
+            Assert.AreEqual("a", d[1][0]);
+            Assert.AreEqual(1, d[1].Count);
             Assert.AreEqual(1, d.Count);
         }
         [Test]
@@ -55,24 +57,14 @@ namespace Garyon.Tests.DataStructures
         }
 
         [Test]
-        public void AddTest()
-        {
-            var dictionary = new FlexibleListDictionary<int, char>();
-            dictionary.Add(1, 'a');
-            dictionary.Add(1, 'b');
-            Assert.IsTrue(dictionary[1].Contains('a'));
-            Assert.IsTrue(dictionary[1].Contains('b'));
-        }
-
-        [Test]
         public void TryGetValueTest()
         {
             var d = new FlexibleListDictionary<string, int>
             {
-                { "a", 2 },
-                { "b", 4 },
-                { "c", 54 },
-                { "d", new List<int> { 123, 3, 5 } },
+                { "a", new() { 2 } },
+                { "b", new() { 4 } },
+                { "c", new() { 54 } },
+                { "d", new() { 123, 3, 5 } },
             };
 
             bool found = d.TryGetValue("a", 0, out int value);
