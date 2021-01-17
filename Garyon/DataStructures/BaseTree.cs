@@ -256,6 +256,7 @@ namespace Garyon.DataStructures
         }
         #endregion
 
+        /// <inheritdoc/>
         public bool Equals(TTree other)
         {
             if (other is null)

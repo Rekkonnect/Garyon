@@ -31,6 +31,7 @@ namespace Garyon.DataStructures
                 Add(kvp.Key, new List<TObject>(kvp.Value));
         }
 
+        /// <inheritdoc/>
         public override FlexibleListDictionary<TKey, TObject> Clone() => new FlexibleListDictionary<TKey, TObject>(this);
 
         /// <summary>Attempts to get a value within the mapped list from a provided key and with an index within the list.</summary>

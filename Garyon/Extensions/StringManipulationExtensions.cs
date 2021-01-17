@@ -1,4 +1,5 @@
 ﻿using Garyon.Extensions.ArrayExtensions;
+using System;
 using System.Text;
 
 namespace Garyon.Extensions
@@ -6,10 +7,15 @@ namespace Garyon.Extensions
     /// <summary>Provides extension functions for manipulating strings.</summary>
     public static class StringManipulationExtensions
     {
+        private const string UTF7ObsoletionMessage = "The UTF-7 encoding is insecure and should not be used. Consider using UTF-8 instead.";
+        private const string UTF7ObsoletionDiagnosticID = "SYSLIB0001";
+        private const string UTF7ObsoletionURLFormat = "https://aka.ms/dotnet-warnings/{0}";
+
         #region NOT
         /// <summary>Performs the NOT operation on a string encoded in the UTF-7 format.</summary>
         /// <param name="s">The string to perform the NOT operation on.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string NOTStringUTF7(this string s) => NOTString(s, Encoding.UTF7);
         /// <summary>Performs the NOT operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the NOT operation on.</param>
@@ -44,6 +50,7 @@ namespace Garyon.Extensions
         /// <param name="s">The string to perform the AND operation on.</param>
         /// <param name="mask">The value to AND each byte by.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string ANDStringUTF7(this string s, int mask) => ANDString(s, mask, Encoding.UTF7);
         /// <summary>Performs the AND operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the AND operation on.</param>
@@ -83,6 +90,7 @@ namespace Garyon.Extensions
         /// <param name="s">The string to perform the OR operation on.</param>
         /// <param name="mask">The value to OR each byte by.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string ORStringUTF7(this string s, int mask) => ORString(s, mask, Encoding.UTF7);
         /// <summary>Performs the OR operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the OR operation on.</param>
@@ -122,6 +130,7 @@ namespace Garyon.Extensions
         /// <param name="s">The string to perform the XOR operation on.</param>
         /// <param name="mask">The value to XOR each byte by.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string XORStringUTF7(this string s, int mask) => XORString(s, mask, Encoding.UTF7);
         /// <summary>Performs the XOR operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the XOR operation on.</param>
@@ -161,6 +170,7 @@ namespace Garyon.Extensions
         /// <param name="s">The string to perform the NAND operation on.</param>
         /// <param name="mask">The value to NAND each byte by.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string NANDStringUTF7(this string s, int mask) => NANDString(s, mask, Encoding.UTF7);
         /// <summary>Performs the NAND operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the NAND operation on.</param>
@@ -200,6 +210,7 @@ namespace Garyon.Extensions
         /// <param name="s">The string to perform the NOR operation on.</param>
         /// <param name="mask">The value to NOR each byte by.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string NORStringUTF7(this string s, int mask) => NORString(s, mask, Encoding.UTF7);
         /// <summary>Performs the NOR operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the NOR operation on.</param>
@@ -239,6 +250,7 @@ namespace Garyon.Extensions
         /// <param name="s">The string to perform the XNOR operation on.</param>
         /// <param name="mask">The value to XNOR each byte by.</param>
         /// <returns>The resulting string encoded in the UTF-7 format.</returns>
+        [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
         public static string XNORStringUTF7(this string s, int mask) => XNORString(s, mask, Encoding.UTF7);
         /// <summary>Performs the XNOR operation on a string encoded in the UTF-8 format.</summary>
         /// <param name="s">The string to perform the XNOR operation on.</param>

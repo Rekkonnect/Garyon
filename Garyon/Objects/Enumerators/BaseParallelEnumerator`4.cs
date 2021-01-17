@@ -29,6 +29,7 @@ namespace Garyon.Objects.Enumerators
             Enumerator4 = enumerator4.GetEnumerator();
         }
 
+        /// <inheritdoc/>
         protected override T GetCurrentValue<T>(int index)
         {
             return index switch

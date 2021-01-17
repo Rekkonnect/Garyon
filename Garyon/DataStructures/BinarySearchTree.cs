@@ -25,8 +25,11 @@ namespace Garyon.DataStructures
             : base(tree) { }
 
         #region Abstract Constructors
+        /// <inheritdoc/>
         protected override BinarySearchTreeNode<T> InitializeNewNode(T value = default) => new BinarySearchTreeNode<T>(value);
+        /// <inheritdoc/>
         protected override BinarySearchTreeNode<T> InitializeNewNode(BinarySearchTree<T> baseTree, T value = default) => new BinarySearchTreeNode<T>(baseTree, value);
+        /// <inheritdoc/>
         protected override BinarySearchTreeNode<T> InitializeNewNode(BinarySearchTreeNode<T> parentNode, T value = default) => new BinarySearchTreeNode<T>(parentNode, value);
         #endregion
     }

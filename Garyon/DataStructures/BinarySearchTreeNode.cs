@@ -36,8 +36,11 @@ namespace Garyon.DataStructures
             : base(parentNode, child1, child2, value) { }
 
         #region Abstract Constructors
+        /// <inheritdoc/>
         protected override BinarySearchTreeNode<T> InitializeNewNode(T value = default) => new BinarySearchTreeNode<T>(value);
+        /// <inheritdoc/>
         protected override BinarySearchTreeNode<T> InitializeNewNode(BinarySearchTree<T> baseTree, T value = default) => new BinarySearchTreeNode<T>(baseTree, value);
+        /// <inheritdoc/>
         protected override BinarySearchTreeNode<T> InitializeNewNode(BinarySearchTreeNode<T> parentNode, T value = default) => new BinarySearchTreeNode<T>(parentNode, value);
         #endregion
     }
@@ -258,6 +261,7 @@ namespace Garyon.DataStructures
         }
         #endregion
 
+        /// <inheritdoc/>
         protected override void AddChildrenToClonedInstance(TTreeNode result)
         {
             if (LeftChild != null)

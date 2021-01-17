@@ -41,8 +41,10 @@ namespace Garyon.DataStructures
             set { }
         }
 
+        /// <inheritdoc/>
         public abstract List<TTreeNode> Children { get; set; }
 
+        /// <inheritdoc/>
         public abstract int ChildrenCount { get; }
 
         /// <summary>Determines whether this node is the root; that is, its parent is <see langword="null"/>.</summary>
@@ -141,6 +143,10 @@ namespace Garyon.DataStructures
         /// <returns>The <seealso cref="TreeNode{T}"/> with the specified value, if found; otherwise <see langword="null"/>.</returns>
         public virtual TTreeNode GetNode(TValue value) => GetNode(TraversePreOrderNodes(), value);
 
+        /// <summary>Gets the first node that has the specified value from the specified collection.</summary>
+        /// <param name="collection">The collection that may contain the requested value.</param>
+        /// <param name="value">The value to find in the collection's nodes.</param>
+        /// <returns>The first node that was found in the collection, or <see langword="null"/>, if it was not found.</returns>
         protected static TTreeNode GetNode(IEnumerable<TTreeNode> collection, TValue value)
         {
             return collection.FirstOrDefault(node => Checks.SafeEquals(node.Value, value));

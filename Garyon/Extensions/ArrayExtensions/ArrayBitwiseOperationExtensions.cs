@@ -22,6 +22,7 @@ namespace Garyon.Extensions.ArrayExtensions
         /// <typeparam name="T">The type of the elements in the arrays.</typeparam>
         /// <param name="a">The <typeparamref name="T"/>[] whose elements to perform the NOT operation on.</param>
         /// <param name="startIndex">The index of the first element in the array to perform the NOT operation on.</param>
+        /// <param name="length">The length of the resulting array, which is the number of elements to perform the operation on.</param>
         /// <returns>The resulting <typeparamref name="T"/>[], containing the manipulated elements.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe T[] NOT<T>(this T[] a, int startIndex, int length)

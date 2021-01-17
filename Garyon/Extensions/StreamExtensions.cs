@@ -80,6 +80,7 @@ namespace Garyon.Extensions
         /// <summary>Writes a <seealso cref="string"/> encoded in a specified encoding to the stream at the current position.</summary>
         /// <param name="stream">The stream to write to.</param>
         /// <param name="s">The string to write to the stream.</param>
+        /// <param name="encoding">The encoding of the string.</param>
         public static void WriteString(this Stream stream, string s, Encoding encoding) => stream.Write(encoding.GetBytes(s));
         #endregion
 

@@ -17,9 +17,12 @@ namespace Garyon.DataStructures
         bool ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly => false;
         #endregion
 
+        /// <inheritdoc/>
         public int Count => Dictionary.Count;
 
+        /// <inheritdoc/>
         public ICollection<TKey> Keys => Dictionary.Keys;
+        /// <inheritdoc/>
         public ICollection<TValue> Values => Dictionary.Values;
 
         /// <summary>Initializes a new instance of the <seealso cref="FlexibleDictionary{TKey, TValue}"/> class with the default initial capacity (16).</summary>
@@ -75,9 +78,12 @@ namespace Garyon.DataStructures
             Dictionary = new Dictionary<TKey, TValue>(other.Dictionary);
         }
 
+        /// <inheritdoc/>
         public virtual void Add(TKey key, TValue value = default) => Dictionary.TryAdd(key, value);
+        /// <inheritdoc/>
         public virtual void Add(KeyValuePair<TKey, TValue> kvp) => Dictionary.Add(kvp.Key, kvp.Value);
 
+        /// <inheritdoc/>
         public virtual bool Remove(TKey key) => Dictionary.Remove(key);
         /// <summary>Removes a collection of keys from this <seealso cref="FlexibleDictionary{TKey, TValue}"/>. Keys that are not present will be simply ignored.</summary>
         /// <param name="keys">The keys to remove. Must not be <see langword="null"/>.</param>
@@ -95,15 +101,19 @@ namespace Garyon.DataStructures
             return count;
         }
 
+        /// <inheritdoc/>
         public void Clear() => Dictionary.Clear();
 
         /// <summary>Clones this <seealso cref="FlexibleDictionary{TKey, TValue}"/> and adds all its keys to the resulting instance.</summary>
         /// <returns>The cloned instance containing the same key-value pairs.</returns>
         public virtual FlexibleDictionary<TKey, TValue> Clone() => new FlexibleDictionary<TKey, TValue>(this);
 
+        /// <inheritdoc/>
         public bool ContainsKey(TKey key) => Dictionary.ContainsKey(key);
+        /// <inheritdoc/>
         public bool TryGetValue(TKey key, out TValue value) => Dictionary.TryGetValue(key, out value);
 
+        /// <inheritdoc/>
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => Dictionary.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => Dictionary.GetEnumerator();
 

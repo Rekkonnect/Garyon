@@ -69,9 +69,9 @@ namespace Garyon.Extensions
             return lengths;
         }
 
-        /// <summary>Calculates the next available zero-based index in a <see cref="List{int}"/>.</summary>
-        /// <param name="indices">The <seealso cref="List{int}"/> containing the reserved indices.</param>
-        /// <returns>The next available zero-indexed value.</returns>
+        /// <summary>Calculates the next available zero-based index in a <see cref="List{T}"/> of indices.</summary>
+        /// <param name="indices">The <seealso cref="List{T}"/> containing the reserved indices.</param>
+        /// <returns>The next available zero-based index.</returns>
         public static int GetNextAvailableZeroBasedIndex(this List<int> indices)
         {
             var copy = new List<int>(indices);

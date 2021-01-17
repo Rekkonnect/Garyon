@@ -24,8 +24,11 @@ namespace Garyon.DataStructures
             : base(tree) { }
 
         #region Abstract Constructors
+        /// <inheritdoc/>
         protected override TreeNode<T> InitializeNewNode(T value = default) => new TreeNode<T>(value);
+        /// <inheritdoc/>
         protected override TreeNode<T> InitializeNewNode(Tree<T> baseTree, T value = default) => new TreeNode<T>(baseTree, value);
+        /// <inheritdoc/>
         protected override TreeNode<T> InitializeNewNode(TreeNode<T> parentNode, T value = default) => new TreeNode<T>(parentNode, value);
         #endregion
     }
@@ -58,7 +61,7 @@ namespace Garyon.DataStructures
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="value">The value of the parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newValues">The values of the new children to set to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.Children"/> property by setting the property to <paramref name="newValues"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.Children"/> property by setting the property to <paramref name="newValues"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TValue value, IEnumerable<TValue> newValues, bool propagate = true)
         {
             SetChildren(value, newValues.Select(v => InitializeNewNode(v)), propagate);
@@ -66,7 +69,7 @@ namespace Garyon.DataStructures
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newValues">The values of the new children to set to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.Children"/> property by setting the property to <paramref name="newValues"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.Children"/> property by setting the property to <paramref name="newValues"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TTreeNode node, IEnumerable<TValue> newValues, bool propagate = true)
         {
             SetChildren(node, newValues.Select(v => InitializeNewNode(v)), propagate);
@@ -74,7 +77,7 @@ namespace Garyon.DataStructures
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="value">The value of the parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newChildren">The new children to set to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TValue value, IEnumerable<TTreeNode> newChildren, bool propagate = true)
         {
             SetChildren(value, new List<TTreeNode>(newChildren), propagate);
@@ -82,7 +85,7 @@ namespace Garyon.DataStructures
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="value">The value of the parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newChildren">The new children to set to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TValue value, List<TTreeNode> newChildren, bool propagate = true)
         {
             SetChildren(GetNode(value), newChildren, propagate);
@@ -90,7 +93,7 @@ namespace Garyon.DataStructures
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newChildren">The new children to set to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TTreeNode node, IEnumerable<TTreeNode> newChildren, bool propagate = true)
         {
             SetChildren(node, new List<TTreeNode>(newChildren), propagate);
@@ -98,7 +101,7 @@ namespace Garyon.DataStructures
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newChildren">The new children to set to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.Children"/> property by setting the property to <paramref name="newChildren"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TTreeNode node, List<TTreeNode> newChildren, bool propagate = true)
         {
             if (!PrepareChildrenAdjustmentOperation(node))
@@ -113,7 +116,7 @@ namespace Garyon.DataStructures
         /// <summary>Adds a child to a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
         /// <param name="value">The value of the new child to add to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.AddChild(TreeNode{T})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.AddChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void AddChild(TTreeNode node, TValue value, bool propagate = true)
         {
             AddChild(node, InitializeNewNode(value), propagate);
@@ -121,7 +124,7 @@ namespace Garyon.DataStructures
         /// <summary>Adds a child to a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
         /// <param name="newChild">The new child to add to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.AddChild(TreeNode{T})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.AddChild(TTreeNode)"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void AddChild(TTreeNode node, TTreeNode newChild, bool propagate = true)
         {
             if (!PrepareChildrenAdjustmentOperation(node))
@@ -133,7 +136,7 @@ namespace Garyon.DataStructures
         /// <summary>Adds children to a node within this tree.</summary>
         /// <param name="node">The parent node whose children to add. The node must be within this tree.</param>
         /// <param name="newChildren">The new children to add to the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.AddChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.AddChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void AddChildren(TTreeNode node, IEnumerable<TTreeNode> newChildren, bool propagate = true)
         {
             if (!PrepareChildrenAdjustmentOperation(node))
@@ -146,7 +149,7 @@ namespace Garyon.DataStructures
 
         /// <summary>Removes this tree's root direct children.</summary>
         /// <param name="childrenToRemove">The children to remove from the tree root node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.RemoveChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.RemoveChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void RemoveRootChildren(IEnumerable<TValue> childrenToRemove, bool propagate = true)
         {
             RemoveChildren(Root, childrenToRemove, propagate);
@@ -154,7 +157,7 @@ namespace Garyon.DataStructures
 
         /// <summary>Removes this tree's root direct children.</summary>
         /// <param name="childrenToRemove">The children to remove from the tree root node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.RemoveChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.RemoveChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void RemoveRootChildren(IEnumerable<TTreeNode> childrenToRemove, bool propagate = true)
         {
             RemoveChildren(Root, childrenToRemove, propagate);
@@ -163,7 +166,7 @@ namespace Garyon.DataStructures
         /// <summary>Removes children from a node within this tree.</summary>
         /// <param name="value">The parent node whose children to add. The node must be within this tree.</param>
         /// <param name="childrenToRemove">The children to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.RemoveChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.RemoveChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void RemoveChildren(TValue value, IEnumerable<TTreeNode> childrenToRemove, bool propagate = true)
         {
             RemoveChildren(GetNode(value), childrenToRemove, propagate);
@@ -172,7 +175,7 @@ namespace Garyon.DataStructures
         /// <summary>Removes children from a node within this tree.</summary>
         /// <param name="value">The parent node whose children to add. The node must be within this tree.</param>
         /// <param name="childrenToRemove">The children to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.RemoveChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.RemoveChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void RemoveChildren(TValue value, IEnumerable<TValue> childrenToRemove, bool propagate = true)
         {
             RemoveChildren(GetNode(value), childrenToRemove, propagate);
@@ -181,7 +184,7 @@ namespace Garyon.DataStructures
         /// <summary>Removes children from a node within this tree.</summary>
         /// <param name="node">The parent node whose children to add. The node must be within this tree.</param>
         /// <param name="childrenToRemove">The children to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.RemoveChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.RemoveChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void RemoveChildren(TTreeNode node, IEnumerable<TValue> childrenToRemove, bool propagate = true)
         {
             if (!PrepareChildrenAdjustmentOperation(node))
@@ -194,7 +197,7 @@ namespace Garyon.DataStructures
         /// <summary>Removes children from a node within this tree.</summary>
         /// <param name="node">The parent node whose children to add. The node must be within this tree.</param>
         /// <param name="childrenToRemove">The children to remove from the node.</param>
-        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{T}.RemoveChildren(IEnumerable{TreeNode{T}})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
+        /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="TreeNode{TValue, TTree, TTreeNode}.RemoveChildren(IEnumerable{TTreeNode})"/> function. Only set this to <see langword="false"/> if the new child was already added before calling this function.</param>
         public void RemoveChildren(TTreeNode node, IEnumerable<TTreeNode> childrenToRemove, bool propagate = true)
         {
             if (!PrepareChildrenAdjustmentOperation(node))
@@ -204,6 +207,7 @@ namespace Garyon.DataStructures
                 node.RemoveChildren(childrenToRemove);
         }
 
+        /// <inheritdoc/>
         public override void ClearChildren(TTreeNode node, bool propagate = true)
         {
             SetChildren(node, new List<TTreeNode>(), propagate);

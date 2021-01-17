@@ -32,8 +32,11 @@ namespace Garyon.DataStructures
             : base(parentNode, childrenNodes, value) { }
 
         #region Abstract Constructors
+        /// <inheritdoc/>
         protected override TreeNode<T> InitializeNewNode(T value = default) => new TreeNode<T>(value);
+        /// <inheritdoc/>
         protected override TreeNode<T> InitializeNewNode(Tree<T> baseTree, T value = default) => new TreeNode<T>(baseTree, value);
+        /// <inheritdoc/>
         protected override TreeNode<T> InitializeNewNode(TreeNode<T> parentNode, T value = default) => new TreeNode<T>(parentNode, value);
         #endregion
     }
@@ -95,8 +98,10 @@ namespace Garyon.DataStructures
             }
         }
 
+        /// <inheritdoc/>
         public override int ChildrenCount => InternalChildren.Count;
 
+        /// <inheritdoc/>
         public override int Height
         {
             get
@@ -202,6 +207,7 @@ namespace Garyon.DataStructures
         }
         #endregion
 
+        /// <inheritdoc/>
         protected override void RegisterAddedChild(TTreeNode addedChild)
         {
             addedChild.InternalBaseTree = InternalBaseTree;
@@ -209,6 +215,7 @@ namespace Garyon.DataStructures
             InternalBaseTree?.AddChild(This, addedChild, false);
         }
 
+        /// <inheritdoc/>
         protected override void AddChildrenToClonedInstance(TTreeNode result)
         {
             foreach (var c in InternalChildren)
@@ -295,6 +302,7 @@ namespace Garyon.DataStructures
             RemoveChildren((IEnumerable<TValue>)values);
         }
 
+        /// <inheritdoc/>
         protected override bool PerformChildRemoval(TTreeNode childToRemove)
         {
             if (!InternalChildren.Remove(childToRemove))

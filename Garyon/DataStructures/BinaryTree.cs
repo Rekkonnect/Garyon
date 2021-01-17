@@ -23,8 +23,11 @@ namespace Garyon.DataStructures
             : base(tree) { }
 
         #region Abstract Constructors
+        /// <inheritdoc/>
         protected override BinaryTreeNode<T> InitializeNewNode(T value = default) => new BinaryTreeNode<T>(value);
+        /// <inheritdoc/>
         protected override BinaryTreeNode<T> InitializeNewNode(BinaryTree<T> baseTree, T value = default) => new BinaryTreeNode<T>(baseTree, value);
+        /// <inheritdoc/>
         protected override BinaryTreeNode<T> InitializeNewNode(BinaryTreeNode<T> parentNode, T value = default) => new BinaryTreeNode<T>(parentNode, value);
         #endregion
     }
@@ -56,7 +59,8 @@ namespace Garyon.DataStructures
         #region Children
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="value">The value of the parent node whose children to set. The node must be within this tree.</param>
-        /// <param name="leftChild">The new children to set to the node.</param>
+        /// <param name="leftChild">The left child to set to the node.</param>
+        /// <param name="rightChild">The right child to set to the node.</param>
         /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BinaryTreeNode{TValue, TTree, TTreeNode}.LeftChild"/> and <seealso cref="BinaryTreeNode{TValue, TTree, TTreeNode}.RightChild"/> properties by setting the property to <paramref name="leftChild"/>. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TValue value, TTreeNode leftChild, TTreeNode rightChild, bool propagate = true)
         {
@@ -64,7 +68,8 @@ namespace Garyon.DataStructures
         }
         /// <summary>Sets the children of a node within this tree.</summary>
         /// <param name="node">The parent node whose children to set. The node must be within this tree.</param>
-        /// <param name="leftChild">The new children to set to the node.</param>
+        /// <param name="leftChild">The left child to set to the node.</param>
+        /// <param name="rightChild">The right child to set to the node.</param>
         /// <param name="propagate">Determines whether this function should propagate to the <seealso cref="BinaryTreeNode{TValue, TTree, TTreeNode}.LeftChild"/> and <seealso cref="BinaryTreeNode{TValue, TTree, TTreeNode}.RightChild"/> properties by setting the property to <paramref name="leftChild"/> and <paramref name="rightChild"/> respectively. Only set this to <see langword="false"/> if the new children are already set in the node before calling this function.</param>
         public void SetChildren(TTreeNode node, TTreeNode leftChild, TTreeNode rightChild, bool propagate = true)
         {
@@ -175,6 +180,7 @@ namespace Garyon.DataStructures
                 node.RemoveChildren(childrenToRemove);
         }
 
+        /// <inheritdoc/>
         public override void ClearChildren(TTreeNode node, bool propagate = true)
         {
             SetChildren(node, null, null, propagate);

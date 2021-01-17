@@ -6,6 +6,7 @@
     {
         private string label;
 
+        /// <inheritdoc/>
         public sealed override string Label => label;
         /// <summary>Sets the label of this object to a value.</summary>
         public string VariableLabel { set => label = value; }

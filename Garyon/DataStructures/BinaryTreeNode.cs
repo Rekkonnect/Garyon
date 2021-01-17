@@ -11,26 +11,33 @@ namespace Garyon.DataStructures
     public class BinaryTreeNode<T> : BinaryTreeNode<T, BinaryTree<T>, BinaryTreeNode<T>>
     {
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(T value = default)
             : base(value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
         /// <param name="baseTree">The base tree that contains this node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(BinaryTree<T> baseTree, T value = default)
             : base(baseTree, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(BinaryTreeNode<T> parentNode, T value = default)
             : base(parentNode, value) { }
         /// <summary>Initializes a new instance of the <seealso cref="BinaryTreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
         /// <param name="parentNode">The parent node.</param>
         /// <param name="leftChild">The left child node.</param>
         /// <param name="rightChild">The right child node.</param>
+        /// <param name="value">The value of the node.</param>
         public BinaryTreeNode(BinaryTreeNode<T> parentNode, BinaryTreeNode<T> leftChild, BinaryTreeNode<T> rightChild, T value = default)
             : base(parentNode, leftChild, rightChild, value) { }
 
         #region Abstract Constructors
+        /// <inheritdoc/>
         protected override BinaryTreeNode<T> InitializeNewNode(T value = default) => new BinaryTreeNode<T>(value);
+        /// <inheritdoc/>
         protected override BinaryTreeNode<T> InitializeNewNode(BinaryTree<T> baseTree, T value = default) => new BinaryTreeNode<T>(baseTree, value);
+        /// <inheritdoc/>
         protected override BinaryTreeNode<T> InitializeNewNode(BinaryTreeNode<T> parentNode, T value = default) => new BinaryTreeNode<T>(parentNode, value);
         #endregion
     }
@@ -121,8 +128,10 @@ namespace Garyon.DataStructures
             }
         }
 
+        /// <inheritdoc/>
         public sealed override int ChildrenCount => Convert.ToInt32(LeftChild != null) + Convert.ToInt32(RightChild != null);
 
+        /// <inheritdoc/>
         public sealed override int Height
         {
             get
@@ -221,12 +230,14 @@ namespace Garyon.DataStructures
         }
         #endregion
 
+        /// <inheritdoc/>
         protected sealed override void RegisterAddedChild(TTreeNode addedChild)
         {
             addedChild.InternalBaseTree = InternalBaseTree;
             addedChild.InternalParent = this as TTreeNode;
             InternalBaseTree?.AddChild(This, addedChild, false);
         }
+        /// <inheritdoc/>
         protected sealed override bool PerformChildRemoval(TTreeNode childToRemove)
         {
             // BST searching rules are more expensive than just checking both children if they are equal to the value; no need to override further
@@ -240,6 +251,7 @@ namespace Garyon.DataStructures
             return true;
         }
 
+        /// <inheritdoc/>
         protected override void AddChildrenToClonedInstance(TTreeNode result)
         {
             if (LeftChild != null)
