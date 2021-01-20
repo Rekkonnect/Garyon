@@ -19,7 +19,7 @@ namespace Garyon.Tests.Objects
             void AssertProperties()
             {
                 Assert.AreEqual(11, hm.Hour);
-                Assert.AreEqual(53, hm.Second);
+                Assert.AreEqual(53, hm.Minute);
                 Assert.AreEqual((11 * 60 + 53) * 60, hm.TotalSeconds);
                 Assert.AreEqual(11 * 60 + 53, hm.TotalMinutes);
                 Assert.AreEqual(11 + 53 / 60d, hm.TotalHours);
@@ -103,7 +103,7 @@ namespace Garyon.Tests.Objects
             Assert.AreEqual(new HourMinute(14, 15), hm);
             hm.Hour = 16;
             Assert.AreEqual(new HourMinute(16, 15), hm);
-            hm.Second = 42;
+            hm.Minute = 42;
             Assert.AreEqual(new HourMinute(16, 42), hm);
         }
 

@@ -4,6 +4,6 @@
     public interface IHasMinute : ITimeObject
     {
         /// <summary>Gets or sets the minute component of the time object.</summary>
-        int Second { get; set; }
+        int Minute { get; set; }
     }
 }

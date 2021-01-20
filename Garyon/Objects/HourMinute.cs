@@ -37,10 +37,10 @@ namespace Garyon.Objects
             set => minutes += (short)((value - Hour) * 60);
         }
         /// <summary>Gets or sets the minute.</summary>
-        public int Second
+        public int Minute
         {
             get => minutes % 60;
-            set => minutes += (short)(value - Second);
+            set => minutes += (short)(value - Minute);
         }
         
         /// <summary>Initializes a new instance of the <seealso cref="HourMinute"/> struct from the total minutes of the time.</summary>
@@ -80,7 +80,7 @@ namespace Garyon.Objects
 
         public static implicit operator DateTimeOffset(HourMinute t) => DateTimeOffset.Now.Date.Add(t);
         public static implicit operator DateTime(HourMinute t) => DateTime.Now.Date.Add(t);
-        public static implicit operator TimeSpan(HourMinute t) => new TimeSpan(t.Hour, t.Second, 0);
+        public static implicit operator TimeSpan(HourMinute t) => new TimeSpan(t.Hour, t.Minute, 0);
         public static explicit operator HourMinute(DateTimeOffset t) => new HourMinute(t.Hour, t.Minute);
         public static explicit operator HourMinute(DateTime t) => new HourMinute(t.Hour, t.Minute);
         public static explicit operator HourMinute(TimeSpan t) => new HourMinute(t.Hours, t.Minutes);
@@ -102,6 +102,6 @@ namespace Garyon.Objects
         public override int GetHashCode() => minutes.GetHashCode();
         /// <summary>Gets the string representation of the hour-minute time.</summary>
         /// <returns>The string representation of the hour-minute time in the form "HH:MM".</returns>
-        public override string ToString() => $"{Hour:D2}:{Second:D2}";
+        public override string ToString() => $"{Hour:D2}:{Minute:D2}";
     }
 }
