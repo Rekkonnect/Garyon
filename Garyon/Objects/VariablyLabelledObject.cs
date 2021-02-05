@@ -14,7 +14,7 @@
         /// <summary>Initializes a new instance of the <seealso cref="LabelledObject{T}"/> class.</summary>
         /// <param name="label">The label of the object.</param>
         /// <param name="value">The value of the object.</param>
-        protected VariablyLabelledObject(string label, T value = default)
+        public VariablyLabelledObject(string label, T value = default)
             : base(value)
         {
             VariableLabel = label;
