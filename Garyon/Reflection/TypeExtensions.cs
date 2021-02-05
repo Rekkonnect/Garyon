@@ -4,6 +4,7 @@ using Garyon.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Garyon.Reflection
 {
@@ -73,6 +74,33 @@ namespace Garyon.Reflection
 
             return inherited.IsAssignableFrom(type);
         }
+
+        /// <summary>Determines whether a type implements an interface type.</summary>
+        /// <typeparam name="T">The type of the interface.</typeparam>
+        /// <param name="type">The type to check if it implements the provided interface type. Must not be <see langword="null"/>.</param>
+        /// <returns><see langword="true"/> if the type implements the provided interface type, otherwise <see langword="false"/>.</returns>
+        /// <exception cref="ArgumentException"><paramref name="type"/> is a type that cannot implement interfaces, or <typeparamref name="T"/> is not an interface.</exception>
+        public static bool Implements<T>(this Type type)
+            where T : class
+        {
+            return Implements(type, typeof(T));
+        }
+        /// <summary>Determines whether a type implements an interface type.</summary>
+        /// <param name="type">The type to check if it implements the provided interface type. Must not be <see langword="null"/>.</param>
+        /// <param name="interfaceType">The type of the interface. Must not be <see langword="null"/>.</param>
+        /// <returns><see langword="true"/> if the type implements the provided interface type, otherwise <see langword="false"/>.</returns>
+        /// <exception cref="ArgumentException"><paramref name="type"/> is a type that cannot implement interfaces, or <paramref name="interfaceType"/> is not an interface.</exception>
+        public static bool Implements(this Type type, Type interfaceType)
+        {
+            if (!interfaceType.IsInterface)
+                ThrowHelper.Throw<ArgumentException>("The requested interface type is not an interface type.");
+
+            if (!type.CanInheritInterfaces())
+                ThrowHelper.Throw<ArgumentException>("The provided type cannot implement interfaces.");
+
+            return type.GetInterfaces().Contains(interfaceType);
+        }
+
         /// <summary>Determines the number of base types that the provided type directly inherits, excluding the special classes <seealso cref="ValueType"/>, <seealso cref="Array"/>, <seealso cref="Delegate"/>, <seealso cref="Enum"/> and <seealso cref="Object"/>.</summary>
         /// <param name="type">The type whose inheritance level to determine.</param>
         /// <returns>The number of base types that the provided type inherits. For value types, pointers, arrays, and delegates this is equal to 0, and for reference types it is equal to the number of classes that are recursively directly inherited, excluding the <seealso cref="Object"/> class.</returns>
@@ -283,6 +311,11 @@ namespace Garyon.Reflection
         /// <param name="type">The type to determine whether it is a reference type.</param>
         /// <returns><see langword="true"/> if the type is a class or an interface, otherwise <see langword="false"/>.</returns>
         public static bool IsReferenceType(this Type type) => (type.IsClass || type.IsInterface) && !type.IsPointer;
+
+        /// <summary>Determines whether the given type is a valid type argument.</summary>
+        /// <param name="type">The type to determine whether it is a valid type argument.</param>
+        /// <returns><see langword="true"/> if the type is a valid type argument, that is, it is not a by ref, a by ref-like, a pointer, or <see langword="void"/>, otherwise <see langword="false"/>.</returns>
+        public static bool IsValidTypeArgument(this Type type) => !type.IsByRef && !type.IsByRefLike && !type.IsPointer && !type.IsVoid();
         #endregion
 
         #region Arrays
@@ -352,6 +385,7 @@ namespace Garyon.Reflection
         }
         #endregion
 
+        #region Element Types
         /// <summary>Gets the deepest element type of the provided type.</summary>
         /// <param name="type">The type.</param>
         /// <returns>The deepest element type according to <seealso cref="Type.GetElementType()"/>.</returns>
@@ -385,5 +419,60 @@ namespace Garyon.Reflection
         {
             return type.ContainsElementsOfType(typeof(T));
         }
+        #endregion
+
+        #region Instances
+        /// <summary>Gets the public parameterless constructor of the <see cref="Type"/>.</summary>
+        /// <param name="type">The type whose public parameterless constructor to get.</param>
+        /// <returns>The public parameterless constructor of the type, or <see langword="null"/> if the type does not have one, or if the parameterless constructor is not public.</returns>
+        public static ConstructorInfo GetParameterlessConstructor(this Type type)
+        {
+            return type.GetConstructor(Type.EmptyTypes);
+        }
+        /// <summary>Gets the parameterless constructor of the <see cref="Type"/>. The constructor may have any accessibility.</summary>
+        /// <param name="type">The type whose parameterless constructor to get.</param>
+        /// <returns>The parameterless constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
+        public static ConstructorInfo GetAnyAccessibilityParameterlessConstructor(this Type type)
+        {
+            return type.GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, Type.EmptyTypes, null);
+        }
+
+        /// <summary>Initializes a new instance of a <seealso cref="Type"/> by calling its public parameterless constructor.</summary>
+        /// <typeparam name="T">The type of the resulting instance.</typeparam>
+        /// <param name="type">The type of the resulting instance.</param>
+        /// <returns>The initialized instance, or <see langword="null"/> if no public parameterless constructor was not found.</returns>
+        public static T InitializeInstance<T>(this Type type)
+        {
+            return (T)InitializeInstance(type);
+        }
+        /// <summary>Initializes a new instance of a <seealso cref="Type"/> with the given parameters in the constructor.</summary>
+        /// <typeparam name="T">The type of the resulting instance.</typeparam>
+        /// <param name="type">The type of the resulting instance.</param>
+        /// <param name="parameters">The parameters of the constructor.</param>
+        /// <returns>The initialized instance, or <see langword="null"/> if such a constructor was not found.</returns>
+        public static T InitializeInstance<T>(this Type type, params object?[]? parameters)
+        {
+            return (T)InitializeInstance(type, parameters);
+        }
+
+        /// <summary>Initializes a new instance of a <seealso cref="Type"/> by calling its public parameterless constructor.</summary>
+        /// <param name="type">The type of the resulting instance.</param>
+        /// <returns>The initialized instance, or <see langword="null"/> if no public parameterless constructor was not found.</returns>
+        public static object InitializeInstance(this Type type)
+        {
+            return type.GetParameterlessConstructor()?.Invoke(null);
+        }
+        /// <summary>Initializes a new instance of a <seealso cref="Type"/> with the given parameters in the constructor.</summary>
+        /// <param name="type">The type of the resulting instance.</param>
+        /// <param name="parameters">The parameters of the constructor.</param>
+        /// <returns>The initialized instance, or <see langword="null"/> if such a constructor was not found.</returns>
+        public static object InitializeInstance(this Type type, params object?[]? parameters)
+        {
+            if (parameters == null)
+                return InitializeInstance(type);
+
+            return type.GetConstructor(parameters.Select(p => p?.GetType()).ToArray())?.Invoke(parameters);
+        }
+        #endregion
     }
 }

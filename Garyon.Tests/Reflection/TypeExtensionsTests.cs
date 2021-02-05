@@ -343,5 +343,103 @@ CD
             Assert.IsTrue(typeof(int**[,,][,,,]).ContainsElementsOfType(typeof(int**)));
             Assert.IsTrue(typeof(int**[,,][,,,]).ContainsElementsOfType(typeof(int*)));
         }
+
+        #region Instances
+        private class PrivateConstructorContainer
+        {
+            private PrivateConstructorContainer() { }
+        }
+        private class PrivateProtectedConstructorContainer
+        {
+            private protected PrivateProtectedConstructorContainer() { }
+        }
+        private class ProtectedConstructorContainer
+        {
+            protected ProtectedConstructorContainer() { }
+        }
+        private class ProtectedInternalConstructorContainer
+        {
+            protected internal ProtectedInternalConstructorContainer() { }
+        }
+        private class InternalConstructorContainer
+        {
+            internal InternalConstructorContainer() { }
+        }
+        private class PublicConstructorContainer
+        {
+            public PublicConstructorContainer() { }
+        }
+
+        [Test]
+        public void GetParameterlessConstructorTest()
+        {
+            Assert.IsNotNull(typeof(PublicConstructorContainer).GetParameterlessConstructor());
+            Assert.IsNull(typeof(InternalConstructorContainer).GetParameterlessConstructor());
+            Assert.IsNull(typeof(ProtectedInternalConstructorContainer).GetParameterlessConstructor());
+            Assert.IsNull(typeof(ProtectedConstructorContainer).GetParameterlessConstructor());
+            Assert.IsNull(typeof(PrivateProtectedConstructorContainer).GetParameterlessConstructor());
+            Assert.IsNull(typeof(PrivateConstructorContainer).GetParameterlessConstructor());
+        }
+        [Test]
+        public void GetAnyAccessibilityParameterlessConstructorTest()
+        {
+            // Holy shit those are some long names
+            Assert.IsNotNull(typeof(PublicConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+            Assert.IsNotNull(typeof(InternalConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+            Assert.IsNotNull(typeof(ProtectedInternalConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+            Assert.IsNotNull(typeof(ProtectedConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+            Assert.IsNotNull(typeof(PrivateProtectedConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+            Assert.IsNotNull(typeof(PrivateConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+        }
+
+        [Test]
+        public void InitializeInstanceTest()
+        {
+            AssertInstanceInitialization<PublicConstructorContainer>();
+            AssertInvalidInstanceInitialization<InternalConstructorContainer>();
+            AssertInvalidInstanceInitialization<ProtectedInternalConstructorContainer>();
+            AssertInvalidInstanceInitialization<ProtectedConstructorContainer>();
+            AssertInvalidInstanceInitialization<PrivateProtectedConstructorContainer>();
+            AssertInvalidInstanceInitialization<PrivateConstructorContainer>();
+
+            static void AssertInstanceInitialization<T>()
+                where T : class
+            {
+                Assert.IsInstanceOf<T>(typeof(T).InitializeInstance<T>());
+            }
+            static void AssertInvalidInstanceInitialization<T>()
+                where T : class
+            {
+                Assert.IsNull(typeof(T).InitializeInstance<T>());
+            }
+        }
+
+        private class ArgumentConstructorContainer
+        {
+            public ArgumentConstructorContainer(string a, string b) { }
+            public ArgumentConstructorContainer(int k) { }
+        }
+
+        [Test]
+        public void InitializeInstanceWithArgumentsTest()
+        {
+            AssertInstanceInitialization<ArgumentConstructorContainer>("a", "b");
+            AssertInstanceInitialization<ArgumentConstructorContainer>(0);
+            AssertInvalidInstanceInitialization<ArgumentConstructorContainer>();
+            AssertInvalidInstanceInitialization<ArgumentConstructorContainer>("a");
+            AssertInvalidInstanceInitialization<ArgumentConstructorContainer>(0, 0);
+
+            static void AssertInstanceInitialization<T>(params object?[]? parameters)
+                where T : class
+            {
+                Assert.IsInstanceOf<T>(typeof(T).InitializeInstance<T>(parameters));
+            }
+            static void AssertInvalidInstanceInitialization<T>(params object?[]? parameters)
+                where T : class
+            {
+                Assert.IsNull(typeof(T).InitializeInstance<T>(parameters));
+            }
+        }
+        #endregion
     }
 }
