@@ -26,26 +26,27 @@ namespace Garyon.Extensions
 
         /// <summary>Swaps two elements in the <seealso cref="IList{T}"/>.</summary>
         /// <typeparam name="T">The type of the elements contained in the <seealso cref="IList{T}"/>.</typeparam>
-        /// <param name="l">The <seealso cref="IList{T}"/> within which to swap two elements.</param>
+        /// <param name="list">The <seealso cref="IList{T}"/> within which to swap two elements.</param>
         /// <param name="a">The index of the first element to swap.</param>
         /// <param name="b">The index of the second element to swap.</param>
         /// <returns>The instance of the <seealso cref="IList{T}"/> in which two elements were swapped.</returns>
-        public static IList<T> Swap<T>(this IList<T> l, int a, int b)
+        public static IList<T> Swap<T>(this IList<T> list, int a, int b)
         {
-            return l.Swap((Index)a, b);
+            T t = list[a];
+            list[a] = list[b];
+            list[b] = t;
+            return list;
         }
         /// <summary>Swaps two elements in the <seealso cref="IList{T}"/>.</summary>
         /// <typeparam name="T">The type of the elements contained in the <seealso cref="IList{T}"/>.</typeparam>
-        /// <param name="l">The <seealso cref="IList{T}"/> within which to swap two elements.</param>
+        /// <param name="list">The <seealso cref="IList{T}"/> within which to swap two elements.</param>
         /// <param name="a">The index of the first element to swap.</param>
         /// <param name="b">The index of the second element to swap.</param>
         /// <returns>The instance of the <seealso cref="IList{T}"/> in which two elements were swapped.</returns>
-        public static IList<T> Swap<T>(this IList<T> l, Index a, Index b)
+        public static IList<T> Swap<T>(this IList<T> list, Index a, Index b)
         {
-            T t = l[a];
-            l[a] = l[b];
-            l[b] = t;
-            return l;
+            int count = list.Count;
+            return list.Swap(a.GetOffset(count), b.GetOffset(count));
         }
     }
 }
