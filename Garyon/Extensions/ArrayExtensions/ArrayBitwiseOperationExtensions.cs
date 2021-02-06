@@ -194,6 +194,7 @@ namespace Garyon.Extensions.ArrayExtensions
         /// <param name="startIndex">The index of the first element in the array to perform the operation on.</param>
         /// <param name="length">The length of the resulting array, which is the number of elements to perform the operation on.</param>
         /// <param name="mask">The mask that will be applied in the operation, if supported.</param>
+        /// <param name="operation">The bitwise operation to perform.</param>
         /// <returns>The resulting <typeparamref name="T"/>[], containing the manipulated elements.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe T[] PerformBitwiseOperation<T>(this T[] a, int startIndex, int length, T mask, BitwiseOperation operation)
