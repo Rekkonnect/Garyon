@@ -473,6 +473,16 @@ namespace Garyon.Reflection
 
             return type.GetConstructor(parameters.Select(p => p?.GetType()).ToArray())?.Invoke(parameters);
         }
+
+        /// <summary>Gets the default value of the given type.</summary>
+        /// <param name="type">The type whose default value to get.</param>
+        /// <returns>Returns the default value of the type, if it is a value type, by calling its parameterless constructor is called, otherwise <see langword="null"/>.</returns>
+        public static object GetDefaultValue(this Type type)
+        {
+            if (type.IsValueType)
+                return Activator.CreateInstance(type);
+            return null;
+        }
         #endregion
     }
 }
