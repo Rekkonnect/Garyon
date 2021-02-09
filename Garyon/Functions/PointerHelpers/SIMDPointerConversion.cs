@@ -149,6 +149,9 @@ namespace Garyon.Functions.PointerHelpers
 
             if (typeof(TTo) == typeof(float))
             {
+                if (typeof(TFrom) == typeof(double))
+                    return Avx.IsSupported;
+
                 if (sizeof(TFrom) == sizeof(byte))
                     return Avx2.IsSupported;
                 if (sizeof(TFrom) == sizeof(short))

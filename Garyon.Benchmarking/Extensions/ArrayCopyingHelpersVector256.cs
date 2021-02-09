@@ -175,6 +175,15 @@ namespace Garyon.Benchmarking.Extensions
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
+        [BenchmarkCategory("Single > Single", "Unsafe Vector256")]
+        public unsafe void SingleToSingleArrayUnsafe()
+        {
+            fixed (float* o = OriginalSingleArray)
+            fixed (float* t = TargetSingleArray)
+                if (!CopyToInt64ArrayVector256((long*)o, (long*)t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
         [BenchmarkCategory("Single > Double", "Unsafe Vector256")]
         public unsafe void SingleToDoubleArrayUnsafe()
         {
@@ -193,6 +202,24 @@ namespace Garyon.Benchmarking.Extensions
             fixed (double* o = OriginalDoubleArray)
             fixed (int* t = TargetInt32Array)
                 if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("Double > Single", "Unsafe Vector256")]
+        public unsafe void DoubleToSingleArrayUnsafe()
+        {
+            fixed (double* o = OriginalDoubleArray)
+            fixed (float* t = TargetSingleArray)
+                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
+                    Throw<InstructionSetBenchmarkException>();
+        }
+        [Benchmark]
+        [BenchmarkCategory("Double > Double", "Unsafe Vector256")]
+        public unsafe void DoubleToDoubleArrayUnsafe()
+        {
+            fixed (double* o = OriginalDoubleArray)
+            fixed (double* t = TargetDoubleArray)
+                if (!CopyToInt64ArrayVector256((long*)o, (long*)t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
