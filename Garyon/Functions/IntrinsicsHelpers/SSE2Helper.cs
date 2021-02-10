@@ -169,7 +169,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
         public static void StoreLastElementsVector128<T>(T* origin, float* target, uint index, uint length)
             where T : unmanaged
         {
-            if (!Sse41.IsSupported)
+            if (!Sse2.IsSupported)
                 return;
 
             PointerArithmetic.Increment(ref origin, ref target, index);
@@ -215,7 +215,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
             if (Sse2.IsSupported)
                 Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
         }
-
         #endregion
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

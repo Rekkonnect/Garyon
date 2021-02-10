@@ -7,8 +7,6 @@ namespace Garyon.Functions.IntrinsicsHelpers
     /// <summary>Provides helper functions for the AVX CPU instruction set. Every function checks whether the AVX CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
     public abstract unsafe class AVXHelper : SSE42Helper
     {
-        protected static readonly Vector256<byte> Vector256Max = Vector256.Create(byte.MaxValue);
-
         #region Store
         #region T* -> int*
         public static void StoreVector256(float* origin, int* target, uint index)
@@ -173,7 +171,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where T : unmanaged
         {
             if (Avx.IsSupported)
-                return Avx.Xor(vector.AsSingle(), Vector256Max.AsSingle()).As<float, T>();
+                return Avx.Xor(vector.AsSingle(), Vector256<float>.AllBitsSet).As<float, T>();
             return default;
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

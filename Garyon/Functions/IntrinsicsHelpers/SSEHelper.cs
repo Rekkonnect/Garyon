@@ -4,11 +4,9 @@ using System.Runtime.Intrinsics.X86;
 
 namespace Garyon.Functions.IntrinsicsHelpers
 {
-    /// <summary>Provides helper functions for the SSE CPU instruction set. Every function checks whether the SSE2 CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
+    /// <summary>Provides helper functions for the SSE CPU instruction set. Every function checks whether the SSE CPU instruction set is supported, and if it's not, the functions do nothing.</summary>
     public abstract unsafe class SSEHelper : SIMDIntrinsicsHelper
     {
-        protected static readonly Vector128<byte> Vector128Max = Vector128.Create(byte.MaxValue);
-
         #region Store
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreVector128<T>(T* origin, T* target, uint index)
@@ -99,7 +97,7 @@ namespace Garyon.Functions.IntrinsicsHelpers
             where T : unmanaged
         {
             if (Sse.IsSupported)
-                return Sse.Xor(vector.AsSingle(), Vector128Max.AsSingle()).As<float, T>();
+                return Sse.Xor(vector.AsSingle(), Vector128<float>.AllBitsSet).As<float, T>();
             return default;
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
