@@ -14,6 +14,22 @@ namespace Garyon.Extensions.ArrayExtensions.ArrayConverting
         /// <param name="a">The <typeparamref name="T"/>[] whose elements to copy.</param>
         /// <returns>The resulting array.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static unsafe T[] CopyAccelerated<T>(this T[] a, T[] result)
+            where T : unmanaged
+        {
+            uint length = (uint)a.Length;
+
+            fixed (T* origin = a)
+            fixed (T* target = result)
+                CopyTo(origin, target, length);
+
+            return result;
+        }
+        /// <summary>Copies all the elements of the <typeparamref name="T"/>[] to a new <typeparamref name="T"/>[] by using hardware acceleration for direct byte copy and returns the resulting <typeparamref name="T"/>[].</summary>
+        /// <typeparam name="T">The type of the elements in the array.</typeparam>
+        /// <param name="a">The <typeparamref name="T"/>[] whose elements to copy.</param>
+        /// <returns>The resulting array.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe T[] CopyAccelerated<T>(this T[] a)
             where T : unmanaged
         {
