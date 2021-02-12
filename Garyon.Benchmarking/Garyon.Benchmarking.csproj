@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
-    <PackageReference Include="EPPlus" Version="5.1.0" />
+    <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.12.1" />
+    <PackageReference Include="EPPlus" Version="5.5.3" />
   </ItemGroup>
 
   <ItemGroup>

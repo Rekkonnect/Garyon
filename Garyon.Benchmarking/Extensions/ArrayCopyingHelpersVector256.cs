@@ -1,11 +1,13 @@
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnosers;
 using Garyon.Benchmarking.Exceptions;
 using Garyon.QualityControl.Extensions;
-using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 using static Garyon.Exceptions.ThrowHelper;
+using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 
 namespace Garyon.Benchmarking.Extensions
 {
+    [HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.CacheMisses)]
     public class ArrayCopyingHelpersVector256 : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
