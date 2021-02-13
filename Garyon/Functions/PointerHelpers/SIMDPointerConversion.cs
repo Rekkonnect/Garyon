@@ -49,11 +49,18 @@ namespace Garyon.Functions.PointerHelpers
                 if (!conversion.IsSupported)
                     return false;
 
-                uint size = (uint)Math.Min(Vector128<TFrom>.Count, Vector128<TTo>.Count);
+                uint count = (uint)Math.Min(Vector128<TFrom>.Count, Vector128<TTo>.Count);
+                uint size = count == (uint)Vector128<TFrom>.Count ? (uint)sizeof(TFrom) : (uint)sizeof(TTo);
+                ulong unalignedPointer = count == (uint)Vector128<TFrom>.Count ? (ulong)origin : (ulong)target;
 
-                uint i = 0;
-                uint limit = length & ~(size - 1);
-                for (; i < limit; i += size)
+                uint byteCount = (uint)Vector128<byte>.Count;
+                uint unalignedElements = ((byteCount - (uint)(unalignedPointer % byteCount)) % byteCount) / size;
+                if (unalignedElements > 0)
+                    conversion.CopyRemainingElements(origin, target, 0, unalignedElements);
+
+                uint i = unalignedElements;
+                uint limit = (length - unalignedElements) & ~(count - 1);
+                for (; i < limit; i += count)
                     conversion.PerformIteration(origin, target, i);
                 conversion.CopyRemainingElements(origin, target, i, length);
 
@@ -521,11 +528,18 @@ namespace Garyon.Functions.PointerHelpers
                 if (!conversion.IsSupported)
                     return false;
 
-                uint size = (uint)Math.Min(Vector256<TFrom>.Count, Vector256<TTo>.Count);
+                uint count = (uint)Math.Min(Vector256<TFrom>.Count, Vector256<TTo>.Count);
+                uint size = count == (uint)Vector256<TFrom>.Count ? (uint)sizeof(TFrom) : (uint)sizeof(TTo);
+                ulong unalignedPointer = count == (uint)Vector256<TFrom>.Count ? (ulong)origin : (ulong)target;
 
-                uint i = 0;
-                uint limit = length & ~(size - 1);
-                for (; i < limit; i += size)
+                uint byteCount = (uint)Vector256<byte>.Count;
+                uint unalignedElements = ((byteCount - (uint)(unalignedPointer % byteCount)) % byteCount) / size;
+                if (unalignedElements > 0)
+                    conversion.CopyRemainingElements(origin, target, 0, unalignedElements);
+
+                uint i = unalignedElements;
+                uint limit = (length - unalignedElements) & ~(count - 1);
+                for (; i < limit; i += count)
                     conversion.PerformIteration(origin, target, i);
                 conversion.CopyRemainingElements(origin, target, i, length);
 
