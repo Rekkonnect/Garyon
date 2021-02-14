@@ -1315,10 +1315,10 @@ namespace Garyon.Extensions.ArrayExtensions.ArrayConverting
             where TFrom : unmanaged
             where TTo : unmanaged
         {
-            if (SIMDPointerConversion.CopyToArrayVector256Generic(origin, target, length))
+            if (SIMDPointerConversion.CopyToArrayVector128(origin, target, length))
                 return;
 
-            if (SIMDPointerConversion.CopyToArrayVector128Generic(origin, target, length))
+            if (SIMDPointerConversion.CopyToArrayVector128(origin, target, length))
                 return;
 
             PointerConversion.ConvertTo(origin, target, length);

@@ -5,7 +5,7 @@ namespace Garyon.QualityControl.Extensions
     public class ArrayManipulationExtensionsQualityControlAsset : QualityControlAsset
     {
         // The length is explicitly set as this to better test the remainders
-        protected const int BaseArrayLength = 3 * 32;
+        protected const int BaseArrayLength = 383 * 32;
         protected const int ArrayLength = BaseArrayLength + 31;
         // This needs to be adjusted so that for each different remainder the unsafe functions work as intended
         // Current idea: create a class that contains all these arrays and their initialization, and adjust the tests so that they test

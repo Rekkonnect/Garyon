@@ -7,7 +7,7 @@ using static Garyon.Functions.PointerHelpers.SIMDPointerConversion;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    [HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.CacheMisses)]
+    //[HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.CacheMisses)]
     public class ArrayCopyingHelpersVector256 : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]
@@ -17,7 +17,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (byte* t = TargetByteArray)
-                if (!CopyToByteArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -26,7 +26,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -35,7 +35,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -44,7 +44,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -53,7 +53,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -62,7 +62,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (byte* o = OriginalByteArray)
             fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
@@ -74,7 +74,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (short* t = TargetInt16Array)
-                if (!CopyToInt16ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -83,7 +83,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -92,7 +92,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -101,7 +101,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -110,7 +110,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (short* o = OriginalInt16Array)
             fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
@@ -122,7 +122,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -131,7 +131,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -140,7 +140,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -149,7 +149,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
@@ -161,7 +161,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (long* o = OriginalInt64Array)
             fixed (long* t = TargetInt64Array)
-                if (!CopyToInt64ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
@@ -173,7 +173,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (float* o = OriginalSingleArray)
             fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -182,7 +182,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (float* o = OriginalSingleArray)
             fixed (float* t = TargetSingleArray)
-                if (!CopyToInt64ArrayVector256((long*)o, (long*)t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -191,7 +191,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (float* o = OriginalSingleArray)
             fixed (double* t = TargetDoubleArray)
-                if (!CopyToDoubleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion
@@ -203,7 +203,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (double* o = OriginalDoubleArray)
             fixed (int* t = TargetInt32Array)
-                if (!CopyToInt32ArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -212,7 +212,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (double* o = OriginalDoubleArray)
             fixed (float* t = TargetSingleArray)
-                if (!CopyToSingleArrayVector256(o, t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         [Benchmark]
@@ -221,7 +221,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (double* o = OriginalDoubleArray)
             fixed (double* t = TargetDoubleArray)
-                if (!CopyToInt64ArrayVector256((long*)o, (long*)t, ArrayLength))
+                if (!CopyToArrayVector256(o, t, ArrayLength))
                     Throw<InstructionSetBenchmarkException>();
         }
         #endregion

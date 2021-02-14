@@ -5,7 +5,7 @@ namespace Garyon.Tests.Extensions
 {
     public class ArrayCopyingHelpersUnvirtualizedVector128Tests : ArrayCopyingHelpersTestsBase
     {
-        protected unsafe override ArrayManipulationOperation<TOrigin, TTarget> GetArrayManipulationOperationDelegate<TOrigin, TTarget>() => CopyToArrayVector128Unvirtualized;
+        protected unsafe override ArrayManipulationOperation<TOrigin, TTarget> GetArrayManipulationOperationDelegate<TOrigin, TTarget>() => CopyToArrayVector128;
 
         #region byte[] -> T[]
         [Test]

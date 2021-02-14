@@ -135,7 +135,15 @@ namespace Garyon.Benchmarking.Exporting
                 // Set some document properties
                 package.Workbook.Properties.Title = "Benchmark Results";
 
-                package.SaveAs(new FileInfo("Benchmark Results 0.xlsx"));
+                for (int i = 0; ; i++)
+                {
+                    try
+                    {
+                        package.SaveAs(new FileInfo($"Benchmark Results {i}.xlsx"));
+                        break;
+                    }
+                    catch { }
+                }
             }
         }
     }

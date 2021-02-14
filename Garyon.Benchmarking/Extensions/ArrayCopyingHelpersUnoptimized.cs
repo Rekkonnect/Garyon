@@ -4,7 +4,7 @@ using Garyon.QualityControl.Extensions;
 
 namespace Garyon.Benchmarking.Extensions
 {
-    [HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.CacheMisses)]
+    //[HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.CacheMisses)]
     public class ArrayCopyingHelpersUnoptimized : ArrayManipulationExtensionsQualityControlAsset
     {
         #region byte[] -> T[]

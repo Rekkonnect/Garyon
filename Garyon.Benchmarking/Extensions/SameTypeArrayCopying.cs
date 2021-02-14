@@ -29,7 +29,7 @@ namespace Garyon.Benchmarking.Extensions
         {
             fixed (int* o = OriginalInt32Array)
             fixed (int* t = TargetInt32Array)
-                SIMDPointerConversion.CopyToArrayVector256Unvirtualized(o, t, ArrayLength);
+                SIMDPointerConversion.CopyToArrayVector256(o, t, ArrayLength);
         }
     }
 }
