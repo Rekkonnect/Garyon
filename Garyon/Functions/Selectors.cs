@@ -1,4 +1,6 @@
-﻿namespace Garyon.Functions
+﻿using System.Collections.Generic;
+
+namespace Garyon.Functions
 {
     /// <summary>Contains functions that can be used as selectors in functions that manipulate objects. Using these functions is advised over lambdas, as lambdas create a new delegate instance, effectively reducing performance.</summary>
     public static class Selectors
@@ -48,6 +50,27 @@
             where T : struct
         {
             return value.GetValueOrDefault();
+        }
+        #endregion
+
+        #region Key/Value Pair
+        /// <summary>Returns the key in a <seealso cref="KeyValuePair{TKey, TValue}"/> object.</summary>
+        /// <typeparam name="TKey">The type of the key.</typeparam>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="kvp">The provided <seealso cref="KeyValuePair{TKey, TValue}"/> object.</param>
+        /// <returns>The key stored in the <seealso cref="KeyValuePair{TKey, TValue}"/> object.</returns>
+        public static TKey KeyReturner<TKey, TValue>(KeyValuePair<TKey, TValue> kvp)
+        {
+            return kvp.Key;
+        }
+        /// <summary>Returns the value in a <seealso cref="KeyValuePair{TKey, TValue}"/> object.</summary>
+        /// <typeparam name="TKey">The type of the key.</typeparam>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="kvp">The provided <seealso cref="KeyValuePair{TKey, TValue}"/> object.</param>
+        /// <returns>The value stored in the <seealso cref="KeyValuePair{TKey, TValue}"/> object.</returns>
+        public static TValue ValueReturner<TKey, TValue>(KeyValuePair<TKey, TValue> kvp)
+        {
+            return kvp.Value;
         }
         #endregion
     }

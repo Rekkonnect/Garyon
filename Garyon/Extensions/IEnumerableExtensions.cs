@@ -681,6 +681,31 @@ namespace Garyon.Extensions
         }
         #endregion
 
+        #region Key/Value Pair
+        /// <summary>Projects each <seealso cref="KeyValuePair{TKey, TValue}"/> in the sequence into a new <seealso cref="KeyValuePair{TKey, TValue}"/> with keys selected from the provided selector function.</summary>
+        /// <typeparam name="TKey">The type of the key in the initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
+        /// <typeparam name="TValue">The type of the value in the initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
+        /// <typeparam name="TNewKey">The type of the key in the new <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
+        /// <param name="kvps">The initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</param>
+        /// <param name="keySelector">The function that transforms the initial <typeparamref name="TKey"/> into a <typeparamref name="TNewKey"/>.</param>
+        /// <returns>The projected sequence.</returns>
+        public static IEnumerable<KeyValuePair<TNewKey, TValue>> SelectKeys<TKey, TValue, TNewKey>(this IEnumerable<KeyValuePair<TKey, TValue>> kvps, Func<TKey, TNewKey> keySelector)
+        {
+            return kvps.Select(kvp => new KeyValuePair<TNewKey, TValue>(keySelector(kvp.Key), kvp.Value));
+        }
+        /// <summary>Projects each <seealso cref="KeyValuePair{TKey, TValue}"/> in the sequence into a new <seealso cref="KeyValuePair{TKey, TValue}"/> with values selected from the provided selector function.</summary>
+        /// <typeparam name="TKey">The type of the key in the initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
+        /// <typeparam name="TValue">The type of the value in the initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
+        /// <typeparam name="TNewValue">The type of the value in the new <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
+        /// <param name="kvps">The initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</param>
+        /// <param name="valueSelector">The function that transforms the initial <typeparamref name="TValue"/> into a <typeparamref name="TNewValue"/>.</param>
+        /// <returns>The projected sequence.</returns>
+        public static IEnumerable<KeyValuePair<TKey, TNewValue>> SelectValues<TKey, TValue, TNewValue>(this IEnumerable<KeyValuePair<TKey, TValue>> kvps, Func<TValue, TNewValue> valueSelector)
+        {
+            return kvps.Select(kvp => new KeyValuePair<TKey, TNewValue>(kvp.Key, valueSelector(kvp.Value)));
+        }
+        #endregion
+
         private static void VerifyNonEmptyCollection<T>(IEnumerable<T> source)
         {
             if (source?.Any() != true)
