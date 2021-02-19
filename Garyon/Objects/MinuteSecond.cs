@@ -2,7 +2,7 @@
 
 namespace Garyon.Objects
 {
-    /// <summary>Represents a time instance with the time and minute.</summary>
+    /// <summary>Represents a time instance with the minute and second.</summary>
     public struct MinuteSecond : IEquatable<MinuteSecond>, IHasMinute, IHasSecond
     {
         /// <summary>Gets the current time's <seealso cref="MinuteSecond"/> representation.</summary>
