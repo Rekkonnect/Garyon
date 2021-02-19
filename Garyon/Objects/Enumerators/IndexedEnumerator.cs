@@ -8,7 +8,7 @@ namespace Garyon.Objects.Enumerators
     public class IndexedEnumerator<T> : IEnumerator<IndexedEnumeratorResult<T>>
     {
         private IEnumerator<T> enumerator;
-        
+
         /// <summary>The current index in the enumerator.</summary>
         public int Index { get; private set; }
 
@@ -25,6 +25,7 @@ namespace Garyon.Objects.Enumerators
         public IndexedEnumerator(IEnumerator<T> originalEnumerator)
         {
             enumerator = originalEnumerator;
+            Reset();
         }
 
         /// <inheritdoc/>

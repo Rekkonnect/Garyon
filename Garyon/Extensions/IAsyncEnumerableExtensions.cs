@@ -1,4 +1,5 @@
 ﻿using Garyon.Objects;
+using Garyon.Objects.Enumerators;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -38,6 +39,17 @@ namespace Garyon.Extensions
             await foreach (var e in source)
                 await foreach (var v in e)
                     yield return v;
+        }
+        #endregion
+
+        #region Enumeration
+        /// <summary>Wraps the <seealso cref="IAsyncEnumerable{T}"/> into an <seealso cref="IndexedAsyncEnumerable{T}"/> for enumeration with index.</summary>
+        /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
+        /// <param name="enumerable">The <seealso cref="IAsyncEnumerable{T}"/> to enumerate with index.</param>
+        /// <returns>The <seealso cref="IndexedAsyncEnumerable{T}"/> that wraps the <paramref name="enumerable"/> for indexed enumeration.</returns>
+        public static IndexedAsyncEnumerable<T> WithIndex<T>(this IAsyncEnumerable<T> enumerable)
+        {
+            return new IndexedAsyncEnumerable<T>(enumerable);
         }
         #endregion
 
