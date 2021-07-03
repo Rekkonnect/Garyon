@@ -6,13 +6,6 @@ namespace Garyon.Extensions
 {
     public static class Extensions
     {
-        public static bool Contains(this int[] a, int item)
-        {
-            for (int i = 0; i < a.Length; i++)
-                if (a[i] == item)
-                    return true;
-            return false;
-        }
         public static bool Contains(this Enum e, int value) => Enum.IsDefined(e.GetType(), value);
 
         public static bool MatchIndices(this List<int> l)
