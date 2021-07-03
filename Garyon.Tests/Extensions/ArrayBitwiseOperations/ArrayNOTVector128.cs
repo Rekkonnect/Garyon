@@ -12,16 +12,6 @@ namespace Garyon.Tests.Extensions.ArrayBitwiseOperations
         {
             PerformManipulationArray<TStruct>(NOTArrayVector128CustomType);
         }
-        protected unsafe void PerformManipulationArray<TStruct>(ArrayManipulationOperation<TStruct, TStruct> operation)
-            where TStruct : unmanaged
-        {
-            PerformManipulation(new TStruct[ArrayLength], new TStruct[ArrayLength], operation);
-        }
-        protected unsafe void PerformManipulationArray<TStruct>(MaskableArrayManipulationOperation<TStruct> operation)
-            where TStruct : unmanaged
-        {
-            PerformManipulation(new TStruct[ArrayLength], new TStruct[ArrayLength], operation);
-        }
 
         protected override unsafe object GetExpectedResult<TOrigin, TTarget>(TOrigin* origin, int index) => ValueManipulation.NOT((TTarget)base.GetExpectedResult<TOrigin, TTarget>(origin, index));
 

@@ -429,6 +429,7 @@ CD
             AssertInvalidInstanceInitialization<ArgumentConstructorContainer>("a");
             AssertInvalidInstanceInitialization<ArgumentConstructorContainer>(0, 0);
 
+#nullable enable
             static void AssertInstanceInitialization<T>(params object?[]? parameters)
                 where T : class
             {
@@ -439,6 +440,7 @@ CD
             {
                 Assert.IsNull(typeof(T).InitializeInstance<T>(parameters));
             }
+#nullable disable
         }
         #endregion
     }
