@@ -15,17 +15,17 @@ namespace Garyon.Objects
             {
                 return default(T) switch
                 {
-                    byte _ => (T)(object)byte.MinValue,
-                    sbyte _ => (T)(object)sbyte.MinValue,
-                    short _ => (T)(object)short.MinValue,
-                    ushort _ => (T)(object)ushort.MinValue,
-                    int _ => (T)(object)int.MinValue,
-                    uint _ => (T)(object)uint.MinValue,
-                    long _ => (T)(object)long.MinValue,
-                    ulong _ => (T)(object)ulong.MinValue,
-                    float _ => (T)(object)float.MinValue,
-                    double _ => (T)(object)double.MinValue,
-                    decimal _ => (T)(object)decimal.MinValue,
+                    byte => (T)(object)byte.MinValue,
+                    sbyte => (T)(object)sbyte.MinValue,
+                    short => (T)(object)short.MinValue,
+                    ushort => (T)(object)ushort.MinValue,
+                    int => (T)(object)int.MinValue,
+                    uint => (T)(object)uint.MinValue,
+                    long => (T)(object)long.MinValue,
+                    ulong => (T)(object)ulong.MinValue,
+                    float => (T)(object)float.MinValue,
+                    double => (T)(object)double.MinValue,
+                    decimal => (T)(object)decimal.MinValue,
                     // Should never be reached
                     _ => default,
                 };
@@ -38,17 +38,17 @@ namespace Garyon.Objects
             {
                 return default(T) switch
                 {
-                    byte _ => (T)(object)byte.MaxValue,
-                    sbyte _ => (T)(object)sbyte.MaxValue,
-                    short _ => (T)(object)short.MaxValue,
-                    ushort _ => (T)(object)ushort.MaxValue,
-                    int _ => (T)(object)int.MaxValue,
-                    uint _ => (T)(object)uint.MaxValue,
-                    long _ => (T)(object)long.MaxValue,
-                    ulong _ => (T)(object)ulong.MaxValue,
-                    float _ => (T)(object)float.MaxValue,
-                    double _ => (T)(object)double.MaxValue,
-                    decimal _ => (T)(object)decimal.MaxValue,
+                    byte => (T)(object)byte.MaxValue,
+                    sbyte => (T)(object)sbyte.MaxValue,
+                    short => (T)(object)short.MaxValue,
+                    ushort => (T)(object)ushort.MaxValue,
+                    int => (T)(object)int.MaxValue,
+                    uint => (T)(object)uint.MaxValue,
+                    long => (T)(object)long.MaxValue,
+                    ulong => (T)(object)ulong.MaxValue,
+                    float => (T)(object)float.MaxValue,
+                    double => (T)(object)double.MaxValue,
+                    decimal => (T)(object)decimal.MaxValue,
                     // Should never be reached
                     _ => default,
                 };
@@ -65,17 +65,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value + 1),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value + 1),
-                short _ => (T)(object)(short)((short)(object)Value + 1),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value + 1),
-                int _ => (T)(object)((int)(object)Value + 1),
-                uint _ => (T)(object)((uint)(object)Value + 1),
-                long _ => (T)(object)((long)(object)Value + 1),
-                ulong _ => (T)(object)((ulong)(object)Value + 1),
-                float _ => (T)(object)((float)(object)Value + 1),
-                double _ => (T)(object)((double)(object)Value + 1),
-                decimal _ => (T)(object)((decimal)(object)Value + 1),
+                byte => (T)(object)(byte)((byte)(object)Value + 1),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value + 1),
+                short => (T)(object)(short)((short)(object)Value + 1),
+                ushort => (T)(object)(ushort)((ushort)(object)Value + 1),
+                int => (T)(object)((int)(object)Value + 1),
+                uint => (T)(object)((uint)(object)Value + 1),
+                long => (T)(object)((long)(object)Value + 1),
+                ulong => (T)(object)((ulong)(object)Value + 1),
+                float => (T)(object)((float)(object)Value + 1),
+                double => (T)(object)((double)(object)Value + 1),
+                decimal => (T)(object)((decimal)(object)Value + 1),
                 // Should never be reached
                 _ => default,
             };
@@ -87,17 +87,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value - 1),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value - 1),
-                short _ => (T)(object)(short)((short)(object)Value - 1),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value - 1),
-                int _ => (T)(object)((int)(object)Value - 1),
-                uint _ => (T)(object)((uint)(object)Value - 1),
-                long _ => (T)(object)((long)(object)Value - 1),
-                ulong _ => (T)(object)((ulong)(object)Value - 1),
-                float _ => (T)(object)((float)(object)Value - 1),
-                double _ => (T)(object)((double)(object)Value - 1),
-                decimal _ => (T)(object)((decimal)(object)Value - 1),
+                byte => (T)(object)(byte)((byte)(object)Value - 1),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value - 1),
+                short => (T)(object)(short)((short)(object)Value - 1),
+                ushort => (T)(object)(ushort)((ushort)(object)Value - 1),
+                int => (T)(object)((int)(object)Value - 1),
+                uint => (T)(object)((uint)(object)Value - 1),
+                long => (T)(object)((long)(object)Value - 1),
+                ulong => (T)(object)((ulong)(object)Value - 1),
+                float => (T)(object)((float)(object)Value - 1),
+                double => (T)(object)((double)(object)Value - 1),
+                decimal => (T)(object)((decimal)(object)Value - 1),
                 // Should never be reached
                 _ => default,
             };
@@ -110,17 +110,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value + (byte)(object)value.Value),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value + (sbyte)(object)value.Value),
-                short _ => (T)(object)(short)((short)(object)Value + (short)(object)value.Value),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value + (ushort)(object)value.Value),
-                int _ => (T)(object)((int)(object)Value + (int)(object)value.Value),
-                uint _ => (T)(object)((uint)(object)Value + (uint)(object)value.Value),
-                long _ => (T)(object)((long)(object)Value + (long)(object)value.Value),
-                ulong _ => (T)(object)((ulong)(object)Value + (ulong)(object)value.Value),
-                float _ => (T)(object)((float)(object)Value + (float)(object)value.Value),
-                double _ => (T)(object)((double)(object)Value + (double)(object)value.Value),
-                decimal _ => (T)(object)((decimal)(object)Value + (decimal)(object)value.Value),
+                byte => (T)(object)(byte)((byte)(object)Value + (byte)(object)value.Value),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value + (sbyte)(object)value.Value),
+                short => (T)(object)(short)((short)(object)Value + (short)(object)value.Value),
+                ushort => (T)(object)(ushort)((ushort)(object)Value + (ushort)(object)value.Value),
+                int => (T)(object)((int)(object)Value + (int)(object)value.Value),
+                uint => (T)(object)((uint)(object)Value + (uint)(object)value.Value),
+                long => (T)(object)((long)(object)Value + (long)(object)value.Value),
+                ulong => (T)(object)((ulong)(object)Value + (ulong)(object)value.Value),
+                float => (T)(object)((float)(object)Value + (float)(object)value.Value),
+                double => (T)(object)((double)(object)Value + (double)(object)value.Value),
+                decimal => (T)(object)((decimal)(object)Value + (decimal)(object)value.Value),
                 // Should never be reached
                 _ => default,
             };
@@ -133,17 +133,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value - (byte)(object)value.Value),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value - (sbyte)(object)value.Value),
-                short _ => (T)(object)(short)((short)(object)Value - (short)(object)value.Value),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value - (ushort)(object)value.Value),
-                int _ => (T)(object)((int)(object)Value - (int)(object)value.Value),
-                uint _ => (T)(object)((uint)(object)Value - (uint)(object)value.Value),
-                long _ => (T)(object)((long)(object)Value - (long)(object)value.Value),
-                ulong _ => (T)(object)((ulong)(object)Value - (ulong)(object)value.Value),
-                float _ => (T)(object)((float)(object)Value - (float)(object)value.Value),
-                double _ => (T)(object)((double)(object)Value - (double)(object)value.Value),
-                decimal _ => (T)(object)((decimal)(object)Value - (decimal)(object)value.Value),
+                byte => (T)(object)(byte)((byte)(object)Value - (byte)(object)value.Value),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value - (sbyte)(object)value.Value),
+                short => (T)(object)(short)((short)(object)Value - (short)(object)value.Value),
+                ushort => (T)(object)(ushort)((ushort)(object)Value - (ushort)(object)value.Value),
+                int => (T)(object)((int)(object)Value - (int)(object)value.Value),
+                uint => (T)(object)((uint)(object)Value - (uint)(object)value.Value),
+                long => (T)(object)((long)(object)Value - (long)(object)value.Value),
+                ulong => (T)(object)((ulong)(object)Value - (ulong)(object)value.Value),
+                float => (T)(object)((float)(object)Value - (float)(object)value.Value),
+                double => (T)(object)((double)(object)Value - (double)(object)value.Value),
+                decimal => (T)(object)((decimal)(object)Value - (decimal)(object)value.Value),
                 // Should never be reached
                 _ => default,
             };
@@ -156,17 +156,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value * (byte)(object)value.Value),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value * (sbyte)(object)value.Value),
-                short _ => (T)(object)(short)((short)(object)Value * (short)(object)value.Value),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value * (ushort)(object)value.Value),
-                int _ => (T)(object)((int)(object)Value * (int)(object)value.Value),
-                uint _ => (T)(object)((uint)(object)Value * (uint)(object)value.Value),
-                long _ => (T)(object)((long)(object)Value * (long)(object)value.Value),
-                ulong _ => (T)(object)((ulong)(object)Value * (ulong)(object)value.Value),
-                float _ => (T)(object)((float)(object)Value * (float)(object)value.Value),
-                double _ => (T)(object)((double)(object)Value * (double)(object)value.Value),
-                decimal _ => (T)(object)((decimal)(object)Value * (decimal)(object)value.Value),
+                byte => (T)(object)(byte)((byte)(object)Value * (byte)(object)value.Value),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value * (sbyte)(object)value.Value),
+                short => (T)(object)(short)((short)(object)Value * (short)(object)value.Value),
+                ushort => (T)(object)(ushort)((ushort)(object)Value * (ushort)(object)value.Value),
+                int => (T)(object)((int)(object)Value * (int)(object)value.Value),
+                uint => (T)(object)((uint)(object)Value * (uint)(object)value.Value),
+                long => (T)(object)((long)(object)Value * (long)(object)value.Value),
+                ulong => (T)(object)((ulong)(object)Value * (ulong)(object)value.Value),
+                float => (T)(object)((float)(object)Value * (float)(object)value.Value),
+                double => (T)(object)((double)(object)Value * (double)(object)value.Value),
+                decimal => (T)(object)((decimal)(object)Value * (decimal)(object)value.Value),
                 // Should never be reached
                 _ => default,
             };
@@ -179,17 +179,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value / (byte)(object)value.Value),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value / (sbyte)(object)value.Value),
-                short _ => (T)(object)(short)((short)(object)Value / (short)(object)value.Value),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value / (ushort)(object)value.Value),
-                int _ => (T)(object)((int)(object)Value / (int)(object)value.Value),
-                uint _ => (T)(object)((uint)(object)Value / (uint)(object)value.Value),
-                long _ => (T)(object)((long)(object)Value / (long)(object)value.Value),
-                ulong _ => (T)(object)((ulong)(object)Value / (ulong)(object)value.Value),
-                float _ => (T)(object)((float)(object)Value / (float)(object)value.Value),
-                double _ => (T)(object)((double)(object)Value / (double)(object)value.Value),
-                decimal _ => (T)(object)((decimal)(object)Value / (decimal)(object)value.Value),
+                byte => (T)(object)(byte)((byte)(object)Value / (byte)(object)value.Value),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value / (sbyte)(object)value.Value),
+                short => (T)(object)(short)((short)(object)Value / (short)(object)value.Value),
+                ushort => (T)(object)(ushort)((ushort)(object)Value / (ushort)(object)value.Value),
+                int => (T)(object)((int)(object)Value / (int)(object)value.Value),
+                uint => (T)(object)((uint)(object)Value / (uint)(object)value.Value),
+                long => (T)(object)((long)(object)Value / (long)(object)value.Value),
+                ulong => (T)(object)((ulong)(object)Value / (ulong)(object)value.Value),
+                float => (T)(object)((float)(object)Value / (float)(object)value.Value),
+                double => (T)(object)((double)(object)Value / (double)(object)value.Value),
+                decimal => (T)(object)((decimal)(object)Value / (decimal)(object)value.Value),
                 // Should never be reached
                 _ => default,
             };
@@ -202,17 +202,17 @@ namespace Garyon.Objects
         {
             return Value switch
             {
-                byte _ => (T)(object)(byte)((byte)(object)Value % (byte)(object)value.Value),
-                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value % (sbyte)(object)value.Value),
-                short _ => (T)(object)(short)((short)(object)Value % (short)(object)value.Value),
-                ushort _ => (T)(object)(ushort)((ushort)(object)Value % (ushort)(object)value.Value),
-                int _ => (T)(object)((int)(object)Value % (int)(object)value.Value),
-                uint _ => (T)(object)((uint)(object)Value % (uint)(object)value.Value),
-                long _ => (T)(object)((long)(object)Value % (long)(object)value.Value),
-                ulong _ => (T)(object)((ulong)(object)Value % (ulong)(object)value.Value),
-                float _ => (T)(object)((float)(object)Value % (float)(object)value.Value),
-                double _ => (T)(object)((double)(object)Value % (double)(object)value.Value),
-                decimal _ => (T)(object)((decimal)(object)Value % (decimal)(object)value.Value),
+                byte => (T)(object)(byte)((byte)(object)Value % (byte)(object)value.Value),
+                sbyte => (T)(object)(sbyte)((sbyte)(object)Value % (sbyte)(object)value.Value),
+                short => (T)(object)(short)((short)(object)Value % (short)(object)value.Value),
+                ushort => (T)(object)(ushort)((ushort)(object)Value % (ushort)(object)value.Value),
+                int => (T)(object)((int)(object)Value % (int)(object)value.Value),
+                uint => (T)(object)((uint)(object)Value % (uint)(object)value.Value),
+                long => (T)(object)((long)(object)Value % (long)(object)value.Value),
+                ulong => (T)(object)((ulong)(object)Value % (ulong)(object)value.Value),
+                float => (T)(object)((float)(object)Value % (float)(object)value.Value),
+                double => (T)(object)((double)(object)Value % (double)(object)value.Value),
+                decimal => (T)(object)((decimal)(object)Value % (decimal)(object)value.Value),
                 // Should never be reached
                 _ => default,
             };

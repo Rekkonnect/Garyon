@@ -37,17 +37,17 @@ namespace Garyon.Objects
         {
             switch (default(T))
             {
-                case byte _:
-                case sbyte _:
-                case short _:
-                case ushort _:
-                case int _:
-                case uint _:
-                case long _:
-                case ulong _:
-                case float _:
-                case double _:
-                case decimal _:
+                case byte:
+                case sbyte:
+                case short:
+                case ushort:
+                case int:
+                case uint:
+                case long:
+                case ulong:
+                case float:
+                case double:
+                case decimal:
                     break;
                 default:
                     ThrowHelper.Throw<TypeInitializationException>("The provided type is not a supported numeric type.");
