@@ -29,6 +29,7 @@ namespace Garyon.Objects.Enumerators
 
         public bool Equals(IndexedEnumeratorResult<T> other) => Index == other.Index && Current.Equals(other.Current);
         public override bool Equals(object? obj) => obj is IndexedEnumeratorResult<T> i && Equals(i);
+        public override int GetHashCode() => HashCode.Combine(Index, Current);
         public override string ToString() => $"{Index} - {Current}";
     }
 }

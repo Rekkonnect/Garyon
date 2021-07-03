@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices;
 using Garyon.Attributes;
+using System;
 
 namespace Garyon.QualityControl.SizedStructs
 {
@@ -32,6 +33,13 @@ namespace Garyon.QualityControl.SizedStructs
         public override bool Equals(object obj)
         {
             return Equals((Struct19)obj);
+        }
+        public override int GetHashCode()
+        {
+            var result = new HashCode();
+            for (int i = 0; i < elementCount; i++)
+                result.Add(elements[i]);
+            return result.ToHashCode();
         }
     }
 }
