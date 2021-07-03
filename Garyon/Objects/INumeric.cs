@@ -13,33 +13,22 @@ namespace Garyon.Objects
         {
             get
             {
-                switch (default(T))
+                return default(T) switch
                 {
-                    case byte _:
-                        return (T)(object)byte.MinValue;
-                    case sbyte _:
-                        return (T)(object)sbyte.MinValue;
-                    case short _:
-                        return (T)(object)short.MinValue;
-                    case ushort _:
-                        return (T)(object)ushort.MinValue;
-                    case int _:
-                        return (T)(object)int.MinValue;
-                    case uint _:
-                        return (T)(object)uint.MinValue;
-                    case long _:
-                        return (T)(object)long.MinValue;
-                    case ulong _:
-                        return (T)(object)ulong.MinValue;
-                    case float _:
-                        return (T)(object)float.MinValue;
-                    case double _:
-                        return (T)(object)double.MinValue;
-                    case decimal _:
-                        return (T)(object)decimal.MinValue;
-                }
-                // Should never be reached
-                return default;
+                    byte _ => (T)(object)byte.MinValue,
+                    sbyte _ => (T)(object)sbyte.MinValue,
+                    short _ => (T)(object)short.MinValue,
+                    ushort _ => (T)(object)ushort.MinValue,
+                    int _ => (T)(object)int.MinValue,
+                    uint _ => (T)(object)uint.MinValue,
+                    long _ => (T)(object)long.MinValue,
+                    ulong _ => (T)(object)ulong.MinValue,
+                    float _ => (T)(object)float.MinValue,
+                    double _ => (T)(object)double.MinValue,
+                    decimal _ => (T)(object)decimal.MinValue,
+                    // Should never be reached
+                    _ => default,
+                };
             }
         }
         /// <summary>Gets the largest possible value of a <typeparamref name="T"/>. It uses the respective MaxValue <see langword="const"/> field.</summary>
@@ -47,33 +36,22 @@ namespace Garyon.Objects
         {
             get
             {
-                switch (default(T))
+                return default(T) switch
                 {
-                    case byte _:
-                        return (T)(object)byte.MaxValue;
-                    case sbyte _:
-                        return (T)(object)sbyte.MaxValue;
-                    case short _:
-                        return (T)(object)short.MaxValue;
-                    case ushort _:
-                        return (T)(object)ushort.MaxValue;
-                    case int _:
-                        return (T)(object)int.MaxValue;
-                    case uint _:
-                        return (T)(object)uint.MaxValue;
-                    case long _:
-                        return (T)(object)long.MaxValue;
-                    case ulong _:
-                        return (T)(object)ulong.MaxValue;
-                    case float _:
-                        return (T)(object)float.MaxValue;
-                    case double _:
-                        return (T)(object)double.MaxValue;
-                    case decimal _:
-                        return (T)(object)decimal.MaxValue;
-                }
-                // Should never be reached
-                return default;
+                    byte _ => (T)(object)byte.MaxValue,
+                    sbyte _ => (T)(object)sbyte.MaxValue,
+                    short _ => (T)(object)short.MaxValue,
+                    ushort _ => (T)(object)ushort.MaxValue,
+                    int _ => (T)(object)int.MaxValue,
+                    uint _ => (T)(object)uint.MaxValue,
+                    long _ => (T)(object)long.MaxValue,
+                    ulong _ => (T)(object)ulong.MaxValue,
+                    float _ => (T)(object)float.MaxValue,
+                    double _ => (T)(object)double.MaxValue,
+                    decimal _ => (T)(object)decimal.MaxValue,
+                    // Should never be reached
+                    _ => default,
+                };
             }
         }
 
@@ -85,66 +63,44 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T AddOne()
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value + 1);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value + 1);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value + 1);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value + 1);
-                case int _:
-                    return (T)(object)((int)(object)Value + 1);
-                case uint _:
-                    return (T)(object)((uint)(object)Value + 1);
-                case long _:
-                    return (T)(object)((long)(object)Value + 1);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value + 1);
-                case float _:
-                    return (T)(object)((float)(object)Value + 1);
-                case double _:
-                    return (T)(object)((double)(object)Value + 1);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value + 1);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value + 1),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value + 1),
+                short _ => (T)(object)(short)((short)(object)Value + 1),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value + 1),
+                int _ => (T)(object)((int)(object)Value + 1),
+                uint _ => (T)(object)((uint)(object)Value + 1),
+                long _ => (T)(object)((long)(object)Value + 1),
+                ulong _ => (T)(object)((ulong)(object)Value + 1),
+                float _ => (T)(object)((float)(object)Value + 1),
+                double _ => (T)(object)((double)(object)Value + 1),
+                decimal _ => (T)(object)((decimal)(object)Value + 1),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to this instance's current value decreased by one. The instance remains unaffected.</summary>
         /// <returns>The resulting value that is equal to subtracting one from the current value.</returns>
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T SubtractOne()
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value - 1);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value - 1);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value - 1);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value - 1);
-                case int _:
-                    return (T)(object)((int)(object)Value - 1);
-                case uint _:
-                    return (T)(object)((uint)(object)Value - 1);
-                case long _:
-                    return (T)(object)((long)(object)Value - 1);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value - 1);
-                case float _:
-                    return (T)(object)((float)(object)Value - 1);
-                case double _:
-                    return (T)(object)((double)(object)Value - 1);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value - 1);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value - 1),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value - 1),
+                short _ => (T)(object)(short)((short)(object)Value - 1),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value - 1),
+                int _ => (T)(object)((int)(object)Value - 1),
+                uint _ => (T)(object)((uint)(object)Value - 1),
+                long _ => (T)(object)((long)(object)Value - 1),
+                ulong _ => (T)(object)((ulong)(object)Value - 1),
+                float _ => (T)(object)((float)(object)Value - 1),
+                double _ => (T)(object)((double)(object)Value - 1),
+                decimal _ => (T)(object)((decimal)(object)Value - 1),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to this instance's current value increased by the specified value. The instance remains unaffected.</summary>
         /// <param name="value">The value to add to the current value.</param>
@@ -152,33 +108,22 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Add(INumeric<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value + (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value + (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value + (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value + (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value + (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value + (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value + (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value + (ulong)(object)value.Value);
-                case float _:
-                    return (T)(object)((float)(object)Value + (float)(object)value.Value);
-                case double _:
-                    return (T)(object)((double)(object)Value + (double)(object)value.Value);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value + (decimal)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value + (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value + (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value + (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value + (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value + (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value + (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value + (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value + (ulong)(object)value.Value),
+                float _ => (T)(object)((float)(object)Value + (float)(object)value.Value),
+                double _ => (T)(object)((double)(object)Value + (double)(object)value.Value),
+                decimal _ => (T)(object)((decimal)(object)Value + (decimal)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to this instance's current value decreased by the specified value. The instance remains unaffected.</summary>
         /// <param name="value">The value to subtract from the current value.</param>
@@ -186,33 +131,22 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Subtract(INumeric<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value - (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value - (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value - (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value - (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value - (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value - (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value - (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value - (ulong)(object)value.Value);
-                case float _:
-                    return (T)(object)((float)(object)Value - (float)(object)value.Value);
-                case double _:
-                    return (T)(object)((double)(object)Value - (double)(object)value.Value);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value - (decimal)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value - (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value - (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value - (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value - (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value - (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value - (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value - (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value - (ulong)(object)value.Value),
+                float _ => (T)(object)((float)(object)Value - (float)(object)value.Value),
+                double _ => (T)(object)((double)(object)Value - (double)(object)value.Value),
+                decimal _ => (T)(object)((decimal)(object)Value - (decimal)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to this instance's current value multiplied by the specified value. The instance remains unaffected.</summary>
         /// <param name="value">The value to multiply the current value by.</param>
@@ -220,33 +154,22 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Multiply(INumeric<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value * (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value * (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value * (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value * (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value * (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value * (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value * (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value * (ulong)(object)value.Value);
-                case float _:
-                    return (T)(object)((float)(object)Value * (float)(object)value.Value);
-                case double _:
-                    return (T)(object)((double)(object)Value * (double)(object)value.Value);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value * (decimal)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value * (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value * (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value * (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value * (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value * (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value * (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value * (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value * (ulong)(object)value.Value),
+                float _ => (T)(object)((float)(object)Value * (float)(object)value.Value),
+                double _ => (T)(object)((double)(object)Value * (double)(object)value.Value),
+                decimal _ => (T)(object)((decimal)(object)Value * (decimal)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to this instance's current value divided by the specified value. The instance remains unaffected.</summary>
         /// <param name="value">The value to divide the current value by.</param>
@@ -254,33 +177,22 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Divide(INumeric<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value / (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value / (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value / (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value / (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value / (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value / (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value / (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value / (ulong)(object)value.Value);
-                case float _:
-                    return (T)(object)((float)(object)Value / (float)(object)value.Value);
-                case double _:
-                    return (T)(object)((double)(object)Value / (double)(object)value.Value);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value / (decimal)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value / (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value / (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value / (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value / (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value / (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value / (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value / (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value / (ulong)(object)value.Value),
+                float _ => (T)(object)((float)(object)Value / (float)(object)value.Value),
+                double _ => (T)(object)((double)(object)Value / (double)(object)value.Value),
+                decimal _ => (T)(object)((decimal)(object)Value / (decimal)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to the remainder of this instance's current value divided by the specified value. The instance remains unaffected.</summary>
         /// <param name="value">The value to divide the current value by.</param>
@@ -288,33 +200,22 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Modulo(INumeric<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value % (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value % (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value % (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value % (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value % (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value % (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value % (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value % (ulong)(object)value.Value);
-                case float _:
-                    return (T)(object)((float)(object)Value % (float)(object)value.Value);
-                case double _:
-                    return (T)(object)((double)(object)Value % (double)(object)value.Value);
-                case decimal _:
-                    return (T)(object)((decimal)(object)Value % (decimal)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value % (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value % (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value % (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value % (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value % (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value % (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value % (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value % (ulong)(object)value.Value),
+                float _ => (T)(object)((float)(object)Value % (float)(object)value.Value),
+                double _ => (T)(object)((double)(object)Value % (double)(object)value.Value),
+                decimal _ => (T)(object)((decimal)(object)Value % (decimal)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
 
         /// <summary>Determines whether this instance equals another <seealso cref="INumeric{T}"/> instance.</summary>

@@ -12,27 +12,19 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Not()
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)(~(byte)(object)Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)(~(sbyte)(object)Value);
-                case short _:
-                    return (T)(object)(short)(~(short)(object)Value);
-                case ushort _:
-                    return (T)(object)(ushort)(~(ushort)(object)Value);
-                case int _:
-                    return (T)(object)(~(int)(object)Value);
-                case uint _:
-                    return (T)(object)(~(uint)(object)Value);
-                case long _:
-                    return (T)(object)(~(long)(object)Value);
-                case ulong _:
-                    return (T)(object)(~(ulong)(object)Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)(~(byte)(object)Value),
+                sbyte _ => (T)(object)(sbyte)(~(sbyte)(object)Value),
+                short _ => (T)(object)(short)(~(short)(object)Value),
+                ushort _ => (T)(object)(ushort)(~(ushort)(object)Value),
+                int _ => (T)(object)(~(int)(object)Value),
+                uint _ => (T)(object)(~(uint)(object)Value),
+                long _ => (T)(object)(~(long)(object)Value),
+                ulong _ => (T)(object)(~(ulong)(object)Value),
+                // Should never be reached
+                _ => default,
+            };
         }
 
         /// <summary>Returns a value that is equal to the bitwise OR of this instance's current value with another value. The instance remains unaffected.</summary>
@@ -41,27 +33,19 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Or(IInteger<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value | (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value | (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value | (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value | (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value | (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value | (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value | (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value | (ulong)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value | (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value | (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value | (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value | (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value | (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value | (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value | (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value | (ulong)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to the bitwise AND of this instance's current value with another value. The instance remains unaffected.</summary>
         /// <param name="value">The value to AND the current value with.</param>
@@ -69,27 +53,19 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T And(IInteger<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value & (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value & (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value & (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value & (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value & (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value & (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value & (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value & (ulong)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value & (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value & (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value & (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value & (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value & (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value & (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value & (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value & (ulong)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to the bitwise XOR of this instance's current value with another value. The instance remains unaffected.</summary>
         /// <param name="value">The value to XOR the current value with.</param>
@@ -97,27 +73,19 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T Xor(IInteger<T> value)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value ^ (byte)(object)value.Value);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value ^ (sbyte)(object)value.Value);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value ^ (short)(object)value.Value);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value ^ (ushort)(object)value.Value);
-                case int _:
-                    return (T)(object)((int)(object)Value ^ (int)(object)value.Value);
-                case uint _:
-                    return (T)(object)((uint)(object)Value ^ (uint)(object)value.Value);
-                case long _:
-                    return (T)(object)((long)(object)Value ^ (long)(object)value.Value);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value ^ (ulong)(object)value.Value);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value ^ (byte)(object)value.Value),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value ^ (sbyte)(object)value.Value),
+                short _ => (T)(object)(short)((short)(object)Value ^ (short)(object)value.Value),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value ^ (ushort)(object)value.Value),
+                int _ => (T)(object)((int)(object)Value ^ (int)(object)value.Value),
+                uint _ => (T)(object)((uint)(object)Value ^ (uint)(object)value.Value),
+                long _ => (T)(object)((long)(object)Value ^ (long)(object)value.Value),
+                ulong _ => (T)(object)((ulong)(object)Value ^ (ulong)(object)value.Value),
+                // Should never be reached
+                _ => default,
+            };
         }
 
         /// <summary>Returns a value that is equal to shifting the current value to the left by the specified number of bits. The instance remains unaffected.</summary>
@@ -126,27 +94,19 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T ShiftLeft(int shift)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value << shift);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value << shift);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value << shift);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value << shift);
-                case int _:
-                    return (T)(object)((int)(object)Value << shift);
-                case uint _:
-                    return (T)(object)((uint)(object)Value << shift);
-                case long _:
-                    return (T)(object)((long)(object)Value << shift);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value << shift);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value << shift),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value << shift),
+                short _ => (T)(object)(short)((short)(object)Value << shift),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value << shift),
+                int _ => (T)(object)((int)(object)Value << shift),
+                uint _ => (T)(object)((uint)(object)Value << shift),
+                long _ => (T)(object)((long)(object)Value << shift),
+                ulong _ => (T)(object)((ulong)(object)Value << shift),
+                // Should never be reached
+                _ => default,
+            };
         }
         /// <summary>Returns a value that is equal to shifting the current value to the right by the specified number of bits. The instance remains unaffected.</summary>
         /// <param name="shift">The number of bits to shift the current value to the right by.</param>
@@ -154,27 +114,19 @@ namespace Garyon.Objects
         /// <remarks>This function should only be used internally in types that implement this interface. Prefer using the supported operator overloads for such operations.</remarks>
         public sealed T ShiftRight(int shift)
         {
-            switch (Value)
+            return Value switch
             {
-                case byte _:
-                    return (T)(object)(byte)((byte)(object)Value >> shift);
-                case sbyte _:
-                    return (T)(object)(sbyte)((sbyte)(object)Value >> shift);
-                case short _:
-                    return (T)(object)(short)((short)(object)Value >> shift);
-                case ushort _:
-                    return (T)(object)(ushort)((ushort)(object)Value >> shift);
-                case int _:
-                    return (T)(object)((int)(object)Value >> shift);
-                case uint _:
-                    return (T)(object)((uint)(object)Value >> shift);
-                case long _:
-                    return (T)(object)((long)(object)Value >> shift);
-                case ulong _:
-                    return (T)(object)((ulong)(object)Value >> shift);
-            }
-            // Should never be reached
-            return default;
+                byte _ => (T)(object)(byte)((byte)(object)Value >> shift),
+                sbyte _ => (T)(object)(sbyte)((sbyte)(object)Value >> shift),
+                short _ => (T)(object)(short)((short)(object)Value >> shift),
+                ushort _ => (T)(object)(ushort)((ushort)(object)Value >> shift),
+                int _ => (T)(object)((int)(object)Value >> shift),
+                uint _ => (T)(object)((uint)(object)Value >> shift),
+                long _ => (T)(object)((long)(object)Value >> shift),
+                ulong _ => (T)(object)((ulong)(object)Value >> shift),
+                // Should never be reached
+                _ => default,
+            };
         }
     }
 }
