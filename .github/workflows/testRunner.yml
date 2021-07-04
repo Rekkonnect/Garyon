@@ -11,4 +11,4 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Run Tests
-      run: dotnet test Garyon/Garyon.Tests/Garyon.Tests.csproj
+      run: dotnet test Garyon.Tests/Garyon.Tests.csproj
