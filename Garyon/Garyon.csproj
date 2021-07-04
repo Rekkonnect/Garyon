@@ -11,9 +11,26 @@
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Company />
-    <Version>0.2.2</Version>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>0.2.3</Version>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Product>Garyon</Product>
+    <PackageId>Garyon</PackageId>
+    <PackageReleaseNotes>Fixes/Improvements:
+- IList extensions were optimized
+- Array copying APIs were standarized and finalized
+- Array zeroing APIs were removed
+- Parallel enumerations were fixed
+
+Extensions:
+- Added more extensions for IAsyncEnumerable
+- Added extensions for DateTime
+- Added QueueSet and StackSet
+- Added Invert extension for Index
+- Minor cleanup in the deprecated general Extensions class
+
+Other:
+- Add GetHashCode overrides for several types (mainly to reduce warnings)
+- Minor documentation improvements</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
