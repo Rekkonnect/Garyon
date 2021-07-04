@@ -9,7 +9,7 @@ namespace Garyon.DataStructures
         /// <summary>The value of the node.</summary>
         TValue Value { get; set; }
 
-        /// <summary>Gets the count of children of this node; prefer calling this property instead of getting the count directly from the <see cref="Children"/> property.</summary>
+        /// <summary>Gets the count of children of this node; prefer calling this property instead of getting the count directly from the respective property to retrieve the children.</summary>
         int ChildrenCount { get; }
 
         #region Properties
