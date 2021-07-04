@@ -9,21 +9,22 @@ namespace Garyon.Extensions.ArrayExtensions.ArrayConverting
     public static class ArrayConvertingExtensions
     {
         #region Copy
-        /// <summary>Copies all the elements of the <typeparamref name="T"/>[] to a new <typeparamref name="T"/>[] by using hardware acceleration for direct byte copy and returns the resulting <typeparamref name="T"/>[].</summary>
+        /// <summary>Copies all the elements of the array to a new array by using hardware acceleration for direct byte copy and returns the resulting array. If the provided target array's length is less than the original one's, it will be filled with the first elements of the original array.</summary>
         /// <typeparam name="T">The type of the elements in the array.</typeparam>
-        /// <param name="a">The <typeparamref name="T"/>[] whose elements to copy.</param>
+        /// <param name="origin">The original array whose elements to copy.</param>
+        /// <param name="target">The target array that will contain the copied elements.</param>
         /// <returns>The resulting array.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe T[] CopyAccelerated<T>(this T[] a, T[] result)
+        public static unsafe T[] CopyAccelerated<T>(this T[] origin, T[] target)
             where T : unmanaged
         {
-            uint length = (uint)a.Length;
+            uint length = (uint)Math.Min(origin.Length, target.Length);
 
-            fixed (T* origin = a)
-            fixed (T* target = result)
-                CopyTo(origin, target, length);
+            fixed (T* o = origin)
+            fixed (T* t = target)
+                CopyTo(o, t, length);
 
-            return result;
+            return target;
         }
         /// <summary>Copies all the elements of the <typeparamref name="T"/>[] to a new <typeparamref name="T"/>[] by using hardware acceleration for direct byte copy and returns the resulting <typeparamref name="T"/>[].</summary>
         /// <typeparam name="T">The type of the elements in the array.</typeparam>

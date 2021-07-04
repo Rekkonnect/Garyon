@@ -11,7 +11,10 @@ namespace Garyon.Functions.IntrinsicsHelpers
         Vector128 = 128,
         /// <summary>Denotes the <seealso cref="Vector256{T}"/> type.</summary>
         Vector256 = 256,
+
+#pragma warning disable CS1574 // XML comment has cref attribute that could not be resolved
         /// <summary>Denotes the <seealso cref="Vector512{T}"/> type. Reserved for future use.</summary>
         Vector512 = 512,
+#pragma warning restore CS1574 // XML comment has cref attribute that could not be resolved
     }
 }
