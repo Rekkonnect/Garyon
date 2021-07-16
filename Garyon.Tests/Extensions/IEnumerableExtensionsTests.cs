@@ -14,19 +14,15 @@ namespace Garyon.Tests.Extensions
             {
                 new List<int> { 0, 1, 2, 3 },
                 new List<int> { 4, 5 },
+                new List<int>(0),
                 new List<int> { 6 },
                 new List<int> { 7, 8 },
                 new List<int> { 9, 10, 11, 12 },
             };
-            int expectedLength = 0;
-            foreach (var list in numbers)
-                expectedLength += list.Count;
 
             var flattened = numbers.Flatten().ToArray();
-            Assert.AreEqual(expectedLength, flattened.Length);
-
-            for (int i = 0; i < expectedLength; i++)
-                Assert.AreEqual(i, flattened[i]);
+            var flattenedSelectMany = numbers.SelectMany(a => a).ToArray();
+            Assert.AreEqual(flattenedSelectMany, flattened);
         }
     }
 }

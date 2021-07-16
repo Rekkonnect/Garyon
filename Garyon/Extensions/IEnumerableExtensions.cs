@@ -32,15 +32,41 @@ namespace Garyon.Extensions
             return concatenated;
         }
 
-        /// <summary>Flattens a collection of collections into a single collection. The resulting elements are contained in the order they are enumerated.</summary>
+        /// <summary>Flattens a collection of collections into a single collection. The resulting elements are contained in the order they are enumerated depth-first.</summary>
         /// <typeparam name="T">The type of elements contained in the collections.</typeparam>
         /// <param name="source">The collection of collections.</param>
         /// <returns>The flattened collection.</returns>
-        public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> source)
+        public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> source) => new FlattenedEnumerables2D<T>(source);
+        /// <summary>Flattens a collection of collections of collections into a single collection. The resulting elements are contained in the order they are enumerated depth-first.</summary>
+        /// <typeparam name="T">The type of elements contained in the collections.</typeparam>
+        /// <param name="source">The collection of collections of collections.</param>
+        /// <returns>The flattened collection.</returns>
+        public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<IEnumerable<T>>> source) => new FlattenedEnumerables3D<T>(source);
+
+        /// <summary>Flattens a collection of collections into a single collection. The resulting elements are contained in the order they are enumerated depth-first.</summary>
+        /// <typeparam name="T">The type of elements contained in the collections.</typeparam>
+        /// <param name="source">The collection of collections.</param>
+        /// <returns>The flattened collection.</returns>
+        /// <remarks>The function enumerates all the elements and caches them. This may induce a latency during enumeration of the collections. Prefer calling this function when enumeration of the same flattened collections is performed more than once.</remarks>
+        public static IEnumerable<T> FlattenInstant<T>(this IEnumerable<IEnumerable<T>> source)
         {
-            foreach (var e in source)
-                foreach (var v in e)
-                    yield return v;
+            var result = new List<T>();
+            foreach (var c in source)
+                result.AddRange(c);
+            return result;
+        }
+        /// <summary>Flattens a collection of collections of collections into a single collection. The resulting elements are contained in the order they are enumerated depth-first.</summary>
+        /// <typeparam name="T">The type of elements contained in the collections.</typeparam>
+        /// <param name="source">The collection of collections of collections.</param>
+        /// <returns>The flattened collection.</returns>
+        /// <remarks>The function enumerates all the elements and caches them. This may induce a latency during enumeration of the collections. Prefer calling this function when enumeration of the same flattened collections is performed more than once.</remarks>
+        public static IEnumerable<T> FlattenInstant<T>(this IEnumerable<IEnumerable<IEnumerable<T>>> source)
+        {
+            var result = new List<T>();
+            foreach (var c0 in source)
+                foreach (var c1 in c0)
+                    result.AddRange(c1);
+            return result;
         }
         #endregion
 
