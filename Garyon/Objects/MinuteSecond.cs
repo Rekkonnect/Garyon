@@ -37,22 +37,23 @@ namespace Garyon.Objects
         public int Minute
         {
             get => seconds / 60;
-            set => seconds += (short)((value - Minute) * 60);
+            set => seconds += (short)((value % 60 - Minute) * 60);
         }
         /// <summary>Gets or sets the second.</summary>
         public int Second
         {
             get => seconds % 60;
-            set => seconds += (short)(value - Second);
+            set => seconds += (short)(value % 60 - Second);
         }
         
         /// <summary>Initializes a new instance of the <seealso cref="MinuteSecond"/> struct from the total seconds of the time.</summary>
         /// <param name="totalSeconds">The total seconds of the time.</param>
-        public MinuteSecond(int totalSeconds) => seconds = (short)totalSeconds;
+        public MinuteSecond(int totalSeconds) => seconds = (short)(totalSeconds % (60 * 60));
         /// <summary>Initializes a new instance of the <seealso cref="MinuteSecond"/> struct from the minute and the second of the time.</summary>
         /// <param name="minute">The minute of the time.</param>
         /// <param name="second">The second of the time.</param>
-        public MinuteSecond(int minute, int second) => seconds = (short)(minute * 60 + second);
+        public MinuteSecond(int minute, int second)
+            : this(minute * 60 + second) { }
 
         /// <summary>Adds a number of seconds to the time of this instance.</summary>
         /// <param name="seconds">The seconds to add.</param>
