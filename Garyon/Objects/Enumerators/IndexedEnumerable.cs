@@ -7,7 +7,7 @@ namespace Garyon.Objects.Enumerators
     /// <typeparam name="T">The type of elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
     public class IndexedEnumerable<T> : IEnumerable<IndexedEnumeratorResult<T>>
     {
-        private IEnumerable<T> enumerable;
+        private readonly IEnumerable<T> enumerable;
 
         /// <summary>Initializes a new instance of the <seealso cref="IndexedEnumerable{T}"/> class from an <seealso cref="IEnumerable{T}"/>.</summary>
         /// <param name="originalEnumerable">The <seealso cref="IEnumerable{T}"/> to enumerate with index.</param>

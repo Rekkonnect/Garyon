@@ -7,7 +7,7 @@ namespace Garyon.Objects.Enumerators
     /// <typeparam name="T">The type of elements that are being enumerated.</typeparam>
     public class IndexedEnumerator<T> : IEnumerator<IndexedEnumeratorResult<T>>
     {
-        private IEnumerator<T> enumerator;
+        private readonly IEnumerator<T> enumerator;
 
         /// <summary>The current index in the enumerator.</summary>
         public int Index { get; private set; }

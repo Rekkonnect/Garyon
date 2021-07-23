@@ -7,7 +7,7 @@ namespace Garyon.Objects.Enumerators
     /// <typeparam name="T">The type of elements stored in the <seealso cref="IAsyncEnumerable{T}"/>.</typeparam>
     public class IndexedAsyncEnumerable<T> : IAsyncEnumerable<IndexedEnumeratorResult<T>>
     {
-        private IAsyncEnumerable<T> enumerable;
+        private readonly IAsyncEnumerable<T> enumerable;
 
         /// <summary>Initializes a new instance of the <seealso cref="IndexedAsyncEnumerable{T}"/> class from an <seealso cref="IAsyncEnumerable{T}"/>.</summary>
         /// <param name="originalEnumerable">The <seealso cref="IAsyncEnumerable{T}"/> to enumerate with index.</param>
