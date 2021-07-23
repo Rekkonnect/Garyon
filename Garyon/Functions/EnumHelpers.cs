@@ -10,6 +10,7 @@ namespace Garyon.Functions
     /// <summary>Provides helper functions for enum types.</summary>
     public static class EnumHelpers
     {
+        #region Enum Entry Count
         private static readonly TypeValueCounterDictionary enumTypeEntryCounts = new();
 
         /// <summary>Gets the number of entries defined in the specified enum type.</summary>
@@ -31,7 +32,7 @@ namespace Garyon.Functions
             if (!type.IsEnum)
                 ThrowHelper.Throw<ArgumentException>("The provided type must be an enum type.");
 
-            if (enumTypeEntryCounts[type] == -1)
+            if (!enumTypeEntryCounts.ContainsKey(type))
                 enumTypeEntryCounts[type] = Enum.GetValues(type).Length;
             return enumTypeEntryCounts[type];
         }
@@ -48,17 +49,6 @@ namespace Garyon.Functions
             assembly.GetTypes().Where(t => t.IsEnum).ForEach(t => GetEntryCount(t));
         }
 
-        private class TypeValueCounterDictionary : ValueCounterDictionary<Type>
-        {
-            public TypeValueCounterDictionary()
-                : base() { }
-
-            public int GetCount<T>() => this[typeof(T)];
-            public void SetCount<T>(int value) => this[typeof(T)] = value;
-
-            protected override int GetNewEntryInitializationValue() => -1;
-        }
-
         private static class EnumCountRetriever<T>
             where T : struct, Enum
         {
@@ -66,8 +56,50 @@ namespace Garyon.Functions
 
             static EnumCountRetriever()
             {
-                enumTypeEntryCounts.SetCount<T>(Count);
+                enumTypeEntryCounts.SetValue<T>(Count);
             }
         }
+        #endregion
+
+        #region Contained Values
+        private static readonly FlexibleDictionary<Type, Type> enumUnderlyingTypeCodeDictionary = new();
+
+        /// <summary>Determines whether a value is defined in the enum <typeparamref name="TEnum"/>.</summary>
+        /// <typeparam name="TEnum">The type of the enum.</typeparam>
+        /// <typeparam name="TUnderlying">The underlying type of the enum, which is the type of the value instances.</typeparam>
+        /// <param name="value">The integral value to determine whether it's defined in an enum.</param>
+        /// <returns><see langword="true"/> if <typeparamref name="TEnum"/> has a definition assigned to the specified integral value, otherwise <see langword="false"/>.</returns>
+        /// <remarks>The function is based on <seealso cref="Enum.IsDefined{TEnum}(TEnum)"/>.</remarks>
+        public static unsafe bool IsDefined<TEnum, TUnderlying>(TUnderlying value)
+            where TEnum : unmanaged, Enum
+            where TUnderlying : unmanaged
+        {
+            if (!IsEnumOfType<TEnum, TUnderlying>())
+                return false;
+
+            return Enum.IsDefined(*(TEnum*)&value);
+        }
+        /// <summary>Determines whether <typeparamref name="TEnum"/>'s underlying value type is <typeparamref name="TUnderlying"/>.</summary>
+        /// <typeparam name="TEnum">The type of the enum.</typeparam>
+        /// <typeparam name="TUnderlying">The underlying type of the enum, which is the type of the value instances.</typeparam>
+        /// <returns><see langword="true"/> if <typeparamref name="TEnum"/> stores values of type <typeparamref name="TUnderlying"/>, otherwise <see langword="false"/>.</returns>
+        public static bool IsEnumOfType<TEnum, TUnderlying>()
+            where TEnum : unmanaged, Enum
+            where TUnderlying : unmanaged
+        {
+            return EnumUnderlyingTypeRetriever<TEnum>.UnderlyingType == typeof(TUnderlying);
+        }
+
+        private static class EnumUnderlyingTypeRetriever<T>
+            where T : struct, Enum
+        {
+            public static readonly Type UnderlyingType = Enum.GetUnderlyingType(typeof(T));
+
+            static EnumUnderlyingTypeRetriever()
+            {
+                enumUnderlyingTypeCodeDictionary[typeof(T)] = UnderlyingType;
+            }
+        }
+        #endregion
     }
 }
