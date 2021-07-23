@@ -13,7 +13,7 @@ namespace Garyon.Objects.Enumerators
         private bool enumerator4Alive = true;
 
         /// <summary>Gets the fourth enumerator.</summary>
-        protected IEnumerator<T4> Enumerator4 { get; private set; }
+        protected IEnumerator<T4> Enumerator4 { get; }
 
         /// <summary>Determines whether the fourth enumerator has not reached the end of the collection.</summary>
         public bool Enumerator4Alive => enumerator4Alive;
@@ -51,12 +51,14 @@ namespace Garyon.Objects.Enumerators
         {
             Enumerator4.Reset();
             enumerator4Alive = true;
+            base.Reset();
         }
 
         /// <summary>Calls the <seealso cref="IDisposable.Dispose()"/> method on all enumerators.</summary>
         public override void Dispose()
         {
             Enumerator4.Dispose();
+            base.Dispose();
         }
     }
 }

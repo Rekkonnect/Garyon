@@ -12,9 +12,9 @@ namespace Garyon.Objects.Enumerators
         private bool enumerator2Alive = true;
 
         /// <summary>Gets the first enumerator.</summary>
-        protected IEnumerator<T1> Enumerator1 { get; private set; }
+        protected IEnumerator<T1> Enumerator1 { get; }
         /// <summary>Gets the second enumerator.</summary>
-        protected IEnumerator<T2> Enumerator2 { get; private set; }
+        protected IEnumerator<T2> Enumerator2 { get; }
 
         /// <summary>Determines whether the first enumerator has not reached the end of the collection.</summary>
         public bool Enumerator1Alive => enumerator1Alive;
