@@ -11,6 +11,11 @@ namespace Garyon.Reflection
     /// <summary>Provides extension methods for the <seealso cref="Type"/> class.</summary>
     public static class TypeExtensions
     {
+        #region Static Function Wrappers
+        /// <inheritdoc cref="Type.GetTypeCode(Type?)"/>
+        public static TypeCode GetTypeCode(this Type type) => Type.GetTypeCode(type);
+        #endregion
+
         #region Inheritance
         /// <summary>Determines whether the provided type can inherit any type, either a class or an interface.</summary>
         /// <param name="type">The type to determine whether it can inherit any type.</param>
@@ -363,10 +368,10 @@ namespace Garyon.Reflection
         #endregion
 
         #region Pointers
-        /// <summary>Creates a jagged array type object with the specified jagging level.</summary>
-        /// <param name="type">The type of the elements within the array.</param>
-        /// <param name="pointerDepthLevel">The jagging level of the resulting jagged array type.</param>
-        /// <returns>The resulting <seealso cref="Type"/> object representing a jagged array type.</returns>
+        /// <summary>Creates a multiple pointer type object with the specified pointer depth level.</summary>
+        /// <param name="type">The type of the elements within the pointer.</param>
+        /// <param name="pointerDepthLevel">The depth level of the resulting pointer type.</param>
+        /// <returns>The resulting <seealso cref="Type"/> object representing a pointer type.</returns>
         public static Type MakeMultiplePointerType(this Type type, int pointerDepthLevel)
         {
             var currentType = type;
@@ -374,19 +379,19 @@ namespace Garyon.Reflection
                 currentType = type.MakePointerType();
             return currentType;
         }
-        /// <summary>Gets the array jagging level of the provided array type.</summary>
-        /// <param name="type">The jagged array type.</param>
-        /// <returns>The jagging level of the jagged array, if the provided type is an array, otherwise 0.</returns>
+        /// <summary>Gets the multiple pointer depth level of the provided pointer type.</summary>
+        /// <param name="type">The pointer type.</param>
+        /// <returns>The depth level of the multiple pointer, if the provided type is a pointer, otherwise 0.</returns>
         public static int GetMultiplePointerLevel(this Type type)
         {
             var currentType = type;
-            int jaggingLevel = 0;
+            int depthLevel = 0;
             while (currentType.IsPointer)
             {
                 currentType = currentType.GetElementType();
-                jaggingLevel++;
+                depthLevel++;
             }
-            return jaggingLevel;
+            return depthLevel;
         }
         #endregion
 

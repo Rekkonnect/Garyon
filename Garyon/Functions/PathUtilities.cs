@@ -59,18 +59,19 @@ namespace Garyon.Functions
                     result.Add(splitA[i]);
             return ConcatenateDirectoryPath(result);
         }
-        // Since the explanation is not the best, examples are provided.
-        /// <summary>
-        /// Gets the directory name of the directory in the previous path whose parent is the new path.<br/><br/>
+        // Since the explanation is not the most graspable, examples are provided.
+        /// <summary>Gets the directory name of the directory in the previous path whose parent is the new path.</summary>
+        /// <param name="previousPath">The previous path.</param>
+        /// <param name="newPath">The new path in which the resulting previous path's directory name is contained.</param>
+        /// <returns>
+        /// The name of the directory one level deeper than the new path if the previous path is a subpath of the new path, otherwise <see langword="null"/>.<br/><br/>
         /// Examples:
         /// <list type="bullet">
         /// <item><c>GetPreviousPathDirectoryInNewPath("C:\users\user\Desktop\", "C:\users\")</c> returns "user".</item>
-        /// <item><c>GetPreviousPathDirectoryInNewPath("C:\X\Y\Z\", "C:\")</c> returns "C:".</item>
+        /// <item><c>GetPreviousPathDirectoryInNewPath("C:\X\Y\Z\", "C:\")</c> returns "X".</item>
         /// <item><c>GetPreviousPathDirectoryInNewPath("C:\K\L\M\N\O\P\", "C:\K\L\M\N\")</c> returns "O".</item>
         /// </list>
-        /// </summary>
-        /// <param name="previousPath">The previous path.</param>
-        /// <param name="newPath">The new path in which the resulting previous path's directory name is contained.</param>
+        /// </returns>
         public static string GetPreviousPathDirectoryInNewPath(string previousPath, string newPath)
         {
             var splitPrevious = AnalyzePath(previousPath);
