@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace Garyon.Extensions
 {
@@ -19,17 +18,6 @@ namespace Garyon.Extensions
         {
             foreach (var e in elements)
                 c.Add(e);
-        }
-
-        /// <summary>Merges the collection's lists into a single list.</summary>
-        /// <typeparam name="T">The type of the elements in each list of the collection.</typeparam>
-        /// <param name="l">The collection of lists to merge into a list.</param>
-        public static List<T> Merge<T>(this ICollection<List<T>> l)
-        {
-            var result = new List<T>();
-            for (int i = 0; i < l.Count; i++)
-                result.AddRange(l.ElementAt(i));
-            return result;
         }
     }
 }

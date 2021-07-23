@@ -40,7 +40,7 @@ namespace Garyon.Reflection
         Tuple = 0x800,
 
         /// <summary>A nullable struct type.</summary>
-        NullableStruct = Struct | 0x1000,
+        NullableStruct = 0x1000 | Struct,
         /// <summary>A nullable tuple type.</summary>
         NullableTuple = NullableStruct | Tuple,
     }

@@ -21,5 +21,8 @@ namespace Garyon.Reflection
         PrivateProtected = 0x10,
         /// <summary>The <see langword="private"/> modifier.</summary>
         Private = 0x20,
+
+        /// <summary>All accesibility modifiers.</summary>
+        AllAccessibilities = Public | Internal | ProtectedInternal | Protected | PrivateProtected | Private,
     }
 }

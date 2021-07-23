@@ -15,7 +15,7 @@ namespace Garyon.Objects
         public ConsoleColor BackgroundColor { get; set; }
 
         /// <summary>Gets or sets the color tuple, defined as (ForegroundColor, BackgroundColor).</summary>
-        public (ConsoleColor, ConsoleColor) ColorTuple
+        public (ConsoleColor ForegroundColor, ConsoleColor BackgroundColor) ColorTuple
         {
             get => (ForegroundColor, BackgroundColor);
             set => (ForegroundColor, BackgroundColor) = value;

@@ -6,8 +6,6 @@ namespace Garyon.Extensions
 {
     public static class Extensions
     {
-        public static bool Contains(this Enum e, int value) => Enum.IsDefined(e.GetType(), value);
-
         public static bool MatchIndices(this List<int> l)
         {
             for (int i = 0; i < l.Count; i++)
@@ -62,23 +60,23 @@ namespace Garyon.Extensions
             return lengths;
         }
 
-        /// <summary>Calculates the next available zero-based index in a <see cref="List{T}"/> of indices.</summary>
-        /// <param name="indices">The <seealso cref="List{T}"/> containing the reserved indices.</param>
+        /// <summary>Calculates the next available zero-based index in a collection of reserved indices.</summary>
+        /// <param name="reservedIndices">The <seealso cref="List{T}"/> containing the reserved indices.</param>
         /// <returns>The next available zero-based index.</returns>
-        public static int GetNextAvailableZeroBasedIndex(this List<int> indices)
+        public static int GetNextAvailableZeroBasedIndex(this IEnumerable<int> reservedIndices)
         {
-            var copy = new List<int>(indices);
-            copy.Sort();
+            var copy = new List<int>(reservedIndices);
             copy = copy.RemoveDuplicates();
+            copy.Sort();
 
             // Evilly not checked right as soon as the list is sorted, to make the exception more expensive
-            if (copy[0] < 0)
+            if (copy.First() < 0)
                 throw new ArgumentException("The indices list cannot contain negative arguments.");
 
             // Some quick results
-            if (copy[0] > 0)
+            if (copy.First() > 0)
                 return 0;
-            if (copy[^1] == copy.Count - 1)
+            if (copy.Last() == copy.Count - 1)
                 return copy.Count;
 
             int min = 1;
@@ -97,7 +95,6 @@ namespace Garyon.Extensions
 
         public static HashSet<T> Clone<T>(this HashSet<T> s) => new HashSet<T>(s);
         public static SortedSet<T> Clone<T>(this SortedSet<T> s) => new SortedSet<T>(s);
-
 
         public static int[] GetInt32ArrayFromMultidimensionalInt32Array(int[,] a, int dimension, int index)
         {

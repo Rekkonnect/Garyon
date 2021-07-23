@@ -24,7 +24,7 @@ namespace Garyon.Reflection
         Private = AccessibilityModifiers.Private,
 
         /// <summary>All accesibility modifiers.</summary>
-        AllAccessibilities = Public | Internal | ProtectedInternal | Protected | PrivateProtected | Private,
+        AllAccessibilities = AccessibilityModifiers.AllAccessibilities,
 
         // Definition
         /// <summary>The <see langword="static"/> modifier.</summary>

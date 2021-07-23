@@ -256,6 +256,11 @@ namespace Garyon.Reflection
         #endregion
 
         #region Type Categories
+        // The checks below are based on the estimated commonness of the attributes
+
+        // Local static readonly variables please
+        private static readonly string tupleTypeNameStart = typeof(ValueTuple<>).FullName.RemoveLastNumber();
+
         /// <summary>Determines whether the type is <see langword="void"/>.</summary>
         /// <param name="type">The type to determine whether it is <see langword="void"/>.</param>
         /// <returns>A value determining whether the type is <see langword="void"/>.</returns>
@@ -268,7 +273,7 @@ namespace Garyon.Reflection
         /// <summary>Determines whehter the type is a static class.</summary>
         /// <param name="type">The type to determine whether it is a static class.</param>
         /// <returns>A value determining whether the type is a static class.</returns>
-        public static bool IsStaticClass(this Type type) => type.IsSealed && type.IsAbstract; // Checking sealed before abstract because abstract classes are more common
+        public static bool IsStaticClass(this Type type) => type.IsSealed && type.IsAbstract;
 
         /// <summary>Determines whether the type is a delegate.</summary>
         /// <param name="type">The type to determine whether it is a delegate.</param>
@@ -281,6 +286,7 @@ namespace Garyon.Reflection
         /// <summary>Determines whether the type is an attribute.</summary>
         /// <param name="type">The type to determine whether it is an attribute.</param>
         /// <returns>A value determining whether the type is an attribute.</returns>
+        // TODO: Remove the generic type check when generic attributes are implemented in the language
         public static bool IsAttribute(this Type type) => !type.IsGenericType && type.InheritsOrEquals<Attribute>();
         /// <summary>Determines whether the type is a tuple; that is, any generic variant of the <seealso cref="ValueTuple"/> struct, nullable or not.</summary>
         /// <param name="type">The type to determine whether it is a tuple.</param>
@@ -292,9 +298,8 @@ namespace Garyon.Reflection
 
             // The full name of the type should be System.ValueTuple`N, where N is the number of generic type arguments
             var fullName = type.FullName;
-            var targetName = typeof(ValueTuple<>).FullName.RemoveLastNumber();
 
-            if (fullName.StartsWith(targetName))
+            if (fullName.StartsWith(tupleTypeNameStart))
                 return true;
 
             return false;

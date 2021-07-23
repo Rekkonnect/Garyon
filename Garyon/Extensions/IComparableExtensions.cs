@@ -118,6 +118,7 @@ namespace Garyon.Extensions
 
         private static bool MatchesComparisonResult(int comparison, ComparisonResult result)
         {
+            // Avoiding usage of Math.Sign here to improve performance by avoiding unnecessary checks
             return result switch
             {
                 ComparisonResult.Less => comparison < 0,
@@ -128,11 +129,7 @@ namespace Garyon.Extensions
         }
         private static ComparisonResult GetComparisonResult(int comparison)
         {
-            if (comparison < 0)
-                return ComparisonResult.Less;
-            if (comparison > 0)
-                return ComparisonResult.Greater;
-            return ComparisonResult.Equal;
+            return (ComparisonResult)Math.Sign(comparison);
         }
     }
 }
