@@ -11,26 +11,27 @@
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.2.3</Version>
+    <Version>0.2.4</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>Fixes/Improvements:
-- IList extensions were optimized
-- Array copying APIs were standarized and finalized
-- Array zeroing APIs were removed
-- Parallel enumerations were fixed
+    <PackageReleaseNotes>Additions:
+- Added StructRef
+
+Fixes/Improvements:
+- Flattening operations were optimized
+  - Enumerable flattening enumerators were added
+- Fixed HourMinute and MinuteSecond value overflowing
+- Fixed parallel enumeration Reset and Dispose methods
+- Fixed documentation for PathUtilities.GetPreviousPathDirectoryInNewPath
+- Fixed documentation for type extensions regarding pointers
 
 Extensions:
-- Added more extensions for IAsyncEnumerable
-- Added extensions for DateTime
-- Added QueueSet and StackSet
-- Added Invert extension for Index
-- Minor cleanup in the deprecated general Extensions class
+- Added extensions for tuples of IEnumerables to use parallel enumeration
 
-Other:
-- Add GetHashCode overrides for several types (mainly to reduce warnings)
-- Minor documentation improvements</PackageReleaseNotes>
+Removals:
+- Removed Language components
+- Removed ICollection&lt;List&lt;T&gt;&gt; extension "Merge"</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
