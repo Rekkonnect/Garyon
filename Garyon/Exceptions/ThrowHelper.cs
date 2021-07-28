@@ -12,8 +12,9 @@ namespace Garyon.Exceptions
         #region Generic Throwers
         /// <summary>Throws a new exception of the type <typeparamref name="T"/>.</summary>
         /// <typeparam name="T">The exception type to throw.</typeparam>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void Throw<T>()
+        public static T Throw<T>()
             where T : Exception, new()
         {
             throw new T();
@@ -21,8 +22,9 @@ namespace Garyon.Exceptions
         /// <summary>Throws a new exception of the type <typeparamref name="T"/>.</summary>
         /// <typeparam name="T">The exception type to throw.</typeparam>
         /// <param name="message">The error message that explains the reason for the exception.</param>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void Throw<T>(string message)
+        public static T Throw<T>(string message)
             where T : Exception
         {
             var constructor = typeof(T).GetConstructor<string>();
@@ -32,35 +34,38 @@ namespace Garyon.Exceptions
         /// <typeparam name="T">The exception type to throw.</typeparam>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void Throw<T>(string message, Exception innerException)
+        public static T Throw<T>(string message, Exception innerException)
             where T : Exception
         {
-            Throw<T, Exception>(message, innerException);
+            return Throw<T, Exception>(message, innerException);
         }
         /// <summary>Throws a new aggregate exception of the type <typeparamref name="T"/>.</summary>
         /// <typeparam name="T">The exception type to throw.</typeparam>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerExceptions">The exceptions that are the cause of the current exception.</param>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void ThrowAggregate<T>(string message, params Exception[] innerExceptions)
+        public static T ThrowAggregate<T>(string message, params Exception[] innerExceptions)
             where T : AggregateException
         {
-            ThrowAggregate<T>(message, innerExceptions, innerExceptions);
+            return ThrowAggregate<T>(message, innerExceptions, innerExceptions);
         }
         /// <summary>Throws a new aggregate exception of the type <typeparamref name="T"/>.</summary>
         /// <typeparam name="T">The exception type to throw.</typeparam>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerExceptions">The exceptions that are the cause of the current exception.</param>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void ThrowAggregate<T>(string message, IEnumerable<Exception> innerExceptions)
+        public static T ThrowAggregate<T>(string message, IEnumerable<Exception> innerExceptions)
             where T : AggregateException
         {
-            ThrowAggregate<T>(message, innerExceptions, null);
+            return ThrowAggregate<T>(message, innerExceptions, null);
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private static void ThrowAggregate<T>(string message, IEnumerable<Exception> enumerableInner, Exception[]? arrayInner)
+        private static T ThrowAggregate<T>(string message, IEnumerable<Exception> enumerableInner, Exception[]? arrayInner)
             where T : AggregateException
         {
             var resulting = GetThrowableException<T, IEnumerable<Exception>>(message, enumerableInner);
@@ -72,7 +77,7 @@ namespace Garyon.Exceptions
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private static void Throw<TException, TInner>(string message, TInner inner)
+        private static TException Throw<TException, TInner>(string message, TInner inner)
             where TException : Exception
         {
             throw GetThrowableException<TException, TInner>(message, inner);
@@ -89,16 +94,18 @@ namespace Garyon.Exceptions
         #region Instance Throwers
         /// <summary>Throws an exception whose instance is already created.</summary>
         /// <param name="e">The exception instance to throw.</param>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void Throw(Exception e) => throw e;
+        public static Exception Throw(Exception e) => throw e;
         #endregion
 
         #region Standarized Exception Throwers
         /// <summary>Throws a new <seealso cref="AggregateException"/>.</summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerExceptions">The exceptions that are the cause of the current exception.</param>
+        /// <returns>Never reaches the point of returning; the return type is so that an object can be used in <see langword="return"/> or <see langword="throw"/> statements (latter is not recommended).</returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void ThrowAggregate(string message, params Exception[] innerExceptions)
+        public static Exception ThrowAggregate(string message, params Exception[] innerExceptions)
         {
             throw new AggregateException(message, innerExceptions);
         }
