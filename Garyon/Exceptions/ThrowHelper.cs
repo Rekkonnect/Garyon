@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Reflection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -24,7 +25,7 @@ namespace Garyon.Exceptions
         public static void Throw<T>(string message)
             where T : Exception
         {
-            var constructor = typeof(T).GetConstructor(new Type[] { typeof(string) });
+            var constructor = typeof(T).GetConstructor<string>();
             throw constructor.Invoke(new object[] { message }) as T;
         }
         /// <summary>Throws a new exception of the type <typeparamref name="T"/>.</summary>
@@ -80,7 +81,7 @@ namespace Garyon.Exceptions
         private static TException? GetThrowableException<TException, TInner>(string message, TInner inner)
             where TException : Exception
         {
-            var constructor = typeof(TException).GetConstructor(new Type[] { typeof(string), typeof(TInner) });
+            var constructor = typeof(TException).GetConstructor<string, TInner>();
             return constructor?.Invoke(new object[] { message, inner }) as TException;
         }
         #endregion
