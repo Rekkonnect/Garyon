@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Garyon.Extensions
 {
@@ -9,10 +10,10 @@ namespace Garyon.Extensions
         /// <typeparam name="T">The type of the value whose bytes to get.</typeparam>
         /// <param name="value">The value whose bytes to get.</param>
         /// <returns>The bytes of the value.</returns>
-        public static ReadOnlySpan<byte> GetBytes<T>(this T value)
+        public static ReadOnlySpan<byte> GetBytes<T>(this ref T value)
             where T : unmanaged
         {
-            return new ReadOnlySpan<byte>(&value, sizeof(T));
+            return MemoryMarshal.AsBytes(MemoryMarshal.CreateSpan(ref value, 1));
         }
         /// <summary>Gets the value of an <see langword="unmanaged"/> <see langword="struct"/>, given a <seealso cref="Span{T}"/>.</summary>
         /// <typeparam name="T">The type of the <see langword="unmanaged"/> <see langword="struct"/>.</typeparam>
