@@ -77,5 +77,16 @@ namespace Garyon.Extensions
             }
         }
         #endregion
+
+        /// <summary>Enumerates the entire <seealso cref="IAsyncEnumerable{T}"/> collection and creates a list with the enumerated elements in the order they were enumerated.</summary>
+        /// <typeparam name="T">The type of the elements that are contained in the collection.</typeparam>
+        /// <param name="source">The source collection.</param>
+        /// <returns>A <seealso cref="Task"/> wrapping the new <seealso cref="List{T}"/> containing all the elements that were enumerated from the <seealso cref="IAsyncEnumerable{T}"/> collection.</returns>
+        public static async Task<List<T>> ToListAsync<T>(this IAsyncEnumerable<T> source)
+        {
+            var result = new List<T>();
+            await result.AddRangeAsync(source);
+            return result;
+        }
     }
 }

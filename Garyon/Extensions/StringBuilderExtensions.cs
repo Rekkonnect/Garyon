@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Net.Sockets;
+﻿using System;
 using System.Text;
 
 namespace Garyon.Extensions
@@ -7,6 +6,44 @@ namespace Garyon.Extensions
     /// <summary>Provides extension methods for the <seealso cref="StringBuilder"/> class.</summary>
     public static class StringBuilderExtensions
     {
+        /// <summary>Appends an array of characters, and appends a new line after that.</summary>
+        /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
+        /// <param name="chars">The array of characters to append.</param>
+        /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder AppendLine(this StringBuilder builder, char[] chars)
+        {
+            return builder.Append(chars).AppendLine();
+        }
+        /// <summary>Appends a sequence of characters, and appends a new line after that.</summary>
+        /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
+        /// <param name="chars">The sequence of characters to append.</param>
+        /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder AppendLine(this StringBuilder builder, ReadOnlySpan<char> chars)
+        {
+            return builder.Append(chars).AppendLine();
+        }
+        /// <inheritdoc cref="AppendLine(StringBuilder, ReadOnlySpan{char})"/>
+        public static StringBuilder AppendLine(this StringBuilder builder, ReadOnlyMemory<char> chars)
+        {
+            return builder.Append(chars).AppendLine();
+        }
+#pragma warning disable CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
+        /// <inheritdoc cref="AppendLine(StringBuilder, ReadOnlySpan{char})"/>
+        /// <param name="charCount">The number of characters to append.</param>
+        public static unsafe StringBuilder AppendLine(this StringBuilder builder, char* chars, int charCount)
+        {
+            return builder.Append(chars, charCount).AppendLine();
+        }
+#pragma warning restore CS1573
+        /// <summary>Appends an object's string representation, and appends a new line after that.</summary>
+        /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
+        /// <param name="o">The object whose string representation to append.</param>
+        /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder AppendLine(this StringBuilder builder, object o)
+        {
+            return builder.AppendLine(o.ToString());
+        }
+
         /// <summary>Copies this <seealso cref="StringBuilder"/> into a new instance.</summary>
         /// <param name="s">The <seealso cref="StringBuilder"/> to copy.</param>
         /// <returns>The new copied <seealso cref="StringBuilder"/> instance.</returns>

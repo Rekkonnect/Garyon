@@ -12,6 +12,35 @@ namespace Garyon.Extensions
         private const string UTF7ObsoletionDiagnosticID = "SYSLIB0001";
         private const string UTF7ObsoletionURLFormat = "https://aka.ms/dotnet-warnings/{0}";
 
+        #region Property-like extensions
+        /// <summary>Determines whether a <seealso cref="Stream"/> has reached its end.</summary>
+        /// <param name="stream">The <seealso cref="Stream"/> whose position to check.</param>
+        /// <returns><see langword="true"/> if <seealso cref="Stream.Position"/> &gt;= <see cref="Stream.Length"/>, otherwise <see langword="false"/>.</returns>
+        public static bool ReachedEnd(this Stream stream) => stream.Position >= stream.Length;
+        /// <summary>Calculates the remaining number of bytes that can be read from the <seealso cref="Stream"/> before reaching its end.</summary>
+        /// <param name="stream">The <seealso cref="Stream"/> whose remaining byte count to calculate.</param>
+        /// <returns>The number of bytes that can be read from the <seealso cref="Stream"/> before its end is reached.</returns>
+        public static long RemainingBytes(this Stream stream) => stream.Length - stream.Position;
+        #endregion
+
+        /// <summary>Resets a stream's position to 0.</summary>
+        /// <param name="stream">The <see cref="Stream"/> whose position to set to 0.</param>
+        public static void ResetPosition(this Stream stream)
+        {
+            stream.Position = 0;
+        }
+        /// <summary>Reads all the contents of the stream and stores them to a newly initialized <seealso cref="byte"/> array.</summary>
+        /// <param name="stream">The stream whose contents will be read and written into the target array.</param>
+        /// <returns>The newly created <seealso cref="byte"/> array containing the read contents of the <seealso cref="Stream"/>.</returns>
+        /// <remarks>Be careful when using this method on very large streams, all the contents will be copied over to the memory, which is far more limited than storage.</remarks>
+        public static byte[] ToByteArray(this Stream stream)
+        {
+            var result = new byte[stream.Length];
+            stream.ResetPosition();
+            stream.Read(result, 0, result.Length);
+            return result;
+        }
+
         #region Write at current position
         /// <summary>Writes a <seealso cref="byte"/> to the stream at the current position.</summary>
         /// <param name="stream">The stream to write to.</param>
@@ -54,6 +83,13 @@ namespace Garyon.Extensions
             where T : unmanaged
         {
             stream.Write(value.GetBytes());
+        }
+        /// <summary>Writes all contents of a <seealso cref="byte"/> buffer to the stream at the current position.</summary>
+        /// <param name="stream">The stream to write to.</param>
+        /// <param name="buffer">The buffer to write to the stream.</param>
+        public static void Write(this Stream stream, byte[] buffer)
+        {
+            stream.Write(buffer, 0, buffer.Length);
         }
 
         /// <summary>Writes a <seealso cref="string"/> encoded in UTF-7 to the stream at the current position.</summary>
@@ -176,6 +212,15 @@ namespace Garyon.Extensions
         {
             stream.Position = position;
             stream.Write(value);
+        }
+        /// <summary>Writes all contents of a <seealso cref="byte"/> buffer to the stream at the current position.</summary>
+        /// <param name="stream">The stream to write to.</param>
+        /// <param name="position">The position in the stream to write at.</param>
+        /// <param name="buffer">The buffer to write to the stream.</param>
+        public static void Write(this Stream stream, long position, byte[] buffer)
+        {
+            stream.Position = position;
+            stream.Write(buffer);
         }
 
         /// <summary>Writes a <seealso cref="string"/> encoded in UTF-7 to the stream at the specified position.</summary>
