@@ -61,13 +61,5 @@ namespace Garyon.Memory
         /// <summary>Frees a previously allocated block of bytes from the unmanaged heap.</summary>
         /// <param name="pointer">The <see langword="void"/>* pointing at the block that was allocated.</param>
         public static void Free(void* pointer) => Marshal.FreeHGlobal((IntPtr)pointer);
-        /// <summary>Frees a previously allocated block of bytes from the unmanaged heap.</summary>
-        /// <typeparam name="T">The type of the elements the allocated block stores.</typeparam>
-        /// <param name="pointer">The <typeparamref name="T"/>* pointing at the block that was allocated.</param>
-        public static void Free<T>(T* pointer)
-            where T : unmanaged
-        {
-            Marshal.FreeHGlobal((IntPtr)pointer);
-        }
     }
 }
