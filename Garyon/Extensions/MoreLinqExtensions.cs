@@ -1,5 +1,4 @@
-﻿using Garyon.Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,6 +8,6 @@ namespace Garyon.Extensions
     public static class MoreLinqExtensions
     {
         /// <inheritdoc cref="Enumerable.Where{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
-        public static IEnumerable<T> Where<T>(this IEnumerable<T> source, Predicate<T> predicate) => source.Where(new Func<T, bool>(predicate));
+        public static IEnumerable<T> WherePredicate<T>(this IEnumerable<T> source, Predicate<T> predicate) => source.Where(new Func<T, bool>(predicate));
     }
 }

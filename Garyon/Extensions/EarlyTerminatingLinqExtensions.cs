@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Garyon.Extensions
 {
     /// <summary>Contains a collection of early-termiating LINQ-like extensions.</summary>
-    public static class EarlyTerminatingLinqExtensions
+    public static partial class EarlyTerminatingLinqExtensions
     {
         #region Documentation templates
         /// <param name="values">The collection of values whose sum to calculate.</param>
@@ -14,7 +14,7 @@ namespace Garyon.Extensions
         /// It is not necessary that the entire collection is enumerated. Enumeration halts upon alternation of satisfying the given comparison.<br/>
         /// Overflows are not accounted for. Ensure that the sum of the entire collection will not overflow, causing this result to appear wrong.
         /// </remarks>
-        private extern static void SumSatisfiesDocTemplate(int values, int target);
+        static partial void SumSatisfiesDocTemplate(int values, int target);
         #endregion
 
         /// <inheritdoc cref="SumSatisfiesDocTemplate"/>
