@@ -11,11 +11,16 @@
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.2.6</Version>
+    <Version>0.2.6.1</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>Additions:
+    <PackageReleaseNotes>0.2.6.1 changes
+Additions:
+- MemberInfoExtensions.HasCustomAttribute&lt;TAttribute&gt;(MemberInfo)
+
+0.2.6.0 changes
+Additions:
 - RepeatedValueCollection
 - ArrayFactory
 - PointerFunctions.Fill

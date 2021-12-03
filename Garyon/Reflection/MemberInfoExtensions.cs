@@ -9,6 +9,12 @@ namespace Garyon.Reflection
     public static class MemberInfoExtensions
     {
         #region MemberInfo
+        /// <inheritdoc cref="HasCustomAttribute{T}(MemberInfo, out T)"/>
+        public static bool HasCustomAttribute<T>(this MemberInfo member)
+            where T : Attribute
+        {
+            return member.HasCustomAttribute<T>(out _);
+        }
         /// <summary>Determines whether a member has a custom attribute of the specified type.</summary>
         /// <typeparam name="T">The type of the attribute to find.</typeparam>
         /// <param name="member">The member whose attribute to find.</param>
