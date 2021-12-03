@@ -38,6 +38,16 @@ namespace Garyon.Extensions
         /// <returns><see langword="true"/> if <paramref name="value"/> is not equal to <paramref name="other"/>, otherwise <see langword="false"/>.</returns>
         public static bool NotEqualTo(this IComparable value, object other) => value.CompareTo(other) != 0;
 
+        /// <summary>Determines whether the comparison of <paramref name="value"/> and <paramref name="other"/> satisfies the given comparison.</summary>
+        /// <param name="value">The provided value to compare.</param>
+        /// <param name="other">The other value to compare.</param>
+        /// <param name="kinds">The comparison kinds.</param>
+        /// <returns><see langword="true"/> if the comparison of <paramref name="value"/> with <paramref name="other"/> is satsified, otherwise <see langword="false"/>.</returns>
+        public static bool SatisfiesComparison(this IComparable value, object other, ComparisonKinds kinds)
+        {
+            return SatisfiesComparison(value.CompareTo(other), kinds);
+        }
+
         /// <summary>Determines whether the comparison of <paramref name="value"/> and <paramref name="other"/> matches the expected result.</summary>
         /// <param name="value">The provided value to compare.</param>
         /// <param name="other">The other value to compare.</param>
@@ -95,6 +105,17 @@ namespace Garyon.Extensions
         /// <returns><see langword="true"/> if <paramref name="value"/> is not equal to <paramref name="other"/>, otherwise <see langword="false"/>.</returns>
         public static bool NotEqualTo<T>(this IComparable<T> value, T other) => value.CompareTo(other) != 0;
 
+        /// <summary>Determines whether the comparison of <paramref name="value"/> and <paramref name="other"/> satisfies the given comparison.</summary>
+        /// <typeparam name="T">The type of the value that <paramref name="value"/> can be compared with.</typeparam>
+        /// <param name="value">The provided value to compare.</param>
+        /// <param name="other">The other value to compare.</param>
+        /// <param name="kinds">The comparison kinds.</param>
+        /// <returns><see langword="true"/> if the comparison of <paramref name="value"/> with <paramref name="other"/> is satsified, otherwise <see langword="false"/>.</returns>
+        public static bool SatisfiesComparison<T>(this IComparable<T> value, T other, ComparisonKinds kinds)
+        {
+            return SatisfiesComparison(value.CompareTo(other), kinds);
+        }
+
         /// <summary>Determines whether the comparison of <paramref name="value"/> and <paramref name="other"/> matches the expected result.</summary>
         /// <typeparam name="T">The type of the value that <paramref name="value"/> can be compared with.</typeparam>
         /// <param name="value">The provided value to compare.</param>
@@ -116,14 +137,28 @@ namespace Garyon.Extensions
         }
         #endregion
 
+        private static bool SatisfiesComparison(int comparison, ComparisonKinds kinds)
+        {
+            return kinds switch
+            {
+                ComparisonKinds.Less => comparison < 0,
+                ComparisonKinds.Equal => comparison == 0,
+                ComparisonKinds.Greater => comparison > 0,
+                ComparisonKinds.Different => comparison != 0,
+                ComparisonKinds.LessOrEqual => comparison >= 0,
+                ComparisonKinds.GreaterOrEqual => comparison <= 0,
+                ComparisonKinds.All => true,
+                _ => false,
+            };
+        }
         private static bool MatchesComparisonResult(int comparison, ComparisonResult result)
         {
             // Avoiding usage of Math.Sign here to improve performance by avoiding unnecessary checks
             return result switch
             {
                 ComparisonResult.Less => comparison < 0,
-                ComparisonResult.Greater => comparison > 0,
                 ComparisonResult.Equal => comparison == 0,
+                ComparisonResult.Greater => comparison > 0,
                 _ => false,
             };
         }
