@@ -11,11 +11,17 @@
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.2.6.1</Version>
+    <Version>0.2.6.2</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>0.2.6.1 changes
+    <PackageReleaseNotes>0.2.6.2 changes
+Additions:
+- QueueExtensions.DequeueAll() and StackExtensions.PopAll()
+- KeyValuePair&lt;TKey, TValue&gt; comparers
+- HashCodeFactory
+
+0.2.6.1 changes
 Additions:
 - MemberInfoExtensions.HasCustomAttribute&lt;TAttribute&gt;(MemberInfo)
 

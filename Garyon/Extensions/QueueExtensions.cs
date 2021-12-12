@@ -24,5 +24,10 @@ namespace Garyon.Extensions
             for (int i = 0; i < count; i++)
                 yield return queue.Dequeue();
         }
+        /// <summary>Dequeues all elements from the queue.</summary>
+        /// <typeparam name="T">The type of the elements contained in the queue.</typeparam>
+        /// <param name="queue">The queue.</param>
+        /// <returns>The dequeued elements in the order they were dequeued.</returns>
+        public static IEnumerable<T> DequeueAll<T>(this Queue<T> queue) => queue.DequeueRange(queue.Count);
     }
 }

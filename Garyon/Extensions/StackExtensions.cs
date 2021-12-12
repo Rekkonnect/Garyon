@@ -14,7 +14,7 @@ namespace Garyon.Extensions
             foreach (var e in range)
                 stack.Push(e);
         }
-        /// <summary>Destacks a range of elements from the stack.</summary>
+        /// <summary>Pops a range of elements from the stack.</summary>
         /// <typeparam name="T">The type of the elements contained in the stack.</typeparam>
         /// <param name="stack">The stack.</param>
         /// <param name="count">The number of elements to pop.</param>
@@ -24,5 +24,10 @@ namespace Garyon.Extensions
             for (int i = 0; i < count; i++)
                 yield return stack.Pop();
         }
+        /// <summary>Pops all elements from the stack.</summary>
+        /// <typeparam name="T">The type of the elements contained in the stack.</typeparam>
+        /// <param name="stack">The stack.</param>
+        /// <returns>The popped elements in the order they were popped.</returns>
+        public static IEnumerable<T> PopAll<T>(this Stack<T> stack) => stack.PopRange(stack.Count);
     }
 }
