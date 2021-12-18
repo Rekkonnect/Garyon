@@ -652,6 +652,23 @@ namespace Garyon.Extensions
         }
         #endregion
 
+        #region Concat
+        /// <summary>Concatenates a given sequence of elements with another single element, appending it to the end of the enumerated result.</summary>
+        /// <typeparam name="T">The type of the values that are yielded from the sequence.</typeparam>
+        /// <param name="source">The source sequence which to concatenate with the other element.</param>
+        /// <param name="value">The single value to concatenate with the sequence.</param>
+        /// <returns>The original sequence concatenated with the single element.</returns>
+        public static IEnumerable<T> ConcatSingleValue<T>(this IEnumerable<T> source, T value)
+        {
+            return source.Concat(new SingleElementCollection<T>(value));
+        }
+        /// <inheritdoc cref="Enumerable.Concat{TSource}(IEnumerable{TSource}, IEnumerable{TSource})"/>
+        public static IEnumerable<T> Concat<T>(this IEnumerable<T> first, params T[] second)
+        {
+            return first.Concat(second);
+        }
+        #endregion
+
         #region LINQ-Like Operations
         /// <summary>Filters out the provided collection's elements based on the given predicate, and separates the matched from the unmatched ones, storing them in the respective collections.</summary>
         /// <typeparam name="T">The type of the elements that are contained in the <seealso cref="IEnumerable{T}"/>.</typeparam>
