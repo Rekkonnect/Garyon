@@ -145,8 +145,8 @@ namespace Garyon.Extensions
                 ComparisonKinds.Equal => comparison == 0,
                 ComparisonKinds.Greater => comparison > 0,
                 ComparisonKinds.Different => comparison != 0,
-                ComparisonKinds.LessOrEqual => comparison >= 0,
-                ComparisonKinds.GreaterOrEqual => comparison <= 0,
+                ComparisonKinds.LessOrEqual => comparison <= 0,
+                ComparisonKinds.GreaterOrEqual => comparison >= 0,
                 ComparisonKinds.All => true,
                 _ => false,
             };
