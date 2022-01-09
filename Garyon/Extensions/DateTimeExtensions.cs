@@ -1,4 +1,5 @@
 ﻿using Garyon.Exceptions;
+using Garyon.Objects;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using static System.TimeSpan;
@@ -94,15 +95,123 @@ namespace Garyon.Extensions
         }
 
         /*
-         * TODO: Add some more With* functions for more common adjustments, for example:
-         * - ss.ms
-         * - mm:ss
-         * - hh:mm:ss
-         * - hh:mm:ss.ms
+         * TODO: With* functions:
          * - MM/DD
          * - YYYY/MM
          * - YYYY/MM/DD
+         * 
+         * Done:
+         * - ss.ms
+         * - mm:ss
+         * - hh:mm
+         * - hh:mm:ss
+         * - hh:mm:ss.ms
          */
+
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the second and the millisecond components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted second and millisecond components.</param>
+        /// <param name="second">The value of the second component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <param name="millisecond">The value of the second component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 999].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the second and millisecond components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="second"/> is outside the range [0, 59] -or- the given value for <paramref name="millisecond"/> is outside the range [0, 999].</exception>
+        public static DateTime WithSecondMillisecond(this DateTime dateTime, int second, int millisecond)
+        {
+            ValidateSecondComponent(second);
+            ValidateMillisecondComponent(millisecond);
+            int targetMilliseconds = second * 1000 + millisecond;
+            int currentMilliseconds = dateTime.Second * 1000 + dateTime.Millisecond;
+            return dateTime.AddMilliseconds(targetMilliseconds - currentMilliseconds);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the minute and the second components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted minute and second components.</param>
+        /// <param name="minute">The value of the minute component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <param name="second">The value of the second component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the minute and second components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="minute"/> is outside the range [0, 59] -or- the given value for <paramref name="second"/> is outside the range [0, 59].</exception>
+        public static DateTime WithMinuteSecond(this DateTime dateTime, int minute, int second)
+        {
+            ValidateMinuteComponent(minute);
+            ValidateSecondComponent(second);
+            int targetSeconds = minute * 60 + second;
+            int currentSeconds = dateTime.Minute * 60 + dateTime.Second;
+            return dateTime.AddSeconds(targetSeconds - currentSeconds);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the hour and minute components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted hour and minute components.</param>
+        /// <param name="hour">The value of the hour component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 23].</param>
+        /// <param name="minute">The value of the minute component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the hour and minute components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="hour"/> is outside the range [0, 23] -or- the given value for <paramref name="minute"/> is outside the range [0, 59].</exception>
+        public static DateTime WithHourMinute(this DateTime dateTime, int hour, int minute)
+        {
+            ValidateHourComponent(hour);
+            ValidateMinuteComponent(minute);
+            int targetMinutes = hour * 60 + minute;
+            int currentMinutes = dateTime.Hour * 60 + dateTime.Minute;
+            return dateTime.AddMinutes(targetMinutes - currentMinutes);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the hour, minute and second components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted hour, minute and second components.</param>
+        /// <param name="hour">The value of the hour component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 23].</param>
+        /// <param name="minute">The value of the minute component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <param name="second">The value of the second component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the hour, minute and second components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// The given value for <paramref name="hour"/> is outside the range [0, 23]
+        /// -or- the given value for <paramref name="minute"/> is outside the range [0, 59]
+        /// -or- the given value for <paramref name="second"/> is outside the range [0, 59].
+        /// </exception>
+        public static DateTime WithHourMinuteSecond(this DateTime dateTime, int hour, int minute, int second)
+        {
+            ValidateHourComponent(hour);
+            ValidateMinuteComponent(minute);
+            ValidateSecondComponent(second);
+            int targetSeconds = (hour * 60 + minute) * 60 + second;
+            int currentSeconds = (dateTime.Hour * 60 + dateTime.Minute) * 60 + dateTime.Second;
+            return dateTime.AddSeconds(targetSeconds - currentSeconds);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the hour, minute, second and millisecond components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted hour, minute, second and millisecond components.</param>
+        /// <param name="hour">The value of the hour component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 23].</param>
+        /// <param name="minute">The value of the minute component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <param name="second">The value of the second component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
+        /// <param name="millisecond">The value of the millisecond component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 999].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the hour, minute, second and millisecond components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// The given value for <paramref name="hour"/> is outside the range [0, 23]
+        /// -or- the given value for <paramref name="minute"/> is outside the range [0, 59]
+        /// -or- the given value for <paramref name="second"/> is outside the range [0, 59].
+        /// -or- the given value for <paramref name="millisecond"/> is outside the range [0, 999].
+        /// </exception>
+        public static DateTime WithHourMinuteSecondMillisecond(this DateTime dateTime, int hour, int minute, int second, int millisecond)
+        {
+            ValidateHourComponent(hour);
+            ValidateMinuteComponent(minute);
+            ValidateSecondComponent(second);
+            ValidateMillisecondComponent(millisecond);
+            int targetMilliseconds = ((hour * 60 + minute) * 60 + second) * 1000 + millisecond;
+            int currentMillseconds = ((dateTime.Hour * 60 + dateTime.Minute) * 60 + dateTime.Second) * 1000 + dateTime.Millisecond;
+            return dateTime.AddSeconds(targetMilliseconds - currentMillseconds);
+        }
+
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the minute and the second components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted minute and second components.</param>
+        /// <param name="minuteSecond">The minute and second components of the resulting copied <seealso cref="DateTime"/>.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the minute and second components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="minuteSecond"/> represents a minute outside the range [0, 59].</exception>
+        public static DateTime WithMinuteSecond(this DateTime dateTime, MinuteSecond minuteSecond)
+        {
+            return dateTime.WithMinuteSecond(minuteSecond.Minute, minuteSecond.Second);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the hour and minute components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted hour and minute components.</param>
+        /// <param name="hourMinute">The hour and minute components of the resulting copied <seealso cref="DateTime"/>.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the hour and minute components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="hourMinute"/> represents an hour outside the range [0, 23].</exception>
+        public static DateTime WithHourMinute(this DateTime dateTime, HourMinute hourMinute)
+        {
+            return dateTime.WithHourMinute(hourMinute.Hour, hourMinute.Minute);
+        }
 
         #region Validation
         // All validation functions will throw an exception with the appropriate message if the component is outside the valid range
