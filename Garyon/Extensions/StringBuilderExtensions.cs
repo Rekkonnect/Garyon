@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Garyon.Extensions
@@ -42,6 +45,33 @@ namespace Garyon.Extensions
         public static StringBuilder AppendLine(this StringBuilder builder, object o)
         {
             return builder.AppendLine(o.ToString());
+        }
+
+        /// <summary>Appends the string representations of objects in a collection, and appends a new line after that.</summary>
+        /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
+        /// <param name="objects">The objects whose string representations to append.</param>
+        /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder AppendLines(this StringBuilder builder, IEnumerable objects)
+        {
+            return AppendLines(builder, objects.Cast<object>());
+        }
+        /// <summary>Appends the string representations of objects in a collection, and appends a new line after that.</summary>
+        /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
+        /// <param name="objects">The objects whose string representations to append.</param>
+        /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder AppendLines(this StringBuilder builder, IEnumerable<object> objects)
+        {
+            foreach (var o in objects)
+                builder.AppendLine(o);
+            return builder;
+        }
+        /// <summary>Appends the string representations of objects in a collection, and appends a new line after that.</summary>
+        /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
+        /// <param name="objects">The objects whose string representations to append.</param>
+        /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+        public static StringBuilder AppendLines(this StringBuilder builder, params object[] objects)
+        {
+            return AppendLines(builder, objects.AsEnumerable());
         }
 
         /// <summary>Copies this <seealso cref="StringBuilder"/> into a new instance.</summary>

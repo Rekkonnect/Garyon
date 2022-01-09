@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Garyon.Extensions
 {
@@ -29,5 +30,24 @@ namespace Garyon.Extensions
         /// <param name="queue">The queue.</param>
         /// <returns>The dequeued elements in the order they were dequeued.</returns>
         public static IEnumerable<T> DequeueAll<T>(this Queue<T> queue) => queue.DequeueRange(queue.Count);
+
+        /// <summary>Inserts an element in the queue at the specified index.</summary>
+        /// <typeparam name="T">The type of the values stored in the queue.</typeparam>
+        /// <param name="queue">The queue.</param>
+        /// <param name="item">The item to insert into the queue.</param>
+        /// <param name="index">The index at which the item will be inserted.</param>
+        /// <remarks>This is an expensive operation, due to the lack of the necessary public APIs for speeding up the insertion.</remarks>
+        public static void Insert<T>(this Queue<T> queue, T item, int index)
+        {
+            if (index >= queue.Count)
+            {
+                queue.Enqueue(item);
+                return;
+            }
+
+            var dequeued = queue.DequeueRange(queue.Count - index - 1).ToArray();
+            queue.Enqueue(item);
+            queue.EnqueueRange(dequeued);
+        }
     }
 }

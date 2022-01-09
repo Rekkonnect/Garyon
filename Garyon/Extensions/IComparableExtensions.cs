@@ -166,5 +166,38 @@ namespace Garyon.Extensions
         {
             return (ComparisonResult)Math.Sign(comparison);
         }
+
+        /// <summary>Assigns a variable storing a minimum value to <paramref name="other"/>, if found to be less than the current minimum.</summary>
+        /// <typeparam name="T">The type of the values being compared.</typeparam>
+        /// <param name="min">A reference to the variable storing the minimum. It may be overwritten if <paramref name="other"/> is less than the current minimum.</param>
+        /// <param name="other">The other value to overwrite <paramref name="min"/> with, if found to be less than it.</param>
+        public static void AssignMin<T>(this ref T min, T other)
+            where T : struct, IComparable<T>
+        {
+            min.AssignExtremum(other, ComparisonResult.Less);
+        }
+        /// <summary>Assigns a variable storing a maximum value to <paramref name="other"/>, if found to be greater than the current maximum.</summary>
+        /// <typeparam name="T">The type of the values being compared.</typeparam>
+        /// <param name="max">A reference to the variable storing the maximum. It may be overwritten if <paramref name="other"/> is greater than the current maximum.</param>
+        /// <param name="other">The other value to overwrite <paramref name="max"/> with, if found to be greater than it.</param>
+        public static void AssignMax<T>(this ref T max, T other)
+            where T : struct, IComparable<T>
+        {
+            max.AssignExtremum(other, ComparisonResult.Greater);
+        }
+        /// <summary>Assigns a variable storing a extremum value to <paramref name="other"/>, if found to be suitable as the new extremum.</summary>
+        /// <typeparam name="T">The type of the values being compared.</typeparam>
+        /// <param name="extremum">A reference to the variable storing the extremum. It may be overwritten if the comparison of <paramref name="other"/> against <paramref name="extremum"/> matches <paramref name="targetComparison"/>.</param>
+        /// <param name="other">The other value to overwrite <paramref name="extremum"/> with, if deemed as the new extremum.</param>
+        /// <param name="targetComparison">
+        /// The target copmarison that must be matched in a value against the extremum to overwrite it.
+        /// In other words, comparing <paramref name="other"/> against <paramref name="extremum"/> should match this <seealso cref="ComparisonResult"/>, in order to overwrite <paramref name="extremum"/>.
+        /// </param>
+        public static void AssignExtremum<T>(this ref T extremum, T other, ComparisonResult targetComparison)
+            where T : struct, IComparable<T>
+        {
+            if (other.MatchesComparisonResult(extremum, targetComparison))
+                extremum = other;
+        }
     }
 }
