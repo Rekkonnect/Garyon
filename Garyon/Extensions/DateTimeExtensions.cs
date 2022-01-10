@@ -94,20 +94,6 @@ namespace Garyon.Extensions
             return dateTime.AddYears(year - dateTime.Year);
         }
 
-        /*
-         * TODO: With* functions:
-         * - MM/DD
-         * - YYYY/MM
-         * - YYYY/MM/DD
-         * 
-         * Done:
-         * - ss.ms
-         * - mm:ss
-         * - hh:mm
-         * - hh:mm:ss
-         * - hh:mm:ss.ms
-         */
-
         /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the second and the millisecond components of the copied value are set to specified values.</summary>
         /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted second and millisecond components.</param>
         /// <param name="second">The value of the second component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [0, 59].</param>
@@ -212,6 +198,74 @@ namespace Garyon.Extensions
         {
             return dateTime.WithHourMinute(hourMinute.Hour, hourMinute.Minute);
         }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the time components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted time components.</param>
+        /// <param name="time">The time components of the resulting copied <seealso cref="DateTime"/>, whose <seealso cref="TimeSpan.Days"/> property should be 0.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the time components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="time"/> represents an absolute time interval lasting at least an entire day.</exception>
+        /// <remarks>Consider normalizing the <seealso cref="TimeSpan"/> using the <seealso cref="TimeSpanExtensions.WithinHour(TimeSpan)"/> extension.</remarks>
+        public static DateTime WithTime(this DateTime dateTime, TimeSpan time)
+        {
+            if (time.Days != 0)
+                throw new ArgumentOutOfRangeException(nameof(time), "The time argument should have the day component set to 0.");
+
+            return dateTime.Date + time;
+        }
+
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the year and month components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted year and month components.</param>
+        /// <param name="year">The value of the year component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 9999].</param>
+        /// <param name="month">The value of the month component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 12].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the year and month components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// The given year, month, day combination is not a valid one
+        /// -or- the given value for <paramref name="year"/> is outside the range [1, 9999]
+        /// -or- the given value for <paramref name="month"/> is outside the range [1, 12].
+        /// </exception>
+        public static DateTime WithYearMonth(this DateTime dateTime, int year, int month)
+        {
+            return dateTime.WithYearMonthDay(year, month, dateTime.Day);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the month and day components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted month and day components.</param>
+        /// <param name="month">The value of the month component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 12].</param>
+        /// <param name="day">The value of the day component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 31].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the month and day components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// The given year, month, day combination is not a valid one
+        /// -or- the given value for <paramref name="month"/> is outside the range [1, 12]
+        /// -or- the given value for <paramref name="day"/> is outside the range [1, 31].
+        /// </exception>
+        public static DateTime WithMonthDay(this DateTime dateTime, int month, int day)
+        {
+            return dateTime.WithYearMonthDay(dateTime.Year, month, day);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the year, month and day components of the copied value are set to specified values.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted year, month and day components.</param>
+        /// <param name="year">The value of the year component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 9999].</param>
+        /// <param name="month">The value of the month component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 12].</param>
+        /// <param name="day">The value of the day component of the resulting copied <seealso cref="DateTime"/>. It must be within the range [1, 31].</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the year, month and day components set to the specified values.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// The given year, month, day combination is not a valid one
+        /// -or- the given value for <paramref name="year"/> is outside the range [1, 9999]
+        /// -or- the given value for <paramref name="month"/> is outside the range [1, 12]
+        /// -or- the given value for <paramref name="day"/> is outside the range [1, 31].
+        /// </exception>
+        public static DateTime WithYearMonthDay(this DateTime dateTime, int year, int month, int day)
+        {
+            ValidateDateAndComponents(year, month, day);
+            return new DateTime(year, month, day) + dateTime.TimeOfDay;
+        }
+
+        /// <summary>Creates a <seealso cref="DateTime"/> instance only containing the time components of the original instance.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> instance whose time components to retrieve.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the year, month and day components set to their default values (01/01/0001), and the time components remaining as is.</returns>
+        /// <remarks>There is not much usage considered for this method, and the ideal design choice would involve using the <seealso cref="DateTime.TimeOfDay"/> property.</remarks>
+        public static DateTime TimeOnly(this DateTime dateTime)
+        {
+            return new(dateTime.TimeOfDay.Ticks);
+        }
 
         #region Validation
         // All validation functions will throw an exception with the appropriate message if the component is outside the valid range
@@ -253,6 +307,14 @@ namespace Garyon.Extensions
         }
 
         // Validate the components and the date itself
+        private static void ValidateDateAndComponents(int year, int month, int day)
+        {
+            ValidateYearComponent(year);
+            ValidateMonthComponent(month);
+            ValidateDayComponent(day);
+            ValidateDate(year, month, day);
+        }
+
         private static void ValidateDay(int year, int month, int day)
         {
             ValidateDayComponent(day);
