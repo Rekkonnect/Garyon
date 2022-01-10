@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.DataStructures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -220,12 +221,9 @@ namespace Garyon.Extensions
         }
         /// <summary>Returns a dictionary containing the number of instances per character in the provided string.</summary>
         /// <param name="s">The string to get the character occurences of.</param>
-        public static Dictionary<char, int> GetCharacterOccurences(this string s)
+        public static IDictionary<char, int> GetCharacterOccurences(this string s)
         {
-            var d = new Dictionary<char, int>();
-            foreach (var c in s)
-                d.IncrementOrAddKeyValue(c);
-            return d;
+            return new ValueCounterDictionary<char>(s);
         }
         /// <summary>Returns a substring that begins with the beginning matched string and ends before the ending matched string.</summary>
         /// <param name="s">The string whose substring to return.</param>

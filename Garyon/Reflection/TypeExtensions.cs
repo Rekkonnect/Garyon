@@ -259,6 +259,17 @@ namespace Garyon.Reflection
         /// <returns><see langword="true"/> if <paramref name="genericType"/> can be constructed into <paramref name="constructedType"/>, otherwise <see langword="false"/>.</returns>
         /// <exception cref="InvalidOperationException">The <paramref name="genericType"/> argument is not an unbound generic type or the <paramref name="constructedType"/> argument is not a bound generic type.</exception>
         public static bool CanConstruct(this Type genericType, Type constructedType) => constructedType.IsGenericVariantOf(genericType);
+
+        /// <summary>Gets the generic type definition of a generic type.</summary>
+        /// <param name="type">The type whose generic type definition to get.</param>
+        /// <returns>The generic type definition of the generic type, or the provided type itself if the type is not generic.</returns>
+        public static Type GetGenericTypeDefinitionOrSame(this Type type)
+        {
+            if (!type.IsGenericType)
+                return type;
+
+            return type.GetGenericTypeDefinition();
+        }
         #endregion
 
         #region Type Categories
