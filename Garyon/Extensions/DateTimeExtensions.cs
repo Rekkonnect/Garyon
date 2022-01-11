@@ -2,6 +2,7 @@
 using Garyon.Objects;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using static System.TimeSpan;
 
 namespace Garyon.Extensions
@@ -177,7 +178,7 @@ namespace Garyon.Extensions
             ValidateMillisecondComponent(millisecond);
             int targetMilliseconds = ((hour * 60 + minute) * 60 + second) * 1000 + millisecond;
             int currentMillseconds = ((dateTime.Hour * 60 + dateTime.Minute) * 60 + dateTime.Second) * 1000 + dateTime.Millisecond;
-            return dateTime.AddSeconds(targetMilliseconds - currentMillseconds);
+            return dateTime.AddMilliseconds(targetMilliseconds - currentMillseconds);
         }
 
         /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the minute and the second components of the copied value are set to specified values.</summary>
@@ -185,6 +186,7 @@ namespace Garyon.Extensions
         /// <param name="minuteSecond">The minute and second components of the resulting copied <seealso cref="DateTime"/>.</param>
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the minute and second components set to the specified values.</returns>
         /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="minuteSecond"/> represents a minute outside the range [0, 59].</exception>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
         public static DateTime WithMinuteSecond(this DateTime dateTime, MinuteSecond minuteSecond)
         {
             return dateTime.WithMinuteSecond(minuteSecond.Minute, minuteSecond.Second);
@@ -194,6 +196,7 @@ namespace Garyon.Extensions
         /// <param name="hourMinute">The hour and minute components of the resulting copied <seealso cref="DateTime"/>.</param>
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the hour and minute components set to the specified values.</returns>
         /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="hourMinute"/> represents an hour outside the range [0, 23].</exception>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
         public static DateTime WithHourMinute(this DateTime dateTime, HourMinute hourMinute)
         {
             return dateTime.WithHourMinute(hourMinute.Hour, hourMinute.Minute);
@@ -267,39 +270,59 @@ namespace Garyon.Extensions
             return new(dateTime.TimeOfDay.Ticks);
         }
 
+        /*
+         * TODO: Add extensions for
+         * - With DayOfWeek (within same week starting from Sunday)
+         * - Add/Subtract Weeks
+         * - With DayOfYear (within same year)
+         */
+        /*
+         * TODO: Add components enum:
+         * - DateTimeComponent (from DateTimeExtensionsTests), including
+         *   - Ticks = 0
+         *   - relevant extension about changing the individual component
+         */
+
         #region Validation
         // All validation functions will throw an exception with the appropriate message if the component is outside the valid range
         // Validate individual components
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateMillisecondComponent(int millisecond)
         {
             if (millisecond is < 0 or > 999)
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The millisecond must range in [0, 999].");
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateSecondComponent(int second)
         {
             if (second is < 0 or > 59)
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The second must range in [0, 59].");
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateMinuteComponent(int minute)
         {
             if (minute is < 0 or > 59)
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The minute must range in [0, 59].");
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateHourComponent(int hour)
         {
             if (hour is < 0 or > 23)
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The hour must range in [0, 23].");
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateDayComponent(int day)
         {
             if (day is < 1 or > 31)
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The day must range in [1, 31].");
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateMonthComponent(int month)
         {
             if (month is < 1 or > 12)
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The month must range in [1, 12].");
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateYearComponent(int year)
         {
             if (year is < 1 or > 9999)
@@ -307,6 +330,7 @@ namespace Garyon.Extensions
         }
 
         // Validate the components and the date itself
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateDateAndComponents(int year, int month, int day)
         {
             ValidateYearComponent(year);
@@ -315,22 +339,26 @@ namespace Garyon.Extensions
             ValidateDate(year, month, day);
         }
 
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateDay(int year, int month, int day)
         {
             ValidateDayComponent(day);
             ValidateDate(year, month, day);
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateMonth(int year, int month, int day)
         {
             ValidateMonthComponent(month);
             ValidateDate(year, month, day);
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateYear(int year, int month, int day)
         {
             ValidateYearComponent(year);
             ValidateDate(year, month, day);
         }
 
+        [MethodImpl(MethodImplOptions.NoInlining)]
         private static void ValidateDate(int year, int month, int day)
         {
             if (day > DateTime.DaysInMonth(year, month))

@@ -73,6 +73,75 @@ namespace Garyon.Tests.Extensions
         }
 
         private delegate DateTime Adjuster(DateTime dateTime, int adjustedComponentValue);
+
+        // Combination component adjusters can be broken down into multiple
+        [Test]
+        public void WithHourMinuteTest()
+        {
+            var expected = sample.WithHour(10).WithMinute(30);
+            var actual = sample.WithHourMinute(10, 30);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithMinuteSecondTest()
+        {
+            var expected = sample.WithMinute(10).WithSecond(30);
+            var actual = sample.WithMinuteSecond(10, 30);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithSecondMillisecondTest()
+        {
+            var expected = sample.WithSecond(59).WithMillisecond(489);
+            var actual = sample.WithSecondMillisecond(59, 489);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithHourMinuteSecondTest()
+        {
+            var expected = sample.WithHour(13).WithMinute(59).WithSecond(58);
+            var actual = sample.WithHourMinuteSecond(13, 59, 58);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithHourMinuteSecondMillisecondTest()
+        {
+            var expected = sample.WithHour(13).WithMinute(59).WithSecond(58).WithMillisecond(987);
+            var actual = sample.WithHourMinuteSecondMillisecond(13, 59, 58, 987);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithMonthDayTest()
+        {
+            var expected = sample.WithMonth(12).WithDay(21);
+            var actual = sample.WithMonthDay(12, 21);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithYearMonthTest()
+        {
+            var expected = sample.WithYear(2022).WithMonth(5);
+            var actual = sample.WithYearMonth(2022, 5);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void WithYearMonthDayTest()
+        {
+            var expected = sample.WithYear(2022).WithMonth(5).WithDay(31);
+            var actual = sample.WithYearMonthDay(2022, 5, 31);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void WithTimeTest()
+        {
+            var time = new TimeSpan(0, 12, 23, 42, 085);
+            // Rounding must take place, since time span also includes individual ticks beyond the millisecond component, resetting them
+            // Behavior should be documented, despite being intended
+            var expected = sample.WithHour(time.Hours).WithMinute(time.Minutes).WithSecond(time.Seconds).WithMillisecond(time.Milliseconds).RoundToPreviousMillisecond();
+            var actual = sample.WithTime(time);
+            Assert.AreEqual(expected, actual);
+        }
         #endregion
 
         #region Rounding
