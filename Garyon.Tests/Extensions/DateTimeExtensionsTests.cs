@@ -137,7 +137,6 @@ namespace Garyon.Tests.Extensions
         {
             var time = new TimeSpan(0, 12, 23, 42, 085);
             // Rounding must take place, since time span also includes individual ticks beyond the millisecond component, resetting them
-            // Behavior should be documented, despite being intended
             var expected = sample.WithHour(time.Hours).WithMinute(time.Minutes).WithSecond(time.Seconds).WithMillisecond(time.Milliseconds).RoundToPreviousMillisecond();
             var actual = sample.WithTime(time);
             Assert.AreEqual(expected, actual);

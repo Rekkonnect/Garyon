@@ -206,11 +206,14 @@ namespace Garyon.Extensions
         /// <param name="time">The time components of the resulting copied <seealso cref="DateTime"/>, whose <seealso cref="TimeSpan.Days"/> property should be 0.</param>
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the time components set to the specified values.</returns>
         /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="time"/> represents an absolute time interval lasting at least an entire day.</exception>
-        /// <remarks>Consider normalizing the <seealso cref="TimeSpan"/> using the <seealso cref="TimeSpanExtensions.WithinHour(TimeSpan)"/> extension.</remarks>
+        /// <remarks>
+        /// Consider normalizing the <seealso cref="TimeSpan"/> using the <seealso cref="TimeSpanExtensions.WithinDay(TimeSpan)"/> extension.<br/>
+        /// Since the <seealso cref="TimeSpan"/> also retains ticks below the millisecond interval, its ticks will replace the existing <seealso cref="DateTime"/> instance's.
+        /// </remarks>
         public static DateTime WithTime(this DateTime dateTime, TimeSpan time)
         {
             if (time.Days != 0)
-                throw new ArgumentOutOfRangeException(nameof(time), "The time argument should have the day component set to 0.");
+                ThrowHelper.Throw<ArgumentOutOfRangeException>("The time argument should have the day component set to 0.");
 
             return dateTime.Date + time;
         }
