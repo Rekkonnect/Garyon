@@ -7,9 +7,55 @@ using static System.TimeSpan;
 
 namespace Garyon.Extensions
 {
+    /// <summary>Represents a component in the <seealso cref="DateTime"/> struct.</summary>
+    public enum DateTimeComponent
+    {
+        /// <summary>Represents the <seealso cref="DateTime.Ticks"/> component.</summary>
+        Ticks = 0,
+
+        /// <summary>Represents the <seealso cref="DateTime.Millisecond"/> component.</summary>
+        Millisecond,
+        /// <summary>Represents the <seealso cref="DateTime.Second"/> component.</summary>
+        Second,
+        /// <summary>Represents the <seealso cref="DateTime.Minute"/> component.</summary>
+        Minute,
+        /// <summary>Represents the <seealso cref="DateTime.Hour"/> component.</summary>
+        Hour,
+        /// <summary>Represents the <seealso cref="DateTime.Day"/> component.</summary>
+        Day,
+        /// <summary>Represents the <seealso cref="DateTime.Month"/> component.</summary>
+        Month,
+        /// <summary>Represents the <seealso cref="DateTime.Year"/> component.</summary>
+        Year,
+    }
+
     /// <summary>Prvoides extension functions for the <seealso cref="DateTime"/> struct.</summary>
     public static class DateTimeExtensions
     {
+        /// <summary>Gets the specified component of the given <seealso cref="DateTime"/> instance.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> instance whose component to get.</param>
+        /// <param name="component">The component of the <seealso cref="DateTime"/> instance to get.</param>
+        /// <returns>The requested component of the <seealso cref="DateTime"/> instance, represented by the specified <seealso cref="DateTimeComponent"/>.</returns>
+        public static long GetComponentInt64(this DateTime dateTime, DateTimeComponent component) => component switch
+        {
+            DateTimeComponent.Ticks => dateTime.Ticks,
+            _ => GetComponent(dateTime, component),
+        };
+        /// <summary>Gets the specified component of the given <seealso cref="DateTime"/> instance.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> instance whose component to get.</param>
+        /// <param name="component">The component of the <seealso cref="DateTime"/> instance to get. To get the <seealso cref="DateTimeComponent.Ticks"/> component, use <seealso cref="GetComponentInt64(DateTime, DateTimeComponent)"/>.</param>
+        /// <returns>The requested component of the <seealso cref="DateTime"/> instance, represented by the specified <seealso cref="DateTimeComponent"/>.</returns>
+        public static int GetComponent(this DateTime dateTime, DateTimeComponent component) => component switch
+        {
+            DateTimeComponent.Millisecond => dateTime.Millisecond,
+            DateTimeComponent.Second => dateTime.Second,
+            DateTimeComponent.Minute => dateTime.Minute,
+            DateTimeComponent.Hour => dateTime.Hour,
+            DateTimeComponent.Day => dateTime.Day,
+            DateTimeComponent.Month => dateTime.Month,
+            DateTimeComponent.Year => dateTime.Year,
+        };
+
         #region Shortcuts
         /// <summary>Gets the days the month of the provided <seealso cref="DateTime"/> has.</summary>
         /// <param name="dateTime">The <seealso cref="DateTime"/> whose month's day count to get.</param>
@@ -185,7 +231,7 @@ namespace Garyon.Extensions
         /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted minute and second components.</param>
         /// <param name="minuteSecond">The minute and second components of the resulting copied <seealso cref="DateTime"/>.</param>
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the minute and second components set to the specified values.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="minuteSecond"/> represents a minute outside the range [0, 59].</exception>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="minuteSecond"/> represents a minute or a second outside the range [0, 59].</exception>
         [ExcludeFromCodeCoverage(Justification = "Trivial")]
         public static DateTime WithMinuteSecond(this DateTime dateTime, MinuteSecond minuteSecond)
         {
@@ -195,7 +241,7 @@ namespace Garyon.Extensions
         /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted hour and minute components.</param>
         /// <param name="hourMinute">The hour and minute components of the resulting copied <seealso cref="DateTime"/>.</param>
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the hour and minute components set to the specified values.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="hourMinute"/> represents an hour outside the range [0, 23].</exception>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="hourMinute"/> represents an hour outside the range [0, 23], or a minute outside the range [0, 59].</exception>
         [ExcludeFromCodeCoverage(Justification = "Trivial")]
         public static DateTime WithHourMinute(this DateTime dateTime, HourMinute hourMinute)
         {
@@ -216,6 +262,42 @@ namespace Garyon.Extensions
                 ThrowHelper.Throw<ArgumentOutOfRangeException>("The time argument should have the day component set to 0.");
 
             return dateTime.Date + time;
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the specified component of the copied value is set to the specified value.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted time components.</param>
+        /// <param name="value">The value to set the component to.</param>
+        /// <param name="component">The component of the <seealso cref="DateTime"/> instance that will be changed. <seealso cref="DateTimeComponent.Ticks"/> is not accepted in this overload, consider using <seealso cref="WithComponent(DateTime, long, DateTimeComponent)"/>.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the specified component set to the specified value.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="value"/> falls out of the valid range for the given component, or an invalid day is represented.</exception>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
+        public static DateTime WithComponent(this DateTime dateTime, int value, DateTimeComponent component)
+        {
+            return component switch
+            {
+                DateTimeComponent.Millisecond => dateTime.WithMillisecond(value),
+                DateTimeComponent.Second => dateTime.WithSecond(value),
+                DateTimeComponent.Minute => dateTime.WithMinute(value),
+                DateTimeComponent.Hour => dateTime.WithHour(value),
+                DateTimeComponent.Day => dateTime.WithDay(value),
+                DateTimeComponent.Month => dateTime.WithMonth(value),
+                DateTimeComponent.Year => dateTime.WithYear(value),
+            };
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the specified component of the copied value is set to the specified value.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted time components.</param>
+        /// <param name="value">The value to set the component to.</param>
+        /// <param name="component">The component of the <seealso cref="DateTime"/> instance that will be changed. <seealso cref="DateTimeComponent.Ticks"/> is also accepted.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the specified component set to the specified value.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="value"/> falls out of the valid range for the given component, or an invalid day is represented.</exception>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
+        public static DateTime WithComponent(this DateTime dateTime, long value, DateTimeComponent component)
+        {
+            return component switch
+            {
+                DateTimeComponent.Ticks => new(value),
+
+                _ => dateTime.WithComponent((int)value, component),
+            };
         }
 
         /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the year and month components of the copied value are set to specified values.</summary>
@@ -278,12 +360,6 @@ namespace Garyon.Extensions
          * - With DayOfWeek (within same week starting from Sunday)
          * - Add/Subtract Weeks
          * - With DayOfYear (within same year)
-         */
-        /*
-         * TODO: Add components enum:
-         * - DateTimeComponent (from DateTimeExtensionsTests), including
-         *   - Ticks = 0
-         *   - relevant extension about changing the individual component
          */
 
         #region Validation

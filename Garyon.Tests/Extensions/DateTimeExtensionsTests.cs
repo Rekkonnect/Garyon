@@ -48,28 +48,21 @@ namespace Garyon.Tests.Extensions
             AssertEqualComponents(DateTimeExtensions.WithYear, DateTimeComponent.Year, 2022);
         }
 
-        private void AssertEqualComponents(Adjuster adjuster, DateTimeComponent adjustedComponent, int adjustedValue)
+        private static void AssertEqualComponents(Adjuster adjuster, DateTimeComponent adjustedComponent, int adjustedValue)
         {
             var adjusted = adjuster(sample, adjustedValue);
 
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Millisecond ? adjustedValue : sample.Millisecond, adjusted.Millisecond);
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Second ? adjustedValue : sample.Second, adjusted.Second);
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Minute ? adjustedValue : sample.Minute, adjusted.Minute);
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Hour ? adjustedValue : sample.Hour, adjusted.Hour);
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Day ? adjustedValue : sample.Day, adjusted.Day);
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Month ? adjustedValue : sample.Month, adjusted.Month);
-            Assert.AreEqual(adjustedComponent is DateTimeComponent.Year ? adjustedValue : sample.Year, adjusted.Year);
-        }
+            for (var component = DateTimeComponent.Millisecond; component <= DateTimeComponent.Year; component++)
+            {
+                AssertEqualComponent(component);
+            }
 
-        private enum DateTimeComponent
-        {
-            Millisecond,
-            Second,
-            Minute,
-            Hour,
-            Day,
-            Month,
-            Year,
+            void AssertEqualComponent(DateTimeComponent testedComponent)
+            {
+                var adjustedDateTimeComponent = adjusted.GetComponent(testedComponent);
+                var expectedComponent = testedComponent == adjustedComponent ? adjustedValue : sample.GetComponent(testedComponent);
+                Assert.AreEqual(expectedComponent, adjustedDateTimeComponent);
+            }
         }
 
         private delegate DateTime Adjuster(DateTime dateTime, int adjustedComponentValue);
