@@ -202,5 +202,35 @@ namespace Garyon.Extensions
                 toRemove++;
             return s.RemoveLast(toRemove);
         }
+
+        /// <summary>Appends a string to the <seealso cref="StringBuilder"/> instance, from its start index up until its end.</summary>
+        /// <param name="stringBuilder">The <seealso cref="StringBuilder"/> instance on which to append the string.</param>
+        /// <param name="value">The string to append to the <seealso cref="StringBuilder"/> from the specified index onwards.</param>
+        /// <param name="startIndex">The index of the first character to append to the <seealso cref="StringBuilder"/>.</param>
+        /// <returns>The <seealso cref="StringBuilder"/> instance that the string was appended to.</returns>
+        public static StringBuilder Append(this StringBuilder stringBuilder, string value, int startIndex)
+        {
+            return stringBuilder.Append(value, startIndex, value.Length - startIndex);
+        }
+        /// <summary>Appends a string to the <seealso cref="StringBuilder"/> instance, from its start index up until its end.</summary>
+        /// <param name="stringBuilder">The <seealso cref="StringBuilder"/> instance on which to append the string.</param>
+        /// <param name="value">The string to append to the <seealso cref="StringBuilder"/> from the specified index onwards.</param>
+        /// <param name="startIndex">The index of the first character to append to the <seealso cref="StringBuilder"/>.</param>
+        /// <param name="length">The number of characters to include from the appended string.</param>
+        /// <returns>The <seealso cref="StringBuilder"/> instance that the string was appended to.</returns>
+        public static StringBuilder Append(this StringBuilder stringBuilder, string value, int startIndex, int length)
+        {
+            return stringBuilder.Append(value, startIndex, length);
+        }
+
+        /// <summary>Replaces a part of the string with a new one.</summary>
+        /// <param name="builder">The original <seealso cref="StringBuilder"/>.</param>
+        /// <param name="replacedString">The new string to replace to the part of the original one.</param>
+        /// <param name="startIndex">The starting index of the substring to replace.</param>
+        /// <param name="length">The length of the substring to replace.</param>
+        public static StringBuilder Replace(this StringBuilder builder, string replacedString, int startIndex, int length)
+        {
+            return builder.Remove(startIndex, length).Insert(startIndex, replacedString);
+        }
     }
 }

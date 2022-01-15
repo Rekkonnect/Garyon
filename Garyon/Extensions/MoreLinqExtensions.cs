@@ -81,5 +81,21 @@ namespace Garyon.Extensions
 
             return true;
         }
+
+        /// <summary>Determines whether there are at least a specified number of occurrences of elements meeting a condition in a collection.</summary>
+        /// <typeparam name="T">The type of the elements in the collection.</typeparam>
+        /// <param name="source">The source collection whose elements to compare against the condition.</param>
+        /// <param name="predicate">The condition that the elements must meet.</param>
+        /// <param name="occurrences">The minimum number of elements that must meet the condition.</param>
+        /// <returns><see langword="true"/> if the provided collection contains at least <paramref name="occurrences"/> elements that meet the given condition, otherwise <see langword="false"/>.</returns>
+        public static bool CountAtLeast<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
+        {
+            return source.Where(predicate).Count() >= occurrences;
+        }
+        /// <inheritdoc cref="CountAtLeast{T}(IEnumerable{T}, Func{T, bool}, int)"/>
+        public static bool CountAtLeast<T>(this IEnumerable<T> source, Predicate<T> predicate, int occurrences)
+        {
+            return source.WherePredicate(predicate).Count() >= occurrences;
+        }
     }
 }

@@ -734,7 +734,7 @@ namespace Garyon.Extensions
         /// <returns>The projected sequence.</returns>
         public static IEnumerable<KeyValuePair<TNewKey, TValue>> SelectKeys<TKey, TValue, TNewKey>(this IEnumerable<KeyValuePair<TKey, TValue>> kvps, Func<TKey, TNewKey> keySelector)
         {
-            return kvps.Select(kvp => new KeyValuePair<TNewKey, TValue>(keySelector(kvp.Key), kvp.Value));
+            return kvps.Select(kvp => kvp.WithKey(keySelector(kvp.Key)));
         }
         /// <summary>Projects each <seealso cref="KeyValuePair{TKey, TValue}"/> in the sequence into a new <seealso cref="KeyValuePair{TKey, TValue}"/> with values selected from the provided selector function.</summary>
         /// <typeparam name="TKey">The type of the key in the initial <seealso cref="KeyValuePair{TKey, TValue}"/> sequence.</typeparam>
@@ -745,7 +745,7 @@ namespace Garyon.Extensions
         /// <returns>The projected sequence.</returns>
         public static IEnumerable<KeyValuePair<TKey, TNewValue>> SelectValues<TKey, TValue, TNewValue>(this IEnumerable<KeyValuePair<TKey, TValue>> kvps, Func<TValue, TNewValue> valueSelector)
         {
-            return kvps.Select(kvp => new KeyValuePair<TKey, TNewValue>(kvp.Key, valueSelector(kvp.Value)));
+            return kvps.Select(kvp => kvp.WithValue(valueSelector(kvp.Value)));
         }
         #endregion
 

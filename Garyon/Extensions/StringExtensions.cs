@@ -11,22 +11,6 @@ namespace Garyon.Extensions
     {
         #region String
         #region Find
-        /// <summary>Finds a substring within the string. Returns the index of the first character where the first match occurred, otherwise -1.</summary>
-        /// <param name="s">The string within which the search will be performed.</param>
-        /// <param name="match">The substring to match from the original string.</param>
-        public static int Find(this string s, string match)
-        {
-            for (int i = 0; i <= s.Length - match.Length; i++)
-            {
-                bool found = true;
-                for (int j = 0; j < match.Length && found; j++)
-                    if (s[i + j] != match[j])
-                        found = false;
-                if (found)
-                    return i;
-            }
-            return -1;
-        }
         /// <summary>Finds a substring within the string. Returns the index of the first character where the match occurred, otherwise -1.</summary>
         /// <param name="s">The string within which the search will be performed.</param>
         /// <param name="match">The substring to match from the original string.</param>
@@ -48,39 +32,6 @@ namespace Garyon.Extensions
                     if (occurrences == occurrence)
                         return i;
                 }
-            }
-            return -1;
-        }
-        /// <summary>Finds a substring within the string. Returns the index of the first character where the first match occurred, otherwise -1.</summary>
-        /// <param name="s">The string within which the search will be performed.</param>
-        /// <param name="match">The substring to match from the original string.</param>
-        /// <param name="start">The starting index to perform the search.</param>
-        /// <param name="end">The ending index to perform the search.</param>
-        public static int Find(this string s, string match, int start, int end)
-        {
-            for (int i = start; i <= end - match.Length; i++)
-            {
-                bool found = true;
-                for (int j = 0; j < match.Length && found; j++)
-                    found = s[i + j] == match[j];
-                if (found)
-                    return i;
-            }
-            return -1;
-        }
-        /// <summary>Finds a substring within the string from the end. Returns the index of the first character where the first match occurred, otherwise -1.</summary>
-        /// <param name="s">The string within which the search will be performed.</param>
-        /// <param name="match">The substring to match from the original string.</param>
-        public static int FindFromEnd(this string s, string match)
-        {
-            for (int i = s.Length - match.Length; i >= 0; i--)
-            {
-                bool found = true;
-                for (int j = 0; j < match.Length && found; j++)
-                    if (s[i + j] != match[j])
-                        found = false;
-                if (found)
-                    return i;
             }
             return -1;
         }
@@ -113,16 +64,7 @@ namespace Garyon.Extensions
         /// <param name="end">The ending index to perform the search.</param>
         public static int FindFromEnd(this string s, string match, int start, int end)
         {
-            for (int i = s.Length - match.Length; i >= 0; i--)
-            {
-                bool found = true;
-                for (int j = 0; j < match.Length && found; j++)
-                    if (s[i + j] != match[j])
-                        found = false;
-                if (found)
-                    return i;
-            }
-            return -1;
+            return s.LastIndexOf(match, start, end - start);
         }
         /// <summary>Finds a substring within the string. Returns the indexes of the first character where all the matches occurred, otherwise -1.</summary>
         /// <param name="s">The string within which the search will be performed.</param>
@@ -156,6 +98,38 @@ namespace Garyon.Extensions
         }
         #endregion
 
+        #region IndexOf
+        /// <summary>Gets the index of the first character after the first occurrence of the given sequence in the original string.</summary>
+        /// <param name="source">The original string from which to get the first occurrence.</param>
+        /// <param name="match">The matching sequence to find the first occurrence of.</param>
+        /// <returns>The index of the first character after the first occurrence of <paramref name="match"/> in <paramref name="source"/>, if found, otherwise -1.</returns>
+        public static int IndexOfAfter(this string source, string match)
+        {
+            return source.IndexOfAfter(match, 0);
+        }
+        /// <summary>Gets the index of the first character after the first occurrence of the given sequence in the original string.</summary>
+        /// <param name="source">The original string from which to get the first occurrence.</param>
+        /// <param name="match">The matching sequence to find the first occurrence of.</param>
+        /// <param name="startIndex">The index of the first character to include to the search, from which onwards the search will be performed.</param>
+        /// <returns>The index of the first character after the first occurrence of <paramref name="match"/> in <paramref name="source"/>, if found, otherwise -1.</returns>
+        public static int IndexOfAfter(this string source, string match, int startIndex)
+        {
+            return source.IndexOfAfter(match, startIndex, source.Length - startIndex);
+        }
+        /// <summary>Gets the index of the first character after the first occurrence of the given sequence in the original string.</summary>
+        /// <param name="source">The original string from which to get the first occurrence.</param>
+        /// <param name="match">The matching sequence to find the first occurrence of.</param>
+        /// <param name="startIndex">The index of the first character to include to the search, from which onwards the search will be performed.</param>
+        /// <param name="length">The number of characters that will be searched, starting from the provided starting index.</param>
+        /// <returns>The index of the first character after the first occurrence of <paramref name="match"/> in <paramref name="source"/>, if found, otherwise -1.</returns>
+        public static int IndexOfAfter(this string source, string match, int startIndex, int length)
+        {
+            int index = source.IndexOf(match, startIndex, length);
+            return index is -1 ? -1 : index + match.Length;
+        }
+        // TODO: Add more overloads completing the IndexOf API extension
+        #endregion
+
         #region Number-Related
         /// <summary>Converts the number found in the end of the string into an <seealso cref="int"/>.</summary>
         /// <param name="s">The string on which the last decimal number to detect.</param>
@@ -166,7 +140,7 @@ namespace Garyon.Extensions
             while (i > 0 && s[i - 1].IsDigit())
                 i--;
             if (i < s.Length)
-                return int.Parse(s.Substring(i));
+                return int.Parse(s[i..]);
             throw new ArgumentException("The string has no number in the end.");
         }
         /// <summary>Removes the number found in the end of the string.</summary>
@@ -176,7 +150,7 @@ namespace Garyon.Extensions
             int i = s.Length;
             while (i > 0 && s[i - 1].IsDigit())
                 i--;
-            return s.Substring(0, i);
+            return s[..i];
         }
         /// <summary>Removes the number found in the end of the string.</summary>
         /// <param name="s">The string whose number in the end to remove.</param>
@@ -192,7 +166,7 @@ namespace Garyon.Extensions
             else
                 removedNumber = 0;
 
-            return s.Substring(0, i);
+            return s[..i];
         }
         #endregion
 
@@ -231,8 +205,8 @@ namespace Garyon.Extensions
         /// <param name="to">The ending matching string to end the substring at.</param>
         public static string Substring(this string s, string from, string to)
         {
-            int startIndex = s.Find(from) + from.Length;
-            int endIndex = s.Find(to);
+            int startIndex = s.IndexOfAfter(from);
+            int endIndex = s.IndexOf(to);
             int length = endIndex - startIndex;
             return s.Substring(startIndex, length);
         }
@@ -243,7 +217,7 @@ namespace Garyon.Extensions
         /// <param name="length">The length of the substring to replace.</param>
         public static string Replace(this string originalString, string replacedString, int startIndex, int length)
         {
-            return new StringBuilder(originalString).Remove(startIndex, length).Insert(startIndex, replacedString).ToString();
+            return new StringBuilder(originalString).Replace(replacedString, startIndex, length).ToString();
         }
         /// <summary>Replaces a whole word of the original string and returns the new one.</summary>
         /// <param name="originalString">The original string which will be replaced.</param>
@@ -251,15 +225,42 @@ namespace Garyon.Extensions
         /// <param name="newString">The new part of the string which will be contained in the returned string.</param>
         public static string ReplaceWholeWord(this string originalString, string oldString, string newString)
         {
-            for (int i = originalString.Length - oldString.Length; i >= 0; i--)
-                if (originalString.Substring(i, oldString.Length) == oldString)
-                    if (i == 0 || !originalString[i - 1].IsLetterOrDigit())
-                        if (i >= originalString.Length - oldString.Length || !originalString[i + oldString.Length].IsLetterOrDigit())
+            if (oldString == newString)
+                return originalString;
+
+            var builder = new StringBuilder(originalString);
+
+            int previousStart = 0;
+            while (true)
+            {
+                int index = originalString.IndexOf(oldString, previousStart);
+                if (index == -1)
+                    return builder.ToString();
+
+                bool isWord = true;
+                if (originalString[index - 1].IsLetterOrDigit())
+                {
+                    isWord = false;
+                }
+                else
+                {
+                    if (index + oldString.Length < originalString.Length)
+                    {
+                        if (originalString[index + oldString.Length].IsLetterOrDigit())
                         {
-                            originalString = originalString.Replace(newString, i, oldString.Length);
-                            i -= oldString.Length;
+                            isWord = false;
                         }
-            return originalString;
+                    }
+                }
+
+                if (!isWord)
+                {
+                    previousStart = index;
+                    continue;
+                }
+
+                builder.Replace(newString, index, oldString.Length);
+            }
         }
         /// <summary>Normalizes the line endings of a string to \n.</summary>
         /// <param name="s">The string whose line endings to normalize.</param>

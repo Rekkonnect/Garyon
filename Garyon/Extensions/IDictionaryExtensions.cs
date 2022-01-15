@@ -75,7 +75,7 @@ namespace Garyon.Extensions
 
             return contained;
         }
-        /// <inheritdoc cref="TryAddPreserve{TKey, TValue}(IDictionary{TKey, TValue}, KeyValuePair{TKey, TValue}, out TValue?)"/>
+        /// <inheritdoc cref="TryAddPreserve{TKey, TValue}(IDictionary{TKey, TValue}, KeyValuePair{TKey, TValue}, out TValue)"/>
         public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
         {
             return source.TryAddPreserve(kvp.Key, kvp.Value);
