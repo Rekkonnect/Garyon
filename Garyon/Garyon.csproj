@@ -6,43 +6,42 @@
     <Nullable>annotations</Nullable>
     <PackageTags>common, extensions, utilities, library, reflection, simd, array</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
-    <Copyright>© 2020-2021, Alex Kalfakakos</Copyright>
+    <Copyright>© 2020-2022, Alex Kalfakakos</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.2.6.2</Version>
+    <Version>0.2.7</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>0.2.6.2 changes
-Additions:
+    <PackageReleaseNotes>Additions:
 - QueueExtensions.DequeueAll() and StackExtensions.PopAll()
+- Element insertion for Queue&lt;T&gt; and Stack&lt;T&gt;
+
+- Extensions for array sorting by custom comparer
+- Extensions for calculating the product of the values in a collection
+
+- Extremum
+- Assigning extremum to ref variable
+
+- KeyValuePairExtensions.WithKey/WithValue
 - KeyValuePair&lt;TKey, TValue&gt; comparers
+
+- OpenInterval&lt;T&gt;
+- SingleElementCollection&lt;T&gt;
+- LineStringBuilder
+
+- Tons of DateTime and TimeSpan extensions, accompanied by some DayOfWeek extensions
+
+- A bit of love for EnumHelpers
 - HashCodeFactory
+- StringBuilderExtensions.AppendLines
+- RangeExtensions.GetStartAndEnd
+- Field initialization helper functions
 
-0.2.6.1 changes
-Additions:
-- MemberInfoExtensions.HasCustomAttribute&lt;TAttribute&gt;(MemberInfo)
-
-0.2.6.0 changes
-Additions:
-- RepeatedValueCollection
-- ArrayFactory
-- PointerFunctions.Fill
-- ComparisonKinds
-- AdvancedLazy&lt;T&gt;
-- AppDomainCache
-- TypePredicates
-
-Removals:
-- Allocation.Free&lt;T&gt;(T*)
-
-Extensions:
-- Added early-terminating LINQ-like extensions
-- Added WherePredicate LINQ-like extension
-- Added more comparison extensions for IComparable and IComparable&lt;T&gt;
-- Added AppDomain extensions
+Bugfixes:
+- Critical bug with &lt;= and &gt;= in IComparableExtensions.SatisfiesComparison
 </PackageReleaseNotes>
   </PropertyGroup>
 
