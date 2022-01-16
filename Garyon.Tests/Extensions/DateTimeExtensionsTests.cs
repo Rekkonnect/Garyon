@@ -134,6 +134,25 @@ namespace Garyon.Tests.Extensions
             var actual = sample.WithTime(time);
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void WithDayOfWeekTest()
+        {
+            // Kinda trivial testing
+            for (var starting = DayOfWeek.Sunday; starting <= DayOfWeek.Saturday; starting++)
+            {
+                var startingDate = sample.WithDayOfWeek(starting, starting);
+
+                for (var next = DayOfWeek.Sunday; next <= DayOfWeek.Saturday; next++)
+                {
+                    var nextDate = sample.WithDayOfWeek(next, starting);
+                    int offset = next.DaysSinceWeekStart(starting);
+
+                    var difference = nextDate - startingDate;
+                    Assert.AreEqual(TimeSpan.FromDays(offset), difference);
+                }
+            }
+        }
         #endregion
 
         #region Rounding

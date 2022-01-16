@@ -375,6 +375,7 @@ namespace Garyon.Extensions
         /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted date.</param>
         /// <param name="weeks">The number of weeks to advance the <see cref="DateTime"/> by.</param>
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the date adjusted by the given weeks.</returns>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
         public static DateTime AddWeeks(this DateTime dateTime, int weeks)
         {
             return dateTime.AddDays(weeks * 7);
@@ -387,9 +388,10 @@ namespace Garyon.Extensions
         /// <returns>A copy of the original <seealso cref="DateTime"/> with the day of week set to the specified value.</returns>
         public static DateTime WithDayOfWeek(this DateTime dateTime, DayOfWeek dayOfWeek, DayOfWeek firstDayOfWeek = DayOfWeek.Sunday)
         {
-            var existingDayOfWeek = dateTime.DayOfWeek.ShiftRegardingStartingWeekDay(firstDayOfWeek);
-            var nextDayOfWeek = dayOfWeek.ShiftRegardingStartingWeekDay(firstDayOfWeek);
-            int days = nextDayOfWeek - existingDayOfWeek;
+            var existingDayOfWeek = dateTime.DayOfWeek;
+            int dayOffsetFromWeekStart = existingDayOfWeek.DaysSinceWeekStart(firstDayOfWeek);
+            int adjustedDayOffsetFromWeekStart = dayOfWeek.DaysSinceWeekStart(firstDayOfWeek);
+            int days = adjustedDayOffsetFromWeekStart - dayOffsetFromWeekStart;
             return dateTime.AddDays(days);
         }
         /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the day is adjusted to the one specified in the same year.</summary>

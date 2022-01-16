@@ -15,6 +15,15 @@ namespace Garyon.Extensions
             return (DayOfWeek)(((int)value + (int)starting) % 7);
         }
 
+        /// <summary>Gets the number of days since the week start.</summary>
+        /// <param name="currentDay">The current day in the week.</param>
+        /// <param name="weekStart">The starting day of the week.</param>
+        /// <returns>The number of days since the first day in the week, according to <paramref name="weekStart"/>.</returns>
+        public static int DaysSinceWeekStart(this DayOfWeek currentDay, DayOfWeek weekStart)
+        {
+            return (currentDay + 7 - weekStart) % 7;
+        }
+
         /// <summary>Determines whether the given <seealso cref="DayOfWeek"/> represents a weekday, between Monday and Friday.</summary>
         /// <param name="day">The <seealso cref="DayOfWeek"/> to determine if it's a weekday.</param>
         /// <returns><see langword="true"/> if the value is between <seealso cref="DayOfWeek.Monday"/> and <seealso cref="DayOfWeek.Friday"/>, inclusive, otherwise false.</returns>
