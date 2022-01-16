@@ -1,7 +1,9 @@
 ﻿using Garyon.DataStructures;
 using Garyon.Exceptions;
 using Garyon.Extensions;
+using Garyon.Reflection;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -32,21 +34,30 @@ namespace Garyon.Functions
             if (!type.IsEnum)
                 ThrowHelper.Throw<ArgumentException>("The provided type must be an enum type.");
 
-            if (!enumTypeEntryCounts.ContainsKey(type))
-                enumTypeEntryCounts[type] = Enum.GetValues(type).Length;
+            enumTypeEntryCounts.TryAdd(type, Enum.GetValues(type).Length);
             return enumTypeEntryCounts[type];
         }
 
-        /// <summary>Discovers all enum types from all the loaded assemblies, as returned from <seealso cref="AppDomain.GetAssemblies"/>, and statically registers their entry counts. This should only be called once per execution.</summary>
+        /// <summary>Discovers all enum types from all the loaded assemblies, using <seealso cref="AppDomainCache.Current"/>, and statically registers their entry counts.</summary>
+        /// <remarks>Ideally, this should only be called once per execution.</remarks>
         public static void RegisterEntryCountsGlobally()
         {
-            AppDomain.CurrentDomain.GetAssemblies().ForEach(RegisterEntryCounts);
+            RegisterEntryCounts(AppDomainCache.Current.AllTypes);
         }
-        /// <summary>Discovers all enum types from the specified assembly, and statically registers their entry counts. This should only be called once per assembly.</summary>
+        /// <summary>Discovers all enum types from the specified assembly, and statically registers their entry counts.</summary>
         /// <param name="assembly">The assembly whose enum types to discover.</param>
+        /// <remarks>Ideally, this should only be called once per assembly.</remarks>
         public static void RegisterEntryCounts(Assembly assembly)
         {
-            assembly.GetTypes().Where(t => t.IsEnum).ForEach(t => GetEntryCount(t));
+            RegisterEntryCounts(assembly.GetTypes());
+        }
+
+        /// <summary>Registers the entry counts for the enum types from the given types.</summary>
+        /// <param name="types">The collection of types, from which the enum types' entry counts will be registered.</param>
+        /// <remarks>Ideally, this should only be called once per type in the collection.</remarks>
+        public static void RegisterEntryCounts(IEnumerable<Type> types)
+        {
+            types.Where(t => t.IsEnum).ForEach(t => GetEntryCount(t));
         }
 
         private static class EnumCountRetriever<T>
