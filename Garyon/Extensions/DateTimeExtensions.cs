@@ -67,6 +67,22 @@ namespace Garyon.Extensions
         /// <returns>Whether the year of <paramref name="dateTime"/> is a leap year.</returns>
         [ExcludeFromCodeCoverage(Justification = "Trivial")]
         public static bool IsInLeapYear(this DateTime dateTime) => DateTime.IsLeapYear(dateTime.Year);
+        /// <summary>Gets the days the year of the provided <seealso cref="DateTime"/> has.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> whose year's day count to get.</param>
+        /// <returns>The number of days the year of <paramref name="dateTime"/> has.</returns>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
+        public static int DaysInYear(this DateTime dateTime) => dateTime.IsInLeapYear() ? 366 : 365;
+
+        /// <summary>Gets the days the specified year contains.</summary>
+        /// <param name="year">The year whose days to determine.</param>
+        /// <returns>The number of days the given year has.</returns>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
+        public static int DaysInYear(int year) => DaysInYear(DateTime.IsLeapYear(year));
+        /// <summary>Gets the days a year contains, determined by whether it's a leap year or not.</summary>
+        /// <param name="isLeapYear">Determines whether the year is a leap year or not.</param>
+        /// <returns>The number of days the year has.</returns>
+        [ExcludeFromCodeCoverage(Justification = "Trivial")]
+        public static int DaysInYear(bool isLeapYear) => isLeapYear ? 366 : 365;
         #endregion
 
         #region Individual Adjustments
@@ -355,12 +371,41 @@ namespace Garyon.Extensions
             return new(dateTime.TimeOfDay.Ticks);
         }
 
-        /*
-         * TODO: Add extensions for
-         * - With DayOfWeek (within same week starting from Sunday)
-         * - Add/Subtract Weeks
-         * - With DayOfYear (within same year)
-         */
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the date is adjusted by the specified number of weeks.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted date.</param>
+        /// <param name="weeks">The number of weeks to advance the <see cref="DateTime"/> by.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the date adjusted by the given weeks.</returns>
+        public static DateTime AddWeeks(this DateTime dateTime, int weeks)
+        {
+            return dateTime.AddDays(weeks * 7);
+        }
+
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the day is adjusted to the one specified in the same week.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted day.</param>
+        /// <param name="dayOfWeek">The <seealso cref="DayOfWeek"/> reflecting the day in the current week the new day will be.</param>
+        /// <param name="firstDayOfWeek">The first day of the week, within which the new day will be.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the day of week set to the specified value.</returns>
+        public static DateTime WithDayOfWeek(this DateTime dateTime, DayOfWeek dayOfWeek, DayOfWeek firstDayOfWeek = DayOfWeek.Sunday)
+        {
+            var existingDayOfWeek = dateTime.DayOfWeek.ShiftRegardingStartingWeekDay(firstDayOfWeek);
+            var nextDayOfWeek = dayOfWeek.ShiftRegardingStartingWeekDay(firstDayOfWeek);
+            int days = nextDayOfWeek - existingDayOfWeek;
+            return dateTime.AddDays(days);
+        }
+        /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the day is adjusted to the one specified in the same year.</summary>
+        /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted day.</param>
+        /// <param name="day">The day in the same year that will be set. It must range in [1, 365] for normal years, or [1, 366] for leap years.</param>
+        /// <returns>A copy of the original <seealso cref="DateTime"/> with the day of year set to the specified value.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// The given value for <paramref name="day"/> is outside the range [1, 365], if the year is a normal one, or [1, 366] if the year is a leap one.
+        /// </exception>
+        public static DateTime WithDayOfYear(this DateTime dateTime, int day)
+        {
+            ValidateDayOfYear(dateTime.Year, day);
+
+            int days = day - dateTime.DayOfYear;
+            return dateTime.AddDays(days);
+        }
 
         #region Validation
         // All validation functions will throw an exception with the appropriate message if the component is outside the valid range
@@ -442,6 +487,15 @@ namespace Garyon.Extensions
         {
             if (day > DateTime.DaysInMonth(year, month))
                 ThrowHelper.Throw<ArgumentOutOfRangeException>($"Attempted to adjust the date to {year:D4}/{month:D2}/{day:D2} (YYYY/MM/DD), but the year/month combination contains less days than the given.");
+        }
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void ValidateDayOfYear(int year, int day)
+        {
+            if (day < 1)
+                ThrowHelper.Throw<ArgumentOutOfRangeException>("The day must be greater than 0.");
+
+            if (day > DaysInYear(year))
+                ThrowHelper.Throw<ArgumentOutOfRangeException>($"Attempted to adjust the day of year to {day:D3}, year contains less days than the given.");
         }
         #endregion
         #endregion
