@@ -665,7 +665,7 @@ namespace Garyon.Extensions
         /// <inheritdoc cref="Enumerable.Concat{TSource}(IEnumerable{TSource}, IEnumerable{TSource})"/>
         public static IEnumerable<T> Concat<T>(this IEnumerable<T> first, params T[] second)
         {
-            return first.Concat(second);
+            return first.Concat((IEnumerable<T>)second);
         }
         #endregion
 
