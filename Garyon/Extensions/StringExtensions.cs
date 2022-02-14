@@ -266,6 +266,28 @@ namespace Garyon.Extensions
         /// <param name="s">The string whose line endings to normalize.</param>
         /// <returns>The string with normalized line endings.</returns>
         public static string NormalizeLineEndings(this string s) => s.Replace("\r\n", "\n").Replace('\r', '\n');
+
+        /// <summary>Repeats a string a number of times.</summary>
+        /// <param name="s">The string to repeat the specified number of times.</param>
+        /// <param name="count">The number of times to repeat the string. The value cannot be negative.</param>
+        /// <returns>The given string repeated the specified number of times. If <paramref name="count"/> is 0, <seealso cref="string.Empty"/> is returned.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="count"/> is negative.</exception>
+        public static string Repeat(this string s, int count)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count), "The count of repetitions cannot be a negative number.");
+
+            if (count is 0)
+                return string.Empty;
+
+            if (count is 1)
+                return s;
+
+            var builder = new StringBuilder(s.Length * count);
+            for (int i = 0; i < count; i++)
+                builder.Append(s);
+            return builder.ToString();
+        }
         #endregion
 
         #region Checks
