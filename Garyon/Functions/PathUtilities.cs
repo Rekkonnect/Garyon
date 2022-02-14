@@ -52,11 +52,18 @@ namespace Garyon.Functions
         {
             var splitA = AnalyzePath(pathA);
             var splitB = AnalyzePath(pathB);
+
             var result = new List<string>();
             int min = Min(splitA.Length, splitB.Length);
+
             for (int i = 0; i < min; i++)
-                if (splitA[i] == splitB[i])
-                    result.Add(splitA[i]);
+            {
+                if (splitA[i] != splitB[i])
+                    break;
+
+                result.Add(splitA[i]);
+            }
+
             return ConcatenateDirectoryPath(result);
         }
         // Since the explanation is not the most graspable, examples are provided.

@@ -14,6 +14,9 @@ namespace Garyon.Tests.Functions
             AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"), PathUtilities.GetCommonDirectory(Combine("C:", "users", "user"), Combine("C:", "users", "user", "Desktop")));
             AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users"), PathUtilities.GetCommonDirectory(Combine("C:", "users", "user", "Desktop"), Combine("C:", "users", "Rekkon")));
             AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users"), PathUtilities.GetCommonDirectory(Combine("C:", "users", "user"), Combine("C:", "users", "user0", "Desktop")));
+
+            AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users"), PathUtilities.GetCommonDirectory(Combine("C:", "users", "user", "Desktop"), Combine("C:", "users", "user0", "Desktop")));
+            AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users"), PathUtilities.GetCommonDirectory(Combine("C:", "users", "A", "B", "C"), Combine("C:", "users", "B", "B", "C")));
         }
 
         [Test]
