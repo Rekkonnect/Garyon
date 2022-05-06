@@ -110,5 +110,47 @@ namespace Garyon.Reflection
                 _ => throw new InvalidOperationException("The member is not a field or a property."),
             };
         }
+
+        /// <summary>Gets the arity of the member represented by the given <seealso cref="MemberInfo"/> instance.</summary>
+        /// <param name="member">The member whose arity to get.</param>
+        /// <returns>The arity of the member, if it is either a <seealso cref="MethodInfo"/> or a <seealso cref="Type"/>. Otherwise, returns 0.</returns>
+        public static int GetArity(this MemberInfo member)
+        {
+            return member switch
+            {
+                MethodInfo method => method.GetGenericArguments().Length,
+                TypeInfo type => type.GetGenericArguments().Length,
+                _ => 0,
+            };
+        }
+        public static MemberInfo GetDeclaringMember(this MemberInfo member)
+        {
+            return member switch
+            {
+                Type type => DetermineDirectDeclaringMember(type.GetDeclaringMethodSafe(), type.DeclaringType),
+                // Currently MethodBase does not contain information about being contained in a local method
+                MethodBase method => method.DeclaringType,
+                
+                _ => member.DeclaringType,
+            };
+        }
+
+        private static MemberInfo? DetermineDirectDeclaringMember(MethodBase? declaringMethod, Type? declaringType)
+        {
+            if (declaringMethod is null && declaringType is null)
+                return null;
+
+            // Should never be the case
+            if (declaringType is null)
+                return declaringMethod;
+
+            if (declaringMethod is null)
+                return declaringType;
+
+            if (declaringMethod.DeclaringType == declaringType)
+                return declaringMethod;
+
+            return declaringType;
+        }
     }
 }

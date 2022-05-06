@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 
 namespace Garyon.QualityControl.Types
 {
@@ -59,5 +61,28 @@ namespace Garyon.QualityControl.Types
         protected static class GenericStaticClass<T> { }
         protected static class GenericStaticClass<T1, T2> { }
         protected static class GenericStaticClass<T1, T2, T3> { }
+
+        protected static class GenericWithNestedGeneric<T1, T2>
+        {
+            public static readonly Type Type = typeof(GenericWithNestedGeneric<,>);
+
+            public static class Nested<T3, T4, T5>
+            {
+                public static readonly Type Type = typeof(GenericWithNestedGeneric<,>.Nested<,,>);
+                
+                public static class Nested2<T6, T7, T8>
+                {
+                    public static readonly Type Type = typeof(GenericWithNestedGeneric<,>.Nested<,,>.Nested2<,,>);
+                    public static readonly MethodInfo ContainedMethod;
+
+                    static Nested2()
+                    {
+                        ContainedMethod = Type.GetMember(nameof(Method)).First() as MethodInfo;
+                    }
+
+                    public static void Method<T9, T10>() { }
+                }
+            }
+        }
     }
 }

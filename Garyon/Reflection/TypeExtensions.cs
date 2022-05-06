@@ -4,6 +4,7 @@ using Garyon.Exceptions;
 using Garyon.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
@@ -269,6 +270,39 @@ namespace Garyon.Reflection
                 return type;
 
             return type.GetGenericTypeDefinition();
+        }
+
+        public static MethodBase? GetDeclaringMethodSafe(this Type type)
+        {
+            if (type.IsGenericMethodParameter)
+                return type.DeclaringMethod;
+            
+            return null;
+        }
+
+        /// <summary>Gets the member that originally declares the given generic parameter type.</summary>
+        /// <param name="type">The generic type parameter whose original declaring member to get.</param>
+        /// <returns>The <seealso cref="MemberInfo"/> instance representing the member that originally declares the given generic parameter.</returns>
+        /// <remarks>This method does not work for local generic methods.</remarks>
+        /// <exception cref="ArgumentException">Thrown when <paramref name="type"/> is not a generic type parameter.</exception>
+        public static MemberInfo GetOriginalDeclaringGenericMember(this Type type)
+        {
+            if (!type.IsGenericTypeParameter)
+                throw new ArgumentException("The given type must be a generic type parameter.");
+
+            var declaringMember = type.GetDeclaringMember();
+            Debug.Assert(declaringMember is not null);
+
+            int parentArity = declaringMember.GetArity();
+            var originalDeclaringMember = declaringMember;
+            while (type.GenericParameterPosition < parentArity)
+            {
+                originalDeclaringMember = declaringMember;
+                declaringMember = declaringMember.GetDeclaringMember();
+                parentArity = declaringMember.GetArity();
+            }
+
+            return originalDeclaringMember;
         }
         #endregion
 

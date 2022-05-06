@@ -4,6 +4,7 @@ using Garyon.Reflection;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using GaryonTypeExtensions = Garyon.Reflection.TypeExtensions;
 
@@ -443,5 +444,26 @@ CD
 #nullable disable
         }
         #endregion
+
+        [Test]
+        public void GetOriginalDeclaringGenericMemberTest()
+        {
+            // Nice identifier
+            var testingMethod = GenericWithNestedGeneric<int, int>.Nested<int, int, int>.Nested2<int, int, int>.Type;
+            var genericParameters = testingMethod.GetGenericArguments();
+            var outer = genericParameters[0..2];
+            var inner1 = genericParameters[2..5];
+            var inner2 = genericParameters[5..8];
+            AssertDeclaringTypes(outer, typeof(GenericWithNestedGeneric<,>));
+            AssertDeclaringTypes(inner1, typeof(GenericWithNestedGeneric<,>.Nested<,,>));
+            AssertDeclaringTypes(inner2, typeof(GenericWithNestedGeneric<,>.Nested<,,>.Nested2<,,>));
+
+            void AssertDeclaringTypes(IEnumerable<Type> genericParameters, MemberInfo expectedDeclaringMember)
+            {
+                Assert.IsTrue(genericParameters
+                    .Select(parameter => parameter.GetOriginalDeclaringGenericMember())
+                    .All(declaringMember => declaringMember == expectedDeclaringMember));
+            }
+        }
     }
 }
