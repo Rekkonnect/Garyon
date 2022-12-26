@@ -12,7 +12,6 @@ namespace Garyon.Functions
         /// <returns><see langword="true"/> if both objects are equal, or both are <see langword="null"/>; otherwise <see langword="false"/>.</returns>
         /// <remarks>This implementation avoids using the <seealso cref="object.Equals(object?, object?)"/> function in order to avoid the type checking overhead.</remarks>
         public static bool SafeEquals<T>(T left, T right)
-            where T : class?
         {
             return left?.Equals(right) ?? (right is null);
         }

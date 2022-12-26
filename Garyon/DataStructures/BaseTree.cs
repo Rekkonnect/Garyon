@@ -270,7 +270,7 @@ namespace Garyon.DataStructures
             foreach (var (thisValue, otherValue) in parallellyEnumerable)
             {
                 // If any value is null, the respective enumeration is over
-                if (thisValue == null ^ otherValue == null)
+                if (NullGuards.SingleNull(thisValue, otherValue))
                     return false;
 
                 // If both enumerations end at the same time, it's only necessary to at least check the one
