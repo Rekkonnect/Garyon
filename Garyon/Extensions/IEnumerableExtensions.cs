@@ -71,6 +71,24 @@ namespace Garyon.Extensions
         #endregion
 
         #region Null
+        /// <summary>
+        /// Returns a non-<see langword="null"/> enumerable if the provided
+        /// source enumerable is <see langword="null"/>, to avoid a
+        /// <seealso cref="NullReferenceException"/> being thrown when enumerating.
+        /// </summary>
+        /// <typeparam name="TValue">The type of the enumerated values.</typeparam>
+        /// <param name="source">
+        /// The source enumerable that could be <see langword="null"/>.
+        /// </param>
+        /// <returns>
+        /// The given enumerable if not <see langword="null"/>, otherwise
+        /// <seealso cref="Enumerable.Empty{TResult}"/>.
+        /// </returns>
+        public static IEnumerable<TValue> Uphold<TValue>(this IEnumerable<TValue>? source)
+        {
+            return source ?? Enumerable.Empty<TValue>();
+        }
+
         /// <summary>Gets the count of elements that are not <see langword="null"/>.</summary>
         /// <typeparam name="T">The type of the elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
         /// <param name="source">The <seealso cref="IEnumerable{T}"/> whose elements to iterate.</param>
