@@ -33,11 +33,11 @@ namespace Garyon.DataStructures
 
         #region Abstract Constructors
         /// <inheritdoc/>
-        protected override TreeNode<T> InitializeNewNode(T value = default) => new TreeNode<T>(value);
+        protected override TreeNode<T> InitializeNewNode(T value = default) => new(value);
         /// <inheritdoc/>
-        protected override TreeNode<T> InitializeNewNode(Tree<T> baseTree, T value = default) => new TreeNode<T>(baseTree, value);
+        protected override TreeNode<T> InitializeNewNode(Tree<T> baseTree, T value = default) => new(baseTree, value);
         /// <inheritdoc/>
-        protected override TreeNode<T> InitializeNewNode(TreeNode<T> parentNode, T value = default) => new TreeNode<T>(parentNode, value);
+        protected override TreeNode<T> InitializeNewNode(TreeNode<T> parentNode, T value = default) => new(parentNode, value);
         #endregion
     }
 
@@ -78,7 +78,7 @@ namespace Garyon.DataStructures
         /// <value>The new list of nodes to set the children to. If the list is <see langword="null"/>, a new list is initialized.</value>
         public override List<TTreeNode> Children
         {
-            get => new List<TTreeNode>(InternalChildren);
+            get => new(InternalChildren);
             set
             {
                 value ??= new List<TTreeNode>();

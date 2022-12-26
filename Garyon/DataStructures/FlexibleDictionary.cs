@@ -106,7 +106,7 @@ namespace Garyon.DataStructures
 
         /// <summary>Clones this <seealso cref="FlexibleDictionary{TKey, TValue}"/> and adds all its keys to the resulting instance.</summary>
         /// <returns>The cloned instance containing the same key-value pairs.</returns>
-        public virtual FlexibleDictionary<TKey, TValue> Clone() => new FlexibleDictionary<TKey, TValue>(this);
+        public virtual FlexibleDictionary<TKey, TValue> Clone() => new(this);
 
         /// <inheritdoc/>
         public bool ContainsKey(TKey key) => Dictionary.ContainsKey(key);

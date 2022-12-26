@@ -93,8 +93,8 @@ namespace Garyon.Extensions
             return mid;
         }
 
-        public static HashSet<T> Clone<T>(this HashSet<T> s) => new HashSet<T>(s);
-        public static SortedSet<T> Clone<T>(this SortedSet<T> s) => new SortedSet<T>(s);
+        public static HashSet<T> Clone<T>(this HashSet<T> s) => new(s);
+        public static SortedSet<T> Clone<T>(this SortedSet<T> s) => new(s);
 
         public static int[] GetInt32ArrayFromMultidimensionalInt32Array(int[,] a, int dimension, int index)
         {

@@ -40,7 +40,7 @@ namespace Garyon.DataStructures
             : base(other) { }
 
         /// <inheritdoc/>
-        public override FlexibleInitializableValueDictionary<TKey, TValue> Clone() => new FlexibleInitializableValueDictionary<TKey, TValue>(this);
+        public override FlexibleInitializableValueDictionary<TKey, TValue> Clone() => new(this);
 
         /// <inheritdoc/>
         protected override TValue GetNewEntryInitializationValue() => new();

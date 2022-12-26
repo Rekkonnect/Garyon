@@ -102,8 +102,8 @@ namespace Garyon.Objects
         public void Divide(BigInteger value) => cachedValue = Value / value;
         #endregion
 
-        public static implicit operator CacheableBigInteger(long value) => new CacheableBigInteger(value);
-        public static implicit operator CacheableBigInteger(BigInteger value) => new CacheableBigInteger(value);
+        public static implicit operator CacheableBigInteger(long value) => new(value);
+        public static implicit operator CacheableBigInteger(BigInteger value) => new(value);
         public static implicit operator BigInteger(CacheableBigInteger value) => value.Value;
 
         private void PerformOperations()

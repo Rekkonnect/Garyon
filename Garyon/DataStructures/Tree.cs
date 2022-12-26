@@ -25,11 +25,11 @@ namespace Garyon.DataStructures
 
         #region Abstract Constructors
         /// <inheritdoc/>
-        protected override TreeNode<T> InitializeNewNode(T value = default) => new TreeNode<T>(value);
+        protected override TreeNode<T> InitializeNewNode(T value = default) => new(value);
         /// <inheritdoc/>
-        protected override TreeNode<T> InitializeNewNode(Tree<T> baseTree, T value = default) => new TreeNode<T>(baseTree, value);
+        protected override TreeNode<T> InitializeNewNode(Tree<T> baseTree, T value = default) => new(baseTree, value);
         /// <inheritdoc/>
-        protected override TreeNode<T> InitializeNewNode(TreeNode<T> parentNode, T value = default) => new TreeNode<T>(parentNode, value);
+        protected override TreeNode<T> InitializeNewNode(TreeNode<T> parentNode, T value = default) => new(parentNode, value);
         #endregion
     }
 

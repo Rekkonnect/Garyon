@@ -70,10 +70,10 @@ namespace Garyon.Objects
         /// <param name="seconds">The seconds to subtract.</param>
         public void Subtract(int minutes, int seconds) => Add(-minutes, -seconds);
 
-        public static MinuteSecond operator +(MinuteSecond hm, int seconds) => new MinuteSecond(hm.seconds + seconds);
-        public static MinuteSecond operator +(MinuteSecond left, MinuteSecond right) => new MinuteSecond(left.seconds + right.seconds);
-        public static MinuteSecond operator -(MinuteSecond hm, int seconds) => new MinuteSecond(hm.seconds - seconds);
-        public static MinuteSecond operator -(MinuteSecond left, MinuteSecond right) => new MinuteSecond(left.seconds - right.seconds);
+        public static MinuteSecond operator +(MinuteSecond hm, int seconds) => new(hm.seconds + seconds);
+        public static MinuteSecond operator +(MinuteSecond left, MinuteSecond right) => new(left.seconds + right.seconds);
+        public static MinuteSecond operator -(MinuteSecond hm, int seconds) => new(hm.seconds - seconds);
+        public static MinuteSecond operator -(MinuteSecond left, MinuteSecond right) => new(left.seconds - right.seconds);
 
         public static bool operator <(MinuteSecond left, MinuteSecond right) => left.seconds < right.seconds;
         public static bool operator <=(MinuteSecond left, MinuteSecond right) => left.seconds <= right.seconds;
@@ -84,10 +84,10 @@ namespace Garyon.Objects
 
         public static implicit operator DateTimeOffset(MinuteSecond t) => DateTimeOffset.Now.Date.Add(t);
         public static implicit operator DateTime(MinuteSecond t) => DateTime.Now.Date.Add(t);
-        public static implicit operator TimeSpan(MinuteSecond t) => new TimeSpan(0, t.Minute, t.Second);
-        public static explicit operator MinuteSecond(DateTimeOffset t) => new MinuteSecond(t.Minute, t.Second);
-        public static explicit operator MinuteSecond(DateTime t) => new MinuteSecond(t.Minute, t.Second);
-        public static explicit operator MinuteSecond(TimeSpan t) => new MinuteSecond(t.Minutes, t.Seconds);
+        public static implicit operator TimeSpan(MinuteSecond t) => new(0, t.Minute, t.Second);
+        public static explicit operator MinuteSecond(DateTimeOffset t) => new(t.Minute, t.Second);
+        public static explicit operator MinuteSecond(DateTime t) => new(t.Minute, t.Second);
+        public static explicit operator MinuteSecond(TimeSpan t) => new(t.Minutes, t.Seconds);
 
         /// <summary>Parses the given string representation of an minute-second time into a <seealso cref="MinuteSecond"/> instance.</summary>
         /// <param name="s">The string representation of an minute-second of the form "MM:SS". The string may contain additional numbers split with ":", which will be ignored.</param>

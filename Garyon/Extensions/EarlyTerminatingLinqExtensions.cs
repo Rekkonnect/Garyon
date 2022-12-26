@@ -34,13 +34,11 @@ namespace Garyon.Extensions
         /// <returns><see langword="true"/> if the sum is greater than or equal to (&gt;=) the target, otherwise <see langword="false"/>.</returns>
         public static bool SumsAtLeast(this IEnumerable<uint> values, uint target) => SumSatisfies(values, ComparisonKinds.GreaterOrEqual, target);
 
-#pragma warning disable CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
         /// <inheritdoc cref="SumSatisfiesDocTemplate"/>
         /// <summary>Determines whether the sum of a collection of values satisfies a comparison against the target value.</summary>
         /// <param name="comparisonKinds">The comparison kinds that must be satisfied.</param>
         /// <returns><see langword="true"/> if the sum satisfies the given comparison, otherwise <see langword="false"/>.</returns>
         public static bool SumSatisfies(this IEnumerable<uint> values, ComparisonKinds comparisonKinds, uint target)
-#pragma warning restore CS1573
         {
             if (comparisonKinds is ComparisonKinds.All)
                 return true;

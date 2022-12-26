@@ -30,14 +30,12 @@ namespace Garyon.Extensions
         {
             return builder.Append(chars).AppendLine();
         }
-#pragma warning disable CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
         /// <inheritdoc cref="AppendLine(StringBuilder, ReadOnlySpan{char})"/>
         /// <param name="charCount">The number of characters to append.</param>
         public static unsafe StringBuilder AppendLine(this StringBuilder builder, char* chars, int charCount)
         {
             return builder.Append(chars, charCount).AppendLine();
         }
-#pragma warning restore CS1573
         /// <summary>Appends an object's string representation, and appends a new line after that.</summary>
         /// <param name="builder">The <seealso cref="StringBuilder"/> instance on which to append.</param>
         /// <param name="o">The object whose string representation to append.</param>

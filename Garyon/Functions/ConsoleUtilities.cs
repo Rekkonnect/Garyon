@@ -25,7 +25,7 @@ namespace Garyon.Functions
         }
         /// <summary>Gets the current console color.</summary>
         /// <returns>A <seealso cref="ConsoleColorSet"/> containing the current console colors.</returns>
-        public static ConsoleColorSet GetConsoleColor() => new ConsoleColorSet(ForegroundColor, BackgroundColor);
+        public static ConsoleColorSet GetConsoleColor() => new(ForegroundColor, BackgroundColor);
         #endregion
 
         #region Output

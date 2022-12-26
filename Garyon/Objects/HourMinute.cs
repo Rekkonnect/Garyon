@@ -67,10 +67,10 @@ namespace Garyon.Objects
         /// <param name="minutes">The minutes to subtract.</param>
         public void Subtract(int hours, int minutes) => Add(-hours, -minutes);
 
-        public static HourMinute operator +(HourMinute hm, int minutes) => new HourMinute(hm.minutes + minutes);
-        public static HourMinute operator +(HourMinute left, HourMinute right) => new HourMinute(left.minutes + right.minutes);
-        public static HourMinute operator -(HourMinute hm, int minutes) => new HourMinute(hm.minutes - minutes);
-        public static HourMinute operator -(HourMinute left, HourMinute right) => new HourMinute(left.minutes - right.minutes);
+        public static HourMinute operator +(HourMinute hm, int minutes) => new(hm.minutes + minutes);
+        public static HourMinute operator +(HourMinute left, HourMinute right) => new(left.minutes + right.minutes);
+        public static HourMinute operator -(HourMinute hm, int minutes) => new(hm.minutes - minutes);
+        public static HourMinute operator -(HourMinute left, HourMinute right) => new(left.minutes - right.minutes);
 
         public static bool operator <(HourMinute left, HourMinute right) => left.minutes < right.minutes;
         public static bool operator <=(HourMinute left, HourMinute right) => left.minutes <= right.minutes;
@@ -81,10 +81,10 @@ namespace Garyon.Objects
 
         public static implicit operator DateTimeOffset(HourMinute t) => DateTimeOffset.Now.Date.Add(t);
         public static implicit operator DateTime(HourMinute t) => DateTime.Now.Date.Add(t);
-        public static implicit operator TimeSpan(HourMinute t) => new TimeSpan(t.Hour, t.Minute, 0);
-        public static explicit operator HourMinute(DateTimeOffset t) => new HourMinute(t.Hour, t.Minute);
-        public static explicit operator HourMinute(DateTime t) => new HourMinute(t.Hour, t.Minute);
-        public static explicit operator HourMinute(TimeSpan t) => new HourMinute(t.Hours, t.Minutes);
+        public static implicit operator TimeSpan(HourMinute t) => new(t.Hour, t.Minute, 0);
+        public static explicit operator HourMinute(DateTimeOffset t) => new(t.Hour, t.Minute);
+        public static explicit operator HourMinute(DateTime t) => new(t.Hour, t.Minute);
+        public static explicit operator HourMinute(TimeSpan t) => new(t.Hours, t.Minutes);
 
         /// <summary>Parses the given string representation of an hour-minute time into a <seealso cref="HourMinute"/> instance.</summary>
         /// <param name="s">The string representation of an hour-minute of the form "HH:MM". The string may contain additional numbers split with ":", which will be ignored.</param>

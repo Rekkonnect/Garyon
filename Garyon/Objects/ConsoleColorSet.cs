@@ -7,7 +7,7 @@ namespace Garyon.Objects
     public struct ConsoleColorSet
     {
         /// <summary>Gets a new instance of the default <seealso cref="ConsoleColorSet"/>.</summary>
-        public static ConsoleColorSet Default => new ConsoleColorSet(ConsoleColor.Gray, ConsoleColor.Black);
+        public static ConsoleColorSet Default => new(ConsoleColor.Gray, ConsoleColor.Black);
 
         /// <summary>The foreground color.</summary>
         public ConsoleColor ForegroundColor { get; set; }
