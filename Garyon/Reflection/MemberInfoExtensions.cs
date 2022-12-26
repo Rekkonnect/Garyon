@@ -24,7 +24,7 @@ namespace Garyon.Reflection
             where T : Attribute
         {
             firstInstance = member.GetCustomAttribute<T>();
-            return firstInstance != null;
+            return firstInstance is not null;
         }
         /// <summary>Determines whether a member has custom attributes of the specified type.</summary>
         /// <typeparam name="T">The type of the attributes to find.</typeparam>

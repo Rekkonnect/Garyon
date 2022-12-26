@@ -11,7 +11,7 @@ namespace Garyon.Functions
         /// <param name="element">The element.</param>
         /// <returns><see langword="true"/> if the element is not <see langword="null"/>, otherwise <see langword="false"/>.</returns>
         /// <remarks>For nullable structs, consider using <see cref="HasValue{T}(T?)"/>.</remarks>
-        public static bool NotNull<T>(T element) => element != null;
+        public static bool NotNull<T>(T element) => element is not null;
         /// <summary>Determines whether the provided element is <see langword="null"/>.</summary>
         /// <typeparam name="T">The type of the element.</typeparam>
         /// <param name="element">The element.</param>

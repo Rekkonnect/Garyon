@@ -118,7 +118,7 @@ namespace Garyon.Reflection
 
             var currentType = type;
             int level = 0;
-            while ((currentType = currentType.BaseType) != null)
+            while ((currentType = currentType.BaseType) is not null)
                 level++;
             return level - 1;
         }
@@ -145,7 +145,7 @@ namespace Garyon.Reflection
                 if (nodeType.IsClass)
                 {
                     var baseType = nodeType.BaseType;
-                    if (baseType != null)
+                    if (baseType is not null)
                     {
                         var baseTypeNode = node.AddChild(baseType);
                         leaves.Enqueue(baseTypeNode);
@@ -161,7 +161,7 @@ namespace Garyon.Reflection
 
                     // Remove indirectly inherited interfaces
                     var currentParent = node;
-                    while ((currentParent = currentParent.Parent) != null)
+                    while ((currentParent = currentParent.Parent) is not null)
                         currentParent.RemoveChild(i);
                 }
             }
@@ -199,7 +199,7 @@ namespace Garyon.Reflection
 
                     // Remove indirectly inherited interfaces
                     var currentParent = node;
-                    while ((currentParent = currentParent.Parent) != null)
+                    while ((currentParent = currentParent.Parent) is not null)
                         currentParent.RemoveChild(i);
                 }
             }

@@ -111,7 +111,7 @@ F
         #region Children Handling
         private void AssertContainedAgainstBaseTree(Tree<char> tree, TreeNode<char> child, char c, bool contained)
         {
-            if (child != null)
+            if (child is not null)
                 Assert.AreEqual(contained, child.Contains(c));
             Assert.AreEqual(contained, tree.Contains(c));
             Assert.AreEqual(!contained, testTree.Contains(c));

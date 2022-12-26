@@ -36,15 +36,15 @@ namespace Garyon.DataStructures
                 if (Checks.SafeEquals(InternalRoot, value))
                     return;
 
-                if (value?.Parent != null)
+                if (value?.Parent is not null)
                     ThrowHelper.Throw<InvalidOperationException>("Cannot set the root of the tree to a node that has a parent.");
 
                 CachedCount = null;
 
                 // Update base trees
-                if (InternalRoot != null)
+                if (InternalRoot is not null)
                     InternalRoot.BaseTree = default;
-                if (value != null)
+                if (value is not null)
                     value.BaseTree = This;
                 InternalRoot = value;
             }
@@ -107,7 +107,7 @@ namespace Garyon.DataStructures
         /// <summary>Determines whether this tree contains a node with the specified value.</summary>
         /// <param name="value">The value to determine whether it is contained within the tree.</param>
         /// <returns>A value determining whether the requested value was found.</returns>
-        public virtual bool Contains(TValue value) => GetNode(value) != null;
+        public virtual bool Contains(TValue value) => GetNode(value) is not null;
 
         /// <summary>Gets a child node within this tree that has the specified value.</summary>
         /// <param name="value">The value of the child tree node to find.</param>
@@ -262,7 +262,7 @@ namespace Garyon.DataStructures
             if (other is null)
                 return false;
 
-            if (CachedCount != null && other.CachedCount != null && CachedCount != other.CachedCount)
+            if (CachedCount is not null && other.CachedCount is not null && CachedCount != other.CachedCount)
                 return false;
 
             var parallellyEnumerable = new ParallellyEnumerable<TValue, TValue>(this, other);
@@ -274,7 +274,7 @@ namespace Garyon.DataStructures
                     return false;
 
                 // If both enumerations end at the same time, it's only necessary to at least check the one
-                if (thisValue == null)
+                if (thisValue is null)
                     return true;
 
                 if (!Checks.SafeEquals(thisValue, otherValue))

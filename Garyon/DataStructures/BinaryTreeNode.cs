@@ -74,9 +74,9 @@ namespace Garyon.DataStructures
             set
             {
                 InternalBaseTree = value;
-                if (LeftChild != null)
+                if (LeftChild is not null)
                     LeftChild.BaseTree = value;
-                if (RightChild != null)
+                if (RightChild is not null)
                     RightChild.BaseTree = value;
             }
         }
@@ -99,9 +99,9 @@ namespace Garyon.DataStructures
             get
             {
                 var result = new List<TTreeNode>(2);
-                if (LeftChild != null)
+                if (LeftChild is not null)
                     result.Add(LeftChild);
-                if (RightChild != null)
+                if (RightChild is not null)
                     result.Add(RightChild);
                 return result;
             }
@@ -129,7 +129,7 @@ namespace Garyon.DataStructures
         }
 
         /// <inheritdoc/>
-        public sealed override int ChildrenCount => Convert.ToInt32(LeftChild != null) + Convert.ToInt32(RightChild != null);
+        public sealed override int ChildrenCount => Convert.ToInt32(LeftChild is not null) + Convert.ToInt32(RightChild is not null);
 
         /// <inheritdoc/>
         public sealed override int Height
@@ -184,7 +184,7 @@ namespace Garyon.DataStructures
 
             static bool Matches(TTreeNode node, TValue value)
             {
-                if (node != null)
+                if (node is not null)
                     if (node.Value.Equals(value))
                         return true;
                 return false;
@@ -254,9 +254,9 @@ namespace Garyon.DataStructures
         /// <inheritdoc/>
         protected override void AddChildrenToClonedInstance(TTreeNode result)
         {
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 result.AddChild(LeftChild.Clone(false));
-            if (RightChild != null)
+            if (RightChild is not null)
                 result.AddChild(RightChild.Clone(false));
         }
 
@@ -274,11 +274,11 @@ namespace Garyon.DataStructures
         /// <returns>The yielded nodes.</returns>
         public IEnumerable<TTreeNode> TraverseInOrderNodes()
         {
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 foreach (var e in LeftChild.TraverseInOrderNodes())
                     yield return e;
             yield return This;
-            if (RightChild != null)
+            if (RightChild is not null)
                 foreach (var e in RightChild.TraverseInOrderNodes())
                     yield return e;
         }
@@ -287,10 +287,10 @@ namespace Garyon.DataStructures
         public override IEnumerable<TTreeNode> TraversePreOrderNodes()
         {
             yield return This;
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 foreach (var e in LeftChild.TraversePreOrderNodes())
                     yield return e;
-            if (RightChild != null)
+            if (RightChild is not null)
                 foreach (var e in RightChild.TraversePreOrderNodes())
                     yield return e;
         }
@@ -298,10 +298,10 @@ namespace Garyon.DataStructures
         /// <returns>The yielded nodes.</returns>
         public override IEnumerable<TTreeNode> TraversePostOrderNodes()
         {
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 foreach (var e in LeftChild.TraversePostOrderNodes())
                     yield return e;
-            if (RightChild != null)
+            if (RightChild is not null)
                 foreach (var e in RightChild.TraversePostOrderNodes())
                     yield return e;
             yield return This;
@@ -319,12 +319,12 @@ namespace Garyon.DataStructures
             {
                 foreach (var n in currentNodes)
                 {
-                    if (LeftChild != null)
+                    if (LeftChild is not null)
                     {
                         childrenNodes.Add(LeftChild);
                         yield return LeftChild;
                     }
-                    if (RightChild != null)
+                    if (RightChild is not null)
                     {
                         childrenNodes.Add(RightChild);
                         yield return RightChild;
@@ -341,10 +341,10 @@ namespace Garyon.DataStructures
         /// <param name="childrenToRemove">The children to remove from this node's children list.</param>
         public void RemoveChildren(IEnumerable<TTreeNode> childrenToRemove)
         {
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 if (childrenToRemove.Contains(LeftChild))
                     RemoveChild(LeftChild);
-            if (RightChild != null)
+            if (RightChild is not null)
                 if (childrenToRemove.Contains(RightChild))
                     RemoveChild(RightChild);
 
@@ -360,10 +360,10 @@ namespace Garyon.DataStructures
         /// <param name="values">The values of the children to remove from this node's children list.</param>
         public void RemoveChildren(IEnumerable<TValue> values)
         {
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 if (values.Contains(LeftChild.Value))
                     RemoveChild(LeftChild);
-            if (RightChild != null)
+            if (RightChild is not null)
                 if (values.Contains(RightChild.Value))
                     RemoveChild(RightChild);
 

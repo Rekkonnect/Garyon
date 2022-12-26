@@ -145,7 +145,7 @@ namespace Garyon.DataStructures
 
             static bool Matches(TTreeNode node, TValue value)
             {
-                if (node != null)
+                if (node is not null)
                     if (node.Value.Equals(value))
                         return true;
                 return false;
@@ -194,7 +194,7 @@ namespace Garyon.DataStructures
         public bool AddNode(TTreeNode node)
         {
             var existingNode = Seek(node.Value, out var parent);
-            if (existingNode != null)
+            if (existingNode is not null)
                 return false;
 
             parent.AddChild(node);
@@ -255,7 +255,7 @@ namespace Garyon.DataStructures
                     _ => currentNode.RightChild,
                 };
             }
-            while (currentNode != null);
+            while (currentNode is not null);
 
             return null;
         }
@@ -264,9 +264,9 @@ namespace Garyon.DataStructures
         /// <inheritdoc/>
         protected override void AddChildrenToClonedInstance(TTreeNode result)
         {
-            if (LeftChild != null)
+            if (LeftChild is not null)
                 result.AddChild(LeftChild.Clone(false));
-            if (RightChild != null)
+            if (RightChild is not null)
                 result.AddChild(RightChild.Clone(false));
         }
     }
