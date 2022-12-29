@@ -1,48 +1,54 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0;net6.0;net7.0</TargetFrameworks>
     <LangVersion>11.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>annotations</Nullable>
-    <PackageTags>common, extensions, utilities, library, reflection, simd, array</PackageTags>
+    <PackageTags>common, extensions, utilities, library, reflection</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
     <Copyright>© 2020-2022, Alex Kalfakakos</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <RepositoryUrl>https://github.com/AlFasGD/Garyon</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.2.7</Version>
+    <Version>0.3.0</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
     <PackageReleaseNotes>Additions:
-- QueueExtensions.DequeueAll() and StackExtensions.PopAll()
-- Element insertion for Queue&lt;T&gt; and Stack&lt;T&gt;
+- AffixedEnumerable&lt;T&gt;
+- SingleOrEnumerable&lt;T&gt;
+- EmptyEnumerator&lt;T&gt;
+- SingleValueEnumerator&lt;T&gt;
+- UnreachableException
+- NullGuards
 
-- Extensions for array sorting by custom comparer
-- Extensions for calculating the product of the values in a collection
+Extensions:
+- Tons of Span&lt;T&gt; and ReadOnlySpan&lt;T&gt; extensions
+- string.Repeat(int)
+- UnaryOperatorExtensions
+- AppDomainHelpers
+- Several extensions for MemberInfo, FieldInfo and Type
+- IEnumeratorExtensions
+- IDictionaryExtensions
+- More ToCollectionExtensions
+- IEnumerable&lt;T&gt;.Uphold
 
-- Extremum
-- Assigning extremum to ref variable
+Improvements:
+- Documentation for some more components
+- Compiled against .NET 5.0, .NET 6.0 and .NET 7.0
 
-- KeyValuePairExtensions.WithKey/WithValue
-- KeyValuePair&lt;TKey, TValue&gt; comparers
-
-- OpenInterval&lt;T&gt;
-- SingleElementCollection&lt;T&gt;
-- LineStringBuilder
-
-- Tons of DateTime and TimeSpan extensions, accompanied by some DayOfWeek extensions
-
-- A bit of love for EnumHelpers
-- HashCodeFactory
-- StringBuilderExtensions.AppendLines
-- RangeExtensions.GetStartAndEnd
-- Field initialization helper functions
+Breaking Changes:
+- Renamespace TypeValueCounterDictionary into Garyon.Objects from Garyon.Functions
 
 Bugfixes:
-- Critical bug with &lt;= and &gt;= in IComparableExtensions.SatisfiesComparison
+- Critical SO bug in IEnumerableExtensions.Concat(params T[])
+- Bug in PathUtilities.GetCommonDirectory
+
+Internals:
+- Use C# 11.0
+- Code style cleanup
 </PackageReleaseNotes>
   </PropertyGroup>
 

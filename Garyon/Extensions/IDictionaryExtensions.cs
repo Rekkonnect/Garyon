@@ -10,7 +10,8 @@ namespace Garyon.Extensions;
 /// <summary>
 /// Provides useful extensions for the
 /// <seealso cref="IDictionary{TKey, TValue}"/>
-/// and <seealso cref="IDictionary"/> types.</summary>
+/// and <seealso cref="IDictionary"/> types.
+/// </summary>
 public static class IDictionaryExtensions
 {
     #region IDictionary
