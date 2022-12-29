@@ -30,12 +30,12 @@ namespace Garyon.Objects.Enumerators
 
         /// <summary>Disposes the async enumerator by calling its <seealso cref="IAsyncDisposable.DisposeAsync()"/> implementation.</summary>
         /// <returns>A task that represents the asynchronous dispose operation.</returns>
-        public async ValueTask DisposeAsync() => await enumerator.DisposeAsync();
+        public ValueTask DisposeAsync() => enumerator.DisposeAsync();
         /// <inheritdoc/>
-        public async ValueTask<bool> MoveNextAsync()
+        public ValueTask<bool> MoveNextAsync()
         {
             Index++;
-            return await enumerator.MoveNextAsync();
+            return enumerator.MoveNextAsync();
         }
     }
 }

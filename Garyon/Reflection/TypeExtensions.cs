@@ -272,6 +272,20 @@ namespace Garyon.Reflection
             return type.GetGenericTypeDefinition();
         }
 
+        /// <summary>
+        /// Gets the declaring method of the given type. Only generic
+        /// method type parameters support a declaring method.
+        /// </summary>
+        /// <param name="type">
+        /// The type whose declaring method to get. It must be a 
+        /// generic method type parameter, otherwise
+        /// <see langword="null"/> will be returned.
+        /// </param>
+        /// <returns>
+        /// The declaring method for the given generic method type
+        /// parameter, or <see langword="null"/> if the type is not
+        /// a generic method type parameter.
+        /// </returns>
         public static MethodBase? GetDeclaringMethodSafe(this Type type)
         {
             if (type.IsGenericMethodParameter)

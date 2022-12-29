@@ -1,7 +1,7 @@
 ﻿using Garyon.DataStructures;
 using System;
 
-namespace Garyon.Functions
+namespace Garyon.Objects
 {
     /// <summary>Represents a <seealso cref="ValueCounterDictionary{TKey}"/> storing keys of type <seealso cref="Type"/>.</summary>
     public class TypeValueCounterDictionary : ValueCounterDictionary<Type>
