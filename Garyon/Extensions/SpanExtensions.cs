@@ -1,6 +1,7 @@
-﻿using System;
+﻿#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP
+
+using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 
 namespace Garyon.Extensions;
 
@@ -635,3 +636,5 @@ public static class SpanExtensions
     public delegate TResult ReadOnlySpanSelector<TSource, TResult>(ReadOnlySpan<TSource> source);
     #endregion
 }
+
+#endif

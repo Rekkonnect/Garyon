@@ -1,6 +1,5 @@
-﻿namespace Garyon.Functions.IntrinsicsHelpers
+﻿namespace Garyon.Functions.IntrinsicsHelpers;
+
+public abstract unsafe class SIMDVectorHelper
 {
-    public abstract unsafe class SIMDVectorHelper
-    {
-    }
 }

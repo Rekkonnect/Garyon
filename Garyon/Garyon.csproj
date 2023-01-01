@@ -1,59 +1,120 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>
+      netstandard2.0;
+      netstandard2.1;
+      netcoreapp3.1;
+      net5.0;
+      net6.0;
+      net7.0
+    </TargetFrameworks>
     <LangVersion>11.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>annotations</Nullable>
     <PackageTags>common, extensions, utilities, library, reflection</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
-    <Copyright>© 2020-2022, Alex Kalfakakos</Copyright>
+    <Copyright>© 2020-2023, Alex Kalfakakos</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.3.0</Version>
+    <Version>0.3.1</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>Additions:
-- AffixedEnumerable&lt;T&gt;
-- SingleOrEnumerable&lt;T&gt;
-- EmptyEnumerator&lt;T&gt;
-- SingleValueEnumerator&lt;T&gt;
-- UnreachableException
-- NullGuards
+    <PackageReleaseNotes>Older Frameworks:
+- .NET Standard 2.0
+- .NET Standard 2.1
+- .NET Core 3.1
+
+Keeping and extending support for .NET 5.0, 6.0, 7.0.
 
 Extensions:
-- Tons of Span&lt;T&gt; and ReadOnlySpan&lt;T&gt; extensions
-- string.Repeat(int)
-- UnaryOperatorExtensions
-- AppDomainHelpers
-- Several extensions for MemberInfo, FieldInfo and Type
-- IEnumeratorExtensions
-- IDictionaryExtensions
-- More ToCollectionExtensions
-- IEnumerable&lt;T&gt;.Uphold
-
-Improvements:
-- Documentation for some more components
-- Compiled against .NET 5.0, .NET 6.0 and .NET 7.0
-
-Breaking Changes:
-- Renamespace TypeValueCounterDictionary into Garyon.Objects from Garyon.Functions
-
-Bugfixes:
-- Critical SO bug in IEnumerableExtensions.Concat(params T[])
-- Bug in PathUtilities.GetCommonDirectory
-
-Internals:
-- Use C# 11.0
-- Code style cleanup
+- SpanStringExtensions.SelectLines
+- SpanStringSelectors
 </PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  
+  <!-- Conditional framework symbols -->
+  <!-- Too fucking ugly if you ask me -->
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net5.0' Or
+                     '$(TargetFramework)' == 'net6.0' Or
+                     '$(TargetFramework)' == 'net7.0'">
+      <PropertyGroup>
+        <NewNet>true</NewNet>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <NewNet>false</NewNet>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1' Or
+                            '$(TargetFramework)' == 'netcoreapp3.1' Or
+                            $(NewNet)">
+    <DefineConstants>
+      $(DefineConstants);
+      HAS_SPAN;
+      HAS_SLICES;
+      HAS_HASH_CODE;
+      HAS_INTERFACE_DIMS;
+      HAS_ASYNC_ENUMERABLE;
+      KNOWS_GENERIC_PARAMETERS;
+      HAS_BYREF_LIKE;
+      HAS_HASHSET_CAPACITY_CTOR;
+      HAS_DICTIONARY_TRYADD;
+      HAS_ARRAY_FILL;
+      HAS_DICTIONARY_KVPS_CTOR;
+    </DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1' Or
+                            '$(TargetFramework)' == 'netcoreapp3.1' Or
+                            '$(TargetFramework)' == 'net5.0' Or
+                            '$(TargetFramework)' == 'net6.0'">
+    <DefineConstants>
+      $(DefineConstants);
+      NEEDS_INUMERIC;
+    </DefineConstants>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' Or
+                            $(NewNet)">
+    <DefineConstants>
+      $(DefineConstants);
+      HAS_IMMUTABLE;
+      HAS_INTRINSICS;
+      HAS_SIMD;
+      HAS_GET_CHUNKS;
+      HAS_AVX;
+    </DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(NewNet)">
+    <DefineConstants>
+      $(DefineConstants);
+      HAS_GENERIC_ENUM_ISDEFINED;
+      HAS_EXTERNAL_INIT;
+      HAS_VECTOR_ALLBITS;
+    </DefineConstants>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0' Or
+                            '$(TargetFramework)' == 'net7.0'">
+    <DefineConstants>
+      $(DefineConstants);
+      HAS_STRINGSPAN_ENUMERATE_LINES;
+    </DefineConstants>
+  </PropertyGroup>
+
+  <!-- END Conditional framework symbols -->
 
 </Project>

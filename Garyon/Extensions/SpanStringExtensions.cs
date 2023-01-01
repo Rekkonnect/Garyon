@@ -1,8 +1,12 @@
-﻿using Garyon.Exceptions;
+﻿#if HAS_SPAN
+
+using Garyon.Exceptions;
 using System;
 using System.Collections.Generic;
+#if HAS_STRINGSPAN_ENUMERATE_LINES
+using System.Collections.Immutable;
+#endif
 using System.Globalization;
-
 using SpanString = System.ReadOnlySpan<char>;
 
 namespace Garyon.Extensions;
@@ -101,6 +105,7 @@ public static class SpanStringExtensions
     }
     #endregion
 
+    #region Number Slices
     public static int ParseFirstInt32(this SpanString spanString, int startingIndex, out int endIndex)
     {
         if (spanString.TryParseFirstInt32(startingIndex, out int value, out endIndex))
@@ -161,15 +166,37 @@ public static class SpanStringExtensions
     {
         return LastNumberSlice(spanString).ParseUInt64();
     }
+    #endregion
 
-    public static IReadOnlyList<string> SplitToStrings(this SpanString spanString, string delimiter)
+    #region Splitting
+    public static IReadOnlyList<string> SplitToStrings(this SpanString spanString, SpanString delimiter)
     {
-        return spanString.SplitSelect(delimiter, span => new string(span));
+        return spanString.SplitSelect(delimiter, SpanStringSelectors.ToString);
     }
     public static IReadOnlyList<string> SplitToStrings(this SpanString spanString, char delimiter)
     {
-        return spanString.SplitSelect(delimiter, span => new string(span));
+        return spanString.SplitSelect(delimiter, SpanStringSelectors.ToString);
     }
+
+#if HAS_STRINGSPAN_ENUMERATE_LINES
+    public static ImmutableArray<string> GetLines<TResult>(this SpanString spanString)
+    {
+        return spanString.SelectLines(SpanStringSelectors.ToString);
+    }
+    public static ImmutableArray<TResult> SelectLines<TResult>(this SpanString spanString, SpanStringSelector<TResult> selector)
+    {
+        var arrayBuilder = ImmutableArray.CreateBuilder<TResult>();
+
+        var lineEnumerator = spanString.EnumerateLines();
+        foreach (var line in lineEnumerator)
+        {
+            var selected = selector(line);
+            arrayBuilder.Add(selected);
+        }
+        return arrayBuilder.ToImmutable();
+    }
+#endif
+    #endregion
 }
 
 /// <summary>
@@ -182,3 +209,13 @@ public static class SpanStringExtensions
 /// </param>
 /// <returns>The converted value.</returns>
 public delegate T SpanStringSelector<T>(SpanString spanString);
+
+public static class SpanStringSelectors
+{
+    public static string ToString(this SpanString spanString)
+    {
+        return spanString.ToString();
+    }
+}
+
+#endif

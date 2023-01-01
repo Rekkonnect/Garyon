@@ -10,6 +10,13 @@ namespace Garyon.Extensions;
 /// <summary>Contains extensions related to converting <seealso cref="IEnumerable{T}"/> instances into collections.</summary>
 public static class ToCollectionExtensions
 {
+#if !NETSTANDARD2_1_OR_GREATER
+    public static HashSet<T> ToHashSet<T>(this IEnumerable<T> source)
+    {
+        return new(source);
+    }
+#endif
+
     /// <summary>Converts a provided sequence of elements into an array.</summary>
     /// <typeparam name="T">The type of elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
     /// <param name="source">The source <seealso cref="IEnumerable{T}"/> to convert into an array.</param>

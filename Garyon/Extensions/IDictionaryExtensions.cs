@@ -197,6 +197,19 @@ public static class IDictionaryExtensions
     {
         source.Add(kvp);
     }
+#if !HAS_DICTIONARY_TRYADD
+    /// <summary>Attempts to add an entry to the provided dictionary, if the key does not already exist.</summary>
+    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
+    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
+    /// <param name="source">The source dictionary.</param>
+    /// <param name="key">The key of the entry to add to the dictionary.</param>
+    /// <param name="value">The value of the entry to add to the dictionary.</param>
+    /// <returns><see langword="true"/> if the entry was successsfully added, otherwise <see langword="false"/>.</returns>
+    public static bool TryAdd<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value)
+    {
+        return source.TryAddPreserve(key, value);
+    }
+#endif
     /// <summary>Attempts to add an entry to the provided dictionary, if the key does not already exist.</summary>
     /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
     /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if NETCOREAPP3_1_OR_GREATER
 using System.Collections.Immutable;
+#endif
 
 namespace Garyon.Extensions;
 
@@ -52,9 +54,8 @@ public static class IEnumeratorExtensions
 
     public static T[] ToArray<T>(this IEnumerator<T> enumerator, bool resetEnumerator = false)
     {
-        var builder = ImmutableArray.CreateBuilder<T>();
-        LoadIntoList(enumerator, builder, resetEnumerator);
-        return builder.ToArray();
+        return enumerator.ToList(resetEnumerator)
+                         .ToArray();
     }
     public static List<T> ToList<T>(this IEnumerator<T> enumerator, bool resetEnumerator = false)
     {
@@ -62,12 +63,15 @@ public static class IEnumeratorExtensions
         LoadIntoList(enumerator, list, resetEnumerator);
         return list;
     }
+
+#if NETCOREAPP3_1_OR_GREATER
     public static ImmutableArray<T> ToImmutableArray<T>(this IEnumerator<T> enumerator, bool resetEnumerator = false)
     {
         var builder = ImmutableArray.CreateBuilder<T>();
         LoadIntoList(enumerator, builder, resetEnumerator);
         return builder.ToImmutable();
     }
+#endif
 
     private static void LoadIntoList<T>(this IEnumerator<T> enumerator, IList<T> list, bool resetEnumerator)
     {

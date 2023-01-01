@@ -35,8 +35,14 @@ public static class EnumHelpers
         if (!type.IsEnum)
             ThrowHelper.Throw<ArgumentException>("The provided type must be an enum type.");
 
-        enumTypeEntryCounts.TryAdd(type, Enum.GetValues(type).Length);
-        return enumTypeEntryCounts[type];
+        bool contained = enumTypeEntryCounts.TryGetValue(type, out int count);
+        if (!contained)
+        {
+            count = Enum.GetValues(type).Length;
+            enumTypeEntryCounts[type] = count;
+        }
+
+        return count;
     }
 
     /// <summary>Discovers all enum types from all the loaded assemblies, using <seealso cref="AppDomainCache.Current"/>, and statically registers their entry counts.</summary>
@@ -64,7 +70,7 @@ public static class EnumHelpers
     private static class EnumCountRetriever<T>
         where T : struct, Enum
     {
-        public static readonly int Count = Enum.GetValues<T>().Length;
+        public static readonly int Count = Enum.GetValues(typeof(T)).Length;
 
         static EnumCountRetriever()
         {
@@ -89,7 +95,11 @@ public static class EnumHelpers
         if (!IsEnumOfType<TEnum, TUnderlying>())
             return false;
 
+#if HAS_GENERIC_ENUM_ISDEFINED
         return Enum.IsDefined(*(TEnum*)&value);
+#else
+        return Enum.IsDefined(typeof(TEnum), value);
+#endif
     }
     /// <summary>Determines whether <typeparamref name="TEnum"/>'s underlying value type is <typeparamref name="TUnderlying"/>.</summary>
     /// <typeparam name="TEnum">The type of the enum.</typeparam>
@@ -112,5 +122,5 @@ public static class EnumHelpers
             enumUnderlyingTypeCodeDictionary[typeof(T)] = UnderlyingType;
         }
     }
-    #endregion
+#endregion
 }
