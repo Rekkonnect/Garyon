@@ -180,7 +180,7 @@ public static unsafe class BinaryRepresentationExtensions
                 if (index + i > resultingLength)
                     break;
 
-                resultingChars[resultingChars.Length - (index + i)] = representationChars[resultingChars.Length - index];
+                resultingChars[resultingChars.Length - (index + i)] = representationChars[representationChars.Length - index];
             }
             int emptyCharIndex = (i + 1) * (groupLength + 1);
             if (emptyCharIndex < resultingLength)
