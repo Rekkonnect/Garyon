@@ -10,7 +10,7 @@ namespace Garyon.Extensions;
 /// <summary>Contains extensions related to converting <seealso cref="IEnumerable{T}"/> instances into collections.</summary>
 public static class ToCollectionExtensions
 {
-#if !NETSTANDARD2_1_OR_GREATER
+#if !HAS_TO_HASHSET
     public static HashSet<T> ToHashSet<T>(this IEnumerable<T> source)
     {
         return new(source);

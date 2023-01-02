@@ -19,11 +19,17 @@
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.3.1</Version>
+    <Version>0.3.1.2</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>Older Frameworks:
+    <PackageReleaseNotes>0.3.1.2 changes:
+Bugfixes:
+- Properly define ToHashSet and Stream.Read(byte[]) only in .NET Standard 2.0
+- Improve target framework resolution
+
+0.3.1 changes:
+Older Frameworks:
 - .NET Standard 2.0
 - .NET Standard 2.1
 - .NET Core 3.1
@@ -31,8 +37,14 @@
 Keeping and extending support for .NET 5.0, 6.0, 7.0.
 
 Extensions:
+- IListExtensions.Pop, .RemoveAtDecrement
+- Generic INumber support for One/ZeroOrGreater, GeneralMath.Min/Max
 - SpanStringExtensions.SelectLines
 - SpanStringSelectors
+
+Functions:
+- PointerFunctions.Clear
+- Vector[128|256]Helper.AllBitsSet[Single]
 </PackageReleaseNotes>
   </PropertyGroup>
 
@@ -73,6 +85,8 @@ Extensions:
       HAS_DICTIONARY_TRYADD;
       HAS_ARRAY_FILL;
       HAS_DICTIONARY_KVPS_CTOR;
+      HAS_TO_HASHSET;
+      HAS_STREAM_READ_SIMPLE_BYTES;
     </DefineConstants>
   </PropertyGroup>
 
@@ -104,6 +118,8 @@ Extensions:
       HAS_GENERIC_ENUM_ISDEFINED;
       HAS_EXTERNAL_INIT;
       HAS_VECTOR_ALLBITS;
+      HAS_MORE_OBSOLETE_PARAMS;
+      SUPPORTS_COVARIANT_OVERRIDES;
     </DefineConstants>
   </PropertyGroup>
   

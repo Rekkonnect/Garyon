@@ -24,7 +24,7 @@ public static unsafe class StreamExtensions
     #endregion
 
     #region .NET Standard 2.0 missing
-#if !NETSTANDARD2_1_OR_GREATER
+#if !HAS_STREAM_READ_SIMPLE_BYTES
     public static int Read(this Stream stream, byte[] buffer)
     {
         int offset = 0;
@@ -106,7 +106,7 @@ public static unsafe class StreamExtensions
     /// <summary>Writes a <seealso cref="string"/> encoded in UTF-7 to the stream at the current position.</summary>
     /// <param name="stream">The stream to write to.</param>
     /// <param name="s">The string to write to the stream.</param>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -242,7 +242,7 @@ public static unsafe class StreamExtensions
     /// <param name="stream">The stream to write to.</param>
     /// <param name="position">The position in the stream to write at.</param>
     /// <param name="s">The string to write to the stream.</param>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -422,7 +422,7 @@ public static unsafe class StreamExtensions
     /// <param name="stream">The stream to read from.</param>
     /// <param name="byteLength">The number of bytes to read. This does not necessarily equal the number of characters the resulting <seealso cref="string"/> contains.</param>
     /// <returns>The read <seealso cref="string"/> from the stream in the provided encoding.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -598,7 +598,7 @@ public static unsafe class StreamExtensions
     /// <param name="position">The position in the stream to read from.</param>
     /// <param name="byteLength">The number of bytes to read. This does not necessarily equal the number of characters the resulting <seealso cref="string"/> contains.</param>
     /// <returns>The read <seealso cref="string"/> from the stream in the provided encoding.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]

@@ -15,7 +15,7 @@ public static class StringManipulationExtensions
     /// <summary>Performs the NOT operation on a string encoded in the UTF-7 format.</summary>
     /// <param name="s">The string to perform the NOT operation on.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -54,7 +54,7 @@ public static class StringManipulationExtensions
     /// <param name="s">The string to perform the AND operation on.</param>
     /// <param name="mask">The value to AND each byte by.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -98,7 +98,7 @@ public static class StringManipulationExtensions
     /// <param name="s">The string to perform the OR operation on.</param>
     /// <param name="mask">The value to OR each byte by.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -142,7 +142,7 @@ public static class StringManipulationExtensions
     /// <param name="s">The string to perform the XOR operation on.</param>
     /// <param name="mask">The value to XOR each byte by.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -186,7 +186,7 @@ public static class StringManipulationExtensions
     /// <param name="s">The string to perform the NAND operation on.</param>
     /// <param name="mask">The value to NAND each byte by.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -230,7 +230,7 @@ public static class StringManipulationExtensions
     /// <param name="s">The string to perform the NOR operation on.</param>
     /// <param name="mask">The value to NOR each byte by.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]
@@ -274,7 +274,7 @@ public static class StringManipulationExtensions
     /// <param name="s">The string to perform the XNOR operation on.</param>
     /// <param name="mask">The value to XNOR each byte by.</param>
     /// <returns>The resulting string encoded in the UTF-7 format.</returns>
-#if NET5_0_OR_GREATER
+#if HAS_MORE_OBSOLETE_PARAMS
     [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
 #else
     [Obsolete(UTF7ObsoletionMessage)]

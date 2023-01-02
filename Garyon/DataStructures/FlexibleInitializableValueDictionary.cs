@@ -44,7 +44,7 @@ public class FlexibleInitializableValueDictionary<TKey, TValue> : FlexibleDictio
     /// <inheritdoc/>
     public override
         // What a hack
-#if NET5_0_OR_GREATER
+#if SUPPORTS_COVARIANT_OVERRIDES
         FlexibleInitializableValueDictionary<TKey, TValue>
 #else
         FlexibleDictionary<TKey, TValue>
