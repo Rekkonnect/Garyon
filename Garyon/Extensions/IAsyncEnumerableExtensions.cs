@@ -1,4 +1,4 @@
-﻿#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP
+﻿#if HAS_ASYNC_ENUMERABLE
 
 using Garyon.Objects;
 using Garyon.Objects.Enumerators;

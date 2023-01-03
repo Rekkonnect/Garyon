@@ -32,7 +32,7 @@ public abstract unsafe class SIMDPointerBitwiseOperations : PointerBitwiseOperat
         where TOrigin : unmanaged
         where TNew : unmanaged
     {
-        if (sizeof(TOrigin) == sizeof(TNew))
+        if (sizeof(TOrigin) is sizeof(TNew))
             return true;
 
         if (sizeof(TOrigin) % sizeof(TNew) != 0)

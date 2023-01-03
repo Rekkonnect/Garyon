@@ -18,13 +18,13 @@ public abstract unsafe class Vector256Helper : SIMDVectorHelper
     public static Vector256<T> Create<T>(T value)
         where T : unmanaged
     {
-        if (sizeof(T) == sizeof(byte))
+        if (sizeof(T) is sizeof(byte))
             return Vector256.Create(*(byte*)&value).As<byte, T>();
-        if (sizeof(T) == sizeof(short))
+        if (sizeof(T) is sizeof(short))
             return Vector256.Create(*(short*)&value).As<short, T>();
-        if (sizeof(T) == sizeof(int))
+        if (sizeof(T) is sizeof(int))
             return Vector256.Create(*(int*)&value).As<int, T>();
-        if (sizeof(T) == sizeof(long))
+        if (sizeof(T) is sizeof(long))
             return Vector256.Create(*(long*)&value).As<long, T>();
 
         ThrowHelper.Throw<InvalidOperationException>();
@@ -37,13 +37,13 @@ public abstract unsafe class Vector256Helper : SIMDVectorHelper
     public static Vector256<T> CreateScalar<T>(T value)
         where T : unmanaged
     {
-        if (sizeof(T) == sizeof(byte))
+        if (sizeof(T) is sizeof(byte))
             return Vector256.CreateScalar(*(byte*)&value).As<byte, T>();
-        if (sizeof(T) == sizeof(short))
+        if (sizeof(T) is sizeof(short))
             return Vector256.CreateScalar(*(short*)&value).As<short, T>();
-        if (sizeof(T) == sizeof(int))
+        if (sizeof(T) is sizeof(int))
             return Vector256.CreateScalar(*(int*)&value).As<int, T>();
-        if (sizeof(T) == sizeof(long))
+        if (sizeof(T) is sizeof(long))
             return Vector256.CreateScalar(*(long*)&value).As<long, T>();
 
         ThrowHelper.Throw<InvalidOperationException>();

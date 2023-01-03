@@ -1,4 +1,4 @@
-﻿#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP
+﻿#if HAS_SLICES
 
 using System;
 using System.Collections.Generic;

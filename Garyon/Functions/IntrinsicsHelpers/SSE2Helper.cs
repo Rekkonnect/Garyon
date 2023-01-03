@@ -77,13 +77,13 @@ public abstract unsafe class SSE2Helper : SSEHelper
 
         uint count = length - index;
 
-        if (sizeof(T) == sizeof(byte))
+        if (sizeof(T) is sizeof(byte))
             StoreRemainingElements(ref origin, ref target, count, 16);
-        if (sizeof(T) == sizeof(short))
+        if (sizeof(T) is sizeof(short))
             StoreRemainingElements(ref origin, ref target, count, 8);
-        if (sizeof(T) == sizeof(int))
+        if (sizeof(T) is sizeof(int))
             StoreRemainingElements(ref origin, ref target, count, 4);
-        if (sizeof(T) == sizeof(long))
+        if (sizeof(T) is sizeof(long))
             StoreRemainingElements(ref origin, ref target, count, 2);
         StoreLastElementsVector128(origin, target, count);
 
@@ -91,13 +91,13 @@ public abstract unsafe class SSE2Helper : SSEHelper
         {
             if ((count & remainder) > 0)
             {
-                if (sizeof(T) == sizeof(byte))
+                if (sizeof(T) is sizeof(byte))
                     StoreRemainingByte((byte*)origin, (byte*)target, remainder);
-                if (sizeof(T) == sizeof(short))
+                if (sizeof(T) is sizeof(short))
                     StoreRemainingInt16((short*)origin, (short*)target, remainder);
-                if (sizeof(T) == sizeof(int))
+                if (sizeof(T) is sizeof(int))
                     StoreRemainingInt32((int*)origin, (int*)target, remainder);
-                if (sizeof(T) == sizeof(long))
+                if (sizeof(T) is sizeof(long))
                     StoreRemainingInt64((long*)origin, (long*)target, remainder);
 
                 PointerArithmetic.Increment(ref origin, ref target, remainder);

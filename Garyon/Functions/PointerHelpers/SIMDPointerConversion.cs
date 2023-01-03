@@ -73,7 +73,7 @@ public static unsafe class SIMDPointerConversion
                 if (typeof(TTo) == typeof(float))
                     return SIMDPointerConverterVector128<double, float, DoubleToSingleConversionVector128>.PerformConversion((double*)origin, (float*)target, length);
                 
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector128<double, int, DoubleToInt32ConversionVector128>.PerformConversion((double*)origin, (int*)target, length);
             }
 
@@ -82,66 +82,66 @@ public static unsafe class SIMDPointerConversion
                 if (typeof(TTo) == typeof(double))
                     return SIMDPointerConverterVector128<float, double, SingleToDoubleConversionVector128>.PerformConversion((float*)origin, (double*)target, length);
 
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector128<float, int, SingleToInt32ConversionVector128>.PerformConversion((float*)origin, (int*)target, length);
             }
 
             if (typeof(TTo) == typeof(double))
             {
-                if (sizeof(TFrom) == sizeof(byte))
+                if (sizeof(TFrom) is sizeof(byte))
                     return SIMDPointerConverterVector128<byte, double, ByteToDoubleConversionVector128>.PerformConversion((byte*)origin, (double*)target, length);
-                if (sizeof(TFrom) == sizeof(short))
+                if (sizeof(TFrom) is sizeof(short))
                     return SIMDPointerConverterVector128<short, double, Int16ToDoubleConversionVector128>.PerformConversion((short*)origin, (double*)target, length);
-                if (sizeof(TFrom) == sizeof(int))
+                if (sizeof(TFrom) is sizeof(int))
                     return SIMDPointerConverterVector128<int, double, Int32ToDoubleConversionVector128>.PerformConversion((int*)origin, (double*)target, length);
             }
             if (typeof(TTo) == typeof(float))
             {
-                if (sizeof(TFrom) == sizeof(byte))
+                if (sizeof(TFrom) is sizeof(byte))
                     return SIMDPointerConverterVector128<byte, float, ByteToSingleConversionVector128>.PerformConversion((byte*)origin, (float*)target, length);
-                if (sizeof(TFrom) == sizeof(short))
+                if (sizeof(TFrom) is sizeof(short))
                     return SIMDPointerConverterVector128<short, float, Int16ToSingleConversionVector128>.PerformConversion((short*)origin, (float*)target, length);
-                if (sizeof(TFrom) == sizeof(int))
+                if (sizeof(TFrom) is sizeof(int))
                     return SIMDPointerConverterVector128<int, float, Int32ToSingleConversionVector128>.PerformConversion((int*)origin, (float*)target, length);
             }
 
-            if (sizeof(TFrom) == sizeof(TTo))
+            if (sizeof(TFrom) is sizeof(TTo))
                 return SameSizeSIMDPointerConverterVector128<TFrom, TTo>.PerformConversion(origin, target, length);
 
-            if (sizeof(TFrom) == sizeof(byte))
+            if (sizeof(TFrom) is sizeof(byte))
             {
-                if (sizeof(TTo) == sizeof(short))
+                if (sizeof(TTo) is sizeof(short))
                     return SIMDPointerConverterVector128<byte, short, ByteToInt16ConversionVector128>.PerformConversion((byte*)origin, (short*)target, length);
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector128<byte, int, ByteToInt32ConversionVector128>.PerformConversion((byte*)origin, (int*)target, length);
-                if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TTo) is sizeof(long))
                     return SIMDPointerConverterVector128<byte, long, ByteToInt64ConversionVector128>.PerformConversion((byte*)origin, (long*)target, length);
             }
-            if (sizeof(TFrom) == sizeof(short))
+            if (sizeof(TFrom) is sizeof(short))
             {
-                if (sizeof(TTo) == sizeof(byte))
+                if (sizeof(TTo) is sizeof(byte))
                     return SIMDPointerConverterVector128<short, byte, Int16ToByteConversionVector128>.PerformConversion((short*)origin, (byte*)target, length);
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector128<short, int, Int16ToInt32ConversionVector128>.PerformConversion((short*)origin, (int*)target, length);
-                if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TTo) is sizeof(long))
                     return SIMDPointerConverterVector128<short, long, Int16ToInt64ConversionVector128>.PerformConversion((short*)origin, (long*)target, length);
             }
-            if (sizeof(TFrom) == sizeof(int))
+            if (sizeof(TFrom) is sizeof(int))
             {
-                if (sizeof(TTo) == sizeof(byte))
+                if (sizeof(TTo) is sizeof(byte))
                     return SIMDPointerConverterVector128<int, byte, Int32ToByteConversionVector128>.PerformConversion((int*)origin, (byte*)target, length);
-                if (sizeof(TTo) == sizeof(short))
+                if (sizeof(TTo) is sizeof(short))
                     return SIMDPointerConverterVector128<int, short, Int32ToInt16ConversionVector128>.PerformConversion((int*)origin, (short*)target, length);
-                if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TTo) is sizeof(long))
                     return SIMDPointerConverterVector128<int, long, Int32ToInt64ConversionVector128>.PerformConversion((int*)origin, (long*)target, length);
             }
-            if (sizeof(TFrom) == sizeof(long))
+            if (sizeof(TFrom) is sizeof(long))
             {
-                if (sizeof(TTo) == sizeof(byte))
+                if (sizeof(TTo) is sizeof(byte))
                     return SIMDPointerConverterVector128<long, byte, Int64ToByteConversionVector128>.PerformConversion((long*)origin, (byte*)target, length);
-                if (sizeof(TTo) == sizeof(short))
+                if (sizeof(TTo) is sizeof(short))
                     return SIMDPointerConverterVector128<long, short, Int64ToInt16ConversionVector128>.PerformConversion((long*)origin, (short*)target, length);
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector128<long, int, Int64ToInt32ConversionVector128>.PerformConversion((long*)origin, (int*)target, length);
             }
 
@@ -545,7 +545,7 @@ public static unsafe class SIMDPointerConversion
                 if (typeof(TTo) == typeof(float))
                     return SIMDPointerConverterVector256<double, float, DoubleToSingleConversionVector256>.PerformConversion((double*)origin, (float*)target, length);
 
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector256<double, int, DoubleToInt32ConversionVector256>.PerformConversion((double*)origin, (int*)target, length);
             }
 
@@ -561,51 +561,51 @@ public static unsafe class SIMDPointerConversion
                 if (typeof(TTo) == typeof(double))
                     return SIMDPointerConverterVector256<float, double, SingleToDoubleConversionVector256>.PerformConversion((float*)origin, (double*)target, length);
 
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector256<float, int, SingleToInt32ConversionVector256>.PerformConversion((float*)origin, (int*)target, length);
             }
 
             if (typeof(TTo) == typeof(double))
             {
-                if (sizeof(TFrom) == sizeof(byte))
+                if (sizeof(TFrom) is sizeof(byte))
                     return SIMDPointerConverterVector256<byte, double, ByteToDoubleConversionVector256>.PerformConversion((byte*)origin, (double*)target, length);
-                if (sizeof(TFrom) == sizeof(short))
+                if (sizeof(TFrom) is sizeof(short))
                     return SIMDPointerConverterVector256<short, double, Int16ToDoubleConversionVector256>.PerformConversion((short*)origin, (double*)target, length);
-                if (sizeof(TFrom) == sizeof(int))
+                if (sizeof(TFrom) is sizeof(int))
                     return SIMDPointerConverterVector256<int, double, Int32ToDoubleConversionVector256>.PerformConversion((int*)origin, (double*)target, length);
             }
             if (typeof(TTo) == typeof(float))
             {
-                if (sizeof(TFrom) == sizeof(byte))
+                if (sizeof(TFrom) is sizeof(byte))
                     return SIMDPointerConverterVector256<byte, float, ByteToSingleConversionVector256>.PerformConversion((byte*)origin, (float*)target, length);
-                if (sizeof(TFrom) == sizeof(short))
+                if (sizeof(TFrom) is sizeof(short))
                     return SIMDPointerConverterVector256<short, float, Int16ToSingleConversionVector256>.PerformConversion((short*)origin, (float*)target, length);
-                if (sizeof(TFrom) == sizeof(int))
+                if (sizeof(TFrom) is sizeof(int))
                     return SIMDPointerConverterVector256<int, float, Int32ToSingleConversionVector256>.PerformConversion((int*)origin, (float*)target, length);
             }
 
-            if (sizeof(TFrom) == sizeof(TTo))
+            if (sizeof(TFrom) is sizeof(TTo))
                 return SameSizeSIMDPointerConverterVector256<TFrom, TTo>.PerformConversion(origin, target, length);
 
-            if (sizeof(TFrom) == sizeof(byte))
+            if (sizeof(TFrom) is sizeof(byte))
             {
-                if (sizeof(TTo) == sizeof(short))
+                if (sizeof(TTo) is sizeof(short))
                     return SIMDPointerConverterVector256<byte, short, ByteToInt16ConversionVector256>.PerformConversion((byte*)origin, (short*)target, length);
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector256<byte, int, ByteToInt32ConversionVector256>.PerformConversion((byte*)origin, (int*)target, length);
-                if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TTo) is sizeof(long))
                     return SIMDPointerConverterVector256<byte, long, ByteToInt64ConversionVector256>.PerformConversion((byte*)origin, (long*)target, length);
             }
-            if (sizeof(TFrom) == sizeof(short))
+            if (sizeof(TFrom) is sizeof(short))
             {
-                if (sizeof(TTo) == sizeof(int))
+                if (sizeof(TTo) is sizeof(int))
                     return SIMDPointerConverterVector256<short, int, Int16ToInt32ConversionVector256>.PerformConversion((short*)origin, (int*)target, length);
-                if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TTo) is sizeof(long))
                     return SIMDPointerConverterVector256<short, long, Int16ToInt64ConversionVector256>.PerformConversion((short*)origin, (long*)target, length);
             }
-            if (sizeof(TFrom) == sizeof(int))
+            if (sizeof(TFrom) is sizeof(int))
             {
-                if (sizeof(TTo) == sizeof(long))
+                if (sizeof(TTo) is sizeof(long))
                     return SIMDPointerConverterVector256<int, long, Int32ToInt64ConversionVector256>.PerformConversion((int*)origin, (long*)target, length);
             }
 
