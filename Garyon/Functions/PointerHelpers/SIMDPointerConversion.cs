@@ -105,7 +105,7 @@ public static unsafe class SIMDPointerConversion
                     return SIMDPointerConverterVector128<int, float, Int32ToSingleConversionVector128>.PerformConversion((int*)origin, (float*)target, length);
             }
 
-            if (sizeof(TFrom) is sizeof(TTo))
+            if (sizeof(TFrom) == sizeof(TTo))
                 return SameSizeSIMDPointerConverterVector128<TFrom, TTo>.PerformConversion(origin, target, length);
 
             if (sizeof(TFrom) is sizeof(byte))
@@ -584,7 +584,7 @@ public static unsafe class SIMDPointerConversion
                     return SIMDPointerConverterVector256<int, float, Int32ToSingleConversionVector256>.PerformConversion((int*)origin, (float*)target, length);
             }
 
-            if (sizeof(TFrom) is sizeof(TTo))
+            if (sizeof(TFrom) == sizeof(TTo))
                 return SameSizeSIMDPointerConverterVector256<TFrom, TTo>.PerformConversion(origin, target, length);
 
             if (sizeof(TFrom) is sizeof(byte))
