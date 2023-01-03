@@ -179,7 +179,7 @@ public static class SpanStringExtensions
     }
 
 #if HAS_STRINGSPAN_ENUMERATE_LINES
-    public static ImmutableArray<string> GetLines<TResult>(this SpanString spanString)
+    public static ImmutableArray<string> GetLines(this SpanString spanString)
     {
         return spanString.SelectLines(SpanStringSelectors.ToString);
     }
