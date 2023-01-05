@@ -2,76 +2,75 @@ using NUnit.Framework;
 using Garyon.Reflection;
 using System;
 
-namespace Garyon.Tests.Reflection
+namespace Garyon.Tests.Reflection;
+
+public class DefaultInstanceContainerTests
 {
-    public class DefaultInstanceContainerTests
+    private readonly NotInvalidTypeInstanceContainer container = new();
+
+    [Test]
+    public void GetDefaultInstanceTests()
     {
-        private readonly NotInvalidTypeInstanceContainer container = new();
+        Assert.IsNull(container.GetDefaultInstance<Base>());
+        Assert.IsNull(container.GetDefaultInstance<InvalidImplementation>());
+        AssertInstanceOf<ImplementationA>();
+        AssertInstanceOf<ImplementationB>();
+        AssertInstanceOf<ImplementationC>();
 
-        [Test]
-        public void GetDefaultInstanceTests()
+        void AssertInstanceOf<T>()
+            where T : Base
         {
-            Assert.IsNull(container.GetDefaultInstance<Base>());
-            Assert.IsNull(container.GetDefaultInstance<InvalidImplementation>());
-            AssertInstanceOf<ImplementationA>();
-            AssertInstanceOf<ImplementationB>();
-            AssertInstanceOf<ImplementationC>();
+            Assert.IsInstanceOf<T>(container.GetDefaultInstance<T>());
+        }
+    }
 
-            void AssertInstanceOf<T>()
-                where T : Base
-            {
-                Assert.IsInstanceOf<T>(container.GetDefaultInstance<T>());
-            }
+    [Test]
+    public void GetIrrelevantDefaultInstancesTests()
+    {
+        // Some other random types that are found in the assemblies
+        Assert.IsNull(container.GetDefaultInstance(typeof(Enum)));
+        Assert.IsNull(container.GetDefaultInstance(typeof(ImplementationA[])));
+        Assert.IsNull(container.GetDefaultInstance(typeof(Delegate)));
+        Assert.IsNull(container.GetDefaultInstance(typeof(DayOfWeek)));
+    }
+
+    private sealed class NotInvalidTypeInstanceContainer : DefaultInstanceContainer<Base>
+    {
+        protected override object[] GetDefaultInstanceArguments()
+        {
+            return new object[] { Array.Empty<int>() };
         }
 
-        [Test]
-        public void GetIrrelevantDefaultInstancesTests()
+        protected override bool IsValidInstanceType(Type type)
         {
-            // Some other random types that are found in the assemblies
-            Assert.IsNull(container.GetDefaultInstance(typeof(Enum)));
-            Assert.IsNull(container.GetDefaultInstance(typeof(ImplementationA[])));
-            Assert.IsNull(container.GetDefaultInstance(typeof(Delegate)));
-            Assert.IsNull(container.GetDefaultInstance(typeof(DayOfWeek)));
+            return !type.Name.Contains("Invalid");
         }
+    }
 
-        private sealed class NotInvalidTypeInstanceContainer : DefaultInstanceContainer<Base>
-        {
-            protected override object[] GetDefaultInstanceArguments()
-            {
-                return new object[] { Array.Empty<int>() };
-            }
+    private abstract class Base
+    {
+        protected Base(params int[] values) { }
+    }
 
-            protected override bool IsValidInstanceType(Type type)
-            {
-                return !type.Name.Contains("Invalid");
-            }
-        }
+    private sealed class ImplementationA : Base
+    {
+        public ImplementationA(params int[] values)
+            : base(values) { }
+    }
+    private sealed class ImplementationB : Base
+    {
+        public ImplementationB(params int[] values)
+            : base(values) { }
+    }
+    private sealed class ImplementationC : Base
+    {
+        public ImplementationC(params int[] values)
+            : base(values) { }
+    }
 
-        private abstract class Base
-        {
-            protected Base(params int[] values) { }
-        }
-
-        private sealed class ImplementationA : Base
-        {
-            public ImplementationA(params int[] values)
-                : base(values) { }
-        }
-        private sealed class ImplementationB : Base
-        {
-            public ImplementationB(params int[] values)
-                : base(values) { }
-        }
-        private sealed class ImplementationC : Base
-        {
-            public ImplementationC(params int[] values)
-                : base(values) { }
-        }
-
-        private sealed class InvalidImplementation : Base
-        {
-            public InvalidImplementation(params int[] values)
-                : base(values) { }
-        }
+    private sealed class InvalidImplementation : Base
+    {
+        public InvalidImplementation(params int[] values)
+            : base(values) { }
     }
 }
