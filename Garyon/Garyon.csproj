@@ -127,6 +127,7 @@ Functions:
       HAS_VECTOR_ALLBITS;
       HAS_MORE_OBSOLETE_PARAMS;
       SUPPORTS_COVARIANT_OVERRIDES;
+      HAS_READONLY_SET;
     </DefineConstants>
   </PropertyGroup>
   

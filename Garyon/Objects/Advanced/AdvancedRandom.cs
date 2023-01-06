@@ -1,6 +1,7 @@
 ﻿using System;
+#if HAS_INTRINSICS
 using System.Numerics;
-using System.Runtime.CompilerServices;
+#endif
 
 namespace Garyon.Objects.Advanced;
 
