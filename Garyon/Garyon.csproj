@@ -19,39 +19,18 @@
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.3.1.3</Version>
+    <Version>0.3.2</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>0.3.1.3 changes:
-Additions:
-- Add LazyTimer
-
-Bugfixes:
-- Remove redundant type parameter in SpanStringExtensions.GetLines()
-
-0.3.1.2 changes:
-Bugfixes:
-- Properly define ToHashSet and Stream.Read(byte[]) only in .NET Standard 2.0
-- Improve target framework resolution
-
-0.3.1 changes:
-Older Frameworks:
-- .NET Standard 2.0
-- .NET Standard 2.1
-- .NET Core 3.1
-
-Keeping and extending support for .NET 5.0, 6.0, 7.0.
-
-Extensions:
-- IListExtensions.Pop, .RemoveAtDecrement
-- Generic INumber support for One/ZeroOrGreater, GeneralMath.Min/Max
-- SpanStringExtensions.SelectLines
-- SpanStringSelectors
+    <PackageReleaseNotes>Extensions:
+- Conversion extensions to collections
 
 Functions:
-- PointerFunctions.Clear
-- Vector[128|256]Helper.AllBitsSet[Single]
+- Yielding from factory methods
+
+Framework:
+- Make IsExternalInit public
 </PackageReleaseNotes>
   </PropertyGroup>
 
@@ -128,6 +107,7 @@ Functions:
       HAS_MORE_OBSOLETE_PARAMS;
       SUPPORTS_COVARIANT_OVERRIDES;
       HAS_READONLY_SET;
+      SUPPORTS_UNMANAGED_FUNPTRS;
     </DefineConstants>
   </PropertyGroup>
   

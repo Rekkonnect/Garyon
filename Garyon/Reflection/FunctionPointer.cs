@@ -19,7 +19,9 @@ public unsafe readonly record struct FunctionPointer<T1, TReturn>(delegate*<T1, 
     public TReturn Invoke(T1 arg1) => Pointer(arg1);
 }
 
+#if SUPPORTS_UNMANAGED_FUNPTRS
 public unsafe readonly record struct UnmanagedFunctionPointerAction(delegate* unmanaged<void> Pointer)
 {
     public void Invoke() => Pointer();
 }
+#endif
