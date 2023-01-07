@@ -12,6 +12,7 @@
     <LangVersion>11.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>annotations</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>common, extensions, utilities, library, reflection</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
     <Copyright>© 2020-2023, Alex Kalfakakos</Copyright>
