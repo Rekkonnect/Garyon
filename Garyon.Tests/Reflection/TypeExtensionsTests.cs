@@ -32,7 +32,7 @@ public class TypeExtensionsTests : ExampleTypes
             [typeof(DA)] = new TypeDefinitionInfo(TypeKind.Delegate, TypeModifiers.ProtectedSealed),
             [typeof(EA)] = new TypeDefinitionInfo(TypeKind.Enum, TypeModifiers.ProtectedSealed),
             [typeof(SA[])] = new TypeDefinitionInfo(TypeKind.Array, TypeModifiers.PublicSealed),
-            [typeof(SA*)] = new TypeDefinitionInfo(TypeKind.Pointer, TypeModifiers.Internal),
+            [typeof(SA*)] = new TypeDefinitionInfo(TypeKind.Pointer, TypeModifiers.Public),
             [typeof(SA*[])] = new TypeDefinitionInfo(TypeKind.Array, TypeModifiers.PublicSealed),
             [typeof((int, int))] = new TypeDefinitionInfo(TypeKind.Tuple, TypeModifiers.PublicSealed),
             [typeof((int, int)?)] = new TypeDefinitionInfo(TypeKind.NullableTuple, TypeModifiers.PublicSealed),
@@ -45,8 +45,8 @@ public class TypeExtensionsTests : ExampleTypes
             [typeof(GenericStaticClass<,,>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic),
             [typeof(ExceptionA)] = new TypeDefinitionInfo(TypeKind.Exception, TypeModifiers.Protected),
             [typeof(ExceptionA<>)] = new TypeDefinitionInfo(TypeKind.Exception, TypeModifiers.Protected),
-            [intByRefType] = new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.InternalRef),
-            [intPointerByRefType] = new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.InternalRef),
+            [intByRefType] = new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.PublicRef),
+            [intPointerByRefType] = new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.PublicRef),
         };
     }
 
