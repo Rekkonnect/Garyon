@@ -6,7 +6,7 @@ namespace Garyon.Reflection;
 [Flags]
 public enum AccessibilityModifiers : byte
 {
-    /// <summary>The default value, representing no accesibility modifiers.</summary>
+    /// <summary>The default value, representing no accessibility modifiers.</summary>
     None = 0,
 
     /// <summary>The <see langword="public"/> modifier.</summary>
@@ -22,6 +22,6 @@ public enum AccessibilityModifiers : byte
     /// <summary>The <see langword="private"/> modifier.</summary>
     Private = 0x20,
 
-    /// <summary>All accesibility modifiers.</summary>
+    /// <summary>All accessibility modifiers.</summary>
     AllAccessibilities = Public | Internal | ProtectedInternal | Protected | PrivateProtected | Private,
 }

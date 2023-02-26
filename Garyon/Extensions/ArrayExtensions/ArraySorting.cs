@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Garyon.Extensions;
+namespace Garyon.Extensions.ArrayExtensions;
 
 /// <summary>Contains functions about sorting arrays.</summary>
 public static class ArraySorting

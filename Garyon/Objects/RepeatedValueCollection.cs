@@ -10,14 +10,14 @@ namespace Garyon.Objects;
 public class RepeatedValueCollection<T> : IReadOnlyCollection<T>
 {
     /// <summary>The value that is contained multiple times.</summary>
-    public T Value { get; }
+    public T? Value { get; }
     /// <summary>Gets or sets the number of times the specified value is to be repeated.</summary>
     public int Count { get; set; }
 
     /// <summary>Creates a new instance of the <seealso cref="RepeatedValueCollection{T}"/> class from the specified value and the count.</summary>
     /// <param name="value">The repeated value.</param>
     /// <param name="count">The number of times the value is to be repeated.</param>
-    public RepeatedValueCollection(T value, int count)
+    public RepeatedValueCollection(T? value, int count)
     {
         Value = value;
         Count = count;
@@ -44,7 +44,7 @@ public class RepeatedValueCollection<T> : IReadOnlyCollection<T>
         private int index;
 
         /// <inheritdoc/>
-        public T Current => Collection.Value;
+        public T? Current => Collection.Value;
         object IEnumerator.Current => Current;
 
         /// <summary>Initializes a new instance of the <seealso cref="Enumerator"/> struct from a given <seealso cref="RepeatedValueCollection{T}"/> instance.</summary>

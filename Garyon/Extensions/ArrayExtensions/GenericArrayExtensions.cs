@@ -44,15 +44,14 @@ public static class GenericArrayExtensions
 
         ValidateIndex(array, index, true);
 
-        if ((array?.Length).GetValueOrDefault() == 0)
+        if (array?.Length is not > 0)
             return new T[length];
 
         T[] result = new T[array.Length + length];
 
-        for (int i = 0; i < index; i++)
-            result[i] = array[i];
-        for (int i = index; i < array.Length; i++)
-            result[i + length] = array[i];
+        Array.Copy(array, 0, result, 0, index);
+        int rightPartLength = array.Length - index;
+        Array.Copy(array, index, result, index + length, rightPartLength);
         return result;
     }
     /// <summary>Inserts an element at the array into a specified index without affecting the original array. Returns a new array which contains the elements of the original array and the inserted one.</summary>

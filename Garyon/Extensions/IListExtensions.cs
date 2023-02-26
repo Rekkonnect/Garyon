@@ -68,6 +68,13 @@ public static class IListExtensions
         await foreach (var element in collection)
             list.Add(element);
     }
+    
+    /// <inheritdoc cref="AddRangeAsync{T}(IList{T}, IAsyncEnumerable{T})"/>
+    public static async Task AddRangeAsync<T>(this IList<T> list, IAsyncEnumerable<IEnumerable<T>> collection)
+    {
+        await foreach (var enumerable in collection)
+            list.AddRange(enumerable);
+    }
 #endif
 
     /// <summary>

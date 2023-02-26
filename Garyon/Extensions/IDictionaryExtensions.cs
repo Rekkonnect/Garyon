@@ -69,11 +69,23 @@ public static class IDictionaryExtensions
     /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise <see langword="default"/>.</returns>
     public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key)
     {
+        return ValueOrDefault(dictionary, key, default);
+    }
+
+    /// <summary>Gets the value mapped to the given key within the dictionary, if the key is present.</summary>
+    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
+    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
+    /// <param name="dictionary">The dictionary whose mapped value to get.</param>
+    /// <param name="key">The key whose mapped value to get.</param>
+    /// <param name="defaultValue">The default value to return if the key is <see langword="null"/> or is not found in the dictionary.</param>
+    /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise the specified default value.</returns>
+    public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key, TValue? defaultValue)
+    {
         if (key is null)
-            return default;
+            return defaultValue;
 
         if (!dictionary.TryGetValue(key, out var value))
-            return default;
+            return defaultValue;
 
         return value;
     }

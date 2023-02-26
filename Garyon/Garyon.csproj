@@ -78,6 +78,7 @@ Framework:
       HAS_DICTIONARY_KVPS_CTOR;
       HAS_TO_HASHSET;
       HAS_STREAM_READ_SIMPLE_BYTES;
+      HAS_GENERIC_ENUM_PARSE;
     </DefineConstants>
   </PropertyGroup>
 
@@ -113,6 +114,7 @@ Framework:
       SUPPORTS_COVARIANT_OVERRIDES;
       HAS_READONLY_SET;
       SUPPORTS_UNMANAGED_FUNPTRS;
+      HAS_GENERIC_ENUM_GETVALUES;
     </DefineConstants>
   </PropertyGroup>
   

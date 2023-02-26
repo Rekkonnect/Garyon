@@ -180,7 +180,7 @@ public static class StringExtensions
     /// <param name="characters">The number of characters to remove.</param>
     /// <returns>The string without the removed last characters.</returns>
     public static string RemoveLast(this string s, int characters) => s.Remove(s.Length - characters);
-    /// <summary>Returns a string that removes repetitions of the same character. Example: <code>RemoveCharacterRepetitions("aabcc") = "abc"</code>.</summary>
+    /// <summary>Returns a string that removes repetitions of the same character. Example: <code>RemoveCharacterRepetitions("aabcc") = "abc"</code></summary>
     /// <param name="s">The string to remove the character repetitions from.</param>
     public static string RemoveCharacterRepetitions(this string s)
     {

@@ -111,3 +111,30 @@ public static class ThrowHelper
     }
     #endregion
 }
+
+/// <summary>A helper class providing tools for throwing exceptions. It should be preferred to use in code that demands optimization.</summary>
+/// <typeparam name="TException">The type of the exception being thrown.</typeparam>
+public static class ThrowHelper<TException>
+    where TException : Exception, new()
+{
+    /// <summary>
+    /// Throws an exception of the given <typeparamref name="TException"/> type.
+    /// </summary>
+    public static void Throw()
+    {
+        ThrowHelper.Throw<TException>();
+    }
+
+    /// <summary>
+    /// Throws an exception of the given <typeparamref name="TException"/> type
+    /// and also comes with a return type. The value is never returned due to
+    /// the exception being thrown.
+    /// </summary>
+    /// <typeparam name="TReturn">The return type that will be targeted.</typeparam>
+    /// <returns>Never returns; this is only made to enable target-typing.</returns>
+    public static TReturn ThrowReturn<TReturn>()
+    {
+        Throw();
+        return default;
+    }
+}

@@ -90,6 +90,13 @@ public static class IAsyncEnumerableExtensions
         await result.AddRangeAsync(source);
         return result;
     }
+    /// <inheritdoc cref="ToListAsync{T}(IAsyncEnumerable{T})"/>
+    public static async Task<List<T>> ToListAsync<T>(this IAsyncEnumerable<IEnumerable<T>> source)
+    {
+        var result = new List<T>();
+        await result.AddRangeAsync(source);
+        return result;
+    }
 }
 
 #endif
