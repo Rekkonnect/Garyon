@@ -20,18 +20,27 @@
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.3.2</Version>
+    <Version>0.3.3</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
     <PackageReleaseNotes>Extensions:
-- Conversion extensions to collections
+- FileInfo, DirectoryInfo, FileSystemInfo
+- IAsyncEnumerableExtensions.ToListAsync
+- IDictionaryExtensions.ValueOrDefault(TKey?, TValue?)
+- IListExtensions.AddRangeAsync
+- AssemblyExtensions
 
-Functions:
-- Yielding from factory methods
+Additions:
+- ThrowHelper&lt;TException&gt;
+- CodedEnumInfo (via CodeAttribute)
+- EnumHelpers contains Parse and GetValues that
+  are missing from .NET Standard 2.0 and 2.1
 
-Framework:
-- Make IsExternalInit public
+Breaking changes:
+- Removed ISetExtensions
+- Moved ArraySorting to Garyon.Extensions.ArrayExtensions from
+  Garyon.Extensions
 </PackageReleaseNotes>
   </PropertyGroup>
 
