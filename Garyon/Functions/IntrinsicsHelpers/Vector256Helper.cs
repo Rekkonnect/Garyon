@@ -18,14 +18,22 @@ public abstract unsafe class Vector256Helper : SIMDVectorHelper
     public static Vector256<T> Create<T>(T value)
         where T : unmanaged
     {
-        if (sizeof(T) is sizeof(byte))
-            return Vector256.Create(*(byte*)&value).As<byte, T>();
-        if (sizeof(T) is sizeof(short))
-            return Vector256.Create(*(short*)&value).As<short, T>();
-        if (sizeof(T) is sizeof(int))
-            return Vector256.Create(*(int*)&value).As<int, T>();
-        if (sizeof(T) is sizeof(long))
-            return Vector256.Create(*(long*)&value).As<long, T>();
+        if (typeof(T) == typeof(float))
+            return Vector256.Create(*(float*)&value).As<float, T>();
+        if (typeof(T) == typeof(double))
+            return Vector256.Create(*(double*)&value).As<double, T>();
+
+        switch (sizeof(T))
+        {
+            case sizeof(byte):
+                return Vector256.Create(*(byte*)&value).As<byte, T>();
+            case sizeof(short):
+                return Vector256.Create(*(short*)&value).As<short, T>();
+            case sizeof(int):
+                return Vector256.Create(*(int*)&value).As<int, T>();
+            case sizeof(long):
+                return Vector256.Create(*(long*)&value).As<long, T>();
+        }
 
         ThrowHelper.Throw<InvalidOperationException>();
         return default;
@@ -37,14 +45,22 @@ public abstract unsafe class Vector256Helper : SIMDVectorHelper
     public static Vector256<T> CreateScalar<T>(T value)
         where T : unmanaged
     {
-        if (sizeof(T) is sizeof(byte))
-            return Vector256.CreateScalar(*(byte*)&value).As<byte, T>();
-        if (sizeof(T) is sizeof(short))
-            return Vector256.CreateScalar(*(short*)&value).As<short, T>();
-        if (sizeof(T) is sizeof(int))
-            return Vector256.CreateScalar(*(int*)&value).As<int, T>();
-        if (sizeof(T) is sizeof(long))
-            return Vector256.CreateScalar(*(long*)&value).As<long, T>();
+        if (typeof(T) == typeof(float))
+            return Vector256.CreateScalar(*(float*)&value).As<float, T>();
+        if (typeof(T) == typeof(double))
+            return Vector256.CreateScalar(*(double*)&value).As<double, T>();
+
+        switch (sizeof(T))
+        {
+            case sizeof(byte):
+                return Vector256.CreateScalar(*(byte*)&value).As<byte, T>();
+            case sizeof(short):
+                return Vector256.CreateScalar(*(short*)&value).As<short, T>();
+            case sizeof(int):
+                return Vector256.CreateScalar(*(int*)&value).As<int, T>();
+            case sizeof(long):
+                return Vector256.CreateScalar(*(long*)&value).As<long, T>();
+        }
 
         ThrowHelper.Throw<InvalidOperationException>();
         return default;
@@ -54,7 +70,30 @@ public abstract unsafe class Vector256Helper : SIMDVectorHelper
     public static Vector256<T> AllBitsSet<T>()
         where T : unmanaged
     {
-        return AllBitsSetSingle().As<float, T>();
+#if HAS_VECTOR_ALLBITS
+        return Vector256<T>.AllBitsSet;
+#else
+        var zero = Vector256<T>.Zero;
+        if (typeof(T) == typeof(float))
+            return AllBitsSetSingle().As<float, T>();
+        if (typeof(T) == typeof(double))
+            return Avx.AndNot(zero.As<T, double>(), zero.As<T, double>()).As<double, T>();
+
+        switch (sizeof(T))
+        {
+            case sizeof(byte):
+                return Avx2.AndNot(zero.As<T, byte>(), zero.As<T, byte>()).As<byte, T>();
+            case sizeof(short):
+                return Avx2.AndNot(zero.As<T, short>(), zero.As<T, short>()).As<short, T>();
+            case sizeof(int):
+                return Avx2.AndNot(zero.As<T, int>(), zero.As<T, int>()).As<int, T>();
+            case sizeof(long):
+                return Avx2.AndNot(zero.As<T, long>(), zero.As<T, long>()).As<long, T>();
+        }
+
+        ThrowHelper.Throw<InvalidOperationException>();
+        return default;
+#endif
     }
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector256<float> AllBitsSetSingle()

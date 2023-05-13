@@ -224,7 +224,7 @@ public abstract unsafe class AVXHelper : SSE42Helper
             return NOTVector256(XORVector256(origin, mask, index));
         return default;
     }
-#endregion
+    #endregion
 }
 
 #endif

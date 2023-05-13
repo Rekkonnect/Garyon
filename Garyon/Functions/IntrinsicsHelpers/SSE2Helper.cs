@@ -143,7 +143,7 @@ public abstract unsafe class SSE2Helper : SSEHelper
     public static void StoreVector128(int* origin, float* target, uint index)
     {
         if (Sse2.IsSupported)
-            Sse2.Store(&target[index], Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index])));
+            Sse2.Store(&target[index], ConvertToVector128Single(origin, index));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -211,12 +211,12 @@ public abstract unsafe class SSE2Helper : SSEHelper
     public static void StoreVector128(int* origin, double* target, uint index)
     {
         if (Sse2.IsSupported)
-            Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
+            Sse2.Store(&target[index], ConvertToVector128Double(origin, index));
     }
     public static void StoreVector128(float* origin, double* target, uint index)
     {
         if (Sse2.IsSupported)
-            Sse2.Store(&target[index], Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index])));
+            Sse2.Store(&target[index], ConvertToVector128Double(origin, index));
     }
     #endregion
 
@@ -302,6 +302,34 @@ public abstract unsafe class SSE2Helper : SSEHelper
     {
         if (Sse2.IsSupported)
             Store<float, long>(Sse2.ConvertToVector128Single(CreateVector128From64(origin, index)), target, index);
+    }
+    #endregion
+    #endregion
+
+    #region Convert
+    #region T* -> float*
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static Vector128<float> ConvertToVector128Single(int* origin, uint index)
+    {
+        if (Avx.IsSupported)
+            return Sse2.ConvertToVector128Single(Sse2.LoadVector128(&origin[index]));
+        return default;
+    }
+    #endregion
+    #region T* -> double*
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static Vector128<double> ConvertToVector128Double(int* origin, uint index)
+    {
+        if (Avx.IsSupported)
+            return Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index]));
+        return default;
+    }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static Vector128<double> ConvertToVector128Double(float* origin, uint index)
+    {
+        if (Avx.IsSupported)
+            return Sse2.ConvertToVector128Double(Sse2.LoadVector128(&origin[index]));
+        return default;
     }
     #endregion
     #endregion
