@@ -298,12 +298,12 @@ public abstract unsafe class SSE41Helper : SSSE3Helper
     public static void StoreVector128(byte* origin, float* target, uint index)
     {
         if (Sse41.IsSupported)
-            Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index])));
+            Sse41.Store(&target[index], ConvertToVector128Single(origin, index));
     }
     public static void StoreVector128(short* origin, float* target, uint index)
     {
         if (Sse41.IsSupported)
-            Sse41.Store(&target[index], Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index])));
+            Sse41.Store(&target[index], ConvertToVector128Single(origin, index));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -386,12 +386,13 @@ public abstract unsafe class SSE41Helper : SSSE3Helper
     public static void StoreVector128(byte* origin, double* target, uint index)
     {
         if (Sse41.IsSupported)
-            Sse41.Store(&target[index], Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index])));
+            Sse41.Store(&target[index], ConvertToVector128Double(origin, index));
     }
+
     public static void StoreVector128(short* origin, double* target, uint index)
     {
         if (Sse41.IsSupported)
-            Sse41.Store(&target[index], Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index])));
+            Sse41.Store(&target[index], ConvertToVector128Double(origin, index));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -471,12 +472,14 @@ public abstract unsafe class SSE41Helper : SSSE3Helper
 
     #region Convert
     #region T* -> float*
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector128<float> ConvertToVector128Single(byte* origin, uint index)
     {
         if (Sse41.IsSupported)
             return Sse41.ConvertToVector128Single(Sse41.ConvertToVector128Int32(&origin[index]));
         return default;
     }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector128<float> ConvertToVector128Single(short* origin, uint index)
     {
         if (Sse41.IsSupported)
@@ -485,12 +488,14 @@ public abstract unsafe class SSE41Helper : SSSE3Helper
     }
     #endregion
     #region T* -> double*
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector128<double> ConvertToVector128Double(byte* origin, uint index)
     {
         if (Sse41.IsSupported)
             return Sse41.ConvertToVector128Double(Sse41.ConvertToVector128Int32(&origin[index]));
         return default;
     }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector128<double> ConvertToVector128Double(short* origin, uint index)
     {
         if (Sse41.IsSupported)
