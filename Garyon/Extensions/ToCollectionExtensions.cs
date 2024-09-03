@@ -20,6 +20,7 @@ public static class ToCollectionExtensions
     #region To X
 #if HAS_DICTIONARY_KVPS_CTOR
     public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source)
+        where TKey : notnull
     {
         return new(source);
     }
@@ -316,6 +317,7 @@ public static class ToCollectionExtensions
     /// values of the source.
     /// </returns>
     public static IDictionary<TKey, TValue> ToDictionaryOrExisting<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source)
+        where TKey : notnull
     {
         if (source is IDictionary<TKey, TValue> dictionary)
             return dictionary;
@@ -344,6 +346,7 @@ public static class ToCollectionExtensions
     /// values of the source.
     /// </returns>
     public static IReadOnlyDictionary<TKey, TValue> ToReadOnlyDictionaryOrExisting<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source)
+        where TKey : notnull
     {
         if (source is IReadOnlyDictionary<TKey, TValue> dictionary)
             return dictionary;

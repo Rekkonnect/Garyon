@@ -40,6 +40,7 @@ public static class IDictionaryExtensions
     /// <param name="d">The dictionary whose value to increment for the specified key.</param>
     /// <param name="key">The key in the dictionary whose value to increment.</param>
     public static void IncrementOrAddKeyValue<TKey>(this IDictionary<TKey, int> d, TKey key)
+        where TKey : notnull
     {
         if (d.ContainsKey(key))
             d[key]++;
@@ -51,6 +52,7 @@ public static class IDictionaryExtensions
     /// <param name="d">The dictionary whose value sum to calculate.</param>
     /// <param name="exclusions">The keys that will be excluded from the sum.</param>
     public static int Sum<TKey>(this IDictionary<TKey, int> d, params TKey[] exclusions)
+        where TKey : notnull
     {
         int sum = 0;
         foreach (var v in d.Values)
@@ -68,6 +70,7 @@ public static class IDictionaryExtensions
     /// <param name="key">The key whose mapped value to get.</param>
     /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise <see langword="default"/>.</returns>
     public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key)
+        where TKey : notnull
     {
         return ValueOrDefault(dictionary, key, default);
     }
@@ -80,6 +83,7 @@ public static class IDictionaryExtensions
     /// <param name="defaultValue">The default value to return if the key is <see langword="null"/> or is not found in the dictionary.</param>
     /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise the specified default value.</returns>
     public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key, TValue? defaultValue)
+        where TKey : notnull
     {
         if (key is null)
             return defaultValue;
@@ -98,6 +102,7 @@ public static class IDictionaryExtensions
     /// <param name="value">The value of the entry to set.</param>
     /// <returns><see langword="true"/> if the entry already existed with a different value and was overwritten, otherwise <see langword="false"/>.</returns>
     public static bool AddOrSet<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value)
+        where TKey : notnull
     {
         var contained = source.TryGetValue(key, out var oldValue);
 
@@ -115,17 +120,20 @@ public static class IDictionaryExtensions
     }
     /// <inheritdoc cref="TryAddPreserve{TKey, TValue}(IDictionary{TKey, TValue}, KeyValuePair{TKey, TValue}, out TValue)"/>
     public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
+        where TKey : notnull
     {
         return source.TryAddPreserve(kvp.Key, kvp.Value);
     }
     /// <inheritdoc cref="TryAddPreserve{TKey, TValue}(IDictionary{TKey, TValue}, TKey, TValue, out TValue)"/>
     /// <param name="kvp">The <seealso cref="KeyValuePair{TKey, TValue}"/> to add to the dictionary.</param>
     public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp, out TValue? existingValue)
+        where TKey : notnull
     {
         return source.TryAddPreserve(kvp.Key, kvp.Value, out existingValue);
     }
     /// <inheritdoc cref="TryAddPreserve{TKey, TValue}(IDictionary{TKey, TValue}, TKey, TValue, out TValue)"/>
     public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value)
+        where TKey : notnull
     {
         return source.TryAddPreserve(key, value, out _);
     }
@@ -138,6 +146,7 @@ public static class IDictionaryExtensions
     /// <param name="existingValue">The value that existed in the dictionary, if the key was already present, otherwise <see langword="default"/>.</param>
     /// <returns><see langword="true"/> if the entry did not exist, or existed with the same value, otherwise <see langword="false"/>.</returns>
     public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value, out TValue? existingValue)
+        where TKey : notnull
     {
         var available = !source.TryGetValue(key, out existingValue);
 
@@ -158,6 +167,7 @@ public static class IDictionaryExtensions
     /// <param name="source">The source dictionary.</param>
     /// <param name="entries">The entries to add to the <paramref name="source"/> dictionary.</param>
     public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries)
+        where TKey : notnull
     {
         foreach (var entry in entries)
             source.Add(entry.Key, entry.Value);
@@ -169,6 +179,7 @@ public static class IDictionaryExtensions
     /// <param name="entries">The entries to add or overwrite.</param>
     /// <returns><see langword="true"/> if at least one of the given entries already existed with a different value and was overwritten, otherwise <see langword="false"/>.</returns>
     public static bool AddOrSetRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries)
+        where TKey : notnull
     {
         bool overwritten = false;
         foreach (var entry in entries)
@@ -182,6 +193,7 @@ public static class IDictionaryExtensions
     /// <param name="entries">The entries to add or overwrite.</param>
     /// <returns><see langword="true"/> if none of the given entries already existed with a different value, otherwise <see langword="false"/>.</returns>
     public static bool TryAddPreserveRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries)
+        where TKey : notnull
     {
         bool preserved = true;
         foreach (var entry in entries)
@@ -196,6 +208,7 @@ public static class IDictionaryExtensions
     /// <param name="key">The key of the entry whose <seealso cref="KeyValuePair{TKey, TValue}"/> to get.</param>
     /// <returns>The resulting <seealso cref="KeyValuePair{TKey, TValue}"/> containing the entry that was requested.</returns>
     public static KeyValuePair<TKey, TValue> GetKeyValuePair<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key)
+        where TKey : notnull
     {
         return new(key, source[key]);
     }
@@ -206,6 +219,7 @@ public static class IDictionaryExtensions
     /// <param name="source">The source dictionary.</param>
     /// <param name="kvp">The entry to add to the dictionary.</param>
     public static void Add<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
+        where TKey : notnull
     {
         source.Add(kvp);
     }
@@ -216,8 +230,9 @@ public static class IDictionaryExtensions
     /// <param name="source">The source dictionary.</param>
     /// <param name="key">The key of the entry to add to the dictionary.</param>
     /// <param name="value">The value of the entry to add to the dictionary.</param>
-    /// <returns><see langword="true"/> if the entry was successsfully added, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the entry was successfully added, otherwise <see langword="false"/>.</returns>
     public static bool TryAdd<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value)
+        where TKey : notnull
     {
         return source.TryAddPreserve(key, value);
     }
@@ -227,8 +242,9 @@ public static class IDictionaryExtensions
     /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
     /// <param name="source">The source dictionary.</param>
     /// <param name="kvp">The entry to add to the dictionary.</param>
-    /// <returns><see langword="true"/> if the entry was successsfully added, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the entry was successfully added, otherwise <see langword="false"/>.</returns>
     public static bool TryAdd<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
+        where TKey : notnull
     {
         return source.TryAdd(kvp.Key, kvp.Value);
     }

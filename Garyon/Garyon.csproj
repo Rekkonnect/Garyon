@@ -7,9 +7,10 @@
       netcoreapp3.1;
       net5.0;
       net6.0;
-      net7.0
+      net7.0;
+      net8.0
     </TargetFrameworks>
-    <LangVersion>11.0</LangVersion>
+    <LangVersion>12.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>annotations</Nullable>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -24,24 +25,7 @@
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>Extensions:
-- FileInfo, DirectoryInfo, FileSystemInfo
-- IAsyncEnumerableExtensions.ToListAsync
-- IDictionaryExtensions.ValueOrDefault(TKey?, TValue?)
-- IListExtensions.AddRangeAsync
-- AssemblyExtensions
-
-Additions:
-- ThrowHelper&lt;TException&gt;
-- CodedEnumInfo (via CodeAttribute)
-- EnumHelpers contains Parse and GetValues that
-  are missing from .NET Standard 2.0 and 2.1
-
-Breaking changes:
-- Removed ISetExtensions
-- Moved ArraySorting to Garyon.Extensions.ArrayExtensions from
-  Garyon.Extensions
-</PackageReleaseNotes>
+    <PackageReleaseNotes>Curate and remove lots of APIs</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Label="README reference">
@@ -88,6 +72,7 @@ Breaking changes:
       HAS_TO_HASHSET;
       HAS_STREAM_READ_SIMPLE_BYTES;
       HAS_GENERIC_ENUM_PARSE;
+      HAS_STRING_JOIN_CHAR;
     </DefineConstants>
   </PropertyGroup>
 
@@ -128,10 +113,20 @@ Breaking changes:
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0' Or
-                            '$(TargetFramework)' == 'net7.0'">
+                            '$(TargetFramework)' == 'net7.0' Or
+                            '$(TargetFramework)' == 'net8.0'">
     <DefineConstants>
       $(DefineConstants);
       HAS_STRINGSPAN_ENUMERATE_LINES;
+      HAS_RANDOM_NEXTINT64_NEXTSINGLE;
+    </DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net7.0' Or
+                            '$(TargetFramework)' == 'net8.0'">
+    <DefineConstants>
+      $(DefineConstants);
+      HAS_UNREACHABLE_EXCEPTION;
     </DefineConstants>
   </PropertyGroup>
 

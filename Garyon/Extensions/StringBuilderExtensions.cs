@@ -85,7 +85,7 @@ public static class StringBuilderExtensions
     /// <param name="stringBuilder">
     /// The <seealso cref="StringBuilder"/> instance on which to append.
     /// </param>
-    /// <param name="value">The string to conver to uppercase.</param>
+    /// <param name="value">The string to convert to uppercase.</param>
     /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
     public static StringBuilder AppendUpper(this StringBuilder stringBuilder, string value)
     {
@@ -100,7 +100,7 @@ public static class StringBuilderExtensions
     /// <param name="stringBuilder">
     /// The <seealso cref="StringBuilder"/> instance on which to append.
     /// </param>
-    /// <param name="value">The string to conver to lowercase.</param>
+    /// <param name="value">The string to convert to lowercase.</param>
     /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
     public static StringBuilder AppendLower(this StringBuilder stringBuilder, string value)
     {
@@ -271,12 +271,12 @@ public static class StringBuilderExtensions
     public static bool EndsWith(this StringBuilder s, string lastCharacters) => s.SubstringLast(lastCharacters.Length) == lastCharacters;
 
     /// <summary>Returns a substring of this string with the specified number of characters from a starting index.</summary>
-    /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
+    /// <param name="s">The <seealso cref="StringBuilder"/> to get the substring of.</param>
     /// <param name="startingIndex">The index of the original string that the new substring will start from.</param>
     /// <param name="length">The number of characters of the substring.</param>
     public static string Substring(this StringBuilder s, int startingIndex, int length) => s.SubstringBuilder(startingIndex, length).ToString();
     /// <summary>Returns a substring of this string with the specified number of characters from a starting index as a <seealso cref="StringBuilder"/>.</summary>
-    /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
+    /// <param name="s">The <seealso cref="StringBuilder"/> to get the substring of.</param>
     /// <param name="startingIndex">The index of the original string that the new substring will start from.</param>
     /// <param name="length">The number of characters of the substring.</param>
     public static StringBuilder SubstringBuilder(this StringBuilder s, int startingIndex, int length)
@@ -310,19 +310,19 @@ public static class StringBuilderExtensions
         return result;
     }
     /// <summary>Returns a substring of this string with the specified number of characters from its start.</summary>
-    /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
+    /// <param name="s">The <seealso cref="StringBuilder"/> to get the substring of.</param>
     /// <param name="length">The number of characters of the substring.</param>
     public static string SubstringStart(this StringBuilder s, int length) => s.SubstringBuilder(0, length).ToString();
     /// <summary>Returns a substring of this string with the specified number of characters from its start as a <seealso cref="StringBuilder"/>.</summary>
-    /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
+    /// <param name="s">The <seealso cref="StringBuilder"/> to get the substring of.</param>
     /// <param name="length">The number of characters of the substring.</param>
     public static StringBuilder SubstringStartBuilder(this StringBuilder s, int length) => s.SubstringBuilder(0, length);
     /// <summary>Returns a substring of this string with the specified number of characters from its end.</summary>
-    /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
+    /// <param name="s">The <seealso cref="StringBuilder"/> to get the substring of.</param>
     /// <param name="length">The number of characters of the substring.</param>
     public static string SubstringLast(this StringBuilder s, int length) => s.SubstringBuilder(s.Length - length, length).ToString();
     /// <summary>Returns a substring of this string with the specified number of characters from its end as a <seealso cref="StringBuilder"/>.</summary>
-    /// <param name="s">The <seealso cref="StringBuilder"/> to get the subtsring of.</param>
+    /// <param name="s">The <seealso cref="StringBuilder"/> to get the substring of.</param>
     /// <param name="length">The number of characters of the substring.</param>
     public static StringBuilder SubstringLastBuilder(this StringBuilder s, int length) => s.SubstringBuilder(s.Length - length, length);
 #endif

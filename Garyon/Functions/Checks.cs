@@ -20,7 +20,7 @@ public static class Checks
     /// <param name="left">The left object to compare.</param>
     /// <param name="right">The right object to compare.</param>
     /// <returns><see langword="true"/> if both objects are equal, or both are <see langword="null"/>; otherwise <see langword="false"/>.</returns>
-    /// <remarks>This implementation utilizes the <seealso cref="IEquatable{T}.Equals(T?)"/> function in order to avoid the type checking overhead.</remarks>
+    /// <remarks>This implementation utilizes the <seealso cref="IEquatable{T}.Equals(T)"/> function in order to avoid the type checking overhead.</remarks>
     public static bool SafeEqualsEquatable<T>(T left, T right)
         where T : class?, IEquatable<T>?
     {

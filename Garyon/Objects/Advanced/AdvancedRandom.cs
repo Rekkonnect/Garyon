@@ -34,6 +34,7 @@ public class AdvancedRandom : Random
     /// <returns>The resulting <seealso cref="short"/>.</returns>
     public virtual short NextInt16(short minValue, short maxValue) => (short)Sample(minValue, maxValue);
 
+#if !HAS_RANDOM_NEXTINT64_NEXTSINGLE
     /// <summary>Generates a random <seealso cref="long"/> within the range [0, <seealso cref="long.MaxValue"/>]. May use up to 2 number generations due to <seealso cref="double"/>'s lesser precision.</summary>
     /// <returns>The resulting <seealso cref="long"/>.</returns>
     public virtual long NextInt64() => ExtendSample((long)Sample(long.MaxValue));
@@ -46,6 +47,7 @@ public class AdvancedRandom : Random
     /// <param name="maxValue">The exclusive upper bound of the random number returned. Must be greater than <paramref name="minValue"/>.</param>
     /// <returns>The resulting <seealso cref="long"/>.</returns>
     public virtual long NextInt64(long minValue, long maxValue) => ExtendSample((long)Sample(minValue, maxValue));
+#endif
 
     /// <summary>Generates a random <seealso cref="sbyte"/> within the range [0, <seealso cref="sbyte.MaxValue"/>].</summary>
     /// <returns>The resulting <seealso cref="sbyte"/>.</returns>
@@ -100,9 +102,11 @@ public class AdvancedRandom : Random
     /// <returns>The resulting <seealso cref="ulong"/>.</returns>
     public virtual ulong NextUInt64(ulong minValue, ulong maxValue) => ExtendSample((ulong)Sample(minValue, maxValue));
 
+#if !HAS_RANDOM_NEXTINT64_NEXTSINGLE
     /// <summary>Generates a random <seealso cref="float"/> within the range [0, 1).</summary>
     /// <returns>The resulting <seealso cref="float"/>.</returns>
     public virtual float NextSingle() => (float)Sample();
+#endif
     /// <summary>Generates a random <seealso cref="float"/> within the range [0, <paramref name="maxValue"/>).</summary>
     /// <param name="maxValue">The exclusive upper bound of the random number returned. Must be greater than 0.</param>
     /// <returns>The resulting <seealso cref="float"/>.</returns>

@@ -119,12 +119,23 @@ public static class EnumHelpers
     #region Contained Values
     private static readonly FlexibleDictionary<Type, Type> enumUnderlyingTypeCodeDictionary = new();
 
+    // Partial documentation is not supported
+#warning Tracking issue: https://github.com/dotnet/csharplang/discussions/295
+#if HAS_GENERIC_ENUM_ISDEFINED
     /// <summary>Determines whether a value is defined in the enum <typeparamref name="TEnum"/>.</summary>
     /// <typeparam name="TEnum">The type of the enum.</typeparam>
     /// <typeparam name="TUnderlying">The underlying type of the enum, which is the type of the value instances.</typeparam>
     /// <param name="value">The integral value to determine whether it's defined in an enum.</param>
     /// <returns><see langword="true"/> if <typeparamref name="TEnum"/> has a definition assigned to the specified integral value, otherwise <see langword="false"/>.</returns>
     /// <remarks>The function is based on <seealso cref="Enum.IsDefined{TEnum}(TEnum)"/>.</remarks>
+#else
+    /// <summary>Determines whether a value is defined in the enum <typeparamref name="TEnum"/>.</summary>
+    /// <typeparam name="TEnum">The type of the enum.</typeparam>
+    /// <typeparam name="TUnderlying">The underlying type of the enum, which is the type of the value instances.</typeparam>
+    /// <param name="value">The integral value to determine whether it's defined in an enum.</param>
+    /// <returns><see langword="true"/> if <typeparamref name="TEnum"/> has a definition assigned to the specified integral value, otherwise <see langword="false"/>.</returns>
+    /// <remarks>The function is based on <seealso cref="Enum.IsDefined(Type, object)"/>.</remarks>
+#endif
     public static unsafe bool IsDefined<TEnum, TUnderlying>(TUnderlying value)
         where TEnum : unmanaged, Enum
         where TUnderlying : unmanaged

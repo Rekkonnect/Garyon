@@ -5,6 +5,13 @@ using System.Text;
 
 namespace Garyon.Extensions;
 
+// Stream.Read(Span{byte}) triggers lots of warnings
+#pragma warning disable CS1574 // XML comment has cref attribute that could not be resolved
+
+#if !HAS_SPAN
+#pragma warning disable CS1580 // Span{byte} could not be resolved
+#endif
+
 /// <summary>Provides extensions for the <see cref="Stream"/> class.</summary>
 public static unsafe class StreamExtensions
 {
@@ -25,6 +32,7 @@ public static unsafe class StreamExtensions
 
     #region .NET Standard 2.0 missing
 #if !HAS_STREAM_READ_SIMPLE_BYTES
+    /// <inheritdoc cref="Stream.ReadAsync(byte[], int, int)"/>
     public static int Read(this Stream stream, byte[] buffer)
     {
         int offset = 0;
@@ -316,11 +324,12 @@ public static unsafe class StreamExtensions
         value = *(sbyte*)&result;
         return result != -1;
     }
+
     /// <summary>Reads a <seealso cref="short"/> from the stream at the current position.</summary>
     /// <param name="stream">The stream to read from.</param>
     /// <param name="value">The value. Its value is always equal to the buffer after calling the <seealso cref="Stream.Read(Span{byte})"/> function on it. Only use the value if the method returns <see langword="true"/>.</param>
     /// <returns><see langword="true"/> if the <seealso cref="short"/> was successfully read from the stream, otherwise <see langword="false"/>, if the stream has reached its end.</returns>
-    public static bool TryReadInt16(this Stream stream, out short value) => TryReadValue(stream, out value);
+    public static bool TryReadInt16<T>(this Stream stream, out short value) => TryReadValue(stream, out value);
     /// <summary>Reads a <seealso cref="ushort"/> from the stream at the current position.</summary>
     /// <param name="stream">The stream to read from.</param>
     /// <param name="value">The value. Its value is always equal to the buffer after calling the <seealso cref="Stream.Read(Span{byte})"/> function on it. Only use the value if the method returns <see langword="true"/>.</param>
@@ -460,7 +469,7 @@ public static unsafe class StreamExtensions
         stream.Read(bytes);
         return encoding.GetString(bytes);
     }
-    #endregion
+#endregion
 
     #region Read at specified position
     /// <summary>Reads a <seealso cref="byte"/> from the stream at the specified position.</summary>

@@ -9,10 +9,6 @@
 /// </summary>
 public static class NullGuards
 {
-    public static bool AnyNull<T>(T? value)
-    {
-        return value is null;
-    }
     public static bool AnyNull<T1, T2>(T1? value1, T2? value2)
     {
         return value1 is null
@@ -32,11 +28,6 @@ public static class NullGuards
             || value4 is null;
     }
 
-    public static bool AnyNull<T>(T? value)
-        where T : struct
-    {
-        return value is null;
-    }
     public static bool AnyNull<T1, T2>(T1? value1, T2? value2)
         where T1 : struct
         where T2 : struct
@@ -65,10 +56,6 @@ public static class NullGuards
             || value4 is null;
     }
 
-    public static bool AnyNonNull<T>(T? value)
-    {
-        return value is not null;
-    }
     public static bool AnyNonNull<T1, T2>(T1? value1, T2? value2)
     {
         return value1 is not null
@@ -88,11 +75,6 @@ public static class NullGuards
             || value4 is not null;
     }
 
-    public static bool AnyNonNull<T>(T? value)
-        where T : struct
-    {
-        return value is not null;
-    }
     public static bool AnyNonNull<T1, T2>(T1? value1, T2? value2)
         where T1 : struct
         where T2 : struct
@@ -121,10 +103,6 @@ public static class NullGuards
             || value4 is not null;
     }
 
-    public static bool NoneNull<T>(T? value)
-    {
-        return !AnyNull(value);
-    }
     public static bool NoneNull<T1, T2>(T1? value1, T2? value2)
     {
         return !AnyNull(value1, value2);
@@ -138,11 +116,6 @@ public static class NullGuards
         return !AnyNull(value1, value2, value3, value4);
     }
 
-    public static bool NoneNull<T>(T? value)
-        where T : struct
-    {
-        return !AnyNull(value);
-    }
     public static bool NoneNull<T1, T2>(T1? value1, T2? value2)
         where T1 : struct
         where T2 : struct

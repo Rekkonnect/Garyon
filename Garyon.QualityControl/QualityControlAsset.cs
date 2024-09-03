@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace Garyon.QualityControl
+namespace Garyon.QualityControl;
+
+public abstract class QualityControlAsset
 {
-    public abstract class QualityControlAsset
-    {
-    }
 }

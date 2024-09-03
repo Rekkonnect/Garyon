@@ -769,7 +769,9 @@ public static class IEnumerableExtensions
 
     private static void VerifyNonEmptyCollection<T>(IEnumerable<T> source)
     {
-        if (source?.Any() != true)
+        if (source?.Any() is not true)
+        {
             ThrowHelper.Throw<ArgumentException>("The collection must be non-null and contain at least one element.");
+        }
     }
 }
