@@ -34,7 +34,9 @@ namespace Garyon.Extensions
         public static bool TryGetSingle<TBase, TDerived>(this IReadOnlyList<TBase> list, out TDerived single)
             where TDerived : TBase
         {
-            if (list is [TDerived singleDerived])
+            // Cannot use list patterns in .NET Standard 2.0
+#warning Tracking issue: https://github.com/dotnet/roslyn/issues/74983
+            if (list.Count is 1 && list[0] is TDerived singleDerived)
             {
                 single = singleDerived;
                 return true;
@@ -65,7 +67,9 @@ namespace Garyon.Extensions
         public static bool TryGetSingle<TBase, TDerived>(this TBase[] array, out TDerived single)
             where TDerived : TBase
         {
-            if (array is [TDerived singleDerived])
+            // Cannot use list patterns in .NET Standard 2.0
+#warning Tracking issue: https://github.com/dotnet/roslyn/issues/74983
+            if (array.Length is 1 && array[0] is TDerived singleDerived)
             {
                 single = singleDerived;
                 return true;

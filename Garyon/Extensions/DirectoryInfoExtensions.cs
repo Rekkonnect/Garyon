@@ -66,7 +66,7 @@ public static class DirectoryInfoExtensions
         return directory;
     }
 
-    private static void MoveTo(this DirectoryInfo directory, DirectoryInfo parent)
+    public static void MoveTo(this DirectoryInfo directory, DirectoryInfo parent)
     {
         directory.MoveTo(parent.FullName);
     }

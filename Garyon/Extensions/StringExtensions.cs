@@ -308,9 +308,16 @@ public static class StringExtensions
     public static bool ContainsWholeWord(this string s, string match)
     {
         for (int i = s.Length - match.Length; i >= 0; i--)
+        {
             if (s.Substring(i, match.Length) == match)
+            {
                 if ((i == 0 || (!s[i - 1].IsLetterOrDigit())) && (i >= s.Length - match.Length || (!s[i + match.Length].IsLetterOrDigit())))
+                {
                     return true;
+                }
+            }
+        }
+
         return false;
     }
     /// <summary>Checks whether this string matches another string regardless of its character casing.</summary>
@@ -318,9 +325,7 @@ public static class StringExtensions
     /// <param name="match">The string to match.</param>
     public static bool MatchesStringCaseFree(this string s, string match)
     {
-        if (s.Length != match.Length)
-            return false;
-        return s.ToLower() == match.ToLower();
+        return s.Equals(match, StringComparison.OrdinalIgnoreCase);
     }
     /// <summary>Gets the occurrences of a specific character within the given string.</summary>
     /// <param name="s">The string.</param>

@@ -27,9 +27,9 @@ public abstract class DefaultInstanceContainer<TBase>
     /// <summary>Gets all the default instance types that were found in all the assemblies this program can refer to.</summary>
     public ReadOnlyTypeCollection DefaultInstanceTypes { get; }
 
-    /// <summary>Gets the arguments to be used in the construtor.</summary>
+    /// <summary>Gets the arguments to be used in the constructor.</summary>
     protected abstract object?[] GetDefaultInstanceArguments();
-    /// <summary>Gets the argument types to be used in the construtor for each of the valid types to initialize the default instance from.</summary>
+    /// <summary>Gets the argument types to be used in the constructor for each of the valid types to initialize the default instance from.</summary>
     /// <remarks>Defaults to returning the types of the arguments as provided from <seealso cref="GetDefaultInstanceArguments"/>. For <see langword="null"/> objects, the <seealso cref="object"/> type is used.</remarks>
     protected virtual Type[] GetDefaultInstanceArgumentTypes()
     {
@@ -40,12 +40,13 @@ public abstract class DefaultInstanceContainer<TBase>
     /// <remarks>All types that are considered valid must contain a constructor matching the argument types as returned from <seealso cref="GetDefaultInstanceArgumentTypes"/>.</remarks>
     protected DefaultInstanceContainer()
     {
-        DefaultInstanceTypes = AppDomainCache.Current.AllTypes
-                                             .Where(IsValidInstanceTypeFullCheck)
+        DefaultInstanceTypes = AppDomainCache
+            .Current.AllTypes
+            .Where(IsValidInstanceTypeFullCheck)
 #if HAS_IMMUTABLE
-                                             .ToImmutableArray();
+            .ToImmutableArray();
 #else
-                                             .ToArray();
+            .ToArray();
 #endif
 
         int count = DefaultInstanceTypes
@@ -68,7 +69,7 @@ public abstract class DefaultInstanceContainer<TBase>
     }
 
     /// <summary>Determines whether the given type can be considered a valid instance type.</summary>
-    /// <param name="type">The instance type to determine whether it is considered valid. The type will never be <see langword="abstract"/>, and will always be assignable to <typeparamref name="TBase"/> instancess.</param>
+    /// <param name="type">The instance type to determine whether it is considered valid. The type will never be <see langword="abstract"/>, and will always be assignable to <typeparamref name="TBase"/> instances.</param>
     /// <returns><see langword="true"/> if the type's default instance should be stored, otherwise <see langword="false"/>.</returns>
     /// <remarks>Defaults to always returning <see langword="true"/>. This can be a common implementation for unconstrained types whose default instances to initialize.</remarks>
     protected virtual bool IsValidInstanceType(Type type) => true;

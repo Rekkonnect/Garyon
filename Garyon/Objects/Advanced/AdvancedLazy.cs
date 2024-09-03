@@ -2,7 +2,7 @@
 
 namespace Garyon.Objects.Advanced;
 
-/// <summary>Provides a mecahnism for a lazily initializable value.</summary>
+/// <summary>Provides a mechanism for a lazily initializable value.</summary>
 /// <typeparam name="T">The type of the lazily initializable value.</typeparam>
 public sealed class AdvancedLazy<T>
 {

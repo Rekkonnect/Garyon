@@ -97,4 +97,19 @@ public static class MoreLinqExtensions
     {
         return source.WherePredicate(predicate).Count() >= occurrences;
     }
+
+    /// <summary>
+    /// Applies a function to the given value and returns the result.
+    /// </summary>
+    /// <typeparam name="TSource">The type of the source value.</typeparam>
+    /// <typeparam name="TResult">The type of the result value.</typeparam>
+    /// <param name="source">The source value.</param>
+    /// <param name="function">The function to apply to the source value.</param>
+    /// <returns>
+    /// The resutling value after applying <paramref name="function"/> to <paramref name="source"/>.
+    /// </returns>
+    public static TResult Pass<TSource, TResult>(this TSource source, Func<TSource, TResult> function)
+    {
+        return function(source);
+    }
 }

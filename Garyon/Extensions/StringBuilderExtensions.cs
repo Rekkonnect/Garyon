@@ -79,6 +79,127 @@ public static class StringBuilderExtensions
         return AppendLines(builder, objects.AsEnumerable());
     }
 
+    /// <summary>
+    /// Appends the given string's characters by converting them in uppercase.
+    /// </summary>
+    /// <param name="stringBuilder">
+    /// The <seealso cref="StringBuilder"/> instance on which to append.
+    /// </param>
+    /// <param name="value">The string to conver to uppercase.</param>
+    /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+    public static StringBuilder AppendUpper(this StringBuilder stringBuilder, string value)
+    {
+        for (int i = 0; i < value.Length; i++)
+            stringBuilder.Append(char.ToUpper(value[i]));
+
+        return stringBuilder;
+    }
+    /// <summary>
+    /// Appends the given string's characters by converting them in lowercase.
+    /// </summary>
+    /// <param name="stringBuilder">
+    /// The <seealso cref="StringBuilder"/> instance on which to append.
+    /// </param>
+    /// <param name="value">The string to conver to lowercase.</param>
+    /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+    public static StringBuilder AppendLower(this StringBuilder stringBuilder, string value)
+    {
+        for (int i = 0; i < value.Length; i++)
+            stringBuilder.Append(char.ToLower(value[i]));
+
+        return stringBuilder;
+    }
+
+    #region AppendLine
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, byte value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, short value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, int value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, long value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, sbyte value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, ushort value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, uint value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, ulong value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, float value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, double value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, decimal value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    public static StringBuilder AppendLine(this StringBuilder stringBuilder, char value)
+    {
+        return stringBuilder
+            .Append(value)
+            .AppendLine();
+    }
+    #endregion
+
+    /// <summary>
+    /// Appends a line to the string builder a number of times.
+    /// </summary>
+    /// <param name="stringBuilder">
+    /// The <seealso cref="StringBuilder"/> instance on which to append.
+    /// </param>
+    /// <param name="count">The number of lines to append.</param>
+    /// <returns>The same <seealso cref="StringBuilder"/> instance.</returns>
+    public static StringBuilder AppendLineCount(this StringBuilder stringBuilder, int count)
+    {
+        for (int i = 0; i < count; i++)
+            stringBuilder.AppendLine();
+        return stringBuilder;
+    }
+
     /// <summary>Copies this <seealso cref="StringBuilder"/> into a new instance.</summary>
     /// <param name="s">The <seealso cref="StringBuilder"/> to copy.</param>
     /// <returns>The new copied <seealso cref="StringBuilder"/> instance.</returns>
