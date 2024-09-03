@@ -1,9 +1,9 @@
 ﻿using Garyon.Extensions;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using static System.IO.Path;
-using static System.Math;
-using static System.String;
 
 namespace Garyon.Functions;
 
@@ -27,20 +27,23 @@ public static class PathUtilities
         return result;
     }
 
-    /// <summary>Adds the directory suffix to a path and returns the new string.</summary>
-    /// <param name="path">The path to add the directory suffix to.</param>
-    public static string AddDirectorySuffix(string path) => $@"{path}{DirectorySeparatorChar}";
-    /// <summary>Aggregates two directory names. Both must include the directory separator character; the function does not take care of that.</summary>
-    /// <param name="left">The left directory name. Must include the directory separator character.</param>
-    /// <param name="right">The right directory name. Must include the directory separator character.</param>
-    public static string AggregateDirectories(string left, string right) => $@"{left}{right}";
-
     /// <summary>Analyzes the provided path by splitting the individual item names by the directory separator character and returns the array of the names that form the path. The path is automatically converted to its appropriate platform-specific form.</summary>
     /// <param name="path">The path to analyze.</param>
-    public static string[] AnalyzePath(string path) => NormalizePath(path).Split(DirectorySeparatorChar).RemoveEmptyElements().ToArray();
+    public static string[] AnalyzePath(string path)
+    {
+        return NormalizePath(path)
+            .Split(DirectorySeparatorChar)
+            .NonEmpty()
+            .ToArray();
+    }
+
     /// <summary>Returns a concatenated string version of the provided directory collection including the directory separator character.</summary>
     /// <param name="directories">The directories to concatenate.</param>
-    public static string ConcatenateDirectoryPath(IEnumerable<string> directories) => directories.ToList().ConvertAll(AddDirectorySuffix).AggregateIfContains(AggregateDirectories);
+    public static string ConcatenateDirectoryPath(IEnumerable<string> directories)
+    {
+        return directories.Combine(DirectorySeparatorChar);
+    }
+
     /// <summary>Returns a concatenated string version of the provided directory collection including the directory separator character.</summary>
     /// <param name="directories">The directories to concatenate.</param>
     public static string ConcatenateDirectoryPath(params string[] directories) => ConcatenateDirectoryPath((IEnumerable<string>)directories);
@@ -54,7 +57,7 @@ public static class PathUtilities
         var splitB = AnalyzePath(pathB);
 
         var result = new List<string>();
-        int min = Min(splitA.Length, splitB.Length);
+        int min = Math.Min(splitA.Length, splitB.Length);
 
         for (int i = 0; i < min; i++)
         {
@@ -106,7 +109,7 @@ public static class PathUtilities
             return PathItemType.Volume;
         }
         if (EndsWithDirectorySeparator(path) ||
-            IsNullOrWhiteSpace(GetExtension(path)))
+            string.IsNullOrWhiteSpace(GetExtension(path)))
         {
             return PathItemType.Directory;
         }

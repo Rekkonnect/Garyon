@@ -319,18 +319,54 @@ public static class StringExtensions
     public static bool TryParseDecimal(this string s, out decimal value) => decimal.TryParse(s, out value);
     #endregion
 
+    #region Substring Until
+    public static string SubstringUntilFirst(this string s, char match)
+    {
+        int index = s.IndexOf(match);
+        if (index < 0)
+            return s;
+
+        return s.Substring(0, index);
+    }
+    public static string SubstringUntilFirst(this string s, string match)
+    {
+        int index = s.IndexOf(match);
+        if (index < 0)
+            return s;
+
+        return s.Substring(0, index);
+    }
+    public static string SubstringUntilLast(this string s, char match)
+    {
+        int index = s.LastIndexOf(match);
+        if (index < 0)
+            return s;
+
+        return s.Substring(0, index);
+    }
+    public static string SubstringUntilLast(this string s, string match)
+    {
+        int index = s.LastIndexOf(match);
+        if (index < 0)
+            return s;
+
+        return s.Substring(0, index);
+    }
+    #endregion
     #endregion
 
     #region IEnumerable<string>
-#if HAS_STRING_JOIN_CHAR
     /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
     /// <param name="strings">The collection of strings.</param>
     /// <param name="separator">The separator of the strings.</param>
     public static string Combine(this IEnumerable<string> strings, char separator)
     {
+#if HAS_STRING_JOIN_CHAR
         return string.Join(separator, strings);
-    }
+#else
+        return string.Join(separator.ToString(), strings);
 #endif
+    }
     /// <summary>Combines the strings of a string collection with a separator and returns the new string.</summary>
     /// <param name="strings">The collection of strings.</param>
     /// <param name="separator">The separator of the strings.</param>
@@ -343,6 +379,13 @@ public static class StringExtensions
     public static string Combine(this IEnumerable<string> strings)
     {
         return string.Concat(strings);
+    }
+
+    /// <summary>Gets all the non-null and non-empty strings from a collection.</summary>
+    /// <param name="strings">The collection of strings.</param>
+    public static IEnumerable<string> NonEmpty(this IEnumerable<string?> strings)
+    {
+        return strings.Where(string.IsNullOrEmpty);
     }
     #endregion
 

@@ -1316,14 +1316,7 @@ public static class ArrayConvertingExtensions
         where TFrom : unmanaged
         where TTo : unmanaged
     {
-#if HAS_INTRINSICS
-        if (SIMDPointerConversion.CopyToArrayVector128(origin, target, length))
-            return;
-
-        if (SIMDPointerConversion.CopyToArrayVector128(origin, target, length))
-            return;
-#endif
-
+#warning This might be unoptimized; consider removing or refactoring
         PointerConversion.ConvertTo(origin, target, length);
     }
 }

@@ -1,13 +1,12 @@
 ﻿using BenchmarkDotNet.Running;
 using Garyon.Benchmarking.Extensions;
 
-namespace Garyon.Benchmarking
+namespace Garyon.Benchmarking;
+
+public static class Program
 {
-    public static class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            BenchmarkRunningFunctions.RunArrayCopyingHelpers();
-        }
+        BenchmarkRunner.Run<EnumerableFlattening2D>();
     }
 }

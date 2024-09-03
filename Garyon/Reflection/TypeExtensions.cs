@@ -18,6 +18,21 @@ public static class TypeExtensions
     public static TypeCode GetTypeCode(this Type type) => Type.GetTypeCode(type);
     #endregion
 
+    #region General
+    /// <summary>
+    /// Gets the full name prefix of a generic type ignoring its arity,
+    /// or the same full name if the type is not a generic type.
+    /// </summary>
+    /// <param name="type">The type whose full name prefix to get.</param>
+    public static string GenericFullNamePrefixOrSame(this Type type)
+    {
+        if (!type.IsGenericType)
+            return type.FullName;
+
+        return type.FullName.SubstringUntilLast('`');
+    }
+    #endregion
+
     #region Inheritance
     /// <summary>Determines whether the provided type can inherit any type, either a class or an interface.</summary>
     /// <param name="type">The type to determine whether it can inherit any type.</param>
@@ -330,18 +345,19 @@ public static class TypeExtensions
     // The checks below are based on the estimated commonness of the attributes
 
     // Local static readonly variables please
-    private static readonly string tupleTypeNameStart = typeof(ValueTuple<>).FullName.RemoveLastNumber();
+    private static readonly string tupleTypeNameStart
+        = GenericFullNamePrefixOrSame(typeof(ValueTuple<>));
 
     /// <summary>Determines whether the type is <see langword="void"/>.</summary>
     /// <param name="type">The type to determine whether it is <see langword="void"/>.</param>
     /// <returns>A value determining whether the type is <see langword="void"/>.</returns>
     public static bool IsVoid(this Type type) => type == typeof(void);
-    /// <summary>Determines whehter the type is an actual class, and not an array, a delegate, a by reference, or a pointer type.</summary>
+    /// <summary>Determines whether the type is an actual class, and not an array, a delegate, a by reference, or a pointer type.</summary>
     /// <param name="type">The type to determine whether it is a class.</param>
     /// <returns>A value determining whether the type is a class.</returns>
     public static bool IsTrueClass(this Type type) => type.IsClass && !type.IsArray && !type.IsDelegate() && !type.IsPointer && !type.IsByRef;
 
-    /// <summary>Determines whehter the type is a static class.</summary>
+    /// <summary>Determines whether the type is a static class.</summary>
     /// <param name="type">The type to determine whether it is a static class.</param>
     /// <returns>A value determining whether the type is a static class.</returns>
     public static bool IsStaticClass(this Type type) => type.IsSealed && type.IsAbstract;
