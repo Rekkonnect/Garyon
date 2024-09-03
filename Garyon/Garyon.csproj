@@ -16,12 +16,12 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>common, extensions, utilities, library, reflection</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
-    <Copyright>© 2020-2023, Alex Kalfakakos</Copyright>
+    <Copyright>© 2020-2024, Alex Kalfakakos</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.3.3</Version>
+    <Version>0.4.0</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>

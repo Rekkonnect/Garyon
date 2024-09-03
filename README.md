@@ -11,14 +11,6 @@ implementations are up-to-date after updating the library.
 After the initial release, there will be **no such issues**. All the new APIs will be properly tested, constructed and organized before
 making it to production.
 
-## Why is it here?
-
-Many parts of the standard library are either incomplete or not as well-designed. This library offers further helpers and overall
-functionality with its code, preventing the user from needing to write commonly found boilerplate code for frequent tasks. Many projects
-include some utility code that could serve general purpose, and is being reimplemented on a per-project basis, which should not happen.
-Furthermore, a lot of the boilerplate code is not even nearly as optimized as it could be, while in some projects that need performance,
-optimizations are either mediocre, or just too in-depth, consuming useful time from actually developing the intended project.
-
 ## What areas does it cover?
 
 From `System.Console` to `System.Reflection`, or even custom implementations of common assets, this library can expand virtually every
@@ -26,7 +18,7 @@ single area the standard library does not fully cover.
 
 # Contribution
 
-Abide to the [code style](CodeStyle.md), ensure all additions are properly tested, and include test cases. More information is specifically
+Attempt to abide to the code style that the project's code already follows, ensure all changes are properly tested, and include test cases. More information is specifically
 given under the Quality Control section:
 
 # Quality Control
@@ -48,6 +40,4 @@ every case. Every single test must cover all edge cases, to never come across po
 
 # Performance
 
-To ensure performance is peak, SIMD must be taken into consideration. There are numerous instructions that fall under that category, and
-offer great performance improvements when used in an impactful amount. Repetitive calls to small functions should be inlined, whereas
-much less frequently used functions need not be inlined, neither optimized, for long as they do not completely ruin performance.
+This library aims to offer peak performance for its implementations. Some leftover APIs are not offering the best performance possible, and will be taken care of as the library is being maintained.
