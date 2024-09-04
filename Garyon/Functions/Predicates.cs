@@ -40,4 +40,6 @@ public static class Predicates
         return !element.HasValue;
     }
     #endregion
+
+    public static bool NotEmpty(string s) => !string.IsNullOrEmpty(s);
 }

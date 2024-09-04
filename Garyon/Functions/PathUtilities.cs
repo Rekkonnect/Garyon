@@ -41,7 +41,7 @@ public static class PathUtilities
     /// <param name="directories">The directories to concatenate.</param>
     public static string ConcatenateDirectoryPath(IEnumerable<string> directories)
     {
-        return directories.Combine(DirectorySeparatorChar);
+        return directories.Combine(DirectorySeparatorChar) + DirectorySeparatorChar;
     }
 
     /// <summary>Returns a concatenated string version of the provided directory collection including the directory separator character.</summary>
@@ -56,8 +56,8 @@ public static class PathUtilities
         var splitA = AnalyzePath(pathA);
         var splitB = AnalyzePath(pathB);
 
-        var result = new List<string>();
         int min = Math.Min(splitA.Length, splitB.Length);
+        var result = new List<string>(min);
 
         for (int i = 0; i < min; i++)
         {

@@ -316,7 +316,7 @@ CD
         Assert.AreEqual(typeof(int), intPointerByRefType.GetDeepestElementType());
     }
     [Test]
-    public void ContainsElementsOfType()
+    public unsafe void ContainsElementsOfType()
     {
         Assert.IsTrue(typeof(int*).ContainsElementsOfType<int>());
         Assert.IsTrue(typeof(int****).ContainsElementsOfType<int>());

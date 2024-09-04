@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Functions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -385,7 +386,7 @@ public static class StringExtensions
     /// <param name="strings">The collection of strings.</param>
     public static IEnumerable<string> NonEmpty(this IEnumerable<string?> strings)
     {
-        return strings.Where(string.IsNullOrEmpty);
+        return strings.Where(Predicates.NotEmpty);
     }
     #endregion
 
