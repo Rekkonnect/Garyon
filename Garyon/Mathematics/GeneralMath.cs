@@ -555,7 +555,7 @@ public static class GeneralMath
         return min;
     }
 
-#if NET7_0_OR_GREATER
+#if HAS_INUMBER
     /// <inheritdoc cref="Max{T}(IEnumerable{T})"/>
     public static T Max<T>(params T[] values)
         where T : INumber<T>, IMinMaxValue<T>
@@ -580,5 +580,64 @@ public static class GeneralMath
         return min;
     }
 #endif
+    #endregion
+
+    #region Square
+
+#if HAS_INUMBER
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <typeparam name="T">The type of the number to square.</typeparam>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static INumber<T> Square<T>(this T x)
+        where T : INumber<T>, IMultiplyOperators<T, T, T>
+    {
+        return x * x;
+    }
+#endif
+
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static int Square(this int x) => x * x;
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static uint Square(this uint x) => x * x;
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static long Square(this long x) => x * x;
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static ulong Square(this ulong x) => x * x;
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static float Square(this float x) => x * x;
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static double Square(this double x) => x * x;
+    /// <summary>Returns the square of the given number.</summary>
+    /// <param name="x">The number to square.</param>
+    /// <returns>The square of the number, equal to x * x.</returns>
+    public static decimal Square(this decimal x) => x * x;
+
+    #endregion
+
+    #region Pow
+
+    /// <summary>
+    /// Shorthand for <see cref="Math.Pow(double, double)"/>.
+    /// </summary>
+    /// <param name="x">The base number.</param>
+    /// <param name="exponent">The exponent to raise the base to.</param>
+    /// <returns>The result of the power operation.</returns>
+    public static double Pow(this double x, double exponent) => Math.Pow(x, exponent);
+
     #endregion
 }
