@@ -21,7 +21,7 @@
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.4.0</Version>
+    <Version>0.4.1</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
