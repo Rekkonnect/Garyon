@@ -25,7 +25,6 @@
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
-    <PackageReleaseNotes>Curate and remove lots of APIs</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Label="README reference">

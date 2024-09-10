@@ -318,6 +318,37 @@ public static class StringExtensions
     /// <param name="value">The <seealso cref="decimal"/> value of the <seealso cref="string"/>, if the parsing was successful, otherwise 0.</param>
     /// <returns><see langword="true"/> if the parsing was successful, otherwise <see langword="false"/>.</returns>
     public static bool TryParseDecimal(this string s, out decimal value) => decimal.TryParse(s, out value);
+
+    public static int? ParseNullableInt32(this string str)
+    {
+        var parsed = int.TryParse(str, out int tempValue);
+        return parsed ? tempValue : null;
+    }
+    public static uint? ParseNullableUInt32(this string str)
+    {
+        var parsed = uint.TryParse(str, out uint tempValue);
+        return parsed ? tempValue : null;
+    }
+    public static long? ParseNullableInt64(this string str)
+    {
+        var parsed = long.TryParse(str, out long tempValue);
+        return parsed ? tempValue : null;
+    }
+    public static ulong? ParseNullableUInt64(this string str)
+    {
+        var parsed = ulong.TryParse(str, out ulong tempValue);
+        return parsed ? tempValue : null;
+    }
+    public static float? ParseNullableSingle(this string str)
+    {
+        var parsed = float.TryParse(str, out float tempValue);
+        return parsed ? tempValue : null;
+    }
+    public static double? ParseNullableDouble(this string str)
+    {
+        var parsed = double.TryParse(str, out double tempValue);
+        return parsed ? tempValue : null;
+    }
     #endregion
 
     #region Substring Until

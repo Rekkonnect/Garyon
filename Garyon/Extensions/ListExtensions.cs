@@ -88,6 +88,29 @@ public static class ListExtensions
         l.RemoveAt(from + 1);
         return l;
     }
+
+    /// <summary>
+    /// Sets an element to the list at the specified index, by extending
+    /// the list if the count is insufficient.
+    /// </summary>
+    /// <typeparam name="T">The element type.</typeparam>
+    /// <param name="list">The list on which to set the element at the specified index.</param>
+    /// <param name="index">The index at which to set the element.</param>
+    /// <param name="element">The element to set.</param>
+    public static void SetEnsureCapacity<T>(this List<T> list, int index, T element)
+    {
+        int necessaryCount = index + 1;
+        int missingCount = necessaryCount - list.Count;
+        if (missingCount > 0)
+        {
+            list.Capacity = necessaryCount;
+            for (int i = 0; i < missingCount; i++)
+            {
+                list.Add(default);
+            }
+        }
+        list[index] = element;
+    }
     #endregion
 
     #region Contain Checks

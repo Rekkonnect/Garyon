@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Garyon.Benchmarking.Extensions;
 
-[SimpleJob(RuntimeMoniker.NetCoreApp50)]
+[SimpleJob(RuntimeMoniker.Net50)]
 public class IListExtensions
 {
     private List<int> list = new();

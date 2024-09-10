@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -105,4 +106,94 @@ public static class IListExtensions
         list.RemoveLast();
         return last;
     }
+
+    public static T? AtIndexOrDefaultReadOnly<T>(
+        this IReadOnlyList<T> source, int index)
+    {
+        TryGetAtIndexReadOnly(source, index, out var value);
+        return value;
+    }
+
+    public static T? AtIndexOrDefault<T>(
+        this IList<T> source, int index)
+    {
+        TryGetAtIndex(source, index, out var value);
+        return value;
+    }
+
+    public static bool TryGetAtIndexReadOnly<T>(
+        this IReadOnlyList<T> source, int index, out T? value)
+    {
+        if (source.Count > index)
+        {
+            value = source[index];
+            return true;
+        }
+
+        value = default;
+        return false;
+    }
+
+    public static bool TryGetAtIndex<T>(
+        this IList<T> source, int index, out T? value)
+    {
+        if (source.Count > index)
+        {
+            value = source[index];
+            return true;
+        }
+
+        value = default;
+        return false;
+    }
+
+    public static T? SingleOrDefaultReadOnly<T>(this IReadOnlyList<T> source)
+    {
+        if (source.Count is 1)
+        {
+            return source[0];
+        }
+
+        return default;
+    }
+
+    public static T? SingleOrDefault<T>(this IList<T> source)
+    {
+        if (source.Count is 1)
+        {
+            return source[0];
+        }
+
+        return default;
+    }
+
+    #region IList
+    /// <summary>
+    /// Clears the entire list and sets its contents to the given range.
+    /// </summary>
+    /// <param name="list">
+    /// The <seealso cref="IList"/> to clear and whose items to set.
+    /// </param>
+    /// <param name="items">The items to set to the list.</param>
+    public static void ClearSetRange(this IList list, IEnumerable items)
+    {
+        list.Clear();
+        list.Add(items);
+    }
+
+    /// <summary>
+    /// Adds a range of items to the given list.
+    /// </summary>
+    /// <param name="list">
+    /// The <seealso cref="IList"/> on which to add the items.
+    /// </param>
+    /// <param name="items">The items to add to the list.</param>
+    public static void AddRange(this IList list, IEnumerable items)
+    {
+        foreach (var item in items)
+        {
+            list.Add(item);
+        }
+    }
+    #endregion
 }
