@@ -62,21 +62,25 @@ public class AppDomainCache
     }
 
     /// <summary>Empties the cached types in <seealso cref="AllTypes"/>.</summary>
-    public void EmptyAllTypesCache() => allTypes.DestroyValue();
+    public void EmptyAllTypesCache() => allTypes.ClearValue();
     /// <summary>Empties the cached types in <seealso cref="AllClasses"/>.</summary>
-    public void EmptyAllClassesCache() => allClasses.DestroyValue();
+    public void EmptyAllClassesCache() => allClasses.ClearValue();
     /// <summary>Empties the cached types in <seealso cref="AllAbstractClasses"/>.</summary>
-    public void EmptyAllAbstractClassesCache() => allAbstractClasses.DestroyValue();
+    public void EmptyAllAbstractClassesCache() => allAbstractClasses.ClearValue();
     /// <summary>Empties the cached types in <seealso cref="AllNonAbstractClasses"/>.</summary>
-    public void EmptyAllNonAbstractClassesCache() => allNonAbstractClasses.DestroyValue();
+    public void EmptyAllNonAbstractClassesCache() => allNonAbstractClasses.ClearValue();
     /// <summary>Empties the cached types in <seealso cref="AllStructs"/>.</summary>
-    public void EmptyAllStructsCache() => allStructs.DestroyValue();
+    public void EmptyAllStructsCache() => allStructs.ClearValue();
     /// <summary>Empties the cached types in <seealso cref="AllInterfaces"/>.</summary>
-    public void EmptyAllInterfacesCache() => allInterfaces.DestroyValue();
+    public void EmptyAllInterfacesCache() => allInterfaces.ClearValue();
     /// <summary>Empties the cached types in <seealso cref="AllStaticClasses"/>.</summary>
-    public void EmptyAllStaticClassesCache() => allStaticClasses.DestroyValue();
+    public void EmptyAllStaticClassesCache() => allStaticClasses.ClearValue();
 
-    private AdvancedLazy<Type[]> NewLazyAllTypeRetriever(Predicate<Type> predicate) => new(AllTypeRetriever(predicate));
+    private AdvancedLazy<Type[]> NewLazyAllTypeRetriever(Predicate<Type> predicate)
+    {
+        return new(AllTypeRetriever(predicate));
+    }
+
     private Func<Type[]> AllTypeRetriever(Predicate<Type> predicate)
     {
         if (allTypes.IsValueCreated)
