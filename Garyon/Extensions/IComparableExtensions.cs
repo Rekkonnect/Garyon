@@ -42,7 +42,7 @@ public static class IComparableExtensions
     /// <param name="value">The provided value to compare.</param>
     /// <param name="other">The other value to compare.</param>
     /// <param name="kinds">The comparison kinds.</param>
-    /// <returns><see langword="true"/> if the comparison of <paramref name="value"/> with <paramref name="other"/> is satsified, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the comparison of <paramref name="value"/> with <paramref name="other"/> is satisfied, otherwise <see langword="false"/>.</returns>
     public static bool SatisfiesComparison(this IComparable value, object other, ComparisonKinds kinds)
     {
         return SatisfiesComparison(value.CompareTo(other), kinds);
@@ -110,7 +110,7 @@ public static class IComparableExtensions
     /// <param name="value">The provided value to compare.</param>
     /// <param name="other">The other value to compare.</param>
     /// <param name="kinds">The comparison kinds.</param>
-    /// <returns><see langword="true"/> if the comparison of <paramref name="value"/> with <paramref name="other"/> is satsified, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the comparison of <paramref name="value"/> with <paramref name="other"/> is satisfied, otherwise <see langword="false"/>.</returns>
     public static bool SatisfiesComparison<T>(this IComparable<T> value, T other, ComparisonKinds kinds)
     {
         return SatisfiesComparison(value.CompareTo(other), kinds);
@@ -190,7 +190,7 @@ public static class IComparableExtensions
     /// <param name="extremum">A reference to the variable storing the extremum. It may be overwritten if the comparison of <paramref name="other"/> against <paramref name="extremum"/> matches <paramref name="targetComparison"/>.</param>
     /// <param name="other">The other value to overwrite <paramref name="extremum"/> with, if deemed as the new extremum.</param>
     /// <param name="targetComparison">
-    /// The target copmarison that must be matched in a value against the extremum to overwrite it.
+    /// The target comparison that must be matched in a value against the extremum to overwrite it.
     /// In other words, comparing <paramref name="other"/> against <paramref name="extremum"/> should match this <seealso cref="ComparisonResult"/>, in order to overwrite <paramref name="extremum"/>.
     /// </param>
     public static void AssignExtremum<T>(this ref T extremum, T other, ComparisonResult targetComparison)

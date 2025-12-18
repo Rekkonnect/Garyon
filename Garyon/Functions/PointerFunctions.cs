@@ -19,6 +19,7 @@ public static class PointerFunctions
         }
 #endif
     }
+
     public static unsafe void Clear(void* pointer, int bytes)
     {
 #if HAS_SPAN

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Garyon.Extensions;
 
@@ -8,6 +10,23 @@ namespace Garyon.Extensions;
 /// </summary>
 public static class DirectoryInfoExtensions
 {
+    /// <summary>
+    /// Enumerates all parent directories.
+    /// </summary>
+    /// <returns>
+    /// A lazily evaluated collection of directories, with the first being the
+    /// direct parent, and the last being the root of the path.
+    /// </returns>
+    /// <remarks>
+    /// This only includes all types returned from <see cref="DirectoryInfo.Parent"/>
+    /// recursively. It does not include implemented interfaces.
+    /// </remarks>
+    public static IEnumerable<DirectoryInfo> EnumerateParents(
+        this DirectoryInfo directory)
+    {
+        return directory.EnumerateRecursiveProperty(s => s.Parent);
+    }
+
     /// <summary>
     /// Gets the depth of this directory, meaning the number of directories
     /// between the root and this directory.
@@ -19,17 +38,7 @@ public static class DirectoryInfoExtensions
     /// </returns>
     public static int Depth(this DirectoryInfo directory)
     {
-        var current = directory;
-        int depth = 0;
-        while (true)
-        {
-            current = current.Parent;
-
-            if (current is null)
-                return depth;
-
-            depth++;
-        }
+        return directory.EnumerateParents().Count();
     }
 
     /// <summary>
@@ -50,10 +59,12 @@ public static class DirectoryInfoExtensions
     /// </returns>
     public static DirectoryInfo? RecursiveParent(this DirectoryInfo directory, int levels = 1)
     {
-        var current = directory;
-        for (int i = 0; i < levels; i++)
-            current = current?.Parent;
-        return current;
+        if (levels is 0)
+        {
+            return directory;
+        }
+
+        return directory.EnumerateParents().ElementAtOrDefault(levels - 1);
     }
 
     /// <summary>
@@ -72,15 +83,8 @@ public static class DirectoryInfoExtensions
     /// </returns>
     public static DirectoryInfo BoundRecursiveParent(this DirectoryInfo directory, int levels = 1)
     {
-        var current = directory;
-        for (int i = 0; i < levels; i++)
-        {
-            var parent = current.Parent;
-            if (parent is null)
-                return current;
-            current = parent;
-        }
-        return current;
+        return directory.EnumerateParents().Take(levels).LastOrDefault()
+            ?? directory;
     }
 
     /// <summary>

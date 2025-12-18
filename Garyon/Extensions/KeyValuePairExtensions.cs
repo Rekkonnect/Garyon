@@ -38,4 +38,24 @@ public static class KeyValuePairExtensions
     /// <param name="value">The new value to use in the new <seealso cref="KeyValuePair{TKey, TValue}"/>.</param>
     /// <returns>A new <seealso cref="KeyValuePair{TKey, TValue}"/> instance with the key of <paramref name="kvp"/>, and <paramref name="value"/> as the value.</returns>
     public static KeyValuePair<TKey, TNewValue> WithValue<TKey, TValue, TNewValue>(this KeyValuePair<TKey, TValue> kvp, TNewValue value) => new(kvp.Key, value);
+
+#if !HAS_KVP_DECONSTRUCT
+    /// <summary>
+    /// Deconstructs the instance into its key and value components.
+    /// </summary>
+    /// <remarks>
+    /// This complements the lack of the built-in API which enables tuple
+    /// deconstruction and other first-class features around a deconstructible
+    /// type. If the target framework adds support for this natively, this
+    /// method is not defined.
+    /// </remarks>
+    public static void Deconstruct<TKey, TValue>(
+        this KeyValuePair<TKey, TValue> kvp,
+        out TKey key,
+        out TValue value)
+    {
+        key = kvp.Key;
+        value = kvp.Value;
+    }
+#endif
 }

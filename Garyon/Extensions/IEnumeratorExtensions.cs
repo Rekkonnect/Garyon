@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-#if NETCOREAPP3_1_OR_GREATER
+#if HAS_IMMUTABLE
 using System.Collections.Immutable;
 #endif
 
@@ -37,6 +37,7 @@ public static class IEnumeratorExtensions
     {
         return enumerator;
     }
+
     /// <inheritdoc cref="GetEnumerator{T}(IEnumerator{T})"/>
     /// <typeparam name="TValue">The type of the enumerated values.</typeparam>
     /// <typeparam name="TEnumerator">The type of the enumerator.</typeparam>
@@ -54,8 +55,10 @@ public static class IEnumeratorExtensions
 
     public static T[] ToArray<T>(this IEnumerator<T> enumerator, bool resetEnumerator = false)
     {
-        return enumerator.ToList(resetEnumerator)
-                         .ToArray();
+        
+        return enumerator
+            .ToList(resetEnumerator)
+            .ToArray();
     }
     public static List<T> ToList<T>(this IEnumerator<T> enumerator, bool resetEnumerator = false)
     {
@@ -64,7 +67,7 @@ public static class IEnumeratorExtensions
         return list;
     }
 
-#if NETCOREAPP3_1_OR_GREATER
+#if HAS_IMMUTABLE
     public static ImmutableArray<T> ToImmutableArray<T>(this IEnumerator<T> enumerator, bool resetEnumerator = false)
     {
         var builder = ImmutableArray.CreateBuilder<T>();

@@ -1,0 +1,44 @@
+﻿<Project InitialTargets="MinimizeDefineConstantsTarget">
+
+  <!--
+    Normalize DefinedConstants due to the whitespaces causing tons of bullshit warnings
+    We will normalize the string to only contain the names, delimited by ;
+    without the trailing ;
+  -->
+
+  <UsingTask
+      TaskName="MinimizeStringArray"
+      TaskFactory="CodeTaskFactory"
+      AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <input ParameterType="System.String" Required="true" />
+      <result ParameterType="System.String" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+            var split = input
+              .Split(';')
+              .Select(s => s.Trim())
+              .Where(s => s != string.Empty);
+            result = string.Join(";", split);
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="MinimizeDefineConstantsTarget">
+    <MinimizeStringArray input="$(DefineConstants)">
+      <Output TaskParameter="result" PropertyName="DefineConstants" />
+    </MinimizeStringArray>
+
+    <PropertyGroup>
+      <DefineConstants>$(DefineConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <Warning
+      Text="'Defined constants: $(DefineConstants)'"
+      Condition="false" />
+  </Target>
+
+</Project>

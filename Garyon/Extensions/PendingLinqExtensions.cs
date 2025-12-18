@@ -4,7 +4,12 @@ using System.Collections.Generic;
 
 namespace Garyon.Extensions;
 
-/// <summary>Contains functions that might be moved to dotnet/runtime (#46042).</summary>
+// Proposals:
+// - https://github.com/dotnet/runtime/issues/46042 (REJECTED)
+
+/// <summary>
+/// Contains functions proposed to be added to LINQ but were not.
+/// </summary>
 public static class PendingLinqExtensions
 {
     // When this goes to System.Linq.Enumerable (if at all), change the code responsible for the ThrowHelper

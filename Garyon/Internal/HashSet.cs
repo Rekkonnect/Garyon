@@ -12,6 +12,7 @@ internal static class HashSet
         return new();
 #endif
     }
+
     public static HashSet<T> New<T>(int count, IEqualityComparer<T> comparer)
     {
 #if HAS_HASHSET_CAPACITY_CTOR

@@ -1,9 +1,9 @@
-﻿using Garyon.DataStructures;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 using Garyon.Extensions;
 using System;
+using Garyon.DataStructures.Trees;
 
 namespace Garyon.Tests.DataStructures;
 

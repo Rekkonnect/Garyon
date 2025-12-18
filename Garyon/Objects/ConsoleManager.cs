@@ -56,27 +56,27 @@ public class ConsoleManager
     /// <param name="text">The text to write.</param>
     public void Write(string text)
     {
-        ConsoleUtilities.WriteWithColor(text, OutputColorSet, ResetColorAfterOperation);
+        Console.WriteWithColor(text, OutputColorSet, ResetColorAfterOperation);
     }
     /// <summary>Writes the specified text using the current <seealso cref="ConsoleColorSet"/> and appends a line.</summary>
     /// <param name="text">The text to write.</param>
     public void WriteLine(string text)
     {
-        ConsoleUtilities.WriteLineWithColor(text, OutputColorSet, ResetColorAfterOperation);
+        Console.WriteLineWithColor(text, OutputColorSet, ResetColorAfterOperation);
     }
     /// <summary>Writes the specified text using the current <seealso cref="ConsoleColorSet"/> and optionally appends a line.</summary>
     /// <param name="text">The text to write.</param>
     /// <param name="newlineAfterText">Determines whether a newline will be appended after the text.</param>
     public void WriteWithOptionalNewline(string text, bool newlineAfterText)
     {
-        ConsoleUtilities.WriteWithColorAndOptionalNewline(text, OutputColorSet, ResetColorAfterOperation, newlineAfterText);
+        Console.WriteWithColorAndOptionalNewline(text, OutputColorSet, ResetColorAfterOperation, newlineAfterText);
     }
 
     /// <summary>Reads a line from the console with the current <seealso cref="ConsoleColorSet"/>.</summary>
     /// <returns>The input string that was given.</returns>
     public string ReadLine()
     {
-        return ConsoleUtilities.ReadLineWithColor(OutputColorSet, ResetColorAfterOperation);
+        return Console.ReadLineWithColor(OutputColorSet, ResetColorAfterOperation);
     }
     /// <summary>Requests input from the console, providing a request message before doing so, with with the current <seealso cref="ConsoleColorSet"/>s for both input and output.</summary>
     /// <param name="requestMessage">The message to write before requesting input.</param>
@@ -84,6 +84,6 @@ public class ConsoleManager
     /// <returns>The input string that was given.</returns>
     public string RequestInputLine(string requestMessage, bool newlineAfterMessage = true)
     {
-        return ConsoleUtilities.RequestInputLine(requestMessage, OutputColorSet, InputColorSet, ResetColorAfterOperation, newlineAfterMessage);
+        return Console.RequestInputLine(requestMessage, OutputColorSet, InputColorSet, ResetColorAfterOperation, newlineAfterMessage);
     }
 }

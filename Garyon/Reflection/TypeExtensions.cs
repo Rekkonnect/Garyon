@@ -1,12 +1,14 @@
 ﻿using Garyon.Attributes;
-using Garyon.DataStructures;
+using Garyon.DataStructures.Trees;
 using Garyon.Exceptions;
 using Garyon.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace Garyon.Reflection;
 
@@ -147,7 +149,7 @@ public static class TypeExtensions
 
         if (!type.CanInherit())
             return tree;
-        
+
         var leaves = new Queue<TreeNode<Type>>();
         leaves.Enqueue(tree.Root);
 
@@ -231,6 +233,23 @@ public static class TypeExtensions
 
         return type.GetInterfaceInheritanceTree().Height;
     }
+
+    /// <summary>
+    /// Enumerates all base types of a type.
+    /// </summary>
+    /// <returns>
+    /// A lazily evaluated collection of types, with the first being the
+    /// directly inherited base type, and the last being the furthest in the
+    /// inheritance tree.
+    /// </returns>
+    /// <remarks>
+    /// This only includes all types returned from <see cref="Type.BaseType"/>
+    /// recursively. It does not include implemented interfaces.
+    /// </remarks>
+    public static IEnumerable<Type> EnumerateBaseTypes(this Type type)
+    {
+        return type.EnumerateRecursiveProperty(s => s.BaseType);
+    }
     #endregion
 
     #region Generic
@@ -303,10 +322,10 @@ public static class TypeExtensions
     /// </returns>
     public static MethodBase? GetDeclaringMethodSafe(this Type type)
     {
-#if KNOWS_GENERIC_PARAMETERS
+#if KNOWS_GENERIC_PARAMETER_TYPES_IN_REFLECTION
         if (type.IsGenericMethodParameter)
             return type.DeclaringMethod;
-        
+
         return null;
 #else
         return type.DeclaringMethod;
@@ -320,7 +339,7 @@ public static class TypeExtensions
     /// <exception cref="ArgumentException">Thrown when <paramref name="type"/> is not a generic type parameter.</exception>
     public static MemberInfo GetOriginalDeclaringGenericMember(this Type type)
     {
-#if KNOWS_GENERIC_PARAMETERS
+#if KNOWS_GENERIC_PARAMETER_TYPES_IN_REFLECTION
         if (!type.IsGenericTypeParameter)
             throw new ArgumentException("The given type must be a generic type parameter.");
 #endif
@@ -338,6 +357,103 @@ public static class TypeExtensions
         }
 
         return originalDeclaringMember;
+    }
+
+    /// <summary>
+    /// Determines whether a type inherits a generic variant of another type.
+    /// Supports both classes and interfaces.
+    /// </summary>
+    /// <param name="type">The type that must inherit the target generic type.</param>
+    /// <param name="genericDefinition">The generic definition that must be inherited.</param>
+    /// <param name="genericVariantType">
+    /// The constructed variant that is inherited.
+    /// <see langword="null"/> if it doesn't exist.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if <paramref name="type"/> inherits
+    /// <paramref name="genericVariantType"/>, which is a construction of
+    /// <paramref name="genericDefinition"/>, otherwise <see langword="false"/>.
+    /// </returns>
+    /// <exception cref="ArgumentException">
+    /// Thrown if the <paramref name="genericDefinition"/> argument is not a
+    /// generic type definition, that is it must not be a constructed generic type.
+    /// </exception>
+    public static bool InheritsGenericVariantOf(
+        Type type,
+        Type genericDefinition,
+#if HAS_NULLABLE_ANNOTATION_ATTRIBUTES
+        [NotNullWhen(true)]
+#endif
+        out Type? genericVariantType)
+    {
+        AssertGenericDefinition(genericDefinition);
+
+        if (genericDefinition.IsInterface)
+        {
+            return InheritsGenericVariantOfInterface(
+                type, genericDefinition, out genericVariantType);
+        }
+        else
+        {
+            return InheritsGenericVariantOfClass(
+                type, genericDefinition, out genericVariantType);
+        }
+    }
+
+    private static bool InheritsGenericVariantOfClass(
+        Type type, Type genericDefinition, out Type? genericVariantType)
+    {
+        genericVariantType = null;
+
+        var baseTypes = type.EnumerateBaseTypes();
+        return InheritsGenericVariant(genericDefinition, baseTypes, out genericVariantType);
+    }
+
+    private static bool InheritsGenericVariantOfInterface(
+        Type type, Type genericDefinition, out Type? genericVariantType)
+    {
+        genericVariantType = null;
+
+        var interfaces = type.GetInterfaces();
+        return InheritsGenericVariant(genericDefinition, interfaces, out genericVariantType);
+    }
+
+    private static bool InheritsGenericVariant(
+        Type genericDefinition,
+        IEnumerable<Type> baseTypes,
+        out Type genericVariantType)
+    {
+        genericVariantType = null;
+
+        foreach (var baseType in baseTypes)
+        {
+            if (baseType.IsGenericVariantOf(genericDefinition))
+            {
+                genericVariantType = baseType;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static void AssertGenericDefinition(
+        Type genericDefinition
+#if HAS_CALLER_INFORMATION_ATTRIBUTES
+        ,
+        [CallerArgumentExpression(nameof(genericDefinition))] string callerExpression = ""
+#endif
+        )
+    {
+        if (!genericDefinition.IsGenericTypeDefinition)
+        {
+            throw new ArgumentException(
+                "You must provide a generic definition type"
+#if HAS_CALLER_INFORMATION_ATTRIBUTES
+                ,
+                callerExpression
+#endif
+                );
+        }
     }
     #endregion
 
@@ -416,7 +532,7 @@ public static class TypeExtensions
             && !type.IsPointer
             && !type.IsVoid();
     }
-#endregion
+    #endregion
 
     #region Arrays
     /// <summary>Creates a jagged array type object with the specified jagging level.</summary>
@@ -551,7 +667,7 @@ public static class TypeExtensions
     /// <returns>The constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
     public static ConstructorInfo GetAnyAccessibilityConstructor(this Type type, params Type[] argumentTypes)
     {
-        return type.GetConstructor(BindingFlagsFactory.AnyAccessibilityInstance, null, argumentTypes, null);
+        return type.GetConstructor(CommonBindingFlags.AnyAccessibilityInstance, null, argumentTypes, null);
     }
 
     #region Generic Overloads (up to 16 arguments)

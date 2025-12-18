@@ -8,7 +8,7 @@ namespace Garyon.Objects;
 
 /// <summary>
 /// Provides helper methods for handling yielded
-/// values from factory methods. 
+/// values from factory methods.
 /// </summary>
 public static class Yielding
 {

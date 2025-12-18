@@ -17,7 +17,7 @@ public static class Predicates
     /// <param name="element">The element.</param>
     /// <returns><see langword="true"/> if the element is <see langword="null"/>, otherwise <see langword="false"/>.</returns>
     /// <remarks>For nullable structs, consider using <see cref="DoesNotHaveValue{T}(T?)"/>.</remarks>
-    public static bool Null<T>(T element) => element == null;
+    public static bool Null<T>(T element) => element is null;
     #endregion
 
     #region Nullable

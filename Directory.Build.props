@@ -1,0 +1,13 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+    <FrameworkCapabilitiesPropsPath>$(RepoRoot)FrameworkCapabilities.Generated.props</FrameworkCapabilitiesPropsPath>
+  </PropertyGroup>
+
+  <Import Project="$(FrameworkCapabilitiesPropsPath)" />
+
+  <Import Project="FrameworkCapabilities.props" />
+  <Import Project="NormalizeDefineConstants.props" />
+
+</Project>

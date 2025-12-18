@@ -11,6 +11,7 @@ public static unsafe class Allocation
     /// <param name="bytes">The number of bytes to allocate.</param>
     /// <returns>A <see langword="void"/>* pointing to the start of the allocated block.</returns>
     public static void* Allocate(int bytes) => (void*)Marshal.AllocHGlobal(bytes);
+
     /// <summary>Allocates a block of elements of a specified type <typeparamref name="T"/> from the unmanaged heap.</summary>
     /// <typeparam name="T">The type of elements the allocated block will store.</typeparam>
     /// <param name="elements">The number of elements the allocated block will store.</param>
@@ -30,6 +31,7 @@ public static unsafe class Allocation
         PointerFunctions.Clear(pointer, bytes);
         return pointer;
     }
+
     /// <summary>Allocates a block of elements of a specified type <typeparamref name="T"/> from the unmanaged heap, and zeroes it.</summary>
     /// <typeparam name="T">The type of elements the allocated block will store.</typeparam>
     /// <param name="elements">The number of elements the allocated block will store.</param>
@@ -48,6 +50,7 @@ public static unsafe class Allocation
     {
         return (void*)Marshal.ReAllocHGlobal((IntPtr)pointer, (IntPtr)bytes);
     }
+
     /// <summary>Reallocates a block of elements from the unmanaged heap.</summary>
     /// <param name="pointer">The pointer to the original block that will be reallocated.</param>
     /// <param name="elements">The number of elements of the newly allocated block.</param>

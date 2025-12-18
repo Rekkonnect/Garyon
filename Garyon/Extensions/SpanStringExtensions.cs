@@ -17,17 +17,43 @@ namespace Garyon.Extensions;
 public static class SpanStringExtensions
 {
     #region Fluent
+#if HAS_STATIC_ABSTRACTS
+    public static T Parse<T>(
+        this SpanString spanString,
+        IFormatProvider? formatProvider = null)
+        where T : struct, ISpanParsable<T>
+    {
+        return T.Parse(spanString, formatProvider);
+    }
+#endif
+
+    public static byte ParseByte(this SpanString spanString)
+    {
+        return byte.Parse(spanString);
+    }
+    public static sbyte ParseSByte(this SpanString spanString)
+    {
+        return sbyte.Parse(spanString);
+    }
+    public static short ParseInt16(this SpanString spanString)
+    {
+        return short.Parse(spanString);
+    }
+    public static ushort ParseUInt16(this SpanString spanString)
+    {
+        return ushort.Parse(spanString);
+    }
     public static int ParseInt32(this SpanString spanString)
     {
         return int.Parse(spanString);
     }
-    public static long ParseInt64(this SpanString spanString)
-    {
-        return long.Parse(spanString);
-    }
     public static uint ParseUInt32(this SpanString spanString)
     {
         return uint.Parse(spanString);
+    }
+    public static long ParseInt64(this SpanString spanString)
+    {
+        return long.Parse(spanString);
     }
     public static ulong ParseUInt64(this SpanString spanString)
     {
@@ -45,6 +71,17 @@ public static class SpanStringExtensions
     {
         return decimal.Parse(spanString);
     }
+
+#if HAS_STATIC_ABSTRACTS
+    public static bool TryParse<T>(
+        this SpanString spanString,
+        IFormatProvider? formatProvider,
+        out T result)
+        where T : struct, ISpanParsable<T>
+    {
+        return T.TryParse(spanString, formatProvider, out result);
+    }
+#endif
 
     public static bool TryParseInt32(this SpanString spanString, out int value)
     {

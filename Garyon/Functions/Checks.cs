@@ -15,6 +15,7 @@ public static class Checks
     {
         return left?.Equals(right) ?? (right is null);
     }
+
     /// <summary>Determines whether two objects are equal using the <seealso cref="object.Equals(object?)"/> method without triggering a <seealso cref="NullReferenceException"/>.</summary>
     /// <typeparam name="T">The type of the objects to compare.</typeparam>
     /// <param name="left">The left object to compare.</param>

@@ -9,6 +9,9 @@ using System.Reflection;
 
 namespace Garyon.Reflection;
 
+// TODO: This is better as a simple generic bidirectional dictionary
+// Agnostic to the attribute
+
 /// <summary>
 /// Contains information for enums with members denoted with
 /// <seealso cref="CodeAttribute"/>.

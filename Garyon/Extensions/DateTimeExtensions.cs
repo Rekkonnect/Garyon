@@ -29,32 +29,42 @@ public enum DateTimeComponent
     Year,
 }
 
-/// <summary>Prvoides extension functions for the <seealso cref="DateTime"/> struct.</summary>
+/// <summary>Provides extension functions for the <seealso cref="DateTime"/> struct.</summary>
 public static class DateTimeExtensions
 {
+    public const int NormalYearDays = 365;
+    public const int LeapYearDays = 366;
+
     /// <summary>Gets the specified component of the given <seealso cref="DateTime"/> instance.</summary>
     /// <param name="dateTime">The <seealso cref="DateTime"/> instance whose component to get.</param>
     /// <param name="component">The component of the <seealso cref="DateTime"/> instance to get.</param>
     /// <returns>The requested component of the <seealso cref="DateTime"/> instance, represented by the specified <seealso cref="DateTimeComponent"/>.</returns>
-    public static long GetComponentInt64(this DateTime dateTime, DateTimeComponent component) => component switch
+    public static long GetComponentInt64(this DateTime dateTime, DateTimeComponent component)
     {
-        DateTimeComponent.Ticks => dateTime.Ticks,
-        _ => GetComponent(dateTime, component),
-    };
+        return component switch
+        {
+            DateTimeComponent.Ticks => dateTime.Ticks,
+            _ => GetComponent(dateTime, component),
+        };
+    }
+
     /// <summary>Gets the specified component of the given <seealso cref="DateTime"/> instance.</summary>
     /// <param name="dateTime">The <seealso cref="DateTime"/> instance whose component to get.</param>
     /// <param name="component">The component of the <seealso cref="DateTime"/> instance to get. To get the <seealso cref="DateTimeComponent.Ticks"/> component, use <seealso cref="GetComponentInt64(DateTime, DateTimeComponent)"/>.</param>
     /// <returns>The requested component of the <seealso cref="DateTime"/> instance, represented by the specified <seealso cref="DateTimeComponent"/>.</returns>
-    public static int GetComponent(this DateTime dateTime, DateTimeComponent component) => component switch
+    public static int GetComponent(this DateTime dateTime, DateTimeComponent component)
     {
-        DateTimeComponent.Millisecond => dateTime.Millisecond,
-        DateTimeComponent.Second => dateTime.Second,
-        DateTimeComponent.Minute => dateTime.Minute,
-        DateTimeComponent.Hour => dateTime.Hour,
-        DateTimeComponent.Day => dateTime.Day,
-        DateTimeComponent.Month => dateTime.Month,
-        DateTimeComponent.Year => dateTime.Year,
-    };
+        return component switch
+        {
+            DateTimeComponent.Millisecond => dateTime.Millisecond,
+            DateTimeComponent.Second => dateTime.Second,
+            DateTimeComponent.Minute => dateTime.Minute,
+            DateTimeComponent.Hour => dateTime.Hour,
+            DateTimeComponent.Day => dateTime.Day,
+            DateTimeComponent.Month => dateTime.Month,
+            DateTimeComponent.Year => dateTime.Year,
+        };
+    }
 
     #region Shortcuts
     /// <summary>Gets the days the month of the provided <seealso cref="DateTime"/> has.</summary>
@@ -71,7 +81,7 @@ public static class DateTimeExtensions
     /// <param name="dateTime">The <seealso cref="DateTime"/> whose year's day count to get.</param>
     /// <returns>The number of days the year of <paramref name="dateTime"/> has.</returns>
     [ExcludeFromCodeCoverage]
-    public static int DaysInYear(this DateTime dateTime) => dateTime.IsInLeapYear() ? 366 : 365;
+    public static int DaysInYear(this DateTime dateTime) => DaysInYear(dateTime.IsInLeapYear());
 
     /// <summary>Gets the days the specified year contains.</summary>
     /// <param name="year">The year whose days to determine.</param>
@@ -82,7 +92,7 @@ public static class DateTimeExtensions
     /// <param name="isLeapYear">Determines whether the year is a leap year or not.</param>
     /// <returns>The number of days the year has.</returns>
     [ExcludeFromCodeCoverage]
-    public static int DaysInYear(bool isLeapYear) => isLeapYear ? 366 : 365;
+    public static int DaysInYear(bool isLeapYear) => isLeapYear ? LeapYearDays : NormalYearDays;
     #endregion
 
     #region Individual Adjustments
@@ -239,8 +249,8 @@ public static class DateTimeExtensions
         ValidateSecondComponent(second);
         ValidateMillisecondComponent(millisecond);
         int targetMilliseconds = ((hour * 60 + minute) * 60 + second) * 1000 + millisecond;
-        int currentMillseconds = ((dateTime.Hour * 60 + dateTime.Minute) * 60 + dateTime.Second) * 1000 + dateTime.Millisecond;
-        return dateTime.AddMilliseconds(targetMilliseconds - currentMillseconds);
+        int currentMilliseconds = ((dateTime.Hour * 60 + dateTime.Minute) * 60 + dateTime.Second) * 1000 + dateTime.Millisecond;
+        return dateTime.AddMilliseconds(targetMilliseconds - currentMilliseconds);
     }
 
     /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the minute and the second components of the copied value are set to specified values.</summary>
@@ -488,7 +498,7 @@ public static class DateTimeExtensions
     private static void ValidateDate(int year, int month, int day)
     {
         if (day > DateTime.DaysInMonth(year, month))
-            ThrowHelper.Throw<ArgumentOutOfRangeException>($"Attempted to adjust the date to {year:D4}/{month:D2}/{day:D2} (YYYY/MM/DD), but the year/month combination contains less days than the given.");
+            ThrowHelper.Throw<ArgumentOutOfRangeException>($"Attempted to adjust the date to {year:D4}-{month:D2}-{day:D2}, but the year/month combination contains less days than the given.");
     }
     [MethodImpl(MethodImplOptions.NoInlining)]
     private static void ValidateDayOfYear(int year, int day)

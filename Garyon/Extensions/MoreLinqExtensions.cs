@@ -1,5 +1,6 @@
 ﻿#nullable enable
 
+using Garyon.Functions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +54,7 @@ public static class MoreLinqExtensions
     /// <param name="source">The source collection whose elements to perform the actions on. If the collection is empty, no action will be taken.</param>
     /// <param name="firstElementAction">The action to perform on the first element.</param>
     /// <param name="lastElementAction">The action to perform on the last element.</param>
-    /// <param name="enumerationAction">The action to perform on all enuemrated elements. This is also applied to the first and the last elements.</param>
+    /// <param name="enumerationAction">The action to perform on all enumerated elements. This is also applied to the first and the last elements.</param>
     /// <returns><see langword="true"/> if <paramref name="source"/> contained at least one element and actions were performed, otherwise <see langword="false"/>.</returns>
     public static bool EnumeratePerformAction<T>(this IEnumerable<T> source, Action<T>? firstElementAction, Action<T>? lastElementAction, Action<T> enumerationAction)
     {
@@ -98,6 +99,30 @@ public static class MoreLinqExtensions
         return source.WherePredicate(predicate).Count() >= occurrences;
     }
 
+    /// <summary>Gets the count of elements that are not <see langword="null"/>.</summary>
+    /// <typeparam name="T">The type of the elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
+    /// <param name="source">The <seealso cref="IEnumerable{T}"/> whose elements to iterate.</param>
+    /// <returns>The total number of elements that are not <see langword="null"/>.</returns>
+    public static int NotNullCount<T>(this IEnumerable<T> source)
+    {
+        return source.Count(Predicates.NotNull);
+    }
+    /// <summary>Gets the count of elements that are not <see langword="null"/>.</summary>
+    /// <typeparam name="T">The type of the elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>
+    /// <param name="source">The <seealso cref="IEnumerable{T}"/> whose elements to iterate.</param>
+    /// <returns>The total number of elements that are not <see langword="null"/>.</returns>
+    public static int NullCount<T>(this IEnumerable<T> source)
+    {
+        return source.Count(Predicates.Null);
+    }
+    /// <summary>
+    /// Filters the items and returns only those that are not null.
+    /// </summary>
+    public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T?> source)
+    {
+        return source.Where(Predicates.NotNull)!;
+    }
+
     /// <summary>
     /// Applies a function to the given value and returns the result.
     /// </summary>
@@ -106,10 +131,44 @@ public static class MoreLinqExtensions
     /// <param name="source">The source value.</param>
     /// <param name="function">The function to apply to the source value.</param>
     /// <returns>
-    /// The resutling value after applying <paramref name="function"/> to <paramref name="source"/>.
+    /// The resulting value after applying <paramref name="function"/> to <paramref name="source"/>.
     /// </returns>
-    public static TResult Pass<TSource, TResult>(this TSource source, Func<TSource, TResult> function)
+    public static TResult Apply<TSource, TResult>(this TSource source, Func<TSource, TResult> function)
     {
         return function(source);
     }
+
+    /// <summary>
+    /// Filters all groupings and returns only those that have non-null keys.
+    /// </summary>
+    public static IEnumerable<IGrouping<TKey, TValue>> WhereNotNullKeys<TKey, TValue>(
+        this IEnumerable<IGrouping<TKey?, TValue>> grouping)
+    {
+        return grouping
+            .Where(s => s.Key is not null)!
+            .AsEnumerable<IGrouping<TKey, TValue>>()
+            ;
+    }
+
+    /// <summary>
+    /// Zips both sequences into a sequence of tuples.
+    /// </summary>
+    public static IEnumerable<(TA First, TB Second)> Zip<TA, TB>(
+        this IEnumerable<TA> source,
+        IEnumerable<TB> other)
+    {
+        return source.Zip(other, static (a, b) => (a, b));
+    }
+
+    /// <summary>
+    /// Converts all groupings to a dictionary,
+    /// with the values being a <see cref="List{T}"/>.
+    /// </summary>
+    public static Dictionary<TKey, List<TValue>> ToListDictionary<TKey, TValue>(
+        this IEnumerable<IGrouping<TKey, TValue>> groupings)
+        where TKey : notnull
+    {
+        return groupings.ToDictionary(s => s.Key, s => s.ToList());
+    }
+
 }

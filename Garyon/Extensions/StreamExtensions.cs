@@ -15,10 +15,6 @@ namespace Garyon.Extensions;
 /// <summary>Provides extensions for the <see cref="Stream"/> class.</summary>
 public static unsafe class StreamExtensions
 {
-    private const string UTF7ObsoletionMessage = "The UTF-7 encoding is insecure and should not be used. Consider using UTF-8 instead.";
-    private const string UTF7ObsoletionDiagnosticID = "SYSLIB0001";
-    private const string UTF7ObsoletionURLFormat = "https://aka.ms/dotnet-warnings/{0}";
-
     #region Property-like extensions
     /// <summary>Determines whether a <seealso cref="Stream"/> has reached its end.</summary>
     /// <param name="stream">The <seealso cref="Stream"/> whose position to check.</param>
@@ -56,7 +52,9 @@ public static unsafe class StreamExtensions
     {
         var result = new byte[stream.Length];
         stream.ResetPosition();
+#pragma warning disable CA2022 // Avoid inexact read with 'Stream.Read'
         stream.Read(result, 0, result.Length);
+#pragma warning restore CA2022 // Avoid inexact read with 'Stream.Read'
         return result;
     }
 
@@ -111,15 +109,6 @@ public static unsafe class StreamExtensions
         stream.Write(buffer, 0, buffer.Length);
     }
 
-    /// <summary>Writes a <seealso cref="string"/> encoded in UTF-7 to the stream at the current position.</summary>
-    /// <param name="stream">The stream to write to.</param>
-    /// <param name="s">The string to write to the stream.</param>
-#if HAS_MORE_OBSOLETE_PARAMS
-    [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
-#else
-    [Obsolete(UTF7ObsoletionMessage)]
-#endif
-    public static void WriteUTF7String(this Stream stream, string s) => stream.Write(Encoding.UTF7.GetBytes(s));
     /// <summary>Writes a <seealso cref="string"/> encoded in UTF-8 to the stream at the current position.</summary>
     /// <param name="stream">The stream to write to.</param>
     /// <param name="s">The string to write to the stream.</param>
@@ -246,19 +235,6 @@ public static unsafe class StreamExtensions
         stream.Write(buffer);
     }
 
-    /// <summary>Writes a <seealso cref="string"/> encoded in UTF-7 to the stream at the specified position.</summary>
-    /// <param name="stream">The stream to write to.</param>
-    /// <param name="position">The position in the stream to write at.</param>
-    /// <param name="s">The string to write to the stream.</param>
-#if HAS_MORE_OBSOLETE_PARAMS
-    [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
-#else
-    [Obsolete(UTF7ObsoletionMessage)]
-#endif
-    public static void WriteUTF7StringAt(this Stream stream, long position, string s)
-    {
-        WriteStringAt(stream, position, s, Encoding.UTF7);
-    }
     /// <summary>Writes a <seealso cref="string"/> encoded in UTF-8 to the stream at the specified position.</summary>
     /// <param name="stream">The stream to write to.</param>
     /// <param name="position">The position in the stream to write at.</param>
@@ -427,16 +403,6 @@ public static unsafe class StreamExtensions
         return value;
     }
 
-    /// <summary>Reads a <seealso cref="string"/> encoded in UTF-7 from the stream at the current position.</summary>
-    /// <param name="stream">The stream to read from.</param>
-    /// <param name="byteLength">The number of bytes to read. This does not necessarily equal the number of characters the resulting <seealso cref="string"/> contains.</param>
-    /// <returns>The read <seealso cref="string"/> from the stream in the provided encoding.</returns>
-#if HAS_MORE_OBSOLETE_PARAMS
-    [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
-#else
-    [Obsolete(UTF7ObsoletionMessage)]
-#endif
-    public static string ReadUTF7String(this Stream stream, long byteLength) => ReadString(stream, byteLength, Encoding.UTF7);
     /// <summary>Reads a <seealso cref="string"/> encoded in UTF-8 from the stream at the current position.</summary>
     /// <param name="stream">The stream to read from.</param>
     /// <param name="byteLength">The number of bytes to read. This does not necessarily equal the number of characters the resulting <seealso cref="string"/> contains.</param>
@@ -602,17 +568,6 @@ public static unsafe class StreamExtensions
         return ReadValue<T>(stream);
     }
 
-    /// <summary>Reads a <seealso cref="string"/> encoded in UTF-7 from the stream at the specified position.</summary>
-    /// <param name="stream">The stream to read from.</param>
-    /// <param name="position">The position in the stream to read from.</param>
-    /// <param name="byteLength">The number of bytes to read. This does not necessarily equal the number of characters the resulting <seealso cref="string"/> contains.</param>
-    /// <returns>The read <seealso cref="string"/> from the stream in the provided encoding.</returns>
-#if HAS_MORE_OBSOLETE_PARAMS
-    [Obsolete(UTF7ObsoletionMessage, DiagnosticId = UTF7ObsoletionDiagnosticID, UrlFormat = UTF7ObsoletionURLFormat)]
-#else
-    [Obsolete(UTF7ObsoletionMessage)]
-#endif
-    public static string ReadUTF7StringAt(this Stream stream, long position, long byteLength) => ReadStringAt(stream, position, byteLength, Encoding.UTF7);
     /// <summary>Reads a <seealso cref="string"/> encoded in UTF-8 from the stream at the specified position.</summary>
     /// <param name="stream">The stream to read from.</param>
     /// <param name="position">The position in the stream to read from.</param>

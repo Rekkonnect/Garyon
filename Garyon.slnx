@@ -1,0 +1,28 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="exclusion.dic" />
+    <File Path="FrameworkCapabilities.Generated.props" />
+    <File Path="FrameworkCapabilities.props" />
+    <File Path="NormalizeDefineConstants.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="Garyon/Garyon.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="Garyon.Benchmarking/Garyon.Benchmarking.csproj">
+      <BuildDependency Project="Garyon.QualityControl/Garyon.QualityControl.csproj" />
+    </Project>
+    <Project Path="Garyon.QualityControl/Garyon.QualityControl.csproj">
+      <BuildDependency Project="Garyon/Garyon.csproj" />
+    </Project>
+    <Project Path="Garyon.Tests/Garyon.Tests.csproj">
+      <BuildDependency Project="Garyon.QualityControl/Garyon.QualityControl.csproj" />
+      <BuildDependency Project="Garyon/Garyon.csproj" />
+    </Project>
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="Garyon.FrameworkCapabilityGenerator/Garyon.FrameworkCapabilityGenerator.csproj" Id="3be0b922-6889-4386-9454-ba45a34fa1a4" />
+  </Folder>
+</Solution>

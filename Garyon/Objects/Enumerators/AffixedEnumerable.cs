@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Garyon.Objects.Enumerators;
 
@@ -19,7 +18,7 @@ public class AffixedEnumerable<T> : IEnumerable<T>
 
     public AffixedEnumerable(IEnumerable<T> enumerable)
     {
-        mainEnumerable = enumerable ?? Enumerable.Empty<T>();
+        mainEnumerable = enumerable ?? [];
     }
 
     public AffixedEnumerable<T> WithPrefix(T value)

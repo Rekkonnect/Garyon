@@ -8,16 +8,6 @@ namespace Garyon.Extensions.ArrayExtensions;
 /// <summary>Provides generic extension methods for arrays.</summary>
 public static class GenericArrayExtensions
 {
-    /// <summary>Appends an element to the original array without altering it. Returns a new array which contains the appended element at its end.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array to which the element will be appended.</param>
-    /// <param name="item">The item to append.</param>
-    public static T[] Append<T>(this T[] array, T item) => array.InsertAt(array.Length, item);
-    /// <summary>Appends the specified elements to the original array without altering it. Returns a new array which contains the appended element at its end.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array to which the elements will be appended.</param>
-    /// <param name="items">The items to append.</param>
-    public static T[] AppendRange<T>(this T[] array, T[] items) => array.InsertRangeAt(array.Length, items);
     /// <summary>Copies the original array and returns a new array which contains the same elements at the same indices.</summary>
     /// <typeparam name="T">The type of the array elements.</typeparam>
     /// <param name="array">The original array to copy.</param>
@@ -28,55 +18,7 @@ public static class GenericArrayExtensions
             result[i] = array[i];
         return result;
     }
-    /// <summary>Creates a new array with a number of empty elements at the specified index with the specified length.</summary>
-    /// <typeparam name="T">The type of the elements stored in the array.</typeparam>
-    /// <param name="array">The initial array. It remains unaffected after the operation.</param>
-    /// <param name="index">The index at which the gap starts.</param>
-    /// <param name="length">The number of empty elements to include in the resulting array. If it's equal to 0, the function returns a copy of the original array without affecting it. The <paramref name="index"/> argument is ignored in that case.</param>
-    /// <returns>The new array that contains the gap.</returns>
-    public static T[] InsertGapAt<T>(this T[] array, int index, int length)
-    {
-        if (length < 0)
-            ThrowHelper.Throw<ArgumentException>("The length cannot be negative.");
 
-        if (length == 0)
-            return array.CopyArray();
-
-        ValidateIndex(array, index, true);
-
-        if (array?.Length is not > 0)
-            return new T[length];
-
-        T[] result = new T[array.Length + length];
-
-        Array.Copy(array, 0, result, 0, index);
-        int rightPartLength = array.Length - index;
-        Array.Copy(array, index, result, index + length, rightPartLength);
-        return result;
-    }
-    /// <summary>Inserts an element at the array into a specified index without affecting the original array. Returns a new array which contains the elements of the original array and the inserted one.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array to which the element will be inserted.</param>
-    /// <param name="item">The item to insert to the array.</param>
-    /// <param name="index">The index of the inserted item in the array.</param>
-    public static T[] InsertAt<T>(this T[] array, int index, T item)
-    {
-        var result = InsertGapAt(array, index, 1);
-        result[index] = item;
-        return result;
-    }
-    /// <summary>Inserts the specified elements into the array at a specified index without affecting the original array. Returns a new array which contains the elements of the original array and the inserted one.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array to which the elements will be inserted.</param>
-    /// <param name="items">The items to insert to the array.</param>
-    /// <param name="index">The index of the first inserted item in the array.</param>
-    public static T[] InsertRangeAt<T>(this T[] array, int index, T[] items)
-    {
-        var result = InsertGapAt(array, index, items.Length);
-        foreach (var (i, item) in items.WithIndex())
-            result[index + i] = item;
-        return result;
-    }
     /// <summary>Moves an array element at a specified index to another. This affects the original array and returns its instance.</summary>
     /// <typeparam name="T">The type of the array elements.</typeparam>
     /// <param name="array">The original array whose element to move.</param>
@@ -105,37 +47,7 @@ public static class GenericArrayExtensions
     /// <param name="array">The original array whose element to move.</param>
     /// <param name="from">The old index of the element to move.</param>
     public static T[] MoveElementToStart<T>(this T[] array, int from) => array.MoveElement(from, 0);
-    /// <summary>Prepends an element to the original array without altering it. Returns a new array which contains the prepended element at its end.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array to which the element will be prepended.</param>
-    /// <param name="item">The item to prepend.</param>
-    public static T[] Prepend<T>(this T[] array, T item) => array.InsertAt(0, item);
-    /// <summary>Removes an element of the array at a specified index without affecting it. Returns a new array without the removed element.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array whose element will be removed.</param>
-    /// <param name="index">The index of the element to remove.</param>
-    public static T[] RemoveAt<T>(this T[] array, int index)
-    {
-        ValidateIndex(array, index, false);
 
-        T[] result = new T[array.Length - 1];
-        for (int i = 0; i < index; i++)
-            result[i] = array[i];
-        for (int i = index + 1; i < array.Length; i++)
-            result[i - 1] = array[i];
-        return result;
-    }
-    /// <summary>Removes the duplicate elements of the array without affecting it. Returns a new array without the duplicate elements.</summary>
-    /// <typeparam name="T">The type of the array elements.</typeparam>
-    /// <param name="array">The original array whose duplicate elements will be removed.</param>
-    public static T[] RemoveDuplicates<T>(this T[] array)
-    {
-        var result = new List<T>();
-        for (int i = 0; i < array.Length; i++)
-            if (!result.Contains(array[i]))
-                result.Add(array[i]);
-        return result.ToArray();
-    }
     /// <summary>Reverses the elements of the array. Returns the instance of the original array.</summary>
     /// <typeparam name="T">The type of the array elements.</typeparam>
     /// <param name="array">The original array to reverse.</param>
@@ -181,6 +93,37 @@ public static class GenericArrayExtensions
             if (e.Equals(value))
                 indices.Add(i);
         return indices.ToArray();
+    }
+
+    /// <summary>
+    /// Creates an <see cref="ArraySegment{T}"/> that reflects the entire
+    /// array's range.
+    /// </summary>
+    public static ArraySegment<T> Segment<T>(this T[] array)
+    {
+        return new(array);
+    }
+
+    /// <summary>
+    /// Creates an <see cref="ArraySegment{T}"/> that reflects a subset of the
+    /// array's range.
+    /// </summary>
+    public static ArraySegment<T> Segment<T>(this T[] array, int start, int count)
+    {
+        return new(array, start, count);
+    }
+
+    /// <summary>
+    /// Creates an <see cref="ArraySegment{T}"/> that reflects a subset of the
+    /// array's range.
+    /// </summary>
+    /// <param name="array">The array whose segment to get.</param>
+    /// <param name="start">The starting index within the array, inclusive.</param>
+    /// <param name="end">The end index of the array, exclusive.</param>
+    public static ArraySegment<T> SegmentFromBounds<T>(this T[] array, int start, int end)
+    {
+        int count = end - start;
+        return new(array, start, count);
     }
 
     private static void ValidateIndex<T>(T[] array, int index, bool allowEndIndex)

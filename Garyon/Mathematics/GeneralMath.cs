@@ -1,8 +1,8 @@
 ﻿using Garyon.Exceptions;
+using Garyon.Extensions;
 using Garyon.Objects;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 
 namespace Garyon.Mathematics;
@@ -230,7 +230,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="byte"/> that was found in the collection of <seealso cref="byte"/>s.</returns>
     public static byte Min(IEnumerable<byte> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return byte.MinValue;
 
         byte min = byte.MaxValue;
@@ -249,7 +249,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="sbyte"/> that was found in the collection of <seealso cref="sbyte"/>s.</returns>
     public static sbyte Min(IEnumerable<sbyte> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return sbyte.MinValue;
 
         sbyte min = sbyte.MaxValue;
@@ -268,7 +268,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="short"/> that was found in the collection of <seealso cref="short"/>s.</returns>
     public static short Min(IEnumerable<short> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return short.MinValue;
 
         short min = short.MaxValue;
@@ -287,7 +287,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="ushort"/> that was found in the collection of <seealso cref="ushort"/>s.</returns>
     public static ushort Min(IEnumerable<ushort> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return ushort.MinValue;
 
         ushort min = ushort.MaxValue;
@@ -306,7 +306,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="int"/> that was found in the collection of <seealso cref="int"/>s.</returns>
     public static int Min(IEnumerable<int> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return int.MinValue;
 
         int min = int.MaxValue;
@@ -325,7 +325,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="uint"/> that was found in the collection of <seealso cref="uint"/>s.</returns>
     public static uint Min(IEnumerable<uint> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return uint.MinValue;
 
         uint min = uint.MaxValue;
@@ -344,7 +344,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="long"/> that was found in the collection of <seealso cref="long"/>s.</returns>
     public static long Min(IEnumerable<long> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return long.MinValue;
 
         long min = long.MaxValue;
@@ -363,7 +363,7 @@ public static class GeneralMath
     /// <returns>The smallest <seealso cref="ulong"/> that was found in the collection of <seealso cref="ulong"/>s.</returns>
     public static ulong Min(IEnumerable<ulong> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return ulong.MinValue;
 
         ulong min = ulong.MaxValue;
@@ -374,7 +374,7 @@ public static class GeneralMath
         return min;
     }
 
-#if NET7_0_OR_GREATER
+#if HAS_INUMBER
     /// <inheritdoc cref="Min{T}(IEnumerable{T})"/>
     public static T Min<T>(params T[] values)
         where T : INumber<T>, IMinMaxValue<T>
@@ -388,7 +388,7 @@ public static class GeneralMath
     public static T Min<T>(IEnumerable<T> values)
         where T : INumber<T>, IMinMaxValue<T>
     {
-        if (!values.Any())
+        if (values.HasNone())
             return T.MinValue;
 
         T min = T.MaxValue;
@@ -411,7 +411,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="byte"/> that was found in the collection of <seealso cref="byte"/>s.</returns>
     public static byte Max(IEnumerable<byte> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return byte.MaxValue;
 
         byte min = byte.MinValue;
@@ -430,7 +430,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="sbyte"/> that was found in the collection of <seealso cref="sbyte"/>s.</returns>
     public static sbyte Max(IEnumerable<sbyte> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return sbyte.MaxValue;
 
         sbyte min = sbyte.MinValue;
@@ -449,7 +449,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="short"/> that was found in the collection of <seealso cref="short"/>s.</returns>
     public static short Max(IEnumerable<short> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return short.MaxValue;
 
         short min = short.MinValue;
@@ -468,7 +468,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="ushort"/> that was found in the collection of <seealso cref="ushort"/>s.</returns>
     public static ushort Max(IEnumerable<ushort> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return ushort.MaxValue;
 
         ushort min = ushort.MinValue;
@@ -487,7 +487,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="int"/> that was found in the collection of <seealso cref="int"/>s.</returns>
     public static int Max(IEnumerable<int> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return int.MaxValue;
 
         int min = int.MinValue;
@@ -506,7 +506,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="uint"/> that was found in the collection of <seealso cref="uint"/>s.</returns>
     public static uint Max(IEnumerable<uint> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return uint.MaxValue;
 
         uint min = uint.MinValue;
@@ -525,7 +525,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="long"/> that was found in the collection of <seealso cref="long"/>s.</returns>
     public static long Max(IEnumerable<long> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return long.MaxValue;
 
         long min = long.MinValue;
@@ -544,7 +544,7 @@ public static class GeneralMath
     /// <returns>The largest <seealso cref="ulong"/> that was found in the collection of <seealso cref="ulong"/>s.</returns>
     public static ulong Max(IEnumerable<ulong> values)
     {
-        if (!values.Any())
+        if (values.HasNone())
             return ulong.MaxValue;
 
         ulong min = ulong.MinValue;
@@ -569,7 +569,7 @@ public static class GeneralMath
     public static T Max<T>(IEnumerable<T> values)
         where T : INumber<T>, IMinMaxValue<T>
     {
-        if (!values.Any())
+        if (values.HasNone())
             return T.MaxValue;
 
         T min = T.MinValue;
@@ -640,4 +640,20 @@ public static class GeneralMath
     public static double Pow(this double x, double exponent) => Math.Pow(x, exponent);
 
     #endregion
+
+#if HAS_INUMBER
+    /// <summary>
+    /// Divides the specified integer value by two, rounding towards zero, using
+    /// the defined shift operators.
+    /// </summary>
+    public static T Halve<T>(this T value)
+        where T : IBinaryInteger<T>, IShiftOperators<T, int, T>
+    {
+        if (T.IsNegative(value))
+        {
+            value++;
+        }
+        return value >> 1;
+    }
+#endif
 }

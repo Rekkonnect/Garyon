@@ -101,6 +101,21 @@ public sealed class AsyncUsableLock
     }
 
     /// <summary>
+    /// Unlocks the current instance.
+    /// If the instance is not currently locked, this method will do nothing.
+    /// </summary>
+    public void Unlock()
+    {
+        if (!_isLocked)
+        {
+            return;
+        }
+
+        _semaphore.Release();
+        _isLocked = false;
+    }
+
+    /// <summary>
     /// Represents an instance that automatically releases the currently held
     /// lock from an <see cref="AsyncUsableLock"/> instance when disposed.
     /// </summary>
@@ -114,11 +129,7 @@ public sealed class AsyncUsableLock
     {
         void IDisposable.Dispose()
         {
-            if (AsyncLock is null)
-                return;
-
-            AsyncLock._semaphore.Release();
-            AsyncLock._isLocked = false;
+            AsyncLock?.Unlock();
         }
     }
 }

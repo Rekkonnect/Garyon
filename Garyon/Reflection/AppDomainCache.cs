@@ -21,6 +21,8 @@ public class AppDomainCache
         allInterfaces,
         allStaticClasses;
 
+    // TODO: Convert all the APIs below into methods to convey the expensiveness of the operations
+
     /// <summary>Gets all the types that are defined in this <seealso cref="AppDomain"/>'s containing assemblies. If the types are not cached; a full scan will be performed.</summary>
     /// <remarks>WARNING: This is a highly expensive operation, costing both computationally and space-wise.</remarks>
     public IEnumerable<Type> AllTypes => allTypes.Value;
@@ -81,6 +83,7 @@ public class AppDomainCache
         return new(AllTypeRetriever(predicate));
     }
 
+    // TODO: Make this depend on the allTypes lazy value always, despite whether the value has been created
     private Func<Type[]> AllTypeRetriever(Predicate<Type> predicate)
     {
         if (allTypes.IsValueCreated)

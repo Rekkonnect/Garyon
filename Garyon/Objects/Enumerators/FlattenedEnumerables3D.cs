@@ -6,16 +6,10 @@ namespace Garyon.Objects.Enumerators;
 
 /// <summary>Represents an immutable collection of enumerables, which is flattened, through enumeration, into a single <seealso cref="IEnumerable{T}"/>.</summary>
 /// <typeparam name="T">The type of the elements that are held</typeparam>
-public class FlattenedEnumerables3D<T> : IEnumerable<T>
+public class FlattenedEnumerables3D<T>(IEnumerable<IEnumerable<IEnumerable<T>>> enumerables)
+    : IEnumerable<T>
 {
-    private readonly IEnumerable<IEnumerable<IEnumerable<T>>> enumerables;
-
-    /// <summary>Initializes a new instance of the <seealso cref="FlattenedEnumerables3D{T}"/> class out of a collection of collections of enumerables.</summary>
-    /// <param name="enumerables">The enumerables to initialize the instance from and transform into a flattened collection.</param>
-    public FlattenedEnumerables3D(IEnumerable<IEnumerable<IEnumerable<T>>> enumerables)
-    {
-        this.enumerables = enumerables;
-    }
+    private readonly IEnumerable<IEnumerable<IEnumerable<T>>> _enumerables = enumerables;
 
     /// <inheritdoc/>
     public IEnumerator<T> GetEnumerator() => new Enumerator(this);
@@ -26,7 +20,7 @@ public class FlattenedEnumerables3D<T> : IEnumerable<T>
     public IEnumerator<T> GetBackedEnumerator() => new BackedEnumerator(this);
 
     /// <summary>Represents an enumerator for the <seealso cref="FlattenedEnumerables3D{T}"/> class.</summary>
-    public class Enumerator : IEnumerator<T>
+    private class Enumerator : IEnumerator<T>
     {
         private readonly IEnumerator<IEnumerable<IEnumerable<T>>> outerEnumerator0;
         private IEnumerator<IEnumerable<T>>? outerEnumerator1;
@@ -42,7 +36,7 @@ public class FlattenedEnumerables3D<T> : IEnumerable<T>
         /// <param name="instance">The <seealso cref="FlattenedEnumerables3D{T}"/> whose enumerables will be flattened.</param>
         public Enumerator(FlattenedEnumerables3D<T> instance)
         {
-            outerEnumerator0 = instance.enumerables.GetEnumerator();
+            outerEnumerator0 = instance._enumerables.GetEnumerator();
         }
 
         /// <summary>Advances to the next element in the flattened enumerable. Enumerables that contain no elements are automatically skipped.</summary>
@@ -100,7 +94,7 @@ public class FlattenedEnumerables3D<T> : IEnumerable<T>
         /// <param name="instance">The <seealso cref="FlattenedEnumerables3D{T}"/> whose enumerables will be flattened.</param>
         public BackedEnumerator(FlattenedEnumerables3D<T> instance)
         {
-            outerEnumerator = instance.enumerables.GetEnumerator();
+            outerEnumerator = instance._enumerables.GetEnumerator();
         }
 
         /// <summary>Advances to the next element in the flattened enumerable. Enumerables that contain no elements are automatically skipped.</summary>

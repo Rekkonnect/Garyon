@@ -50,6 +50,8 @@ public class SameStructDifferentFieldInitializations
         new Mixed();
     }
 
+#pragma warning disable IDE0044 // Add readonly modifier
+#pragma warning disable CS0169 // Unused field
     private struct Bytes
     {
         byte v0, v1, v2, v3, v4, v5, v6, v7;
@@ -88,4 +90,6 @@ public class SameStructDifferentFieldInitializations
         short s0;
         int i0;
     }
+#pragma warning restore IDE0044 // Add readonly modifier
+#pragma warning restore CS0169 // Unused field
 }

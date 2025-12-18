@@ -1,6 +1,7 @@
-﻿#if HAS_SLICES
+﻿#if HAS_SPAN
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Garyon.Extensions;
@@ -78,7 +79,7 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         source.IndexOf(delimiter, out int startIndex);
-        return source.SliceAfter(startIndex);
+        return source.SliceAfterIndex(startIndex);
     }
     /// <summary>
     /// Gets the slice of the span before the first occurrence
@@ -95,7 +96,7 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         int endIndex = source.IndexOf(delimiter);
-        return source.SliceBefore(endIndex);
+        return source.SliceBeforeIndex(endIndex);
     }
 
     /// <summary>
@@ -132,14 +133,14 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         source.IndexOf(delimiter, out int startIndex);
-        return source.SliceAfter(startIndex);
+        return source.SliceAfterIndex(startIndex);
     }
     /// <inheritdoc cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBefore<TSource>(this ReadOnlySpan<TSource> source, TSource delimiter)
         where TSource : IEquatable<TSource>
     {
         int endIndex = source.IndexOf(delimiter);
-        return source.SliceBefore(endIndex);
+        return source.SliceBeforeIndex(endIndex);
     }
 
     /// <remarks>
@@ -160,14 +161,14 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         source.IndexOf(delimiter, out int startIndex);
-        return source.SliceAfter(startIndex);
+        return source.SliceAfterIndex(startIndex);
     }
     /// <inheritdoc cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>
     public static Span<TSource> SliceBefore<TSource>(this Span<TSource> source, Span<TSource> delimiter)
         where TSource : IEquatable<TSource>
     {
         int endIndex = source.IndexOf(delimiter);
-        return source.SliceBefore(endIndex);
+        return source.SliceBeforeIndex(endIndex);
     }
 
     /// <inheritdoc cref="SliceAfter{TSource}(Span{TSource}, TSource)"/>
@@ -175,14 +176,14 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         source.IndexOf(delimiter, out int startIndex);
-        return source.SliceAfter(startIndex);
+        return source.SliceAfterIndex(startIndex);
     }
     /// <inheritdoc cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>
     public static Span<TSource> SliceBefore<TSource>(this Span<TSource> source, ReadOnlySpan<TSource> delimiter)
         where TSource : IEquatable<TSource>
     {
         int endIndex = source.IndexOf(delimiter);
-        return source.SliceBefore(endIndex);
+        return source.SliceBeforeIndex(endIndex);
     }
 
     /// <inheritdoc cref="SliceAfter{TSource}(Span{TSource}, TSource)"/>
@@ -190,14 +191,14 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         source.IndexOf(delimiter, out int startIndex);
-        return source.SliceAfter(startIndex);
+        return source.SliceAfterIndex(startIndex);
     }
     /// <inheritdoc cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBefore<TSource>(this ReadOnlySpan<TSource> source, Span<TSource> delimiter)
         where TSource : IEquatable<TSource>
     {
         int endIndex = source.IndexOf(delimiter);
-        return source.SliceBefore(endIndex);
+        return source.SliceBeforeIndex(endIndex);
     }
 
     /// <inheritdoc cref="SliceAfter{TSource}(Span{TSource}, TSource)"/>
@@ -205,14 +206,14 @@ public static class SpanExtensions
         where TSource : IEquatable<TSource>
     {
         source.IndexOf(delimiter, out int startIndex);
-        return source.SliceAfter(startIndex);
+        return source.SliceAfterIndex(startIndex);
     }
     /// <inheritdoc cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBefore<TSource>(this ReadOnlySpan<TSource> source, ReadOnlySpan<TSource> delimiter)
         where TSource : IEquatable<TSource>
     {
         int endIndex = source.IndexOf(delimiter);
-        return source.SliceBefore(endIndex);
+        return source.SliceBeforeIndex(endIndex);
     }
 
     /// <remarks>
@@ -313,28 +314,28 @@ public static class SpanExtensions
         return SliceBefore(source, delimiterEnd);
     }
 
-    public static Span<TSource> SliceAfter<TSource>(this Span<TSource> source, int startIndex)
+    public static Span<TSource> SliceAfterIndex<TSource>(this Span<TSource> source, int startIndex)
     {
         if (startIndex < 0)
             return source;
 
         return source[startIndex..];
     }
-    public static ReadOnlySpan<TSource> SliceAfter<TSource>(this ReadOnlySpan<TSource> source, int startIndex)
+    public static ReadOnlySpan<TSource> SliceAfterIndex<TSource>(this ReadOnlySpan<TSource> source, int startIndex)
     {
         if (startIndex < 0)
             return source;
 
         return source[startIndex..];
     }
-    public static Span<TSource> SliceBefore<TSource>(this Span<TSource> source, int endIndex)
+    public static Span<TSource> SliceBeforeIndex<TSource>(this Span<TSource> source, int endIndex)
     {
         if (endIndex < 0)
             return source;
 
         return source[..endIndex];
     }
-    public static ReadOnlySpan<TSource> SliceBefore<TSource>(this ReadOnlySpan<TSource> source, int endIndex)
+    public static ReadOnlySpan<TSource> SliceBeforeIndex<TSource>(this ReadOnlySpan<TSource> source, int endIndex)
     {
         if (endIndex < 0)
             return source;
@@ -626,6 +627,20 @@ public static class SpanExtensions
         }
     }
 
+    public static SplitSpanEnumerator<TSource> SplitEnumerate<TSource>(
+        this ReadOnlySpan<TSource> source, TSource delimiter)
+        where TSource : IEquatable<TSource>
+    {
+        return new SplitSpanEnumerator<TSource>(source, delimiter);
+    }
+
+    public static SplitSpanEnumerator<TSource> SplitEnumerate<TSource>(
+        this ReadOnlySpan<TSource> source, ReadOnlySpan<TSource> delimiter)
+        where TSource : IEquatable<TSource>
+    {
+        return new SplitSpanEnumerator<TSource>(source, delimiter);
+    }
+
     /// <summary>
     /// Defines a selector delegate that converts a span of values into another value.
     /// </summary>
@@ -635,6 +650,182 @@ public static class SpanExtensions
     /// <returns>The converted value.</returns>
     public delegate TResult ReadOnlySpanSelector<TSource, TResult>(ReadOnlySpan<TSource> source);
     #endregion
+
+    #region IsWrappedIn
+    public static bool IsWrappedIn<T>(
+        this ReadOnlySpan<T> source,
+        T left,
+        T right,
+        out ReadOnlySpan<T> inner)
+    {
+        if (source is [var first, .. var innerSource, var last] && first.Equals(left) && last.Equals(right))
+        {
+            inner = innerSource;
+            return true;
+        }
+
+        inner = default;
+        return false;
+    }
+
+    public static bool IsWrappedIn<T>(
+        this ReadOnlySpan<T> source,
+        ReadOnlySpan<T> left,
+        ReadOnlySpan<T> right,
+        out ReadOnlySpan<T> inner)
+#if REQUIRES_IEQUATABLE_FOR_SPAN_SEQUENCE_EQUALS
+        where T : IEquatable<T>
+#endif
+    {
+        var leftLength = left.Length;
+        var rightLength = right.Length;
+
+        var requiredLength = leftLength + rightLength;
+        if (source.Length < requiredLength)
+        {
+            inner = default;
+            return false;
+        }
+
+        if (source[..leftLength].SequenceEqual(left) &&
+            source[^rightLength..].SequenceEqual(right))
+        {
+            inner = source[leftLength..^rightLength];
+            return true;
+        }
+
+        inner = default;
+        return false;
+    }
+    #endregion
+
+    #region AdvanceSlice
+    public static Span<T> AdvanceSlice<T>(this Span<T> s, int count)
+    {
+        return s[count..];
+    }
+    public static void AdvanceSliceRef<T>(this ref Span<T> s, int count)
+    {
+        s = s.AdvanceSlice(count);
+    }
+
+    public static ReadOnlySpan<T> AdvanceSlice<T>(this ReadOnlySpan<T> s, int count)
+    {
+        return s[count..];
+    }
+    public static void AdvanceSliceRef<T>(this ref ReadOnlySpan<T> s, int count)
+    {
+        s = s.AdvanceSlice(count);
+    }
+    #endregion
+
+    public ref struct SplitSpanEnumerator<TSource>
+#if ALLOWS_REF_STRUCTS
+        : IEnumerator<ReadOnlySpan<TSource>>
+#endif
+        where TSource : IEquatable<TSource>
+    {
+        private readonly ReadOnlySpan<TSource> _source;
+        private readonly Delimiter _delimiter;
+
+        private ReadOnlySpan<TSource> _slice;
+        private ReadOnlySpan<TSource> _current;
+
+        public readonly ReadOnlySpan<TSource> Current => _current;
+
+#if ALLOWS_REF_STRUCTS
+        object IEnumerator.Current
+            => throw new InvalidOperationException("Cannot return the current slice as an object");
+#endif
+
+        private SplitSpanEnumerator(ReadOnlySpan<TSource> source, Delimiter delimiter)
+        {
+            _source = source;
+            _slice = source;
+            _delimiter = delimiter;
+        }
+
+        public SplitSpanEnumerator(ReadOnlySpan<TSource> source, TSource delimiter)
+            : this(source, new Delimiter(delimiter)) { }
+
+        public SplitSpanEnumerator(ReadOnlySpan<TSource> source, ReadOnlySpan<TSource> delimiter)
+            : this(source, new Delimiter(delimiter)) { }
+
+        public bool MoveNext()
+        {
+            while (true)
+            {
+                int delimiterIndex = _delimiter.IndexOf(_slice, out int nextIndex);
+                if (delimiterIndex < 0)
+                {
+                    break;
+                }
+
+                var delimitedSlice = _slice[..delimiterIndex];
+                _current = delimitedSlice;
+                _slice = _slice[nextIndex..];
+                return true;
+            }
+
+            _current = _slice;
+            _slice = [];
+            return _current.Length > 0;
+        }
+
+        public void Reset()
+        {
+            _slice = _source;
+            _current = [];
+        }
+
+        public readonly SplitSpanEnumerator<TSource> GetEnumerator() => this;
+
+#if ALLOWS_REF_STRUCTS
+        readonly void IDisposable.Dispose()
+        {
+        }
+#endif
+
+        private readonly ref struct Delimiter
+        {
+            private readonly TSource _single;
+            private readonly ReadOnlySpan<TSource> _span;
+
+            public bool IsSingle => _span.Length is 0 or 1;
+
+            public Delimiter(TSource single)
+            {
+                _single = single;
+                _span = [];
+            }
+
+            public Delimiter(ReadOnlySpan<TSource> span)
+            {
+                _span = span;
+                _single = default!;
+            }
+
+            public int IndexOf(ReadOnlySpan<TSource> source, out int nextIndex)
+            {
+                if (IsSingle)
+                {
+                    return source.IndexOf(GetSingleDelimiter(), out nextIndex);
+                }
+
+                return source.IndexOf(_span, out nextIndex);
+            }
+
+            private TSource GetSingleDelimiter()
+            {
+                if (_span is [var single])
+                {
+                    return single;
+                }
+
+                return _single;
+            }
+        }
+    }
 }
 
 #endif

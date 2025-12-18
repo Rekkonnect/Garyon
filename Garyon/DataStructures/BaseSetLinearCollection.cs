@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Garyon.DataStructures;
 
-/// <summary>Represents a setted linear collection, which is a linear collection accompanied by a set. This data structure encapsulates an ordered linear collection data type that has a specific insertion and removal order (e.g. <seealso cref="Queue{T}"/>, <seealso cref="Stack{T}"/>) and a <seealso cref="HashSet{T}"/>. Through the usage of the set, the data structure ensures that no elements are contained more than once.</summary>
+/// <summary>Represents a linear collection accompanied by a set. This data structure encapsulates an ordered linear collection data type that has a specific insertion and removal order (e.g. <seealso cref="Queue{T}"/>, <seealso cref="Stack{T}"/>) and a <seealso cref="HashSet{T}"/>. Through the usage of the set, the data structure ensures that no elements are contained more than once.</summary>
 /// <typeparam name="T">The type of the stored elements.</typeparam>
 public abstract class BaseSetLinearCollection<T> : IReadOnlyCollection<T>
 {

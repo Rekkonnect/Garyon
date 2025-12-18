@@ -422,12 +422,29 @@ public static class StringExtensions
     #endregion
 
     #region Old
-#if NETSTANDARD2_0
+#if !HAS_STRING_STARTSWITH_ENDSWITH_CHAR
+    /// <summary>
+    /// Determines whether the string starts with the specified character.
+    /// </summary>
+    /// <remarks>
+    /// This complements the lack of the built-in API.
+    /// If the target framework adds support for this natively,
+    /// this method is not defined.
+    /// </remarks>
     public static bool StartsWith(this string s, char c)
     {
         return s.Length > 0
             && s[0] == c;
     }
+
+    /// <summary>
+    /// Determines whether the string starts with the specified character.
+    /// </summary>
+    /// <remarks>
+    /// This complements the lack of the built-in API.
+    /// If the target framework adds support for this natively,
+    /// this method is not defined.
+    /// </remarks>
     public static bool EndsWith(this string s, char c)
     {
         return s.Length > 0

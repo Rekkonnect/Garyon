@@ -1,6 +1,7 @@
 ﻿#nullable enable
 
 using Garyon.Functions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -247,6 +248,51 @@ public static class IDictionaryExtensions
         where TKey : notnull
     {
         return source.TryAdd(kvp.Key, kvp.Value);
+    }
+    #endregion
+
+    #region Transform
+    /// <summary>
+    /// Transforms the keys of the source dictionary into new keys using
+    /// the provided key selector function, and constructs a new dictionary
+    /// with the transformed keys and the original values.
+    /// </summary>
+    public static Dictionary<TNewKey, TValue> TransformKeys<TKey, TValue, TNewKey>(
+        this IReadOnlyDictionary<TKey, TValue> source,
+        Func<TKey, TNewKey> keySelector)
+        where TKey : notnull
+        where TNewKey : notnull
+    {
+        var result = new Dictionary<TNewKey, TValue>(source.Count);
+
+        foreach (var kvp in source)
+        {
+            var newKey = keySelector(kvp.Key);
+            result[newKey] = kvp.Value;
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// Transforms the values of the source dictionary into new values using
+    /// the provided key selector function, and constructs a new dictionary
+    /// with the transformed values and the original keys.
+    /// </summary>
+    public static Dictionary<TKey, TNewValue> TransformValues<TKey, TValue, TNewValue>(
+        this IReadOnlyDictionary<TKey, TValue> source,
+        Func<TValue, TNewValue> valueSelector)
+        where TKey : notnull
+    {
+        var result = new Dictionary<TKey, TNewValue>(source.Count);
+
+        foreach (var kvp in source)
+        {
+            var newValue = valueSelector(kvp.Value);
+            result[kvp.Key] = newValue;
+        }
+
+        return result;
     }
     #endregion
 }

@@ -1,0 +1,11 @@
+﻿<Project>
+
+  <!-- Consider dropping this -->
+  <PropertyGroup Condition="!$(DefineConstants.Contains('HAS_INUMBER')) And $(DefineConstants.Contains('HAS_INTERFACE_DIMS'))">
+    <DefineConstants>
+      $(DefineConstants)
+      NEEDS_INUMERIC;
+    </DefineConstants>
+  </PropertyGroup>
+
+</Project>

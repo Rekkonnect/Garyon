@@ -1,7 +1,6 @@
 ﻿using Garyon.Exceptions;
 using System;
 using System.Runtime.CompilerServices;
-using System.Threading;
 
 namespace Garyon.Objects;
 
@@ -41,17 +40,19 @@ public enum ComparisonKinds
 }
 
 /// <summary>Contains extensions for the <seealso cref="ComparisonKinds"/> enum.</summary>
-public static class ComparisonTypeExtensions
+public static class ComparisonKindsExtensions
 {
-    /// <summary>Gets the comparison kind from a <seealso cref="ComparisonResult"/>.</summary>
-    /// <param name="result">The <seealso cref="ComparisonResult"/> to map to its respective <seealso cref="ComparisonKinds"/> value.</param>
-    /// <returns>A <seealso cref="ComparisonKinds"/> value with a single kind representing the given <seealso cref="ComparisonResult"/>.</returns>
-    public static ComparisonKinds GetComparisonKind(this ComparisonResult result) => result switch
+    extension(ComparisonResult result)
     {
-        ComparisonResult.Less => ComparisonKinds.Less,
-        ComparisonResult.Equal => ComparisonKinds.Equal,
-        ComparisonResult.Greater => ComparisonKinds.Greater,
-    };
+        /// <summary>Gets the comparison kind from a <seealso cref="ComparisonResult"/>.</summary>
+        /// <returns>A <seealso cref="ComparisonKinds"/> value with a single kind representing the given <seealso cref="ComparisonResult"/>.</returns>
+        public ComparisonKinds GetComparisonKind() => result switch
+        {
+            ComparisonResult.Less => ComparisonKinds.Less,
+            ComparisonResult.Equal => ComparisonKinds.Equal,
+            ComparisonResult.Greater => ComparisonKinds.Greater,
+        };
+    }
 
     /// <summary>Determines whether a <seealso cref="ComparisonKinds"/> contains a comparison kind that matches the given <seealso cref="ComparisonResult"/>.</summary>
     /// <param name="kinds">The comparison kinds to determine whether they are satisfied by the result.</param>

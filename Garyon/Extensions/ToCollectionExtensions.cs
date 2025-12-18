@@ -48,7 +48,7 @@ public static class ToCollectionExtensions
     /// <returns>A newly created array containing the source sequence of elements, if not <see langword="null"/>, otherwise <seealso cref="Array.Empty{T}"/>.</returns>
     public static T[] ToArrayOrEmpty<T>(this IEnumerable<T>? source)
     {
-        return source?.ToArray() ?? Array.Empty<T>();
+        return source?.ToArray() ?? [];
     }
     /// <summary>Converts a provided sequence of elements into a <seealso cref="List{T}"/>.</summary>
     /// <typeparam name="T">The type of elements stored in the <seealso cref="IEnumerable{T}"/>.</typeparam>

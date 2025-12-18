@@ -8,20 +8,22 @@
       net5.0;
       net6.0;
       net7.0;
-      net8.0
+      net8.0;
+      net9.0;
+      net10.0
     </TargetFrameworks>
-    <LangVersion>12.0</LangVersion>
+    <LangVersion>14.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>annotations</Nullable>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>common, extensions, utilities, library, reflection</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
-    <Copyright>© 2020-2024, Alex Kalfakakos</Copyright>
+    <Copyright>© 2020-2025, Alex Kalfakakos</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
     <Authors>Alex Kalfakakos</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.4.1</Version>
+    <Version>0.4.2</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Product>Garyon</Product>
     <PackageId>Garyon</PackageId>
@@ -34,103 +36,5 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-  
-  <!-- Conditional framework symbols -->
-  <!-- Too fucking ugly if you ask me -->
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'net5.0' Or
-                     '$(TargetFramework)' == 'net6.0' Or
-                     '$(TargetFramework)' == 'net7.0' Or
-                     '$(TargetFramework)' == 'net8.0'">
-      <PropertyGroup>
-        <NewNet>true</NewNet>
-      </PropertyGroup>
-    </When>
-    <Otherwise>
-      <PropertyGroup>
-        <NewNet>false</NewNet>
-      </PropertyGroup>
-    </Otherwise>
-  </Choose>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1' Or
-                            '$(TargetFramework)' == 'netcoreapp3.1' Or
-                            $(NewNet)">
-    <DefineConstants>
-      $(DefineConstants);
-      HAS_SPAN;
-      HAS_SLICES;
-      HAS_HASH_CODE;
-      HAS_INTERFACE_DIMS;
-      HAS_ASYNC_ENUMERABLE;
-      KNOWS_GENERIC_PARAMETERS;
-      HAS_BYREF_LIKE;
-      HAS_HASHSET_CAPACITY_CTOR;
-      HAS_DICTIONARY_TRYADD;
-      HAS_ARRAY_FILL;
-      HAS_DICTIONARY_KVPS_CTOR;
-      HAS_TO_HASHSET;
-      HAS_STREAM_READ_SIMPLE_BYTES;
-      HAS_GENERIC_ENUM_PARSE;
-      HAS_STRING_JOIN_CHAR;
-    </DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1' Or
-                            '$(TargetFramework)' == 'netcoreapp3.1' Or
-                            '$(TargetFramework)' == 'net5.0' Or
-                            '$(TargetFramework)' == 'net6.0'">
-    <DefineConstants>
-      $(DefineConstants);
-      NEEDS_INUMERIC;
-    </DefineConstants>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' Or
-                            $(NewNet)">
-    <DefineConstants>
-      $(DefineConstants);
-      HAS_IMMUTABLE;
-      HAS_INTRINSICS;
-      HAS_SIMD;
-      HAS_GET_CHUNKS;
-      HAS_AVX;
-    </DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="$(NewNet)">
-    <DefineConstants>
-      $(DefineConstants);
-      HAS_GENERIC_ENUM_ISDEFINED;
-      HAS_EXTERNAL_INIT;
-      HAS_VECTOR_ALLBITS;
-      HAS_MORE_OBSOLETE_PARAMS;
-      SUPPORTS_COVARIANT_OVERRIDES;
-      HAS_READONLY_SET;
-      SUPPORTS_UNMANAGED_FUNPTRS;
-      HAS_GENERIC_ENUM_GETVALUES;
-    </DefineConstants>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0' Or
-                            '$(TargetFramework)' == 'net7.0' Or
-                            '$(TargetFramework)' == 'net8.0'">
-    <DefineConstants>
-      $(DefineConstants);
-      HAS_STRINGSPAN_ENUMERATE_LINES;
-      HAS_RANDOM_NEXTINT64_NEXTSINGLE;
-    </DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net7.0' Or
-                            '$(TargetFramework)' == 'net8.0'">
-    <DefineConstants>
-      $(DefineConstants);
-      HAS_UNREACHABLE_EXCEPTION;
-      HAS_INUMBER;
-    </DefineConstants>
-  </PropertyGroup>
-
-  <!-- END Conditional framework symbols -->
 
 </Project>

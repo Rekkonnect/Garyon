@@ -1,4 +1,4 @@
-﻿using Garyon.DataStructures;
+﻿using Garyon.DataStructures.Trees;
 using Garyon.QualityControl.Types;
 using Garyon.Reflection;
 using NUnit.Framework;

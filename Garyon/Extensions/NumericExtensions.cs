@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 #if HAS_INTRINSICS
 using System.Runtime.Intrinsics.X86;
 #endif
@@ -135,7 +134,7 @@ public static class NumericExtensions
     /// <param name="value">The value to determine whether it is ≥1.</param>
     public static decimal OneOrGreater(this decimal value) => value < 1 ? 1 : value;
 
-#if NET7_0_OR_GREATER
+#if HAS_INUMBER
     /// <summary>Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.</summary>
     /// <param name="value">The value to determine whether it is ≥1.</param>
     public static INumber<T> OneOrGreater<T>(this T value)
@@ -184,7 +183,7 @@ public static class NumericExtensions
     /// <param name="value">The value to determine whether it is ≥0.</param>
     public static decimal ZeroOrGreater(this decimal value) => value < 0 ? 0 : value;
 
-#if NET7_0_OR_GREATER
+#if HAS_INUMBER
     /// <summary>Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.</summary>
     /// <param name="value">The value to determine whether it is ≥0.</param>
     public static INumber<T> ZeroOrGreater<T>(this T value)
