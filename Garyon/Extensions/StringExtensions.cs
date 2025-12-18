@@ -385,6 +385,62 @@ public static class StringExtensions
         return s.Substring(0, index);
     }
     #endregion
+
+    /// <summary>
+    /// Evaluates a string such that the returned result will begin with the specified prefix,
+    /// without concatenating it if it is already present.
+    /// </summary>
+    /// <param name="source">The source string to which to guarantee a prefix.</param>
+    /// <param name="prefix">The prefix that will be contained in the resulting string.</param>
+    /// <returns>
+    /// The prefix itself if the source string is null or empty, or the source string if it already
+    /// starts with the prefix, otherwise a concatenation of the prefix and the source string.
+    /// </returns>
+    public static string EnsureStartsWith(this string? source, string prefix)
+    {
+        if (string.IsNullOrEmpty(source))
+            return prefix;
+
+        var startsWithPrefix = source?.StartsWith(prefix);
+        if (startsWithPrefix is false)
+            source = $"{prefix}{source}";
+        return source ?? prefix;
+    }
+
+    /// <summary>
+    /// Evaluates a string such that the returned result will end with the specified suffix,
+    /// without concatenating it if it is already present.
+    /// </summary>
+    /// <param name="source">The source string to which to guarantee a suffix.</param>
+    /// <param name="suffix">The suffix that will be contained in the resulting string.</param>
+    /// <returns>
+    /// The suffix itself if the source string is null or empty, or the source string if it already
+    /// ends with the suffix, otherwise a concatenation of the source string and the suffix.
+    /// </returns>
+    public static string EnsureEndsWith(this string? source, string suffix)
+    {
+        if (string.IsNullOrEmpty(source))
+            return suffix;
+
+        var endsWithPrefix = source?.EndsWith(suffix);
+        if (endsWithPrefix is false)
+            source = $"{source}{suffix}";
+        return source ?? suffix;
+    }
+
+    // TODO: Add EnsureStartsEndsWith(string prefix, string suffix)
+    // TODO: Add EnsureStartsEndsWith(string affix)
+    // TODO: Add EnsureAffix(string affix, AffixType affixType)
+
+    public static string? NullIfEmpty(this string s)
+    {
+        return s.DefaultIf(string.IsNullOrEmpty);
+    }
+
+    public static string? NullIfEmptyOrWhitespace(this string s)
+    {
+        return s.DefaultIf(string.IsNullOrWhiteSpace);
+    }
     #endregion
 
     #region IEnumerable<string>
@@ -417,7 +473,7 @@ public static class StringExtensions
     /// <param name="strings">The collection of strings.</param>
     public static IEnumerable<string> NonEmpty(this IEnumerable<string?> strings)
     {
-        return strings.Where(Predicates.NotEmpty);
+        return strings.Where(Predicates.NotEmpty).AsNonNull();
     }
     #endregion
 

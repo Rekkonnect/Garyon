@@ -1,20 +1,23 @@
 ﻿using Garyon.Extensions;
 using Garyon.Objects.Enumerators;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.Objects.Enumerators;
 
 public class IndexedEnumerableTests
 {
     [Test]
-    public void EnumerationTest()
+    public async Task EnumerationTest()
     {
         var ar = new[] { 1, 2, 3 };
 
         int index = 0;
         foreach (var i in ar.WithIndex())
         {
-            Assert.AreEqual(new IndexedEnumeratorResult<int>(index, ar[index]), i);
+            await Assert.That(i).IsEqualTo(new IndexedEnumeratorResult<int>(index, ar[index]));
             index++;
         }
     }

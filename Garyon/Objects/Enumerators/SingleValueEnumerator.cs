@@ -43,7 +43,7 @@ public class SingleValueEnumerator<T> : IEnumerator<T>
         }
     }
 
-    object IEnumerator.Current => Current;
+    object? IEnumerator.Current => Current;
 
     public SingleValueEnumerator(T singleValue)
     {

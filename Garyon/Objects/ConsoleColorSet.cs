@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 namespace Garyon.Objects;
 
 /// <summary>Contains a set of <seealso cref="ConsoleColor"/> instances, for both the background and the foreground colors.</summary>
-public struct ConsoleColorSet
+public struct ConsoleColorSet : IEquatable<ConsoleColorSet>
 {
     /// <summary>Gets a new instance of the default <seealso cref="ConsoleColorSet"/>.</summary>
     public static ConsoleColorSet Default => new(ConsoleColor.Gray, ConsoleColor.Black);
@@ -36,10 +36,15 @@ public struct ConsoleColorSet
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator !=(ConsoleColorSet left, ConsoleColorSet right) => left.ColorTuple != right.ColorTuple;
 
+    public bool Equals(ConsoleColorSet other)
+    {
+        return ColorTuple == other.ColorTuple;
+    }
+
     /// <summary>Determines whether this object is equal to another object.</summary>
     /// <param name="obj">The object to determine whether this is equal to.</param>
     /// <returns>The result of the comparison.</returns>
-    public override bool Equals(object obj) => ColorTuple == ((ConsoleColorSet)obj).ColorTuple;
+    public override bool Equals(object? obj) => obj is ConsoleColorSet set && Equals(set);
     /// <summary>Gets the hash code for this instance, based on the color tuple.</summary>
     /// <returns>The hash code of this instance.</returns>
     public override int GetHashCode() => ColorTuple.GetHashCode();

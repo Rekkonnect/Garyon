@@ -11,7 +11,12 @@ internal struct HashCode
 {
     public static int Combine<T1, T2>(T1 value1, T2 value2)
     {
-        return value1.GetHashCode() ^ value2.GetHashCode();
+        return GetHashCode(value1) ^ GetHashCode(value2);
+    }
+
+    private static int GetHashCode<T>(T value)
+    {
+        return value?.GetHashCode() ?? 0;
     }
 }
 

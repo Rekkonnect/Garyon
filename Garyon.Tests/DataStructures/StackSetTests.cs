@@ -1,13 +1,13 @@
 ﻿using Garyon.DataStructures;
 using Garyon.Extensions;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TUnit.Core;
 
 namespace Garyon.Tests.DataStructures;
 
-[Parallelizable(ParallelScope.Children)]
+[InheritsTests]
 public class StackSetTests : BaseSetLinearCollectionTests
 {
     protected override Index ProjectToCollectionIndex(Index index)

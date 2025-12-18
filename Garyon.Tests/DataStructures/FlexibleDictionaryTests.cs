@@ -1,14 +1,16 @@
 ﻿using Garyon.DataStructures;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.DataStructures;
 
-[Parallelizable(ParallelScope.Children)]
 public class FlexibleDictionaryTests
 {
-    private static FlexibleDictionary<int, char> testDictionary = new FlexibleDictionary<int, char>();
+    private static FlexDictionary<int, char> testDictionary = new(defaultValue: default);
 
-    [OneTimeSetUp]
+    [Before(HookType.Class)]
     public static void InitializeTestDictionary()
     {
         for (int i = 0; i < 5; i++)
@@ -16,96 +18,96 @@ public class FlexibleDictionaryTests
     }
 
     [Test]
-    public void InitializationTest()
+    public async Task InitializationTest()
     {
-        var d = new FlexibleDictionary<int, string>
+        var d = new FlexDictionary<int, string>(defaultValue: default)
         {
             [1] = "a"
         };
-        Assert.AreEqual("a", d[1]);
-        Assert.AreEqual(1, d.Count);
+        await Assert.That(d[1]).IsEqualTo("a");
+        await Assert.That(d.Count).IsEqualTo(1);
     }
     [Test]
-    public void EnumerableInitializationTest()
+    public async Task EnumerableInitializationTest()
     {
         var values = new[] { 1, 4, 1, 6, 2, 2 };
         var uniqueValues = new[] { 1, 2, 4, 6 };
-        var d = new FlexibleDictionary<int, string>(values);
+        var d = new FlexDictionary<int, string>(values, initialValue: default);
         foreach (var v in uniqueValues)
-            Assert.AreEqual(default(string), d[v]);
-        Assert.AreEqual(4, d.Count);
+            await Assert.That(d[v]).IsNull();
+        await Assert.That(d.Count).IsEqualTo(4);
     }
     [Test]
-    public void CloneTest()
+    public async Task CloneTest()
     {
         var cloned = testDictionary.Clone();
         for (int i = 0; i < 5; i++)
-            Assert.AreEqual((char)('a' + i), cloned[i]);
-        Assert.AreEqual(testDictionary.Count, cloned.Count);
+            await Assert.That(cloned[i]).IsEqualTo((char)('a' + i));
+        await Assert.That(cloned.Count).IsEqualTo(testDictionary.Count);
 
         cloned.Add(10, 'f');
-        Assert.IsFalse(testDictionary.ContainsKey(10));
-        Assert.IsTrue(cloned.ContainsKey(10));
+        await Assert.That(testDictionary.ContainsKey(10)).IsFalse();
+        await Assert.That(cloned.ContainsKey(10)).IsTrue();
     }
     [Test]
-    public void ClearTest()
+    public async Task ClearTest()
     {
         var cloned = testDictionary.Clone();
         cloned.Clear();
         foreach (var kvp in testDictionary)
-            Assert.IsFalse(cloned.ContainsKey(kvp.Key));
-        Assert.AreEqual(0, cloned.Count);
+            await Assert.That(cloned.ContainsKey(kvp.Key)).IsFalse();
+        await Assert.That(cloned).IsEmpty();
     }
     [Test]
-    public void RemoveTest()
+    public async Task RemoveTest()
     {
         var cloned = testDictionary.Clone();
         cloned.Remove(1);
         foreach (var kvp in testDictionary)
-            Assert.AreEqual(kvp.Key != 1, cloned.ContainsKey(kvp.Key));
-        Assert.AreEqual(testDictionary.Count - 1, cloned.Count);
+            await Assert.That(cloned.ContainsKey(kvp.Key)).IsEqualTo(kvp.Key != 1);
+        await Assert.That(cloned.Count).IsEqualTo(testDictionary.Count - 1);
     }
     [Test]
-    public void RemoveKeysTest()
+    public async Task RemoveKeysTest()
     {
         var cloned = testDictionary.Clone();
         int removed = cloned.RemoveKeys(1, 2, 43);
 
-        Assert.AreEqual(2, removed);
-        Assert.IsTrue(cloned.ContainsKey(0));
-        Assert.IsFalse(cloned.ContainsKey(1));
-        Assert.IsFalse(cloned.ContainsKey(2));
-        Assert.IsTrue(cloned.ContainsKey(3));
-        Assert.IsTrue(cloned.ContainsKey(4));
-        Assert.AreEqual(testDictionary.Count - removed, cloned.Count);
+        await Assert.That(removed).IsEqualTo(2);
+        await Assert.That(cloned.ContainsKey(0)).IsTrue();
+        await Assert.That(cloned.ContainsKey(1)).IsFalse();
+        await Assert.That(cloned.ContainsKey(2)).IsFalse();
+        await Assert.That(cloned.ContainsKey(3)).IsTrue();
+        await Assert.That(cloned.ContainsKey(4)).IsTrue();
+        await Assert.That(cloned.Count).IsEqualTo(testDictionary.Count - removed);
     }
 
     [Test]
-    public void TryGetValueTest()
+    public async Task TryGetValueTest()
     {
-        var d = new FlexibleDictionary<string, int>
+        var d = new FlexDictionary<string, int>(defaultValue: default)
         {
             ["a"] = 2,
         };
 
         bool found = d.TryGetValue("fsad", out int value);
-        Assert.IsFalse(found);
-        Assert.AreEqual(0, value);
+        await Assert.That(found).IsFalse();
+        await Assert.That(value).IsZero();
 
         found = d.TryGetValue("a", out value);
-        Assert.IsTrue(found);
-        Assert.AreEqual(2, value);
+        await Assert.That(found).IsTrue();
+        await Assert.That(value).IsEqualTo(2);
     }
 
     [Test]
-    public void AccessorTest()
+    public async Task AccessorTest()
     {
-        var d = new FlexibleDictionary<string, int>();
+        var d = new FlexDictionary<string, int>(defaultValue: default);
         int value = d[""];
-        Assert.AreEqual(0, value);
+        await Assert.That(value).IsZero();
         d["a"] = 5;
-        Assert.AreEqual(5, d["a"]);
+        await Assert.That(d["a"]).IsEqualTo(5);
         d[""] = 3;
-        Assert.AreEqual(3, d[""]);
+        await Assert.That(d[""]).IsEqualTo(3);
     }
 }

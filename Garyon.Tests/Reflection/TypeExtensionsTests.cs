@@ -1,126 +1,132 @@
 ﻿using Garyon.DataStructures.Trees;
 using Garyon.QualityControl.Types;
 using Garyon.Reflection;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 using GaryonTypeExtensions = Garyon.Reflection.TypeExtensions;
 
 namespace Garyon.Tests.Reflection;
 
-[Parallelizable(ParallelScope.Children)]
 public class TypeExtensionsTests : ExampleTypes
 {
     private static readonly Type intByRefType;
     private static readonly Type intPointerByRefType;
-    private static readonly Dictionary<Type, TypeDefinitionInfo> predicateTestTypes;
 
     static TypeExtensionsTests()
     {
-        var parameters = typeof(TypeExtensionsTests).GetMethod(nameof(DummyByRefFunction), BindingFlags.NonPublic | BindingFlags.Static).GetParameters();
+        var parameters = typeof(TypeExtensionsTests)
+            .GetMethod(nameof(DummyByRefFunction), BindingFlags.NonPublic | BindingFlags.Static)
+            .GetParameters();
         intByRefType = parameters[0].ParameterType;
         intPointerByRefType = parameters[1].ParameterType;
-
-        predicateTestTypes = new Dictionary<Type, TypeDefinitionInfo>
-        {
-            [typeof(void)] = new TypeDefinitionInfo(TypeKind.Void, TypeModifiers.PublicSealed),
-            [typeof(IA)] = new TypeDefinitionInfo(TypeKind.Interface, TypeModifiers.ProtectedAbstract),
-            [typeof(CA)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected),
-            [typeof(SA)] = new TypeDefinitionInfo(TypeKind.Struct, TypeModifiers.ProtectedSealed),
-            [typeof(DA)] = new TypeDefinitionInfo(TypeKind.Delegate, TypeModifiers.ProtectedSealed),
-            [typeof(EA)] = new TypeDefinitionInfo(TypeKind.Enum, TypeModifiers.ProtectedSealed),
-            [typeof(SA[])] = new TypeDefinitionInfo(TypeKind.Array, TypeModifiers.PublicSealed),
-            [typeof(SA*)] = new TypeDefinitionInfo(TypeKind.Pointer, TypeModifiers.Public),
-            [typeof(SA*[])] = new TypeDefinitionInfo(TypeKind.Array, TypeModifiers.PublicSealed),
-            [typeof((int, int))] = new TypeDefinitionInfo(TypeKind.Tuple, TypeModifiers.PublicSealed),
-            [typeof((int, int)?)] = new TypeDefinitionInfo(TypeKind.NullableTuple, TypeModifiers.PublicSealed),
-            [typeof(StaticClass)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic),
-            [typeof(GenericClass<>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected),
-            [typeof(GenericClass<,>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected),
-            [typeof(GenericClass<,,>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected),
-            [typeof(GenericStaticClass<>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic),
-            [typeof(GenericStaticClass<,>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic),
-            [typeof(GenericStaticClass<,,>)] = new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic),
-            [typeof(ExceptionA)] = new TypeDefinitionInfo(TypeKind.Exception, TypeModifiers.Protected),
-            [typeof(ExceptionA<>)] = new TypeDefinitionInfo(TypeKind.Exception, TypeModifiers.Protected),
-            [intByRefType] = new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.PublicRef),
-            [intPointerByRefType] = new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.PublicRef),
-        };
     }
 
-    // Underscore, optionally followed by any digit(s) is considered a dummy variable and does not emit IDE0060
     private static unsafe void DummyByRefFunction(ref int _0, ref int* _1) { }
 
-    private void AssertTypeDefinitionInfo<T>(Func<TypeDefinitionInfo, T> expected, Func<Type, T> actual)
+    private static async Task AssertTypeDefinitionInfo<T>(
+        TypeDefinitionInfoMapping mapping,
+        Func<TypeDefinitionInfo, T> expected,
+        Func<Type, T> actual)
     {
-        foreach (var kvp in predicateTestTypes)
-            Assert.AreEqual(expected(kvp.Value), actual(kvp.Key));
+        await Assert.That(actual(mapping.Type))
+            .IsEqualTo(expected(mapping.Info));
     }
 
     #region Inheritance
 
     [Test]
-    public void TypeDefinitionInfoTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task TypeDefinitionInfoTest(
+        TypeDefinitionInfoMapping mapping)
     {
-        foreach (var kvp in predicateTestTypes)
-            Assert.AreEqual(kvp.Value, new TypeDefinitionInfo(kvp.Key));
+        var info = new TypeDefinitionInfo(mapping.Type);
+        await Assert.That(info).IsEqualTo(mapping.Info);
     }
 
     [Test]
-    public void CanInheritTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task CanInheritTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.CanInherit, GaryonTypeExtensions.CanInherit);
+        await AssertTypeDefinitionInfo(
+            mapping,
+            t => t.CanInherit,
+            GaryonTypeExtensions.CanInherit);
     }
     [Test]
-    public void CanInheritCustomTypesTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task CanInheritCustomTypesTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.CanInheritCustomTypes, GaryonTypeExtensions.CanInheritCustomTypes);
+        await AssertTypeDefinitionInfo(
+            mapping,
+            t => t.CanInheritCustomTypes,
+            GaryonTypeExtensions.CanInheritCustomTypes);
     }
     [Test]
-    public void CanInheritInterfacesTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task CanInheritInterfacesTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.CanInheritInterfaces, GaryonTypeExtensions.CanInheritInterfaces);
+        await AssertTypeDefinitionInfo(
+            mapping,
+            t => t.CanInheritInterfaces,
+            GaryonTypeExtensions.CanInheritInterfaces);
     }
     [Test]
-    public void CanInheritClassesTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task CanInheritClassesTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.CanInheritClasses, GaryonTypeExtensions.CanInheritClasses);
+        await AssertTypeDefinitionInfo(
+            mapping,
+            t => t.CanInheritClasses,
+            GaryonTypeExtensions.CanInheritClasses);
     }
     [Test]
-    public void CanInheritCustomClassesTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task CanInheritCustomClassesTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.CanInheritCustomClasses, GaryonTypeExtensions.CanInheritCustomClasses);
-    }
-    
-    public void CanBeInheritedTest()
-    {
-        AssertTypeDefinitionInfo(t => t.CanBeInherited, GaryonTypeExtensions.CanBeInherited);
+        await AssertTypeDefinitionInfo(
+            mapping,
+            t => t.CanInheritCustomClasses,
+            GaryonTypeExtensions.CanInheritCustomClasses);
     }
 
     [Test]
-    public void InheritsTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task CanBeInheritedTest(TypeDefinitionInfoMapping mapping)
     {
-        Assert.IsFalse(typeof(object).Inherits<object>());
-        Assert.IsTrue(typeof(ID).Inherits<IA>());
-        Assert.IsTrue(typeof(ID).Inherits<IB>());
-        Assert.IsFalse(typeof(ID).Inherits<ID>());
-        Assert.IsTrue(typeof(CA).Inherits<object>());
-        Assert.IsTrue(typeof(EA).Inherits<Enum>());
-        Assert.IsTrue(typeof(EA).Inherits<ValueType>());
-        Assert.IsFalse(typeof(SA).Inherits<Enum>());
-        Assert.IsTrue(typeof(DA).Inherits<Delegate>());
+        await AssertTypeDefinitionInfo(
+            mapping,
+            t => t.CanBeInherited,
+            GaryonTypeExtensions.CanBeInherited);
+    }
+
+    [Test]
+    public async Task InheritsTest()
+    {
+        await Assert.That(typeof(object).Inherits<object>()).IsFalse();
+        await Assert.That(typeof(ID).Inherits<IA>()).IsTrue();
+        await Assert.That(typeof(ID).Inherits<IB>()).IsTrue();
+        await Assert.That(typeof(ID).Inherits<ID>()).IsFalse();
+        await Assert.That(typeof(CA).Inherits<object>()).IsTrue();
+        await Assert.That(typeof(EA).Inherits<Enum>()).IsTrue();
+        await Assert.That(typeof(EA).Inherits<ValueType>()).IsTrue();
+        await Assert.That(typeof(SA).Inherits<Enum>()).IsFalse();
+        await Assert.That(typeof(DA).Inherits<Delegate>()).IsTrue();
     }
     
     [Test]
-    public void GetInheritanceLevelTest()
+    public async Task GetInheritanceLevelTest()
     {
         int level = typeof(CD).GetInheritanceLevel();
-        Assert.AreEqual(3, level);
+        await Assert.That(level).IsEqualTo(3);
     }
     [Test]
-    public void GetInheritanceTreeTest()
+    public async Task GetInheritanceTreeTest()
     {
         var tree = typeof(CD).GetInheritanceTree();
 
@@ -151,76 +157,76 @@ public class TypeExtensionsTests : ExampleTypes
         id1.AddChildren(typeof(IA), typeof(IB));
         ii.AddChild(typeof(IH));
 
+        var typeNamePrefix = $"{typeof(ExampleTypes)}+";
         var expectedTreeView =
-@"
-CD
-├---CC
-|   ├---CB
-|   |   ├---CA
-|   |   |   ├---System.Object
-|   |   |   ├---ID
-|   |   |   |   ├---IA
-|   |   |   |   └---IB
-|   |   |   └---IJ
-|   |   └---IK
-|   |       ├---ID
-|   |       |   ├---IA
-|   |       |   └---IB
-|   |       ├---IJ
-|   |       └---II
-|   |           └---IH
-|   └---IC
-└---IE
-    ├---IA
-    ├---IB
-    └---IC
-";
+            $"""
+            {typeNamePrefix}CD
+            ├---{typeNamePrefix}CC
+            |   ├---{typeNamePrefix}CB
+            |   |   ├---{typeNamePrefix}CA
+            |   |   |   ├---System.Object
+            |   |   |   ├---{typeNamePrefix}ID
+            |   |   |   |   ├---{typeNamePrefix}IA
+            |   |   |   |   └---{typeNamePrefix}IB
+            |   |   |   └---{typeNamePrefix}IJ
+            |   |   └---{typeNamePrefix}IK
+            |   |       ├---{typeNamePrefix}ID
+            |   |       |   ├---{typeNamePrefix}IA
+            |   |       |   └---{typeNamePrefix}IB
+            |   |       ├---{typeNamePrefix}IJ
+            |   |       └---{typeNamePrefix}II
+            |   |           └---{typeNamePrefix}IH
+            |   └---{typeNamePrefix}IC
+            └---{typeNamePrefix}IE
+                ├---{typeNamePrefix}IA
+                ├---{typeNamePrefix}IB
+                └---{typeNamePrefix}IC
+            """;
 
-        // Verify the expected tree's tree view is the intended
-        Assert.AreEqual(expectedTreeView.Trim(), expectedTree.GetTreeView().Replace($"{typeof(ExampleTypes)}+", ""));
-        Assert.AreEqual(expectedTree, tree);
+        await Assert.That(expectedTree.GetTreeView()).IsEqualTo(expectedTreeView.Trim());
+        await Assert.That(tree).IsEqualTo(expectedTree);
     }
     #endregion
 
     #region Generic
     [Test]
-    public void IsGenericVariantOrDefinitionTest()
+    public async Task IsGenericVariantOrDefinitionTest()
     {
-        Assert.IsTrue(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Action<,>)));
-        Assert.IsFalse(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Action<>)));
-        Assert.IsFalse(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Func<,>)));
-        Assert.IsFalse(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Func<>)));
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Action<,>))).IsTrue();
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Action<>))).IsFalse();
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Func<,>))).IsFalse();
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOrDefinition(typeof(Func<>))).IsFalse();
 
-        Assert.IsFalse(typeof(Action).IsGenericVariantOrDefinition(typeof(Action<,>)));
-        Assert.IsTrue(typeof(Action<,>).IsGenericVariantOrDefinition(typeof(Action<,>)));
+        await Assert.That(typeof(Action).IsGenericVariantOrDefinition(typeof(Action<,>))).IsFalse();
+        await Assert.That(typeof(Action<,>).IsGenericVariantOrDefinition(typeof(Action<,>))).IsTrue();
 
         Assert.Throws<InvalidOperationException>(() => typeof(Action).IsGenericVariantOrDefinition(typeof(Action)));
         Assert.Throws<InvalidOperationException>(() => typeof(Action<,>).IsGenericVariantOrDefinition(typeof(Action)));
     }
     [Test]
-    public void IsGenericVariantOfTest()
+    public async Task IsGenericVariantOfTest()
     {
-        Assert.IsTrue(typeof(Action<int, string>).IsGenericVariantOf(typeof(Action<,>)));
-        Assert.IsFalse(typeof(Action<int, string>).IsGenericVariantOf(typeof(Action<>)));
-        Assert.IsFalse(typeof(Action<int, string>).IsGenericVariantOf(typeof(Func<,>)));
-        Assert.IsFalse(typeof(Action<int, string>).IsGenericVariantOf(typeof(Func<>)));
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOf(typeof(Action<,>))).IsTrue();
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOf(typeof(Action<>))).IsFalse();
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOf(typeof(Func<,>))).IsFalse();
+        await Assert.That(typeof(Action<int, string>).IsGenericVariantOf(typeof(Func<>))).IsFalse();
 
-        Assert.IsFalse(typeof(Action).IsGenericVariantOf(typeof(Action<,>)));
-        Assert.IsFalse(typeof(Action<,>).IsGenericVariantOf(typeof(Action<,>)));
+        await Assert.That(typeof(Action).IsGenericVariantOf(typeof(Action<,>))).IsFalse();
+        await Assert.That(typeof(Action<,>).IsGenericVariantOf(typeof(Action<,>))).IsFalse();
 
         Assert.Throws<InvalidOperationException>(() => typeof(Action).IsGenericVariantOf(typeof(Action)));
         Assert.Throws<InvalidOperationException>(() => typeof(Action<,>).IsGenericVariantOf(typeof(Action)));
     }
     [Test]
-    public void CanConstructTest()
+    public async Task CanConstructTest()
     {
-        Assert.IsTrue(typeof(Action<,>).CanConstruct<Action<int, string>>());
-        Assert.IsFalse(typeof(Action<>).CanConstruct<Action<int, string>>());
-        Assert.IsFalse(typeof(Func<,>).CanConstruct<Action<int, string>>());
-        Assert.IsFalse(typeof(Func<>).CanConstruct<Action<int, string>>());
+        await Assert.That(typeof(Action<,>).CanConstruct<Action<int, string>>()).IsTrue();
+        await Assert.That(typeof(Action<>).CanConstruct<Action<int, string>>()).IsFalse();
+        await Assert.That(typeof(Func<,>).CanConstruct<Action<int, string>>()).IsFalse();
+        await Assert.That(typeof(Func<>).CanConstruct<Action<int, string>>()).IsFalse();
 
-        Assert.IsFalse(typeof(Action<,>).CanConstruct(typeof(Action)));
-        Assert.IsFalse(typeof(Action<,>).CanConstruct(typeof(Action<,>)));
+        await Assert.That(typeof(Action<,>).CanConstruct(typeof(Action))).IsFalse();
+        await Assert.That(typeof(Action<,>).CanConstruct(typeof(Action<,>))).IsFalse();
 
         Assert.Throws<InvalidOperationException>(() => typeof(Action).CanConstruct(typeof(Action<,>)));
         Assert.Throws<InvalidOperationException>(() => typeof(Action).CanConstruct(typeof(Action)));
@@ -229,120 +235,141 @@ CD
 
     #region Type Categories
     [Test]
-    public void IsVoidTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsVoidTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsVoid, GaryonTypeExtensions.IsVoid);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsVoid, GaryonTypeExtensions.IsVoid);
     }
     [Test]
-    public void IsTrueClassTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsTrueClassTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsTrueClass, GaryonTypeExtensions.IsTrueClass);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsTrueClass, GaryonTypeExtensions.IsTrueClass);
     }
     [Test]
-    public void IsStaticClassTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsStaticClassTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsStatic, GaryonTypeExtensions.IsStaticClass);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsStatic, GaryonTypeExtensions.IsStaticClass);
     }
     [Test]
-    public void IsDelegateTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsDelegateTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsDelegate, GaryonTypeExtensions.IsDelegate);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsDelegate, GaryonTypeExtensions.IsDelegate);
     }
     [Test]
-    public void IsExceptionTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsExceptionTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsException, GaryonTypeExtensions.IsException);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsException, GaryonTypeExtensions.IsException);
     }
     [Test]
-    public void IsAttributeTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsAttributeTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsAttribute, GaryonTypeExtensions.IsAttribute);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsAttribute, GaryonTypeExtensions.IsAttribute);
     }
     [Test]
-    public void IsTupleTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsTupleTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsTuple, GaryonTypeExtensions.IsTuple);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsTuple, GaryonTypeExtensions.IsTuple);
     }
     [Test]
-    public void IsNullableValueTypeTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsNullableValueTypeTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsNullableValueType, GaryonTypeExtensions.IsNullableValueType);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsNullableValueType, GaryonTypeExtensions.IsNullableValueType);
     }
     [Test]
-    public void IsNullableTypeTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsNullableTypeTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsNullableType, GaryonTypeExtensions.IsNullableType);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsNullableType, GaryonTypeExtensions.IsNullableType);
     }
     [Test]
-    public void IsReferenceTypeTest()
+    [MethodDataSource(nameof(GetTestTypeMappings))]
+    public async Task IsReferenceTypeTest(TypeDefinitionInfoMapping mapping)
     {
-        AssertTypeDefinitionInfo(t => t.IsReferenceType, GaryonTypeExtensions.IsReferenceType);
+        await AssertTypeDefinitionInfo(mapping, t => t.IsReferenceType, GaryonTypeExtensions.IsReferenceType);
     }
     #endregion
 
     [Test]
-    public void GetArrayJaggingLevelTest()
+    public async Task GetArrayJaggingLevelTest()
     {
-        Assert.AreEqual(1, typeof(int[]).GetArrayJaggingLevel());
-        Assert.AreEqual(2, typeof(int[][]).GetArrayJaggingLevel());
-        Assert.AreEqual(3, typeof(int[][][]).GetArrayJaggingLevel());
-        Assert.AreEqual(4, typeof(int[][][][]).GetArrayJaggingLevel());
-        Assert.AreEqual(5, typeof(int[][][][][]).GetArrayJaggingLevel());
-        Assert.AreEqual(6, typeof(int[][][][][][]).GetArrayJaggingLevel());
+        await AssertJaggingLevel(typeof(int[]), 1);
+        await AssertJaggingLevel(typeof(int[][]), 2);
+        await AssertJaggingLevel(typeof(int[][][]), 3);
+        await AssertJaggingLevel(typeof(int[][][][]), 4);
+        await AssertJaggingLevel(typeof(int[][][][][]), 5);
+        await AssertJaggingLevel(typeof(int[][][][][][]), 6);
 
-        Assert.AreEqual(4, typeof(int[,,,][,,][,][]).GetArrayJaggingLevel());
-        Assert.AreEqual(4, typeof(int**[,][,][,][,]).GetArrayJaggingLevel());
+        await AssertJaggingLevel(typeof(int[,,,][,,][,][]), 4);
+        await AssertJaggingLevel(typeof(int**[,][,][,][,]), 4);
+
+        static async Task AssertJaggingLevel(Type type, int level)
+        {
+            await Assert.That(type.GetArrayJaggingLevel()).IsEqualTo(level);
+        }
     }
     [Test]
-    public void GetMultiplePointerLevelTest()
+    public async Task GetMultiplePointerLevelTest()
     {
-        Assert.AreEqual(1, typeof(int*).GetMultiplePointerLevel());
-        Assert.AreEqual(2, typeof(int**).GetMultiplePointerLevel());
-        Assert.AreEqual(3, typeof(int***).GetMultiplePointerLevel());
-        Assert.AreEqual(4, typeof(int****).GetMultiplePointerLevel());
-        Assert.AreEqual(5, typeof(int*****).GetMultiplePointerLevel());
-        Assert.AreEqual(6, typeof(int******).GetMultiplePointerLevel());
+        await AssertMultiplePointerLevel(typeof(int*), 1);
+        await AssertMultiplePointerLevel(typeof(int**), 2);
+        await AssertMultiplePointerLevel(typeof(int***), 3);
+        await AssertMultiplePointerLevel(typeof(int****), 4);
+        await AssertMultiplePointerLevel(typeof(int*****), 5);
+        await AssertMultiplePointerLevel(typeof(int******), 6);
+
+        static async Task AssertMultiplePointerLevel(Type type, int level)
+        {
+            await Assert.That(type.GetMultiplePointerLevel()).IsEqualTo(level);
+        }
     }
 
     [Test]
-    public void GetDeepestElementTypeTest()
+    public async Task GetDeepestElementTypeTest()
     {
-        Assert.AreEqual(typeof(int), typeof(int*).GetDeepestElementType());
-        Assert.AreEqual(typeof(int), typeof(int****).GetDeepestElementType());
-        Assert.AreEqual(typeof(int), typeof(int[]).GetDeepestElementType());
-        Assert.AreEqual(typeof(int), typeof(int[,,][,,,]).GetDeepestElementType());
-        Assert.AreEqual(typeof(int), typeof(int***[,][,,][,]).GetDeepestElementType());
-        Assert.AreEqual(typeof(int), intByRefType.GetDeepestElementType());
-        Assert.AreEqual(typeof(int), intPointerByRefType.GetDeepestElementType());
+        await AssertDeepestElementType(typeof(int*), typeof(int));
+        await AssertDeepestElementType(typeof(int****), typeof(int));
+        await AssertDeepestElementType(typeof(int[]), typeof(int));
+        await AssertDeepestElementType(typeof(int[,,][,,,]), typeof(int));
+        await AssertDeepestElementType(typeof(int***[,][,,][,]), typeof(int));
+        await AssertDeepestElementType(intByRefType, typeof(int));
+        await AssertDeepestElementType(intPointerByRefType, typeof(int));
+
+        static async Task AssertDeepestElementType(Type type, Type expectedElementType)
+        {
+            await Assert.That(type.GetDeepestElementType()).IsEqualTo(expectedElementType);
+        }
     }
     [Test]
-    public unsafe void ContainsElementsOfType()
+    public async Task ContainsElementsOfType()
     {
-        Assert.IsTrue(typeof(int*).ContainsElementsOfType<int>());
-        Assert.IsTrue(typeof(int****).ContainsElementsOfType<int>());
-        Assert.IsTrue(typeof(int[]).ContainsElementsOfType<int>());
-        Assert.IsTrue(typeof(int[,,][,,,]).ContainsElementsOfType<int>());
-        Assert.IsTrue(typeof(int***[,][,,][,]).ContainsElementsOfType<int>());
-        Assert.IsTrue(intByRefType.ContainsElementsOfType<int>());
-        Assert.IsTrue(intPointerByRefType.ContainsElementsOfType<int>());
+        await Assert.That(typeof(int*).ContainsElementsOfType<int>()).IsTrue();
+        await Assert.That(typeof(int****).ContainsElementsOfType<int>()).IsTrue();
+        await Assert.That(typeof(int[]).ContainsElementsOfType<int>()).IsTrue();
+        await Assert.That(typeof(int[,,][,,,]).ContainsElementsOfType<int>()).IsTrue();
+        await Assert.That(typeof(int***[,][,,][,]).ContainsElementsOfType<int>()).IsTrue();
+        await Assert.That(intByRefType.ContainsElementsOfType<int>()).IsTrue();
+        await Assert.That(intPointerByRefType.ContainsElementsOfType<int>()).IsTrue();
 
         // To be completely honest, I don't fucking know why. It just works like that. Just don't ever use those types. Please.
-        Assert.IsTrue(typeof(int[,,][,,,]).ContainsElementsOfType<int[,,,]>());
-        Assert.IsFalse(typeof(int[,,][,,,]).ContainsElementsOfType<int[]>());
+        await Assert.That(typeof(int[,,][,,,]).ContainsElementsOfType<int[,,,]>()).IsTrue();
+        await Assert.That(typeof(int[,,][,,,]).ContainsElementsOfType<int[]>()).IsFalse();
 
-        Assert.IsTrue(typeof(int**[,,][,,,]).ContainsElementsOfType<int**[,,,]>());
+        bool pointerContains;
+        unsafe
+        {
+            pointerContains = typeof(int**[,,][,,,]).ContainsElementsOfType<int**[,,,]>();
+        }
+        await Assert.That(pointerContains).IsTrue();
 
-        // A typeof generic type argument constraint would be much appreciated:
-        /*
-            void Function<T>()
-                where T : typeof
-            {
-                var t = typeof(T);
-                T element = default; // Illegal; T could be void
-            }
-         */
-        Assert.IsTrue(typeof(int**[,,][,,,]).ContainsElementsOfType(typeof(int**)));
-        Assert.IsTrue(typeof(int**[,,][,,,]).ContainsElementsOfType(typeof(int*)));
+        await Assert.That(typeof(int**[,,][,,,]).ContainsElementsOfType(typeof(int**))).IsTrue();
+        await Assert.That(typeof(int**[,,][,,,]).ContainsElementsOfType(typeof(int*))).IsTrue();
     }
 
     #region Instances
@@ -372,46 +399,46 @@ CD
     }
 
     [Test]
-    public void GetParameterlessConstructorTest()
+    public async Task GetParameterlessConstructorTest()
     {
-        Assert.IsNotNull(typeof(PublicConstructorContainer).GetParameterlessConstructor());
-        Assert.IsNull(typeof(InternalConstructorContainer).GetParameterlessConstructor());
-        Assert.IsNull(typeof(ProtectedInternalConstructorContainer).GetParameterlessConstructor());
-        Assert.IsNull(typeof(ProtectedConstructorContainer).GetParameterlessConstructor());
-        Assert.IsNull(typeof(PrivateProtectedConstructorContainer).GetParameterlessConstructor());
-        Assert.IsNull(typeof(PrivateConstructorContainer).GetParameterlessConstructor());
+        await Assert.That(typeof(PublicConstructorContainer).GetParameterlessConstructor()).IsNotNull();
+        await Assert.That(typeof(InternalConstructorContainer).GetParameterlessConstructor()).IsNull();
+        await Assert.That(typeof(ProtectedInternalConstructorContainer).GetParameterlessConstructor()).IsNull();
+        await Assert.That(typeof(ProtectedConstructorContainer).GetParameterlessConstructor()).IsNull();
+        await Assert.That(typeof(PrivateProtectedConstructorContainer).GetParameterlessConstructor()).IsNull();
+        await Assert.That(typeof(PrivateConstructorContainer).GetParameterlessConstructor()).IsNull();
     }
     [Test]
-    public void GetAnyAccessibilityParameterlessConstructorTest()
+    public async Task GetAnyAccessibilityParameterlessConstructorTest()
     {
         // Holy shit those are some long names
-        Assert.IsNotNull(typeof(PublicConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
-        Assert.IsNotNull(typeof(InternalConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
-        Assert.IsNotNull(typeof(ProtectedInternalConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
-        Assert.IsNotNull(typeof(ProtectedConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
-        Assert.IsNotNull(typeof(PrivateProtectedConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
-        Assert.IsNotNull(typeof(PrivateConstructorContainer).GetAnyAccessibilityParameterlessConstructor());
+        await Assert.That(typeof(PublicConstructorContainer).GetAnyAccessibilityParameterlessConstructor()).IsNotNull();
+        await Assert.That(typeof(InternalConstructorContainer).GetAnyAccessibilityParameterlessConstructor()).IsNotNull();
+        await Assert.That(typeof(ProtectedInternalConstructorContainer).GetAnyAccessibilityParameterlessConstructor()).IsNotNull();
+        await Assert.That(typeof(ProtectedConstructorContainer).GetAnyAccessibilityParameterlessConstructor()).IsNotNull();
+        await Assert.That(typeof(PrivateProtectedConstructorContainer).GetAnyAccessibilityParameterlessConstructor()).IsNotNull();
+        await Assert.That(typeof(PrivateConstructorContainer).GetAnyAccessibilityParameterlessConstructor()).IsNotNull();
     }
 
     [Test]
-    public void InitializeInstanceTest()
+    public async Task InitializeInstanceTest()
     {
-        AssertInstanceInitialization<PublicConstructorContainer>();
-        AssertInvalidInstanceInitialization<InternalConstructorContainer>();
-        AssertInvalidInstanceInitialization<ProtectedInternalConstructorContainer>();
-        AssertInvalidInstanceInitialization<ProtectedConstructorContainer>();
-        AssertInvalidInstanceInitialization<PrivateProtectedConstructorContainer>();
-        AssertInvalidInstanceInitialization<PrivateConstructorContainer>();
+        await AssertInstanceInitialization<PublicConstructorContainer>();
+        await AssertInvalidInstanceInitialization<InternalConstructorContainer>();
+        await AssertInvalidInstanceInitialization<ProtectedInternalConstructorContainer>();
+        await AssertInvalidInstanceInitialization<ProtectedConstructorContainer>();
+        await AssertInvalidInstanceInitialization<PrivateProtectedConstructorContainer>();
+        await AssertInvalidInstanceInitialization<PrivateConstructorContainer>();
 
-        static void AssertInstanceInitialization<T>()
+        static async Task AssertInstanceInitialization<T>()
             where T : class
         {
-            Assert.IsInstanceOf<T>(typeof(T).InitializeInstance<T>());
+            await Assert.That(typeof(T).InitializeInstance<T>()).IsTypeOf<T>();
         }
-        static void AssertInvalidInstanceInitialization<T>()
+        static async Task AssertInvalidInstanceInitialization<T>()
             where T : class
         {
-            Assert.IsNull(typeof(T).InitializeInstance<T>());
+            await Assert.That(typeof(T).InitializeInstance<T>()).IsNull();
         }
     }
 
@@ -422,31 +449,31 @@ CD
     }
 
     [Test]
-    public void InitializeInstanceWithArgumentsTest()
+    public async Task InitializeInstanceWithArgumentsTest()
     {
-        AssertInstanceInitialization<ArgumentConstructorContainer>("a", "b");
-        AssertInstanceInitialization<ArgumentConstructorContainer>(0);
-        AssertInvalidInstanceInitialization<ArgumentConstructorContainer>();
-        AssertInvalidInstanceInitialization<ArgumentConstructorContainer>("a");
-        AssertInvalidInstanceInitialization<ArgumentConstructorContainer>(0, 0);
+        await AssertInstanceInitialization<ArgumentConstructorContainer>("a", "b");
+        await AssertInstanceInitialization<ArgumentConstructorContainer>(0);
+        await AssertInvalidInstanceInitialization<ArgumentConstructorContainer>();
+        await AssertInvalidInstanceInitialization<ArgumentConstructorContainer>("a");
+        await AssertInvalidInstanceInitialization<ArgumentConstructorContainer>(0, 0);
 
 #nullable enable
-        static void AssertInstanceInitialization<T>(params object?[]? parameters)
+        static async Task AssertInstanceInitialization<T>(params object?[]? parameters)
             where T : class
         {
-            Assert.IsInstanceOf<T>(typeof(T).InitializeInstance<T>(parameters));
+            await Assert.That(typeof(T).InitializeInstance<T>(parameters)).IsTypeOf<T>();
         }
-        static void AssertInvalidInstanceInitialization<T>(params object?[]? parameters)
+        static async Task AssertInvalidInstanceInitialization<T>(params object?[]? parameters)
             where T : class
         {
-            Assert.IsNull(typeof(T).InitializeInstance<T>(parameters));
+            await Assert.That(typeof(T).InitializeInstance<T>(parameters)).IsNull();
         }
 #nullable disable
     }
     #endregion
 
     [Test]
-    public void GetOriginalDeclaringGenericMemberTest()
+    public async Task GetOriginalDeclaringGenericMemberTest()
     {
         // Nice identifier
         var testingMethod = GenericWithNestedGeneric<int, int>.Nested<int, int, int>.Nested2<int, int, int>.Type;
@@ -454,15 +481,51 @@ CD
         var outer = genericParameters[0..2];
         var inner1 = genericParameters[2..5];
         var inner2 = genericParameters[5..8];
-        AssertDeclaringTypes(outer, typeof(GenericWithNestedGeneric<,>));
-        AssertDeclaringTypes(inner1, typeof(GenericWithNestedGeneric<,>.Nested<,,>));
-        AssertDeclaringTypes(inner2, typeof(GenericWithNestedGeneric<,>.Nested<,,>.Nested2<,,>));
+        await AssertDeclaringTypes(outer, typeof(GenericWithNestedGeneric<,>));
+        await AssertDeclaringTypes(inner1, typeof(GenericWithNestedGeneric<,>.Nested<,,>));
+        await AssertDeclaringTypes(inner2, typeof(GenericWithNestedGeneric<,>.Nested<,,>.Nested2<,,>));
+        // TODO: Also test cases where any of the types is non-generic,
+        // and where the outer type has more generic parameters
 
-        void AssertDeclaringTypes(IEnumerable<Type> genericParameters, MemberInfo expectedDeclaringMember)
+        async Task AssertDeclaringTypes(IEnumerable<Type> genericParameters, MemberInfo expectedDeclaringMember)
         {
-            Assert.IsTrue(genericParameters
+            await Assert.That(genericParameters
                 .Select(parameter => parameter.GetOriginalDeclaringGenericMember())
-                .All(declaringMember => declaringMember == expectedDeclaringMember));
+                .All(declaringMember => declaringMember == expectedDeclaringMember)).IsTrue();
         }
     }
+
+    public static IReadOnlyList<TypeDefinitionInfoMapping> GetTestTypeMappings()
+    {
+        return
+        [
+            new(typeof(void), new TypeDefinitionInfo(TypeKind.Void, TypeModifiers.PublicSealed)),
+            new(typeof(IA), new TypeDefinitionInfo(TypeKind.Interface, TypeModifiers.ProtectedAbstract)),
+            new(typeof(CA), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected)),
+            new(typeof(SA), new TypeDefinitionInfo(TypeKind.Struct, TypeModifiers.ProtectedSealed)),
+            new(typeof(DA), new TypeDefinitionInfo(TypeKind.Delegate, TypeModifiers.ProtectedSealed)),
+            new(typeof(EA), new TypeDefinitionInfo(TypeKind.Enum, TypeModifiers.ProtectedSealed)),
+            new(typeof(SA[]), new TypeDefinitionInfo(TypeKind.Array, TypeModifiers.PublicSealed)),
+            new(typeof(SA*), new TypeDefinitionInfo(TypeKind.Pointer, TypeModifiers.Public)),
+            new(typeof(SA*[]), new TypeDefinitionInfo(TypeKind.Array, TypeModifiers.PublicSealed)),
+            new(typeof((int, int)), new TypeDefinitionInfo(TypeKind.Tuple, TypeModifiers.PublicSealed)),
+            new(typeof((int, int)?), new TypeDefinitionInfo(TypeKind.NullableTuple, TypeModifiers.PublicSealed)),
+            new(typeof(StaticClass), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic)),
+            new(typeof(GenericClass<>), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected)),
+            new(typeof(GenericClass<,>), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected)),
+            new(typeof(GenericClass<,,>), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.Protected)),
+            new(typeof(GenericStaticClass<>), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic)),
+            new(typeof(GenericStaticClass<,>), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic)),
+            new(typeof(GenericStaticClass<,,>), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.ProtectedStatic)),
+            new(typeof(ExceptionA), new TypeDefinitionInfo(TypeKind.Exception, TypeModifiers.Protected)),
+            new(typeof(ExceptionA<>), new TypeDefinitionInfo(TypeKind.Exception, TypeModifiers.Protected)),
+            new(intByRefType, new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.PublicRef)),
+            new(intPointerByRefType, new TypeDefinitionInfo(TypeKind.ByRef, TypeModifiers.PublicRef)),
+            new(typeof(FileType), new TypeDefinitionInfo(TypeKind.Class, TypeModifiers.InternalSealed)),
+        ];
+    }
+
+    public sealed record TypeDefinitionInfoMapping(Type Type, TypeDefinitionInfo Info);
 }
+
+file sealed class FileType;

@@ -2,6 +2,8 @@
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a binary tree.</summary>
 /// <typeparam name="T">The type of the elements the binary tree nodes store.</typeparam>
 public class BinaryTree<T> : BinaryTree<T, BinaryTree<T>, BinaryTreeNode<T>>

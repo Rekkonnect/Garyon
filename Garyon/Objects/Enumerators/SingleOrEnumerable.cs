@@ -12,8 +12,8 @@ namespace Garyon.Objects.Enumerators;
 /// <typeparam name="T">The type of the stored value(s).</typeparam>
 public class SingleOrEnumerable<T> : IEnumerable<T>
 {
-    private T single;
-    private IEnumerable<T> enumerable;
+    private T? single;
+    private IEnumerable<T>? enumerable;
 
     /// <summary>
     /// Gets the kind of value(s) stored in this instance.
@@ -46,7 +46,7 @@ public class SingleOrEnumerable<T> : IEnumerable<T>
                 throw new InvalidOperationException("The current object does not represent a single value.");
             }
 
-            return single;
+            return single!;
         }
         set
         {
@@ -79,7 +79,7 @@ public class SingleOrEnumerable<T> : IEnumerable<T>
                 throw new InvalidOperationException("The current object does not represent an enumerable value.");
             }
 
-            return enumerable;
+            return enumerable!;
         }
         set
         {
@@ -156,8 +156,8 @@ public class SingleOrEnumerable<T> : IEnumerable<T>
         return Kind switch
         {
             SingleOrEnumerableKind.None => EmptyEnumerator<T>.Instance,
-            SingleOrEnumerableKind.Single => single.EnumerateSingle(),
-            SingleOrEnumerableKind.Enumerable => enumerable.GetEnumerator(),
+            SingleOrEnumerableKind.Single => single!.EnumerateSingle(),
+            SingleOrEnumerableKind.Enumerable => enumerable!.GetEnumerator(),
             _ => throw new UnreachableException(),
         };
     }

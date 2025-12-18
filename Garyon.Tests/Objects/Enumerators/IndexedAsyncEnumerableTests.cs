@@ -1,16 +1,17 @@
 ﻿using Garyon.Extensions;
 using Garyon.Objects.Enumerators;
-using NUnit.Framework;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Objects.Enumerators;
 
 public class IndexedAsyncEnumerableTests
 {
     [Test]
-    public void EnumerationTest()
+    public async Task EnumerationTest()
     {
         int index = 0;
 
@@ -20,7 +21,7 @@ public class IndexedAsyncEnumerableTests
         {
             await foreach (var i in GetEnumerable().WithIndex())
             {
-                Assert.AreEqual(new IndexedEnumeratorResult<int>(index, index + 1), i);
+                await Assert.That(i).IsEqualTo(new IndexedEnumeratorResult<int>(index, index + 1));
                 index++;
             }
         }

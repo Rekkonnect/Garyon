@@ -2,6 +2,8 @@
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a tree.</summary>
 /// <typeparam name="TValue">The type of the elements the tree nodes store.</typeparam>
 public interface ITree<TValue> : ICollection<TValue>

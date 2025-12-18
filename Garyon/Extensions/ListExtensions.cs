@@ -106,7 +106,7 @@ public static class ListExtensions
             list.Capacity = necessaryCount;
             for (int i = 0; i < missingCount; i++)
             {
-                list.Add(default);
+                list.Add(default!);
             }
         }
         list[index] = element;
@@ -126,7 +126,7 @@ public static class ListExtensions
         {
             while (originalIndex < list.Count - i)
             {
-                if (list[originalIndex].Equals(containedList[i]))
+                if (list[originalIndex]!.Equals(containedList[i]))
                     break;
                 originalIndex++;
             }

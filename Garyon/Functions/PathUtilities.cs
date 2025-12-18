@@ -71,7 +71,6 @@ public static class PathUtilities
 
             return ConcatenateDirectoryPath(result);
         }
-        // Since the explanation is not the most graspable, examples are provided.
         /// <summary>Gets the directory name of the directory in the previous path whose parent is the new path.</summary>
         /// <param name="previousPath">The previous path.</param>
         /// <param name="newPath">The new path in which the resulting previous path's directory name is contained.</param>
@@ -84,7 +83,7 @@ public static class PathUtilities
         /// <item><c>GetPreviousPathDirectoryInNewPath("C:\K\L\M\N\O\P\", "C:\K\L\M\N\")</c> returns "O".</item>
         /// </list>
         /// </returns>
-        public static string GetPreviousPathDirectoryInNewPath(string previousPath, string newPath)
+        public static string? GetPreviousPathDirectoryInNewPath(string previousPath, string newPath)
         {
             var splitPrevious = AnalyzePath(previousPath);
             var splitNew = AnalyzePath(newPath);
@@ -92,9 +91,18 @@ public static class PathUtilities
                 return null;
 
             int index = -1;
-            while (++index < splitNew.Length)
+            while (true)
+            {
+                index++;
+                if (index >= splitNew.Length)
+                {
+                    break;
+                }
+
                 if (splitPrevious[index] != splitNew[index])
                     break;
+            }
+
             return splitPrevious[index];
         }
         /// <summary>Returns the name of the item, without taking its parent directory into consideration.</summary>

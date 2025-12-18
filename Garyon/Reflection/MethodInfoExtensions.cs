@@ -15,7 +15,9 @@ public static class MethodInfoExtensions
         public TDelegate CreateDelegate<TDelegate>()
             where TDelegate : Delegate
         {
+#pragma warning disable CA2263 // Prefer generic overload when type is known
             return (TDelegate)method.CreateDelegate(typeof(TDelegate));
+#pragma warning restore CA2263 // Prefer generic overload when type is known
         }
 
         /// <inheritdoc cref="MethodInfo.CreateDelegate(Type)"/>
@@ -23,7 +25,14 @@ public static class MethodInfoExtensions
         public TDelegate CreateDelegate<TDelegate>(object target)
             where TDelegate : Delegate
         {
+#pragma warning disable CA2263 // Prefer generic overload when type is known
             return (TDelegate)method.CreateDelegate(typeof(TDelegate), target);
+#pragma warning restore CA2263 // Prefer generic overload when type is known
+        }
+
+        public T? Invoke<T>(object? target, object?[]? arguments)
+        {
+            return (T?)method.Invoke(target, arguments);
         }
     }
 }

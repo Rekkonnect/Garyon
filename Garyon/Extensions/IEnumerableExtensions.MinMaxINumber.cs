@@ -9,15 +9,13 @@ using System.Numerics;
 
 namespace Garyon.Extensions;
 
-#nullable enable
-
 public static partial class IEnumerableExtensions
 {
     extension<T>(IEnumerable<T> source)
         where T : IMinMaxValue<T>, IComparisonOperators<T, T, bool>
     {
         /// <summary>Gets the minimum and maximum values within the collection.</summary>
-        public MinMaxResult<T> MinMax()
+        public ValueBounds<T> MinMax()
         {
             VerifyNonEmptyCollection(source);
 
@@ -41,19 +39,19 @@ public static partial class IEnumerableExtensions
         where T : notnull, IMinMaxValue<T>, IComparisonOperators<T, T, bool>
     {
         /// <summary>Gets the minimum and maximum values within the collection.</summary>
-        /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-        public MinMaxResult<T> MinMaxNullable()
+        /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="ValueBounds{T}.Default"/>.</returns>
+        public ValueBounds<T> MinMaxNullable()
         {
             var filtered = source.WhereNotNull();
             if (filtered.HasNone())
-                return MinMaxResult<T>.Default;
+                return ValueBounds<T>.Default;
             return MinMax(filtered);
         }
     }
 
     /// <summary>Gets the minimum and maximum values within the collection.</summary>
     /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<TComparable> MinMax<TSource, TComparable>(
+    public static ValueBounds<TComparable> MinMax<TSource, TComparable>(
         IEnumerable<TSource> source,
         Func<TSource, TComparable> selector)
         where TComparable : IMinMaxValue<TComparable>, IComparisonOperators<TComparable, TComparable, bool>

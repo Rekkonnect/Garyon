@@ -1,57 +1,60 @@
 ﻿using Garyon.Objects.Enumerators;
-using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Objects.Enumerators;
 
 public class SingleOrEnumerableTests
 {
     [Test]
-    public void TestSingle()
+    public async Task TestSingle()
     {
         const int value = 3;
         var instance = new SingleOrEnumerable<int>(value);
-        TestSingle(value, instance);
+        await TestSingle(value, instance);
     }
     [Test]
-    public void TestEnumerable()
+    public async Task TestEnumerableAsync()
     {
-        int[] enumerable = { 1, 2, 5, 67, 348 };
+        int[] enumerable = [1, 2, 5, 67, 348];
         var instance = new SingleOrEnumerable<int>(enumerable);
-        TestEnumerable(enumerable, instance);
+        await TestEnumerable(enumerable, instance);
     }
 
     [Test]
-    public void TestAssign()
+    public async Task TestAssignAsync()
     {
         const int value = 3;
-        int[] enumerable = { 1, 2, 5, 67, 348 };
+        int[] enumerable = [1, 2, 5, 67, 348];
 
         var instance = new SingleOrEnumerable<int>(value);
-        TestSingle(value, instance);
+        await TestSingle(value, instance);
 
         instance.Assign(enumerable);
-        TestEnumerable(enumerable, instance);
+        await TestEnumerable(enumerable, instance);
 
         instance.Assign(value);
-        TestSingle(value, instance);
+        await TestSingle(value, instance);
     }
 
-    private void TestSingle<T>(T value, SingleOrEnumerable<T> instance)
+    private async Task TestSingle<T>(T value, SingleOrEnumerable<T> instance)
     {
-        Assert.Catch(() => _ = instance.Enumerable);
-        Assert.AreEqual(value, instance.Single);
+        await Assert.That(() => _ = instance.Enumerable).ThrowsException();
+        await Assert.That(instance.Single).IsEqualTo(value);
 
         var enumeratedArray = instance.ToArray();
-        CollectionAssert.AreEqual(new[] { value }, enumeratedArray);
+        await Assert.That(enumeratedArray).IsEquivalentTo([value]);
     }
-    private void TestEnumerable<T>(IEnumerable<T> enumerable, SingleOrEnumerable<T> instance)
+    private async Task TestEnumerable<T>(IEnumerable<T> enumerable, SingleOrEnumerable<T> instance)
     {
-        Assert.Catch(() => _ = instance.Single);
-        CollectionAssert.AreEqual(enumerable, instance.Enumerable);
+        await Assert.That(() => _ = instance.Single).ThrowsException();
+        await Assert.That(instance.Enumerable).IsEquivalentTo(enumerable);
 
         var enumeratedArray = instance.ToArray();
-        CollectionAssert.AreEqual(enumerable, enumeratedArray);
+        await Assert.That(enumeratedArray).IsEquivalentTo(enumerable);
     }
 }

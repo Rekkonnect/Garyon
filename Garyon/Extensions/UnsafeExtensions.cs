@@ -45,4 +45,21 @@ public static unsafe class UnsafeExtensions
         return bytes;
     }
 #endif
+
+#if HAS_SPAN
+    /// <summary>
+    /// Converts the given span into a span of bytes.
+    /// </summary>
+    /// <remarks>
+    /// The actual byte length of the span is preserved,
+    /// the original span is unaffected and the result
+    /// reinterprets the same content as a span of bytes.
+    /// </remarks>
+    public static ReadOnlySpan<byte> AsBytes<TSource>(
+        this ReadOnlySpan<TSource> source)
+        where TSource : struct
+    {
+        return MemoryMarshal.AsBytes(source);
+    }
+#endif
 }

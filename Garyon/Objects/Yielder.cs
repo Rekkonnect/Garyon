@@ -59,6 +59,7 @@ public record struct Yielder<T>(Func<T> Factory)
         return result.ToImmutable();
     }
 #endif
+
     /// <summary>
     /// Yields a number of values into a new array.
     /// </summary>
@@ -74,6 +75,7 @@ public record struct Yielder<T>(Func<T> Factory)
             result[i] = Factory();
         return result;
     }
+
     /// <summary>
     /// Yields a number of values into a new instance of
     /// <seealso cref="List{T}"/>.
@@ -88,6 +90,7 @@ public record struct Yielder<T>(Func<T> Factory)
         var list = new List<T>(count);
         return YieldInto(count, list);
     }
+
     /// <summary>
     /// Yields a number of values into a new instance of
     /// <seealso cref="HashSet{T}"/>.
@@ -107,6 +110,7 @@ public record struct Yielder<T>(Func<T> Factory)
         var set = HashSet.New<T>(count);
         return YieldInto(count, set);
     }
+
     /// <summary>
     /// Yields a number of values into a new instance of
     /// <seealso cref="SortedSet{T}"/>.
@@ -144,6 +148,7 @@ public record struct Yielder<T>(Func<T> Factory)
             list.Add(Factory());
         return list;
     }
+
     /// <summary>
     /// Yields a number of values into an existing instance
     /// of <seealso cref="HashSet{T}"/>.
@@ -161,6 +166,7 @@ public record struct Yielder<T>(Func<T> Factory)
             set.Add(Factory());
         return set;
     }
+
     /// <summary>
     /// Yields a number of values into an existing instance
     /// of <seealso cref="SortedSet{T}"/>.
@@ -184,7 +190,7 @@ public record struct Yielder<T>(Func<T> Factory)
         set.UnionWith(yielded);
         return set;
     }
-#if HAS_SPAN
+
     /// <summary>
     /// Yields a number of values into an existing instance
     /// of <seealso cref="Span{T}"/>.
@@ -221,7 +227,6 @@ public record struct Yielder<T>(Func<T> Factory)
         YieldInto(count, memory.Span);
         return memory;
     }
-#endif
 
     /// <summary>
     /// Fills the contents of an existing array with
@@ -237,7 +242,7 @@ public record struct Yielder<T>(Func<T> Factory)
             array[i] = Factory();
         return array;
     }
-#if HAS_SPAN
+
     /// <summary>
     /// Fills the contents of an existing instance of
     /// <seealso cref="Span{T}"/> with yielded values
@@ -253,6 +258,7 @@ public record struct Yielder<T>(Func<T> Factory)
     {
         return YieldInto(span.Length, span);
     }
+
     /// <summary>
     /// Fills the contents of an existing instance of
     /// <seealso cref="Memory{T}"/> with yielded values
@@ -268,5 +274,4 @@ public record struct Yielder<T>(Func<T> Factory)
     {
         return YieldInto(memory.Length, memory);
     }
-#endif
 }

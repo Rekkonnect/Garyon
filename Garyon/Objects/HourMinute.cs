@@ -99,7 +99,7 @@ public struct HourMinute : IEquatable<HourMinute>, IHasHour, IHasMinute
     /// <param name="other">The other <seealso cref="HourMinute"/> instance.</param>
     /// <returns>A value determining whether both objects are equal or not.</returns>
     public bool Equals(HourMinute other) => other == this;
-    public override bool Equals(object obj) => obj is HourMinute h && h == this;
+    public override bool Equals(object? obj) => obj is HourMinute h && h == this;
     public override int GetHashCode() => minutes.GetHashCode();
     /// <summary>Gets the string representation of the hour-minute time.</summary>
     /// <returns>The string representation of the hour-minute time in the form "HH:MM".</returns>

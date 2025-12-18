@@ -74,7 +74,7 @@ public class ConsoleManager
 
     /// <summary>Reads a line from the console with the current <seealso cref="ConsoleColorSet"/>.</summary>
     /// <returns>The input string that was given.</returns>
-    public string ReadLine()
+    public string? ReadLine()
     {
         return Console.ReadLineWithColor(OutputColorSet, ResetColorAfterOperation);
     }
@@ -82,7 +82,7 @@ public class ConsoleManager
     /// <param name="requestMessage">The message to write before requesting input.</param>
     /// <param name="newlineAfterMessage">Determines whether a newline should be added after the message.</param>
     /// <returns>The input string that was given.</returns>
-    public string RequestInputLine(string requestMessage, bool newlineAfterMessage = true)
+    public string? RequestInputLine(string requestMessage, bool newlineAfterMessage = true)
     {
         return Console.RequestInputLine(requestMessage, OutputColorSet, InputColorSet, ResetColorAfterOperation, newlineAfterMessage);
     }

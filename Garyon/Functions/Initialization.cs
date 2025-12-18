@@ -12,7 +12,7 @@ public static class Initialization
     /// <see langword="true"/> if <paramref name="field"/> was <see langword="null"/> at the time of calling this method,
     /// and the runtime type of <paramref name="value"/> allows its value to be stored in <paramref name="field"/>, otherwise <see langword="false"/>.
     /// </returns>
-    public static bool TryInitializeUpcast<TDerived, TBase>(ref TDerived field, TBase value)
+    public static bool TryInitializeUpcast<TDerived, TBase>(ref TDerived? field, TBase value)
         where TDerived : class, TBase
         where TBase : class
     {
@@ -21,6 +21,7 @@ public static class Initialization
 
         return TrySetUpcast(ref field, value);
     }
+
     /// <summary>Attempts to set a field of type <typeparamref name="TDerived"/> to a <typeparamref name="TDerived"/> value stored in a variable of <typeparamref name="TBase"/>.</summary>
     /// <typeparam name="TDerived">The type of the values stored in the field.</typeparam>
     /// <typeparam name="TBase">The base type, from which <typeparamref name="TDerived"/> derives.</typeparam>
@@ -29,7 +30,7 @@ public static class Initialization
     /// <returns>
     /// <see langword="true"/> if the runtime type of <paramref name="value"/> allows its value to be stored in <paramref name="field"/>, otherwise <see langword="false"/>.
     /// </returns>
-    public static bool TrySetUpcast<TDerived, TBase>(ref TDerived field, TBase value)
+    public static bool TrySetUpcast<TDerived, TBase>(ref TDerived? field, TBase value)
         where TDerived : class, TBase
         where TBase : class
     {

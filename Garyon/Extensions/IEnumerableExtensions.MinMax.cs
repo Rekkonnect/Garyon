@@ -4,6 +4,7 @@ using Garyon.Functions;
 using Garyon.Objects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace Garyon.Extensions;
@@ -12,13 +13,13 @@ namespace Garyon.Extensions;
 public static partial class IEnumerableExtensions
 {
     // Behold the true copy-paste hell
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<byte> MinMax(this IEnumerable<byte> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<byte>? MinMax(this IEnumerable<byte> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         byte min = byte.MaxValue;
         byte max = byte.MinValue;
 
@@ -28,17 +29,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<sbyte> MinMax(this IEnumerable<sbyte> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<sbyte>? MinMax(this IEnumerable<sbyte> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         sbyte min = sbyte.MaxValue;
         sbyte max = sbyte.MinValue;
 
@@ -48,17 +55,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<short> MinMax(this IEnumerable<short> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<short>? MinMax(this IEnumerable<short> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         short min = short.MaxValue;
         short max = short.MinValue;
 
@@ -68,17 +81,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<ushort> MinMax(this IEnumerable<ushort> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ushort>? MinMax(this IEnumerable<ushort> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         ushort min = ushort.MaxValue;
         ushort max = ushort.MinValue;
 
@@ -88,17 +107,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<int> MinMax(this IEnumerable<int> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<int>? MinMax(this IEnumerable<int> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         int min = int.MaxValue;
         int max = int.MinValue;
 
@@ -108,17 +133,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<uint> MinMax(this IEnumerable<uint> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<uint>? MinMax(this IEnumerable<uint> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         uint min = uint.MaxValue;
         uint max = uint.MinValue;
 
@@ -128,17 +159,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<long> MinMax(this IEnumerable<long> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<long>? MinMax(this IEnumerable<long> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         long min = long.MaxValue;
         long max = long.MinValue;
 
@@ -148,17 +185,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<ulong> MinMax(this IEnumerable<ulong> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ulong>? MinMax(this IEnumerable<ulong> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         ulong min = ulong.MaxValue;
         ulong max = ulong.MinValue;
 
@@ -168,17 +211,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<float> MinMax(this IEnumerable<float> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<float>? MinMax(this IEnumerable<float> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         float min = float.MaxValue;
         float max = float.MinValue;
 
@@ -188,17 +237,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<double> MinMax(this IEnumerable<double> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<double>? MinMax(this IEnumerable<double> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         double min = double.MaxValue;
         double max = double.MinValue;
 
@@ -208,17 +263,23 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<decimal> MinMax(this IEnumerable<decimal> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<decimal>? MinMax(this IEnumerable<decimal> source)
     {
-        VerifyNonEmptyCollection(source);
-
+        var hasAny = false;
         decimal min = decimal.MaxValue;
         decimal max = decimal.MinValue;
 
@@ -228,296 +289,312 @@ public static partial class IEnumerableExtensions
                 min = v;
             if (v > max)
                 max = v;
+
+            hasAny = true;
         }
 
+        if (!hasAny)
+        {
+            return null;
+        }
         return new(min, max);
     }
 
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<byte> MinMax(this IEnumerable<byte?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<byte>? MinMax(this IEnumerable<byte?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<byte>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<sbyte> MinMax(this IEnumerable<sbyte?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<sbyte>? MinMax(this IEnumerable<sbyte?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<sbyte>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<short> MinMax(this IEnumerable<short?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<short>? MinMax(this IEnumerable<short?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<short>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<ushort> MinMax(this IEnumerable<ushort?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ushort>? MinMax(this IEnumerable<ushort?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<ushort>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<int> MinMax(this IEnumerable<int?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<int>? MinMax(this IEnumerable<int?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<int>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<uint> MinMax(this IEnumerable<uint?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<uint>? MinMax(this IEnumerable<uint?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<uint>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<long> MinMax(this IEnumerable<long?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<long>? MinMax(this IEnumerable<long?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<long>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<ulong> MinMax(this IEnumerable<ulong?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ulong>? MinMax(this IEnumerable<ulong?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<ulong>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<float> MinMax(this IEnumerable<float?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<float>? MinMax(this IEnumerable<float?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<float>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<double> MinMax(this IEnumerable<double?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<double>? MinMax(this IEnumerable<double?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<double>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
-    /// <returns>The minimum and maximum values of the objects in the sequence that are non-<see langword="null"/>, otherwise <seealso cref="MinMaxResult{T}.Default"/>.</returns>
-    public static MinMaxResult<decimal> MinMax(this IEnumerable<decimal?> source)
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
+    /// <returns>The minimum and maximum values of the objects in the enumerable that are non-<see langword="null"/>, otherwise <see langword="null"/>.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<decimal>? MinMax(this IEnumerable<decimal?> source)
     {
-        var filtered = source.Where(e => e.HasValue);
-        if (filtered.HasNone())
-            return MinMaxResult<decimal>.Default;
-        return MinMax(filtered, static s => s.Value);
+        var filtered = source.GetValuedElements();
+        return MinMax(filtered);
     }
 
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<byte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<byte>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<sbyte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<sbyte>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<short> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<short>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<ushort> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ushort>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<int> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<int>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<uint> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<uint>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<long> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<long>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<ulong> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ulong>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<float> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<float>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<double> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<double>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<decimal> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<decimal>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector)
     {
         return MinMax(source.Select(selector));
     }
 
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<byte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<byte>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, byte?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<sbyte> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<sbyte>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, sbyte?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<short> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<short>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, short?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<ushort> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ushort>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ushort?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<int> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    public static ValueBounds<int>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<uint> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<uint>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<long> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<long>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<ulong> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<ulong>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<float> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<float>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<double> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<double>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector)
     {
         return MinMax(source.Select(selector));
     }
-    /// <summary>Gets the minimum and maximum values within the collection.</summary>
-    /// <param name="source">The collection. It must be non-<see langword="null"/>, and contain at least one element.</param>
+    /// <summary>Gets the minimum and maximum values within the enumerable.</summary>
+    /// <param name="source">The enumerable. It must be non-<see langword="null"/>.</param>
     /// <param name="selector">The selector.</param>
-    /// <returns>The minimum and maximum values.</returns>
-    public static MinMaxResult<decimal> MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
+    /// <returns>The minimum and maximum values, or <see langword="null"/> if the enumerable had no values.</returns>
+    /// <remarks>This forces enumeration of the enumerable.</remarks>
+    public static ValueBounds<decimal>? MinMax<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
     {
         return MinMax(source.Select(selector));
     }

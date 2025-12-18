@@ -24,6 +24,8 @@ public static class DelegateTypeExtensions
         if (!delegateType.IsDelegate())
             ThrowHelper.Throw<ArgumentException>("The provided type must be a delegate type.");
 
-        return delegateType.GetMethod("Invoke").GetParameters().Select(p => p.ParameterType).ToArray();
+        const string invokeMethodName = nameof(Action.Invoke);
+        return delegateType.GetMethod(invokeMethodName)
+            !.GetParameters().Select(p => p.ParameterType).ToArray();
     }
 }

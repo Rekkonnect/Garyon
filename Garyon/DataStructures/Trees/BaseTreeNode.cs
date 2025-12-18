@@ -8,6 +8,8 @@ using System.Text;
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a tree node, which is a component that is contained within a tree.</summary>
 /// <typeparam name="TValue">The type of the value that is stored in the node.</typeparam>
 /// <typeparam name="TTree">The type of the tree that this type is used in.</typeparam>
@@ -162,7 +164,7 @@ public abstract class BaseTreeNode<TValue, TTree, TTreeNode> : ITreeNode<TValue,
     /// <summary>Removes a node that has the specified value. This includes any node that is within the subtree with this tree node as the root.</summary>
     /// <param name="node">The node to remove from this node's children list.</param>
     /// <returns><see langword="true"/> if the child was successfully removed from this node's children list, otherwise <see langword="false"/>.</returns>
-    public virtual bool RemoveNode(TTreeNode? node)
+    public virtual bool RemoveNode(TTreeNode node)
     {
         if (node == null)
             return false;
@@ -314,6 +316,7 @@ public abstract class BaseTreeNode<TValue, TTree, TTreeNode> : ITreeNode<TValue,
         return sb.ToString().TrimEnd();
     }
 
+    // Unoptimized; too many allocations and enumeration-based logic
     private static IEnumerable<string> GetTreeView(TTreeNode node, string indent, int childIndent)
     {
         const char expandingNonLastNodeBaseChar = '├';

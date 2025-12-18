@@ -1,36 +1,39 @@
 ﻿using Garyon.Functions.Arrays;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Extensions;
 
-[Parallelizable(ParallelScope.Children)]
 public class ArrayIdentificationTests
 {
     [Test]
-    public void IsArrayOfType()
+    public async Task IsArrayOfType()
     {
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[], object>());
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,], object>());
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,,], object>());
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,,,], object>());
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[], object>()).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,], object>()).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,,], object>()).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,,,], object>()).IsTrue();
 
-        Assert.IsFalse(ArrayIdentification.IsArrayOfType<object[], int>());
-        Assert.IsFalse(ArrayIdentification.IsArrayOfType<object[], short>());
-        Assert.IsFalse(ArrayIdentification.IsArrayOfType<short[], int>());
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<int[], int>());
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[], int>()).IsFalse();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[], short>()).IsFalse();
+        await Assert.That(ArrayIdentification.IsArrayOfType<short[], int>()).IsFalse();
+        await Assert.That(ArrayIdentification.IsArrayOfType<int[], int>()).IsTrue();
     }
-    [Test]
-    public void IsJaggedArrayOfType()
-    {
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[][], object>(2));
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,][], object>(2));
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,][,], object>(2));
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,][,,,], object>(2));
 
-        Assert.IsFalse(ArrayIdentification.IsArrayOfType<object[][][], object>(2));
-        Assert.IsFalse(ArrayIdentification.IsArrayOfType<object[][][][], object>(2));
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[][][][], object>(4));
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[][][][][], object>(6));
-        Assert.IsTrue(ArrayIdentification.IsArrayOfType<object[,,,][,][,,,][,,,,,,][,,], object>(6));
+    [Test]
+    public async Task IsJaggedArrayOfType()
+    {
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[][], object>(2)).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,][], object>(2)).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,][,], object>(2)).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,][,,,], object>(2)).IsTrue();
+
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[][][], object>(2)).IsFalse();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[][][][], object>(2)).IsFalse();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[][][][], object>(4)).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[][][][][], object>(6)).IsTrue();
+        await Assert.That(ArrayIdentification.IsArrayOfType<object[,,,][,][,,,][,,,,,,][,,], object>(6)).IsTrue();
     }
 }

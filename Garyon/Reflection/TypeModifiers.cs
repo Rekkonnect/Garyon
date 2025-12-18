@@ -23,22 +23,24 @@ public enum TypeModifiers : ushort
     /// <summary>The <see langword="private"/> modifier.</summary>
     Private = AccessibilityModifiers.Private,
 
-    /// <summary>All accesibility modifiers.</summary>
+    /// <summary>All accessibility modifiers.</summary>
     AllAccessibilities = AccessibilityModifiers.AllAccessibilities,
 
     // Definition
     /// <summary>The <see langword="static"/> modifier.</summary>
-    Static = 0x40,
+    Static = 0x100,
     /// <summary>The <see langword="abstract"/> modifier.</summary>
-    Abstract = 0x80,
+    Abstract = 0x200,
     /// <summary>The <see langword="sealed"/> modifier.</summary>
-    Sealed = 0x100,
+    Sealed = 0x400,
     /// <summary>The <see langword="readonly"/> modifier.</summary>
-    Readonly = 0x200,
+    Readonly = 0x800,
     /// <summary>The <see langword="ref"/> modifier.</summary>
-    Ref = 0x400,
+    Ref = 0x1000,
     /// <summary>The <see langword="readonly ref"/> modifier.</summary>
     ReadonlyRef = Readonly | Ref,
+    /// <summary>The <see langword="file"/> modifier.</summary>
+    File = 0x2000,
 
     /// <summary>All definition modifiers.</summary>
     AllDefinitions = Static | Abstract | Sealed | ReadonlyRef,

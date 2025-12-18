@@ -1,6 +1,7 @@
 ﻿using Garyon.Exceptions;
 using Garyon.Objects;
 using System;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using static System.TimeSpan;
@@ -63,7 +64,25 @@ public static class DateTimeExtensions
             DateTimeComponent.Day => dateTime.Day,
             DateTimeComponent.Month => dateTime.Month,
             DateTimeComponent.Year => dateTime.Year,
+
+            DateTimeComponent.Ticks => ThrowTicks(),
+
+            _ => ThrowInvalidComponent(),
         };
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static int ThrowTicks()
+        {
+            throw ThrowHelper.Throw<ArgumentException>(
+                $"The Ticks component is not supported in this overload. Use the ${nameof(GetComponentInt64)} method instead.");
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static int ThrowInvalidComponent()
+        {
+            throw ThrowHelper.Throw<InvalidEnumArgumentException>(
+                "The component enum value is invalid.");
+        }
     }
 
     #region Shortcuts
@@ -307,7 +326,25 @@ public static class DateTimeExtensions
             DateTimeComponent.Day => dateTime.WithDay(value),
             DateTimeComponent.Month => dateTime.WithMonth(value),
             DateTimeComponent.Year => dateTime.WithYear(value),
+
+            DateTimeComponent.Ticks => ThrowTicks(),
+
+            _ => ThrowInvalidComponent(),
         };
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static DateTime ThrowTicks()
+        {
+            throw ThrowHelper.Throw<ArgumentException>(
+                $"The Ticks component is not supported in this overload. Use the ${nameof(GetComponentInt64)} method instead.");
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static DateTime ThrowInvalidComponent()
+        {
+            throw ThrowHelper.Throw<InvalidEnumArgumentException>(
+                "The component enum value is invalid.");
+        }
     }
     /// <summary>Creates a copy of a given <seealso cref="DateTime"/>, where the specified component of the copied value is set to the specified value.</summary>
     /// <param name="dateTime">The <seealso cref="DateTime"/> from which to create the copy with the adjusted time components.</param>

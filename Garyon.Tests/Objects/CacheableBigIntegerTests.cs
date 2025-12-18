@@ -1,24 +1,26 @@
 ﻿using Garyon.Objects;
-using NUnit.Framework;
 using System.Numerics;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.Objects;
 
-[Parallelizable(ParallelScope.Children)]
 public class CacheableBigIntegerTests
 {
     [Test]
-    public void InitializationTest()
+    public async Task InitializationTest()
     {
         const long value0 = 3458;
         BigInteger value1 = BigInteger.Parse("4237894523145135423652643587459827");
 
-        Assert.IsTrue(new CacheableBigInteger(value0).Value == value0);
-        Assert.IsTrue(new CacheableBigInteger(value1).Value == value1);
+        await Assert.That(new CacheableBigInteger(value0).Value == value0).IsTrue();
+        await Assert.That(new CacheableBigInteger(value1).Value == value1).IsTrue();
     }
 
     [Test]
-    public void OperationsTest()
+    public async Task OperationsTest()
     {
         BigInteger initial = BigInteger.Parse("4237894523145135423652643587459827");
         BigInteger result0 = initial * 5 * 2 * 10 * 100;
@@ -42,32 +44,32 @@ public class CacheableBigIntegerTests
         cacheable.Multiply(BigInteger.Parse("1000000"));
         cacheable.Subtract(BigInteger.Parse("1"));
         cacheable.Divide(BigInteger.Parse("100"));
-        Assert.AreEqual(result6, cacheable.Value);
+        await Assert.That(cacheable.Value).IsEqualTo(result6);
     }
 
     [Test]
-    public void OverflowingTest()
+    public async Task OverflowingTest()
     {
         var cacheable = new CacheableBigInteger(0);
 
         cacheable.Add(long.MaxValue);
         cacheable.Add(1);
-        Assert.AreEqual(new BigInteger(long.MaxValue) + 1, cacheable.Value);
+        await Assert.That(cacheable.Value).IsEqualTo(new BigInteger(long.MaxValue) + 1);
 
         cacheable.Value = new BigInteger(long.MaxValue) + 4;
 
         cacheable.Subtract(long.MaxValue);
         cacheable.Subtract(4);
-        Assert.AreEqual(BigInteger.Zero, cacheable.Value);
+        await Assert.That(cacheable.Value).IsEqualTo(BigInteger.Zero);
 
         cacheable.Value = 1;
 
         cacheable.Multiply(long.MaxValue);
         cacheable.Multiply(2);
-        Assert.AreEqual(new BigInteger(long.MaxValue) * 2, cacheable.Value);
+        await Assert.That(cacheable.Value).IsEqualTo(new BigInteger(long.MaxValue) * 2);
 
         cacheable.Divide(long.MaxValue);
         cacheable.Divide(2);
-        Assert.AreEqual(BigInteger.One, cacheable.Value);
+        await Assert.That(cacheable.Value).IsEqualTo(BigInteger.One);
     }
 }

@@ -1,3 +1,17 @@
-﻿[*.cs]
+﻿root = true
+
+[*.cs]
 spelling_languages = en-us
 spelling_exclusion_path = exclusion.dic
+
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = silent
+
+# CS1573: Parameter has no matching param tag in the XML comment (but other parameters do)
+dotnet_diagnostic.CS1573.severity = silent
+
+# IDE0028: Collection initialization can be simplified
+dotnet_diagnostic.IDE0028.severity = silent
+
+# IDE0305: Collection initialization can be simplified
+dotnet_diagnostic.IDE0305.severity = silent

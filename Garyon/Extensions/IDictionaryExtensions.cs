@@ -1,10 +1,8 @@
-﻿#nullable enable
-
-using Garyon.Functions;
+﻿using Garyon.Functions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Garyon.Extensions;
 
@@ -13,27 +11,8 @@ namespace Garyon.Extensions;
 /// <seealso cref="IDictionary{TKey, TValue}"/>
 /// and <seealso cref="IDictionary"/> types.
 /// </summary>
-public static class IDictionaryExtensions
+public static partial class IDictionaryExtensions
 {
-    #region IDictionary
-    /// <summary>Converts the keys of the dictionary into a collection of strongly-typed elements.</summary>
-    /// <typeparam name="T">The type to cast all the keys of the dictionary into.</typeparam>
-    /// <param name="dictionary">The dictionary whose keys to convert into a strongly-typed element collection.</param>
-    /// <returns>An <seealso cref="IEnumerable{T}"/> containing the keys of the provided dictionary.</returns>
-    public static IEnumerable<T> Keys<T>(this IDictionary dictionary)
-    {
-        return dictionary.Keys.Cast<T>();
-    }
-    /// <summary>Converts the values of the dictionary into a collection of strongly-typed elements.</summary>
-    /// <typeparam name="T">The type to cast all the values of the dictionary into.</typeparam>
-    /// <param name="dictionary">The dictionary whose values to convert into a strongly-typed element collection.</param>
-    /// <returns>An <seealso cref="IEnumerable{T}"/> containing the values of the provided dictionary.</returns>
-    public static IEnumerable<T> Values<T>(this IDictionary dictionary)
-    {
-        return dictionary.Values.Cast<T>();
-    }
-    #endregion
-
     #region IDictionary<T>
     // Leeches
     /// <summary>Increments the value of a key if it exists, otherwise creates a new key with the default value 1.</summary>
@@ -43,10 +22,14 @@ public static class IDictionaryExtensions
     public static void IncrementOrAddKeyValue<TKey>(this IDictionary<TKey, int> d, TKey key)
         where TKey : notnull
     {
-        if (d.ContainsKey(key))
-            d[key]++;
+        if (d.TryGetValue(key, out var value))
+        {
+            d[key] = value + 1;
+        }
         else
+        {
             d.Add(key, 1);
+        }
     }
     /// <summary>Calculates the sum of all the values in the dictionary, excluding specific keys.</summary>
     /// <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
@@ -57,10 +40,18 @@ public static class IDictionaryExtensions
     {
         int sum = 0;
         foreach (var v in d.Values)
+        {
             sum += v;
+        }
+
         foreach (var e in exclusions)
-            if (d.ContainsKey(e))
-                sum -= d[e];
+        {
+            if (d.TryGetValue(e, out var value))
+            {
+                sum -= value;
+            }
+        }
+
         return sum;
     }
 
@@ -83,6 +74,7 @@ public static class IDictionaryExtensions
     /// <param name="key">The key whose mapped value to get.</param>
     /// <param name="defaultValue">The default value to return if the key is <see langword="null"/> or is not found in the dictionary.</param>
     /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise the specified default value.</returns>
+    [return: NotNullIfNotNull(nameof(defaultValue))]
     public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key, TValue? defaultValue)
         where TKey : notnull
     {
@@ -108,7 +100,9 @@ public static class IDictionaryExtensions
         var contained = source.TryGetValue(key, out var oldValue);
 
         if (!contained)
+        {
             source.Add(key, value);
+        }
         else
         {
             if (Checks.SafeEquals(oldValue, value))
@@ -152,7 +146,9 @@ public static class IDictionaryExtensions
         var available = !source.TryGetValue(key, out existingValue);
 
         if (available)
+        {
             source.Add(key, value);
+        }
         else
         {
             if (Checks.SafeEquals(existingValue, value))
@@ -171,7 +167,9 @@ public static class IDictionaryExtensions
         where TKey : notnull
     {
         foreach (var entry in entries)
+        {
             source.Add(entry.Key, entry.Value);
+        }
     }
     /// <summary>Adds a collection of new entries to the dictionary. For each of the given entries, if its key already exists, its value is overwritten in the source dictionary.</summary>
     /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
@@ -184,7 +182,10 @@ public static class IDictionaryExtensions
     {
         bool overwritten = false;
         foreach (var entry in entries)
+        {
             overwritten |= source.AddOrSet(entry.Key, entry.Value);
+        }
+
         return overwritten;
     }
     /// <summary>Adds a collection of new entries to the dictionary. For each of the given entries, if its key already exists, its value is preserved in the source dictionary.</summary>
@@ -198,7 +199,10 @@ public static class IDictionaryExtensions
     {
         bool preserved = true;
         foreach (var entry in entries)
+        {
             preserved &= source.TryAddPreserve(entry.Key, entry.Value);
+        }
+
         return preserved;
     }
 

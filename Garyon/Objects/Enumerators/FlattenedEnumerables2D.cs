@@ -21,11 +21,11 @@ public class FlattenedEnumerables2D<T>(IEnumerable<IEnumerable<T>> enumerables)
         private readonly IEnumerator<IEnumerable<T>> _outerEnumerator;
         private IEnumerator<T>? _innerEnumerator;
 
-        private T current;
+        private T? _current;
 
         /// <summary>Gets the currently enumerated element in the flattened enumerable.</summary>
-        public T Current => current;
-        object IEnumerator.Current => Current;
+        public T Current => _current!;
+        object? IEnumerator.Current => Current;
 
         /// <summary>Initializes a new instance of the <seealso cref="Enumerator"/> class out of a <seealso cref="FlattenedEnumerables2D{T}"/> instance.</summary>
         /// <param name="instance">The <seealso cref="FlattenedEnumerables2D{T}"/> whose enumerables will be flattened.</param>
@@ -52,7 +52,7 @@ public class FlattenedEnumerables2D<T>(IEnumerable<IEnumerable<T>> enumerables)
                 _innerEnumerator = _outerEnumerator.Current.GetEnumerator();
             }
 
-            current = _innerEnumerator.Current;
+            _current = _innerEnumerator.Current;
             return true;
         }
         /// <inheritdoc/>

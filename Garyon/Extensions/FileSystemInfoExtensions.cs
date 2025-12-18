@@ -22,7 +22,7 @@ public static class FileSystemInfoExtensions
         /// given file system object.
         /// </returns>
         /// <exception cref="ArgumentException">
-        /// Thrown if the given <see cref="FileSystemInfo"> is not
+        /// Thrown if the given <see cref="FileSystemInfo"/> is not
         /// <see cref="DirectoryInfo"/> or <see cref="FileInfo"/>.
         /// </exception>
         public DirectoryInfo? Parent => info switch
@@ -70,9 +70,7 @@ public static class FileSystemInfoExtensions
             };
         }
 
-#if HAS_NULLABLE_ANNOTATION_ATTRIBUTES
         [DoesNotReturn]
-#endif
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static T ThrowInvalidFileSystemInfo<T>()
         {

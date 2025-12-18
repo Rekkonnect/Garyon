@@ -1,26 +1,29 @@
 ﻿using Garyon.Extensions;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.Extensions;
 
 public class StringExtensions
 {
     [Test]
-    public void SubstringUntilFirstString()
+    public async Task SubstringUntilFirstString()
     {
         const string source = "[ERROR]: Something: Another: More";
 
         var substring = source.SubstringUntilFirst(": ");
         const string expected = "[ERROR]";
-        Assert.AreEqual(expected, substring);
+        await Assert.That(substring).IsEqualTo(expected);
     }
     [Test]
-    public void SubstringUntilFirstChar()
+    public async Task SubstringUntilFirstChar()
     {
         const string source = "[ERROR]: Something: Another: More";
 
         var substring = source.SubstringUntilFirst(':');
         const string expected = "[ERROR]";
-        Assert.AreEqual(expected, substring);
+        await Assert.That(substring).IsEqualTo(expected);
     }
 }

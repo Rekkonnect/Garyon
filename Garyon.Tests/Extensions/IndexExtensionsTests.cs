@@ -1,17 +1,21 @@
 ﻿using Garyon.Extensions;
-using NUnit.Framework;
 using System;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Extensions;
 
-[Parallelizable(ParallelScope.Children)]
 public class IndexExtensionsTests
 {
     [Test]
-    public void InvertTest()
+    public async Task InvertTest()
     {
         var ar = new[] { 0, 1, 2, 3, 4, 3, 2, 1, 0 };
         for (int i = 0; i < ar.Length; i++)
-            Assert.AreEqual(ar[i], ar[((Index)i).Invert()]);
+        {
+            await Assert.That(ar[((Index)i).Invert()]).IsEqualTo(ar[i]);
+        }
     }
 }

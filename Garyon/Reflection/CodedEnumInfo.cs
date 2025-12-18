@@ -32,8 +32,8 @@ public static class CodedEnumInfo
     /// </exception>
     public static Enum ParseCode(Type enumType, string code)
     {
-        var method = GetCacheType(enumType).GetMethod(nameof(Cache<TypeCode>.Parse))!;
-        return method.Invoke(null, new[] { code })! as Enum;
+        var method = GetCacheType(enumType).GetMethod(nameof(Cache<>.Parse))!;
+        return method.Invoke<Enum>(null, [code])!;
     }
     /// <summary>
     /// Gets the code for the respective enum value.
@@ -51,9 +51,8 @@ public static class CodedEnumInfo
     public static string GetCode(Enum enumValue)
     {
         var enumType = enumValue.GetType();
-        var method = GetCacheType(enumType).GetMethod(nameof(Cache<TypeCode>.GetCode))!;
-        var result = method.Invoke(null, new[] { enumValue }) as string;
-        return result!;
+        var method = GetCacheType(enumType).GetMethod(nameof(Cache<>.GetCode))!;
+        return method.Invoke<string>(null, [enumValue])!;
     }
     /// <summary>
     /// Parses the given code for a given enum type, and returns
@@ -70,8 +69,8 @@ public static class CodedEnumInfo
     public static Enum ParseCodeOrDefault(Type enumType, string code)
     {
         var defaultValue = enumType.GetDefaultValue();
-        var method = GetCacheType(enumType).GetMethod(nameof(Cache<TypeCode>.ParseOrDefault))!;
-        return method.Invoke(null, new object[] { code, defaultValue })! as Enum;
+        var method = GetCacheType(enumType).GetMethod(nameof(Cache<>.ParseOrDefault))!;
+        return method.Invoke<Enum>(null, [code, defaultValue])!;
     }
     /// <summary>
     /// Parses the given code for a given enum type, and returns
@@ -91,8 +90,8 @@ public static class CodedEnumInfo
     public static Enum ParseCodeOrDefault(string code, Enum defaultValue)
     {
         var enumType = defaultValue.GetType();
-        var method = GetCacheType(enumType).GetMethod(nameof(Cache<TypeCode>.ParseOrDefault))!;
-        return method.Invoke(null, new object[] { code, defaultValue })! as Enum;
+        var method = GetCacheType(enumType).GetMethod(nameof(Cache<>.ParseOrDefault))!;
+        return method.Invoke<Enum>(null, [code, defaultValue])!;
     }
     /// <summary>
     /// Gets the code for the respective enum value. If the value
@@ -110,12 +109,11 @@ public static class CodedEnumInfo
     /// <returns>
     /// The the code that the enum value is mapped to.
     /// </returns>
-    public static string GetCodeOrDefault(Enum enumValue, string defaultCode = null)
+    public static string GetCodeOrDefault(Enum enumValue, string? defaultCode = null)
     {
         var enumType = enumValue.GetType();
-        var method = GetCacheType(enumType).GetMethod(nameof(Cache<TypeCode>.GetCodeOrDefault))!;
-        var result = method.Invoke(null, new object[] { enumValue, defaultCode }) as string;
-        return result!;
+        var method = GetCacheType(enumType).GetMethod(nameof(Cache<>.GetCodeOrDefault))!;
+        return method.Invoke<string>(null, [enumValue, defaultCode])!;
     }
 
     private static Type GetCacheType(Type enumType)
@@ -125,7 +123,7 @@ public static class CodedEnumInfo
 
         return typeof(Cache<>).MakeGenericType(enumType);
     }
-    
+
     /// <inheritdoc cref="ParseCode(Type, string)"/>
     /// <typeparam name="TEnum">
     /// The type of the enum to look into.

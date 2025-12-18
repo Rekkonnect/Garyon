@@ -1,12 +1,12 @@
-﻿#if HAS_SPAN
-
-using Garyon.Exceptions;
+﻿using Garyon.Exceptions;
+using Polyfills;
 using System;
 using System.Collections.Generic;
-#if HAS_STRINGSPAN_ENUMERATE_LINES
+#if HAS_IMMUTABLE
 using System.Collections.Immutable;
 #endif
 using System.Globalization;
+
 using SpanString = System.ReadOnlySpan<char>;
 
 namespace Garyon.Extensions;
@@ -27,6 +27,7 @@ public static class SpanStringExtensions
     }
 #endif
 
+#if HAS_NUMBER_PARSE_SPANSTRING
     public static byte ParseByte(this SpanString spanString)
     {
         return byte.Parse(spanString);
@@ -140,8 +141,10 @@ public static class SpanStringExtensions
     {
         return decimal.TryParse(spanString, numberStyles, formatProvider, out value);
     }
+#endif
     #endregion
 
+#if HAS_NUMBER_PARSE_SPANSTRING
     #region Number Slices
     public static int ParseFirstInt32(this SpanString spanString, int startingIndex, out int endIndex)
     {
@@ -204,6 +207,7 @@ public static class SpanStringExtensions
         return LastNumberSlice(spanString).ParseUInt64();
     }
     #endregion
+#endif
 
     #region Splitting
     public static IReadOnlyList<string> SplitToStrings(this SpanString spanString, SpanString delimiter)
@@ -215,7 +219,8 @@ public static class SpanStringExtensions
         return spanString.SplitSelect(delimiter, SpanStringSelectors.ToString);
     }
 
-#if HAS_STRINGSPAN_ENUMERATE_LINES
+#if HAS_IMMUTABLE
+    // TODO: Bring a custom EnumerateLines implementation for pre-.NET 6
     public static ImmutableArray<string> GetLines(this SpanString spanString)
     {
         return spanString.SelectLines(SpanStringSelectors.ToString);
@@ -233,7 +238,7 @@ public static class SpanStringExtensions
         return arrayBuilder.ToImmutable();
     }
 #endif
-    #endregion
+#endregion
 }
 
 /// <summary>
@@ -253,6 +258,9 @@ public static class SpanStringSelectors
     {
         return spanString.ToString();
     }
-}
 
-#endif
+    public static string? ToStringOrNull(this SpanString spanString)
+    {
+        return spanString is [] ? null : spanString.ToString();
+    }
+}

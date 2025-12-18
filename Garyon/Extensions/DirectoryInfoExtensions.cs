@@ -188,23 +188,19 @@ public static class DirectoryInfoExtensions
 
     /// <summary>
     /// Gets the single subdirectory contained in the given directory.
-    /// If the directory does not contain exactly one subdirectory,
-    /// <paramref name="singleDirectory"/> will be <see langword="null"/>.
     /// </summary>
-    /// <param name="directoryInfo"></param>
-    /// <param name="singleDirectory">
-    /// The single subdirectory contained in the given directory, or
-    /// <see langword="null"/> if the directory did not contain exactly one
-    /// subdirectory.
-    /// </param>
     /// <returns>
-    /// <see langword="true"/> if the directory contains a single subdirectory,
-    /// otherwise <see langword="false"/>.
+    /// The single subdirectory inside the given directory, otherwise
+    /// <see langword="null"/>. 
     /// </returns>
-    public static bool TryGetSingleSubdirectory(
-        this DirectoryInfo directoryInfo, out DirectoryInfo? singleDirectory)
+    /// <remarks>
+    /// For the method to return a non-<see langword="null"/> result,
+    /// the directory must contain exactly 1 subdirectory and no files.
+    /// </remarks>
+    public static DirectoryInfo? TryGetSingleSubdirectory(
+        this DirectoryInfo? directoryInfo)
     {
-        return directoryInfo.GetFileSystemInfos().TryGetSingle(out singleDirectory);
+        return directoryInfo?.GetFileSystemInfos().SingleOrDefaultSafe() as DirectoryInfo;
     }
 
     /// <summary>
@@ -235,9 +231,11 @@ public static class DirectoryInfoExtensions
 
         while (true)
         {
-            bool containedSingle = TryGetSingleSubdirectory(current, out var single);
-            if (!containedSingle)
+            var single = TryGetSingleSubdirectory(current);
+            if (single is null)
+            {
                 return current;
+            }
 
             current = single;
         }
@@ -267,5 +265,53 @@ public static class DirectoryInfoExtensions
         {
             return false;
         }
+    }
+
+    /// <summary>
+    /// Returns a path that combines the directory's full path
+    /// with the specified next part of the path.
+    /// </summary>
+    /// <param name="next">
+    /// The next part of the path to append after the directory's path.
+    /// Leading separators are not required.
+    /// </param>
+    /// <returns>
+    /// The combined path using <see cref="Path.Combine(string, string)"/>.
+    /// </returns>
+    public static string CombinePath(
+        this DirectoryInfo directory,
+        string next)
+    {
+        return Path.Combine(directory.FullName, next);
+    }
+
+    /// <summary>
+    /// Gets the <see cref="DirectoryInfo"/> of a subdirectory within the
+    /// given directory.
+    /// </summary>
+    /// <param name="subdirectoryName">
+    /// The name of the subdirectory to get. Nested subdirectories are
+    /// allowed, if the path is properly separated.
+    /// </param>
+    public static DirectoryInfo Subdirectory(
+        this DirectoryInfo directory,
+        string subdirectoryName)
+    {
+        return new(directory.CombinePath(subdirectoryName));
+    }
+
+    /// <summary>
+    /// Gets the <see cref="FileInfo"/> of a file within the
+    /// given directory, or a subdirectory of it.
+    /// </summary>
+    /// <param name="fileName">
+    /// The name of the file to get. Nested subdirectories are
+    /// allowed, if the path is properly separated.
+    /// </param>
+    public static FileInfo File(
+        this DirectoryInfo directory,
+        string fileName)
+    {
+        return new(directory.CombinePath(fileName));
     }
 }

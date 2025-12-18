@@ -66,13 +66,13 @@ internal sealed class UpcastList<TBase, TUp>(IList<TBase> backingList)
         _backing.RemoveAt(index);
     }
 
-    public TUp this[int index] => _backing[index] as TUp;
+    public TUp this[int index] => (TUp)_backing[index]!;
 
     TUp IList<TUp>.this[int index]
     {
         get
         {
-            return _backing[index] as TUp;
+            return (TUp)_backing[index]!;
         }
         set
         {

@@ -1,6 +1,4 @@
-﻿#if HAS_SPAN
-
-using System;
+﻿using System;
 
 namespace Garyon.DataStructures;
 
@@ -84,5 +82,3 @@ public sealed class LifoBuffer<T>(int capacity)
         }
     }
 }
-
-#endif

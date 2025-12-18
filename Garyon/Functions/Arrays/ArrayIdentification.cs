@@ -53,6 +53,11 @@ public static class ArrayIdentification
             currentType = currentType.GetElementType();
             if (currentType == typeof(TElement))
                 return true;
+
+            if (currentType is null)
+            {
+                return false;
+            }
         }
 
         return false;

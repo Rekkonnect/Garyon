@@ -1,6 +1,8 @@
 ﻿using Garyon.Functions;
-using NUnit.Framework;
-using static NUnit.Framework.Assert;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 using static System.IO.Path;
 
 namespace Garyon.Tests.Functions;
@@ -8,110 +10,112 @@ namespace Garyon.Tests.Functions;
 public class PathUtilitiesTests
 {
     [Test]
-    public void GetCommonDirectoryTest()
+    public async Task GetCommonDirectoryTest()
     {
-        AssertBidirectional(
+        await AssertBidirectional(
             ["C:", "users", "user"],
             ["C:", "users", "user", "Desktop"],
             ["C:", "users", "user"]
             );
 
-        AssertBidirectional(
+        await AssertBidirectional(
             ["C:", "users"],
             ["C:", "users", "Rekkon"],
             ["C:", "users", "user", "Desktop"]
             );
 
-        AssertBidirectional(
+        await AssertBidirectional(
             ["C:", "users"],
             ["C:", "users", "user"],
             ["C:", "users", "user0", "Desktop"]
             );
 
-        AssertBidirectional(
+        await AssertBidirectional(
             ["C:", "users"],
             ["C:", "users", "user", "Desktop"],
             ["C:", "users", "user0", "Desktop"]
             );
 
-        AssertBidirectional(
+        await AssertBidirectional(
             ["C:", "users"],
             ["C:", "users", "A", "B", "C"],
             ["C:", "users", "B", "B", "C"]
             );
 
-        static void AssertBidirectional(string[] expected, string[] left, string[] right)
+        static async Task AssertBidirectional(string[] expected, string[] left, string[] right)
         {
-            Assert(expected, left, right);
-            Assert(expected, right, left);
+            await AssertPaths(expected, left, right);
+            await AssertPaths(expected, right, left);
         }
 
-        static void Assert(string[] expected, string[] left, string[] right)
+        static async Task AssertPaths(string[] expected, string[] left, string[] right)
         {
             var expectedConcatenated = PathUtilities.ConcatenateDirectoryPath(expected);
             var actualConcatenated = PathUtilities.GetCommonDirectory(Combine(left), Combine(right));
-            AreEqual(expectedConcatenated, actualConcatenated);
+            await Assert.That(actualConcatenated).IsEqualTo(expectedConcatenated);
         }
     }
 
     [Test]
-    public void DeterminePathItemTypeTest()
+    public async Task DeterminePathItemTypeTest()
     {
-        Assert(
+        await AssertPaths(
             PathItemType.Directory,
             $"{Combine("C:", "users", "user", "Desktop")}{DirectorySeparatorChar}");
 
-        Assert(
+        await AssertPaths(
             PathItemType.Volume,
             $"C{VolumeSeparatorChar}");
 
-        AssertCombined(
+        await AssertCombined(
             PathItemType.File,
             ["C:", "users", "user", "Desktop", "Some file.txt"]);
 
-        static void Assert(PathItemType expected, string path)
+        static async Task AssertPaths(PathItemType expected, string path)
         {
-            AreEqual(expected, PathUtilities.DeterminePathItemType(path));
+            await Assert.That(PathUtilities.DeterminePathItemType(path)).IsEqualTo(expected);
         }
-        static void AssertCombined(PathItemType expected, string[] path)
+        static async Task AssertCombined(PathItemType expected, string[] path)
         {
             var pathString = Combine(path);
-            Assert(expected, pathString);
+            await AssertPaths(expected, pathString);
         }
     }
 
     [Test]
-    public void ConcatenateDirectoryPathTest()
+    public async Task ConcatenateDirectoryPathTest()
     {
-        AreEqual($"{Combine("C:", "users", "user")}{DirectorySeparatorChar}", PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"));
+        await Assert
+            .That(PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"))
+            .IsEqualTo($"{Combine("C:", "users", "user")}{DirectorySeparatorChar}");
     }
 
     [Test]
-    public void GetPreviousPathDirectoryInNewPathTest()
+    public async Task GetPreviousPathDirectoryInNewPathTest()
     {
-        AreEqual("Desktop", PathUtilities.GetPreviousPathDirectoryInNewPath(Combine("C:", "users", "user", "Desktop"), Combine("C:", "users", "user")));
-        AreEqual("user", PathUtilities.GetPreviousPathDirectoryInNewPath(Combine("C:", "users", "user", "Desktop"), Combine("C:", "users")));
-        AreEqual(null, PathUtilities.GetPreviousPathDirectoryInNewPath(Combine("C:", "users", "user"), Combine("C:", "users", "user", "Desktop")));
+        await Assert.That(PathUtilities.GetPreviousPathDirectoryInNewPath(Combine("C:", "users", "user", "Desktop"), Combine("C:", "users", "user"))).IsEqualTo("Desktop");
+        await Assert.That(PathUtilities.GetPreviousPathDirectoryInNewPath(Combine("C:", "users", "user", "Desktop"), Combine("C:", "users"))).IsEqualTo("user");
+        await Assert.That(PathUtilities.GetPreviousPathDirectoryInNewPath(Combine("C:", "users", "user"), Combine("C:", "users", "user", "Desktop"))).IsNull();
     }
 
     [Test]
-    public void NormalizeDirectoryPathTest()
+    public async Task NormalizeDirectoryPathTest()
     {
-        AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"), PathUtilities.NormalizeDirectoryPath(@"C:\users/user/"));
-        AreEqual(PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"), PathUtilities.NormalizeDirectoryPath(@"C:\users/user"));
-        AreEqual("", PathUtilities.NormalizeDirectoryPath(""));
+        await Assert.That(PathUtilities.NormalizeDirectoryPath(@"C:\users/user/")).IsEqualTo(PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"));
+        await Assert.That(PathUtilities.NormalizeDirectoryPath(@"C:\users/user")).IsEqualTo(PathUtilities.ConcatenateDirectoryPath("C:", "users", "user"));
+        await Assert.That(PathUtilities.NormalizeDirectoryPath("")).IsEmpty();
     }
 
     [Test]
-    public void GetIndividualItemNameTest()
+    public async Task GetIndividualItemNameTest()
     {
-        Assert("user", @"C:\users/user/");
-        Assert("file.txt", @"C:/users/user/file.txt");
-        Assert("C:", "C:");
+        await AssertPaths("user", @"C:\users/user/");
+        await AssertPaths("file.txt", @"C:/users/user/file.txt");
+        await AssertPaths("C:", "C:");
 
-        static void Assert(string expected, string path)
+        static async Task AssertPaths(string expected, string path)
         {
-            AreEqual(expected, PathUtilities.GetIndividualItemName(path));
+            await Assert.That(PathUtilities.GetIndividualItemName(path)).IsEqualTo(expected);
         }
     }
 }

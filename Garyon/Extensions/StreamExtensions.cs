@@ -8,10 +8,6 @@ namespace Garyon.Extensions;
 // Stream.Read(Span{byte}) triggers lots of warnings
 #pragma warning disable CS1574 // XML comment has cref attribute that could not be resolved
 
-#if !HAS_SPAN
-#pragma warning disable CS1580 // Span{byte} could not be resolved
-#endif
-
 /// <summary>Provides extensions for the <see cref="Stream"/> class.</summary>
 public static unsafe class StreamExtensions
 {
@@ -432,8 +428,8 @@ public static unsafe class StreamExtensions
     public static string ReadString(this Stream stream, long byteLength, Encoding encoding)
     {
         byte[] bytes = new byte[byteLength];
-        stream.Read(bytes);
-        return encoding.GetString(bytes);
+        var read = stream.Read(bytes);
+        return encoding.GetString(bytes, 0, read);
     }
 #endregion
 

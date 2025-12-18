@@ -1,14 +1,17 @@
 ﻿using Garyon.Extensions;
-using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Extensions;
 
 public class IEnumerableExtensionsTests
 {
     [Test]
-    public void FlattenTest()
+    public async Task FlattenTest()
     {
         var numbers = new List<List<int>>
         {
@@ -22,6 +25,6 @@ public class IEnumerableExtensionsTests
 
         var flattened = numbers.Flatten().ToArray();
         var flattenedSelectMany = numbers.SelectMany(a => a).ToArray();
-        Assert.AreEqual(flattenedSelectMany, flattened);
+        await Assert.That(flattened).IsEquivalentTo(flattenedSelectMany);
     }
 }

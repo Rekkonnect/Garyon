@@ -7,6 +7,8 @@ using Garyon.Objects.Enumerators;
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a tree.</summary>
 /// <typeparam name="TValue">The type of the elements the tree nodes store.</typeparam>
 /// <typeparam name="TTree">The type of the tree that this type is used in.</typeparam>
@@ -283,6 +285,6 @@ public abstract class BaseTree<TValue, TTree, TTreeNode> : ITree<TValue, TTree, 
         return true;
     }
 
-    public override bool Equals(object? obj) => Equals(obj as TTree);
+    public override bool Equals(object obj) => Equals(obj as TTree);
     public override int GetHashCode() => Root.GetHashCode() | CachedCount.GetHashCode();
 }

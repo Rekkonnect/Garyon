@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Garyon.Objects;
+using System;
 
 namespace Garyon.Reflection;
 
 /// <summary>Contains information about the definition of a <seealso cref="Type"/>.</summary>
-public class TypeDefinitionInfo
+public class TypeDefinitionInfo : BaseEquatable<TypeDefinitionInfo>
 {
     /// <summary>The kind of the type.</summary>
     public TypeKind Kind;
@@ -62,6 +63,8 @@ public class TypeDefinitionInfo
     public bool IsPrivateProtected => Modifiers.HasFlag(TypeModifiers.PrivateProtected);
     /// <summary>Determines whether the type is <see langword="private"/>.</summary>
     public bool IsPrivate => Modifiers.HasFlag(TypeModifiers.Private);
+    /// <summary>Determines whether the type is <see langword="file"/>.</summary>
+    public bool IsFile => Modifiers.HasFlag(TypeModifiers.File);
 
     /// <summary>Determines whether the type is <see langword="static"/>.</summary>
     public bool IsStatic => Modifiers.HasFlag(TypeModifiers.Static);
@@ -94,7 +97,7 @@ public class TypeDefinitionInfo
     public bool CanInheritCustomClasses => IsTrueClass && !IsStatic;
     /// <summary>Determines whether this type can be inherited by any type.</summary>
     /// <returns><see langword="true"/> if the type can be inherited by any type; that is it is not sealed, is a true class or an interface, otherwise <see langword="false"/>.</returns>
-    public bool CanBeInherited => !IsSealed && (IsTrueClass || IsInterface);
+    public bool CanBeInherited => !IsSealed && !IsStatic && (IsTrueClass || IsInterface);
     #endregion
 
     /// <summary>Initializes a new instance of the <seealso cref="TypeDefinitionInfo"/> class.</summary>
@@ -167,29 +170,30 @@ public class TypeDefinitionInfo
     /// <returns>A <seealso cref="TypeModifiers"/> value that contains the type modifiers.</returns>
     public static TypeModifiers GetTypeModifiers(Type? type)
     {
-        if (type == null)
+        if (type is null)
             return default;
 
         var result = TypeModifiers.None;
 
-        if (type.IsStaticClass())
-            result |= TypeModifiers.Static;
-        else
-        {
-            // The API is constructed in a weird way
-            if (type.IsSealed)
-                result |= TypeModifiers.Sealed;
-            if (type.IsAbstract)
-                result |= TypeModifiers.Abstract;
-        }
-
-        if (type.IsByRef)
-            result |= TypeModifiers.Ref;
-
+        var isStatic = type.IsStaticClass();
+        result
+            |= FlagIf(TypeModifiers.Static, isStatic)
+            | FlagIf(TypeModifiers.Sealed, !isStatic && type.IsSealed)
+            | FlagIf(TypeModifiers.Abstract, !isStatic && type.IsAbstract)
+            | FlagIf(TypeModifiers.Ref, type.IsByRef)
 #if HAS_BYREF_LIKE
-        if (type.IsByRefLike)
-            result |= TypeModifiers.Ref;
+            | FlagIf(TypeModifiers.Ref, type.IsByRefLike)
 #endif
+            ;
+
+        // File-local type implementation details:
+        // An example of a file-local type name:
+        // <OuterContainer>FD2E2ADF7177B7A8AFDDBC12D1634CF23EA1A71020F6A1308070A16400FB68FDE__FileLocalType
+        // Which can be reduced to <(%:identifier:)>[0-9A-F]{65}__(%:identifier:)
+        // We do not want to match types by a complex regex that requires parsing identifiers
+        // that may be encoded differently and thus complicate the case.
+        // For now, we will not support the file modifier, and would prefer waiting to get
+        // a property from the reflection API.
 
         // There is no way to determine anything else
         // TODO: Consider removing the type modifiers that are undetectable (readonly, readonly ref)
@@ -198,33 +202,35 @@ public class TypeDefinitionInfo
         // Top-level types can only be public or internal
         if (!type.IsNested)
         {
-            if (type.IsPublic)
-                result |= TypeModifiers.Public;
-            else
-                result |= TypeModifiers.Internal;
+            result
+                |= FlagIf(TypeModifiers.Public, type.IsPublic)
+                | FlagIf(TypeModifiers.Internal, type.IsNotPublic)
+                ;
         }
         // Nested types require looking through the specific properties for nested types
         else
         {
-            if (type.IsNestedPublic)
-                result |= TypeModifiers.Public;
-            else if (type.IsNestedAssembly)
-                result |= TypeModifiers.Internal;
-            else if (type.IsNestedFamORAssem)
-                result |= TypeModifiers.ProtectedInternal;
-            else if (type.IsNestedFamily)
-                result |= TypeModifiers.Protected;
-            else if (type.IsNestedFamANDAssem)
-                result |= TypeModifiers.PrivateProtected;
-            else if (type.IsNestedPrivate)
-                result |= TypeModifiers.Private;
+            result
+                |= FlagIf(TypeModifiers.Public, type.IsNestedPublic)
+                | FlagIf(TypeModifiers.Internal, type.IsNestedAssembly)
+                | FlagIf(TypeModifiers.ProtectedInternal, type.IsNestedFamORAssem)
+                | FlagIf(TypeModifiers.Protected, type.IsNestedFamily)
+                | FlagIf(TypeModifiers.PrivateProtected, type.IsNestedFamANDAssem)
+                | FlagIf(TypeModifiers.Private, type.IsNestedPrivate)
+                ;
         }
 
         return result;
     }
 
-    public bool Equals(TypeDefinitionInfo other) => Kind == other.Kind && Modifiers == other.Modifiers;
-    public override bool Equals(object? obj) => Equals((TypeDefinitionInfo)obj);
+    private static TypeModifiers FlagIf(TypeModifiers flag, bool toggle)
+    {
+        return toggle ? flag : default;
+    }
+
+    protected override bool EqualsCore(TypeDefinitionInfo other)
+        => Kind == other.Kind && Modifiers == other.Modifiers;
+
     public override string ToString() => $"{Kind} - {Modifiers}";
     public override int GetHashCode() => HashCode.Combine(Kind, Modifiers);
 }

@@ -2,9 +2,13 @@
 
 namespace Garyon.Objects;
 
+#pragma warning disable IDE0290 // Use primary constructor
+
 /// <summary>Represents a time instance with the minute and second.</summary>
 public struct MinuteSecond : IEquatable<MinuteSecond>, IHasMinute, IHasSecond
 {
+    public const int SecondsPerHour = 60 * 60;
+
     /// <summary>Gets the current time's <seealso cref="MinuteSecond"/> representation.</summary>
     public static MinuteSecond Now => (MinuteSecond)DateTime.Now;
     /// <summary>Gets the <seealso cref="MinuteSecond"/> representation of the next second from the current time.</summary>
@@ -17,38 +21,38 @@ public struct MinuteSecond : IEquatable<MinuteSecond>, IHasMinute, IHasSecond
     /// <summary>Gets or sets the total hours as a <seealso cref="double"/>.</summary>
     public double TotalHours
     {
-        get => seconds / (60d * 60);
-        set => seconds = (short)(value * 60 * 60);
+        readonly get => seconds / ((double)SecondsPerHour);
+        set => seconds = (short)(value * SecondsPerHour);
     }
     /// <summary>Gets or sets the total minutes as a <seealso cref="double"/>.</summary>
     public double TotalMinutes
     {
-        get => seconds / 60d;
+        readonly get => seconds / 60d;
         set => seconds = (short)(value * 60);
     }
     /// <summary>Gets the total seconds.</summary>
     public int TotalSeconds
     {
-        get => seconds;
+        readonly get => seconds;
         set => seconds = (short)value;
     }
 
     /// <summary>Gets or sets the minute.</summary>
     public int Minute
     {
-        get => seconds / 60;
+        readonly get => seconds / 60;
         set => seconds += (short)((value % 60 - Minute) * 60);
     }
     /// <summary>Gets or sets the second.</summary>
     public int Second
     {
-        get => seconds % 60;
+        readonly get => seconds % 60;
         set => seconds += (short)(value % 60 - Second);
     }
-    
+
     /// <summary>Initializes a new instance of the <seealso cref="MinuteSecond"/> struct from the total seconds of the time.</summary>
     /// <param name="totalSeconds">The total seconds of the time.</param>
-    public MinuteSecond(int totalSeconds) => seconds = (short)(totalSeconds % (60 * 60));
+    public MinuteSecond(int totalSeconds) => seconds = (short)(totalSeconds % (SecondsPerHour));
     /// <summary>Initializes a new instance of the <seealso cref="MinuteSecond"/> struct from the minute and the second of the time.</summary>
     /// <param name="minute">The minute of the time.</param>
     /// <param name="second">The second of the time.</param>
@@ -101,10 +105,10 @@ public struct MinuteSecond : IEquatable<MinuteSecond>, IHasMinute, IHasSecond
     /// <summary>Determines whether another <seealso cref="MinuteSecond"/> instance is equal to this one.</summary>
     /// <param name="other">The other <seealso cref="MinuteSecond"/> instance.</param>
     /// <returns>A value determining whether both objects are equal or not.</returns>
-    public bool Equals(MinuteSecond other) => other == this;
-    public override bool Equals(object obj) => obj is MinuteSecond h && h == this;
-    public override int GetHashCode() => seconds.GetHashCode();
+    public readonly bool Equals(MinuteSecond other) => other == this;
+    public override readonly bool Equals(object? obj) => obj is MinuteSecond h && h == this;
+    public override readonly int GetHashCode() => seconds.GetHashCode();
     /// <summary>Gets the string representation of the minute-second time.</summary>
     /// <returns>The string representation of the minute-second time in the form "MM:SS".</returns>
-    public override string ToString() => $"{Minute:D2}:{Second:D2}";
+    public override readonly string ToString() => $"{Minute:D2}:{Second:D2}";
 }

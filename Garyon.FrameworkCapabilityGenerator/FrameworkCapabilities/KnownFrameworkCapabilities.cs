@@ -4,6 +4,11 @@ namespace Garyon.FrameworkCapabilityGenerator.FrameworkCapabilities;
 
 internal static class KnownFrameworkCapabilities
 {
+    // As polyfills were introduced, some of these capabilities are not being evaluated
+    // to conditionally define helpful extensions, extending them to more versions than
+    // the official framework versions support.
+    // They are defined here for reference and documentation purposes.
+
     public static IReadOnlyList<FrameworkCapabilityRange> Capabilities =>
         [
             new(
@@ -14,6 +19,7 @@ internal static class KnownFrameworkCapabilities
                     "HAS_SPAN",
                     "HAS_SLICES",
                     "HAS_HASH_CODE",
+                    "HAS_MATHF",
                     "HAS_INTERFACE_DIMS",
                     "HAS_ASYNC_ENUMERABLE",
                     "HAS_NULLABLE_ANNOTATION_ATTRIBUTES",
@@ -30,11 +36,14 @@ internal static class KnownFrameworkCapabilities
                     "HAS_STRING_JOIN_CHAR",
                     "HAS_KVP_DECONSTRUCT",
                     "HAS_CONCURRENT_BAG_CLEAR",
+                    "HAS_ASYNC_FILE_IO",
+                    "HAS_DATA_ROW_FIELD_METHOD",
+                    "HAS_NUMBER_PARSE_SPANSTRING",
                 ]),
 
             new(
-                Range(KnownFrameworkVersions.NetStandard21, null)
-                | Range(KnownFrameworkVersions.NetCore31, KnownFrameworkVersions.Net5),
+                Range(null, KnownFrameworkVersions.NetStandard21)
+                | Range(null, KnownFrameworkVersions.Net5),
                 [
                     "REQUIRES_IEQUATABLE_FOR_SPAN_SEQUENCE_EQUALS",
                 ]),
@@ -45,10 +54,15 @@ internal static class KnownFrameworkCapabilities
                     "HAS_IMMUTABLE",
                     "HAS_CALLER_INFORMATION_ATTRIBUTES",
                     "HAS_INTRINSICS",
+                    "HAS_UNSAFE",
                     "HAS_SIMD",
+                    "HAS_BIT_OPERATIONS",
+                    "HAS_CHANNELS",
                     "HAS_GET_CHUNKS",
                     "HAS_AVX",
                     "HAS_DYNAMIC_INVOCATION",
+                    "HAS_MATH_LOG2",
+                    "HAS_MATH_ILOGB",
                 ]),
 
             new(
@@ -82,6 +96,13 @@ internal static class KnownFrameworkCapabilities
                     "HAS_UNREACHABLE_EXCEPTION",
                     "HAS_INUMBER",
                     "HAS_STATIC_ABSTRACTS",
+                ]),
+
+            new(
+                Range(KnownFrameworkVersions.Net9, null),
+                [
+                    "HAS_INTERLOCKED_COMPARE_EXCHANGE_UNCONSTRAINED",
+                    "HAS_SPAN_BASED_FILE_IO",
                 ]),
 
             new(

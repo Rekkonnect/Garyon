@@ -1,6 +1,4 @@
-﻿#if HAS_SPAN
-using System;
-#endif
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -110,80 +108,19 @@ public static class StringBuilderExtensions
         return stringBuilder;
     }
 
-    #region AppendLine
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, byte value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, short value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, int value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, long value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, sbyte value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, ushort value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, uint value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, ulong value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, float value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, double value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
-    public static StringBuilder AppendLine(this StringBuilder stringBuilder, decimal value)
-    {
-        return stringBuilder
-            .Append(value)
-            .AppendLine();
-    }
     public static StringBuilder AppendLine(this StringBuilder stringBuilder, char value)
     {
         return stringBuilder
             .Append(value)
             .AppendLine();
     }
-    #endregion
+
+    public static StringBuilder AppendLine<T>(this StringBuilder stringBuilder, T value)
+    {
+        return stringBuilder
+            .Append(value?.ToString())
+            .AppendLine();
+    }
 
     /// <summary>
     /// Appends a line to the string builder a number of times.

@@ -30,13 +30,13 @@ public class RepeatedValueCollection<T> : IReadOnlyCollection<T>
 
     /// <summary>Creates a new array and fills it with the same repeated value as many times as it's specified.</summary>
     /// <returns>The new array that contains the repeated element.</returns>
-    public T[] ToArray()
+    public T?[] ToArray()
     {
         return ArrayFactory.CreateFilled(Value, Count);
     }
 
     /// <summary>Provides an enumerator for a <seealso cref="RepeatedValueCollection{T}"/> instance.</summary>
-    public struct Enumerator : IEnumerator<T>
+    public struct Enumerator : IEnumerator<T?>
     {
         /// <summary>Gets the collection that is being enumerated.</summary>
         public RepeatedValueCollection<T> Collection { get; }
@@ -45,7 +45,7 @@ public class RepeatedValueCollection<T> : IReadOnlyCollection<T>
 
         /// <inheritdoc/>
         public T? Current => Collection.Value;
-        object IEnumerator.Current => Current;
+        object? IEnumerator.Current => Current;
 
         /// <summary>Initializes a new instance of the <seealso cref="Enumerator"/> struct from a given <seealso cref="RepeatedValueCollection{T}"/> instance.</summary>
         /// <param name="collection">The collection that is to be enumerated.</param>

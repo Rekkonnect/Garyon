@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Garyon.Exceptions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Garyon.Objects.Enumerators;
 
@@ -87,10 +90,10 @@ public class AffixedEnumerable<T> : IEnumerable<T>
     private sealed class Enumerator : IEnumerator<T>
     {
         private readonly AffixedEnumerable<T> affixed;
-        private IEnumerator<T> currentEnumerator;
+        private IEnumerator<T>? currentEnumerator;
         private AffixedEnumeratorState state;
 
-        object IEnumerator.Current => Current;
+        object? IEnumerator.Current => Current;
         public T Current
         {
             get
@@ -99,7 +102,7 @@ public class AffixedEnumerable<T> : IEnumerable<T>
                 {
                     AffixedEnumeratorState.Prefix or
                     AffixedEnumeratorState.Main or
-                    AffixedEnumeratorState.Suffix => currentEnumerator.Current,
+                    AffixedEnumeratorState.Suffix => currentEnumerator!.Current,
 
                     _ => throw new InvalidOperationException("The enumerator is not in a state of yielding a value."),
                 };
@@ -139,6 +142,10 @@ public class AffixedEnumerable<T> : IEnumerable<T>
 
                     case AffixedEnumeratorState.After:
                         return false;
+
+                    default:
+                        ThrowHelper.Throw<UnreachableException>();
+                        break;
                 }
 
                 next = currentEnumerator.MoveNext();
