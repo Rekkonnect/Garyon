@@ -1,14 +1,17 @@
-name: Run Tests
+name: run-tests-windows
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
-  build:
+  run:
     runs-on: windows-latest
-
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v6
 
-    - name: Run Tests
+    - name: Run tests
       run: dotnet test Garyon.Tests/Garyon.Tests.csproj
