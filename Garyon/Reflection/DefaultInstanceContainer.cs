@@ -1,5 +1,4 @@
-﻿#nullable enable
-
+﻿
 using Garyon.Extensions;
 using System;
 using System.Collections.Generic;

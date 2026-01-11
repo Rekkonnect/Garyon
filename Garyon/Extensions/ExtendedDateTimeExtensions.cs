@@ -6,15 +6,11 @@ namespace Garyon.Extensions;
 
 /// <summary>
 /// Contains extensions focused on interoperability between
-/// <see cref="DateTime"/>, <see cref="DateOnly"/> and <see cref="TimeOnly"/>.
+/// <see cref="DateTime"/>, <see cref="DateTimeOffset"/>,
+/// <see cref="DateOnly"/> and <see cref="TimeOnly"/>.
 /// </summary>
 public static class ExtendedDateTimeExtensions
 {
-    public static DateOnly? ToDateOnly(this DateTime? dateTime)
-    {
-        return dateTime?.ToDateOnly();
-    }
-
     /// <summary>
     /// Converts a <see cref="DateTime"/> into a <see cref="DateOnly"/>.
     /// </summary>
@@ -23,14 +19,14 @@ public static class ExtendedDateTimeExtensions
         return DateOnly.FromDateTime(dateTime);
     }
 
-    public static DateTime? ToDateTime(this DateOnly? date)
-    {
-        return date?.ToDateTime();
-    }
-
     public static DateTime ToDateTime(this DateOnly dateTime)
     {
         return dateTime.ToDateTime(time: default);
+    }
+
+    public static TimeSpan Subtract(this DateOnly date, DateOnly other)
+    {
+        return date.ToDateTime(default) - other.ToDateTime(default);
     }
 }
 

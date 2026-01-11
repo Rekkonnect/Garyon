@@ -31,10 +31,12 @@ public static partial class IEnumerableExtensions
             return false;
         }
 
+        // Propagate the null issues down to indexing
+
         var table = new Hashtable();
         foreach (var item in source)
         {
-            table[item] = true;
+            table[item!] = true;
         }
 
         var countCaching = other.WithCountCaching();
@@ -45,7 +47,7 @@ public static partial class IEnumerableExtensions
                 return false;
             }
 
-            if (!table.ContainsKey(item))
+            if (!table.ContainsKey(item!))
             {
                 return false;
             }

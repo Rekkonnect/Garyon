@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Garyon.Extensions;
 
@@ -20,16 +24,21 @@ public static class FileInfoExtensions
         /// </returns>
         public int Depth()
         {
-            return file.Directory.Depth() + 1;
+            if (file.Directory is var directory and not null)
+            {
+                return directory.Depth() + 1;
+            }
+
+            return 0;
         }
 
         public DirectoryInfo? RecursiveParent(int levels = 1)
         {
-            return file.Directory.RecursiveParent(levels);
+            return file.Directory?.RecursiveParent(levels);
         }
-        public DirectoryInfo BoundRecursiveParent(int levels = 1)
+        public DirectoryInfo? BoundRecursiveParent(int levels = 1)
         {
-            return file.Directory.BoundRecursiveParent(levels);
+            return file.Directory?.BoundRecursiveParent(levels);
         }
 
         /// <summary>
@@ -65,6 +74,11 @@ public static class FileInfoExtensions
         public FileInfo MoveUpBound(int levels = 1)
         {
             var newDirectory = file.BoundRecursiveParent(levels);
+            if (newDirectory is null)
+            {
+                return file;
+            }
+
             return file.MoveToDirectory(newDirectory);
         }
         /// <summary>
@@ -97,13 +111,11 @@ public static class FileInfoExtensions
         /// The new name of the file, including its extension.
         /// </param>
         /// <inheritdoc cref="MoveTo(FileInfo, DirectoryInfo, string, string)"/>
-#pragma warning disable CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
         public FileInfo MoveTo(DirectoryInfo directory, string nameWithExtension)
         {
             file.MoveTo(Path.Combine(directory.Name!, nameWithExtension));
             return file;
         }
-#pragma warning restore CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
 
         /// <summary>Renames a file, changing both its name and extension.</summary>
         /// <param name="nameWithExtension">The new name to set, including its extension.</param>
@@ -162,6 +174,7 @@ public static class FileInfoExtensions
             var extension = Path.GetExtension(file.Name);
             return Rename(file, extensionlessName, extension);
         }
+
         /// <summary>
         /// Changes the extension of a file, preserving its extensionless name.
         /// </summary>
@@ -174,5 +187,220 @@ public static class FileInfoExtensions
             var extensionlessName = Path.GetFileNameWithoutExtension(file.Name);
             return Rename(file, extensionlessName, extension);
         }
+
+        /// <summary>
+        /// Reads all bytes using <see cref="File.ReadAllBytes(string)"/>.
+        /// </summary>
+        public byte[] ReadAllBytes()
+        {
+            return File.ReadAllBytes(file.FullName);
+        }
+
+        /// <summary>
+        /// Reads all text using <see cref="File.ReadAllText(string)"/>.
+        /// </summary>
+        public string ReadAllText()
+        {
+            return File.ReadAllText(file.FullName);
+        }
+
+        /// <summary>
+        /// Reads all lines using <see cref="File.ReadAllLines(string)"/>.
+        /// </summary>
+        public string[] ReadAllLines()
+        {
+            return File.ReadAllLines(file.FullName);
+        }
+
+        /// <summary>
+        /// Writes all bytes using <see cref="File.WriteAllBytes(string, byte[])"/>.
+        /// </summary>
+        public void WriteAllBytes(byte[] bytes)
+        {
+            File.WriteAllBytes(file.FullName, bytes);
+        }
+
+#if HAS_SPAN_BASED_FILE_IO
+        /// <summary>
+        /// Writes all bytes using <see cref="File.WriteAllBytes(string, ReadOnlySpan{byte})"/>.
+        /// </summary>
+        public void WriteAllBytes(ReadOnlySpan<byte> bytes)
+        {
+            File.WriteAllBytes(file.FullName, bytes);
+        }
+#endif
+
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllText(string, string)"/>.
+        /// </summary>
+        public void WriteAllText(string content)
+        {
+            File.WriteAllText(file.FullName, content);
+        }
+
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllText(string, string, Encoding)"/>.
+        /// </summary>
+        public void WriteAllText(string content, Encoding encoding)
+        {
+            File.WriteAllText(file.FullName, content, encoding);
+        }
+
+#if HAS_SPAN_BASED_FILE_IO
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllText(string, ReadOnlySpan{char})"/>.
+        /// </summary>
+        public void WriteAllText(ReadOnlySpan<char> content)
+        {
+            File.WriteAllText(file.FullName, content);
+        }
+
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllText(string, ReadOnlySpan{char}, Encoding)"/>.
+        /// </summary>
+        public void WriteAllText(ReadOnlySpan<char> content, Encoding encoding)
+        {
+            File.WriteAllText(file.FullName, content, encoding);
+        }
+#endif
+
+        /// <summary>
+        /// Writes all lines using <see cref="File.WriteAllLines(string, string[])"/>.
+        /// </summary>
+        public void WriteAllLines(string[] lines)
+        {
+            File.WriteAllLines(file.FullName, lines);
+        }
+
+        /// <summary>
+        /// Writes all lines using <see cref="File.WriteAllLines(string, string[], Encoding)"/>.
+        /// </summary>
+        public void WriteAllLines(string[] lines, Encoding encoding)
+        {
+            File.WriteAllLines(file.FullName, lines, encoding);
+        }
+
+        /// <summary>
+        /// Writes all lines using <see cref="File.WriteAllLines(string, IEnumerable{string})"/>.
+        /// </summary>
+        public void WriteAllLines(IEnumerable<string> lines)
+        {
+            File.WriteAllLines(file.FullName, lines);
+        }
+
+        /// <summary>
+        /// Writes all lines using <see cref="File.WriteAllLines(string, IEnumerable{string}, Encoding)"/>.
+        /// </summary>
+        public void WriteAllLines(IEnumerable<string> lines, Encoding encoding)
+        {
+            File.WriteAllLines(file.FullName, lines, encoding);
+        }
+
+#if HAS_ASYNC_FILE_IO
+        /// <summary>
+        /// Reads all bytes using <see cref="File.ReadAllBytesAsync(string, CancellationToken)"/>.
+        /// </summary>
+        public async Task<byte[]> ReadAllBytesAsync(CancellationToken cancellationToken = default)
+        {
+            return await File.ReadAllBytesAsync(file.FullName, cancellationToken);
+        }
+
+        /// <summary>
+        /// Reads all text using <see cref="File.ReadAllTextAsync(string, CancellationToken)"/>.
+        /// </summary>
+        public async Task<string> ReadAllTextAsync(CancellationToken cancellationToken = default)
+        {
+            return await File.ReadAllTextAsync(file.FullName, cancellationToken);
+        }
+
+        /// <summary>
+        /// Reads all lines using <see cref="File.ReadAllLinesAsync(string, CancellationToken)"/>.
+        /// </summary>
+        public async Task<string[]> ReadAllLinesAsync(CancellationToken cancellationToken = default)
+        {
+            return await File.ReadAllLinesAsync(file.FullName, cancellationToken);
+        }
+
+        /// <summary>
+        /// Writes all bytes using <see cref="File.WriteAllBytesAsync(string, byte[], CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllBytesAsync(byte[] bytes, CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllBytesAsync(file.FullName, bytes, cancellationToken);
+        }
+
+#if HAS_SPAN_BASED_FILE_IO
+        /// <summary>
+        /// Writes all bytes using <see cref="File.WriteAllBytesAsync(string, ReadOnlyMemory{byte}, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllBytesAsync(ReadOnlyMemory<byte> bytes, CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllBytesAsync(file.FullName, bytes, cancellationToken);
+        }
+#endif
+
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllTextAsync(string, string, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllTextAsync(string content, CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllTextAsync(file.FullName, content, cancellationToken);
+        }
+
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllTextAsync(string, string, Encoding, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllTextAsync(
+            string content,
+            Encoding encoding,
+            CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllTextAsync(file.FullName, content, encoding, cancellationToken);
+        }
+
+#if HAS_SPAN_BASED_FILE_IO
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllTextAsync(string, ReadOnlyMemory{char}, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllTextAsync(
+            ReadOnlyMemory<char> content,
+            CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllTextAsync(file.FullName, content, cancellationToken);
+        }
+
+        /// <summary>
+        /// Writes all text using <see cref="File.WriteAllTextAsync(string, ReadOnlyMemory{char}, Encoding, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllTextAsync(
+            ReadOnlyMemory<char> content,
+            Encoding encoding,
+            CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllTextAsync(file.FullName, content, encoding, cancellationToken);
+        }
+#endif
+
+        /// <summary>
+        /// Writes all lines using <see cref="File.WriteAllLinesAsync(string, IEnumerable{string}, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllLinesAsync(
+            IEnumerable<string> lines,
+            CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllLinesAsync(file.FullName, lines, cancellationToken);
+        }
+
+        /// <summary>
+        /// Writes all lines using <see cref="File.WriteAllLinesAsync(string, IEnumerable{string}, Encoding, CancellationToken)"/>.
+        /// </summary>
+        public async Task WriteAllLinesAsync(
+            IEnumerable<string> lines,
+            Encoding encoding,
+            CancellationToken cancellationToken = default)
+        {
+            await File.WriteAllLinesAsync(file.FullName, lines, encoding, cancellationToken);
+        }
+#endif
     }
 }

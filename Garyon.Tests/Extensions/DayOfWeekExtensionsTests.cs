@@ -1,14 +1,16 @@
 ﻿using Garyon.Extensions;
-using NUnit.Framework;
 using System;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Extensions;
 
-[Parallelizable(ParallelScope.Children)]
 public class DayOfWeekExtensionsTests
 {
     [Test]
-    public void DaysSinceFirst()
+    public async Task DaysSinceFirst()
     {
         /*
          * Cheat sheet:
@@ -16,13 +18,13 @@ public class DayOfWeekExtensionsTests
          *  0  1  2  3  4  5  6
          */
 
-        AssertOffset(DayOfWeek.Monday, DayOfWeek.Sunday, 1);
-        AssertOffset(DayOfWeek.Friday, DayOfWeek.Tuesday, 3);
-        AssertOffset(DayOfWeek.Monday, DayOfWeek.Wednesday, 5);
+        await AssertOffset(DayOfWeek.Monday, DayOfWeek.Sunday, 1);
+        await AssertOffset(DayOfWeek.Friday, DayOfWeek.Tuesday, 3);
+        await AssertOffset(DayOfWeek.Monday, DayOfWeek.Wednesday, 5);
 
-        static void AssertOffset(DayOfWeek dayOfWeek, DayOfWeek start, int expectedOffset)
+        static async Task AssertOffset(DayOfWeek dayOfWeek, DayOfWeek start, int expectedOffset)
         {
-            Assert.AreEqual(expectedOffset, dayOfWeek.DaysSinceWeekStart(start));
+            await Assert.That(dayOfWeek.DaysSinceWeekStart(start)).IsEqualTo(expectedOffset);
         }
     }
 }

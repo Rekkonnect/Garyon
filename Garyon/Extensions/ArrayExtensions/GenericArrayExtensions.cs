@@ -90,8 +90,11 @@ public static class GenericArrayExtensions
     {
         var indices = new List<int>(array.Length);
         foreach (var (i, e) in array.WithIndex())
-            if (e.Equals(value))
+        {
+            if (e!.Equals(value))
                 indices.Add(i);
+        }
+
         return indices.ToArray();
     }
 

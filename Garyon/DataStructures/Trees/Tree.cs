@@ -3,6 +3,8 @@ using System.Linq;
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a tree.</summary>
 /// <typeparam name="T">The type of the elements the tree nodes store.</typeparam>
 public class Tree<T> : Tree<T, Tree<T>, TreeNode<T>>

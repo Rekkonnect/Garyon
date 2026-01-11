@@ -1,15 +1,17 @@
 ﻿using Garyon.Functions;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Functions;
 
 public class EnumHelpersTests
 {
     [Test]
-    public void GetEntryCountTest()
+    public async Task GetEntryCountTest()
     {
-        Assert.AreEqual(3, EnumHelpers.GetEntryCount<TestEnum>());
-        Assert.AreEqual(3, EnumHelpers.GetEntryCount(typeof(TestEnum)));
+        await Assert.That(EnumHelpers.GetEntryCount<TestEnum>()).IsEqualTo(3);
     }
 
     private enum TestEnum

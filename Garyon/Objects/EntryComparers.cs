@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Garyon.Extensions.Comparison;
+using System;
 using System.Collections.Generic;
-
-#nullable enable
 
 namespace Garyon.Objects;
 
@@ -35,11 +34,10 @@ public sealed class EntryKeyOverValueComparer<TKey, TValue> : IFullKeyValuePairC
     /// <returns>The comparison result between the keys, if not 0, otherwise the comparison result between the values. For all comparisons, order is matched.</returns>
     public int Compare(KeyValuePair<TKey, TValue> left, KeyValuePair<TKey, TValue> right)
     {
-        int comparison = left.Key.CompareTo(right.Key);
-        if (comparison != 0)
-            return comparison;
-
-        return left.Value.CompareTo(right.Value);
+        return left.BeginCompare(right)
+            .By(static s => s.Key)
+            .ThenBy(static s => s.Value)
+            .Result;
     }
 }
 
@@ -59,11 +57,10 @@ public sealed class EntryValueOverKeyComparer<TKey, TValue> : IFullKeyValuePairC
     /// <returns>The comparison result between the values, if not 0, otherwise the comparison result between the keys. For all comparisons, order is matched.</returns>
     public int Compare(KeyValuePair<TKey, TValue> left, KeyValuePair<TKey, TValue> right)
     {
-        int comparison = left.Value.CompareTo(right.Value);
-        if (comparison != 0)
-            return comparison;
-
-        return left.Key.CompareTo(right.Key);
+        return left.BeginCompare(right)
+            .By(static s => s.Value)
+            .ThenBy(static s => s.Key)
+            .Result;
     }
 }
 

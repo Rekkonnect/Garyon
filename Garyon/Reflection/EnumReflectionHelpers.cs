@@ -17,6 +17,7 @@ public static class EnumReflectionHelpers
     {
         return GetEnumFieldDictionary<T, DescriptionAttribute, string>(d => d?.Description);
     }
+
     /// <summary>Constructs a <seealso cref="Dictionary{TKey, TValue}"/> mapping the provided enum's fields to a sought attribute.</summary>
     /// <typeparam name="TEnum">The type of the enum whose fields to construct the dictionary of.</typeparam>
     /// <typeparam name="TAttribute">The type of the attribute to seek for in each field.</typeparam>
@@ -27,23 +28,29 @@ public static class EnumReflectionHelpers
     {
         return GetEnumFieldDictionary<TEnum, TAttribute, TAttribute>(Selectors.SelfObjectReturner);
     }
+
     /// <summary>Constructs a <seealso cref="Dictionary{TKey, TValue}"/> mapping the provided enum's fields to a value provided from a sought attribute.</summary>
     /// <typeparam name="TEnum">The type of the enum whose fields to construct the dictionary of.</typeparam>
     /// <typeparam name="TAttribute">The type of the attribute to seek for in each field.</typeparam>
     /// <typeparam name="TMappedValue">The type of the value to map the fields to.</typeparam>
     /// <param name="selector">The function that selects the value to map the respective field to, given its attribute instance, if found. It should expect nulls.</param>
     /// <returns>The resulting constructed <seealso cref="Dictionary{TKey, TValue}"/> containing the enum fields mapped to their chosen values.</returns>
-    public static Dictionary<TEnum, TMappedValue> GetEnumFieldDictionary<TEnum, TAttribute, TMappedValue>(Func<TAttribute?, TMappedValue> selector)
+    public static Dictionary<TEnum, TMappedValue> GetEnumFieldDictionary<TEnum, TAttribute, TMappedValue>(Func<TAttribute?, TMappedValue?> selector)
         where TEnum : struct, Enum
         where TAttribute : Attribute
     {
         var dictionary = new Dictionary<TEnum, TMappedValue>();
         var fields = GetEnumFields<TEnum>();
-        foreach (var f in fields)
+        foreach (var field in fields)
         {
-            var v = f.GetRawConstantValue();
-            var d = selector(f.GetCustomAttribute<TAttribute>());
-            dictionary.Add((TEnum)v, d);
+            var value = (TEnum)field.GetRawConstantValue()!;
+            var mapped = selector(field.GetCustomAttribute<TAttribute>());
+            if (mapped is null)
+            {
+                continue;
+            }
+
+            dictionary.Add(value, mapped);
         }
         return dictionary;
     }

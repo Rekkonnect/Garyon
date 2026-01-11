@@ -41,7 +41,7 @@ public readonly struct SingleElementCollection<T> : IReadOnlyCollection<T?>, IEq
         return Equals(element, other.element);
     }
     /// <inheritdoc/>
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         return obj is SingleElementCollection<T?> other && Equals(other);
     }

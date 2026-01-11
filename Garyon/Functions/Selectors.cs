@@ -16,7 +16,7 @@ public static class Selectors
     /// <typeparam name="T">The type of the object. Must be a reference type.</typeparam>
     /// <param name="value">The provided object.</param>
     /// <returns><see langword="null"/>, ignoring the provided object.</returns>
-    public static T NullReturner<T>(T value)
+    public static T? NullReturner<T>(T value)
         where T : class
     {
         return null;
@@ -25,7 +25,7 @@ public static class Selectors
     /// <typeparam name="T">The type of the object.</typeparam>
     /// <param name="value">The provided object.</param>
     /// <returns><see langword="default"/>, ignoring the provided object.</returns>
-    public static T DefaultValueReturner<T>(T value)
+    public static T? DefaultValueReturner<T>(T value)
     {
         return default;
     }
@@ -40,7 +40,7 @@ public static class Selectors
     public static T ValueReturner<T>(T? value)
         where T : struct
     {
-        return value.Value;
+        return value!.Value;
     }
     /// <summary>Returns the value in a nullable struct object, if it has any, otherwise <see langword="default"/>.</summary>
     /// <typeparam name="T">The type of the struct.</typeparam>

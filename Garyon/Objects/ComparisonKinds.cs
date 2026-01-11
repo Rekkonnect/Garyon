@@ -1,5 +1,6 @@
 ﻿using Garyon.Exceptions;
 using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace Garyon.Objects;
@@ -46,12 +47,19 @@ public static class ComparisonKindsExtensions
     {
         /// <summary>Gets the comparison kind from a <seealso cref="ComparisonResult"/>.</summary>
         /// <returns>A <seealso cref="ComparisonKinds"/> value with a single kind representing the given <seealso cref="ComparisonResult"/>.</returns>
-        public ComparisonKinds GetComparisonKind() => result switch
+        public ComparisonKinds AsComparisonKind => result switch
         {
             ComparisonResult.Less => ComparisonKinds.Less,
             ComparisonResult.Equal => ComparisonKinds.Equal,
             ComparisonResult.Greater => ComparisonKinds.Greater,
+            _ => ThrowInvalid(),
         };
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static ComparisonKinds ThrowInvalid()
+        {
+            throw ThrowHelper.Throw<InvalidEnumArgumentException>("The provided enum value is invalid.");
+        }
     }
 
     /// <summary>Determines whether a <seealso cref="ComparisonKinds"/> contains a comparison kind that matches the given <seealso cref="ComparisonResult"/>.</summary>
@@ -59,7 +67,7 @@ public static class ComparisonKindsExtensions
     /// <param name="result">The </param>
     /// <returns><see langword="true"/> if there is at least one comparison kind in <paramref name="kinds"/> that was matched by the <paramref name="result"/>, otherwise <see langword="false"/>.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static bool Matches(this ComparisonKinds kinds, ComparisonResult result) => HasKinds(kinds, result.GetComparisonKind());
+    public static bool Matches(this ComparisonKinds kinds, ComparisonResult result) => HasKinds(kinds, result.AsComparisonKind);
     /// <summary>Determines whether a <seealso cref="ComparisonKinds"/> value contains the given kinds.</summary>
     /// <param name="kinds">The kinds value to determine if it contains the requested kinds.</param>
     /// <param name="other">The requested comparison kinds to check if they are contained in the given <seealso cref="ComparisonKinds"/> value.</param>

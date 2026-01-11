@@ -28,11 +28,12 @@ public abstract class BaseParallelEnumerator<T1, T2, T3> : BaseParallelEnumerato
     }
 
     /// <inheritdoc/>
-    protected override T GetCurrentValue<T>(int index)
+    protected override T? GetCurrentValue<T>(int index)
+        where T : default
     {
         return index switch
         {
-            2 => (T)(object)GetCurrentValue(Enumerator3, enumerator3Alive),
+            2 => (T?)(object?)GetCurrentValue(Enumerator3, enumerator3Alive),
             _ => base.GetCurrentValue<T>(index),
         };
     }

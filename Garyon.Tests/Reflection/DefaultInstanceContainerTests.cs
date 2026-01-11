@@ -1,6 +1,9 @@
-using NUnit.Framework;
-using Garyon.Reflection;
+﻿using Garyon.Reflection;
 using System;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Reflection;
 
@@ -9,29 +12,29 @@ public class DefaultInstanceContainerTests
     private readonly NotInvalidTypeInstanceContainer container = new();
 
     [Test]
-    public void GetDefaultInstanceTests()
+    public async Task GetDefaultInstanceTests()
     {
-        Assert.IsNull(container.GetDefaultInstance<Base>());
-        Assert.IsNull(container.GetDefaultInstance<InvalidImplementation>());
-        AssertInstanceOf<ImplementationA>();
-        AssertInstanceOf<ImplementationB>();
-        AssertInstanceOf<ImplementationC>();
+        await Assert.That(container.GetDefaultInstance<Base>()).IsNull();
+        await Assert.That(container.GetDefaultInstance<InvalidImplementation>()).IsNull();
+        await AssertInstanceOf<ImplementationA>();
+        await AssertInstanceOf<ImplementationB>();
+        await AssertInstanceOf<ImplementationC>();
 
-        void AssertInstanceOf<T>()
+        async Task AssertInstanceOf<T>()
             where T : Base
         {
-            Assert.IsInstanceOf<T>(container.GetDefaultInstance<T>());
+            await Assert.That(container.GetDefaultInstance<T>()).IsTypeOf<T>();
         }
     }
 
     [Test]
-    public void GetIrrelevantDefaultInstancesTests()
+    public async Task GetIrrelevantDefaultInstancesTests()
     {
         // Some other random types that are found in the assemblies
-        Assert.IsNull(container.GetDefaultInstance(typeof(Enum)));
-        Assert.IsNull(container.GetDefaultInstance(typeof(ImplementationA[])));
-        Assert.IsNull(container.GetDefaultInstance(typeof(Delegate)));
-        Assert.IsNull(container.GetDefaultInstance(typeof(DayOfWeek)));
+        await Assert.That(container.GetDefaultInstance(typeof(Enum))).IsNull();
+        await Assert.That(container.GetDefaultInstance(typeof(ImplementationA[]))).IsNull();
+        await Assert.That(container.GetDefaultInstance(typeof(Delegate))).IsNull();
+        await Assert.That(container.GetDefaultInstance(typeof(DayOfWeek))).IsNull();
     }
 
     private sealed class NotInvalidTypeInstanceContainer : DefaultInstanceContainer<Base>

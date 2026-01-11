@@ -90,7 +90,7 @@ public struct Numeric<T> : INumeric<T>
 
     public override bool Equals(object? obj) => obj is INumeric<T> n && Equals(n);
     public override int GetHashCode() => Value.GetHashCode();
-    public override string ToString() => Value.ToString();
+    public override string ToString() => Value.ToString()!;
 }
 
 #endif

@@ -1,134 +1,138 @@
 ﻿using Garyon.Objects;
-using NUnit.Framework;
 using System;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Assertions.Sources;
+using TUnit.Core;
 
 namespace Garyon.Tests.Objects;
 
-[Parallelizable(ParallelScope.Children)]
 public class HourMinuteTests
 {
     [Test]
-    public void InitializationTest()
+    public async Task InitializationTest()
     {
         var hm = new HourMinute(11, 53);
-        AssertProperties();
+        await AssertPropertiesAsync();
 
         hm = new HourMinute(11 * 60 + 53);
-        AssertProperties();
+        await AssertPropertiesAsync();
 
-        void AssertProperties()
+        async Task AssertPropertiesAsync()
         {
-            Assert.AreEqual(11, hm.Hour);
-            Assert.AreEqual(53, hm.Minute);
-            Assert.AreEqual((11 * 60 + 53) * 60, hm.TotalSeconds);
-            Assert.AreEqual(11 * 60 + 53, hm.TotalMinutes);
-            Assert.AreEqual(11 + 53 / 60d, hm.TotalHours);
+            await Assert.That(hm.Hour).IsEqualTo(11);
+            await Assert.That(hm.Minute).IsEqualTo(53);
+            await Assert.That(hm.TotalSeconds).IsEqualTo((11 * 60 + 53) * 60);
+            await Assert.That(hm.TotalMinutes).IsEqualTo(11 * 60 + 53);
+            await Assert.That(hm.TotalHours).IsEqualTo(11 + 53 / 60d);
         }
     }
 
     [Test]
-    public void EqualsTest()
+    public async Task EqualsTest()
     {
-        Assert.AreEqual(new HourMinute(11, 53), new HourMinute(11, 53));
+        HourMinute expected = new(11, 53);
+        await Assert.That(new HourMinute(11, 53)).IsEqualTo(expected);
     }
 
     [Test]
-    public void AddTest()
+    public async Task AddTest()
     {
         var hm = new HourMinute(11, 53);
         hm.Add(4);
-        Assert.AreEqual(new HourMinute(11, 57), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(11, 57));
         hm.Add(4);
-        Assert.AreEqual(new HourMinute(12, 01), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(12, 01));
         hm.Add(62);
-        Assert.AreEqual(new HourMinute(13, 03), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(13, 03));
 
         hm.Add(1, 4);
-        Assert.AreEqual(new HourMinute(14, 07), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(14, 07));
 
-        Assert.AreEqual(new HourMinute(15, 00), new HourMinute(14, 37) + 23);
-        Assert.AreEqual(new HourMinute(15, 00), new HourMinute(13, 37) + new HourMinute(01, 23));
+        await Assert.That(new HourMinute(14, 37) + 23).IsEqualTo(new HourMinute(15, 00));
+        await Assert.That(new HourMinute(13, 37) + new HourMinute(01, 23)).IsEqualTo(new HourMinute(15, 00));
     }
     [Test]
-    public void SubtractTest()
+    public async Task SubtractTest()
     {
         var hm = new HourMinute(12, 01);
         hm.Subtract(4);
-        Assert.AreEqual(new HourMinute(11, 57), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(11, 57));
         hm.Subtract(4);
-        Assert.AreEqual(new HourMinute(11, 53), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(11, 53));
         hm.Subtract(62);
-        Assert.AreEqual(new HourMinute(10, 51), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(10, 51));
 
         hm.Subtract(1, 4);
-        Assert.AreEqual(new HourMinute(09, 47), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(09, 47));
 
-        Assert.AreEqual(new HourMinute(14, 37), new HourMinute(15, 00) - 23);
-        Assert.AreEqual(new HourMinute(13, 37), new HourMinute(15, 00) - new HourMinute(01, 23));
+        await Assert.That(new HourMinute(15, 00) - 23).IsEqualTo(new HourMinute(14, 37));
+        await Assert.That(new HourMinute(15, 00) - new HourMinute(01, 23)).IsEqualTo(new HourMinute(13, 37));
     }
 
     [Test]
-    public void ComparisonTest()
+    public async Task ComparisonTest()
     {
-        Assert.IsTrue(new HourMinute(10, 59) < new HourMinute(11, 00));
-        Assert.IsFalse(new HourMinute(11, 00) < new HourMinute(11, 00));
-        Assert.IsFalse(new HourMinute(11, 01) < new HourMinute(11, 00));
+        await Assert.That(new HourMinute(10, 59) < new HourMinute(11, 00)).IsTrue();
+        await Assert.That(new HourMinute(11, 00) < new HourMinute(11, 00)).IsFalse();
+        await Assert.That(new HourMinute(11, 01) < new HourMinute(11, 00)).IsFalse();
 
-        Assert.IsTrue(new HourMinute(10, 59) <= new HourMinute(11, 00));
-        Assert.IsTrue(new HourMinute(11, 00) <= new HourMinute(11, 00));
-        Assert.IsFalse(new HourMinute(11, 01) <= new HourMinute(11, 00));
+        await Assert.That(new HourMinute(10, 59) <= new HourMinute(11, 00)).IsTrue();
+        await Assert.That(new HourMinute(11, 00) <= new HourMinute(11, 00)).IsTrue();
+        await Assert.That(new HourMinute(11, 01) <= new HourMinute(11, 00)).IsFalse();
 
-        Assert.IsFalse(new HourMinute(10, 59) == new HourMinute(11, 00));
-        Assert.IsTrue(new HourMinute(11, 00) == new HourMinute(11, 00));
-        Assert.IsFalse(new HourMinute(11, 01) == new HourMinute(11, 00));
+        await Assert.That(new HourMinute(10, 59) == new HourMinute(11, 00)).IsFalse();
+        await Assert.That(new HourMinute(11, 00) == new HourMinute(11, 00)).IsTrue();
+        await Assert.That(new HourMinute(11, 01) == new HourMinute(11, 00)).IsFalse();
 
-        Assert.IsFalse(new HourMinute(10, 59) >= new HourMinute(11, 00));
-        Assert.IsTrue(new HourMinute(11, 00) >= new HourMinute(11, 00));
-        Assert.IsTrue(new HourMinute(11, 01) >= new HourMinute(11, 00));
+        await Assert.That(new HourMinute(10, 59) >= new HourMinute(11, 00)).IsFalse();
+        await Assert.That(new HourMinute(11, 00) >= new HourMinute(11, 00)).IsTrue();
+        await Assert.That(new HourMinute(11, 01) >= new HourMinute(11, 00)).IsTrue();
 
-        Assert.IsFalse(new HourMinute(10, 59) > new HourMinute(11, 00));
-        Assert.IsFalse(new HourMinute(11, 00) > new HourMinute(11, 00));
-        Assert.IsTrue(new HourMinute(11, 01) > new HourMinute(11, 00));
+        await Assert.That(new HourMinute(10, 59) > new HourMinute(11, 00)).IsFalse();
+        await Assert.That(new HourMinute(11, 00) > new HourMinute(11, 00)).IsFalse();
+        await Assert.That(new HourMinute(11, 01) > new HourMinute(11, 00)).IsTrue();
 
-        Assert.IsTrue(new HourMinute(10, 59) != new HourMinute(11, 00));
-        Assert.IsFalse(new HourMinute(11, 00) != new HourMinute(11, 00));
-        Assert.IsTrue(new HourMinute(11, 01) != new HourMinute(11, 00));
+        await Assert.That(new HourMinute(10, 59) != new HourMinute(11, 00)).IsTrue();
+        await Assert.That(new HourMinute(11, 00) != new HourMinute(11, 00)).IsFalse();
+        await Assert.That(new HourMinute(11, 01) != new HourMinute(11, 00)).IsTrue();
     }
 
     [Test]
-    public void PropertySetterTest()
+    public async Task PropertySetterTest()
     {
         var hm = new HourMinute();
         hm.TotalHours = 14.25;
-        Assert.AreEqual(new HourMinute(14, 15), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(14, 15));
         hm.Hour = 16;
-        Assert.AreEqual(new HourMinute(16, 15), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(16, 15));
         hm.Minute = 42;
-        Assert.AreEqual(new HourMinute(16, 42), hm);
+        await Assert.That(hm).IsEqualTo(new HourMinute(16, 42));
     }
 
     [Test]
-    public void ParseTest()
+    public async Task ParseTest()
     {
-        Assert.AreEqual(new HourMinute(09, 52), HourMinute.Parse("09:52"));
-        Assert.AreEqual(new HourMinute(09, 52), HourMinute.Parse("09:52:51"));
-        Assert.AreEqual(new HourMinute(09, 03), HourMinute.Parse("9:03"));
-        Assert.AreEqual(new HourMinute(21, 03), HourMinute.Parse("21:3"));
-        Assert.AreEqual(new HourMinute(09, 03), HourMinute.Parse("9:3"));
+        await Assert.That(HourMinute.Parse("09:52")).IsEqualTo(new HourMinute(09, 52));
+        await Assert.That(HourMinute.Parse("09:52:51")).IsEqualTo(new HourMinute(09, 52));
+        await Assert.That(HourMinute.Parse("9:03")).IsEqualTo(new HourMinute(09, 03));
+        await Assert.That(HourMinute.Parse("21:3")).IsEqualTo(new HourMinute(21, 03));
+        await Assert.That(HourMinute.Parse("9:3")).IsEqualTo(new HourMinute(09, 03));
     }
 
     [Test]
-    public void ToStringTest()
+    public async Task ToStringTest()
     {
-        Assert.AreEqual("09:32", new HourMinute(09, 32).ToString());
-        Assert.AreEqual("16:00", new HourMinute(16, 00).ToString());
-        Assert.AreEqual("00:00", new HourMinute(00, 00).ToString());
+        await Assert.That(new HourMinute(09, 32).ToString()).IsEqualTo("09:32");
+        await Assert.That(new HourMinute(16, 00).ToString()).IsEqualTo("16:00");
+        await Assert.That(new HourMinute(00, 00).ToString()).IsEqualTo("00:00");
     }
 
-    [Test(ExpectedResult = true)]
-    public bool NowTest()
+    [Test]
+    public async Task NowTest()
     {
-        return EvaluateTwice(Evaluate);
+        await ConstructEvaluateTwice(Evaluate).IsTrue();
 
         static bool Evaluate()
         {
@@ -138,10 +142,10 @@ public class HourMinuteTests
             return hmNow == (HourMinute)dateTimeNow;
         }
     }
-    [Test(ExpectedResult = true)]
-    public bool NextMinuteTest()
+    [Test]
+    public async Task NextMinuteTest()
     {
-        return EvaluateTwice(Evaluate);
+        await ConstructEvaluateTwice(Evaluate).IsTrue();
 
         static bool Evaluate()
         {
@@ -151,10 +155,10 @@ public class HourMinuteTests
             return hmNextMinute == (HourMinute)dateTimeNextMinute;
         }
     }
-    [Test(ExpectedResult = true)]
-    public bool NextHourTest()
+    [Test]
+    public async Task NextHourTest()
     {
-        return EvaluateTwice(Evaluate);
+        await ConstructEvaluateTwice(Evaluate).IsTrue();
 
         static bool Evaluate()
         {
@@ -164,10 +168,10 @@ public class HourMinuteTests
             return hmNextHour == (HourMinute)dateTimeNextHour;
         }
     }
-    [Test(ExpectedResult = true)]
-    public bool ToDateTimeTest()
+    [Test]
+    public async Task ToDateTimeTest()
     {
-        return EvaluateTwice(Evaluate);
+        await ConstructEvaluateTwice(Evaluate).IsTrue();
 
         static bool Evaluate()
         {
@@ -177,10 +181,10 @@ public class HourMinuteTests
             return hmNow == (HourMinute)dateTimeNow;
         }
     }
-    [Test(ExpectedResult = true)]
-    public bool ToDateTimeOffsetTest()
+    [Test]
+    public async Task ToDateTimeOffsetTest()
     {
-        return EvaluateTwice(Evaluate);
+        await ConstructEvaluateTwice(Evaluate).IsTrue();
 
         static bool Evaluate()
         {
@@ -191,7 +195,7 @@ public class HourMinuteTests
         }
     }
 
-    private bool EvaluateTwice(Func<bool> test)
+    private static bool EvaluateTwice(Func<bool> test)
     {
         // Evaluate twice for the extremely unlikely event the Now properties are retrieved at a different minute
         // It would be interesting to calculate how unlikely this event is, but it's probable nonetheless
@@ -201,4 +205,11 @@ public class HourMinuteTests
 
         return false;
     }
+
+#pragma warning disable TUnitAssertions0002 // Assert statement not awaited
+    private static ValueAssertion<bool> ConstructEvaluateTwice(Func<bool> test)
+    {
+        return Assert.That(EvaluateTwice(test));
+    }
+#pragma warning restore TUnitAssertions0002 // Assert statement not awaited
 }

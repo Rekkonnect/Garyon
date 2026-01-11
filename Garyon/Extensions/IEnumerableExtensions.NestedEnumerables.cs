@@ -6,8 +6,6 @@ using System.Linq;
 
 namespace Garyon.Extensions;
 
-#nullable enable
-
 public static partial class IEnumerableExtensions
 {
     /// <summary>Concatenates multiple <seealso cref="IEnumerable{T}"/>s and returns the concatenated result.</summary>
@@ -19,7 +17,6 @@ public static partial class IEnumerableExtensions
         return ConcatMultiple(source, (IEnumerable<IEnumerable<T>>)others);
     }
 
-#if HAS_SPAN
     /// <summary>Concatenates multiple <seealso cref="IEnumerable{T}"/>s and returns the concatenated result.</summary>
     /// <typeparam name="T">The type of the elements the <seealso cref="IEnumerable{T}"/>s hold.</typeparam>
     /// <param name="source">The source <seealso cref="IEnumerable{T}"/> to concatenate with the others.</param>
@@ -31,7 +28,6 @@ public static partial class IEnumerableExtensions
             concatenated = concatenated.Concat(e);
         return concatenated;
     }
-#endif
 
     /// <summary>Concatenates multiple <seealso cref="IEnumerable{T}"/>s and returns the concatenated result.</summary>
     /// <typeparam name="T">The type of the elements the <seealso cref="IEnumerable{T}"/>s hold.</typeparam>

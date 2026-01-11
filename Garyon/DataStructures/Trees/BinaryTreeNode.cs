@@ -7,6 +7,8 @@ using System.Linq;
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a binary tree node, which is a component that is contained within a binary tree.</summary>
 /// <typeparam name="T">The type of the value that is stored in the node.</typeparam>
 public class BinaryTreeNode<T> : BinaryTreeNode<T, BinaryTree<T>, BinaryTreeNode<T>>

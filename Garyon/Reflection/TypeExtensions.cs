@@ -2,6 +2,7 @@
 using Garyon.DataStructures.Trees;
 using Garyon.Exceptions;
 using Garyon.Extensions;
+using Garyon.Functions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,12 +27,12 @@ public static class TypeExtensions
     /// or the same full name if the type is not a generic type.
     /// </summary>
     /// <param name="type">The type whose full name prefix to get.</param>
-    public static string GenericFullNamePrefixOrSame(this Type type)
+    public static string? GenericFullNamePrefixOrSame(this Type type)
     {
         if (!type.IsGenericType)
             return type.FullName;
 
-        return type.FullName.SubstringUntilLast('`');
+        return type.FullName?.SubstringUntilLast('`');
     }
     #endregion
 
@@ -124,6 +125,25 @@ public static class TypeExtensions
 
         return type.GetInterfaces().Contains(interfaceType);
     }
+    /// <summary>
+    /// Determines whether the given type is a specific target interface type,
+    /// or if it implements it
+    /// </summary>
+    /// <exception cref="ArgumentException">
+    /// <paramref name="source"/> or <paramref name="target"/> is not 
+    /// an interface type, or <paramref name="source"/> cannot implement
+    /// interfaces.
+    /// </exception>
+    public static bool IsOrImplements(this Type source, Type target)
+    {
+        if (!source.IsInterface)
+            ThrowHelper.Throw<ArgumentException>("The source interface type is not an interface type.");
+
+        if (source == target)
+            return true;
+
+        return source.Implements(target);
+    }
 
     /// <summary>Determines the number of base types that the provided type directly inherits, excluding the special classes <seealso cref="ValueType"/>, <seealso cref="Array"/>, <seealso cref="Delegate"/>, <seealso cref="Enum"/> and <seealso cref="Object"/>.</summary>
     /// <param name="type">The type whose inheritance level to determine.</param>
@@ -133,11 +153,7 @@ public static class TypeExtensions
         if (type.IsValueType || !type.CanInheritClasses())
             return 0;
 
-        var currentType = type;
-        int level = 0;
-        while ((currentType = currentType.BaseType) is not null)
-            level++;
-        return level - 1;
+        return type.EnumerateBaseTypes().Count() - 1;
     }
     /// <summary>Gets a <seealso cref="Tree{T}"/> representing the provided type's inheritance tree.</summary>
     /// <param name="type">The type whose inheritance tree to get.</param>
@@ -171,15 +187,16 @@ public static class TypeExtensions
 
             // Add the interfaces
             var interfaces = nodeType.GetInterfaces();
-            foreach (var i in interfaces)
+            foreach (var @interface in interfaces)
             {
-                var interfaceNode = node.AddChild(i);
+                var interfaceNode = node.AddChild(@interface);
                 leaves.Enqueue(interfaceNode);
 
                 // Remove indirectly inherited interfaces
-                var currentParent = node;
-                while ((currentParent = currentParent.Parent) is not null)
-                    currentParent.RemoveChild(i);
+                foreach (var parent in node.EnumerateRecursiveProperty(static s => s.Parent))
+                {
+                    parent.RemoveChild(@interface);
+                }
             }
         }
 
@@ -203,21 +220,18 @@ public static class TypeExtensions
             var node = leaves.Dequeue();
             var nodeType = node.Value;
 
-            // If the interface is an indirectly inherited interface, it has been already removed from the tree
-            if (node.IsRoot)
-                continue;
-
             // Add the interfaces
             var interfaces = nodeType.GetInterfaces();
-            foreach (var i in interfaces)
+            foreach (var @interface in interfaces)
             {
-                var interfaceNode = node.AddChild(i);
+                var interfaceNode = node.AddChild(@interface);
                 leaves.Enqueue(interfaceNode);
 
                 // Remove indirectly inherited interfaces
-                var currentParent = node;
-                while ((currentParent = currentParent.Parent) is not null)
-                    currentParent.RemoveChild(i);
+                foreach (var parent in node.EnumerateRecursiveProperty(static s => s.Parent))
+                {
+                    parent.RemoveChild(@interface);
+                }
             }
         }
 
@@ -345,15 +359,16 @@ public static class TypeExtensions
 #endif
 
         var declaringMember = type.GetDeclaringMember();
-        Debug.Assert(declaringMember is not null);
+        Asserts.NotNull(declaringMember);
 
-        int parentArity = declaringMember.GetArity();
+        int parentArity = declaringMember.Arity;
         var originalDeclaringMember = declaringMember;
         while (type.GenericParameterPosition < parentArity)
         {
             originalDeclaringMember = declaringMember;
             declaringMember = declaringMember.GetDeclaringMember();
-            parentArity = declaringMember.GetArity();
+            Asserts.NotNull(declaringMember);
+            parentArity = declaringMember.Arity;
         }
 
         return originalDeclaringMember;
@@ -381,9 +396,7 @@ public static class TypeExtensions
     public static bool InheritsGenericVariantOf(
         Type type,
         Type genericDefinition,
-#if HAS_NULLABLE_ANNOTATION_ATTRIBUTES
         [NotNullWhen(true)]
-#endif
         out Type? genericVariantType)
     {
         AssertGenericDefinition(genericDefinition);
@@ -421,7 +434,7 @@ public static class TypeExtensions
     private static bool InheritsGenericVariant(
         Type genericDefinition,
         IEnumerable<Type> baseTypes,
-        out Type genericVariantType)
+        out Type? genericVariantType)
     {
         genericVariantType = null;
 
@@ -437,22 +450,14 @@ public static class TypeExtensions
     }
 
     private static void AssertGenericDefinition(
-        Type genericDefinition
-#if HAS_CALLER_INFORMATION_ATTRIBUTES
-        ,
-        [CallerArgumentExpression(nameof(genericDefinition))] string callerExpression = ""
-#endif
-        )
+        Type genericDefinition,
+        [CallerArgumentExpression(nameof(genericDefinition))] string callerExpression = "")
     {
         if (!genericDefinition.IsGenericTypeDefinition)
         {
             throw new ArgumentException(
-                "You must provide a generic definition type"
-#if HAS_CALLER_INFORMATION_ATTRIBUTES
-                ,
-                callerExpression
-#endif
-                );
+                "You must provide a generic definition type",
+                callerExpression);
         }
     }
     #endregion
@@ -462,7 +467,7 @@ public static class TypeExtensions
 
     // Local static readonly variables please
     private static readonly string tupleTypeNameStart
-        = GenericFullNamePrefixOrSame(typeof(ValueTuple<>));
+        = GenericFullNamePrefixOrSame(typeof(ValueTuple<>))!;
 
     /// <summary>Determines whether the type is <see langword="void"/>.</summary>
     /// <param name="type">The type to determine whether it is <see langword="void"/>.</param>
@@ -502,7 +507,7 @@ public static class TypeExtensions
         // The full name of the type should be System.ValueTuple`N, where N is the number of generic type arguments
         var fullName = type.FullName;
 
-        if (fullName.StartsWith(tupleTypeNameStart))
+        if (fullName?.StartsWith(tupleTypeNameStart) is true)
             return true;
 
         return false;
@@ -562,14 +567,12 @@ public static class TypeExtensions
     /// <returns>The jagging level of the jagged array, if the provided type is an array, otherwise 0.</returns>
     public static int GetArrayJaggingLevel(this Type type)
     {
-        var currentType = type;
-        int jaggingLevel = 0;
-        while (currentType.IsArray)
+        return type.EnumerateRecursiveProperty(GetArrayElementType).Count();
+
+        static Type? GetArrayElementType(Type type)
         {
-            currentType = currentType.GetElementType();
-            jaggingLevel++;
+            return type.IsArray ? type.GetElementType() : null;
         }
-        return jaggingLevel;
     }
     #endregion
 
@@ -590,14 +593,12 @@ public static class TypeExtensions
     /// <returns>The depth level of the multiple pointer, if the provided type is a pointer, otherwise 0.</returns>
     public static int GetMultiplePointerLevel(this Type type)
     {
-        var currentType = type;
-        int depthLevel = 0;
-        while (currentType.IsPointer)
+        return type.EnumerateRecursiveProperty(GetPointerElementType).Count();
+
+        static Type? GetPointerElementType(Type type)
         {
-            currentType = currentType.GetElementType();
-            depthLevel++;
+            return type.IsPointer ? type.GetElementType() : null;
         }
-        return depthLevel;
     }
     #endregion
 
@@ -607,10 +608,7 @@ public static class TypeExtensions
     /// <returns>The deepest element type according to <seealso cref="Type.GetElementType()"/>.</returns>
     public static Type GetDeepestElementType(this Type type)
     {
-        var currentType = type;
-        while (currentType.HasElementType)
-            currentType = currentType.GetElementType();
-        return currentType;
+        return type.EnumerateRecursiveProperty(s => s.GetElementType()).LastOrDefault() ?? type;
     }
     /// <summary>Determines whether the provided type contains elements of type <paramref name="elementType"/>.</summary>
     /// <param name="type">The type.</param>
@@ -618,14 +616,7 @@ public static class TypeExtensions
     /// <returns>A value determining whether the provided type contains elements of type <paramref name="elementType"/>.</returns>
     public static bool ContainsElementsOfType(this Type type, Type elementType)
     {
-        var currentType = type;
-        while (currentType.HasElementType)
-        {
-            currentType = currentType.GetElementType();
-            if (currentType == elementType)
-                return true;
-        }
-        return false;
+        return type.EnumerateRecursiveProperty(s => s.GetElementType()).Contains(elementType);
     }
     /// <summary>Determines whether the provided type contains elements of type <typeparamref name="T"/>.</summary>
     /// <typeparam name="T">The type of the elements that the provided type should contain.</typeparam>
@@ -641,14 +632,14 @@ public static class TypeExtensions
     /// <summary>Gets the public parameterless constructor of the <see cref="Type"/>.</summary>
     /// <param name="type">The type whose public parameterless constructor to get.</param>
     /// <returns>The public parameterless constructor of the type, or <see langword="null"/> if the type does not have one, or if the parameterless constructor is not public.</returns>
-    public static ConstructorInfo GetParameterlessConstructor(this Type type)
+    public static ConstructorInfo? GetParameterlessConstructor(this Type type)
     {
         return type.GetConstructor(Type.EmptyTypes);
     }
     /// <summary>Gets the parameterless constructor of the <see cref="Type"/>. The constructor may have any accessibility.</summary>
     /// <param name="type">The type whose parameterless constructor to get.</param>
     /// <returns>The parameterless constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
-    public static ConstructorInfo GetAnyAccessibilityParameterlessConstructor(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityParameterlessConstructor(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(Type.EmptyTypes);
     }
@@ -657,7 +648,7 @@ public static class TypeExtensions
     /// <param name="type">The type whose constructor to get.</param>
     /// <param name="argumentTypes">The argument types of the constructor to get.</param>
     /// <returns>The constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
-    public static ConstructorInfo GetConstructor(this Type type, params Type[] argumentTypes)
+    public static ConstructorInfo? GetConstructor(this Type type, params Type[] argumentTypes)
     {
         return type.GetConstructor(argumentTypes);
     }
@@ -665,7 +656,7 @@ public static class TypeExtensions
     /// <param name="type">The type whose constructor to get.</param>
     /// <param name="argumentTypes">The argument types of the constructor to get.</param>
     /// <returns>The constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
-    public static ConstructorInfo GetAnyAccessibilityConstructor(this Type type, params Type[] argumentTypes)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor(this Type type, params Type[] argumentTypes)
     {
         return type.GetConstructor(CommonBindingFlags.AnyAccessibilityInstance, null, argumentTypes, null);
     }
@@ -673,7 +664,7 @@ public static class TypeExtensions
     #region Generic Overloads (up to 16 arguments)
     // The largest constructor that is found in the core assemblies has 15 arguments,
     // which is why there are overloads with up to 16 arguments
-    // It is generally bad practice to have constructors with more than at most 10 arguments
+    // It is generally bad practice to manually invoke constructors with more than at most 4 arguments
 
     // Warnings are disabled because the analyzer falsely reports the diagnostics when inheriting docs
 #pragma warning disable CS1712
@@ -681,7 +672,7 @@ public static class TypeExtensions
     /// <typeparam name="T1">The type of the 1st argument of the constructor to get.</typeparam>
     /// <param name="type">The type whose constructor to get.</param>
     /// <returns>The constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
-    public static ConstructorInfo GetConstructor<T1>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1>(this Type type)
     {
         return type.GetConstructor(typeof(T1));
     }
@@ -689,7 +680,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1}(Type)"/>
     /// <typeparam name="T2">The type of the 2nd argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2));
     }
@@ -697,7 +688,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2}(Type)"/>
     /// <typeparam name="T3">The type of the 3rd argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3));
     }
@@ -705,7 +696,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3}(Type)"/>
     /// <typeparam name="T4">The type of the 4th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4));
     }
@@ -713,7 +704,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4}(Type)"/>
     /// <typeparam name="T5">The type of the 5th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5));
     }
@@ -721,7 +712,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5}(Type)"/>
     /// <typeparam name="T6">The type of the 6th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6));
     }
@@ -729,7 +720,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6}(Type)"/>
     /// <typeparam name="T7">The type of the 7th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7));
     }
@@ -737,7 +728,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7}(Type)"/>
     /// <typeparam name="T8">The type of the 8th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8));
     }
@@ -745,7 +736,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8}(Type)"/>
     /// <typeparam name="T9">The type of the 9th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9));
     }
@@ -753,7 +744,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9}(Type)"/>
     /// <typeparam name="T10">The type of the 10th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10));
     }
@@ -761,7 +752,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10}(Type)"/>
     /// <typeparam name="T11">The type of the 11th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11));
     }
@@ -769,7 +760,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11}(Type)"/>
     /// <typeparam name="T12">The type of the 12th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12));
     }
@@ -777,7 +768,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12}(Type)"/>
     /// <typeparam name="T13">The type of the 13th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13));
     }
@@ -785,7 +776,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13}(Type)"/>
     /// <typeparam name="T14">The type of the 14th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14));
     }
@@ -793,7 +784,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14}(Type)"/>
     /// <typeparam name="T15">The type of the 15th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15));
     }
@@ -801,7 +792,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15}(Type)"/>
     /// <typeparam name="T16">The type of the 16th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Type type)
+    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Type type)
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15), typeof(T16));
     }
@@ -810,7 +801,7 @@ public static class TypeExtensions
     /// <typeparam name="T1">The type of the 1st argument of the constructor to get.</typeparam>
     /// <param name="type">The type whose constructor to get.</param>
     /// <returns>The constructor of the type, or <see langword="null"/> if the type does not have one.</returns>
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1));
     }
@@ -818,7 +809,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1}(Type)"/>
     /// <typeparam name="T2">The type of the 2nd argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2));
     }
@@ -826,7 +817,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2}(Type)"/>
     /// <typeparam name="T3">The type of the 3rd argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3));
     }
@@ -834,7 +825,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3}(Type)"/>
     /// <typeparam name="T4">The type of the 4th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4));
     }
@@ -842,7 +833,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4}(Type)"/>
     /// <typeparam name="T5">The type of the 5th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5));
     }
@@ -850,7 +841,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5}(Type)"/>
     /// <typeparam name="T6">The type of the 6th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6));
     }
@@ -858,7 +849,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6}(Type)"/>
     /// <typeparam name="T7">The type of the 7th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7));
     }
@@ -866,7 +857,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7}(Type)"/>
     /// <typeparam name="T8">The type of the 8th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8));
     }
@@ -874,7 +865,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8}(Type)"/>
     /// <typeparam name="T9">The type of the 9th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9));
     }
@@ -882,7 +873,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9}(Type)"/>
     /// <typeparam name="T10">The type of the 10th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10));
     }
@@ -890,7 +881,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10}(Type)"/>
     /// <typeparam name="T11">The type of the 11th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11));
     }
@@ -898,7 +889,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11}(Type)"/>
     /// <typeparam name="T12">The type of the 12th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12));
     }
@@ -906,7 +897,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12}(Type)"/>
     /// <typeparam name="T13">The type of the 13th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13));
     }
@@ -914,7 +905,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13}(Type)"/>
     /// <typeparam name="T14">The type of the 14th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14));
     }
@@ -922,7 +913,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14}(Type)"/>
     /// <typeparam name="T15">The type of the 15th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15));
     }
@@ -930,7 +921,7 @@ public static class TypeExtensions
     /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15}(Type)"/>
     /// <typeparam name="T16">The type of the 16th argument of the constructor to get.</typeparam>
     [Autogenerated]
-    public static ConstructorInfo GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Type type)
+    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15), typeof(T16));
     }
@@ -941,24 +932,24 @@ public static class TypeExtensions
     /// <typeparam name="T">The type of the resulting instance.</typeparam>
     /// <param name="type">The type of the resulting instance.</param>
     /// <returns>The initialized instance, or <see langword="null"/> if no public parameterless constructor was not found.</returns>
-    public static T InitializeInstance<T>(this Type type)
+    public static T? InitializeInstance<T>(this Type type)
     {
-        return (T)InitializeInstance(type);
+        return (T?)InitializeInstance(type);
     }
     /// <summary>Initializes a new instance of a <seealso cref="Type"/> with the given parameters in the constructor.</summary>
     /// <typeparam name="T">The type of the resulting instance.</typeparam>
     /// <param name="type">The type of the resulting instance.</param>
     /// <param name="parameters">The parameters of the constructor.</param>
     /// <returns>The initialized instance, or <see langword="null"/> if such a constructor was not found.</returns>
-    public static T InitializeInstance<T>(this Type type, params object?[]? parameters)
+    public static T? InitializeInstance<T>(this Type type, params object?[]? parameters)
     {
-        return (T)InitializeInstance(type, parameters);
+        return (T?)InitializeInstance(type, parameters);
     }
 
     /// <summary>Initializes a new instance of a <seealso cref="Type"/> by calling its public parameterless constructor.</summary>
     /// <param name="type">The type of the resulting instance.</param>
     /// <returns>The initialized instance, or <see langword="null"/> if no public parameterless constructor was not found.</returns>
-    public static object InitializeInstance(this Type type)
+    public static object? InitializeInstance(this Type type)
     {
         return type.GetParameterlessConstructor()?.Invoke(null);
     }
@@ -966,18 +957,19 @@ public static class TypeExtensions
     /// <param name="type">The type of the resulting instance.</param>
     /// <param name="parameters">The parameters of the constructor.</param>
     /// <returns>The initialized instance, or <see langword="null"/> if such a constructor was not found.</returns>
-    public static object InitializeInstance(this Type type, params object?[]? parameters)
+    public static object? InitializeInstance(this Type type, params object?[]? parameters)
     {
         if (parameters is null)
             return InitializeInstance(type);
 
-        return type.GetConstructor(parameters.Select(p => p?.GetType()).ToArray())?.Invoke(parameters);
+        // TODO: Improve the binding logic to find the best-fit constructor while accounting for nulls
+        return type.GetConstructor(parameters.Select(p => p?.GetType()).ToArray()!)?.Invoke(parameters);
     }
 
     /// <summary>Gets the default value of the given type.</summary>
     /// <param name="type">The type whose default value to get.</param>
     /// <returns>Returns the default value of the type, if it is a value type, by calling its parameterless constructor is called, otherwise <see langword="null"/>.</returns>
-    public static object GetDefaultValue(this Type type)
+    public static object? GetDefaultValue(this Type type)
     {
         if (type.IsValueType)
             return Activator.CreateInstance(type);

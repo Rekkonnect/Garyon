@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 namespace Garyon.Extensions;
 
-#nullable enable
-
 public static partial class IEnumerableExtensions
 {
     extension<T>(IEnumerable<T> source)

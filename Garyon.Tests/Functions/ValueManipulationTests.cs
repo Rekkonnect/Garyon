@@ -1,5 +1,9 @@
 ﻿using Garyon.Functions.UnmanagedHelpers;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using static TUnit.Assertions.Assert;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.Functions;
 
@@ -12,109 +16,109 @@ public class ValueManipulationTests
 
     #region Byte > T
     [Test]
-    public void RescaleByteToByte()
+    public async Task RescaleByteToByte()
     {
         byte rescaled = ValueManipulation.Rescale<byte, byte>(value8);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     [Test]
-    public void RescaleByteToUInt16()
+    public async Task RescaleByteToUInt16()
     {
         ushort rescaled = ValueManipulation.Rescale<byte, ushort>(value8);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     [Test]
-    public void RescaleByteToUInt32()
+    public async Task RescaleByteToUInt32()
     {
         uint rescaled = ValueManipulation.Rescale<byte, uint>(value8);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     [Test]
-    public void RescaleByteToUInt64()
+    public async Task RescaleByteToUInt64()
     {
         ulong rescaled = ValueManipulation.Rescale<byte, ulong>(value8);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     #endregion
 
     #region UInt16 > T
     [Test]
-    public void RescaleUInt16ToByte()
+    public async Task RescaleUInt16ToByte()
     {
         byte rescaled = ValueManipulation.Rescale<ushort, byte>(value16);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     [Test]
-    public void RescaleUInt16ToUInt16()
+    public async Task RescaleUInt16ToUInt16()
     {
         ushort rescaled = ValueManipulation.Rescale<ushort, ushort>(value16);
-        Assert.AreEqual(value16, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value16);
     }
     [Test]
-    public void RescaleUInt16ToUInt32()
+    public async Task RescaleUInt16ToUInt32()
     {
         uint rescaled = ValueManipulation.Rescale<ushort, uint>(value16);
-        Assert.AreEqual(value16, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value16);
     }
     [Test]
-    public void RescaleUInt16ToUInt64()
+    public async Task RescaleUInt16ToUInt64()
     {
         ulong rescaled = ValueManipulation.Rescale<ushort, ulong>(value16);
-        Assert.AreEqual(value16, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value16);
     }
     #endregion
 
     #region UInt32 > T
     [Test]
-    public void RescaleUInt32ToByte()
+    public async Task RescaleUInt32ToByte()
     {
         byte rescaled = ValueManipulation.Rescale<uint, byte>(value32);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     [Test]
-    public void RescaleUInt32ToUInt16()
+    public async Task RescaleUInt32ToUInt16()
     {
         ushort rescaled = ValueManipulation.Rescale<uint, ushort>(value32);
-        Assert.AreEqual(value16, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value16);
     }
     [Test]
-    public void RescaleUInt32ToUInt32()
+    public async Task RescaleUInt32ToUInt32()
     {
         uint rescaled = ValueManipulation.Rescale<uint, uint>(value32);
-        Assert.AreEqual(value32, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value32);
     }
     [Test]
-    public void RescaleUInt32ToUInt64()
+    public async Task RescaleUInt32ToUInt64()
     {
         ulong rescaled = ValueManipulation.Rescale<uint, ulong>(value32);
-        Assert.AreEqual(value32, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value32);
     }
     #endregion
 
     #region UInt64 > T
     [Test]
-    public void RescaleUInt64ToByte()
+    public async Task RescaleUInt64ToByte()
     {
         byte rescaled = ValueManipulation.Rescale<ulong, byte>(value64);
-        Assert.AreEqual(value8, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value8);
     }
     [Test]
-    public void RescaleUInt64ToUInt16()
+    public async Task RescaleUInt64ToUInt16()
     {
         ushort rescaled = ValueManipulation.Rescale<ulong, ushort>(value64);
-        Assert.AreEqual(value16, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value16);
     }
     [Test]
-    public void RescaleUInt64ToUInt32()
+    public async Task RescaleUInt64ToUInt32()
     {
         uint rescaled = ValueManipulation.Rescale<ulong, uint>(value64);
-        Assert.AreEqual(value32, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value32);
     }
     [Test]
-    public void RescaleUInt64ToUInt64()
+    public async Task RescaleUInt64ToUInt64()
     {
         ulong rescaled = ValueManipulation.Rescale<ulong, ulong>(value64);
-        Assert.AreEqual(value64, rescaled);
+        await Assert.That(rescaled).IsEqualTo(value64);
     }
     #endregion
 }

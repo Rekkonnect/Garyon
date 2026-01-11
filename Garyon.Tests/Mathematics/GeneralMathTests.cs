@@ -1,43 +1,46 @@
 ﻿using Garyon.Mathematics;
-using NUnit.Framework;
 using System;
 using System.Numerics;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Mathematics;
 
-[Parallelizable(ParallelScope.Children)]
 public class GeneralMathTests
 {
     [Test]
-    public void Power()
+    public async Task Power()
     {
-        Assert.AreEqual(0, GeneralMath.Power(5, -1));
-        Assert.AreEqual(0L, GeneralMath.Power(5L, -1));
-        
-        Assert.AreEqual(0, GeneralMath.Power(0, 5));
-        Assert.AreEqual(0, GeneralMath.Power(0, 1));
+        await Assert.That(GeneralMath.Power(5, -1)).IsZero();
+        await Assert.That(GeneralMath.Power(5L, -1)).IsZero();
+
+        await Assert.That(GeneralMath.Power(0, 5)).IsZero();
+        await Assert.That(GeneralMath.Power(0, 1)).IsZero();
         Assert.Throws<InvalidOperationException>(() => GeneralMath.Power(0, 0));
-        
-        Assert.AreEqual(0L, GeneralMath.Power(0L, 5));
-        Assert.AreEqual(0L, GeneralMath.Power(0L, 1));
+
+        await Assert.That(GeneralMath.Power(0L, 5)).IsZero();
+        await Assert.That(GeneralMath.Power(0L, 1)).IsZero();
         Assert.Throws<InvalidOperationException>(() => GeneralMath.Power(0L, 0));
-        
+
         for (int b = 1; b < 5; b++)
         {
             int currentBase = 1;
 
             for (int exponent = 0; exponent < 16; exponent++)
             {
-                Assert.AreEqual(currentBase, GeneralMath.Power(b, exponent));
-                Assert.AreEqual((long)currentBase, GeneralMath.Power((long)b, exponent));
+                await Assert.That(GeneralMath.Power(b, exponent)).IsEqualTo(currentBase);
+                await Assert.That(GeneralMath.Power((long)b, exponent)).IsEqualTo((long)currentBase);
                 currentBase *= b;
             }
         }
     }
+
     [Test]
-    public void Factorial()
+    public async Task Factorial()
     {
-        Assert.AreEqual(1L, GeneralMath.Factorial(0));
+        await Assert.That(GeneralMath.Factorial(0)).IsEqualTo(1L);
         var r = new Random();
         for (int i = 0; i < 16; i++)
         {
@@ -51,8 +54,8 @@ public class GeneralMathTests
         for (int multiplier = 1; multiplier <= 20; multiplier++)
         {
             currentResult *= multiplier;
-            Assert.AreEqual(currentResult, GeneralMath.Factorial(multiplier));
-            Assert.AreEqual((double)currentResult, GeneralMath.Factorial((double)multiplier));
+            await Assert.That(GeneralMath.Factorial(multiplier)).IsEqualTo(currentResult);
+            await Assert.That(GeneralMath.Factorial((double)multiplier)).IsEqualTo((double)currentResult);
         }
 
         double currentDoubleResult = currentResult;
@@ -64,23 +67,29 @@ public class GeneralMathTests
                 break;
 
             double delta = Math.Pow(10, (long)Math.Log10(currentDoubleResult) - 14);
-            Assert.AreEqual(currentDoubleResult, GeneralMath.Factorial((double)multiplier), delta, multiplier.ToString());
+            await Assert.That(GeneralMath.Factorial((double)multiplier))
+                .IsEqualTo(currentDoubleResult)
+                .Within(delta)
+                .Because(multiplier.ToString());
         }
     }
+
     [Test]
-    public void BigIntegerFactorial()
+    public async Task BigIntegerFactorial()
     {
-        Assert.AreEqual(BigInteger.One, GeneralMath.FactorialBigInteger(0));            
+        await Assert.That(GeneralMath.FactorialBigInteger(0)).IsEqualTo(BigInteger.One);
         var r = new Random();
         for (int i = 0; i < 16; i++)
+        {
             Assert.Throws<ArgumentException>(() => GeneralMath.FactorialBigInteger(-r.Next()));
+        }
 
         BigInteger currentResult = 1;
 
         for (int multiplier = 1; multiplier <= 100; multiplier++)
         {
             currentResult *= multiplier;
-            Assert.AreEqual(currentResult, GeneralMath.FactorialBigInteger(multiplier));
+            await Assert.That(GeneralMath.FactorialBigInteger(multiplier)).IsEqualTo(currentResult);
         }
     }
 }

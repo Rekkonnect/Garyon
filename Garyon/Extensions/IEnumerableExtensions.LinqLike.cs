@@ -6,8 +6,6 @@ using System.Linq;
 
 namespace Garyon.Extensions;
 
-#nullable enable
-
 public static partial class IEnumerableExtensions
 {
     extension<T>(IEnumerable<T> source)
@@ -104,12 +102,33 @@ public static partial class IEnumerableExtensions
         where T : struct
     {
         /// <summary>Gets the values of the non-<see langword="null"/> elements in the provided collection of nullable struct elements.</summary>
-        /// <typeparam name="T">The type of the struct.</typeparam>
-        /// <param name="source">The collection of nullable struct elements.</param>
         /// <returns>The values of the non-<see langword="null"/> elements in the provided collection.</returns>
         public IEnumerable<T> GetValuedElements()
         {
             return source.WhereNotNull().Select(Selectors.ValueReturner);
+        }
+    }
+
+    extension<T>(IEnumerable<T?> source)
+        where T : class
+    {
+        /// <summary>
+        /// Casts the enumerable into one with non-<see langword="null"/> reference-type elements.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This cast does not actually perform any filtering, and the collection may still
+        /// contain <see langword="null"/> values if not filtered before.
+        /// </para>
+        /// <para>
+        /// To properly filter for <see langword="null"/> values, use
+        /// <see cref="MoreLinqExtensions.WhereNotNull{T}(IEnumerable{T})"/> or an
+        /// equivalent filter.
+        /// </para>
+        /// </remarks>
+        public IEnumerable<T> AsNonNull()
+        {
+            return source.Cast<T>();
         }
     }
 

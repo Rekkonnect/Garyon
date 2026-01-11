@@ -41,5 +41,8 @@ public static class Predicates
     }
     #endregion
 
-    public static bool NotEmpty(string s) => !string.IsNullOrEmpty(s);
+    #region Strings
+    public static bool NotEmpty(string? s) => !string.IsNullOrEmpty(s);
+    public static bool NotEmptyOrWhitespace(string? s) => !string.IsNullOrWhiteSpace(s);
+    #endregion
 }

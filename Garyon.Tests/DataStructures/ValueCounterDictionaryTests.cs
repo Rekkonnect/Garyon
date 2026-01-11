@@ -1,44 +1,46 @@
 ﻿using Garyon.DataStructures;
-using NUnit.Framework;
-using System.Collections.Generic;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.DataStructures;
 
-[Parallelizable(ParallelScope.Children)]
 public class ValueCounterDictionaryTests
 {
-    private static ValueCounterDictionary<char> testDictionary = new ValueCounterDictionary<char>();
+    private static readonly ValueCounterDictionary<char> testDictionary = InitializeTestDictionary();
 
-    [OneTimeSetUp]
-    public static void InitializeTestDictionary()
+    private static ValueCounterDictionary<char> InitializeTestDictionary()
     {
+        var dictionary = new ValueCounterDictionary<char>();
         for (int i = 0; i < 5; i++)
-            testDictionary.Add((char)('a' + i));
+            dictionary.Add((char)('a' + i));
+        return dictionary;
     }
 
     [Test]
-    public void EnumerableInitializationTest()
+    public async Task EnumerableInitializationTest()
     {
         var d = new ValueCounterDictionary<char>("CHARACTER COUNTER TEST");
-        
-        Assert.AreEqual(2, d[' ']);
-        Assert.AreEqual(4, d['T']);
-        Assert.AreEqual(11, d.Count);
+
+        await Assert.That(d[' ']).IsEqualTo(2);
+        await Assert.That(d['T']).IsEqualTo(4);
+        await Assert.That(d.Count).IsEqualTo(11);
     }
     [Test]
-    public void AddTest()
+    public async Task AddTest()
     {
         var d = new ValueCounterDictionary<char>(testDictionary);
         d.Add('a', 4);
-        Assert.AreEqual(5, d['a']);
+        await Assert.That(d['a']).IsEqualTo(5);
     }
     [Test]
-    public void AdjustCountersTest()
+    public async Task AdjustCountersTest()
     {
         var d = new ValueCounterDictionary<char>(testDictionary);
         d.Add('a', 4);
         d.AdjustCounters('a', 'b', 3);
-        Assert.AreEqual(2, d['a']);
-        Assert.AreEqual(4, d['b']);
+        await Assert.That(d['a']).IsEqualTo(2);
+        await Assert.That(d['b']).IsEqualTo(4);
     }
 }

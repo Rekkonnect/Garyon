@@ -10,6 +10,63 @@ public static class GeneralObjectExtensions
 {
     extension<T>(T source)
     {
+        /*
+         * Currently the following assigning/casting patterns are supported:
+         * - Assign O into out O and return O
+         * - Cast O into C and return C
+         * - Cast O into out C and return O
+         * 
+         * Candidate patterns include:
+         * - Assign O into out O and return cast into C
+         *   Example usage:
+         *   var derived = BaseGetter().CastSwitch<Derived>(out var b);
+         *   // Base BaseGetter()
+         *   // Derived : Base
+         */
+
+        /// <summary>
+        /// Stores the value in the specified reference and returns it.
+        /// </summary>
+        /// <param name="reference">The reference into which to store the value.</param>
+        /// <returns>The same value.</returns>
+        /// <remarks>
+        /// <para>
+        /// This can find exceptional usage in builder-like patterns,
+        /// whereby a new object being initialized is assigned without breaking
+        /// the fluent pattern, allowing the object be referenced within the
+        /// builder.
+        /// </para>
+        /// <para>
+        /// Beware of copying rules when using this on structs.
+        /// </para>
+        /// </remarks>
+        public T Into(out T reference)
+        {
+            reference = source;
+            return source;
+        }
+
+        /// <summary>
+        /// Casts the value into the specified type, stores it in the specified reference,
+        /// and returns the original value.
+        /// </summary>
+        /// <param name="reference">The reference into which to store the value.</param>
+        /// <returns>The same value.</returns>
+        /// <remarks>
+        /// <para>
+        /// This can find exceptional usage in builder-like patterns,
+        /// whereby a new object being initialized is assigned without breaking
+        /// the fluent pattern, allowing the object be referenced within the
+        /// builder.
+        /// </para>
+        /// </remarks>
+        public T Into<TCast>(out TCast? reference)
+            where TCast : class, T
+        {
+            reference = source as TCast;
+            return source;
+        }
+
         /// <summary>
         /// Attempts to cast the source object to the specified type <typeparamref name="TResult"/>.
         /// </summary>
@@ -62,14 +119,17 @@ public static class GeneralObjectExtensions
         /// all the values in the collection until explicitly requested.
         /// </returns>
         /// <remarks>
+        /// <para>
         /// This method does NOT validate whether the recursively-typed property
         /// may fall into a circular path. Be absolutely cautious when calling
         /// materialization methods that immediately force full enumeration,
         /// possibly causing an infinite loop.
-        /// <br/>
+        /// </para>
+        /// <para>
         /// To avoid the infinite loop on potentially recursive properties,
         /// consider combining this with
         /// <see cref="IEnumerableExtensions.UntilFirstRecursive"/>.
+        /// </para>
         /// </remarks>
         public IEnumerable<T> EnumerateRecursiveProperty(Func<T, T?> property)
         {
@@ -83,6 +143,14 @@ public static class GeneralObjectExtensions
                 yield return parent;
                 current = parent;
             }
+        }
+
+        public T? DefaultIf(Predicate<T?> predicate)
+        {
+            if (predicate(source))
+                return default;
+
+            return source;
         }
     }
 }

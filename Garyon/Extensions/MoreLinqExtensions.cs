@@ -1,6 +1,4 @@
-﻿#nullable enable
-
-using Garyon.Functions;
+﻿using Garyon.Functions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +11,32 @@ public static class MoreLinqExtensions
     /// <inheritdoc cref="Enumerable.Where{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
     public static IEnumerable<T> WherePredicate<T>(this IEnumerable<T> source, Predicate<T> predicate) => source.Where(new Func<T, bool>(predicate));
 
+    /// <summary>
+    /// Filters out the contents of the enumerable, if a predicate is provided.
+    /// Otherwise, returns the source enumerable as-is.
+    /// </summary>
+    public static IEnumerable<T> WhereOrSource<T>(this IEnumerable<T> source, Func<T, bool>? predicate)
+    {
+        return predicate is null ? source : source.Where(predicate);
+    }
+
+    /// <summary>
+    /// Selects the enumerable's items based on a selector.
+    /// If the selector is <see langword="null"/>,
+    /// a <see langword="null"/> enumerable is returned instead.
+    /// </summary>
+    public static IEnumerable<TResult>? SelectOrDefault<TSource, TResult>(
+        this IEnumerable<TSource> source,
+        Func<TSource, TResult>? selector)
+    {
+        return selector is null ? null : source.Select(selector);
+    }
+
     /// <summary>Gets the only element of the sequence, if it only has one element, otherwise returns <see langword="default"/>.</summary>
     /// <typeparam name="T">The type of the elements in the sequence.</typeparam>
     /// <param name="source">The source sequence.</param>
     /// <returns>The only element of the sequence, or <see langword="default"/>.</returns>
-    public static T? OnlyOrDefault<T>(this IEnumerable<T> source)
+    public static T? OnlyOrDefault<T>(this IEnumerable<T>? source)
     {
         if (source is null)
             return default;
@@ -83,6 +102,22 @@ public static class MoreLinqExtensions
         return true;
     }
 
+    /// <summary>Determines whether there are at least a specified number of occurrences of elements in an enumerable.</summary>
+    /// <param name="minCount">The minimum number of elements that must exist in the enumerable.</param>
+    /// <returns><see langword="true"/> if the provided collection contains at least <paramref name="minCount"/> elements, otherwise <see langword="false"/>.</returns>
+    public static bool CountAtLeast<T>(this IEnumerable<T> source, int minCount)
+    {
+        return source.Skip(minCount).Any();
+    }
+
+    /// <summary>Determines whether there are at most a specified number of occurrences of elements in an enumerable.</summary>
+    /// <param name="maxCount">The maximum number of elements that must exist in the enumerable.</param>
+    /// <returns><see langword="true"/> if the provided collection contains at most <paramref name="maxCount"/> elements, otherwise <see langword="false"/>.</returns>
+    public static bool CountAtMost<T>(this IEnumerable<T> source, int maxCount)
+    {
+        return source.Skip(maxCount).HasNone();
+    }
+
     /// <summary>Determines whether there are at least a specified number of occurrences of elements meeting a condition in a collection.</summary>
     /// <typeparam name="T">The type of the elements in the collection.</typeparam>
     /// <param name="source">The source collection whose elements to compare against the condition.</param>
@@ -91,12 +126,18 @@ public static class MoreLinqExtensions
     /// <returns><see langword="true"/> if the provided collection contains at least <paramref name="occurrences"/> elements that meet the given condition, otherwise <see langword="false"/>.</returns>
     public static bool CountAtLeast<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
     {
-        return source.Where(predicate).Count() >= occurrences;
+        return source.Where(predicate).CountAtLeast(occurrences);
     }
-    /// <inheritdoc cref="CountAtLeast{T}(IEnumerable{T}, Func{T, bool}, int)"/>
-    public static bool CountAtLeast<T>(this IEnumerable<T> source, Predicate<T> predicate, int occurrences)
+
+    /// <summary>Determines whether there are at most a specified number of occurrences of elements meeting a condition in a collection.</summary>
+    /// <typeparam name="T">The type of the elements in the collection.</typeparam>
+    /// <param name="source">The source collection whose elements to compare against the condition.</param>
+    /// <param name="predicate">The condition that the elements must meet.</param>
+    /// <param name="occurrences">The minimum number of elements that must meet the condition.</param>
+    /// <returns><see langword="true"/> if the provided collection contains at least <paramref name="occurrences"/> elements that meet the given condition, otherwise <see langword="false"/>.</returns>
+    public static bool CountAtMost<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
     {
-        return source.WherePredicate(predicate).Count() >= occurrences;
+        return source.Where(predicate).CountAtMost(occurrences);
     }
 
     /// <summary>Gets the count of elements that are not <see langword="null"/>.</summary>
@@ -124,6 +165,21 @@ public static class MoreLinqExtensions
     }
 
     /// <summary>
+    /// Checks all elements against a predicate and returns only those
+    /// elements that do NOT meet the condition.
+    /// </summary>
+    /// <param name="source">The sequence of elements to filter.</param>
+    /// <param name="predicate">
+    /// A function to test each element for a condition.
+    /// Elements for which this function returns <see langword="false"/>
+    /// are included in the result.
+    /// </param>
+    public static IEnumerable<T> WhereNot<T>(this IEnumerable<T> source, Func<T, bool> predicate)
+    {
+        return source.Where(p => !predicate(p));
+    }
+
+    /// <summary>
     /// Applies a function to the given value and returns the result.
     /// </summary>
     /// <typeparam name="TSource">The type of the source value.</typeparam>
@@ -136,6 +192,21 @@ public static class MoreLinqExtensions
     public static TResult Apply<TSource, TResult>(this TSource source, Func<TSource, TResult> function)
     {
         return function(source);
+    }
+
+    /// <summary>
+    /// Applies a function to the given value and returns the same value.
+    /// </summary>
+    /// <typeparam name="TSource">The type of the source value.</typeparam>
+    /// <param name="source">The source value.</param>
+    /// <param name="function">The function to apply to the source value.</param>
+    /// <returns>
+    /// The same source value for chaining purposes.
+    /// </returns>
+    public static TSource Apply<TSource>(this TSource source, Action<TSource> function)
+    {
+        function(source);
+        return source;
     }
 
     /// <summary>

@@ -2,6 +2,8 @@
 
 namespace Garyon.DataStructures.Trees;
 
+#nullable disable
+
 /// <summary>Represents a tree node, which is a component that is contained within a tree.</summary>
 /// <typeparam name="TValue">The type of the value that is stored in the node.</typeparam>
 public interface ITreeNode<TValue> : IEnumerable<TValue>

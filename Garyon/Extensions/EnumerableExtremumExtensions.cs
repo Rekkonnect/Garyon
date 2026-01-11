@@ -11,12 +11,13 @@ using static Extremum;
 public static class EnumerableExtremumExtensions
 {
 #pragma warning disable CS8524 // The switch expression does not handle some values of its input type (it is not exhaustive) involving an unnamed enum value.
+
     /// <summary>Gets the extremum of a collection.</summary>
     /// <typeparam name="T">The type of elements stored in the collection.</typeparam>
     /// <param name="source">The source collection whose extremum to get.</param>
     /// <param name="extremum">The kind of extremum to get.</param>
     /// <returns>The extremum of the collection.</returns>
-    public static T Extremum<T>(this IEnumerable<T> source, Extremum extremum)
+    public static T? Extremum<T>(this IEnumerable<T> source, Extremum extremum)
     {
         return extremum switch
         {
@@ -179,5 +180,4 @@ public static class EnumerableExtremumExtensions
             Maximum => source.Max(selector),
         };
     }
-#pragma warning restore CS8524 // The switch expression does not handle some values of its input type (it is not exhaustive) involving an unnamed enum value.
 }

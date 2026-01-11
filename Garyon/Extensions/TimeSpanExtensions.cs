@@ -1,6 +1,7 @@
 ﻿using Garyon.Exceptions;
 using Garyon.Objects;
 using System;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
@@ -32,6 +33,18 @@ public static class TimeSpanExtensions
     /// <returns>The sign of the <seealso cref="TimeSpan.Ticks"/> property, in accordance with <seealso cref="Math.Sign(long)"/>.</returns>
     public static int Sign(this TimeSpan timeSpan) => Math.Sign(timeSpan.Ticks);
 
+    /// <summary>
+    /// Get the absolute value of the <seealso cref="TimeSpan"/>.
+    /// </summary>
+    /// <returns>
+    /// A non-negative <see cref="TimeSpan"/> representing the same duration
+    /// as the provided instance, but without a negative sign.
+    /// </returns>
+    public static TimeSpan Absolute(this TimeSpan timeSpan)
+    {
+        return TimeSpan.FromTicks(Math.Abs(timeSpan.Ticks));
+    }
+
     /// <summary>Gets the specified component of the given <seealso cref="TimeSpan"/> instance.</summary>
     /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose component to get.</param>
     /// <param name="component">The component of the <seealso cref="TimeSpan"/> instance to get.</param>
@@ -45,14 +58,25 @@ public static class TimeSpanExtensions
     /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose component to get.</param>
     /// <param name="component">The component of the <seealso cref="TimeSpan"/> instance to get. To get the <seealso cref="TimeSpanComponent.Ticks"/> component, use <seealso cref="GetComponentInt64(TimeSpan, TimeSpanComponent)"/>.</param>
     /// <returns>The requested component of the <seealso cref="TimeSpan"/> instance, represented by the specified <seealso cref="TimeSpanComponent"/>.</returns>
-    public static int GetComponent(this TimeSpan timeSpan, TimeSpanComponent component) => component switch
+    public static int GetComponent(this TimeSpan timeSpan, TimeSpanComponent component)
     {
-        TimeSpanComponent.Milliseconds => timeSpan.Milliseconds,
-        TimeSpanComponent.Seconds => timeSpan.Seconds,
-        TimeSpanComponent.Minutes => timeSpan.Minutes,
-        TimeSpanComponent.Hours => timeSpan.Hours,
-        TimeSpanComponent.Days => timeSpan.Days,
-    };
+        return component switch
+        {
+            TimeSpanComponent.Milliseconds => timeSpan.Milliseconds,
+            TimeSpanComponent.Seconds => timeSpan.Seconds,
+            TimeSpanComponent.Minutes => timeSpan.Minutes,
+            TimeSpanComponent.Hours => timeSpan.Hours,
+            TimeSpanComponent.Days => timeSpan.Days,
+
+            _ => ThrowInvalid(),
+        };
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static int ThrowInvalid()
+        {
+            throw ThrowHelper.Throw<InvalidEnumArgumentException>("The provided enum value is invalid.");
+        }
+    }
 
     #region Within Time Unit
     /// <summary>Creates a new <seealso cref="TimeSpan"/> instance reflecting the duration within the final day.</summary>
@@ -165,7 +189,15 @@ public static class TimeSpanExtensions
             TimeSpanComponent.Minutes => timeSpan.WithMinutes(value),
             TimeSpanComponent.Hours => timeSpan.WithHours(value),
             TimeSpanComponent.Days => timeSpan.WithDays(value),
+
+            _ => ThrowInvalid(),
         };
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static TimeSpan ThrowInvalid()
+        {
+            throw ThrowHelper.Throw<InvalidEnumArgumentException>("The provided enum value is invalid.");
+        }
     }
     /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the specified component of the copied value is set to the specified value.</summary>
     /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted time components.</param>

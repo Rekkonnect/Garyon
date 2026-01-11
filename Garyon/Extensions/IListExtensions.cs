@@ -157,7 +157,7 @@ public static class IListExtensions
         return default;
     }
 
-    public static T? SingleOrDefault<T>(this IList<T> source)
+    public static T? SingleOrDefaultSafe<T>(this IList<T> source)
     {
         if (source.Count is 1)
         {

@@ -8,8 +8,8 @@
 
   <UsingTask
       TaskName="MinimizeStringArray"
-      TaskFactory="CodeTaskFactory"
-      AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+      TaskFactory="RoslynCodeTaskFactory"
+      AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
     <ParameterGroup>
       <input ParameterType="System.String" Required="true" />
       <result ParameterType="System.String" Output="true" />

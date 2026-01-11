@@ -4,11 +4,12 @@ namespace Garyon.DataStructures;
 
 /// <summary>Represents a value counter dictionary, that stores a counter per entry as the value of the key.</summary>
 /// <typeparam name="TKey">The type of the key.</typeparam>
-public class ValueCounterDictionary<TKey> : FlexibleDictionary<TKey, int>
+public class ValueCounterDictionary<TKey> : FlexDictionary<TKey, int>
+    where TKey : notnull
 {
     /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class with the default initial capacity (16).</summary>
     public ValueCounterDictionary()
-        : base() { }
+        : base(defaultValue: 0) { }
     /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class.</summary>
     /// <param name="capacity">The capacity of the dictionary.</param>
     public ValueCounterDictionary(int capacity)
@@ -26,7 +27,7 @@ public class ValueCounterDictionary<TKey> : FlexibleDictionary<TKey, int>
     /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class.</summary>
     /// <param name="kvps">The collection of value counters, represented as <seealso cref="KeyValuePair{TKey, TValue}"/> objects, to initialize the dictionary from.</param>
     public ValueCounterDictionary(IEnumerable<KeyValuePair<TKey, int>> kvps)
-        : base(kvps) { }
+        : base(kvps, 0) { }
 #endif
     /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class out of another <seealso cref="ValueCounterDictionary{TKey}"/> instance.</summary>
     /// <param name="other">The other <seealso cref="ValueCounterDictionary{TKey}"/> whose key-value pairs to copy.</param>

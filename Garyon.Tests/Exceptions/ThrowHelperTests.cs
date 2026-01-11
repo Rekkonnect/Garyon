@@ -1,120 +1,125 @@
 ﻿using Garyon.Exceptions;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Exceptions;
 
-[Parallelizable(ParallelScope.Children)]
 public class ThrowHelperTests
 {
     private const string exceptionLover = "I love exceptions";
     private const string aggregateExceptionLover = "I love aggregate exceptions";
 
     [Test]
-    public void ThrowTest()
+    public async Task ThrowTest()
     {
         var thrown = new Exception();
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.Throw(thrown);
-        void HandleException(Exception e) => Assert.AreEqual(thrown, e);
+        async Task HandleException(Exception e)
+        {
+            await Assert.That(e).IsEqualTo(thrown);
+        }
     }
 
     [Test]
-    public void ThrowGenericTest()
+    public async Task ThrowGenericTest()
     {
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.Throw<ArgumentException>();
-        void HandleException(Exception e) => Assert.IsInstanceOf(typeof(ArgumentException), e);
+        async Task HandleException(Exception e)
+        {
+            await Assert.That(e).IsTypeOf<ArgumentException>();
+        }
     }
     [Test]
-    public void ThrowGenericMessageTest()
+    public async Task ThrowGenericMessageTest()
     {
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.Throw<ArgumentException>(exceptionLover);
-        void HandleException(Exception e)
+        async Task HandleException(Exception e)
         {
-            Assert.IsInstanceOf(typeof(ArgumentException), e);
-            Assert.AreEqual(exceptionLover, e.Message);
+            await Assert.That(e).IsTypeOf<ArgumentException>();
+            await Assert.That(e.Message).IsEqualTo(exceptionLover);
         }
     }
     [Test]
-    public void ThrowGenericMessageInnerTest()
+    public async Task ThrowGenericMessageInnerTest()
     {
         var inner = new InvalidOperationException();
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.Throw<ArgumentException>(exceptionLover, inner);
-        void HandleException(Exception e)
+        async Task HandleException(Exception e)
         {
-            Assert.IsInstanceOf(typeof(ArgumentException), e);
-            Assert.AreEqual(exceptionLover, e.Message);
-            Assert.AreEqual(inner, e.InnerException);
+            await Assert.That(e).IsTypeOf<ArgumentException>();
+            await Assert.That(e.Message).IsEqualTo(exceptionLover);
+            await Assert.That(e.InnerException).IsEqualTo(inner);
         }
     }
 
     [Test]
-    public void ThrowAggregateTest()
+    public async Task ThrowAggregateTest()
     {
         var inners = new Exception[] { new InvalidOperationException(), new ArithmeticException(), new OverflowException() };
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.ThrowAggregate(aggregateExceptionLover, inners);
-        void HandleException(Exception e)
+        async Task HandleException(Exception e)
         {
-            Assert.IsInstanceOf(typeof(AggregateException), e);
-            var a = e as AggregateException;
-            Assert.IsTrue(e.Message.Contains(aggregateExceptionLover));
-            Assert.AreEqual(inners, a.InnerExceptions);
+            var a = await Assert.That(e).IsTypeOf<AggregateException>();
+            await Assert.That(e.Message.Contains(aggregateExceptionLover)).IsTrue();
+            await Assert.That(a.InnerExceptions).IsEquivalentTo(inners);
         }
     }
     [Test]
-    public void ThrowAggregateGenericArrayTest()
+    public async Task ThrowAggregateGenericArrayTest()
     {
         var inners = new Exception[] { new InvalidOperationException(), new ArithmeticException(), new OverflowException() };
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.ThrowAggregate<ArrayAggregateException>(aggregateExceptionLover, inners);
-        void HandleException(Exception e)
+        async Task HandleException(Exception e)
         {
-            Assert.IsInstanceOf(typeof(ArrayAggregateException), e);
-            var a = e as ArrayAggregateException;
-            Assert.IsTrue(e.Message.Contains(aggregateExceptionLover));
-            Assert.AreEqual(inners, a.InnerExceptions);
+            var a = await Assert.That(e).IsTypeOf<ArrayAggregateException>();
+            await Assert.That(e.Message.Contains(aggregateExceptionLover)).IsTrue();
+            await Assert.That(a.InnerExceptions).IsEquivalentTo(inners);
         }
     }
     [Test]
-    public void ThrowAggregateGenericIEnumerableTest()
+    public async Task ThrowAggregateGenericIEnumerableTest()
     {
         var inners = new Exception[] { new InvalidOperationException(), new ArithmeticException(), new OverflowException() };
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.ThrowAggregate<IEnumerableAggregateException>(aggregateExceptionLover, inners);
-        void HandleException(Exception e)
+        async Task HandleException(Exception e)
         {
-            Assert.IsInstanceOf(typeof(IEnumerableAggregateException), e);
-            var a = e as IEnumerableAggregateException;
-            Assert.IsTrue(e.Message.Contains(aggregateExceptionLover));
-            Assert.AreEqual(inners, a.InnerExceptions);
+            var a = await Assert.That(e).IsTypeOf<IEnumerableAggregateException>();
+            await Assert.That(e.Message.Contains(aggregateExceptionLover)).IsTrue();
+            await Assert.That(a.InnerExceptions).IsEquivalentTo(inners);
         }
     }
     [Test]
-    public void ThrowAggregateGenericBadExceptionTest()
+    public async Task ThrowAggregateGenericBadExceptionTest()
     {
         var inners = new Exception[] { new InvalidOperationException(), new ArithmeticException(), new OverflowException() };
-        TestThrowing(Throw, HandleException);
+        await TestThrowing(Throw, HandleException);
 
         void Throw() => ThrowHelper.ThrowAggregate<BadAggregateException>(aggregateExceptionLover, inners);
-        void HandleException(Exception e)
+        async Task HandleException(Exception e)
         {
-            Assert.IsInstanceOf(typeof(MissingMethodException), e);
+            await Assert.That(e).IsTypeOf<MissingMethodException>();
         }
     }
 
-    private void TestThrowing(Action thrower, Action<Exception> exceptionHandler)
+    private async Task TestThrowing(Action thrower, Func<Exception, Task> exceptionHandler)
     {
         try
         {
@@ -122,7 +127,7 @@ public class ThrowHelperTests
         }
         catch (Exception e)
         {
-            exceptionHandler(e);
+            await exceptionHandler(e);
         }
     }
 

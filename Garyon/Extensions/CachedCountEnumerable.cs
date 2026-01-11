@@ -94,7 +94,7 @@ public class CachedCountEnumerable : IEnumerable
         private readonly EnumeratorCounter _enumeratorCounter = new();
         private readonly IEnumerator _underlying = enumerable._enumerable.GetEnumerator();
 
-        public object Current => _underlying.Current;
+        public object? Current => _underlying.Current;
 
         public bool MoveNext()
         {
@@ -144,7 +144,7 @@ public class CachedCountEnumerable<T>(IEnumerable<T> enumerable)
         private readonly EnumeratorCounter _enumeratorCounter = new();
         private readonly IEnumerator<T> _underlying = enumerable._enumerable.GetEnumerator();
 
-        object IEnumerator.Current => ((IEnumerator)_underlying).Current;
+        object? IEnumerator.Current => ((IEnumerator)_underlying).Current;
         public T Current => _underlying.Current;
 
         public bool MoveNext()

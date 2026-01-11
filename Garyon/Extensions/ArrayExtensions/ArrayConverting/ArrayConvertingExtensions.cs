@@ -1316,7 +1316,7 @@ public static class ArrayConvertingExtensions
         where TFrom : unmanaged
         where TTo : unmanaged
     {
-#warning This might be unoptimized; consider removing or refactoring
+        // TODO: This might be unoptimized; consider removing or refactoring
         PointerConversion.ConvertTo(origin, target, length);
     }
 }

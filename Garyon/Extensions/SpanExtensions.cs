@@ -1,5 +1,4 @@
-﻿#if HAS_SPAN
-
+﻿using Garyon.Functions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -658,7 +657,9 @@ public static class SpanExtensions
         T right,
         out ReadOnlySpan<T> inner)
     {
-        if (source is [var first, .. var innerSource, var last] && first.Equals(left) && last.Equals(right))
+        if (source is [var first, .. var innerSource, var last]
+            && Checks.SafeEquals(first, left)
+            && Checks.SafeEquals(last, right))
         {
             inner = innerSource;
             return true;
@@ -827,5 +828,3 @@ public static class SpanExtensions
         }
     }
 }
-
-#endif

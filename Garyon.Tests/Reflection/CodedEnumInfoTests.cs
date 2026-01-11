@@ -1,88 +1,91 @@
 ﻿using Garyon.Reflection;
-using NUnit.Framework;
 using System;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.Reflection;
 
 public class CodedEnumInfoTests
 {
     [Test]
-    public void GetCodeObject()
+    public async Task GetCodeObject()
     {
-        AssertCode(ColorCodes.Red, Color.Red);
-        AssertCode(ColorCodes.Green, Color.Green);
-        AssertCode(ColorCodes.Blue, Color.Blue);
+        await AssertCode(ColorCodes.Red, Color.Red);
+        await AssertCode(ColorCodes.Green, Color.Green);
+        await AssertCode(ColorCodes.Blue, Color.Blue);
 
-        AssertThrow(Color.NoCode);
-        AssertThrow(null);
+        await AssertThrow(Color.NoCode);
+        await AssertThrow(null);
 
-        static void AssertCode(string targetCode, Enum instance)
+        static async Task AssertCode(string targetCode, Enum instance)
         {
-            Assert.AreEqual(targetCode, CodedEnumInfo.GetCode(instance));
+            await Assert.That(CodedEnumInfo.GetCode(instance)).IsEqualTo(targetCode);
         }
-        static void AssertThrow(Enum instance)
+        static async Task AssertThrow(Enum instance)
         {
-            Assert.Catch(() => CodedEnumInfo.GetCode(instance));
+            await Assert.That(() => CodedEnumInfo.GetCode(instance)).ThrowsException();
         }
     }
     [Test]
-    public void GetCode()
+    public async Task GetCode()
     {
-        AssertCode(ColorCodes.Red, Color.Red);
-        AssertCode(ColorCodes.Green, Color.Green);
-        AssertCode(ColorCodes.Blue, Color.Blue);
+        await AssertCode(ColorCodes.Red, Color.Red);
+        await AssertCode(ColorCodes.Green, Color.Green);
+        await AssertCode(ColorCodes.Blue, Color.Blue);
 
-        AssertThrow(Color.NoCode);
+        await AssertThrow(Color.NoCode);
 
-        static void AssertCode<TEnum>(string targetCode, TEnum instance)
+        static async Task AssertCode<TEnum>(string targetCode, TEnum instance)
             where TEnum : struct, Enum
         {
-            Assert.AreEqual(targetCode, CodedEnumInfo.GetCode(instance));
+            await Assert.That(CodedEnumInfo.GetCode(instance)).IsEqualTo(targetCode);
         }
-        static void AssertThrow<TEnum>(TEnum instance)
+        static async Task AssertThrow<TEnum>(TEnum instance)
             where TEnum : struct, Enum
         {
-            Assert.Catch(() => CodedEnumInfo.GetCode(instance));
+            await Assert.That(() => CodedEnumInfo.GetCode(instance)).ThrowsException();
         }
     }
     [Test]
-    public void ParseCodeObject()
+    public async Task ParseCodeObject()
     {
-        AssertCode(ColorCodes.Red, Color.Red);
-        AssertCode(ColorCodes.Green, Color.Green);
-        AssertCode(ColorCodes.Blue, Color.Blue);
+        await AssertCode(ColorCodes.Red, Color.Red);
+        await AssertCode(ColorCodes.Green, Color.Green);
+        await AssertCode(ColorCodes.Blue, Color.Blue);
 
-        AssertThrow("GARBAGE", typeof(Color));
-        AssertThrow(null, typeof(Color));
+        await AssertThrow("GARBAGE", typeof(Color));
+        await AssertThrow(null, typeof(Color));
 
-        static void AssertCode(string code, Enum targetValue)
+        static async Task AssertCode(string code, Enum targetValue)
         {
-            Assert.AreEqual(targetValue, CodedEnumInfo.ParseCode(targetValue.GetType(), code));
+            await Assert.That(CodedEnumInfo.ParseCode(targetValue.GetType(), code)).IsEqualTo(targetValue);
         }
-        static void AssertThrow(string code, Type enumType)
+        static async Task AssertThrow(string code, Type enumType)
         {
-            Assert.Catch(() => CodedEnumInfo.ParseCode(enumType, code));
+            await Assert.That(() => CodedEnumInfo.ParseCode(enumType, code)).ThrowsException();
         }
     }
     [Test]
-    public void ParseCode()
+    public async Task ParseCode()
     {
-        AssertCode(ColorCodes.Red, Color.Red);
-        AssertCode(ColorCodes.Green, Color.Green);
-        AssertCode(ColorCodes.Blue, Color.Blue);
+        await AssertCode(ColorCodes.Red, Color.Red);
+        await AssertCode(ColorCodes.Green, Color.Green);
+        await AssertCode(ColorCodes.Blue, Color.Blue);
 
-        AssertThrow<Color>("GARBAGE");
-        AssertThrow<Color>(null);
+        await AssertThrow<Color>("GARBAGE");
+        await AssertThrow<Color>(null);
 
-        static void AssertCode<TEnum>(string code, TEnum targetValue)
+        static async Task AssertCode<TEnum>(string code, TEnum targetValue)
             where TEnum : struct, Enum
         {
-            Assert.AreEqual(targetValue, CodedEnumInfo.ParseCode<TEnum>(code));
+            await Assert.That(CodedEnumInfo.ParseCode<TEnum>(code)).IsEqualTo(targetValue);
         }
-        static void AssertThrow<TEnum>(string code)
+        static async Task AssertThrow<TEnum>(string code)
             where TEnum : struct, Enum
         {
-            Assert.Catch(() => CodedEnumInfo.ParseCode<TEnum>(code));
+            await Assert.That(() => CodedEnumInfo.ParseCode<TEnum>(code)).ThrowsException();
         }
     }
 

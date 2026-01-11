@@ -58,7 +58,7 @@ public static class EnumHelpers
     /// <returns>The number of entries defined in the enum type.</returns>
     /// <remarks>This function has a O(1) time complexity, contrast to <seealso cref="GetEntryCount(Type)"/>, since the count is stored as a runtime constant. Thus, prefer calling this function wherever possible.</remarks>
     public static int GetEntryCount<T>()
-        where T : struct, Enum
+        where T : unmanaged, Enum
     {
         return EnumCountRetriever<T>.Count;
     }
@@ -105,9 +105,9 @@ public static class EnumHelpers
     }
 
     private static class EnumCountRetriever<T>
-        where T : struct, Enum
+        where T : unmanaged, Enum
     {
-        public static readonly int Count = Enum.GetValues(typeof(T)).Length;
+        public static readonly int Count = Enum.GetValues<T>().Length;
 
         static EnumCountRetriever()
         {
@@ -117,10 +117,10 @@ public static class EnumHelpers
     #endregion
 
     #region Contained Values
-    private static readonly FlexibleDictionary<Type, Type> enumUnderlyingTypeCodeDictionary = new();
+    private static readonly FlexDictionary<Type, Type> enumUnderlyingTypeCodeDictionary = new(defaultValue: default!);
 
     // Partial documentation is not supported
-#warning Tracking issue: https://github.com/dotnet/csharplang/discussions/295
+    // Tracking issue https://github.com/dotnet/csharplang/discussions/295
 #if HAS_GENERIC_ENUM_ISDEFINED
     /// <summary>Determines whether a value is defined in the enum <typeparamref name="TEnum"/>.</summary>
     /// <typeparam name="TEnum">The type of the enum.</typeparam>

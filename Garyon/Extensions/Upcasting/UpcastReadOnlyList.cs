@@ -11,7 +11,7 @@ internal sealed class UpcastReadOnlyList<TBase, TUp>(IReadOnlyList<TBase> backin
 {
     private readonly IReadOnlyList<TBase> _backing = backingList;
 
-    public TUp this[int index] => _backing[index] as TUp;
+    public TUp this[int index] => (TUp)_backing[index]!;
 
     public int Count => _backing.Count;
 

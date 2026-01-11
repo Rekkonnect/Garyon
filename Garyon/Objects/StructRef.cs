@@ -1,4 +1,8 @@
-﻿namespace Garyon.Objects;
+﻿using System.IO.MemoryMappedFiles;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace Garyon.Objects;
 
 /// <summary>Provides the ability to store a reference to an unmanaged struct without using pointers.</summary>
 /// <typeparam name="T">The type of the unmanaged struct whose reference to store.</typeparam>

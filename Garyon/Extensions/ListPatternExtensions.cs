@@ -1,7 +1,5 @@
-﻿#if HAS_SPAN
+﻿using Garyon.Attributes;
 using System;
-#endif
-
 using System.Collections.Generic;
 
 namespace Garyon.Extensions;
@@ -31,12 +29,10 @@ public static class ListPatternExtensions
     /// <see langword="true"/> if the list only contains a single element that
     /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
     /// </returns>
-    public static bool TryGetSingle<TBase, TDerived>(this IReadOnlyList<TBase> list, out TDerived single)
+    public static bool TryGetSingle<TBase, TDerived>(this IReadOnlyList<TBase> list, out TDerived? single)
         where TDerived : TBase
     {
-        // Cannot use list patterns in .NET Standard 2.0
-#warning Tracking issue: https://github.com/dotnet/roslyn/issues/74983
-        if (list.Count is 1 && list[0] is TDerived singleDerived)
+        if (list is [TDerived singleDerived])
         {
             single = singleDerived;
             return true;
@@ -44,6 +40,7 @@ public static class ListPatternExtensions
         single = default;
         return false;
     }
+
     /// <summary>
     /// Tries to get a single element from the given array
     /// of a specified type.
@@ -64,12 +61,10 @@ public static class ListPatternExtensions
     /// <see langword="true"/> if the array only contains a single element that
     /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
     /// </returns>
-    public static bool TryGetSingle<TBase, TDerived>(this TBase[] array, out TDerived single)
+    public static bool TryGetSingle<TBase, TDerived>(this TBase[] array, out TDerived? single)
         where TDerived : TBase
     {
-        // Cannot use list patterns in .NET Standard 2.0
-#warning Tracking issue: https://github.com/dotnet/roslyn/issues/74983
-        if (array.Length is 1 && array[0] is TDerived singleDerived)
+        if (array is [TDerived singleDerived])
         {
             single = singleDerived;
             return true;
@@ -78,7 +73,6 @@ public static class ListPatternExtensions
         return false;
     }
 
-#if HAS_SPAN
     /// <summary>
     /// Tries to get a single element from the given span
     /// of a specified type.
@@ -99,7 +93,7 @@ public static class ListPatternExtensions
     /// <see langword="true"/> if the span only contains a single element that
     /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
     /// </returns>
-    public static bool TryGetSingle<TBase, TDerived>(this Span<TBase> span, out TDerived single)
+    public static bool TryGetSingle<TBase, TDerived>(this Span<TBase> span, out TDerived? single)
         where TDerived : TBase
     {
         if (span is [TDerived singleDerived])
@@ -110,6 +104,7 @@ public static class ListPatternExtensions
         single = default;
         return false;
     }
+
     /// <summary>
     /// Tries to get a single element from the given read-only span
     /// of a specified type.
@@ -130,7 +125,7 @@ public static class ListPatternExtensions
     /// <see langword="true"/> if the span only contains a single element that
     /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
     /// </returns>
-    public static bool TryGetSingle<TBase, TDerived>(this ReadOnlySpan<TBase> span, out TDerived single)
+    public static bool TryGetSingle<TBase, TDerived>(this ReadOnlySpan<TBase> span, out TDerived? single)
         where TDerived : TBase
     {
         if (span is [TDerived singleDerived])
@@ -141,5 +136,4 @@ public static class ListPatternExtensions
         single = default;
         return false;
     }
-#endif
 }

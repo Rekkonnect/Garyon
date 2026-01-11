@@ -1,15 +1,18 @@
-using Garyon.Objects.Enumerators;
-using NUnit.Framework;
+﻿using Garyon.Objects.Enumerators;
 using System.Linq;
+using System.Threading.Tasks;
+using TUnit.Core;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
 
 namespace Garyon.Tests.Objects.Enumerators;
 
 public class SingleElementCollectionTests
 {
     [Test]
-    public void Test()
+    public async Task Test()
     {
         var collection = new SingleElementCollection<int>(2);
-        Assert.AreEqual(new[] { 2 }, collection.ToArray());
+        await Assert.That(collection).IsEquivalentTo([2]);
     }
 }

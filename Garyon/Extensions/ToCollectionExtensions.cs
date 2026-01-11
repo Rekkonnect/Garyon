@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-#nullable enable
-
 namespace Garyon.Extensions;
 
 /// <summary>Contains extensions related to converting <seealso cref="IEnumerable{T}"/> instances into collections.</summary>

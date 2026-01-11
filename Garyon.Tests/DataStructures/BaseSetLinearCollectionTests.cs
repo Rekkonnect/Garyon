@@ -1,82 +1,84 @@
 ﻿using Garyon.DataStructures;
 using Garyon.Extensions;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.DataStructures;
 
-[Parallelizable(ParallelScope.Children)]
 public abstract class BaseSetLinearCollectionTests
 {
     protected static readonly int[] SampleNumbers = { 1, 2, 4, 5, 7 };
 
     [Test]
-    public void ContainsTest()
+    public async Task ContainsTest()
     {
         var instance = CreateSampleInstance();
         for (int i = 0; i < 10; i++)
-            Assert.AreEqual(SampleNumbers.Contains(i), instance.Contains(i));
+            await Assert.That(instance.Contains(i)).IsEqualTo(SampleNumbers.Contains(i));
     }
     [Test]
-    public void AddTest()
+    public async Task AddTest()
     {
         var instance = InitializeInstance<int>();
-        Assert.IsTrue(instance.Add(2));
-        Assert.IsFalse(instance.Add(2));
-        Assert.AreEqual(1, instance.Count);
+        await Assert.That(instance.Add(2)).IsTrue();
+        await Assert.That(instance.Add(2)).IsFalse();
+        await Assert.That(instance.Count).IsEqualTo(1);
 
         instance.AddRange(new[] { 1, 2, 2, 2, 4 });
-        Assert.AreEqual(3, instance.Count);
-        Assert.IsTrue(instance.Contains(1));
-        Assert.IsTrue(instance.Contains(4));
+        await Assert.That(instance.Count).IsEqualTo(3);
+        await Assert.That(instance.Contains(1)).IsTrue();
+        await Assert.That(instance.Contains(4)).IsTrue();
     }
     [Test]
-    public void RemoveTest()
+    public async Task RemoveTest()
     {
         var instance = CreateSampleInstance();
 
-        AssertRemove(instance, 0);
-        AssertRemove(instance, 1);
+        await AssertRemove(instance, 0);
+        await AssertRemove(instance, 1);
 
         var removedRange = instance.RemoveRange(instance.Count + 5).ToArray();
-        Assert.AreEqual(SampleNumbers.Length - 2, removedRange.Length);
+        await Assert.That(removedRange.Length).IsEqualTo(SampleNumbers.Length - 2);
 
-        void AssertRemove(BaseSetLinearCollection<int> instance, int index)
+        async Task AssertRemove(BaseSetLinearCollection<int> instance, int index)
         {
             int removed = instance.Remove();
-            Assert.AreEqual(SampleNumbers[ProjectToCollectionIndex(index)], removed);
-            Assert.AreEqual(SampleNumbers.Length - index - 1, instance.Count);
+            await Assert.That(removed).IsEqualTo(SampleNumbers[ProjectToCollectionIndex(index)]);
+            await Assert.That(instance.Count).IsEqualTo(SampleNumbers.Length - index - 1);
         }
     }
     [Test]
-    public void PeekTest()
+    public async Task PeekTest()
     {
         var instance = CreateSampleInstance();
-        Assert.AreEqual(SampleNumbers[ProjectToCollectionIndex(0)], instance.Peek());
+        await Assert.That(instance.Peek()).IsEqualTo(SampleNumbers[ProjectToCollectionIndex(0)]);
     }
     [Test]
-    public void ClearTest()
+    public async Task ClearTest()
     {
         var instance = CreateSampleInstance();
         instance.Clear();
-        Assert.IsTrue(instance.IsEmpty);
-        Assert.AreEqual(0, instance.Count);
+        await Assert.That(instance.IsEmpty).IsTrue();
+        await Assert.That(instance).IsEmpty();
     }
 
     [Test]
-    public void CopyToTest()
+    public async Task CopyToTest()
     {
         var instance = CreateSampleInstance();
         var array = new int[SampleNumbers.Length];
         instance.CopyTo(array, 0);
-        Assert.That(array, Is.EquivalentTo(TransformForExpectedEnumerationOrder(SampleNumbers)));
+        await Assert.That(array).IsEquivalentTo(TransformForExpectedEnumerationOrder(SampleNumbers));
     }
     [Test]
-    public void EnumerationTest()
+    public async Task EnumerationTest()
     {
-        Assert.That(CreateSampleInstance(), Is.EquivalentTo(TransformForExpectedEnumerationOrder(SampleNumbers)));
+        await Assert.That(CreateSampleInstance()).IsEquivalentTo(TransformForExpectedEnumerationOrder(SampleNumbers));
     }
 
     protected abstract Index ProjectToCollectionIndex(Index index);

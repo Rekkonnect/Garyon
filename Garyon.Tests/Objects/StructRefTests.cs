@@ -1,12 +1,15 @@
 ﻿using Garyon.Objects;
-using NUnit.Framework;
+using System.Threading.Tasks;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace Garyon.Tests.Objects;
 
 public class StructRefTests
 {
     [Test]
-    public void ReferenceTest()
+    public async Task ReferenceTest()
     {
         int value = 10;
 
@@ -15,22 +18,22 @@ public class StructRefTests
 
         value = 25;
 
-        Assert.AreEqual(value, ref0.GetReference());
-        Assert.AreEqual(value, ref1.GetReference());
+        await Assert.That(ref0.GetReference()).IsEqualTo(value);
+        await Assert.That(ref1.GetReference()).IsEqualTo(value);
 
         ref0.GetReference() = 0;
 
-        Assert.AreEqual(ref0.GetReference(), value);
-        Assert.AreEqual(ref0.GetReference(), ref1.GetReference());
+        await Assert.That(value).IsEqualTo(ref0.GetReference());
+        await Assert.That(ref1.GetReference()).IsEqualTo(ref0.GetReference());
 
         ref1.GetReference() = 1;
 
-        Assert.AreEqual(ref1.GetReference(), value);
-        Assert.AreEqual(ref1.GetReference(), ref0.GetReference());
+        await Assert.That(value).IsEqualTo(ref1.GetReference());
+        await Assert.That(ref0.GetReference()).IsEqualTo(ref1.GetReference());
     }
 
     [Test]
-    public void IrrelevantReferenceTest()
+    public async Task IrrelevantReferenceTest()
     {
         int value0 = 1;
         int value1 = 5;
@@ -42,7 +45,7 @@ public class StructRefTests
 
         ref1.SetReference(ref value1);
 
-        Assert.AreEqual(value0, ref0.GetReference());
-        Assert.AreEqual(value1, ref1.GetReference());
+        await Assert.That(ref0.GetReference()).IsEqualTo(value0);
+        await Assert.That(ref1.GetReference()).IsEqualTo(value1);
     }
 }

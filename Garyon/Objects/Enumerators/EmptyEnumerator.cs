@@ -9,6 +9,7 @@ namespace Garyon.Objects.Enumerators;
 /// are yielded.
 /// </summary>
 /// <typeparam name="T">The type of values that are being (not) enumerated.</typeparam>
+/// <remarks>Consider using the `[]` expression for empty enumerables.</remarks>
 public class EmptyEnumerator<T> : IEnumerator<T>
 {
     /// <summary>
@@ -23,7 +24,7 @@ public class EmptyEnumerator<T> : IEnumerator<T>
     /// any values.
     /// </summary>
     public T Current => throw new InvalidOperationException("The empty enumerator does not yield any values.");
-    object IEnumerator.Current => Current;
+    object? IEnumerator.Current => Current;
 
     void IDisposable.Dispose()
     {
