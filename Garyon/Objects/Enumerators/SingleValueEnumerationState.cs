@@ -14,8 +14,8 @@ public enum SingleValueEnumerationState
     /// </summary>
     Value = 0,
     /// <summary>
-    /// The state where the enumerator has yielded the value and has
-    /// reached the end.
+    /// The state where the enumerator has yielded the value and has reached the
+    /// end.
     /// </summary>
     After = 1,
 }

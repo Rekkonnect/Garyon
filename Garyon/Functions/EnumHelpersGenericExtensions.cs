@@ -11,13 +11,17 @@ public static class EnumHelpersGenericExtensions
     extension<T>(T)
         where T : unmanaged, Enum
     {
-        /// <summary>Gets the number of entries defined in the specified enum type.</summary>
+        /// <summary>
+        /// Gets the number of entries defined in the specified enum type.
+        /// </summary>
         public static int GetEntryCount()
         {
             return EnumHelpers.GetEntryCount<T>();
         }
 
-        /// <summary>Gets all the values defined in the enum.</summary>
+        /// <summary>
+        /// Gets all the values defined in the enum.
+        /// </summary>
         public static T[] GetValues()
         {
 #if HAS_GENERIC_ENUM_GETVALUES
@@ -27,7 +31,9 @@ public static class EnumHelpersGenericExtensions
 #endif
         }
 
-        /// <summary>Parses the given name as an enum value.</summary>
+        /// <summary>
+        /// Parses the given name as an enum value.
+        /// </summary>
         public static T Parse(string name)
         {
 #if HAS_GENERIC_ENUM_PARSE
@@ -37,7 +43,10 @@ public static class EnumHelpersGenericExtensions
 #endif
         }
 
-        /// <summary>Parses the given name as an enum value, optionally ignoring the case.</summary>
+        /// <summary>
+        /// Parses the given name as an enum value, optionally ignoring the
+        /// case.
+        /// </summary>
         public static T Parse(string name, bool ignoreCase)
         {
 #if HAS_GENERIC_ENUM_PARSE

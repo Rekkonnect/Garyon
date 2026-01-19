@@ -13,9 +13,9 @@ public static class FileSystemInfoExtensions
     extension(FileSystemInfo info)
     {
         /// <summary>
-        /// Gets the parent directory containing this file system object,
-        /// either the containing directory of the file, or the parent
-        /// directory of the given directory.
+        /// Gets the parent directory containing this file system object, either
+        /// the containing directory of the file, or the parent directory of the
+        /// given directory.
         /// </summary>
         /// <returns>
         /// The <seealso cref="DirectoryInfo"/> instance of the parent of the

@@ -10,10 +10,12 @@ namespace Garyon.Extensions;
 public static class ListPatternExtensions
 {
     /// <summary>
-    /// Tries to get a single element from the given read-only list
-    /// of a specified type.
+    /// Tries to get a single element from the given read-only list of a
+    /// specified type.
     /// </summary>
-    /// <typeparam name="TBase">The type of the elements in the list.</typeparam>
+    /// <typeparam name="TBase">
+    /// The type of the elements in the list.
+    /// </typeparam>
     /// <typeparam name="TDerived">
     /// The type of the single element that must be matched.
     /// </typeparam>
@@ -27,7 +29,8 @@ public static class ListPatternExtensions
     /// </param>
     /// <returns>
     /// <see langword="true"/> if the list only contains a single element that
-    /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
+    /// is of type <typeparamref name="TDerived"/>, otherwise
+    /// <see langword="false"/>.
     /// </returns>
     public static bool TryGetSingle<TBase, TDerived>(this IReadOnlyList<TBase> list, out TDerived? single)
         where TDerived : TBase
@@ -42,10 +45,11 @@ public static class ListPatternExtensions
     }
 
     /// <summary>
-    /// Tries to get a single element from the given array
-    /// of a specified type.
+    /// Tries to get a single element from the given array of a specified type.
     /// </summary>
-    /// <typeparam name="TBase">The type of the elements in the array.</typeparam>
+    /// <typeparam name="TBase">
+    /// The type of the elements in the array.
+    /// </typeparam>
     /// <typeparam name="TDerived">
     /// The type of the single element that must be matched.
     /// </typeparam>
@@ -59,7 +63,8 @@ public static class ListPatternExtensions
     /// </param>
     /// <returns>
     /// <see langword="true"/> if the array only contains a single element that
-    /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
+    /// is of type <typeparamref name="TDerived"/>, otherwise
+    /// <see langword="false"/>.
     /// </returns>
     public static bool TryGetSingle<TBase, TDerived>(this TBase[] array, out TDerived? single)
         where TDerived : TBase
@@ -74,10 +79,11 @@ public static class ListPatternExtensions
     }
 
     /// <summary>
-    /// Tries to get a single element from the given span
-    /// of a specified type.
+    /// Tries to get a single element from the given span of a specified type.
     /// </summary>
-    /// <typeparam name="TBase">The type of the elements in the span.</typeparam>
+    /// <typeparam name="TBase">
+    /// The type of the elements in the span.
+    /// </typeparam>
     /// <typeparam name="TDerived">
     /// The type of the single element that must be matched.
     /// </typeparam>
@@ -91,7 +97,8 @@ public static class ListPatternExtensions
     /// </param>
     /// <returns>
     /// <see langword="true"/> if the span only contains a single element that
-    /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
+    /// is of type <typeparamref name="TDerived"/>, otherwise
+    /// <see langword="false"/>.
     /// </returns>
     public static bool TryGetSingle<TBase, TDerived>(this Span<TBase> span, out TDerived? single)
         where TDerived : TBase
@@ -106,10 +113,12 @@ public static class ListPatternExtensions
     }
 
     /// <summary>
-    /// Tries to get a single element from the given read-only span
-    /// of a specified type.
+    /// Tries to get a single element from the given read-only span of a
+    /// specified type.
     /// </summary>
-    /// <typeparam name="TBase">The type of the elements in the span.</typeparam>
+    /// <typeparam name="TBase">
+    /// The type of the elements in the span.
+    /// </typeparam>
     /// <typeparam name="TDerived">
     /// The type of the single element that must be matched.
     /// </typeparam>
@@ -123,7 +132,8 @@ public static class ListPatternExtensions
     /// </param>
     /// <returns>
     /// <see langword="true"/> if the span only contains a single element that
-    /// is of type <typeparamref name="TDerived"/>, otherwise <see langword="false"/>.
+    /// is of type <typeparamref name="TDerived"/>, otherwise
+    /// <see langword="false"/>.
     /// </returns>
     public static bool TryGetSingle<TBase, TDerived>(this ReadOnlySpan<TBase> span, out TDerived? single)
         where TDerived : TBase

@@ -3,12 +3,11 @@
 namespace Garyon.Mechanisms;
 
 /// <summary>
-/// A simple profiler that tracks time and memory without
-/// sophisticated mechanisms and edge cases.
+/// A simple profiler that tracks time and memory without sophisticated
+/// mechanisms and edge cases.
 /// </summary>
 /// <remarks>
-/// Can be useful for basic info that can be logged for
-/// debug purposes.
+/// Can be useful for basic info that can be logged for debug purposes.
 /// </remarks>
 public sealed class SimpleProfiler
 {
@@ -29,14 +28,12 @@ public sealed class SimpleProfiler
     }
 
     /// <summary>
-    /// Begins the profiling process and returns an instance
-    /// tracking the process that implements
-    /// <see cref="IDisposable"/>.
+    /// Begins the profiling process and returns an instance tracking the
+    /// process that implements <see cref="IDisposable"/>.
     /// </summary>
     /// <returns>
-    /// A <see cref="ProfilingProcess"/> involving this simple
-    /// profiler, which can be used in a <see langword="using"/>
-    /// block.
+    /// A <see cref="ProfilingProcess"/> involving this simple profiler, which
+    /// can be used in a <see langword="using"/> block.
     /// </returns>
     public ProfilingProcess Run()
     {

@@ -12,17 +12,33 @@ public static partial class IDictionaryExtensions
 {
     extension(IDictionary dictionary)
     {
-        /// <summary>Converts the keys of the dictionary into a collection of strongly-typed elements.</summary>
-        /// <typeparam name="T">The type to cast all the keys of the dictionary into.</typeparam>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the keys of the provided dictionary.</returns>
+        /// <summary>
+        /// Converts the keys of the dictionary into a collection of
+        /// strongly-typed elements.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type to cast all the keys of the dictionary into.
+        /// </typeparam>
+        /// <returns>
+        /// An <seealso cref="IEnumerable{T}"/> containing the keys of the
+        /// provided dictionary.
+        /// </returns>
         public IEnumerable<T> Keys<T>()
         {
             return dictionary.Keys.Cast<T>();
         }
 
-        /// <summary>Converts the values of the dictionary into a collection of strongly-typed elements.</summary>
-        /// <typeparam name="T">The type to cast all the values of the dictionary into.</typeparam>
-        /// <returns>An <seealso cref="IEnumerable{T}"/> containing the values of the provided dictionary.</returns>
+        /// <summary>
+        /// Converts the values of the dictionary into a collection of
+        /// strongly-typed elements.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type to cast all the values of the dictionary into.
+        /// </typeparam>
+        /// <returns>
+        /// An <seealso cref="IEnumerable{T}"/> containing the values of the
+        /// provided dictionary.
+        /// </returns>
         public IEnumerable<T> Values<T>()
         {
             return dictionary.Values.Cast<T>();
@@ -39,8 +55,8 @@ public static partial class IDictionaryExtensions
 
         /// <summary>
         /// Enumerates the dictionary's entries as a collection of
-        /// <seealso cref="KeyValuePair{TKey, TValue}"/> elements of
-        /// object keys and object values.
+        /// <seealso cref="KeyValuePair{TKey, TValue}"/> elements of object keys
+        /// and object values.
         /// </summary>
         public IEnumerable<ObjectKvp> EnumerateEntriesAsKvp()
         {

@@ -5,7 +5,9 @@ using System.Runtime.InteropServices;
 
 namespace Garyon.Extensions;
 
-/// <summary>Provides extensions for unsafe context.</summary>
+/// <summary>
+/// Provides extensions for unsafe context.
+/// </summary>
 public static unsafe class UnsafeExtensions
 {
 #if HAS_SPAN
@@ -28,11 +30,21 @@ public static unsafe class UnsafeExtensions
             return *(T*)bytes;
     }
 #else
-    /// <summary>Gets a byte array containing the bytes of the provided value.</summary>
-    /// <typeparam name="T">The type of the value whose bytes to get.</typeparam>
-    /// <param name="value">The value whose bytes to get.</param>
-    /// <returns>The bytes of the value.</returns>
-    /// <remarks>This operation might be expensive.</remarks>
+    /// <summary>
+    /// Gets a byte array containing the bytes of the provided value.
+    /// </summary>
+    /// <typeparam name="T">
+    /// The type of the value whose bytes to get.
+    /// </typeparam>
+    /// <param name="value">
+    /// The value whose bytes to get.
+    /// </param>
+    /// <returns>
+    /// The bytes of the value.
+    /// </returns>
+    /// <remarks>
+    /// This operation might be expensive.
+    /// </remarks>
     public static byte[] GetBytes<T>(this ref T value)
         where T : unmanaged
     {

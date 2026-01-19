@@ -7,14 +7,18 @@ namespace Garyon.Objects.Enumerators;
 public static class SingleValueEnumeratorExtensions
 {
     /// <summary>
-    /// Creates a new <seealso cref="SingleValueEnumerator{T}"/> instance
-    /// for the given value.
+    /// Creates a new <seealso cref="SingleValueEnumerator{T}"/> instance for
+    /// the given value.
     /// </summary>
-    /// <typeparam name="T">The type of the value.</typeparam>
-    /// <param name="value">The value which will be enumerated.</param>
+    /// <typeparam name="T">
+    /// The type of the value.
+    /// </typeparam>
+    /// <param name="value">
+    /// The value which will be enumerated.
+    /// </param>
     /// <returns>
-    /// A <seealso cref="SingleValueEnumerator{T}"/> instance enumerating
-    /// the given single value.
+    /// A <seealso cref="SingleValueEnumerator{T}"/> instance enumerating the
+    /// given single value.
     /// </returns>
     public static SingleValueEnumerator<T> EnumerateSingle<T>(this T value)
     {

@@ -22,41 +22,89 @@ public static class MathNumberExtensions
     }
 #endif
 
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static int Square(this int x) => x * x;
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static uint Square(this uint x) => x * x;
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static long Square(this long x) => x * x;
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static ulong Square(this ulong x) => x * x;
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static float Square(this float x) => x * x;
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static double Square(this double x) => x * x;
-    /// <summary>Returns the square of the given number.</summary>
-    /// <param name="x">The number to square.</param>
-    /// <returns>The square of the number, equal to x * x.</returns>
+    /// <summary>
+    /// Returns the square of the given number.
+    /// </summary>
+    /// <param name="x">
+    /// The number to square.
+    /// </param>
+    /// <returns>
+    /// The square of the number, equal to x * x.
+    /// </returns>
     public static decimal Square(this decimal x) => x * x;
 
     /// <summary>
     /// Shorthand for <see cref="Math.Pow(double, double)"/>.
     /// </summary>
-    /// <param name="x">The base number.</param>
-    /// <param name="exponent">The exponent to raise the base to.</param>
-    /// <returns>The result of the power operation.</returns>
+    /// <param name="x">
+    /// The base number.
+    /// </param>
+    /// <param name="exponent">
+    /// The exponent to raise the base to.
+    /// </param>
+    /// <returns>
+    /// The result of the power operation.
+    /// </returns>
     public static double Pow(this double x, double exponent) => Math.Pow(x, exponent);
 
     /// <summary>

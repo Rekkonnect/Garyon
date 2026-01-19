@@ -12,17 +12,23 @@ public static class UpcastingCollectionExtensions
     /// Upcasts the given <see cref="IList{T}"/> into a list of
     /// <typeparamref name="TUp"/> instances.
     /// </summary>
-    /// <typeparam name="TBase">The base type of the list's elements.</typeparam>
-    /// <typeparam name="TUp">The type to upcast all of the list's elements.</typeparam>
-    /// <param name="source">The source list to upcast.</param>
+    /// <typeparam name="TBase">
+    /// The base type of the list's elements.
+    /// </typeparam>
+    /// <typeparam name="TUp">
+    /// The type to upcast all of the list's elements.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source list to upcast.
+    /// </param>
     /// <returns>
     /// An instance that returns the source list's elements cast into
     /// <typeparamref name="TUp"/>.
     /// </returns>
     /// <remarks>
-    /// No validation is performed on whether all the elements of the list
-    /// are <typeparamref name="TUp"/>. This method is unsafe and should be
-    /// used on lists where it is known. Upcast elements that are not
+    /// No validation is performed on whether all the elements of the list are
+    /// <typeparamref name="TUp"/>. This method is unsafe and should be used on
+    /// lists where it is known. Upcast elements that are not
     /// <typeparamref name="TUp"/> will be returned as <see langword="null"/>.
     /// </remarks>
     public static IList<TUp> UpcastList<TBase, TUp>(this IList<TBase> source)
@@ -34,17 +40,23 @@ public static class UpcastingCollectionExtensions
     /// Upcasts the given <see cref="IReadOnlyList{T}"/> into a list of
     /// <typeparamref name="TUp"/> instances.
     /// </summary>
-    /// <typeparam name="TBase">The base type of the list's elements.</typeparam>
-    /// <typeparam name="TUp">The type to upcast all of the list's elements.</typeparam>
-    /// <param name="source">The source list to upcast.</param>
+    /// <typeparam name="TBase">
+    /// The base type of the list's elements.
+    /// </typeparam>
+    /// <typeparam name="TUp">
+    /// The type to upcast all of the list's elements.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source list to upcast.
+    /// </param>
     /// <returns>
     /// An instance that returns the source list's elements cast into
     /// <typeparamref name="TUp"/>.
     /// </returns>
     /// <remarks>
-    /// No validation is performed on whether all the elements of the list
-    /// are <typeparamref name="TUp"/>. This method is unsafe and should be
-    /// used on lists where it is known. Upcast elements that are not
+    /// No validation is performed on whether all the elements of the list are
+    /// <typeparamref name="TUp"/>. This method is unsafe and should be used on
+    /// lists where it is known. Upcast elements that are not
     /// <typeparamref name="TUp"/> will be returned as <see langword="null"/>.
     /// </remarks>
     public static IReadOnlyList<TUp> UpcastReadOnlyList<TBase, TUp>(

@@ -1,8 +1,8 @@
 ﻿namespace Garyon.Objects.Strings;
 
 /// <summary>
-/// Contains facts about common whitespace characters, including the
-/// characters or strings themselves and their properties.
+/// Contains facts about common whitespace characters, including the characters
+/// or strings themselves and their properties.
 /// </summary>
 public static class WhitespaceFacts
 {

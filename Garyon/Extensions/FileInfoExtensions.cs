@@ -42,18 +42,20 @@ public static class FileInfoExtensions
         }
 
         /// <summary>
-        /// Moves the file to a parent directory, up to a number of levels.
-        /// If the levels are more than the current depth of the file, an
-        /// exception will be thrown.
+        /// Moves the file to a parent directory, up to a number of levels. If
+        /// the levels are more than the current depth of the file, an exception
+        /// will be thrown.
         /// </summary>
-        /// <param name="levels">The number of levels to move up.</param>
+        /// <param name="levels">
+        /// The number of levels to move up.
+        /// </param>
         /// <returns>
-        /// The <seealso cref="FileInfo"/> that was moved, containing its
-        /// new information after it was moved.
+        /// The <seealso cref="FileInfo"/> that was moved, containing its new
+        /// information after it was moved.
         /// </returns>
         /// <remarks>
-        /// Consider using <seealso cref="MoveUpBound(FileInfo, int)"/> if
-        /// the depth of the file is not meant to be at least the provided.
+        /// Consider using <seealso cref="MoveUpBound(FileInfo, int)"/> if the
+        /// depth of the file is not meant to be at least the provided.
         /// </remarks>
         public FileInfo MoveUp(int levels = 1)
         {
@@ -62,14 +64,16 @@ public static class FileInfoExtensions
             return file.MoveToDirectory(newDirectory);
         }
         /// <summary>
-        /// Moves the file to a parent directory, up to a number of levels.
-        /// If the levels are more than the current depth of the file, it
-        /// will be moved to the root of the drive.
+        /// Moves the file to a parent directory, up to a number of levels. If
+        /// the levels are more than the current depth of the file, it will be
+        /// moved to the root of the drive.
         /// </summary>
-        /// <param name="levels">The number of levels to move up.</param>
+        /// <param name="levels">
+        /// The number of levels to move up.
+        /// </param>
         /// <returns>
-        /// The <seealso cref="FileInfo"/> that was moved, containing its
-        /// new information after it was moved.
+        /// The <seealso cref="FileInfo"/> that was moved, containing its new
+        /// information after it was moved.
         /// </returns>
         public FileInfo MoveUpBound(int levels = 1)
         {
@@ -84,24 +88,36 @@ public static class FileInfoExtensions
         /// <summary>
         /// Moves the file to another directory, preserving its file name.
         /// </summary>
-        /// <param name="directory">The new directory to move the file to.</param>
-        /// <returns>The file info of the moved file.</returns>
+        /// <param name="directory">
+        /// The new directory to move the file to.
+        /// </param>
+        /// <returns>
+        /// The file info of the moved file.
+        /// </returns>
         public FileInfo MoveToDirectory(DirectoryInfo directory)
         {
             return MoveTo(file, directory, file.Name);
         }
 
         /// <summary>
-        /// Moves the file to another directory, and changes its name
-        /// and extension.
+        /// Moves the file to another directory, and changes its name and
+        /// extension.
         /// </summary>
-        /// <param name="directory">The new directory that will contain the file.</param>
-        /// <param name="name">The new name of the file without the extension.</param>
-        /// <param name="extension">The new extension of the file.</param>
-        /// <returns>The file info of the moved file.</returns>
+        /// <param name="directory">
+        /// The new directory that will contain the file.
+        /// </param>
+        /// <param name="name">
+        /// The new name of the file without the extension.
+        /// </param>
+        /// <param name="extension">
+        /// The new extension of the file.
+        /// </param>
+        /// <returns>
+        /// The file info of the moved file.
+        /// </returns>
         /// <remarks>
-        /// This method only uses one IO operation, effectively changing
-        /// the absolute file path.
+        /// This method only uses one IO operation, effectively changing the
+        /// absolute file path.
         /// </remarks>
         public FileInfo MoveTo(DirectoryInfo directory, string name, string extension)
         {
@@ -117,30 +133,46 @@ public static class FileInfoExtensions
             return file;
         }
 
-        /// <summary>Renames a file, changing both its name and extension.</summary>
-        /// <param name="nameWithExtension">The new name to set, including its extension.</param>
-        /// <returns>The file info of the renamed file.</returns>
+        /// <summary>
+        /// Renames a file, changing both its name and extension.
+        /// </summary>
+        /// <param name="nameWithExtension">
+        /// The new name to set, including its extension.
+        /// </param>
+        /// <returns>
+        /// The file info of the renamed file.
+        /// </returns>
         /// <remarks>
-        /// Consider using <seealso cref="RenameWithoutExtension(FileInfo, string)"/>
-        /// to preserve the extension, or <seealso cref="ChangeExtension(FileInfo, string)"/>
-        /// to only change the extension of the file.
+        /// Consider using
+        /// <seealso cref="RenameWithoutExtension(FileInfo, string)"/> to
+        /// preserve the extension, or
+        /// <seealso cref="ChangeExtension(FileInfo, string)"/> to only change
+        /// the extension of the file.
         /// </remarks>
         public FileInfo Rename(string nameWithExtension)
         {
             return MoveTo(file, file.Directory!, nameWithExtension);
         }
-        /// <summary>Renames a file, changing both its name and extension.</summary>
-        /// <param name="name">The new name to set to the file, excluding its extension.</param>
-        /// <param name="extension">
-        /// The new extension to set to the file. Specifying <see langword="null"/>,
-        /// <seealso cref="string.Empty"/>, or a string only with whitespace will
-        /// not add any extension to the file name.
+        /// <summary>
+        /// Renames a file, changing both its name and extension.
+        /// </summary>
+        /// <param name="name">
+        /// The new name to set to the file, excluding its extension.
         /// </param>
-        /// <returns>The file info of the renamed file.</returns>
+        /// <param name="extension">
+        /// The new extension to set to the file. Specifying
+        /// <see langword="null"/>, <seealso cref="string.Empty"/>, or a string
+        /// only with whitespace will not add any extension to the file name.
+        /// </param>
+        /// <returns>
+        /// The file info of the renamed file.
+        /// </returns>
         /// <remarks>
-        /// Consider using <seealso cref="RenameWithoutExtension(FileInfo, string)"/>
-        /// to preserve the extension, or <seealso cref="ChangeExtension(FileInfo, string)"/>
-        /// to only change the extension of the file.
+        /// Consider using
+        /// <seealso cref="RenameWithoutExtension(FileInfo, string)"/> to
+        /// preserve the extension, or
+        /// <seealso cref="ChangeExtension(FileInfo, string)"/> to only change
+        /// the extension of the file.
         /// </remarks>
         public FileInfo Rename(string name, string extension)
         {
@@ -153,7 +185,9 @@ public static class FileInfoExtensions
         /// <summary>
         /// Removes the extension of a file, preserving its name.
         /// </summary>
-        /// <returns>The file with the removed extension.</returns>
+        /// <returns>
+        /// The file with the removed extension.
+        /// </returns>
         public FileInfo RemoveExtension()
         {
             var extensionlessName = Path.GetFileNameWithoutExtension(file.Name);
@@ -168,7 +202,9 @@ public static class FileInfoExtensions
         /// given a file "notes.txt", changing its extensionless name to
         /// "notes.dat" will result in the file being named "notes.dat.txt".
         /// </param>
-        /// <returns>The file info of the renamed file.</returns>
+        /// <returns>
+        /// The file info of the renamed file.
+        /// </returns>
         public FileInfo RenameWithoutExtension(string extensionlessName)
         {
             var extension = Path.GetExtension(file.Name);
@@ -181,7 +217,9 @@ public static class FileInfoExtensions
         /// <param name="extension">
         /// The new extension to set to the file.
         /// </param>
-        /// <returns>The file info of the renamed file.</returns>
+        /// <returns>
+        /// The file info of the renamed file.
+        /// </returns>
         public FileInfo ChangeExtension(string extension)
         {
             var extensionlessName = Path.GetFileNameWithoutExtension(file.Name);
@@ -213,7 +251,8 @@ public static class FileInfoExtensions
         }
 
         /// <summary>
-        /// Writes all bytes using <see cref="File.WriteAllBytes(string, byte[])"/>.
+        /// Writes all bytes using
+        /// <see cref="File.WriteAllBytes(string, byte[])"/>.
         /// </summary>
         public void WriteAllBytes(byte[] bytes)
         {
@@ -231,7 +270,8 @@ public static class FileInfoExtensions
 #endif
 
         /// <summary>
-        /// Writes all text using <see cref="File.WriteAllText(string, string)"/>.
+        /// Writes all text using
+        /// <see cref="File.WriteAllText(string, string)"/>.
         /// </summary>
         public void WriteAllText(string content)
         {
@@ -239,7 +279,8 @@ public static class FileInfoExtensions
         }
 
         /// <summary>
-        /// Writes all text using <see cref="File.WriteAllText(string, string, Encoding)"/>.
+        /// Writes all text using
+        /// <see cref="File.WriteAllText(string, string, Encoding)"/>.
         /// </summary>
         public void WriteAllText(string content, Encoding encoding)
         {
@@ -265,7 +306,8 @@ public static class FileInfoExtensions
 #endif
 
         /// <summary>
-        /// Writes all lines using <see cref="File.WriteAllLines(string, string[])"/>.
+        /// Writes all lines using
+        /// <see cref="File.WriteAllLines(string, string[])"/>.
         /// </summary>
         public void WriteAllLines(string[] lines)
         {
@@ -273,7 +315,8 @@ public static class FileInfoExtensions
         }
 
         /// <summary>
-        /// Writes all lines using <see cref="File.WriteAllLines(string, string[], Encoding)"/>.
+        /// Writes all lines using
+        /// <see cref="File.WriteAllLines(string, string[], Encoding)"/>.
         /// </summary>
         public void WriteAllLines(string[] lines, Encoding encoding)
         {
@@ -281,7 +324,8 @@ public static class FileInfoExtensions
         }
 
         /// <summary>
-        /// Writes all lines using <see cref="File.WriteAllLines(string, IEnumerable{string})"/>.
+        /// Writes all lines using
+        /// <see cref="File.WriteAllLines(string, IEnumerable{string})"/>.
         /// </summary>
         public void WriteAllLines(IEnumerable<string> lines)
         {
@@ -289,7 +333,8 @@ public static class FileInfoExtensions
         }
 
         /// <summary>
-        /// Writes all lines using <see cref="File.WriteAllLines(string, IEnumerable{string}, Encoding)"/>.
+        /// Writes all lines using
+        /// <see cref="File.WriteAllLines(string, IEnumerable{string}, Encoding)"/>.
         /// </summary>
         public void WriteAllLines(IEnumerable<string> lines, Encoding encoding)
         {

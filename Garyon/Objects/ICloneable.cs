@@ -6,7 +6,8 @@ namespace Garyon.Objects;
 /// Denotes that an object is cloneable into a target type, usually itself.
 /// </summary>
 /// <typeparam name="T">
-/// The type of the cloned object. Usually it's the type itself that implements this interface.
+/// The type of the cloned object. Usually it's the type itself that implements
+/// this interface.
 /// </typeparam>
 public interface ICloneable<T> : ICloneable
     where T : notnull
@@ -18,6 +19,8 @@ public interface ICloneable<T> : ICloneable
     /// <summary>
     /// Clones this instance into a new object and returns the cloned object.
     /// </summary>
-    /// <returns>The cloned object.</returns>
+    /// <returns>
+    /// The cloned object.
+    /// </returns>
     public new T Clone();
 }

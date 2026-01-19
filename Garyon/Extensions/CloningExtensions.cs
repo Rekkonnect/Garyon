@@ -12,12 +12,18 @@ namespace Garyon.Extensions;
 public static class CloningExtensions
 {
     /// <summary>
-    /// Clones a range of <see cref="ICloneable{T}"/> values into a new enumerable.
+    /// Clones a range of <see cref="ICloneable{T}"/> values into a new
+    /// enumerable.
     /// </summary>  
-    /// <typeparam name="TElement">The type of the element.</typeparam>
-    /// <param name="range">The values to clone.</param>
+    /// <typeparam name="TElement">
+    /// The type of the element.
+    /// </typeparam>
+    /// <param name="range">
+    /// The values to clone.
+    /// </param>
     /// <returns>
-    /// An enumerable with the cloned instances. The values are lazily returned via
+    /// An enumerable with the cloned instances. The values are lazily returned
+    /// via
     /// <see cref="Enumerable.Select{TSource, TResult}(IEnumerable{TSource}, Func{TSource, TResult})"/>.
     /// </returns>
     public static IEnumerable<TElement> CloneRange<TElement>(this IEnumerable<TElement> range)
@@ -29,8 +35,12 @@ public static class CloningExtensions
     /// <summary>
     /// Clones a range of <see cref="ICloneable{T}"/> values into a new list.
     /// </summary>
-    /// <typeparam name="TElement">The type of the element.</typeparam>
-    /// <param name="range">The values to clone.</param>
+    /// <typeparam name="TElement">
+    /// The type of the element.
+    /// </typeparam>
+    /// <param name="range">
+    /// The values to clone.
+    /// </param>
     /// <returns>
     /// A list with the cloned instances.
     /// </returns>
@@ -43,10 +53,15 @@ public static class CloningExtensions
     /// <summary>
     /// Clones a range of <see cref="ICloneable"/> values into a new enumerable.
     /// </summary>  
-    /// <typeparam name="TElement">The type of the element.</typeparam>
-    /// <param name="range">The values to clone.</param>
+    /// <typeparam name="TElement">
+    /// The type of the element.
+    /// </typeparam>
+    /// <param name="range">
+    /// The values to clone.
+    /// </param>
     /// <returns>
-    /// An enumerable with the cloned instances. The values are lazily returned via
+    /// An enumerable with the cloned instances. The values are lazily returned
+    /// via
     /// <see cref="Enumerable.Select{TSource, TResult}(IEnumerable{TSource}, Func{TSource, TResult})"/>.
     /// </returns>
     public static IEnumerable<TElement> CloneRangeNonGeneric<TElement>(this IEnumerable<TElement> range)
@@ -60,8 +75,12 @@ public static class CloningExtensions
     /// <summary>
     /// Clones a range of <see cref="ICloneable"/> values into a new list.
     /// </summary>
-    /// <typeparam name="TElement">The type of the element.</typeparam>
-    /// <param name="range">The values to clone.</param>
+    /// <typeparam name="TElement">
+    /// The type of the element.
+    /// </typeparam>
+    /// <param name="range">
+    /// The values to clone.
+    /// </param>
     /// <returns>
     /// A list with the cloned instances.
     /// </returns>

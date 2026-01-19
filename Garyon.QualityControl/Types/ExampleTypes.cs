@@ -4,39 +4,87 @@ using System.Reflection;
 
 namespace Garyon.QualityControl.Types;
 
-/// <summary>Provides definitions for example types.</summary>
+/// <summary>
+/// Provides definitions for example types.
+/// </summary>
 public class ExampleTypes
 {
-    /// <summary>This type does not inherit any other type.</summary>
+    /// <summary>
+    /// This type does not inherit any other type.
+    /// </summary>
     protected interface IA { }
-    /// <summary>This type does not inherit any other type.</summary>
+    /// <summary>
+    /// This type does not inherit any other type.
+    /// </summary>
     protected interface IB { }
-    /// <summary>This type does not inherit any other type.</summary>
+    /// <summary>
+    /// This type does not inherit any other type.
+    /// </summary>
     protected interface IC { }
-    /// <summary>This type inherits <seealso cref="IA"/>, <seealso cref="IB"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="IA"/>, <seealso cref="IB"/>.
+    /// </summary>
     protected interface ID : IA, IB { } // IA, IB
-    /// <summary>This type inherits <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IC"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="IA"/>, <seealso cref="IB"/>,
+    /// <seealso cref="IC"/>.
+    /// </summary>
     protected interface IE : IA, IB, IC { } // IA, IB, IC
-    /// <summary>This type inherits <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IE"/>, <seealso cref="IC"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="ID"/>, <seealso cref="IA"/>,
+    /// <seealso cref="IB"/>, <seealso cref="IE"/>, <seealso cref="IC"/>.
+    /// </summary>
     protected interface IF : ID, IE { } // ID, IA, IB, IE, IC
-    /// <summary>This type inherits <seealso cref="IF"/>, <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IE"/>, <seealso cref="IC"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="IF"/>, <seealso cref="ID"/>,
+    /// <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IE"/>,
+    /// <seealso cref="IC"/>.
+    /// </summary>
     protected interface IG : IF { } // IF, ID, IA, IB, IE, IC
-    /// <summary>This type does not inherit any other type.</summary>
+    /// <summary>
+    /// This type does not inherit any other type.
+    /// </summary>
     protected interface IH { }
-    /// <summary>This type inherits <seealso cref="IH"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="IH"/>.
+    /// </summary>
     protected interface II : IH { } // IH
-    /// <summary>This type does not inherit any other type.</summary>
+    /// <summary>
+    /// This type does not inherit any other type.
+    /// </summary>
     protected interface IJ { }
-    /// <summary>This type inherits <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IJ"/>, <seealso cref="II"/>, <seealso cref="IH"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="ID"/>, <seealso cref="IA"/>,
+    /// <seealso cref="IB"/>, <seealso cref="IJ"/>, <seealso cref="II"/>,
+    /// <seealso cref="IH"/>.
+    /// </summary>
     protected interface IK : ID, IJ, II { } // ID, IA, IB, IJ, II, IH
 
-    /// <summary>This type inherits <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IJ"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="ID"/>, <seealso cref="IA"/>,
+    /// <seealso cref="IB"/>, <seealso cref="IJ"/>.
+    /// </summary>
     protected class CA : ID, IJ { } // ID, IA, IB, IJ
-    /// <summary>This type inherits <seealso cref="CA"/>, <seealso cref="IK"/>, <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IJ"/>, <seealso cref="II"/>, <seealso cref="IH"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="CA"/>, <seealso cref="IK"/>,
+    /// <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>,
+    /// <seealso cref="IJ"/>, <seealso cref="II"/>, <seealso cref="IH"/>.
+    /// </summary>
     protected class CB : CA, IK { } // CA, IK, ID, IA, IB, IJ, II, IH
-    /// <summary>This type inherits <seealso cref="CB"/>, <seealso cref="CA"/>, <seealso cref="IC"/>, <seealso cref="IK"/>, <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IJ"/>, <seealso cref="II"/>, <seealso cref="IH"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="CB"/>, <seealso cref="CA"/>,
+    /// <seealso cref="IC"/>, <seealso cref="IK"/>, <seealso cref="ID"/>,
+    /// <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IJ"/>,
+    /// <seealso cref="II"/>, <seealso cref="IH"/>.
+    /// </summary>
     protected class CC : CB, IC { } // CB, CA, IC, IK, ID, IA, IB, IJ, II, IH
-    /// <summary>This type inherits <seealso cref="CC"/>, <seealso cref="CB"/>, <seealso cref="CA"/>, <seealso cref="IE"/>, <seealso cref="IC"/>, <seealso cref="IK"/>, <seealso cref="ID"/>, <seealso cref="IA"/>, <seealso cref="IB"/>, <seealso cref="IJ"/>, <seealso cref="II"/>, <seealso cref="IH"/>.</summary>
+    /// <summary>
+    /// This type inherits <seealso cref="CC"/>, <seealso cref="CB"/>,
+    /// <seealso cref="CA"/>, <seealso cref="IE"/>, <seealso cref="IC"/>,
+    /// <seealso cref="IK"/>, <seealso cref="ID"/>, <seealso cref="IA"/>,
+    /// <seealso cref="IB"/>, <seealso cref="IJ"/>, <seealso cref="II"/>,
+    /// <seealso cref="IH"/>.
+    /// </summary>
     protected class CD : CC, IE { } // CC, CB, CA, IE, IC, IK, ID, IA, IB, IJ, II, IH
 
     protected struct SA : ID { } // ID, IA, IB

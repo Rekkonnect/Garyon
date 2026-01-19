@@ -5,8 +5,8 @@ using System.Threading;
 namespace Garyon.Mechanisms;
 
 /// <summary>
-/// Represents a delayer that keeps track of the next time moment that
-/// it can be unblocked, allowing awaiting the next unblock.
+/// Represents a delayer that keeps track of the next time moment that it can be
+/// unblocked, allowing awaiting the next unblock.
 /// </summary>
 public sealed class Delayer
 {
@@ -14,21 +14,21 @@ public sealed class Delayer
     private Task? _delayTask;
 
     /// <summary>
-    /// Denotes whether the delayer has registered a task for awaiting
-    /// the next unblock.
+    /// Denotes whether the delayer has registered a task for awaiting the next
+    /// unblock.
     /// </summary>
     public bool IsWaiting => _delayTask is not null;
 
     /// <summary>
-    /// Sets the next unblock time to <see cref="DateTime.Now"/> plus
-    /// the specified <see cref="TimeSpan"/>.
+    /// Sets the next unblock time to <see cref="DateTime.Now"/> plus the
+    /// specified <see cref="TimeSpan"/>.
     /// </summary>
     /// <param name="span">
     /// The timespan representing the offset from the current time.
     /// </param>
     /// <remarks>
-    /// If the next unblock is already set to a later time, this method
-    /// does not overwrite the next unblock time.
+    /// If the next unblock is already set to a later time, this method does not
+    /// overwrite the next unblock time.
     /// </remarks>
     public void SetFutureUnblock(TimeSpan span)
     {
@@ -43,8 +43,8 @@ public sealed class Delayer
     /// The time to set the next unblock time to.
     /// </param>
     /// <remarks>
-    /// If the next unblock is already set to a later time, this method
-    /// does not overwrite the next unblock time.
+    /// If the next unblock is already set to a later time, this method does not
+    /// overwrite the next unblock time.
     /// </remarks>
     public void ExtendNextUnblock(DateTime next)
     {
@@ -57,14 +57,15 @@ public sealed class Delayer
     }
 
     /// <summary>
-    /// Cancels the next unblock time, effectively unblocking the delayer
-    /// and allowing any unblock time to be set.
+    /// Cancels the next unblock time, effectively unblocking the delayer and
+    /// allowing any unblock time to be set.
     /// </summary>
     /// <remarks>
     /// If an active await task is present, it will be ignored but not
-    /// cancelled. The task returned from <see cref="WaitUnblock(CancellationToken)"/>
-    /// must have its cancellation token signal the cancellation manually
-    /// in order to avoid waiting for the original unblock time.
+    /// cancelled. The task returned from
+    /// <see cref="WaitUnblock(CancellationToken)"/> must have its cancellation
+    /// token signal the cancellation manually in order to avoid waiting for the
+    /// original unblock time.
     /// </remarks>
     public void CancelUnblock()
     {
@@ -84,8 +85,8 @@ public sealed class Delayer
     /// A task representing the awaiting of the next unblock time.
     /// </returns>
     /// <remarks>
-    /// The <paramref name="cancellationToken"/> must be manually cancelled
-    /// if <see cref="CancelUnblock"/> is called while awaiting the task.
+    /// The <paramref name="cancellationToken"/> must be manually cancelled if
+    /// <see cref="CancelUnblock"/> is called while awaiting the task.
     /// </remarks>
     public async Task WaitUnblock(CancellationToken cancellationToken)
     {

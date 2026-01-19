@@ -19,11 +19,15 @@ namespace Garyon.Reflection;
 public static class CodedEnumInfo
 {
     /// <summary>
-    /// Parses the given code for a given enum type, and returns
-    /// the enum field that bears the given code.
+    /// Parses the given code for a given enum type, and returns the enum field
+    /// that bears the given code.
     /// </summary>
-    /// <param name="enumType">The type of the enum to look into.</param>
-    /// <param name="code">The code of the enum field.</param>
+    /// <param name="enumType">
+    /// The type of the enum to look into.
+    /// </param>
+    /// <param name="code">
+    /// The code of the enum field.
+    /// </param>
     /// <returns>
     /// The value of the enum type that contains the given code.
     /// </returns>
@@ -39,8 +43,8 @@ public static class CodedEnumInfo
     /// Gets the code for the respective enum value.
     /// </summary>
     /// <param name="enumValue">
-    /// The enum field whose code to get. Combinations of flag values
-    /// are not supported.
+    /// The enum field whose code to get. Combinations of flag values are not
+    /// supported.
     /// </param>
     /// <returns>
     /// The the code that the enum value is mapped to.
@@ -55,16 +59,19 @@ public static class CodedEnumInfo
         return method.Invoke<string>(null, [enumValue])!;
     }
     /// <summary>
-    /// Parses the given code for a given enum type, and returns
-    /// the enum field that bears the given code. If the code is
-    /// not found on the enum, the default value of the enum is
-    /// returned.
+    /// Parses the given code for a given enum type, and returns the enum field
+    /// that bears the given code. If the code is not found on the enum, the
+    /// default value of the enum is returned.
     /// </summary>
-    /// <param name="enumType">The type of the enum to look into.</param>
-    /// <param name="code">The code of the enum field.</param>
+    /// <param name="enumType">
+    /// The type of the enum to look into.
+    /// </param>
+    /// <param name="code">
+    /// The code of the enum field.
+    /// </param>
     /// <returns>
-    /// The value of the enum type that contains the given code,
-    /// or the default value of the enum if the code is not found.
+    /// The value of the enum type that contains the given code, or the default
+    /// value of the enum if the code is not found.
     /// </returns>
     public static Enum ParseCodeOrDefault(Type enumType, string code)
     {
@@ -73,19 +80,20 @@ public static class CodedEnumInfo
         return method.Invoke<Enum>(null, [code, defaultValue])!;
     }
     /// <summary>
-    /// Parses the given code for a given enum type, and returns
-    /// the enum field that bears the given code. If the code is
-    /// not found on the enum, the specified default value is returned.
-    /// The specified default value implies the type of the enum
-    /// whose code to look for.
+    /// Parses the given code for a given enum type, and returns the enum field
+    /// that bears the given code. If the code is not found on the enum, the
+    /// specified default value is returned. The specified default value implies
+    /// the type of the enum whose code to look for.
     /// </summary>
-    /// <param name="code">The code of the enum field.</param>
+    /// <param name="code">
+    /// The code of the enum field.
+    /// </param>
     /// <param name="defaultValue">
     /// The default value to return if the code is not found in the enum.
     /// </param>
     /// <returns>
-    /// The value of the enum type that contains the given code,
-    /// or the specified default value if the code is not found.
+    /// The value of the enum type that contains the given code, or the
+    /// specified default value if the code is not found.
     /// </returns>
     public static Enum ParseCodeOrDefault(string code, Enum defaultValue)
     {
@@ -94,17 +102,15 @@ public static class CodedEnumInfo
         return method.Invoke<Enum>(null, [code, defaultValue])!;
     }
     /// <summary>
-    /// Gets the code for the respective enum value. If the value
-    /// does not have a code associated with it, the specified
-    /// default value is returned.
+    /// Gets the code for the respective enum value. If the value does not have
+    /// a code associated with it, the specified default value is returned.
     /// </summary>
     /// <param name="enumValue">
-    /// The enum field whose code to get. Combinations of flag values
-    /// are not supported.
+    /// The enum field whose code to get. Combinations of flag values are not
+    /// supported.
     /// </param>
     /// <param name="defaultCode">
-    /// The default value to return if the value does not have a
-    /// code.
+    /// The default value to return if the value does not have a code.
     /// </param>
     /// <returns>
     /// The the code that the enum value is mapped to.

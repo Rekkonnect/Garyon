@@ -15,11 +15,21 @@ public static class PendingLinqExtensions
     // When this goes to System.Linq.Enumerable (if at all), change the code responsible for the ThrowHelper
     // TODO: Change the code for the nullable variants of the functions to comply with that of dotnet/runtime
 
-    /// <summary>Computes the sum of a sequence of <seealso cref="uint"/> values.</summary>
-    /// <param name="source">A sequence of <seealso cref="uint"/> values to calculate the sum of.</param>
-    /// <returns>The sum of the values in the sequence.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="uint.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of a sequence of <seealso cref="uint"/> values.
+    /// </summary>
+    /// <param name="source">
+    /// A sequence of <seealso cref="uint"/> values to calculate the sum of.
+    /// </param>
+    /// <returns>
+    /// The sum of the values in the sequence.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> is <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="uint.MaxValue"/>.
+    /// </exception>
     public static uint Sum(this IEnumerable<uint> source)
     {
         if (source == null)
@@ -39,11 +49,23 @@ public static class PendingLinqExtensions
         return sum;
     }
 
-    /// <summary>Computes the sum of a sequence of nullable <seealso cref="uint"/> values.</summary>
-    /// <param name="source">A sequence of nullable <seealso cref="uint"/> values to calculate the sum of.</param>
-    /// <returns>The sum of the values in the sequence.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="uint.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of a sequence of nullable <seealso cref="uint"/>
+    /// values.
+    /// </summary>
+    /// <param name="source">
+    /// A sequence of nullable <seealso cref="uint"/> values to calculate the
+    /// sum of.
+    /// </param>
+    /// <returns>
+    /// The sum of the values in the sequence.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> is <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="uint.MaxValue"/>.
+    /// </exception>
     public static uint? Sum(this IEnumerable<uint?> source)
     {
         if (source == null)
@@ -63,11 +85,21 @@ public static class PendingLinqExtensions
         return sum;
     }
 
-    /// <summary>Computes the sum of a sequence of <seealso cref="ulong"/> values.</summary>
-    /// <param name="source">A sequence of <seealso cref="ulong"/> values to calculate the sum of.</param>
-    /// <returns>The sum of the values in the sequence.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="ulong.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of a sequence of <seealso cref="ulong"/> values.
+    /// </summary>
+    /// <param name="source">
+    /// A sequence of <seealso cref="ulong"/> values to calculate the sum of.
+    /// </param>
+    /// <returns>
+    /// The sum of the values in the sequence.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> is <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="ulong.MaxValue"/>.
+    /// </exception>
     public static ulong Sum(this IEnumerable<ulong> source)
     {
         if (source == null)
@@ -87,11 +119,23 @@ public static class PendingLinqExtensions
         return sum;
     }
 
-    /// <summary>Computes the sum of a sequence of nullable <seealso cref="ulong"/> values.</summary>
-    /// <param name="source">A sequence of nullable <seealso cref="ulong"/> values to calculate the sum of.</param>
-    /// <returns>The sum of the values in the sequence.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="ulong.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of a sequence of nullable <seealso cref="ulong"/>
+    /// values.
+    /// </summary>
+    /// <param name="source">
+    /// A sequence of nullable <seealso cref="ulong"/> values to calculate the
+    /// sum of.
+    /// </param>
+    /// <returns>
+    /// The sum of the values in the sequence.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> is <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="ulong.MaxValue"/>.
+    /// </exception>
     public static ulong? Sum(this IEnumerable<ulong?> source)
     {
         if (source == null)
@@ -113,13 +157,30 @@ public static class PendingLinqExtensions
 
     // Selectors
 
-    /// <summary>Computes the sum of the sequence of <seealso cref="uint"/> values that are obtained by invoking a transform function on each element of the input sequence.</summary>
-    /// <typeparam name="TSource">The type of the elements of source.</typeparam>
-    /// <param name="source">A sequence of values that are used to calculate a sum.</param>
-    /// <param name="selector">A transform function to apply to each element.</param>
-    /// <returns>The sum of the projected values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="selector"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="uint.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of the sequence of <seealso cref="uint"/> values that
+    /// are obtained by invoking a transform function on each element of the
+    /// input sequence.
+    /// </summary>
+    /// <typeparam name="TSource">
+    /// The type of the elements of source.
+    /// </typeparam>
+    /// <param name="source">
+    /// A sequence of values that are used to calculate a sum.
+    /// </param>
+    /// <param name="selector">
+    /// A transform function to apply to each element.
+    /// </param>
+    /// <returns>
+    /// The sum of the projected values.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> or <paramref name="selector"/> is
+    /// <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="uint.MaxValue"/>.
+    /// </exception>
     public static uint Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, uint> selector)
     {
         if (source == null)
@@ -144,13 +205,30 @@ public static class PendingLinqExtensions
         return sum;
     }
 
-    /// <summary>Computes the sum of the sequence of nullable <seealso cref="uint"/> values that are obtained by invoking a transform function on each element of the input sequence.</summary>
-    /// <typeparam name="TSource">The type of the elements of source.</typeparam>
-    /// <param name="source">A sequence of values that are used to calculate a sum.</param>
-    /// <param name="selector">A transform function to apply to each element.</param>
-    /// <returns>The sum of the projected values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="selector"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="uint.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of the sequence of nullable <seealso cref="uint"/>
+    /// values that are obtained by invoking a transform function on each
+    /// element of the input sequence.
+    /// </summary>
+    /// <typeparam name="TSource">
+    /// The type of the elements of source.
+    /// </typeparam>
+    /// <param name="source">
+    /// A sequence of values that are used to calculate a sum.
+    /// </param>
+    /// <param name="selector">
+    /// A transform function to apply to each element.
+    /// </param>
+    /// <returns>
+    /// The sum of the projected values.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> or <paramref name="selector"/> is
+    /// <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="uint.MaxValue"/>.
+    /// </exception>
     public static uint? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, uint?> selector)
     {
         if (source == null)
@@ -175,13 +253,30 @@ public static class PendingLinqExtensions
         return sum;
     }
 
-    /// <summary>Computes the sum of the sequence of <seealso cref="ulong"/> values that are obtained by invoking a transform function on each element of the input sequence.</summary>
-    /// <typeparam name="TSource">The type of the elements of source.</typeparam>
-    /// <param name="source">A sequence of values that are used to calculate a sum.</param>
-    /// <param name="selector">A transform function to apply to each element.</param>
-    /// <returns>The sum of the projected values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="selector"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="ulong.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of the sequence of <seealso cref="ulong"/> values that
+    /// are obtained by invoking a transform function on each element of the
+    /// input sequence.
+    /// </summary>
+    /// <typeparam name="TSource">
+    /// The type of the elements of source.
+    /// </typeparam>
+    /// <param name="source">
+    /// A sequence of values that are used to calculate a sum.
+    /// </param>
+    /// <param name="selector">
+    /// A transform function to apply to each element.
+    /// </param>
+    /// <returns>
+    /// The sum of the projected values.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> or <paramref name="selector"/> is
+    /// <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="ulong.MaxValue"/>.
+    /// </exception>
     public static ulong Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong> selector)
     {
         if (source == null)
@@ -206,13 +301,30 @@ public static class PendingLinqExtensions
         return sum;
     }
 
-    /// <summary>Computes the sum of the sequence of nullable <seealso cref="ulong"/> values that are obtained by invoking a transform function on each element of the input sequence.</summary>
-    /// <typeparam name="TSource">The type of the elements of source.</typeparam>
-    /// <param name="source">A sequence of values that are used to calculate a sum.</param>
-    /// <param name="selector">A transform function to apply to each element.</param>
-    /// <returns>The sum of the projected values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> or <paramref name="selector"/> is <see langword="null"/>.</exception>
-    /// <exception cref="OverflowException">The sum is larger than <seealso cref="ulong.MaxValue"/>.</exception>
+    /// <summary>
+    /// Computes the sum of the sequence of nullable <seealso cref="ulong"/>
+    /// values that are obtained by invoking a transform function on each
+    /// element of the input sequence.
+    /// </summary>
+    /// <typeparam name="TSource">
+    /// The type of the elements of source.
+    /// </typeparam>
+    /// <param name="source">
+    /// A sequence of values that are used to calculate a sum.
+    /// </param>
+    /// <param name="selector">
+    /// A transform function to apply to each element.
+    /// </param>
+    /// <returns>
+    /// The sum of the projected values.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="source"/> or <paramref name="selector"/> is
+    /// <see langword="null"/>.
+    /// </exception>
+    /// <exception cref="OverflowException">
+    /// The sum is larger than <seealso cref="ulong.MaxValue"/>.
+    /// </exception>
     public static ulong? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, ulong?> selector)
     {
         if (source == null)

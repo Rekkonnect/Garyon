@@ -6,9 +6,17 @@ namespace Garyon.Extensions.ArrayExtensions;
 public static class ArrayConversionExtensions
 {
     #region string[,] -> T[,]
-    /// <summary>Converts this <seealso cref="string"/>[,] into a <seealso cref="int"/>[,].</summary>
-    /// <param name="s">The <seealso cref="string"/>[,] to parse.</param>
-    /// <returns>A <seealso cref="int"/>[,] that contains the numerical values of the strings at their respective positions.</returns>
+    /// <summary>
+    /// Converts this <seealso cref="string"/>[,] into a
+    /// <seealso cref="int"/>[,].
+    /// </summary>
+    /// <param name="s">
+    /// The <seealso cref="string"/>[,] to parse.
+    /// </param>
+    /// <returns>
+    /// A <seealso cref="int"/>[,] that contains the numerical values of the
+    /// strings at their respective positions.
+    /// </returns>
     public static int[,] ToInt32Array(this string[,] s)
     {
         int a = s.GetLength(0);

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Garyon.Objects;
 
 /// <summary>
-/// A base implementation of <see cref="IEquatable{T}"/>, overriding
-/// the <see cref="object.Equals(object?)"/> method, and implementing the
-/// interface, with focus on comparing the non-null instance via
+/// A base implementation of <see cref="IEquatable{T}"/>, overriding the
+/// <see cref="object.Equals(object?)"/> method, and implementing the interface,
+/// with focus on comparing the non-null instance via
 /// <see cref="EqualsCore(T)"/>.
 /// </summary>
 #pragma warning disable CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()

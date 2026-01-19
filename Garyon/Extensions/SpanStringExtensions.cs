@@ -242,14 +242,18 @@ public static class SpanStringExtensions
 }
 
 /// <summary>
-/// Defines a selector delegate that converts a
-/// <seealso cref="SpanString"/> into a value.
+/// Defines a selector delegate that converts a <seealso cref="SpanString"/>
+/// into a value.
 /// </summary>
-/// <typeparam name="T">The type of the converted value.</typeparam>
+/// <typeparam name="T">
+/// The type of the converted value.
+/// </typeparam>
 /// <param name="spanString">
 /// The <seealso cref="SpanString"/> that is being converted.
 /// </param>
-/// <returns>The converted value.</returns>
+/// <returns>
+/// The converted value.
+/// </returns>
 public delegate T SpanStringSelector<T>(SpanString spanString);
 
 public static class SpanStringSelectors

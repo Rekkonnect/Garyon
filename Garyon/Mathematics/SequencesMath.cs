@@ -30,7 +30,8 @@ public static class SequencesMath
     }
 #else
     /// <summary>
-    /// Calculates the sum of all integers from 1 to <paramref name="max"/> (inclusive).
+    /// Calculates the sum of all integers from 1 to <paramref name="max"/>
+    /// (inclusive).
     /// </summary>
     public static int Sum(int max)
     {
@@ -38,8 +39,8 @@ public static class SequencesMath
     }
     
     /// <summary>
-    /// Calculates the sum of all integers from
-    /// <paramref name="start"/> to <paramref name="end"/> (inclusive).
+    /// Calculates the sum of all integers from <paramref name="start"/> to
+    /// <paramref name="end"/> (inclusive).
     /// </summary>
     public static int Sum(int start, int end)
     {

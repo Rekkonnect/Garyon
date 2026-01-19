@@ -9,7 +9,9 @@ namespace Garyon.Objects.Enumerators;
 /// <summary>
 /// Represents either a single value, an enumerable, or no value at all.
 /// </summary>
-/// <typeparam name="T">The type of the stored value(s).</typeparam>
+/// <typeparam name="T">
+/// The type of the stored value(s).
+/// </typeparam>
 public class SingleOrEnumerable<T> : IEnumerable<T>
 {
     private T? single;
@@ -25,17 +27,15 @@ public class SingleOrEnumerable<T> : IEnumerable<T>
     /// </summary>
     /// <remarks>
     /// If the <seealso cref="Kind"/> property does not return
-    /// <seealso cref="SingleOrEnumerableKind.Single"/>, an
-    /// exception is thrown.
+    /// <seealso cref="SingleOrEnumerableKind.Single"/>, an exception is thrown.
     /// <br/>
-    /// Setting the single value automatically adjusts the kind
-    /// of the stored value to
-    /// <seealso cref="SingleOrEnumerableKind.Single"/>.
+    /// Setting the single value automatically adjusts the kind of the stored
+    /// value to <seealso cref="SingleOrEnumerableKind.Single"/>.
     /// </remarks>
     /// <exception cref="InvalidOperationException">
     /// Thrown when the current kind is not
-    /// <seealso cref="SingleOrEnumerableKind.Single"/> when
-    /// trying to <see langword="get"/> the single value.
+    /// <seealso cref="SingleOrEnumerableKind.Single"/> when trying to
+    /// <see langword="get"/> the single value.
     /// </exception>
     public T Single
     {
@@ -58,17 +58,16 @@ public class SingleOrEnumerable<T> : IEnumerable<T>
     /// </summary>
     /// <remarks>
     /// If the <seealso cref="Kind"/> property does not return
-    /// <seealso cref="SingleOrEnumerableKind.Enumerable"/>, an
-    /// exception is thrown.
+    /// <seealso cref="SingleOrEnumerableKind.Enumerable"/>, an exception is
+    /// thrown.
     /// <br/>
-    /// Setting the enumerable values automatically adjusts the kind
-    /// of the stored value to
-    /// <seealso cref="SingleOrEnumerableKind.Enumerable"/>.
+    /// Setting the enumerable values automatically adjusts the kind of the
+    /// stored value to <seealso cref="SingleOrEnumerableKind.Enumerable"/>.
     /// </remarks>
     /// <exception cref="InvalidOperationException">
     /// Thrown when the current kind is not
-    /// <seealso cref="SingleOrEnumerableKind.Enumerable"/> when
-    /// trying to <see langword="get"/> the enumerable values.
+    /// <seealso cref="SingleOrEnumerableKind.Enumerable"/> when trying to
+    /// <see langword="get"/> the enumerable values.
     /// </exception>
     public IEnumerable<T> Enumerable
     {
@@ -138,19 +137,20 @@ public class SingleOrEnumerable<T> : IEnumerable<T>
     /// </summary>
     /// <returns>
     /// <list type="bullet">
-    /// <item>
-    /// <seealso cref="EmptyEnumerator{T}.Instance"/> for
-    /// <seealso cref="SingleOrEnumerableKind.None"/>
-    /// </item>
-    /// <item>
-    /// A <seealso cref="SingleValueEnumerator{T}"/> instance
-    /// for <seealso cref="SingleOrEnumerableKind.Single"/>
-    /// </item>
-    /// <item>
-    /// The enumerable values' enumerator instance for
-    /// <seealso cref="SingleOrEnumerableKind.Enumerable"/>
-    /// </item>
-    /// </list></returns>
+    ///     <item>
+    ///     <seealso cref="EmptyEnumerator{T}.Instance"/> for
+    ///     <seealso cref="SingleOrEnumerableKind.None"/>
+    ///     </item>
+    ///     <item>
+    ///     A <seealso cref="SingleValueEnumerator{T}"/> instance for
+    ///     <seealso cref="SingleOrEnumerableKind.Single"/>
+    ///     </item>
+    ///     <item>
+    ///     The enumerable values' enumerator instance for
+    ///     <seealso cref="SingleOrEnumerableKind.Enumerable"/>
+    ///     </item>
+    /// </list>
+    /// </returns>
     public IEnumerator<T> GetEnumerator()
     {
         return Kind switch

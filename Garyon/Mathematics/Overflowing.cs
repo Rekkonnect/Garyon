@@ -2,16 +2,28 @@
 
 namespace Garyon.Mathematics;
 
-/// <summary>Contains functions related to overflowing or underflowing.</summary>
+/// <summary>
+/// Contains functions related to overflowing or underflowing.
+/// </summary>
 public static class Overflowing
 {
     // Hate how this entire code has to be copy-pasted
 
     #region Addition
-    /// <summary>Determines whether adding two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether adding the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether adding two numbers will result in either an overflow
+    /// or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether adding the two numbers will result in either an overflow or an
+    /// underflow.
+    /// </returns>
     public static bool CheckIfAdditionOverflows(int x, int y)
     {
         if (x > 0 && y > 0 && y > int.MaxValue - x)
@@ -22,10 +34,20 @@ public static class Overflowing
 
         return false;
     }
-    /// <summary>Determines whether adding two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether adding the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether adding two numbers will result in either an overflow
+    /// or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether adding the two numbers will result in either an overflow or an
+    /// underflow.
+    /// </returns>
     public static bool CheckIfAdditionOverflows(uint x, uint y)
     {
         if (y > uint.MaxValue - x)
@@ -33,10 +55,20 @@ public static class Overflowing
 
         return false;
     }
-    /// <summary>Determines whether adding two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether adding the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether adding two numbers will result in either an overflow
+    /// or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether adding the two numbers will result in either an overflow or an
+    /// underflow.
+    /// </returns>
     public static bool CheckIfAdditionOverflows(long x, long y)
     {
         if (x > 0 && y > 0 && y > long.MaxValue - x)
@@ -47,10 +79,20 @@ public static class Overflowing
 
         return false;
     }
-    /// <summary>Determines whether adding two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether adding the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether adding two numbers will result in either an overflow
+    /// or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether adding the two numbers will result in either an overflow or an
+    /// underflow.
+    /// </returns>
     public static bool CheckIfAdditionOverflows(ulong x, ulong y)
     {
         if (y > ulong.MaxValue - x)
@@ -61,10 +103,20 @@ public static class Overflowing
     #endregion
 
     #region Multiplication
-    /// <summary>Determines whether multiplying two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether multiplying the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether multiplying two numbers will result in either an
+    /// overflow or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether multiplying the two numbers will result in either an overflow or
+    /// an underflow.
+    /// </returns>
     public static bool CheckIfMultiplicationOverflows(int x, int y)
     {
         // Cool pattern matching
@@ -101,10 +153,20 @@ public static class Overflowing
 
         return false;
     }
-    /// <summary>Determines whether multiplying two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether multiplying the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether multiplying two numbers will result in either an
+    /// overflow or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether multiplying the two numbers will result in either an overflow or
+    /// an underflow.
+    /// </returns>
     public static bool CheckIfMultiplicationOverflows(uint x, uint y)
     {
         switch (x, y)
@@ -123,10 +185,20 @@ public static class Overflowing
 
         return false;
     }
-    /// <summary>Determines whether multiplying two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether multiplying the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether multiplying two numbers will result in either an
+    /// overflow or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether multiplying the two numbers will result in either an overflow or
+    /// an underflow.
+    /// </returns>
     public static bool CheckIfMultiplicationOverflows(long x, long y)
     {
         switch (x, y)
@@ -162,10 +234,20 @@ public static class Overflowing
 
         return false;
     }
-    /// <summary>Determines whether multiplying two numbers will result in either an overflow or an underflow.</summary>
-    /// <param name="x">The one value to add.</param>
-    /// <param name="y">The other value to add.</param>
-    /// <returns>Whether multiplying the two numbers will result in either an overflow or an underflow.</returns>
+    /// <summary>
+    /// Determines whether multiplying two numbers will result in either an
+    /// overflow or an underflow.
+    /// </summary>
+    /// <param name="x">
+    /// The one value to add.
+    /// </param>
+    /// <param name="y">
+    /// The other value to add.
+    /// </param>
+    /// <returns>
+    /// Whether multiplying the two numbers will result in either an overflow or
+    /// an underflow.
+    /// </returns>
     public static bool CheckIfMultiplicationOverflows(ulong x, ulong y)
     {
         switch (x, y)

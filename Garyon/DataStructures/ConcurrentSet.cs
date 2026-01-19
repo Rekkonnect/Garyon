@@ -10,11 +10,14 @@ namespace Garyon.DataStructures;
 /// Provides a thread-safe set implementation based on
 /// <see cref="ConcurrentDictionary{TKey, TValue}"/>.
 /// </summary>
-/// <typeparam name="T">The type of values stored in the set.</typeparam>
+/// <typeparam name="T">
+/// The type of values stored in the set.
+/// </typeparam>
 /// <remarks>
-/// This encapsulates <see cref="ConcurrentDictionary{TKey, TValue}"/> as a concurrent set,
-/// using <see cref="byte"/> as the value type that is mapped from the key of <typeparamref name="T"/>.
-/// The idea of using byte is inspired by dotnet/roslyn.
+/// This encapsulates <see cref="ConcurrentDictionary{TKey, TValue}"/> as a
+/// concurrent set, using <see cref="byte"/> as the value type that is mapped
+/// from the key of <typeparamref name="T"/>. The idea of using byte is inspired
+/// by dotnet/roslyn.
 /// </remarks>
 public sealed class ConcurrentSet<T> : ISet<T>, IReadOnlyCollection<T>
     where T : notnull
@@ -67,8 +70,8 @@ public sealed class ConcurrentSet<T> : ISet<T>, IReadOnlyCollection<T>
     /// Tries to remove the value from the set.
     /// </summary>
     /// <returns>
-    /// <see langword="true"/> if the value was successfully removed;
-    /// otherwise <see langword="false"/>.
+    /// <see langword="true"/> if the value was successfully removed; otherwise
+    /// <see langword="false"/>.
     /// </returns>
     public bool TryRemove(T value)
     {

@@ -17,9 +17,9 @@ public enum SingleOrEnumerableKind
     /// </summary>
     Single,
     /// <summary>
-    /// An enumerable of values is stored. Note that the enumerable
-    /// could still only contain a single value, however it implements
-    /// the <seealso cref="IEnumerable{T}"/> interface.
+    /// An enumerable of values is stored. Note that the enumerable could still
+    /// only contain a single value, however it implements the
+    /// <seealso cref="IEnumerable{T}"/> interface.
     /// </summary>
     Enumerable,
 }

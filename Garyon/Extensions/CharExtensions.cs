@@ -2,37 +2,76 @@ using System.Globalization;
 
 namespace Garyon.Extensions;
 
-/// <summary>Provides extensions for the <seealso cref="char"/> type.</summary>
+/// <summary>
+/// Provides extensions for the <seealso cref="char"/> type.
+/// </summary>
 public static class CharExtensions
 {
     #region Letters & Digits
-    /// <summary>Checks whether the character is a lower case English letter.</summary>
-    /// <param name="c">The character to check whether it is a lower case English letter.</param>
+    /// <summary>
+    /// Checks whether the character is a lower case English letter.
+    /// </summary>
+    /// <param name="c">
+    /// The character to check whether it is a lower case English letter.
+    /// </param>
     public static bool IsLowerCaseEnglishLetter(this char c) => c >= 'a' && c <= 'z';
-    /// <summary>Checks whether the character is a upper case English letter.</summary>
-    /// <param name="c">The character to check whether it is a upper case English letter.</param>
+    /// <summary>
+    /// Checks whether the character is a upper case English letter.
+    /// </summary>
+    /// <param name="c">
+    /// The character to check whether it is a upper case English letter.
+    /// </param>
     public static bool IsUpperCaseEnglishLetter(this char c) => c >= 'A' && c <= 'Z';
-    /// <summary>Checks whether the character is a English letter character.</summary>
-    /// <param name="c">The character to check whether it is a English letter character.</param>
+    /// <summary>
+    /// Checks whether the character is a English letter character.
+    /// </summary>
+    /// <param name="c">
+    /// The character to check whether it is a English letter character.
+    /// </param>
     public static bool IsEnglishLetter(this char c) => IsLowerCaseEnglishLetter(c) || IsUpperCaseEnglishLetter(c);
-    /// <summary>Checks whether the character is a English letter or a digit character.</summary>
-    /// <param name="c">The character to check whether it is a English letter or a digit character.</param>
+    /// <summary>
+    /// Checks whether the character is a English letter or a digit character.
+    /// </summary>
+    /// <param name="c">
+    /// The character to check whether it is a English letter or a digit
+    /// character.
+    /// </param>
     public static bool IsEnglishLetterOrDigit(this char c) => IsEnglishLetter(c) || IsDigit(c);
 
-    /// <summary>Gets the integer numeric value of the specified character.</summary>
-    /// <param name="c">The character whose numeric value to get.</param>
-    /// <returns>The integer numeric value that the character represents, otherwise -1.</returns>
+    /// <summary>
+    /// Gets the integer numeric value of the specified character.
+    /// </summary>
+    /// <param name="c">
+    /// The character whose numeric value to get.
+    /// </param>
+    /// <returns>
+    /// The integer numeric value that the character represents, otherwise -1.
+    /// </returns>
     public static int GetNumericValueInteger(this char c) => IsDigit(c) ? c - '0' : -1;
     #endregion
 
     #region Misc
-    /// <summary>Gets the numerical value of the decimal digit character.</summary>
-    /// <param name="c">The decimal digit character.</param>
-    /// <returns>The numerical value.</returns>
+    /// <summary>
+    /// Gets the numerical value of the decimal digit character.
+    /// </summary>
+    /// <param name="c">
+    /// The decimal digit character.
+    /// </param>
+    /// <returns>
+    /// The numerical value.
+    /// </returns>
     public static int GetNumericalValue(this char c) => c - '0';
-    /// <summary>Determines whether the character is a valid hex character.</summary>
-    /// <param name="c">The character.</param>
-    /// <returns><see langword="true"/> if the character is a valid hex character; equivalent to the regular expression [0-9a-fA-F], otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Determines whether the character is a valid hex character.
+    /// </summary>
+    /// <param name="c">
+    /// The character.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the character is a valid hex character;
+    /// equivalent to the regular expression [0-9a-fA-F], otherwise
+    /// <see langword="false"/>.
+    /// </returns>
     public static bool IsValidHexCharacter(this char c) => char.IsDigit(c) || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F');
     #endregion
 
@@ -84,8 +123,12 @@ public static class CharExtensions
     #endregion
 
     #region Base 64
-    /// <summary>Checks whether the character is a valid Base 64 character.</summary>
-    /// <param name="c">The character to check whether it is a valid Base 64 character.</param>
+    /// <summary>
+    /// Checks whether the character is a valid Base 64 character.
+    /// </summary>
+    /// <param name="c">
+    /// The character to check whether it is a valid Base 64 character.
+    /// </param>
     public static bool IsBase64Character(this char c) => IsDigit(c) || IsEnglishLetter(c) || c == '/' || c == '+' || c == '=';
     #endregion
 }

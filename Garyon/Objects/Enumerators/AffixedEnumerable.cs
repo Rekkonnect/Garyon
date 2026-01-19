@@ -8,10 +8,12 @@ using System.Diagnostics.CodeAnalysis;
 namespace Garyon.Objects.Enumerators;
 
 /// <summary>
-/// Represents an enumerable that supports being prefixed
-/// and suffixed with other enumerables or single values.
+/// Represents an enumerable that supports being prefixed and suffixed with
+/// other enumerables or single values.
 /// </summary>
-/// <typeparam name="T">The type of values enumerated.</typeparam>
+/// <typeparam name="T">
+/// The type of values enumerated.
+/// </typeparam>
 public class AffixedEnumerable<T> : IEnumerable<T>
 {
     private readonly SingleOrEnumerable<T> prefix = new();

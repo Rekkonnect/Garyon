@@ -9,19 +9,19 @@
  */
 
 /// <summary>
-/// Represents an indentation block, as a repetition of a character
-/// multiple times.
+/// Represents an indentation block, as a repetition of a character multiple
+/// times.
 /// </summary>
 /// <param name="Character">
-/// The (usually whitespace) character to be used for the indentation block.
-/// It may be any character, whitespace or not.
+/// The (usually whitespace) character to be used for the indentation block. It
+/// may be any character, whitespace or not.
 /// </param>
 /// <param name="Width">
 /// The number of times to repeat the character.
 /// </param>
 /// <remarks>
-/// This will be used in more utilities in the future, including string indentation,
-/// discovering string indentation patterns, etc.
+/// This will be used in more utilities in the future, including string
+/// indentation, discovering string indentation patterns, etc.
 /// </remarks>
 public record struct Indentation(char Character, int Width)
 {

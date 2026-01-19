@@ -6,8 +6,8 @@ using System.Threading;
 namespace Garyon.Mechanisms;
 
 /// <summary>
-/// Represents an asynchronous lock that can be used in an
-/// async/await context without the <see langword="lock"/> statement.
+/// Represents an asynchronous lock that can be used in an async/await context
+/// without the <see langword="lock"/> statement.
 /// </summary>
 public sealed class AsyncUsableLock
 {
@@ -21,18 +21,18 @@ public sealed class AsyncUsableLock
     public bool IsLocked => _isLocked;
 
     /// <summary>
-    /// Attempts to lock the current lock, and immediately returns if
-    /// already held.
+    /// Attempts to lock the current lock, and immediately returns if already
+    /// held.
     /// </summary>
     /// <param name="success">
     /// Returns <see langword="true"/> if this lock was successfully locked,
     /// otherwise <see langword="false"/> if the lock was already held.
     /// </param>
     /// <returns>
-    /// A <see cref="LockReleaser"/> instance unlocking this instance
-    /// once the releaser is disposed, or <see langword="default"/> if the
-    /// lock was already held. The <see langword="default"/> value can be
-    /// simply ignored and left to be disposed for a no-op.
+    /// A <see cref="LockReleaser"/> instance unlocking this instance once the
+    /// releaser is disposed, or <see langword="default"/> if the lock was
+    /// already held. The <see langword="default"/> value can be simply ignored
+    /// and left to be disposed for a no-op.
     /// </returns>
     public LockReleaser TryLock(out bool success)
     {
@@ -50,8 +50,8 @@ public sealed class AsyncUsableLock
     /// is released from the current lock holder.
     /// </summary>
     /// <returns>
-    /// A <see cref="LockReleaser"/> instance unlocking this instance
-    /// once the releaser is disposed.
+    /// A <see cref="LockReleaser"/> instance unlocking this instance once the
+    /// releaser is disposed.
     /// </returns>
     public LockReleaser Lock()
     {
@@ -66,8 +66,8 @@ public sealed class AsyncUsableLock
     /// is released from the current lock holder.
     /// </summary>
     /// <returns>
-    /// A <see cref="LockReleaser"/> instance unlocking this instance
-    /// once the releaser is disposed.
+    /// A <see cref="LockReleaser"/> instance unlocking this instance once the
+    /// releaser is disposed.
     /// </returns>
     public async Task<LockReleaser> LockAsync()
     {
@@ -82,10 +82,12 @@ public sealed class AsyncUsableLock
     /// is released from the current lock holder.
     /// </summary>
     /// <param name="token">
-    /// The <see cref="CancellationToken"/> that can cancel the wait from the lock to be released.</param>
+    /// The <see cref="CancellationToken"/> that can cancel the wait from the
+    /// lock to be released.
+    /// </param>
     /// <returns>
-    /// A <see cref="LockReleaser"/> instance unlocking this instance
-    /// once the releaser is disposed.
+    /// A <see cref="LockReleaser"/> instance unlocking this instance once the
+    /// releaser is disposed.
     /// </returns>
     public async Task<LockReleaser> LockAsync(CancellationToken token)
     {
@@ -101,8 +103,8 @@ public sealed class AsyncUsableLock
     }
 
     /// <summary>
-    /// Unlocks the current instance.
-    /// If the instance is not currently locked, this method will do nothing.
+    /// Unlocks the current instance. If the instance is not currently locked,
+    /// this method will do nothing.
     /// </summary>
     public void Unlock()
     {

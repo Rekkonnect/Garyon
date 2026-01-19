@@ -14,8 +14,9 @@ public static class InterlockedExtensions
         /// Atomically reads the value of the specified location.
         /// </summary>
         /// <remarks>
-        /// The implementation uses <see cref="Interlocked.CompareExchange{T}(ref T, T, T)"/>
-        /// as similarly done in other overloads of Read.
+        /// The implementation uses
+        /// <see cref="Interlocked.CompareExchange{T}(ref T, T, T)"/> as
+        /// similarly done in other overloads of Read.
         /// </remarks>
 #if HAS_UNSAFE
         public static T? Read<T>(ref readonly T? location)

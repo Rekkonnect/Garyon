@@ -54,7 +54,8 @@ public static partial class IEnumerableExtensions
 #else
         /// <summary>
         /// Attempts to get the count of the enumerable without enumerating it.
-        /// The method supports <see cref="ICollection"/> and <see cref="ICollection{T}"/>.
+        /// The method supports <see cref="ICollection"/> and
+        /// <see cref="ICollection{T}"/>.
         /// </summary>
         /// <returns>
         /// The count of the enumerable without enumerating it, if it is known,
@@ -76,14 +77,20 @@ public static partial class IEnumerableExtensions
 #endif
         }
 
-        /// <summary>Determines whether the two enumerables have equal counts.</summary>
+        /// <summary>
+        /// Determines whether the two enumerables have equal counts.
+        /// </summary>
         /// <returns>
         /// <list type="bullet">
-        ///     <item><see langword="true"/> when the counts are equal</item>
-        ///     <item><see langword="false"/> when the counts are not equal</item>
         ///     <item>
-        ///         <see langword="null"/> when at least one of the enumerables
-        ///         cannot provide a non-enumerated count
+        ///     <see langword="true"/> when the counts are equal
+        ///     </item>
+        ///     <item>
+        ///     <see langword="false"/> when the counts are not equal
+        ///     </item>
+        ///     <item>
+        ///     <see langword="null"/> when at least one of the enumerables
+        ///     cannot provide a non-enumerated count
         ///     </item>
         /// </list>
         /// </returns>
@@ -113,7 +120,7 @@ public static partial class IEnumerableExtensions
         /// enumerator and invoking <see cref="IEnumerator.MoveNext"/> once.
         /// </summary>
         /// <remarks>
-        /// For <see cref="IReadOnlyCollection{T}"/>, use 
+        /// For <see cref="IReadOnlyCollection{T}"/>, use
         /// <see cref="IReadOnlyCollectionExtensions.get_IsEmpty{T}(IReadOnlyCollection{T})"/>.
         /// </remarks>
         public bool HasNone()
@@ -140,7 +147,8 @@ public static partial class IEnumerableExtensions
 
         /// <summary>
         /// Attempts to get the count of the enumerable without enumerating it.
-        /// The method supports <see cref="ICollection"/> and <see cref="ICollection{T}"/>.
+        /// The method supports <see cref="ICollection"/> and
+        /// <see cref="ICollection{T}"/>.
         /// </summary>
         /// <returns>
         /// The count of the enumerable without enumerating it, if it is known,
@@ -173,7 +181,9 @@ public static partial class IEnumerableExtensions
             }
         }
 
-        /// <summary>Determines whether the two enumerables have equal counts.</summary>
+        /// <summary>
+        /// Determines whether the two enumerables have equal counts.
+        /// </summary>
         public bool EqualsNonEnumeratedCount(IEnumerable other)
         {
             return source.GetNonEnumeratedCount() is int sourceCount

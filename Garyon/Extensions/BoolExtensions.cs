@@ -2,7 +2,9 @@
 
 namespace Garyon.Extensions;
 
-/// <summary>Provides extensions for <seealso cref="bool"/>.</summary>
+/// <summary>
+/// Provides extensions for <seealso cref="bool"/>.
+/// </summary>
 public static class BoolExtensions
 {
     extension(bool value)
@@ -37,16 +39,16 @@ public static class BoolExtensions
         }
 
         /// <summary>
-        /// Gets either the value if the bool is <see langword="true"/>,
-        /// or <see langword="null"/> if the bool is <see langword="false"/>.
+        /// Gets either the value if the bool is <see langword="true"/>, or
+        /// <see langword="null"/> if the bool is <see langword="false"/>.
         /// </summary>
         /// <param name="whenTrue">
-        /// The value to return if the bool is <see langword="true"/>,
-        /// otherwise <see langword="null"/>.
+        /// The value to return if the bool is <see langword="true"/>, otherwise
+        /// <see langword="null"/>.
         /// </param>
         /// <remarks>
-        /// This method is only valid for structs. For all other types,
-        /// or to return <see langword="default"/> instead, use
+        /// This method is only valid for structs. For all other types, or to
+        /// return <see langword="default"/> instead, use
         /// <see cref="ValueOrDefault{T}(bool, T)"/>.
         /// </remarks>
         public T? ValueOrNull<T>(T whenTrue)
@@ -56,12 +58,12 @@ public static class BoolExtensions
         }
 
         /// <summary>
-        /// Gets either the value if the bool is <see langword="true"/>,
-        /// or <see langword="default"/> if the bool is <see langword="false"/>.
+        /// Gets either the value if the bool is <see langword="true"/>, or
+        /// <see langword="default"/> if the bool is <see langword="false"/>.
         /// </summary>
         /// <param name="whenTrue">
-        /// The value to return if the bool is <see langword="true"/>,
-        /// otherwise <see langword="default"/>.
+        /// The value to return if the bool is <see langword="true"/>, otherwise
+        /// <see langword="default"/>.
         /// </param>
         public T? ValueOrDefault<T>(T? whenTrue)
         {
