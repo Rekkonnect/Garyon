@@ -3,8 +3,8 @@
 namespace Garyon.Objects;
 
 /// <summary>
-/// Provides a <see cref="CancellationTokenSource"/> that will be re-instantiated
-/// after every cancellation.
+/// Provides a <see cref="CancellationTokenSource"/> that will be
+/// re-instantiated after every cancellation.
 /// </summary>
 public sealed class CancellationTokenFactory
 {
@@ -42,7 +42,9 @@ public sealed class CancellationTokenFactory
     /// <summary>
     /// Forces the creation of a new <see cref="CancellationTokenSource"/>.
     /// </summary>
-    /// <returns>The newly created <see cref="CancellationTokenSource"/>.</returns>
+    /// <returns>
+    /// The newly created <see cref="CancellationTokenSource"/>.
+    /// </returns>
     public CancellationTokenSource CreateSource()
     {
         _currentSource = new CancellationTokenSource();

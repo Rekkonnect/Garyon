@@ -7,7 +7,9 @@ using System.Linq;
 
 namespace Garyon.Extensions;
 
-/// <summary>Contains extensions for the <seealso cref="IEnumerable{T}"/> interface.</summary>
+/// <summary>
+/// Contains extensions for the <seealso cref="IEnumerable{T}"/> interface.
+/// </summary>
 public static partial class IEnumerableExtensions
 {
     private static void VerifyNonEmptyCollection<T>(IEnumerable<T>? source)

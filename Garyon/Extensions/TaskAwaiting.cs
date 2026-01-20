@@ -4,12 +4,21 @@ using System.Threading.Tasks;
 
 namespace Garyon.Extensions;
 
-/// <summary>Provides functions for awaiting tasks.</summary>
+/// <summary>
+/// Provides functions for awaiting tasks.
+/// </summary>
 public static class TaskAwaiting
 {
-    /// <summary>Awaits all tasks in the provided collection.</summary>
-    /// <param name="tasks">The tasks to await. The collection will be enumerated.</param>
-    /// <returns>A <seealso cref="Task"/> that represents the operation of awaiting all tasks in the collection.</returns>
+    /// <summary>
+    /// Awaits all tasks in the provided collection.
+    /// </summary>
+    /// <param name="tasks">
+    /// The tasks to await. The collection will be enumerated.
+    /// </param>
+    /// <returns>
+    /// A <seealso cref="Task"/> that represents the operation of awaiting all
+    /// tasks in the collection.
+    /// </returns>
     public static async Task WaitAll(this IEnumerable<Task> tasks)
     {
         foreach (var task in tasks)

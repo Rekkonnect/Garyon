@@ -8,17 +8,26 @@ namespace Garyon.Extensions;
 
 /// <summary>
 /// Provides useful extensions for the
-/// <seealso cref="IDictionary{TKey, TValue}"/>
-/// and <seealso cref="IDictionary"/> types.
+/// <seealso cref="IDictionary{TKey, TValue}"/> and
+/// <seealso cref="IDictionary"/> types.
 /// </summary>
 public static partial class IDictionaryExtensions
 {
     #region IDictionary<T>
     // Leeches
-    /// <summary>Increments the value of a key if it exists, otherwise creates a new key with the default value 1.</summary>
-    /// <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
-    /// <param name="d">The dictionary whose value to increment for the specified key.</param>
-    /// <param name="key">The key in the dictionary whose value to increment.</param>
+    /// <summary>
+    /// Increments the value of a key if it exists, otherwise creates a new key
+    /// with the default value 1.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys in the dictionary.
+    /// </typeparam>
+    /// <param name="d">
+    /// The dictionary whose value to increment for the specified key.
+    /// </param>
+    /// <param name="key">
+    /// The key in the dictionary whose value to increment.
+    /// </param>
     public static void IncrementOrAddKeyValue<TKey>(this IDictionary<TKey, int> d, TKey key)
         where TKey : notnull
     {
@@ -31,10 +40,19 @@ public static partial class IDictionaryExtensions
             d.Add(key, 1);
         }
     }
-    /// <summary>Calculates the sum of all the values in the dictionary, excluding specific keys.</summary>
-    /// <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
-    /// <param name="d">The dictionary whose value sum to calculate.</param>
-    /// <param name="exclusions">The keys that will be excluded from the sum.</param>
+    /// <summary>
+    /// Calculates the sum of all the values in the dictionary, excluding
+    /// specific keys.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys in the dictionary.
+    /// </typeparam>
+    /// <param name="d">
+    /// The dictionary whose value sum to calculate.
+    /// </param>
+    /// <param name="exclusions">
+    /// The keys that will be excluded from the sum.
+    /// </param>
     public static int Sum<TKey>(this IDictionary<TKey, int> d, params TKey[] exclusions)
         where TKey : notnull
     {
@@ -55,25 +73,56 @@ public static partial class IDictionaryExtensions
         return sum;
     }
 
-    /// <summary>Gets the value mapped to the given key within the dictionary, if the key is present.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="dictionary">The dictionary whose mapped value to get.</param>
-    /// <param name="key">The key whose mapped value to get.</param>
-    /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise <see langword="default"/>.</returns>
+    /// <summary>
+    /// Gets the value mapped to the given key within the dictionary, if the key
+    /// is present.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="dictionary">
+    /// The dictionary whose mapped value to get.
+    /// </param>
+    /// <param name="key">
+    /// The key whose mapped value to get.
+    /// </param>
+    /// <returns>
+    /// The associated value to <paramref name="key"/>, if it exists, otherwise
+    /// <see langword="default"/>.
+    /// </returns>
     public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key)
         where TKey : notnull
     {
         return ValueOrDefault(dictionary, key, default);
     }
 
-    /// <summary>Gets the value mapped to the given key within the dictionary, if the key is present.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="dictionary">The dictionary whose mapped value to get.</param>
-    /// <param name="key">The key whose mapped value to get.</param>
-    /// <param name="defaultValue">The default value to return if the key is <see langword="null"/> or is not found in the dictionary.</param>
-    /// <returns>The associated value to <paramref name="key"/>, if it exists, otherwise the specified default value.</returns>
+    /// <summary>
+    /// Gets the value mapped to the given key within the dictionary, if the key
+    /// is present.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="dictionary">
+    /// The dictionary whose mapped value to get.
+    /// </param>
+    /// <param name="key">
+    /// The key whose mapped value to get.
+    /// </param>
+    /// <param name="defaultValue">
+    /// The default value to return if the key is <see langword="null"/> or is
+    /// not found in the dictionary.
+    /// </param>
+    /// <returns>
+    /// The associated value to <paramref name="key"/>, if it exists, otherwise
+    /// the specified default value.
+    /// </returns>
     [return: NotNullIfNotNull(nameof(defaultValue))]
     public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key, TValue? defaultValue)
         where TKey : notnull
@@ -87,13 +136,29 @@ public static partial class IDictionaryExtensions
         return value;
     }
 
-    /// <summary>Adds a new entry to the dictionary. If the given key already exists, its value is overwritten in the source dictionary.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="key">The key of the entry to add or overwrite.</param>
-    /// <param name="value">The value of the entry to set.</param>
-    /// <returns><see langword="true"/> if the entry already existed with a different value and was overwritten, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Adds a new entry to the dictionary. If the given key already exists, its
+    /// value is overwritten in the source dictionary.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="key">
+    /// The key of the entry to add or overwrite.
+    /// </param>
+    /// <param name="value">
+    /// The value of the entry to set.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the entry already existed with a different
+    /// value and was overwritten, otherwise <see langword="false"/>.
+    /// </returns>
     public static bool AddOrSet<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value)
         where TKey : notnull
     {
@@ -120,7 +185,10 @@ public static partial class IDictionaryExtensions
         return source.TryAddPreserve(kvp.Key, kvp.Value);
     }
     /// <inheritdoc cref="TryAddPreserve{TKey, TValue}(IDictionary{TKey, TValue}, TKey, TValue, out TValue)"/>
-    /// <param name="kvp">The <seealso cref="KeyValuePair{TKey, TValue}"/> to add to the dictionary.</param>
+    /// <param name="kvp">
+    /// The <seealso cref="KeyValuePair{TKey, TValue}"/> to add to the
+    /// dictionary.
+    /// </param>
     public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp, out TValue? existingValue)
         where TKey : notnull
     {
@@ -132,14 +200,33 @@ public static partial class IDictionaryExtensions
     {
         return source.TryAddPreserve(key, value, out _);
     }
-    /// <summary>Adds a new entry to the dictionary. If the given key already exists, its value is preserved in the source dictionary.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="key">The key of the entry to add or overwrite.</param>
-    /// <param name="value">The value of the entry to set.</param>
-    /// <param name="existingValue">The value that existed in the dictionary, if the key was already present, otherwise <see langword="default"/>.</param>
-    /// <returns><see langword="true"/> if the entry did not exist, or existed with the same value, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Adds a new entry to the dictionary. If the given key already exists, its
+    /// value is preserved in the source dictionary.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="key">
+    /// The key of the entry to add or overwrite.
+    /// </param>
+    /// <param name="value">
+    /// The value of the entry to set.
+    /// </param>
+    /// <param name="existingValue">
+    /// The value that existed in the dictionary, if the key was already
+    /// present, otherwise <see langword="default"/>.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the entry did not exist, or existed with the
+    /// same value, otherwise <see langword="false"/>.
+    /// </returns>
     public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value, out TValue? existingValue)
         where TKey : notnull
     {
@@ -158,11 +245,21 @@ public static partial class IDictionaryExtensions
         return available;
     }
 
-    /// <summary>Adds a range of entries to a source dictionary.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="entries">The entries to add to the <paramref name="source"/> dictionary.</param>
+    /// <summary>
+    /// Adds a range of entries to a source dictionary.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="entries">
+    /// The entries to add to the <paramref name="source"/> dictionary.
+    /// </param>
     public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries)
         where TKey : notnull
     {
@@ -171,12 +268,28 @@ public static partial class IDictionaryExtensions
             source.Add(entry.Key, entry.Value);
         }
     }
-    /// <summary>Adds a collection of new entries to the dictionary. For each of the given entries, if its key already exists, its value is overwritten in the source dictionary.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="entries">The entries to add or overwrite.</param>
-    /// <returns><see langword="true"/> if at least one of the given entries already existed with a different value and was overwritten, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Adds a collection of new entries to the dictionary. For each of the
+    /// given entries, if its key already exists, its value is overwritten in
+    /// the source dictionary.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="entries">
+    /// The entries to add or overwrite.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if at least one of the given entries already
+    /// existed with a different value and was overwritten, otherwise
+    /// <see langword="false"/>.
+    /// </returns>
     public static bool AddOrSetRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries)
         where TKey : notnull
     {
@@ -188,12 +301,27 @@ public static partial class IDictionaryExtensions
 
         return overwritten;
     }
-    /// <summary>Adds a collection of new entries to the dictionary. For each of the given entries, if its key already exists, its value is preserved in the source dictionary.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="entries">The entries to add or overwrite.</param>
-    /// <returns><see langword="true"/> if none of the given entries already existed with a different value, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Adds a collection of new entries to the dictionary. For each of the
+    /// given entries, if its key already exists, its value is preserved in the
+    /// source dictionary.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="entries">
+    /// The entries to add or overwrite.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if none of the given entries already existed with
+    /// a different value, otherwise <see langword="false"/>.
+    /// </returns>
     public static bool TryAddPreserveRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries)
         where TKey : notnull
     {
@@ -206,48 +334,103 @@ public static partial class IDictionaryExtensions
         return preserved;
     }
 
-    /// <summary>Gets a <seealso cref="KeyValuePair{TKey, TValue}"/> instance containing the specified key and its associated value.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="key">The key of the entry whose <seealso cref="KeyValuePair{TKey, TValue}"/> to get.</param>
-    /// <returns>The resulting <seealso cref="KeyValuePair{TKey, TValue}"/> containing the entry that was requested.</returns>
+    /// <summary>
+    /// Gets a <seealso cref="KeyValuePair{TKey, TValue}"/> instance containing
+    /// the specified key and its associated value.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="key">
+    /// The key of the entry whose <seealso cref="KeyValuePair{TKey, TValue}"/>
+    /// to get.
+    /// </param>
+    /// <returns>
+    /// The resulting <seealso cref="KeyValuePair{TKey, TValue}"/> containing
+    /// the entry that was requested.
+    /// </returns>
     public static KeyValuePair<TKey, TValue> GetKeyValuePair<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key)
         where TKey : notnull
     {
         return new(key, source[key]);
     }
 
-    /// <summary>Adds an entry to the provided dictionary, if the key does not exist.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="kvp">The entry to add to the dictionary.</param>
+    /// <summary>
+    /// Adds an entry to the provided dictionary, if the key does not exist.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="kvp">
+    /// The entry to add to the dictionary.
+    /// </param>
     public static void Add<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
         where TKey : notnull
     {
         source.Add(kvp);
     }
 #if !HAS_DICTIONARY_TRYADD
-    /// <summary>Attempts to add an entry to the provided dictionary, if the key does not already exist.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="key">The key of the entry to add to the dictionary.</param>
-    /// <param name="value">The value of the entry to add to the dictionary.</param>
-    /// <returns><see langword="true"/> if the entry was successfully added, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Attempts to add an entry to the provided dictionary, if the key does not
+    /// already exist.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="key">
+    /// The key of the entry to add to the dictionary.
+    /// </param>
+    /// <param name="value">
+    /// The value of the entry to add to the dictionary.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the entry was successfully added, otherwise
+    /// <see langword="false"/>.
+    /// </returns>
     public static bool TryAdd<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value)
         where TKey : notnull
     {
         return source.TryAddPreserve(key, value);
     }
 #endif
-    /// <summary>Attempts to add an entry to the provided dictionary, if the key does not already exist.</summary>
-    /// <typeparam name="TKey">The type of the keys stored in the dictionary.</typeparam>
-    /// <typeparam name="TValue">The type of the values stored in the dictionary.</typeparam>
-    /// <param name="source">The source dictionary.</param>
-    /// <param name="kvp">The entry to add to the dictionary.</param>
-    /// <returns><see langword="true"/> if the entry was successfully added, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Attempts to add an entry to the provided dictionary, if the key does not
+    /// already exist.
+    /// </summary>
+    /// <typeparam name="TKey">
+    /// The type of the keys stored in the dictionary.
+    /// </typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the values stored in the dictionary.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source dictionary.
+    /// </param>
+    /// <param name="kvp">
+    /// The entry to add to the dictionary.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the entry was successfully added, otherwise
+    /// <see langword="false"/>.
+    /// </returns>
     public static bool TryAdd<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
         where TKey : notnull
     {
@@ -257,9 +440,9 @@ public static partial class IDictionaryExtensions
 
     #region Transform
     /// <summary>
-    /// Transforms the keys of the source dictionary into new keys using
-    /// the provided key selector function, and constructs a new dictionary
-    /// with the transformed keys and the original values.
+    /// Transforms the keys of the source dictionary into new keys using the
+    /// provided key selector function, and constructs a new dictionary with the
+    /// transformed keys and the original values.
     /// </summary>
     public static Dictionary<TNewKey, TValue> TransformKeys<TKey, TValue, TNewKey>(
         this IReadOnlyDictionary<TKey, TValue> source,
@@ -279,9 +462,9 @@ public static partial class IDictionaryExtensions
     }
 
     /// <summary>
-    /// Transforms the values of the source dictionary into new values using
-    /// the provided key selector function, and constructs a new dictionary
-    /// with the transformed values and the original keys.
+    /// Transforms the values of the source dictionary into new values using the
+    /// provided key selector function, and constructs a new dictionary with the
+    /// transformed values and the original keys.
     /// </summary>
     public static Dictionary<TKey, TNewValue> TransformValues<TKey, TValue, TNewValue>(
         this IReadOnlyDictionary<TKey, TValue> source,

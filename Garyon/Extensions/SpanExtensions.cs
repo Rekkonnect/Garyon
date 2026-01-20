@@ -6,8 +6,8 @@ using System.Collections.Generic;
 namespace Garyon.Extensions;
 
 /// <summary>
-/// Provides extensions for the <seealso cref="Span{T}"/>
-/// and <seealso cref="ReadOnlySpan{T}"/> types.
+/// Provides extensions for the <seealso cref="Span{T}"/> and
+/// <seealso cref="ReadOnlySpan{T}"/> types.
 /// </summary>
 public static class SpanExtensions
 {
@@ -64,15 +64,21 @@ public static class SpanExtensions
 
     #region Slicing
     /// <summary>
-    /// Gets the slice of the span after the first occurrence
-    /// of the specified delimiter.
+    /// Gets the slice of the span after the first occurrence of the specified
+    /// delimiter.
     /// </summary>
-    /// <typeparam name="TSource">The type of the values in the span.</typeparam>
-    /// <param name="source">The source span that will be sliced.</param>
-    /// <param name="delimiter">The delimiter to find in the span.</param>
+    /// <typeparam name="TSource">
+    /// The type of the values in the span.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source span that will be sliced.
+    /// </param>
+    /// <param name="delimiter">
+    /// The delimiter to find in the span.
+    /// </param>
     /// <returns>
-    /// The slice after the first occurrence of the delimiter if
-    /// it is found in the span, otherwise the entire source span.
+    /// The slice after the first occurrence of the delimiter if it is found in
+    /// the span, otherwise the entire source span.
     /// </returns>
     public static Span<TSource> SliceAfter<TSource>(this Span<TSource> source, TSource delimiter)
         where TSource : IEquatable<TSource>
@@ -81,15 +87,21 @@ public static class SpanExtensions
         return source.SliceAfterIndex(startIndex);
     }
     /// <summary>
-    /// Gets the slice of the span before the first occurrence
-    /// of the specified delimiter.
+    /// Gets the slice of the span before the first occurrence of the specified
+    /// delimiter.
     /// </summary>
-    /// <typeparam name="TSource">The type of the values in the span.</typeparam>
-    /// <param name="source">The source span that will be sliced.</param>
-    /// <param name="delimiter">The delimiter to find in the span.</param>
+    /// <typeparam name="TSource">
+    /// The type of the values in the span.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source span that will be sliced.
+    /// </param>
+    /// <param name="delimiter">
+    /// The delimiter to find in the span.
+    /// </param>
     /// <returns>
-    /// The slice before the first occurrence of the delimiter if
-    /// it is found in the span, otherwise the entire source span.
+    /// The slice before the first occurrence of the delimiter if it is found in
+    /// the span, otherwise the entire source span.
     /// </returns>
     public static Span<TSource> SliceBefore<TSource>(this Span<TSource> source, TSource delimiter)
         where TSource : IEquatable<TSource>
@@ -99,26 +111,30 @@ public static class SpanExtensions
     }
 
     /// <summary>
-    /// Gets the slice of the span between the first occurrences
-    /// of the specified delimiters.
+    /// Gets the slice of the span between the first occurrences of the
+    /// specified delimiters.
     /// </summary>
-    /// <typeparam name="TSource">The type of the values in the span.</typeparam>
-    /// <param name="source">The source span that will be sliced.</param>
+    /// <typeparam name="TSource">
+    /// The type of the values in the span.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source span that will be sliced.
+    /// </param>
     /// <param name="delimiterStart">
     /// The first delimiter to find in the source span.
     /// </param>
     /// <param name="delimiterEnd">
-    /// The second delimiter to find in the sliced span after the
-    /// first delimiter.
+    /// The second delimiter to find in the sliced span after the first
+    /// delimiter.
     /// </param>
     /// <returns>
-    /// The slice after the first occurrence of the start delimiter and
-    /// before the first occurrence of the end delimiter.
+    /// The slice after the first occurrence of the start delimiter and before
+    /// the first occurrence of the end delimiter.
     /// </returns>
     /// <remarks>
     /// This method uses a combination of
-    /// <seealso cref="SliceAfter{TSource}(Span{TSource}, TSource)"/>
-    /// and <seealso cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>.
+    /// <seealso cref="SliceAfter{TSource}(Span{TSource}, TSource)"/> and
+    /// <seealso cref="SliceBefore{TSource}(Span{TSource}, TSource)"/>.
     /// </remarks>
     public static Span<TSource> SliceBetween<TSource>(this Span<TSource> source, TSource delimiterStart, TSource delimiterEnd)
         where TSource : IEquatable<TSource>
@@ -145,7 +161,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(ReadOnlySpan{TSource}, TSource)"/>
-    /// and <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, TSource)"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, TSource)"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBetween<TSource>(this ReadOnlySpan<TSource> source, TSource delimiterStart, TSource delimiterEnd)
@@ -217,8 +234,8 @@ public static class SpanExtensions
 
     /// <remarks>
     /// This method uses a combination of
-    /// <seealso cref="SliceAfter{TSource}(Span{TSource}, Span{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(Span{TSource}, Span{TSource})"/>.
+    /// <seealso cref="SliceAfter{TSource}(Span{TSource}, Span{TSource})"/> and
+    /// <seealso cref="SliceBefore{TSource}(Span{TSource}, Span{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static Span<TSource> SliceBetween<TSource>(this Span<TSource> source, Span<TSource> delimiterStart, Span<TSource> delimiterEnd)
@@ -229,8 +246,8 @@ public static class SpanExtensions
     }
     /// <remarks>
     /// This method uses a combination of
-    /// <seealso cref="SliceAfter{TSource}(Span{TSource}, Span{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(Span{TSource}, ReadOnlySpan{TSource})"/>.
+    /// <seealso cref="SliceAfter{TSource}(Span{TSource}, Span{TSource})"/> and
+    /// <seealso cref="SliceBefore{TSource}(Span{TSource}, ReadOnlySpan{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static Span<TSource> SliceBetween<TSource>(this Span<TSource> source, Span<TSource> delimiterStart, ReadOnlySpan<TSource> delimiterEnd)
@@ -242,7 +259,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(Span{TSource}, ReadOnlySpan{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(Span{TSource}, Span{TSource})"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(Span{TSource}, Span{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static Span<TSource> SliceBetween<TSource>(this Span<TSource> source, ReadOnlySpan<TSource> delimiterStart, Span<TSource> delimiterEnd)
@@ -254,7 +272,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(Span{TSource}, ReadOnlySpan{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(Span{TSource}, ReadOnlySpan{TSource})"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(Span{TSource}, ReadOnlySpan{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static Span<TSource> SliceBetween<TSource>(this Span<TSource> source, ReadOnlySpan<TSource> delimiterStart, ReadOnlySpan<TSource> delimiterEnd)
@@ -267,7 +286,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(ReadOnlySpan{TSource}, Span{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, Span{TSource})"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, Span{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBetween<TSource>(this ReadOnlySpan<TSource> source, Span<TSource> delimiterStart, Span<TSource> delimiterEnd)
@@ -279,7 +299,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(ReadOnlySpan{TSource}, Span{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, ReadOnlySpan{TSource})"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, ReadOnlySpan{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBetween<TSource>(this ReadOnlySpan<TSource> source, Span<TSource> delimiterStart, ReadOnlySpan<TSource> delimiterEnd)
@@ -291,7 +312,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(ReadOnlySpan{TSource}, ReadOnlySpan{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, Span{TSource})"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, Span{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBetween<TSource>(this ReadOnlySpan<TSource> source, ReadOnlySpan<TSource> delimiterStart, Span<TSource> delimiterEnd)
@@ -303,7 +325,8 @@ public static class SpanExtensions
     /// <remarks>
     /// This method uses a combination of
     /// <seealso cref="SliceAfter{TSource}(ReadOnlySpan{TSource}, ReadOnlySpan{TSource})"/>
-    /// and <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, ReadOnlySpan{TSource})"/>.
+    /// and
+    /// <seealso cref="SliceBefore{TSource}(ReadOnlySpan{TSource}, ReadOnlySpan{TSource})"/>.
     /// </remarks>
     /// <inheritdoc cref="SliceBetween{TSource}(Span{TSource}, TSource, TSource)"/>
     public static ReadOnlySpan<TSource> SliceBetween<TSource>(this ReadOnlySpan<TSource> source, ReadOnlySpan<TSource> delimiterStart, ReadOnlySpan<TSource> delimiterEnd)
@@ -345,19 +368,23 @@ public static class SpanExtensions
 
     #region SplitOnce
     /// <summary>
-    /// Splits the given span based on the first occurrence of the
-    /// delimiter, returning the left and right slices.
+    /// Splits the given span based on the first occurrence of the delimiter,
+    /// returning the left and right slices.
     /// </summary>
-    /// <param name="span">The span to delimit.</param>
-    /// <param name="delimiter">The delimiter to find in the span.</param>
+    /// <param name="span">
+    /// The span to delimit.
+    /// </param>
+    /// <param name="delimiter">
+    /// The delimiter to find in the span.
+    /// </param>
     /// <param name="left">
-    /// The left segment of the span up until before the delimiter.
-    /// If the delimiter is not found, this will equal the entire span.
+    /// The left segment of the span up until before the delimiter. If the
+    /// delimiter is not found, this will equal the entire span.
     /// </param>
     /// <param name="right">
-    /// The right segment of the span starting from the next character
-    /// after the first occurrence of the delimiter. If the delimiter is
-    /// not found, this will equal <see langword="default"/>.
+    /// The right segment of the span starting from the next character after the
+    /// first occurrence of the delimiter. If the delimiter is not found, this
+    /// will equal <see langword="default"/>.
     /// </param>
     /// <returns>
     /// <see langword="true"/> if the delimiter was found at least once,
@@ -445,23 +472,31 @@ public static class SpanExtensions
     /// Splits the given span based on a delimiter, and selects each split
     /// section into a target value using a selector.
     /// </summary>
-    /// <typeparam name="TSource">The type of the values stored in the span.</typeparam>
-    /// <typeparam name="TResult">The type of the selected values.</typeparam>
+    /// <typeparam name="TSource">
+    /// The type of the values stored in the span.
+    /// </typeparam>
+    /// <typeparam name="TResult">
+    /// The type of the selected values.
+    /// </typeparam>
     /// <param name="source">
-    /// The source <seealso cref="ReadOnlySpan{T}"/> that will be delimited by the
-    /// given delimiter into multiple segments, and immediately converted.
+    /// The source <seealso cref="ReadOnlySpan{T}"/> that will be delimited by
+    /// the given delimiter into multiple segments, and immediately converted.
     /// </param>
-    /// <param name="delimiter">The <seealso cref="string"/> ddelimiter.</param>
+    /// <param name="delimiter">
+    /// The <seealso cref="string"/> ddelimiter.
+    /// </param>
     /// <param name="selector">
-    /// The <seealso cref="ReadOnlySpanSelector{TSource, TResult}"/> instance that will select the
-    /// delimited sections into the returned values. Must not be <see langword="null"/>.
+    /// The <seealso cref="ReadOnlySpanSelector{TSource, TResult}"/> instance
+    /// that will select the delimited sections into the returned values. Must
+    /// not be <see langword="null"/>.
     /// </param>
     /// <returns>
     /// The values returned from the selector as a readonly list, in the order
     /// they were found in the source <seealso cref="ReadOnlySpan{T}"/>.
     /// </returns>
     /// <remarks>
-    /// Use <see cref="ToCollectionExtensions.ToListOrExisting{T}(IEnumerable{T})"/>
+    /// Use
+    /// <see cref="ToCollectionExtensions.ToListOrExisting{T}(IEnumerable{T})"/>
     /// to get the values as a mutable list.
     /// </remarks>
     public static IReadOnlyList<TResult> SplitSelect<TSource, TResult>(this ReadOnlySpan<TSource> source, TSource delimiter, ReadOnlySpanSelector<TSource, TResult> selector)
@@ -641,12 +676,21 @@ public static class SpanExtensions
     }
 
     /// <summary>
-    /// Defines a selector delegate that converts a span of values into another value.
+    /// Defines a selector delegate that converts a span of values into another
+    /// value.
     /// </summary>
-    /// <typeparam name="TSource">The type of the contained values in the span.</typeparam>
-    /// <typeparam name="TResult">The type of the converted value.</typeparam>
-    /// <param name="source">The span that is being converted.</param>
-    /// <returns>The converted value.</returns>
+    /// <typeparam name="TSource">
+    /// The type of the contained values in the span.
+    /// </typeparam>
+    /// <typeparam name="TResult">
+    /// The type of the converted value.
+    /// </typeparam>
+    /// <param name="source">
+    /// The span that is being converted.
+    /// </param>
+    /// <returns>
+    /// The converted value.
+    /// </returns>
     public delegate TResult ReadOnlySpanSelector<TSource, TResult>(ReadOnlySpan<TSource> source);
     #endregion
 

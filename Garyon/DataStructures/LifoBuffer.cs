@@ -3,11 +3,13 @@
 namespace Garyon.DataStructures;
 
 /// <summary>
-/// Provides a buffer storing elements in a LIFO (last-in-first-out) order.
-/// The buffer cycles through its fixed capacity, automatically overwriting
-/// the oldest elements upon appending an element.
+/// Provides a buffer storing elements in a LIFO (last-in-first-out) order. The
+/// buffer cycles through its fixed capacity, automatically overwriting the
+/// oldest elements upon appending an element.
 /// </summary>
-/// <typeparam name="T">The type of the stored elements.</typeparam>
+/// <typeparam name="T">
+/// The type of the stored elements.
+/// </typeparam>
 /// <param name="capacity">
 /// The fixed capacity of the buffer.
 /// </param>
@@ -31,10 +33,12 @@ public sealed class LifoBuffer<T>(int capacity)
     }
 
     /// <summary>
-    /// Appends a value to the buffer. If the buffer is full, the oldest
-    /// element will be automatically overwritten.
+    /// Appends a value to the buffer. If the buffer is full, the oldest element
+    /// will be automatically overwritten.
     /// </summary>
-    /// <param name="value">The value to append to the buffer.</param>
+    /// <param name="value">
+    /// The value to append to the buffer.
+    /// </param>
     public void Append(T value)
     {
         _buffer[GetCurrentIndex()] = value;
@@ -45,7 +49,9 @@ public sealed class LifoBuffer<T>(int capacity)
     /// Gets the buffer as a <see cref="ReadOnlySpan{T}"/>. The order of the
     /// elements does not indicate the order of the appends.
     /// </summary>
-    /// <returns>The buffer as a <see cref="ReadOnlySpan{T}"/>.</returns>
+    /// <returns>
+    /// The buffer as a <see cref="ReadOnlySpan{T}"/>.
+    /// </returns>
     public ReadOnlySpan<T> GetBuffer()
     {
         int length = Math.Min(_appends, _buffer.Length);
@@ -60,15 +66,17 @@ public sealed class LifoBuffer<T>(int capacity)
     /// <param name="newest">
     /// The <see cref="ReadOnlySpan{T}"/> representing the newest elements that
     /// were appended to the buffer. The last element of this span is the most
-    /// recent. The span may be empty, indicating that either the buffer is empty,
-    /// or the last appended item overwrote the last item in the buffer, meaning
-    /// that the next append will overwrite the first item in the buffer.
+    /// recent. The span may be empty, indicating that either the buffer is
+    /// empty, or the last appended item overwrote the last item in the buffer,
+    /// meaning that the next append will overwrite the first item in the
+    /// buffer.
     /// </param>
     /// <param name="oldest">
     /// The <see cref="ReadOnlySpan{T}"/> representing the oldest elements that
-    /// were appended to the buffer. The first element of this span is the oldest.
-    /// The span may be empty, indicating that either the buffer is empty. If at
-    /// least one item has been added to the buffer, this span will never be empty.
+    /// were appended to the buffer. The first element of this span is the
+    /// oldest. The span may be empty, indicating that either the buffer is
+    /// empty. If at least one item has been added to the buffer, this span will
+    /// never be empty.
     /// </param>
     public void GetOrderedBuffer(out ReadOnlySpan<T> newest, out ReadOnlySpan<T> oldest)
     {

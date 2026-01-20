@@ -4,9 +4,9 @@ using System.Numerics;
 namespace Garyon.Mathematics;
 
 /// <summary>
-/// Provides extensions directly onto <see cref="Math"/>.
-/// Helpful when the extensions are meant to be provided as
-/// method groups onto delegate variables.
+/// Provides extensions directly onto <see cref="Math"/>. Helpful when the
+/// extensions are meant to be provided as method groups onto delegate
+/// variables.
 /// </summary>
 public static class MathExtensions
 {
@@ -26,33 +26,75 @@ public static class MathExtensions
         }
 #endif
 
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static int Square(int x) => x * x;
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static uint Square(uint x) => x * x;
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static long Square(long x) => x * x;
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static ulong Square(ulong x) => x * x;
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static float Square(float x) => x * x;
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static double Square(double x) => x * x;
-        /// <summary>Returns the square of the given number.</summary>
-        /// <param name="x">The number to square.</param>
-        /// <returns>The square of the number, equal to x * x.</returns>
+        /// <summary>
+        /// Returns the square of the given number.
+        /// </summary>
+        /// <param name="x">
+        /// The number to square.
+        /// </param>
+        /// <returns>
+        /// The square of the number, equal to x * x.
+        /// </returns>
         public static decimal Square(decimal x) => x * x;
     }
 }

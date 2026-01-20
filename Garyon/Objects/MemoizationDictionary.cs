@@ -5,11 +5,15 @@ using System.Threading.Tasks;
 namespace Garyon.Objects;
 
 /// <summary>
-/// Encapsulates a memoization dictionary for caching outputs of a function
-/// that could be expensive to compute.
+/// Encapsulates a memoization dictionary for caching outputs of a function that
+/// could be expensive to compute.
 /// </summary>
-/// <param name="func">The function that computes the outputs.</param>
-/// <param name="capacity">The initial capacity of the dictionary.</param>
+/// <param name="func">
+/// The function that computes the outputs.
+/// </param>
+/// <param name="capacity">
+/// The initial capacity of the dictionary.
+/// </param>
 public sealed class MemoizationDictionary<TInput, TOutput>(
     Func<TInput, TOutput> func,
     int capacity = 64)
@@ -19,15 +23,16 @@ public sealed class MemoizationDictionary<TInput, TOutput>(
     private readonly Func<TInput, TOutput> _func = func;
 
     /// <summary>
-    /// Gets the value of the given input. If the value has not been computed before,
-    /// it is computed and stored into the dictionary for future retrievals.
-    /// Otherwise, it's fetched directly from the dictionary.
+    /// Gets the value of the given input. If the value has not been computed
+    /// before, it is computed and stored into the dictionary for future
+    /// retrievals. Otherwise, it's fetched directly from the dictionary.
     /// </summary>
     /// <param name="input">
     /// The input to the function.
     /// </param>
     /// <returns>
-    /// The output of the function that was initialized, either cached or computed.
+    /// The output of the function that was initialized, either cached or
+    /// computed.
     /// </returns>
     public TOutput Get(TInput input)
     {

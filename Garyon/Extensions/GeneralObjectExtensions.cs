@@ -27,14 +27,17 @@ public static class GeneralObjectExtensions
         /// <summary>
         /// Stores the value in the specified reference and returns it.
         /// </summary>
-        /// <param name="reference">The reference into which to store the value.</param>
-        /// <returns>The same value.</returns>
+        /// <param name="reference">
+        /// The reference into which to store the value.
+        /// </param>
+        /// <returns>
+        /// The same value.
+        /// </returns>
         /// <remarks>
         /// <para>
-        /// This can find exceptional usage in builder-like patterns,
-        /// whereby a new object being initialized is assigned without breaking
-        /// the fluent pattern, allowing the object be referenced within the
-        /// builder.
+        /// This can find exceptional usage in builder-like patterns, whereby a
+        /// new object being initialized is assigned without breaking the fluent
+        /// pattern, allowing the object be referenced within the builder.
         /// </para>
         /// <para>
         /// Beware of copying rules when using this on structs.
@@ -47,17 +50,20 @@ public static class GeneralObjectExtensions
         }
 
         /// <summary>
-        /// Casts the value into the specified type, stores it in the specified reference,
-        /// and returns the original value.
+        /// Casts the value into the specified type, stores it in the specified
+        /// reference, and returns the original value.
         /// </summary>
-        /// <param name="reference">The reference into which to store the value.</param>
-        /// <returns>The same value.</returns>
+        /// <param name="reference">
+        /// The reference into which to store the value.
+        /// </param>
+        /// <returns>
+        /// The same value.
+        /// </returns>
         /// <remarks>
         /// <para>
-        /// This can find exceptional usage in builder-like patterns,
-        /// whereby a new object being initialized is assigned without breaking
-        /// the fluent pattern, allowing the object be referenced within the
-        /// builder.
+        /// This can find exceptional usage in builder-like patterns, whereby a
+        /// new object being initialized is assigned without breaking the fluent
+        /// pattern, allowing the object be referenced within the builder.
         /// </para>
         /// </remarks>
         public T Into<TCast>(out TCast? reference)
@@ -68,12 +74,14 @@ public static class GeneralObjectExtensions
         }
 
         /// <summary>
-        /// Attempts to cast the source object to the specified type <typeparamref name="TResult"/>.
+        /// Attempts to cast the source object to the specified type
+        /// <typeparamref name="TResult"/>.
         /// </summary>
-        /// <typeparam name="TResult"></typeparam>
+        /// <typeparam name="TResult">
+        /// </typeparam>
         /// <returns>
-        /// The instance cast into <typeparamref name="TResult"/> if the cast was successful,
-        /// otherwise <see langword="default"/>.
+        /// The instance cast into <typeparamref name="TResult"/> if the cast
+        /// was successful, otherwise <see langword="default"/>.
         /// </returns>
         public TResult? CastOrDefault<TResult>()
         {
@@ -84,16 +92,16 @@ public static class GeneralObjectExtensions
         }
 
         /// <summary>
-        /// Based on a recursively-typed property, invokes it on the result until
-        /// the resulting instance is <see langword="null"/>.
+        /// Based on a recursively-typed property, invokes it on the result
+        /// until the resulting instance is <see langword="null"/>.
         /// </summary>
         /// <returns>
         /// A lazily evaluated enumerable of values, with the first being the
         /// directly returned value from the property, and the last being the
         /// latest in the inheritance tree.
         /// <br/>
-        /// For example, assume a type IterableInt with a property Successor defined
-        /// as such:
+        /// For example, assume a type IterableInt with a property Successor
+        /// defined as such:
         /// <code>
         /// public sealed class IterableInt(int value)
         /// {
@@ -114,9 +122,10 @@ public static class GeneralObjectExtensions
         /// }
         /// </code>
         /// Starting from IterableInt(1), this method will return a collection
-        /// that contains [IterableInt(2), IterableInt(3), ..., IterableInt(int.MaxValue)],
-        /// though lazily enumerated meaning that it won't force generating
-        /// all the values in the collection until explicitly requested.
+        /// that contains [IterableInt(2), IterableInt(3), ...,
+        /// IterableInt(int.MaxValue)], though lazily enumerated meaning that it
+        /// won't force generating all the values in the collection until
+        /// explicitly requested.
         /// </returns>
         /// <remarks>
         /// <para>

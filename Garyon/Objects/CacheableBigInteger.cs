@@ -6,7 +6,11 @@ using System.Reflection;
 
 namespace Garyon.Objects;
 
-/// <summary>Provides a mechanism that optimally handles operations on a <seealso cref="BigInteger"/> instance by caching smaller chunks of values before being applied to the big boi.</summary>
+/// <summary>
+/// Provides a mechanism that optimally handles operations on a
+/// <seealso cref="BigInteger"/> instance by caching smaller chunks of values
+/// before being applied to the big boi.
+/// </summary>
 public sealed class CacheableBigInteger
 {
     private long cachedAddend = 0;
@@ -15,7 +19,9 @@ public sealed class CacheableBigInteger
 
     private BigInteger cachedValue;
 
-    /// <summary>Gets or sets the value of the <seealso cref="BigInteger"/> instance.</summary>
+    /// <summary>
+    /// Gets or sets the value of the <seealso cref="BigInteger"/> instance.
+    /// </summary>
     public BigInteger Value
     {
         get
@@ -30,18 +36,35 @@ public sealed class CacheableBigInteger
         }
     }
 
-    /// <summary>Initializes a new instance of the <seealso cref="CacheableBigInteger"/> class.</summary>
+    /// <summary>
+    /// Initializes a new instance of the <seealso cref="CacheableBigInteger"/>
+    /// class.
+    /// </summary>
     public CacheableBigInteger() : this(BigInteger.Zero) { }
-    /// <summary>Initializes a new instance of the <seealso cref="CacheableBigInteger"/> class.</summary>
-    /// <param name="value">The value to initialize the instance from.</param>
+    /// <summary>
+    /// Initializes a new instance of the <seealso cref="CacheableBigInteger"/>
+    /// class.
+    /// </summary>
+    /// <param name="value">
+    /// The value to initialize the instance from.
+    /// </param>
     public CacheableBigInteger(long value) : this((BigInteger)value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="CacheableBigInteger"/> class.</summary>
-    /// <param name="value">The value to initialize the instance from.</param>
+    /// <summary>
+    /// Initializes a new instance of the <seealso cref="CacheableBigInteger"/>
+    /// class.
+    /// </summary>
+    /// <param name="value">
+    /// The value to initialize the instance from.
+    /// </param>
     public CacheableBigInteger(BigInteger value) => cachedValue = value;
 
     #region Operations Int64
-    /// <summary>Adds a value to the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to add to the current <seealso cref="BigInteger"/> value.</param>
+    /// <summary>
+    /// Adds a value to the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to add to the current <seealso cref="BigInteger"/> value.
+    /// </param>
     public void Add(long value)
     {
         if (cachedMultiplier != 1 || cachedDividend != 1)
@@ -55,11 +78,20 @@ public sealed class CacheableBigInteger
 
         cachedAddend += value;
     }
-    /// <summary>Subtracts a value from the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to subtract from the current <seealso cref="BigInteger"/> value.</param>
+    /// <summary>
+    /// Subtracts a value from the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to subtract from the current <seealso cref="BigInteger"/>
+    /// value.
+    /// </param>
     public void Subtract(long value) => Add(-value);
-    /// <summary>Multiplies a value to the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to multiply the current <seealso cref="BigInteger"/> value by.</param>
+    /// <summary>
+    /// Multiplies a value to the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to multiply the current <seealso cref="BigInteger"/> value by.
+    /// </param>
     public void Multiply(long value)
     {
         if (cachedAddend != 0 || cachedDividend != 1)
@@ -73,8 +105,12 @@ public sealed class CacheableBigInteger
 
         cachedMultiplier *= value;
     }
-    /// <summary>Divides a value from the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to divide the current <seealso cref="BigInteger"/> value by.</param>
+    /// <summary>
+    /// Divides a value from the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to divide the current <seealso cref="BigInteger"/> value by.
+    /// </param>
     public void Divide(long value)
     {
         if (cachedAddend != 0 || cachedMultiplier != 1)
@@ -91,17 +127,34 @@ public sealed class CacheableBigInteger
     #endregion
 
     #region Operations BigInteger
-    /// <summary>Adds a value to the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to add to the current <seealso cref="BigInteger"/> value.</param>
+    /// <summary>
+    /// Adds a value to the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to add to the current <seealso cref="BigInteger"/> value.
+    /// </param>
     public void Add(BigInteger value) => cachedValue = Value + value;
-    /// <summary>Subtracts a value from the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to subtract from the current <seealso cref="BigInteger"/> value.</param>
+    /// <summary>
+    /// Subtracts a value from the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to subtract from the current <seealso cref="BigInteger"/>
+    /// value.
+    /// </param>
     public void Subtract(BigInteger value) => cachedValue = Value - value;
-    /// <summary>Multiplies a value to the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to multiply the current <seealso cref="BigInteger"/> value by.</param>
+    /// <summary>
+    /// Multiplies a value to the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to multiply the current <seealso cref="BigInteger"/> value by.
+    /// </param>
     public void Multiply(BigInteger value) => cachedValue = Value * value;
-    /// <summary>Divides a value from the current <seealso cref="BigInteger"/> value.</summary>
-    /// <param name="value">The value to divide the current <seealso cref="BigInteger"/> value by.</param>
+    /// <summary>
+    /// Divides a value from the current <seealso cref="BigInteger"/> value.
+    /// </summary>
+    /// <param name="value">
+    /// The value to divide the current <seealso cref="BigInteger"/> value by.
+    /// </param>
     public void Divide(BigInteger value) => cachedValue = Value / value;
     #endregion
 

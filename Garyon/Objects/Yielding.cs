@@ -7,27 +7,26 @@ using System.Collections.Immutable;
 namespace Garyon.Objects;
 
 /// <summary>
-/// Provides helper methods for handling yielded
-/// values from factory methods.
+/// Provides helper methods for handling yielded values from factory methods.
 /// </summary>
 public static class Yielding
 {
     /// <summary>
-    /// Creates a new <seealso cref="Yielder{T}"/> from a
-    /// factory method.
+    /// Creates a new <seealso cref="Yielder{T}"/> from a factory method.
     /// </summary>
-    /// <typeparam name="T">The type of the yielded values.</typeparam>
+    /// <typeparam name="T">
+    /// The type of the yielded values.
+    /// </typeparam>
     /// <param name="factory">
     /// The factory method whose values will be yielded.
     /// </param>
     /// <returns>
-    /// The new <seealso cref="Yielder{T}"/> instance with the
-    /// provided underlying factory method.
+    /// The new <seealso cref="Yielder{T}"/> instance with the provided
+    /// underlying factory method.
     /// </returns>
     /// <remarks>
-    /// <seealso cref="Yielder{T}.Factory"/> is mutable, and the
-    /// underlying factory method may be changed from another
-    /// external source.
+    /// <seealso cref="Yielder{T}.Factory"/> is mutable, and the underlying
+    /// factory method may be changed from another external source.
     /// </remarks>
     public static Yielder<T> For<T>(Func<T> factory)
     {
@@ -36,8 +35,8 @@ public static class Yielding
 
 #pragma warning disable CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
     /// <returns>
-    /// A <seealso cref="IEnumerable{T}"/> with the yielded
-    /// values from the provided factory.
+    /// A <seealso cref="IEnumerable{T}"/> with the yielded values from the
+    /// provided factory.
     /// </returns>
     /// <remarks/>
     /// <inheritdoc cref="Yielder{T}.Yield(int)"/>

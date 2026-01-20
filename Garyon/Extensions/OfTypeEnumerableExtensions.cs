@@ -12,8 +12,8 @@ public static class OfTypeEnumerableExtensions
     extension<TSource>(IEnumerable<TSource> source)
     {
         /// <summary>
-        /// Filters the elements of the source collection, returning only
-        /// those that are of any of the specified types.
+        /// Filters the elements of the source collection, returning only those
+        /// that are of any of the specified types.
         /// </summary>
         public IEnumerable<TSource> OfAnyType<TA, TB>()
             where TA : TSource
@@ -23,8 +23,8 @@ public static class OfTypeEnumerableExtensions
         }
 
         /// <summary>
-        /// Filters the elements of the source collection, returning only
-        /// those that are of any of the specified types.
+        /// Filters the elements of the source collection, returning only those
+        /// that are of any of the specified types.
         /// </summary>
         public IEnumerable<TSource> OfAnyType<TA, TB, TC>()
             where TA : TSource
@@ -35,8 +35,8 @@ public static class OfTypeEnumerableExtensions
         }
 
         /// <summary>
-        /// Filters the elements of the source collection, returning only
-        /// those that are of any of the specified types.
+        /// Filters the elements of the source collection, returning only those
+        /// that are of any of the specified types.
         /// </summary>
         public IEnumerable<TSource> OfAnyType<TA, TB, TC, TD>()
             where TA : TSource

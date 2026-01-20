@@ -8,32 +8,31 @@ using System.Collections.Immutable;
 namespace Garyon.Objects;
 
 /// <summary>
-/// Provides mechanisms for convenient yielding of a
-/// factory's values.
+/// Provides mechanisms for convenient yielding of a factory's values.
 /// </summary>
-/// <typeparam name="T">The type of the yielded values.</typeparam>
+/// <typeparam name="T">
+/// The type of the yielded values.
+/// </typeparam>
 /// <param name="Factory">
-/// The factory that will be used to yield values. You may
-/// change this during the lifetime of this instance.
+/// The factory that will be used to yield values. You may change this during
+/// the lifetime of this instance.
 /// </param>
 public record struct Yielder<T>(Func<T> Factory)
 {
     /// <summary>
-    /// Yields values out of the factory without storing
-    /// them anywhere.
+    /// Yields values out of the factory without storing them anywhere.
     /// </summary>
     /// <param name="count">
     /// The number of values to yield from the factory.
     /// </param>
     /// <returns>
-    /// A <seealso cref="IEnumerable{T}"/> with the yielded
-    /// values from the current <seealso cref="Factory"/>.
+    /// A <seealso cref="IEnumerable{T}"/> with the yielded values from the
+    /// current <seealso cref="Factory"/>.
     /// </returns>
     /// <remarks>
-    /// As <seealso cref="Factory"/> is mutable, the yielded
-    /// results from the resulting <seealso cref="IEnumerable{T}"/>
-    /// could use multiple factories, if adjusted from another
-    /// external source.
+    /// As <seealso cref="Factory"/> is mutable, the yielded results from the
+    /// resulting <seealso cref="IEnumerable{T}"/> could use multiple factories,
+    /// if adjusted from another external source.
     /// </remarks>
     public IEnumerable<T> Yield(int count)
     {
@@ -63,10 +62,12 @@ public record struct Yielder<T>(Func<T> Factory)
     /// <summary>
     /// Yields a number of values into a new array.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <returns>
-    /// The created array containing the yielded values
-    /// in the order they were yielded.
+    /// The created array containing the yielded values in the order they were
+    /// yielded.
     /// </returns>
     public T[] YieldArray(int count)
     {
@@ -80,10 +81,12 @@ public record struct Yielder<T>(Func<T> Factory)
     /// Yields a number of values into a new instance of
     /// <seealso cref="List{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <returns>
-    /// The created <seealso cref="List{T}"/> instance containing
-    /// the yielded values in the order they were yielded.
+    /// The created <seealso cref="List{T}"/> instance containing the yielded
+    /// values in the order they were yielded.
     /// </returns>
     public List<T> YieldList(int count)
     {
@@ -95,15 +98,16 @@ public record struct Yielder<T>(Func<T> Factory)
     /// Yields a number of values into a new instance of
     /// <seealso cref="HashSet{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <returns>
-    /// The created <seealso cref="HashSet{T}"/> instance containing
-    /// the yielded values.
+    /// The created <seealso cref="HashSet{T}"/> instance containing the yielded
+    /// values.
     /// </returns>
     /// <remarks>
-    /// Duplicate yielded values are ignored. If the provided
-    /// factory method can yield duplicate values, the count
-    /// may be less than the provided.
+    /// Duplicate yielded values are ignored. If the provided factory method can
+    /// yield duplicate values, the count may be less than the provided.
     /// </remarks>
     public HashSet<T> YieldSet(int count)
     {
@@ -115,16 +119,18 @@ public record struct Yielder<T>(Func<T> Factory)
     /// Yields a number of values into a new instance of
     /// <seealso cref="SortedSet{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <returns>
-    /// The created <seealso cref="SortedSet{T}"/> instance containing
-    /// the yielded values.
+    /// The created <seealso cref="SortedSet{T}"/> instance containing the
+    /// yielded values.
     /// </returns>
     /// <remarks>
     /// This method first creates a new <seealso cref="List{T}"/> using
     /// <seealso cref="YieldList(int)"/>, and then constructs the
-    /// <seealso cref="SortedSet{T}"/> out of the created list.
-    /// This approach is considered to be more optimal.
+    /// <seealso cref="SortedSet{T}"/> out of the created list. This approach is
+    /// considered to be more optimal.
     /// </remarks>
     public SortedSet<T> YieldSortedSet(int count)
     {
@@ -132,10 +138,12 @@ public record struct Yielder<T>(Func<T> Factory)
     }
 
     /// <summary>
-    /// Yields a number of values into an existing instance
-    /// of <seealso cref="List{T}"/>.
+    /// Yields a number of values into an existing instance of
+    /// <seealso cref="List{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <param name="list">
     /// The <seealso cref="List{T}"/> instance to yield the values into.
     /// </param>
@@ -150,10 +158,12 @@ public record struct Yielder<T>(Func<T> Factory)
     }
 
     /// <summary>
-    /// Yields a number of values into an existing instance
-    /// of <seealso cref="HashSet{T}"/>.
+    /// Yields a number of values into an existing instance of
+    /// <seealso cref="HashSet{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <param name="set">
     /// The <seealso cref="HashSet{T}"/> instance to yield the values into.
     /// </param>
@@ -168,10 +178,12 @@ public record struct Yielder<T>(Func<T> Factory)
     }
 
     /// <summary>
-    /// Yields a number of values into an existing instance
-    /// of <seealso cref="SortedSet{T}"/>.
+    /// Yields a number of values into an existing instance of
+    /// <seealso cref="SortedSet{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <param name="set">
     /// The <seealso cref="SortedSet{T}"/> instance to yield the values into.
     /// </param>
@@ -181,8 +193,8 @@ public record struct Yielder<T>(Func<T> Factory)
     /// <remarks>
     /// This method first creates a new <seealso cref="List{T}"/> using
     /// <seealso cref="YieldList(int)"/>, and then performs a union on
-    /// <seealso cref="SortedSet{T}"/> with the created list.
-    /// This approach is considered to be more optimal.
+    /// <seealso cref="SortedSet{T}"/> with the created list. This approach is
+    /// considered to be more optimal.
     /// </remarks>
     public SortedSet<T> YieldInto(int count, SortedSet<T> set)
     {
@@ -192,10 +204,12 @@ public record struct Yielder<T>(Func<T> Factory)
     }
 
     /// <summary>
-    /// Yields a number of values into an existing instance
-    /// of <seealso cref="Span{T}"/>.
+    /// Yields a number of values into an existing instance of
+    /// <seealso cref="Span{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <param name="span">
     /// The <seealso cref="Span{T}"/> instance to yield the values into.
     /// </param>
@@ -212,10 +226,12 @@ public record struct Yielder<T>(Func<T> Factory)
         return span;
     }
     /// <summary>
-    /// Yields a number of values into an existing instance
-    /// of <seealso cref="Memory{T}"/>.
+    /// Yields a number of values into an existing instance of
+    /// <seealso cref="Memory{T}"/>.
     /// </summary>
-    /// <param name="count">The number of values to yield.</param>
+    /// <param name="count">
+    /// The number of values to yield.
+    /// </param>
     /// <param name="memory">
     /// The <seealso cref="Memory{T}"/> instance to yield the values into.
     /// </param>
@@ -229,13 +245,15 @@ public record struct Yielder<T>(Func<T> Factory)
     }
 
     /// <summary>
-    /// Fills the contents of an existing array with
-    /// yielded values from the currently provided factory.
+    /// Fills the contents of an existing array with yielded values from the
+    /// currently provided factory.
     /// </summary>
     /// <param name="array">
     /// The array to yield the values into.
     /// </param>
-    /// <returns>The provided array.</returns>
+    /// <returns>
+    /// The provided array.
+    /// </returns>
     public T[] Fill(T[] array)
     {
         for (int i = 0; i < array.Length; i++)
@@ -244,9 +262,8 @@ public record struct Yielder<T>(Func<T> Factory)
     }
 
     /// <summary>
-    /// Fills the contents of an existing instance of
-    /// <seealso cref="Span{T}"/> with yielded values
-    /// from the currently provided factory.
+    /// Fills the contents of an existing instance of <seealso cref="Span{T}"/>
+    /// with yielded values from the currently provided factory.
     /// </summary>
     /// <param name="span">
     /// The <seealso cref="Span{T}"/> instance to yield the values into.
@@ -261,8 +278,8 @@ public record struct Yielder<T>(Func<T> Factory)
 
     /// <summary>
     /// Fills the contents of an existing instance of
-    /// <seealso cref="Memory{T}"/> with yielded values
-    /// from the currently provided factory.
+    /// <seealso cref="Memory{T}"/> with yielded values from the currently
+    /// provided factory.
     /// </summary>
     /// <param name="memory">
     /// The <seealso cref="Memory{T}"/> instance to yield the values into.

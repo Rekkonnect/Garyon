@@ -11,7 +11,9 @@ public static class MethodInfoExtensions
     extension(MethodInfo method)
     {
         /// <inheritdoc cref="MethodInfo.CreateDelegate(Type)"/>
-        /// <typeparam name="TDelegate">The type of the delegate.</typeparam>
+        /// <typeparam name="TDelegate">
+        /// The type of the delegate.
+        /// </typeparam>
         public TDelegate CreateDelegate<TDelegate>()
             where TDelegate : Delegate
         {
@@ -21,7 +23,9 @@ public static class MethodInfoExtensions
         }
 
         /// <inheritdoc cref="MethodInfo.CreateDelegate(Type)"/>
-        /// <typeparam name="TDelegate">The type of the delegate.</typeparam>
+        /// <typeparam name="TDelegate">
+        /// The type of the delegate.
+        /// </typeparam>
         public TDelegate CreateDelegate<TDelegate>(object target)
             where TDelegate : Delegate
         {

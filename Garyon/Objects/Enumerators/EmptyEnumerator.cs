@@ -5,11 +5,14 @@ using System.Collections.Generic;
 namespace Garyon.Objects.Enumerators;
 
 /// <summary>
-/// Denotes an empty enumerator. During its enumeration, no values
-/// are yielded.
+/// Denotes an empty enumerator. During its enumeration, no values are yielded.
 /// </summary>
-/// <typeparam name="T">The type of values that are being (not) enumerated.</typeparam>
-/// <remarks>Consider using the `[]` expression for empty enumerables.</remarks>
+/// <typeparam name="T">
+/// The type of values that are being (not) enumerated.
+/// </typeparam>
+/// <remarks>
+/// Consider using the `[]` expression for empty enumerables.
+/// </remarks>
 public class EmptyEnumerator<T> : IEnumerator<T>
 {
     /// <summary>
@@ -20,8 +23,8 @@ public class EmptyEnumerator<T> : IEnumerator<T>
     private EmptyEnumerator() { }
 
     /// <summary>
-    /// Always throws an exception, as this enumerator should not yield
-    /// any values.
+    /// Always throws an exception, as this enumerator should not yield any
+    /// values.
     /// </summary>
     public T Current => throw new InvalidOperationException("The empty enumerator does not yield any values.");
     object? IEnumerator.Current => Current;
@@ -33,7 +36,9 @@ public class EmptyEnumerator<T> : IEnumerator<T>
     /// <summary>
     /// Always returns false, as no value is being enumerated.
     /// </summary>
-    /// <returns><see langword="false"/>.</returns>
+    /// <returns>
+    /// <see langword="false"/>.
+    /// </returns>
     public bool MoveNext()
     {
         return false;

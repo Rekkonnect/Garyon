@@ -6,8 +6,8 @@ namespace Garyon.Objects.Disposable;
 /// Provides a disposable block that does nothing upon disposal.
 /// </summary>
 /// <remarks>
-/// Consider using this struct in scenarios where a disposable object is required,
-/// but no actual disposal logic is necessary.
+/// Consider using this struct in scenarios where a disposable object is
+/// required, but no actual disposal logic is necessary.
 /// <br/>
 /// Another emerging pattern can be decorating a block of operations to avoid
 /// having stranded braces enclosing the block.

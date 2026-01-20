@@ -10,30 +10,69 @@ namespace Garyon.DataStructures.Trees;
 
 #nullable disable
 
-/// <summary>Represents a tree node, which is a component that is contained within a tree.</summary>
-/// <typeparam name="T">The type of the value that is stored in the node.</typeparam>
+/// <summary>
+/// Represents a tree node, which is a component that is contained within a
+/// tree.
+/// </summary>
+/// <typeparam name="T">
+/// The type of the value that is stored in the node.
+/// </typeparam>
 public class BinarySearchTreeNode<T> : BinarySearchTreeNode<T, BinarySearchTree<T>, BinarySearchTreeNode<T>>
     where T : IComparable<T>
 {
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with no base tree,
+    /// parent or children nodes.
+    /// </summary>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(T value = default)
         : base(value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
-    /// <param name="baseTree">The base tree that contains this node.</param>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with a base tree, but no
+    /// parent or children nodes.
+    /// </summary>
+    /// <param name="baseTree">
+    /// The base tree that contains this node.
+    /// </param>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(BinarySearchTree<T> baseTree, T value = default)
         : base(baseTree, value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
-    /// <param name="parentNode">The parent node.</param>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with a parent node, but
+    /// no children nodes. The base tree is considered to be that of the parent.
+    /// </summary>
+    /// <param name="parentNode">
+    /// The parent node.
+    /// </param>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(BinarySearchTreeNode<T> parentNode, T value = default)
         : base(parentNode, value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
-    /// <param name="parentNode">The parent node.</param>
-    /// <param name="child1">The first child node.</param>
-    /// <param name="child2">The second child node.</param>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with a parent and
+    /// children nodes. The base tree is considered to be that of the parent.
+    /// </summary>
+    /// <param name="parentNode">
+    /// The parent node.
+    /// </param>
+    /// <param name="child1">
+    /// The first child node.
+    /// </param>
+    /// <param name="child2">
+    /// The second child node.
+    /// </param>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(BinarySearchTreeNode<T> parentNode, BinarySearchTreeNode<T> child1, BinarySearchTreeNode<T> child2, T value = default)
         : base(parentNode, child1, child2, value) { }
 
@@ -47,16 +86,28 @@ public class BinarySearchTreeNode<T> : BinarySearchTreeNode<T, BinarySearchTree<
     #endregion
 }
 
-/// <summary>Represents a tree node, which is a component that is contained within a tree.</summary>
-/// <typeparam name="TValue">The type of the value that is stored in the node.</typeparam>
-/// <typeparam name="TTree">The type of the tree that this type is used in.</typeparam>
-/// <typeparam name="TTreeNode">The type of the tree nodes that are used in the <typeparamref name="TTree"/> type.</typeparam>
+/// <summary>
+/// Represents a tree node, which is a component that is contained within a
+/// tree.
+/// </summary>
+/// <typeparam name="TValue">
+/// The type of the value that is stored in the node.
+/// </typeparam>
+/// <typeparam name="TTree">
+/// The type of the tree that this type is used in.
+/// </typeparam>
+/// <typeparam name="TTreeNode">
+/// The type of the tree nodes that are used in the <typeparamref name="TTree"/>
+/// type.
+/// </typeparam>
 public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTreeNode<TValue, TTree, TTreeNode>
     where TValue : IComparable<TValue>
     where TTree : BinarySearchTree<TValue, TTree, TTreeNode>
     where TTreeNode : BinarySearchTreeNode<TValue, TTree, TTreeNode>
 {
-    /// <summary>Gets or sets the parent node of this tree node.</summary>
+    /// <summary>
+    /// Gets or sets the parent node of this tree node.
+    /// </summary>
     public override TTreeNode Parent
     {
         set
@@ -67,8 +118,15 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
         }
     }
 
-    /// <summary>Gets or sets the children nodes of this tree. The retrieved list is a copy of the internally stored list, therefore it is best to call this property as less as possible.</summary>
-    /// <value>The new list of nodes to set the children to. If the list is <see langword="null"/>, a new list is initialized.</value>
+    /// <summary>
+    /// Gets or sets the children nodes of this tree. The retrieved list is a
+    /// copy of the internally stored list, therefore it is best to call this
+    /// property as less as possible.
+    /// </summary>
+    /// <value>
+    /// The new list of nodes to set the children to. If the list is
+    /// <see langword="null"/>, a new list is initialized.
+    /// </value>
     public override List<TTreeNode> Children
     {
         set
@@ -85,25 +143,59 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
         }
     }
 
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with no base tree, parent or children nodes.</summary>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with no base tree,
+    /// parent or children nodes.
+    /// </summary>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(TValue value = default)
         : base(value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a base tree, but no parent or children nodes.</summary>
-    /// <param name="baseTree">The base tree that contains this node.</param>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with a base tree, but no
+    /// parent or children nodes.
+    /// </summary>
+    /// <param name="baseTree">
+    /// The base tree that contains this node.
+    /// </param>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(TTree baseTree, TValue value = default)
         : base(baseTree, value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent node, but no children nodes. The base tree is considered to be that of the parent.</summary>
-    /// <param name="parentNode">The parent node.</param>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with a parent node, but
+    /// no children nodes. The base tree is considered to be that of the parent.
+    /// </summary>
+    /// <param name="parentNode">
+    /// The parent node.
+    /// </param>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(TTreeNode parentNode, TValue value = default)
         : base(parentNode, value) { }
-    /// <summary>Initializes a new instance of the <seealso cref="BinarySearchTreeNode{T}"/> class with a parent and children nodes. The base tree is considered to be that of the parent.</summary>
-    /// <param name="parentNode">The parent node.</param>
-    /// <param name="child1">The first child node.</param>
-    /// <param name="child2">The second child node.</param>
-    /// <param name="value">The value of the node.</param>
+    /// <summary>
+    /// Initializes a new instance of the
+    /// <seealso cref="BinarySearchTreeNode{T}"/> class with a parent and
+    /// children nodes. The base tree is considered to be that of the parent.
+    /// </summary>
+    /// <param name="parentNode">
+    /// The parent node.
+    /// </param>
+    /// <param name="child1">
+    /// The first child node.
+    /// </param>
+    /// <param name="child2">
+    /// The second child node.
+    /// </param>
+    /// <param name="value">
+    /// The value of the node.
+    /// </param>
     public BinarySearchTreeNode(TTreeNode parentNode, TTreeNode child1, TTreeNode child2, TValue value = default)
         : base(parentNode, value)
     {
@@ -133,9 +225,17 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
     }
 
     #region Children
-    /// <summary>Gets the leftmost direct child of this node that has the specified value.</summary>
-    /// <param name="value">The value of the direct child node to find.</param>
-    /// <returns>The <seealso cref="BinarySearchTreeNode{T}"/> with the specified value, if found; otherwise <see langword="null"/>.</returns>
+    /// <summary>
+    /// Gets the leftmost direct child of this node that has the specified
+    /// value.
+    /// </summary>
+    /// <param name="value">
+    /// The value of the direct child node to find.
+    /// </param>
+    /// <returns>
+    /// The <seealso cref="BinarySearchTreeNode{T}"/> with the specified value,
+    /// if found; otherwise <see langword="null"/>.
+    /// </returns>
     public override TTreeNode GetChild(TValue value)
     {
         if (Matches(LeftChild, value))
@@ -154,8 +254,12 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
         }
     }
 
-    /// <summary>Adds a child to the first available spot from the two children spots.</summary>
-    /// <param name="newChild">The new child to add.</param>
+    /// <summary>
+    /// Adds a child to the first available spot from the two children spots.
+    /// </summary>
+    /// <param name="newChild">
+    /// The new child to add.
+    /// </param>
     public override void AddChild(TTreeNode newChild)
     {
         if (newChild.Value.LessThan(Value))
@@ -175,9 +279,18 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
 
         RegisterAddedChild(newChild);
     }
-    /// <summary>Adds children to the available spots from the two children spots. If both are unoccupied, both nodes are added in the provided order, otherwise only the <paramref name="left"/> is added, if there is any unoccupied spot.</summary>
-    /// <param name="left">The left child to add.</param>
-    /// <param name="right">The right child to add.</param>
+    /// <summary>
+    /// Adds children to the available spots from the two children spots. If
+    /// both are unoccupied, both nodes are added in the provided order,
+    /// otherwise only the <paramref name="left"/> is added, if there is any
+    /// unoccupied spot.
+    /// </summary>
+    /// <param name="left">
+    /// The left child to add.
+    /// </param>
+    /// <param name="right">
+    /// The right child to add.
+    /// </param>
     public override void AddChildren(TTreeNode left, TTreeNode right)
     {
         AddChild(left);
@@ -186,13 +299,27 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
     #endregion
 
     #region Subtree Nodes
-    /// <summary>Adds a new node to this subtree.</summary>
-    /// <param name="value">The value of the node to add to this subtree.</param>
-    /// <returns><see langword="true"/> if the node was successsfully added to this subtree, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Adds a new node to this subtree.
+    /// </summary>
+    /// <param name="value">
+    /// The value of the node to add to this subtree.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the node was successsfully added to this
+    /// subtree, otherwise <see langword="false"/>.
+    /// </returns>
     public bool AddNode(TValue value) => AddNode(InitializeNewNode(value));
-    /// <summary>Adds a new node to this subtree.</summary>
-    /// <param name="node">The node to add to this subtree.</param>
-    /// <returns><see langword="true"/> if the node was successsfully added to this subtree, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Adds a new node to this subtree.
+    /// </summary>
+    /// <param name="node">
+    /// The node to add to this subtree.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the node was successsfully added to this
+    /// subtree, otherwise <see langword="false"/>.
+    /// </returns>
     public bool AddNode(TTreeNode node)
     {
         var existingNode = Seek(node.Value, out var parent);
@@ -203,35 +330,65 @@ public abstract class BinarySearchTreeNode<TValue, TTree, TTreeNode> : BinaryTre
         return true;
     }
 
-    /// <summary>Adds a collection of nodes to this subtree.</summary>
-    /// <param name="values">The values of the nodes to add to this subtree.</param>
+    /// <summary>
+    /// Adds a collection of nodes to this subtree.
+    /// </summary>
+    /// <param name="values">
+    /// The values of the nodes to add to this subtree.
+    /// </param>
     public void AddNodes(IEnumerable<TValue> values) => AddNodes(values.Select(v => InitializeNewNode(v)));
-    /// <summary>Adds a collection of nodes to this subtree.</summary>
-    /// <param name="nodes">The the nodes to add to this subtree.</param>
+    /// <summary>
+    /// Adds a collection of nodes to this subtree.
+    /// </summary>
+    /// <param name="nodes">
+    /// The the nodes to add to this subtree.
+    /// </param>
     public void AddNodes(IEnumerable<TTreeNode> nodes)
     {
         foreach (var n in nodes)
             AddNode(n);
     }
 
-    /// <summary>Adds a collection of nodes to this subtree.</summary>
-    /// <param name="values">The values of the nodes to add to this subtree.</param>
+    /// <summary>
+    /// Adds a collection of nodes to this subtree.
+    /// </summary>
+    /// <param name="values">
+    /// The values of the nodes to add to this subtree.
+    /// </param>
     public void AddNodes(params TValue[] values) => AddNodes((IEnumerable<TValue>)values);
-    /// <summary>Adds a collection of nodes to this subtree.</summary>
-    /// <param name="nodes">The the nodes to add to this subtree.</param>
+    /// <summary>
+    /// Adds a collection of nodes to this subtree.
+    /// </summary>
+    /// <param name="nodes">
+    /// The the nodes to add to this subtree.
+    /// </param>
     public void AddNodes(params TTreeNode[] nodes) => AddNodes((IEnumerable<TTreeNode>)nodes);
 
-    /// <summary>Removes a node with the specified value from this subtree.</summary>
-    /// <param name="value">The value of the node to remove from this subtree.</param>
-    /// <returns><see langword="true"/> if the node was successfully removed from this subtree, otherwise <see langword="false"/>.</returns>
+    /// <summary>
+    /// Removes a node with the specified value from this subtree.
+    /// </summary>
+    /// <param name="value">
+    /// The value of the node to remove from this subtree.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the node was successfully removed from this
+    /// subtree, otherwise <see langword="false"/>.
+    /// </returns>
     public override bool RemoveNode(TValue value)
     {
         return RemoveNode(Find(value));
     }
 
-    /// <summary>Attempts to find a node with the specified value within this subtree.</summary>
-    /// <param name="value">The value of the node to be found.</param>
-    /// <returns>The node within this subtree that has the specified value, if found, otherwise <see langword="null"/>.</returns>
+    /// <summary>
+    /// Attempts to find a node with the specified value within this subtree.
+    /// </summary>
+    /// <param name="value">
+    /// The value of the node to be found.
+    /// </param>
+    /// <returns>
+    /// The node within this subtree that has the specified value, if found,
+    /// otherwise <see langword="null"/>.
+    /// </returns>
     public TTreeNode Find(TValue value)
     {
         return Seek(value, out _);

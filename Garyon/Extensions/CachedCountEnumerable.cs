@@ -5,9 +5,9 @@ using System.Collections.Generic;
 namespace Garyon.Extensions;
 
 /// <summary>
-/// An <see cref="IEnumerable"/> wrapper that provides the ability to cache
-/// the count of the underlying enumerable, and also provide the real-time
-/// lower bound of the count while enumerating.
+/// An <see cref="IEnumerable"/> wrapper that provides the ability to cache the
+/// count of the underlying enumerable, and also provide the real-time lower
+/// bound of the count while enumerating.
 /// </summary>
 public class CachedCountEnumerable : IEnumerable
 {
@@ -33,8 +33,8 @@ public class CachedCountEnumerable : IEnumerable
     public int MinCount => _minCount;
 
     /// <summary>
-    /// Gets the count of the enumerable, forcing its complete enumeration
-    /// if the count is not yet known.
+    /// Gets the count of the enumerable, forcing its complete enumeration if
+    /// the count is not yet known.
     /// </summary>
     public int ForceCount()
     {
@@ -112,8 +112,8 @@ public class CachedCountEnumerable : IEnumerable
 
 /// <summary>
 /// An <see cref="IEnumerable{T}"/> wrapper that provides the ability to cache
-/// the count of the underlying enumerable, and also provide the real-time
-/// lower bound of the count while enumerating.
+/// the count of the underlying enumerable, and also provide the real-time lower
+/// bound of the count while enumerating.
 /// </summary>
 public class CachedCountEnumerable<T>(IEnumerable<T> enumerable)
     : CachedCountEnumerable(enumerable), IEnumerable, IEnumerable<T>

@@ -23,13 +23,21 @@ public static class IEnumeratorExtensions
         return enumerator;
     }
 
-    /// <summary>Returns the given enumerator instance.</summary>
-    /// <typeparam name="T">The type of the enumerated values.</typeparam>
-    /// <param name="enumerator">The enumerator instance to return.</param>
-    /// <returns>The given enumerator instance.</returns>
+    /// <summary>
+    /// Returns the given enumerator instance.
+    /// </summary>
+    /// <typeparam name="T">
+    /// The type of the enumerated values.
+    /// </typeparam>
+    /// <param name="enumerator">
+    /// The enumerator instance to return.
+    /// </param>
+    /// <returns>
+    /// The given enumerator instance.
+    /// </returns>
     /// <remarks>
-    /// This method is only present to enable direct enumeration
-    /// of the enumeartor in a <see langword="foreach"/> statement.
+    /// This method is only present to enable direct enumeration of the
+    /// enumeartor in a <see langword="foreach"/> statement.
     /// <br/>
     /// Avoid using it directly.
     /// </remarks>
@@ -39,8 +47,12 @@ public static class IEnumeratorExtensions
     }
 
     /// <inheritdoc cref="GetEnumerator{T}(IEnumerator{T})"/>
-    /// <typeparam name="TValue">The type of the enumerated values.</typeparam>
-    /// <typeparam name="TEnumerator">The type of the enumerator.</typeparam>
+    /// <typeparam name="TValue">
+    /// The type of the enumerated values.
+    /// </typeparam>
+    /// <typeparam name="TEnumerator">
+    /// The type of the enumerator.
+    /// </typeparam>
     public static TEnumerator GetEnumerator<TEnumerator, TValue>(this TEnumerator enumerator)
         where TEnumerator : IEnumerator<TValue>
     {

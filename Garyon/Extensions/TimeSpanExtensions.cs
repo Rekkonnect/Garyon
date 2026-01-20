@@ -7,57 +7,102 @@ using System.Runtime.CompilerServices;
 
 namespace Garyon.Extensions;
 
-/// <summary>Represents a component in the <seealso cref="TimeSpan"/> struct.</summary>
+/// <summary>
+/// Represents a component in the <seealso cref="TimeSpan"/> struct.
+/// </summary>
 public enum TimeSpanComponent
 {
-    /// <summary>Represents the <seealso cref="TimeSpan.Ticks"/> component.</summary>
+    /// <summary>
+    /// Represents the <seealso cref="TimeSpan.Ticks"/> component.
+    /// </summary>
     Ticks = 0,
 
-    /// <summary>Represents the <seealso cref="TimeSpan.Milliseconds"/> component.</summary>
+    /// <summary>
+    /// Represents the <seealso cref="TimeSpan.Milliseconds"/> component.
+    /// </summary>
     Milliseconds,
-    /// <summary>Represents the <seealso cref="TimeSpan.Seconds"/> component.</summary>
+    /// <summary>
+    /// Represents the <seealso cref="TimeSpan.Seconds"/> component.
+    /// </summary>
     Seconds,
-    /// <summary>Represents the <seealso cref="TimeSpan.Minutes"/> component.</summary>
+    /// <summary>
+    /// Represents the <seealso cref="TimeSpan.Minutes"/> component.
+    /// </summary>
     Minutes,
-    /// <summary>Represents the <seealso cref="TimeSpan.Hours"/> component.</summary>
+    /// <summary>
+    /// Represents the <seealso cref="TimeSpan.Hours"/> component.
+    /// </summary>
     Hours,
-    /// <summary>Represents the <seealso cref="TimeSpan.Days"/> component.</summary>
+    /// <summary>
+    /// Represents the <seealso cref="TimeSpan.Days"/> component.
+    /// </summary>
     Days,
 }
 
-/// <summary>Provides extensions for the <seealso cref="TimeSpan"/> struct.</summary>
+/// <summary>
+/// Provides extensions for the <seealso cref="TimeSpan"/> struct.
+/// </summary>
 public static class TimeSpanExtensions
 {
-    /// <summary>Gets the sign of the given <seealso cref="TimeSpan"/>.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose sign to get.</param>
-    /// <returns>The sign of the <seealso cref="TimeSpan.Ticks"/> property, in accordance with <seealso cref="Math.Sign(long)"/>.</returns>
+    /// <summary>
+    /// Gets the sign of the given <seealso cref="TimeSpan"/>.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose sign to get.
+    /// </param>
+    /// <returns>
+    /// The sign of the <seealso cref="TimeSpan.Ticks"/> property, in accordance
+    /// with <seealso cref="Math.Sign(long)"/>.
+    /// </returns>
     public static int Sign(this TimeSpan timeSpan) => Math.Sign(timeSpan.Ticks);
 
     /// <summary>
     /// Get the absolute value of the <seealso cref="TimeSpan"/>.
     /// </summary>
     /// <returns>
-    /// A non-negative <see cref="TimeSpan"/> representing the same duration
-    /// as the provided instance, but without a negative sign.
+    /// A non-negative <see cref="TimeSpan"/> representing the same duration as
+    /// the provided instance, but without a negative sign.
     /// </returns>
     public static TimeSpan Absolute(this TimeSpan timeSpan)
     {
         return TimeSpan.FromTicks(Math.Abs(timeSpan.Ticks));
     }
 
-    /// <summary>Gets the specified component of the given <seealso cref="TimeSpan"/> instance.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose component to get.</param>
-    /// <param name="component">The component of the <seealso cref="TimeSpan"/> instance to get.</param>
-    /// <returns>The requested component of the <seealso cref="TimeSpan"/> instance, represented by the specified <seealso cref="TimeSpanComponent"/>.</returns>
+    /// <summary>
+    /// Gets the specified component of the given <seealso cref="TimeSpan"/>
+    /// instance.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose component to get.
+    /// </param>
+    /// <param name="component">
+    /// The component of the <seealso cref="TimeSpan"/> instance to get.
+    /// </param>
+    /// <returns>
+    /// The requested component of the <seealso cref="TimeSpan"/> instance,
+    /// represented by the specified <seealso cref="TimeSpanComponent"/>.
+    /// </returns>
     public static long GetComponentInt64(this TimeSpan timeSpan, TimeSpanComponent component) => component switch
     {
         TimeSpanComponent.Ticks => timeSpan.Ticks,
         _ => GetComponent(timeSpan, component),
     };
-    /// <summary>Gets the specified component of the given <seealso cref="TimeSpan"/> instance.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose component to get.</param>
-    /// <param name="component">The component of the <seealso cref="TimeSpan"/> instance to get. To get the <seealso cref="TimeSpanComponent.Ticks"/> component, use <seealso cref="GetComponentInt64(TimeSpan, TimeSpanComponent)"/>.</param>
-    /// <returns>The requested component of the <seealso cref="TimeSpan"/> instance, represented by the specified <seealso cref="TimeSpanComponent"/>.</returns>
+    /// <summary>
+    /// Gets the specified component of the given <seealso cref="TimeSpan"/>
+    /// instance.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose component to get.
+    /// </param>
+    /// <param name="component">
+    /// The component of the <seealso cref="TimeSpan"/> instance to get. To get
+    /// the <seealso cref="TimeSpanComponent.Ticks"/> component, use
+    /// <seealso cref="GetComponentInt64(TimeSpan, TimeSpanComponent)"/>.
+    /// </param>
+    /// <returns>
+    /// The requested component of the <seealso cref="TimeSpan"/> instance,
+    /// represented by the specified <seealso cref="TimeSpanComponent"/>.
+    /// </returns>
     public static int GetComponent(this TimeSpan timeSpan, TimeSpanComponent component)
     {
         return component switch
@@ -79,37 +124,90 @@ public static class TimeSpanExtensions
     }
 
     #region Within Time Unit
-    /// <summary>Creates a new <seealso cref="TimeSpan"/> instance reflecting the duration within the final day.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose same-day duration to calculate.</param>
-    /// <returns>The duration within the final day. In other words, this reflects the same duration, except the <seealso cref="TimeSpan.Days"/> property is 0.</returns>
+    /// <summary>
+    /// Creates a new <seealso cref="TimeSpan"/> instance reflecting the
+    /// duration within the final day.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose same-day duration to
+    /// calculate.
+    /// </param>
+    /// <returns>
+    /// The duration within the final day. In other words, this reflects the
+    /// same duration, except the <seealso cref="TimeSpan.Days"/> property is 0.
+    /// </returns>
     public static TimeSpan WithinDay(this TimeSpan timeSpan)
     {
         return WithinTimeUnit(timeSpan, TimeSpan.TicksPerDay);
     }
-    /// <summary>Creates a new <seealso cref="TimeSpan"/> instance reflecting the duration within the final hour.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose same-hour duration to calculate.</param>
-    /// <returns>The duration within the final hour. In other words, this reflects the same duration, except the <seealso cref="TimeSpan.Days"/> and <seealso cref="TimeSpan.Hours"/> properties are 0.</returns>
+    /// <summary>
+    /// Creates a new <seealso cref="TimeSpan"/> instance reflecting the
+    /// duration within the final hour.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose same-hour duration to
+    /// calculate.
+    /// </param>
+    /// <returns>
+    /// The duration within the final hour. In other words, this reflects the
+    /// same duration, except the <seealso cref="TimeSpan.Days"/> and
+    /// <seealso cref="TimeSpan.Hours"/> properties are 0.
+    /// </returns>
     public static TimeSpan WithinHour(this TimeSpan timeSpan)
     {
         return WithinTimeUnit(timeSpan, TimeSpan.TicksPerHour);
     }
-    /// <summary>Creates a new <seealso cref="TimeSpan"/> instance reflecting the duration within the final minute.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose same-minute duration to calculate.</param>
-    /// <returns>The duration within the final minute. In other words, this reflects the same duration, except the <seealso cref="TimeSpan.Days"/>, <seealso cref="TimeSpan.Hours"/> and <seealso cref="TimeSpan.Minutes"/> properties are 0.</returns>
+    /// <summary>
+    /// Creates a new <seealso cref="TimeSpan"/> instance reflecting the
+    /// duration within the final minute.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose same-minute duration to
+    /// calculate.
+    /// </param>
+    /// <returns>
+    /// The duration within the final minute. In other words, this reflects the
+    /// same duration, except the <seealso cref="TimeSpan.Days"/>,
+    /// <seealso cref="TimeSpan.Hours"/> and <seealso cref="TimeSpan.Minutes"/>
+    /// properties are 0.
+    /// </returns>
     public static TimeSpan WithinMinute(this TimeSpan timeSpan)
     {
         return WithinTimeUnit(timeSpan, TimeSpan.TicksPerMinute);
     }
-    /// <summary>Creates a new <seealso cref="TimeSpan"/> instance reflecting the duration within the final second.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose same-second duration to calculate.</param>
-    /// <returns>The duration within the final second. In other words, this reflects the same duration, except the <seealso cref="TimeSpan.Days"/>, <seealso cref="TimeSpan.Hours"/>, <seealso cref="TimeSpan.Minutes"/> and <seealso cref="TimeSpan.Seconds"/> properties are 0.</returns>
+    /// <summary>
+    /// Creates a new <seealso cref="TimeSpan"/> instance reflecting the
+    /// duration within the final second.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose same-second duration to
+    /// calculate.
+    /// </param>
+    /// <returns>
+    /// The duration within the final second. In other words, this reflects the
+    /// same duration, except the <seealso cref="TimeSpan.Days"/>,
+    /// <seealso cref="TimeSpan.Hours"/>, <seealso cref="TimeSpan.Minutes"/> and
+    /// <seealso cref="TimeSpan.Seconds"/> properties are 0.
+    /// </returns>
     public static TimeSpan WithinSecond(this TimeSpan timeSpan)
     {
         return WithinTimeUnit(timeSpan, TimeSpan.TicksPerSecond);
     }
-    /// <summary>Creates a new <seealso cref="TimeSpan"/> instance reflecting the duration within the final millisecond.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> instance whose same-millisecond duration to calculate.</param>
-    /// <returns>The duration within the final millisecond. In other words, this reflects the same duration, except the <seealso cref="TimeSpan.Days"/>, <seealso cref="TimeSpan.Hours"/>, <seealso cref="TimeSpan.Minutes"/>, <seealso cref="TimeSpan.Seconds"/> and <seealso cref="TimeSpan.Milliseconds"/> properties are 0.</returns>
+    /// <summary>
+    /// Creates a new <seealso cref="TimeSpan"/> instance reflecting the
+    /// duration within the final millisecond.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> instance whose same-millisecond duration
+    /// to calculate.
+    /// </param>
+    /// <returns>
+    /// The duration within the final millisecond. In other words, this reflects
+    /// the same duration, except the <seealso cref="TimeSpan.Days"/>,
+    /// <seealso cref="TimeSpan.Hours"/>, <seealso cref="TimeSpan.Minutes"/>,
+    /// <seealso cref="TimeSpan.Seconds"/> and
+    /// <seealso cref="TimeSpan.Milliseconds"/> properties are 0.
+    /// </returns>
     public static TimeSpan WithinMillisecond(this TimeSpan timeSpan)
     {
         return WithinTimeUnit(timeSpan, TimeSpan.TicksPerMillisecond);
@@ -122,63 +220,166 @@ public static class TimeSpanExtensions
     #endregion
 
     #region With Components
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the days component of the copied value is set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted days component.</param>
-    /// <param name="days">The value of the days component of the resulting copied <seealso cref="TimeSpan"/>. It must match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the days component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="days"/> does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the days
+    /// component of the copied value is set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted days component.
+    /// </param>
+    /// <param name="days">
+    /// The value of the days component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the days
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="days"/> does not match the sign of
+    /// the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </exception>
     public static TimeSpan WithDays(this TimeSpan timeSpan, int days)
     {
         ValidateDaysComponent(timeSpan, days);
         return timeSpan.Add(TimeSpan.FromDays(days - timeSpan.Days));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours component of the copied value is set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted hours component.</param>
-    /// <param name="hours">The value of the hours component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the hours component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="hours"/> is outside the range [-23, 23] -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours
+    /// component of the copied value is set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted hours component.
+    /// </param>
+    /// <param name="hours">
+    /// The value of the hours component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the hours
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="hours"/> is outside the range [-23,
+    /// 23] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </exception>
     public static TimeSpan WithHours(this TimeSpan timeSpan, int hours)
     {
         ValidateHoursComponent(timeSpan, hours);
         return timeSpan.Add(TimeSpan.FromHours(hours - timeSpan.Hours));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes component of the copied value is set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted minutes component.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the minutes component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="minutes"/> is outside the range [-59, 59] -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes
+    /// component of the copied value is set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted minutes component.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the minutes
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="minutes"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </exception>
     public static TimeSpan WithMinutes(this TimeSpan timeSpan, int minutes)
     {
         ValidateMinutesComponent(timeSpan, minutes);
         return timeSpan.Add(TimeSpan.FromMinutes(minutes - timeSpan.Minutes));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the seconds component of the copied value is set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted seconds component.</param>
-    /// <param name="seconds">The value of the seconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the seconds component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="seconds"/> is outside the range [-59, 59] -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the seconds
+    /// component of the copied value is set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted seconds component.
+    /// </param>
+    /// <param name="seconds">
+    /// The value of the seconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the seconds
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="seconds"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </exception>
     public static TimeSpan WithSeconds(this TimeSpan timeSpan, int seconds)
     {
         ValidateSecondsComponent(timeSpan, seconds);
         return timeSpan.Add(TimeSpan.FromSeconds(seconds - timeSpan.Seconds));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the milliseconds component of the copied value is set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted milliseconds component.</param>
-    /// <param name="milliseconds">The value of the milliseconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the milliseconds component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="milliseconds"/> is outside the range [-999, 999] -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the
+    /// milliseconds component of the copied value is set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted milliseconds component.
+    /// </param>
+    /// <param name="milliseconds">
+    /// The value of the milliseconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the milliseconds
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="milliseconds"/> is outside the range
+    /// [-999, 999] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </exception>
     public static TimeSpan WithMilliseconds(this TimeSpan timeSpan, int milliseconds)
     {
         ValidateMillisecondsComponent(timeSpan, milliseconds);
         return timeSpan.Add(TimeSpan.FromMilliseconds(milliseconds - timeSpan.Milliseconds));
     }
 
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the specified component of the copied value is set to the specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted time components.</param>
-    /// <param name="value">The value to set the component to.</param>
-    /// <param name="component">The component of the <seealso cref="TimeSpan"/> instance that will be changed. <seealso cref="TimeSpanComponent.Ticks"/> is not accepted in this overload, consider using <seealso cref="WithComponent(TimeSpan, long, TimeSpanComponent)"/>.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the specified component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="value"/> falls out of the valid range for the given component, or an invalid day is represented.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the
+    /// specified component of the copied value is set to the specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted time components.
+    /// </param>
+    /// <param name="value">
+    /// The value to set the component to.
+    /// </param>
+    /// <param name="component">
+    /// The component of the <seealso cref="TimeSpan"/> instance that will be
+    /// changed. <seealso cref="TimeSpanComponent.Ticks"/> is not accepted in
+    /// this overload, consider using
+    /// <seealso cref="WithComponent(TimeSpan, long, TimeSpanComponent)"/>.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the specified
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="value"/> falls out of the valid
+    /// range for the given component, or an invalid day is represented.
+    /// </exception>
     [ExcludeFromCodeCoverage]
     public static TimeSpan WithComponent(this TimeSpan timeSpan, int value, TimeSpanComponent component)
     {
@@ -199,12 +400,29 @@ public static class TimeSpanExtensions
             throw ThrowHelper.Throw<InvalidEnumArgumentException>("The provided enum value is invalid.");
         }
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the specified component of the copied value is set to the specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted time components.</param>
-    /// <param name="value">The value to set the component to.</param>
-    /// <param name="component">The component of the <seealso cref="TimeSpan"/> instance that will be changed. <seealso cref="TimeSpanComponent.Ticks"/> is also accepted.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the specified component set to the specified value.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The given value for <paramref name="value"/> falls out of the valid range for the given component, or an invalid day is represented.</exception>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the
+    /// specified component of the copied value is set to the specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted time components.
+    /// </param>
+    /// <param name="value">
+    /// The value to set the component to.
+    /// </param>
+    /// <param name="component">
+    /// The component of the <seealso cref="TimeSpan"/> instance that will be
+    /// changed. <seealso cref="TimeSpanComponent.Ticks"/> is also accepted.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the specified
+    /// component set to the specified value.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The given value for <paramref name="value"/> falls out of the valid
+    /// range for the given component, or an invalid day is represented.
+    /// </exception>
     [ExcludeFromCodeCoverage]
     public static TimeSpan WithComponent(this TimeSpan timeSpan, long value, TimeSpanComponent component)
     {
@@ -216,16 +434,35 @@ public static class TimeSpanExtensions
         };
     }
 
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the seconds and milliseconds components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted seconds and milliseconds components.</param>
-    /// <param name="seconds">The value of the seconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="milliseconds">The value of the milliseconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the seconds and milliseconds components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the seconds
+    /// and milliseconds components of the copied value are set to a specified
+    /// value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted seconds and milliseconds components.
+    /// </param>
+    /// <param name="seconds">
+    /// The value of the seconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="milliseconds">
+    /// The value of the milliseconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the seconds and
+    /// milliseconds components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="milliseconds"/> is outside the range [-999, 999]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="seconds"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="milliseconds"/> is outside the range
+    /// [-999, 999] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="seconds"/> is outside the range [-59, 59] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithSecondsMilliseconds(this TimeSpan timeSpan, int seconds, int milliseconds)
     {
@@ -235,19 +472,43 @@ public static class TimeSpanExtensions
         int targetMilliseconds = seconds * 1000 + milliseconds;
         return timeSpan.Add(TimeSpan.FromMilliseconds(targetMilliseconds - currentMilliseconds));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes, seconds and milliseconds components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted minutes, seconds and milliseconds components.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="seconds">The value of the seconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="milliseconds">The value of the milliseconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the minutes, seconds and milliseconds components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes,
+    /// seconds and milliseconds components of the copied value are set to a
+    /// specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted minutes, seconds and milliseconds components.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="seconds">
+    /// The value of the seconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="milliseconds">
+    /// The value of the milliseconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the minutes,
+    /// seconds and milliseconds components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="milliseconds"/> is outside the range [-999, 999]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="seconds"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="minutes"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="milliseconds"/> is outside the range
+    /// [-999, 999] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="seconds"/> is outside the range [-59, 59] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero -or-
+    /// the given value for <paramref name="minutes"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithMinutesSecondsMilliseconds(this TimeSpan timeSpan, int minutes, int seconds, int milliseconds)
     {
@@ -258,16 +519,34 @@ public static class TimeSpanExtensions
         int targetMilliseconds = (minutes * 60 + seconds) * 1000 + milliseconds;
         return timeSpan.Add(TimeSpan.FromMilliseconds(targetMilliseconds - currentMilliseconds));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes and seconds components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted minutes and seconds components.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="seconds">The value of the seconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the minutes and seconds components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes
+    /// and seconds components of the copied value are set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted minutes and seconds components.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="seconds">
+    /// The value of the seconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the minutes and
+    /// seconds components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="seconds"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="minutes"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="seconds"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="minutes"/> is outside the range [-59, 59] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithMinutesSeconds(this TimeSpan timeSpan, int minutes, int seconds)
     {
@@ -277,16 +556,34 @@ public static class TimeSpanExtensions
         int targetSeconds = minutes * 60 + seconds;
         return timeSpan.Add(TimeSpan.FromSeconds(targetSeconds - currentSeconds));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours and minutes components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted hours and minutes components.</param>
-    /// <param name="hours">The value of the hours component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the hours and minutes components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours
+    /// and minutes components of the copied value are set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted hours and minutes components.
+    /// </param>
+    /// <param name="hours">
+    /// The value of the hours component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the hours and
+    /// minutes components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="minutes"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="hours"/> is outside the range [-23, 23]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="minutes"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="hours"/> is outside the range [-23, 23] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithHoursMinutes(this TimeSpan timeSpan, int hours, int minutes)
     {
@@ -296,19 +593,43 @@ public static class TimeSpanExtensions
         int targetMinutes = hours * 60 + minutes;
         return timeSpan.Add(TimeSpan.FromMinutes(targetMinutes - currentMinutes));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours, minutes and seconds components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted hours, minutes and seconds components.</param>
-    /// <param name="hours">The value of the hours component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="seconds">The value of the seconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the hours, minutes and seconds components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours,
+    /// minutes and seconds components of the copied value are set to a
+    /// specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted hours, minutes and seconds components.
+    /// </param>
+    /// <param name="hours">
+    /// The value of the hours component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="seconds">
+    /// The value of the seconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the hours,
+    /// minutes and seconds components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="seconds"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="minutes"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="hours"/> is outside the range [-23, 23]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="seconds"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="minutes"/> is outside the range [-59, 59] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero -or-
+    /// the given value for <paramref name="hours"/> is outside the range [-23,
+    /// 23] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithHoursMinutesSeconds(this TimeSpan timeSpan, int hours, int minutes, int seconds)
     {
@@ -319,22 +640,50 @@ public static class TimeSpanExtensions
         int targetSeconds = (hours * 60 + minutes) * 60 + seconds;
         return timeSpan.Add(TimeSpan.FromSeconds(targetSeconds - currentSeconds));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours, minutes and seconds components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted hours, minutes and seconds components.</param>
-    /// <param name="hours">The value of the hours component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="seconds">The value of the seconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="milliseconds">The value of the milliseconds component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the hours, minutes and seconds components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours,
+    /// minutes and seconds components of the copied value are set to a
+    /// specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted hours, minutes and seconds components.
+    /// </param>
+    /// <param name="hours">
+    /// The value of the hours component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="seconds">
+    /// The value of the seconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="milliseconds">
+    /// The value of the milliseconds component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-999, 999] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the hours,
+    /// minutes and seconds components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="milliseconds"/> is outside the range [-999, 999]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="seconds"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="minutes"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="hours"/> is outside the range [-23, 23]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="milliseconds"/> is outside the range
+    /// [-999, 999] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="seconds"/> is outside the range [-59, 59] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero -or-
+    /// the given value for <paramref name="minutes"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="hours"/> is outside the range [-23, 23] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithHoursMinutesSecondsMilliseconds(this TimeSpan timeSpan, int hours, int minutes, int seconds, int milliseconds)
     {
@@ -346,15 +695,34 @@ public static class TimeSpanExtensions
         int targetMilliseconds = ((hours * 60 + minutes) * 60 + seconds) * 1000 + milliseconds;
         return timeSpan.Add(TimeSpan.FromMilliseconds(targetMilliseconds - currentMilliseconds));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the days and hours components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted days and hours components.</param>
-    /// <param name="days">The value of the days component of the resulting copied <seealso cref="TimeSpan"/>. It must match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="hours">The value of the hours component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the days and hours components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the days and
+    /// hours components of the copied value are set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted days and hours components.
+    /// </param>
+    /// <param name="days">
+    /// The value of the days component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="hours">
+    /// The value of the hours component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the days and
+    /// hours components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="hours"/> is outside the range [-23, 23]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="days"/> does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="hours"/> is outside the range [-23,
+    /// 23] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="days"/> does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithDaysHours(this TimeSpan timeSpan, int days, int hours)
     {
@@ -364,18 +732,42 @@ public static class TimeSpanExtensions
         int targetHours = days * 24 + hours;
         return timeSpan.Add(TimeSpan.FromHours(targetHours - currentHours));
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the days, hours and minutes components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted days, hours and minutes components.</param>
-    /// <param name="days">The value of the days component of the resulting copied <seealso cref="TimeSpan"/>. It must match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="hours">The value of the hours component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <param name="minutes">The value of the minutes component of the resulting copied <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the days, hours and minutes components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the days,
+    /// hours and minutes components of the copied value are set to a specified
+    /// value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted days, hours and minutes components.
+    /// </param>
+    /// <param name="days">
+    /// The value of the days component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="hours">
+    /// The value of the hours component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-23, 23] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <param name="minutes">
+    /// The value of the minutes component of the resulting copied
+    /// <seealso cref="TimeSpan"/>. It must be within the range [-59, 59] and
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the days, hours
+    /// and minutes components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// The given value for <paramref name="minutes"/> is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="hours"/> is outside the range [-23, 23]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for <paramref name="days"/> does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// The given value for <paramref name="minutes"/> is outside the range
+    /// [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero -or- the given value for
+    /// <paramref name="hours"/> is outside the range [-23, 23] -or- does not
+    /// match the sign of the given <seealso cref="TimeSpan"/>, if non-zero -or-
+    /// the given value for <paramref name="days"/> does not match the sign of
+    /// the given <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithDaysHoursMinutes(this TimeSpan timeSpan, int days, int hours, int minutes)
     {
@@ -387,29 +779,55 @@ public static class TimeSpanExtensions
         return timeSpan.Add(TimeSpan.FromMinutes(targetMinutes - currentMinutes));
     }
 
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes and seconds components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted minutes and seconds components.</param>
-    /// <param name="minuteSecond">The minutes and seconds components of the resulting copied <seealso cref="TimeSpan"/>.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the minutes and seconds components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the minutes
+    /// and seconds components of the copied value are set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted minutes and seconds components.
+    /// </param>
+    /// <param name="minuteSecond">
+    /// The minutes and seconds components of the resulting copied
+    /// <seealso cref="TimeSpan"/>.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the minutes and
+    /// seconds components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
     /// The given value for the seconds component is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for the minutes component is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if
+    /// non-zero -or- the given value for the minutes component is outside the
+    /// range [-59, 59] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithMinutesSeconds(this TimeSpan timeSpan, MinuteSecond minuteSecond)
     {
         return timeSpan.WithMinutesSeconds(minuteSecond.Minute, minuteSecond.Second);
     }
-    /// <summary>Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours and minutes components of the copied value are set to a specified value.</summary>
-    /// <param name="timeSpan">The <seealso cref="TimeSpan"/> from which to create the copy with the adjusted hours and minutes components.</param>
-    /// <param name="hourMinute">The hours and minutes components of the resulting copied <seealso cref="TimeSpan"/>.</param>
-    /// <returns>A copy of the original <seealso cref="TimeSpan"/> with the hours and minutes components set to the specified value.</returns>
+    /// <summary>
+    /// Creates a copy of a given <seealso cref="TimeSpan"/>, where the hours
+    /// and minutes components of the copied value are set to a specified value.
+    /// </summary>
+    /// <param name="timeSpan">
+    /// The <seealso cref="TimeSpan"/> from which to create the copy with the
+    /// adjusted hours and minutes components.
+    /// </param>
+    /// <param name="hourMinute">
+    /// The hours and minutes components of the resulting copied
+    /// <seealso cref="TimeSpan"/>.
+    /// </param>
+    /// <returns>
+    /// A copy of the original <seealso cref="TimeSpan"/> with the hours and
+    /// minutes components set to the specified value.
+    /// </returns>
     /// <exception cref="ArgumentOutOfRangeException">
     /// The given value for the minutes component is outside the range [-59, 59]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero
-    /// -or- the given value for the hours component is outside the range [-23, 23]
-    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if non-zero.
+    /// -or- does not match the sign of the given <seealso cref="TimeSpan"/>, if
+    /// non-zero -or- the given value for the hours component is outside the
+    /// range [-23, 23] -or- does not match the sign of the given
+    /// <seealso cref="TimeSpan"/>, if non-zero.
     /// </exception>
     public static TimeSpan WithHoursMinutes(this TimeSpan timeSpan, HourMinute hourMinute)
     {

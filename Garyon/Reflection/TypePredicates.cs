@@ -2,7 +2,10 @@
 
 namespace Garyon.Reflection;
 
-/// <summary>Contains a collection of predicates to apply on <seealso cref="Type"/> instances. Also contains several aliases for other scattered functions.</summary>
+/// <summary>
+/// Contains a collection of predicates to apply on <seealso cref="Type"/>
+/// instances. Also contains several aliases for other scattered functions.
+/// </summary>
 public static class TypePredicates
 {
     public static bool IsClass(Type type) => type.IsClass;

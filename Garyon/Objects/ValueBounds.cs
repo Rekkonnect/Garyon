@@ -2,13 +2,25 @@
 
 namespace Garyon.Objects;
 
-/// <summary>Contains the minimum and maximum values that were discovered from a collection.</summary>
-/// <typeparam name="T">The type of the elements.</typeparam>
-/// <param name="Min">The minimum value.</param>
-/// <param name="Max">The maximum value.</param>
+/// <summary>
+/// Contains the minimum and maximum values that were discovered from a
+/// collection.
+/// </summary>
+/// <typeparam name="T">
+/// The type of the elements.
+/// </typeparam>
+/// <param name="Min">
+/// The minimum value.
+/// </param>
+/// <param name="Max">
+/// The maximum value.
+/// </param>
 public record ValueBounds<T>(T? Min, T? Max)
 {
-    /// <summary>Gets a default instance of the <seealso cref="ValueBounds{T}"/> record with both values being <see langword="default"/>.</summary>
+    /// <summary>
+    /// Gets a default instance of the <seealso cref="ValueBounds{T}"/> record
+    /// with both values being <see langword="default"/>.
+    /// </summary>
     public static readonly ValueBounds<T> Default = new(default, default);
 }
 
