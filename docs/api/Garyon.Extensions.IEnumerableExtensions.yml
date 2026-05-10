@@ -1,0 +1,1354 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.IEnumerableExtensions
+  commentId: T:Garyon.Extensions.IEnumerableExtensions
+  id: IEnumerableExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  - Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}[])
+  - Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.ReadOnlySpan{System.Collections.Generic.IEnumerable{``0}})
+  - Garyon.Extensions.IEnumerableExtensions.EqualsUnordered(System.Collections.IEnumerable,System.Collections.IEnumerable)
+  - Garyon.Extensions.IEnumerableExtensions.EqualsUnordered``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.IEnumerableExtensions.FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  - Garyon.Extensions.IEnumerableExtensions.FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  - Garyon.Extensions.IEnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  - Garyon.Extensions.IEnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  - Garyon.Extensions.IEnumerableExtensions.MinMax``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  langs:
+  - csharp
+  - vb
+  name: IEnumerableExtensions
+  nameWithType: IEnumerableExtensions
+  fullName: Garyon.Extensions.IEnumerableExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.Pagination.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IEnumerableExtensions
+    path: ../Garyon/Extensions/IEnumerableExtensions.Pagination.cs
+    startLine: 5
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Contains extensions for the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> interface.
+  example: []
+  syntax:
+    content: public static class IEnumerableExtensions
+    content.vb: Public Module IEnumerableExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.EqualsUnordered``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  id: EqualsUnordered``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: EqualsUnordered<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: IEnumerableExtensions.EqualsUnordered<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.Equality.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EqualsUnordered
+    path: ../Garyon/Extensions/IEnumerableExtensions.Equality.cs
+    startLine: 23
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether all the elements of a collection are equal to all the
+
+    respective elements of another collection in any order.
+  example: []
+  syntax:
+    content: public static bool EqualsUnordered<T>(this IEnumerable<T> source, IEnumerable<T> other)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The first collection.
+    - id: other
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The second collection.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if all the elements of any of the collections
+
+        match exactly one unique element in the other collection, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. This is determined by whether both collections
+
+        are subsets of each other.
+    content.vb: Public Shared Function EqualsUnordered(Of T)(source As IEnumerable(Of T), other As IEnumerable(Of T)) As Boolean
+  overload: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered*
+  nameWithType.vb: IEnumerableExtensions.EqualsUnordered(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: EqualsUnordered(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered(System.Collections.IEnumerable,System.Collections.IEnumerable)
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.EqualsUnordered(System.Collections.IEnumerable,System.Collections.IEnumerable)
+  id: EqualsUnordered(System.Collections.IEnumerable,System.Collections.IEnumerable)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: EqualsUnordered(IEnumerable, IEnumerable)
+  nameWithType: IEnumerableExtensions.EqualsUnordered(IEnumerable, IEnumerable)
+  fullName: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered(System.Collections.IEnumerable, System.Collections.IEnumerable)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.Equality.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EqualsUnordered
+    path: ../Garyon/Extensions/IEnumerableExtensions.Equality.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether all the elements of a collection are equal to all the
+
+    respective elements of another collection in any order.
+  example: []
+  syntax:
+    content: public static bool EqualsUnordered(this IEnumerable source, IEnumerable other)
+    parameters:
+    - id: source
+      type: System.Collections.IEnumerable
+      description: The first collection.
+    - id: other
+      type: System.Collections.IEnumerable
+      description: The second collection.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if all the elements of any of the collections
+
+        match exactly one unique element in the other collection, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. This is determined by whether both collections
+
+        are subsets of each other.
+    content.vb: Public Shared Function EqualsUnordered(source As IEnumerable, other As IEnumerable) As Boolean
+  overload: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered*
+- uid: Garyon.Extensions.IEnumerableExtensions.MinMax``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.MinMax``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  id: MinMax``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: MinMax<TSource, TComparable>(IEnumerable<TSource>, Func<TSource, TComparable>)
+  nameWithType: IEnumerableExtensions.MinMax<TSource, TComparable>(IEnumerable<TSource>, Func<TSource, TComparable>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.MinMax<TSource, TComparable>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TComparable>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.MinMaxINumber.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MinMax
+    path: ../Garyon/Extensions/IEnumerableExtensions.MinMaxINumber.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the minimum and maximum values within the collection.
+  example: []
+  syntax:
+    content: 'public static ValueBounds<TComparable> MinMax<TSource, TComparable>(IEnumerable<TSource> source, Func<TSource, TComparable> selector) where TComparable : IMinMaxValue<TComparable>, IComparisonOperators<TComparable, TComparable, bool>'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{TSource}}
+    - id: selector
+      type: System.Func{{TSource},{TComparable}}
+    typeParameters:
+    - id: TSource
+    - id: TComparable
+    return:
+      type: Garyon.Objects.ValueBounds{{TComparable}}
+      description: The minimum and maximum values.
+    content.vb: Public Shared Function MinMax(Of TSource, TComparable As {IMinMaxValue(Of TComparable), IComparisonOperators(Of TComparable, TComparable, Boolean)})(source As IEnumerable(Of TSource), selector As Func(Of TSource, TComparable)) As ValueBounds(Of TComparable)
+  overload: Garyon.Extensions.IEnumerableExtensions.MinMax*
+  nameWithType.vb: IEnumerableExtensions.MinMax(Of TSource, TComparable)(IEnumerable(Of TSource), Func(Of TSource, TComparable))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.MinMax(Of TSource, TComparable)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TSource, TComparable))
+  name.vb: MinMax(Of TSource, TComparable)(IEnumerable(Of TSource), Func(Of TSource, TComparable))
+- uid: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}[])
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}[])
+  id: ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConcatMultiple<T>(IEnumerable<T>, params IEnumerable<T>[])
+  nameWithType: IEnumerableExtensions.ConcatMultiple<T>(IEnumerable<T>, params IEnumerable<T>[])
+  fullName: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple<T>(System.Collections.Generic.IEnumerable<T>, params System.Collections.Generic.IEnumerable<T>[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ConcatMultiple
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 24
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Concatenates multiple <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s and returns the
+
+    concatenated result.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> ConcatMultiple<T>(this IEnumerable<T> source, params IEnumerable<T>[] others)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to concatenate with the
+
+        others.
+    - id: others
+      type: System.Collections.Generic.IEnumerable{{T}}[]
+      description: The other <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s to concatenate.
+    typeParameters:
+    - id: T
+      description: The type of the elements the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s hold.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function ConcatMultiple(Of T)(source As IEnumerable(Of T), ParamArray others As IEnumerable(Of T)()) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple*
+  nameWithType.vb: IEnumerableExtensions.ConcatMultiple(Of T)(IEnumerable(Of T), ParamArray IEnumerable(Of T)())
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple(Of T)(System.Collections.Generic.IEnumerable(Of T), ParamArray System.Collections.Generic.IEnumerable(Of T)())
+  name.vb: ConcatMultiple(Of T)(IEnumerable(Of T), ParamArray IEnumerable(Of T)())
+- uid: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.ReadOnlySpan{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.ReadOnlySpan{System.Collections.Generic.IEnumerable{``0}})
+  id: ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.ReadOnlySpan{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConcatMultiple<T>(IEnumerable<T>, params ReadOnlySpan<IEnumerable<T>>)
+  nameWithType: IEnumerableExtensions.ConcatMultiple<T>(IEnumerable<T>, params ReadOnlySpan<IEnumerable<T>>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple<T>(System.Collections.Generic.IEnumerable<T>, params System.ReadOnlySpan<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ConcatMultiple
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 43
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Concatenates multiple <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s and returns the
+
+    concatenated result.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> ConcatMultiple<T>(this IEnumerable<T> source, params ReadOnlySpan<IEnumerable<T>> others)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to concatenate with the
+
+        others.
+    - id: others
+      type: System.ReadOnlySpan{System.Collections.Generic.IEnumerable{{T}}}
+      description: The other <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s to concatenate.
+    typeParameters:
+    - id: T
+      description: The type of the elements the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s hold.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function ConcatMultiple(Of T)(source As IEnumerable(Of T), others As ReadOnlySpan(Of IEnumerable(Of T))) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple*
+  nameWithType.vb: IEnumerableExtensions.ConcatMultiple(Of T)(IEnumerable(Of T), ReadOnlySpan(Of IEnumerable(Of T)))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple(Of T)(System.Collections.Generic.IEnumerable(Of T), System.ReadOnlySpan(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: ConcatMultiple(Of T)(IEnumerable(Of T), ReadOnlySpan(Of IEnumerable(Of T)))
+- uid: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  id: ConcatMultiple``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConcatMultiple<T>(IEnumerable<T>, params IEnumerable<IEnumerable<T>>)
+  nameWithType: IEnumerableExtensions.ConcatMultiple<T>(IEnumerable<T>, params IEnumerable<IEnumerable<T>>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple<T>(System.Collections.Generic.IEnumerable<T>, params System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ConcatMultiple
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 65
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Concatenates multiple <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s and returns the
+
+    concatenated result.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> ConcatMultiple<T>(this IEnumerable<T> source, params IEnumerable<IEnumerable<T>> others)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to concatenate with the
+
+        others.
+    - id: others
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+      description: The other <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s to concatenate.
+    typeParameters:
+    - id: T
+      description: The type of the elements the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>s hold.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function ConcatMultiple(Of T)(source As IEnumerable(Of T), others As IEnumerable(Of IEnumerable(Of T))) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple*
+  nameWithType.vb: IEnumerableExtensions.ConcatMultiple(Of T)(IEnumerable(Of T), IEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: ConcatMultiple(Of T)(IEnumerable(Of T), IEnumerable(Of IEnumerable(Of T)))
+- uid: Garyon.Extensions.IEnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  id: Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: Flatten<T>(IEnumerable<IEnumerable<T>>)
+  nameWithType: IEnumerableExtensions.Flatten<T>(IEnumerable<IEnumerable<T>>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.Flatten<T>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Flatten
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 87
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Flattens a collection of collections into a single collection. The
+
+    resulting elements are contained in the order they are enumerated
+
+    depth-first.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+      description: The collection of collections.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the collections.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The flattened collection.
+    content.vb: Public Shared Function Flatten(Of T)(source As IEnumerable(Of IEnumerable(Of T))) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.Flatten*
+  nameWithType.vb: IEnumerableExtensions.Flatten(Of T)(IEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.Flatten(Of T)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: Flatten(Of T)(IEnumerable(Of IEnumerable(Of T)))
+- uid: Garyon.Extensions.IEnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  id: Flatten``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: Flatten<T>(IEnumerable<IEnumerable<IEnumerable<T>>>)
+  nameWithType: IEnumerableExtensions.Flatten<T>(IEnumerable<IEnumerable<IEnumerable<T>>>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.Flatten<T>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Flatten
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 102
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Flattens a collection of collections of collections into a single
+
+    collection. The resulting elements are contained in the order they are
+
+    enumerated depth-first.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<IEnumerable<T>>> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}}
+      description: The collection of collections of collections.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the collections.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The flattened collection.
+    content.vb: Public Shared Function Flatten(Of T)(source As IEnumerable(Of IEnumerable(Of IEnumerable(Of T)))) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.Flatten*
+  nameWithType.vb: IEnumerableExtensions.Flatten(Of T)(IEnumerable(Of IEnumerable(Of IEnumerable(Of T))))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.Flatten(Of T)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T))))
+  name.vb: Flatten(Of T)(IEnumerable(Of IEnumerable(Of IEnumerable(Of T))))
+- uid: Garyon.Extensions.IEnumerableExtensions.FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  id: FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: FlattenInstant<T>(IEnumerable<IEnumerable<T>>)
+  nameWithType: IEnumerableExtensions.FlattenInstant<T>(IEnumerable<IEnumerable<T>>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.FlattenInstant<T>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FlattenInstant
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 124
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Flattens a collection of collections into a single collection. The
+
+    resulting elements are contained in the order they are enumerated
+
+    depth-first.
+  remarks: >-
+    The function enumerates all the elements and caches them. This may
+
+    induce a latency during enumeration of the collections. Prefer calling
+
+    this function when enumeration of the same flattened collections is
+
+    performed more than once.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> FlattenInstant<T>(this IEnumerable<IEnumerable<T>> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+      description: The collection of collections.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the collections.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The flattened collection.
+    content.vb: Public Shared Function FlattenInstant(Of T)(source As IEnumerable(Of IEnumerable(Of T))) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.FlattenInstant*
+  nameWithType.vb: IEnumerableExtensions.FlattenInstant(Of T)(IEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.FlattenInstant(Of T)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: FlattenInstant(Of T)(IEnumerable(Of IEnumerable(Of T)))
+- uid: Garyon.Extensions.IEnumerableExtensions.FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  commentId: M:Garyon.Extensions.IEnumerableExtensions.FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  id: FlattenInstant``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: FlattenInstant<T>(IEnumerable<IEnumerable<IEnumerable<T>>>)
+  nameWithType: IEnumerableExtensions.FlattenInstant<T>(IEnumerable<IEnumerable<IEnumerable<T>>>)
+  fullName: Garyon.Extensions.IEnumerableExtensions.FlattenInstant<T>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FlattenInstant
+    path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
+    startLine: 151
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Flattens a collection of collections of collections into a single
+
+    collection. The resulting elements are contained in the order they are
+
+    enumerated depth-first.
+  remarks: >-
+    The function enumerates all the elements and caches them. This may
+
+    induce a latency during enumeration of the collections. Prefer calling
+
+    this function when enumeration of the same flattened collections is
+
+    performed more than once.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> FlattenInstant<T>(this IEnumerable<IEnumerable<IEnumerable<T>>> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}}
+      description: The collection of collections of collections.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the collections.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The flattened collection.
+    content.vb: Public Shared Function FlattenInstant(Of T)(source As IEnumerable(Of IEnumerable(Of IEnumerable(Of T)))) As IEnumerable(Of T)
+  overload: Garyon.Extensions.IEnumerableExtensions.FlattenInstant*
+  nameWithType.vb: IEnumerableExtensions.FlattenInstant(Of T)(IEnumerable(Of IEnumerable(Of IEnumerable(Of T))))
+  fullName.vb: Garyon.Extensions.IEnumerableExtensions.FlattenInstant(Of T)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T))))
+  name.vb: FlattenInstant(Of T)(IEnumerable(Of IEnumerable(Of IEnumerable(Of T))))
+references:
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered*
+  commentId: Overload:Garyon.Extensions.IEnumerableExtensions.EqualsUnordered
+  href: Garyon.Extensions.IEnumerableExtensions.html#Garyon_Extensions_IEnumerableExtensions_EqualsUnordered__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__
+  name: EqualsUnordered
+  nameWithType: IEnumerableExtensions.EqualsUnordered
+  fullName: Garyon.Extensions.IEnumerableExtensions.EqualsUnordered
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: Garyon.Extensions.IEnumerableExtensions.MinMax*
+  commentId: Overload:Garyon.Extensions.IEnumerableExtensions.MinMax
+  href: Garyon.Extensions.IEnumerableExtensions.html#Garyon_Extensions_IEnumerableExtensions_MinMax__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__
+  name: MinMax
+  nameWithType: IEnumerableExtensions.MinMax
+  fullName: Garyon.Extensions.IEnumerableExtensions.MinMax
+- uid: System.Collections.Generic.IEnumerable{{TSource}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TSource>
+  nameWithType: IEnumerable<TSource>
+  fullName: System.Collections.Generic.IEnumerable<TSource>
+  nameWithType.vb: IEnumerable(Of TSource)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TSource)
+  name.vb: IEnumerable(Of TSource)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+- uid: System.Func{{TSource},{TComparable}}
+  commentId: T:System.Func{``0,``1}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TSource, TComparable>
+  nameWithType: Func<TSource, TComparable>
+  fullName: System.Func<TSource, TComparable>
+  nameWithType.vb: Func(Of TSource, TComparable)
+  fullName.vb: System.Func(Of TSource, TComparable)
+  name.vb: Func(Of TSource, TComparable)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TComparable
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TComparable
+  - name: )
+- uid: Garyon.Objects.ValueBounds{{TComparable}}
+  commentId: T:Garyon.Objects.ValueBounds{``1}
+  parent: Garyon.Objects
+  definition: Garyon.Objects.ValueBounds`1
+  href: Garyon.Objects.ValueBounds-1.html
+  name: ValueBounds<TComparable>
+  nameWithType: ValueBounds<TComparable>
+  fullName: Garyon.Objects.ValueBounds<TComparable>
+  nameWithType.vb: ValueBounds(Of TComparable)
+  fullName.vb: Garyon.Objects.ValueBounds(Of TComparable)
+  name.vb: ValueBounds(Of TComparable)
+  spec.csharp:
+  - uid: Garyon.Objects.ValueBounds`1
+    name: ValueBounds
+    href: Garyon.Objects.ValueBounds-1.html
+  - name: <
+  - name: TComparable
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.ValueBounds`1
+    name: ValueBounds
+    href: Garyon.Objects.ValueBounds-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComparable
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Objects.ValueBounds`1
+  commentId: T:Garyon.Objects.ValueBounds`1
+  parent: Garyon.Objects
+  href: Garyon.Objects.ValueBounds-1.html
+  name: ValueBounds<T>
+  nameWithType: ValueBounds<T>
+  fullName: Garyon.Objects.ValueBounds<T>
+  nameWithType.vb: ValueBounds(Of T)
+  fullName.vb: Garyon.Objects.ValueBounds(Of T)
+  name.vb: ValueBounds(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.ValueBounds`1
+    name: ValueBounds
+    href: Garyon.Objects.ValueBounds-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.ValueBounds`1
+    name: ValueBounds
+    href: Garyon.Objects.ValueBounds-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple*
+  commentId: Overload:Garyon.Extensions.IEnumerableExtensions.ConcatMultiple
+  href: Garyon.Extensions.IEnumerableExtensions.html#Garyon_Extensions_IEnumerableExtensions_ConcatMultiple__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0____
+  name: ConcatMultiple
+  nameWithType: IEnumerableExtensions.ConcatMultiple
+  fullName: Garyon.Extensions.IEnumerableExtensions.ConcatMultiple
+- uid: System.Collections.Generic.IEnumerable{{T}}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>[]
+  nameWithType: IEnumerable<T>[]
+  fullName: System.Collections.Generic.IEnumerable<T>[]
+  nameWithType.vb: IEnumerable(Of T)()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)()
+  name.vb: IEnumerable(Of T)()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: System.ReadOnlySpan{System.Collections.Generic.IEnumerable{{T}}}
+  commentId: T:System.ReadOnlySpan{System.Collections.Generic.IEnumerable{``0}}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<IEnumerable<T>>
+  nameWithType: ReadOnlySpan<IEnumerable<T>>
+  fullName: System.ReadOnlySpan<System.Collections.Generic.IEnumerable<T>>
+  nameWithType.vb: ReadOnlySpan(Of IEnumerable(Of T))
+  fullName.vb: System.ReadOnlySpan(Of System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ReadOnlySpan(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IEnumerable<T>>
+  nameWithType: IEnumerable<IEnumerable<T>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>
+  nameWithType.vb: IEnumerable(Of IEnumerable(Of T))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IEnumerable(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.IEnumerableExtensions.Flatten*
+  commentId: Overload:Garyon.Extensions.IEnumerableExtensions.Flatten
+  href: Garyon.Extensions.IEnumerableExtensions.html#Garyon_Extensions_IEnumerableExtensions_Flatten__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___
+  name: Flatten
+  nameWithType: IEnumerableExtensions.Flatten
+  fullName: Garyon.Extensions.IEnumerableExtensions.Flatten
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IEnumerable<IEnumerable<T>>>
+  nameWithType: IEnumerable<IEnumerable<IEnumerable<T>>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>>
+  nameWithType.vb: IEnumerable(Of IEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: IEnumerable(Of IEnumerable(Of IEnumerable(Of T)))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.IEnumerableExtensions.FlattenInstant*
+  commentId: Overload:Garyon.Extensions.IEnumerableExtensions.FlattenInstant
+  href: Garyon.Extensions.IEnumerableExtensions.html#Garyon_Extensions_IEnumerableExtensions_FlattenInstant__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___
+  name: FlattenInstant
+  nameWithType: IEnumerableExtensions.FlattenInstant
+  fullName: Garyon.Extensions.IEnumerableExtensions.FlattenInstant

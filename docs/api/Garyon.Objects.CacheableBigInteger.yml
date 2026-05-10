@@ -1,0 +1,1534 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.CacheableBigInteger
+  commentId: T:Garyon.Objects.CacheableBigInteger
+  id: CacheableBigInteger
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.CacheableBigInteger.#ctor
+  - Garyon.Objects.CacheableBigInteger.#ctor(System.Int64)
+  - Garyon.Objects.CacheableBigInteger.#ctor(System.Numerics.BigInteger)
+  - Garyon.Objects.CacheableBigInteger.Add(System.Int64)
+  - Garyon.Objects.CacheableBigInteger.Add(System.Numerics.BigInteger)
+  - Garyon.Objects.CacheableBigInteger.Divide(System.Int64)
+  - Garyon.Objects.CacheableBigInteger.Divide(System.Numerics.BigInteger)
+  - Garyon.Objects.CacheableBigInteger.Multiply(System.Int64)
+  - Garyon.Objects.CacheableBigInteger.Multiply(System.Numerics.BigInteger)
+  - Garyon.Objects.CacheableBigInteger.Subtract(System.Int64)
+  - Garyon.Objects.CacheableBigInteger.Subtract(System.Numerics.BigInteger)
+  - Garyon.Objects.CacheableBigInteger.Value
+  - Garyon.Objects.CacheableBigInteger.op_Implicit(Garyon.Objects.CacheableBigInteger)~System.Numerics.BigInteger
+  - Garyon.Objects.CacheableBigInteger.op_Implicit(System.Int64)~Garyon.Objects.CacheableBigInteger
+  - Garyon.Objects.CacheableBigInteger.op_Implicit(System.Numerics.BigInteger)~Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: CacheableBigInteger
+  nameWithType: CacheableBigInteger
+  fullName: Garyon.Objects.CacheableBigInteger
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CacheableBigInteger
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Provides a mechanism that optimally handles operations on a
+
+    <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> instance by caching smaller chunks of values
+
+    before being applied to the big boi.
+  example: []
+  syntax:
+    content: public sealed class CacheableBigInteger
+    content.vb: Public NotInheritable Class CacheableBigInteger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Garyon.Objects.CacheableBigInteger.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.CacheableBigInteger)
+  - Garyon.Objects.CacheableBigInteger.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.CacheableBigInteger.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.CacheableBigInteger})
+  - Garyon.Objects.CacheableBigInteger.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.CacheableBigInteger,{TResult}})
+  - Garyon.Objects.CacheableBigInteger.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+- uid: Garyon.Objects.CacheableBigInteger.Value
+  commentId: P:Garyon.Objects.CacheableBigInteger.Value
+  id: Value
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CacheableBigInteger.Value
+  fullName: Garyon.Objects.CacheableBigInteger.Value
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Value
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 24
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets or sets the value of the <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public BigInteger Value { get; set; }
+    parameters: []
+    return:
+      type: System.Numerics.BigInteger
+    content.vb: Public Property Value As BigInteger
+  overload: Garyon.Objects.CacheableBigInteger.Value*
+- uid: Garyon.Objects.CacheableBigInteger.#ctor
+  commentId: M:Garyon.Objects.CacheableBigInteger.#ctor
+  id: '#ctor'
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: CacheableBigInteger()
+  nameWithType: CacheableBigInteger.CacheableBigInteger()
+  fullName: Garyon.Objects.CacheableBigInteger.CacheableBigInteger()
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 42
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Objects.CacheableBigInteger" data-throw-if-not-resolved="false"></xref>
+
+    class.
+  example: []
+  syntax:
+    content: public CacheableBigInteger()
+    content.vb: Public Sub New()
+  overload: Garyon.Objects.CacheableBigInteger.#ctor*
+  nameWithType.vb: CacheableBigInteger.New()
+  fullName.vb: Garyon.Objects.CacheableBigInteger.New()
+  name.vb: New()
+- uid: Garyon.Objects.CacheableBigInteger.#ctor(System.Int64)
+  commentId: M:Garyon.Objects.CacheableBigInteger.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: CacheableBigInteger(long)
+  nameWithType: CacheableBigInteger.CacheableBigInteger(long)
+  fullName: Garyon.Objects.CacheableBigInteger.CacheableBigInteger(long)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Objects.CacheableBigInteger" data-throw-if-not-resolved="false"></xref>
+
+    class.
+  example: []
+  syntax:
+    content: public CacheableBigInteger(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to initialize the instance from.
+    content.vb: Public Sub New(value As Long)
+  overload: Garyon.Objects.CacheableBigInteger.#ctor*
+  nameWithType.vb: CacheableBigInteger.New(Long)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.New(Long)
+  name.vb: New(Long)
+- uid: Garyon.Objects.CacheableBigInteger.#ctor(System.Numerics.BigInteger)
+  commentId: M:Garyon.Objects.CacheableBigInteger.#ctor(System.Numerics.BigInteger)
+  id: '#ctor(System.Numerics.BigInteger)'
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: CacheableBigInteger(BigInteger)
+  nameWithType: CacheableBigInteger.CacheableBigInteger(BigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.CacheableBigInteger(System.Numerics.BigInteger)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 58
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Objects.CacheableBigInteger" data-throw-if-not-resolved="false"></xref>
+
+    class.
+  example: []
+  syntax:
+    content: public CacheableBigInteger(BigInteger value)
+    parameters:
+    - id: value
+      type: System.Numerics.BigInteger
+      description: The value to initialize the instance from.
+    content.vb: Public Sub New(value As BigInteger)
+  overload: Garyon.Objects.CacheableBigInteger.#ctor*
+  nameWithType.vb: CacheableBigInteger.New(BigInteger)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.New(System.Numerics.BigInteger)
+  name.vb: New(BigInteger)
+- uid: Garyon.Objects.CacheableBigInteger.Add(System.Int64)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Add(System.Int64)
+  id: Add(System.Int64)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Add(long)
+  nameWithType: CacheableBigInteger.Add(long)
+  fullName: Garyon.Objects.CacheableBigInteger.Add(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Add
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 67
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a value to the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Add(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to add to the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+    content.vb: Public Sub Add(value As Long)
+  overload: Garyon.Objects.CacheableBigInteger.Add*
+  nameWithType.vb: CacheableBigInteger.Add(Long)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.Add(Long)
+  name.vb: Add(Long)
+- uid: Garyon.Objects.CacheableBigInteger.Subtract(System.Int64)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Subtract(System.Int64)
+  id: Subtract(System.Int64)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Subtract(long)
+  nameWithType: CacheableBigInteger.Subtract(long)
+  fullName: Garyon.Objects.CacheableBigInteger.Subtract(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Subtract
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 87
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Subtracts a value from the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Subtract(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: >-
+        The value to subtract from the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref>
+
+        value.
+    content.vb: Public Sub Subtract(value As Long)
+  overload: Garyon.Objects.CacheableBigInteger.Subtract*
+  nameWithType.vb: CacheableBigInteger.Subtract(Long)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.Subtract(Long)
+  name.vb: Subtract(Long)
+- uid: Garyon.Objects.CacheableBigInteger.Multiply(System.Int64)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Multiply(System.Int64)
+  id: Multiply(System.Int64)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Multiply(long)
+  nameWithType: CacheableBigInteger.Multiply(long)
+  fullName: Garyon.Objects.CacheableBigInteger.Multiply(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Multiply
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 94
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Multiplies a value to the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Multiply(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to multiply the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value by.
+    content.vb: Public Sub Multiply(value As Long)
+  overload: Garyon.Objects.CacheableBigInteger.Multiply*
+  nameWithType.vb: CacheableBigInteger.Multiply(Long)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.Multiply(Long)
+  name.vb: Multiply(Long)
+- uid: Garyon.Objects.CacheableBigInteger.Divide(System.Int64)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Divide(System.Int64)
+  id: Divide(System.Int64)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Divide(long)
+  nameWithType: CacheableBigInteger.Divide(long)
+  fullName: Garyon.Objects.CacheableBigInteger.Divide(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Divide
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 113
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Divides a value from the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Divide(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to divide the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value by.
+    content.vb: Public Sub Divide(value As Long)
+  overload: Garyon.Objects.CacheableBigInteger.Divide*
+  nameWithType.vb: CacheableBigInteger.Divide(Long)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.Divide(Long)
+  name.vb: Divide(Long)
+- uid: Garyon.Objects.CacheableBigInteger.Add(System.Numerics.BigInteger)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Add(System.Numerics.BigInteger)
+  id: Add(System.Numerics.BigInteger)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Add(BigInteger)
+  nameWithType: CacheableBigInteger.Add(BigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.Add(System.Numerics.BigInteger)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Add
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 135
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a value to the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Add(BigInteger value)
+    parameters:
+    - id: value
+      type: System.Numerics.BigInteger
+      description: The value to add to the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+    content.vb: Public Sub Add(value As BigInteger)
+  overload: Garyon.Objects.CacheableBigInteger.Add*
+- uid: Garyon.Objects.CacheableBigInteger.Subtract(System.Numerics.BigInteger)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Subtract(System.Numerics.BigInteger)
+  id: Subtract(System.Numerics.BigInteger)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Subtract(BigInteger)
+  nameWithType: CacheableBigInteger.Subtract(BigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.Subtract(System.Numerics.BigInteger)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Subtract
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 143
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Subtracts a value from the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Subtract(BigInteger value)
+    parameters:
+    - id: value
+      type: System.Numerics.BigInteger
+      description: >-
+        The value to subtract from the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref>
+
+        value.
+    content.vb: Public Sub Subtract(value As BigInteger)
+  overload: Garyon.Objects.CacheableBigInteger.Subtract*
+- uid: Garyon.Objects.CacheableBigInteger.Multiply(System.Numerics.BigInteger)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Multiply(System.Numerics.BigInteger)
+  id: Multiply(System.Numerics.BigInteger)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Multiply(BigInteger)
+  nameWithType: CacheableBigInteger.Multiply(BigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.Multiply(System.Numerics.BigInteger)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Multiply
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 150
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Multiplies a value to the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Multiply(BigInteger value)
+    parameters:
+    - id: value
+      type: System.Numerics.BigInteger
+      description: The value to multiply the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value by.
+    content.vb: Public Sub Multiply(value As BigInteger)
+  overload: Garyon.Objects.CacheableBigInteger.Multiply*
+- uid: Garyon.Objects.CacheableBigInteger.Divide(System.Numerics.BigInteger)
+  commentId: M:Garyon.Objects.CacheableBigInteger.Divide(System.Numerics.BigInteger)
+  id: Divide(System.Numerics.BigInteger)
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: Divide(BigInteger)
+  nameWithType: CacheableBigInteger.Divide(BigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.Divide(System.Numerics.BigInteger)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Divide
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 157
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Divides a value from the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public void Divide(BigInteger value)
+    parameters:
+    - id: value
+      type: System.Numerics.BigInteger
+      description: The value to divide the current <xref href="System.Numerics.BigInteger" data-throw-if-not-resolved="false"></xref> value by.
+    content.vb: Public Sub Divide(value As BigInteger)
+  overload: Garyon.Objects.CacheableBigInteger.Divide*
+- uid: Garyon.Objects.CacheableBigInteger.op_Implicit(System.Int64)~Garyon.Objects.CacheableBigInteger
+  commentId: M:Garyon.Objects.CacheableBigInteger.op_Implicit(System.Int64)~Garyon.Objects.CacheableBigInteger
+  id: op_Implicit(System.Int64)~Garyon.Objects.CacheableBigInteger
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: implicit operator CacheableBigInteger(long)
+  nameWithType: CacheableBigInteger.implicit operator CacheableBigInteger(long)
+  fullName: Garyon.Objects.CacheableBigInteger.implicit operator Garyon.Objects.CacheableBigInteger(long)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 160
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static implicit operator CacheableBigInteger(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    return:
+      type: Garyon.Objects.CacheableBigInteger
+    content.vb: Public Shared Widening Operator CType(value As Long) As CacheableBigInteger
+  overload: Garyon.Objects.CacheableBigInteger.op_Implicit*
+  nameWithType.vb: CacheableBigInteger.CType(Long)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.CType(Long)
+  name.vb: CType(Long)
+- uid: Garyon.Objects.CacheableBigInteger.op_Implicit(System.Numerics.BigInteger)~Garyon.Objects.CacheableBigInteger
+  commentId: M:Garyon.Objects.CacheableBigInteger.op_Implicit(System.Numerics.BigInteger)~Garyon.Objects.CacheableBigInteger
+  id: op_Implicit(System.Numerics.BigInteger)~Garyon.Objects.CacheableBigInteger
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: implicit operator CacheableBigInteger(BigInteger)
+  nameWithType: CacheableBigInteger.implicit operator CacheableBigInteger(BigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.implicit operator Garyon.Objects.CacheableBigInteger(System.Numerics.BigInteger)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 161
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static implicit operator CacheableBigInteger(BigInteger value)
+    parameters:
+    - id: value
+      type: System.Numerics.BigInteger
+    return:
+      type: Garyon.Objects.CacheableBigInteger
+    content.vb: Public Shared Widening Operator CType(value As BigInteger) As CacheableBigInteger
+  overload: Garyon.Objects.CacheableBigInteger.op_Implicit*
+  nameWithType.vb: CacheableBigInteger.CType(BigInteger)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.CType(System.Numerics.BigInteger)
+  name.vb: CType(BigInteger)
+- uid: Garyon.Objects.CacheableBigInteger.op_Implicit(Garyon.Objects.CacheableBigInteger)~System.Numerics.BigInteger
+  commentId: M:Garyon.Objects.CacheableBigInteger.op_Implicit(Garyon.Objects.CacheableBigInteger)~System.Numerics.BigInteger
+  id: op_Implicit(Garyon.Objects.CacheableBigInteger)~System.Numerics.BigInteger
+  parent: Garyon.Objects.CacheableBigInteger
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BigInteger(CacheableBigInteger)
+  nameWithType: CacheableBigInteger.implicit operator BigInteger(CacheableBigInteger)
+  fullName: Garyon.Objects.CacheableBigInteger.implicit operator System.Numerics.BigInteger(Garyon.Objects.CacheableBigInteger)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/CacheableBigInteger.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/CacheableBigInteger.cs
+    startLine: 162
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static implicit operator BigInteger(CacheableBigInteger value)
+    parameters:
+    - id: value
+      type: Garyon.Objects.CacheableBigInteger
+    return:
+      type: System.Numerics.BigInteger
+    content.vb: Public Shared Widening Operator CType(value As CacheableBigInteger) As BigInteger
+  overload: Garyon.Objects.CacheableBigInteger.op_Implicit*
+  nameWithType.vb: CacheableBigInteger.CType(CacheableBigInteger)
+  fullName.vb: Garyon.Objects.CacheableBigInteger.CType(Garyon.Objects.CacheableBigInteger)
+  name.vb: CType(CacheableBigInteger)
+references:
+- uid: System.Numerics.BigInteger
+  commentId: T:System.Numerics.BigInteger
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.biginteger
+  name: BigInteger
+  nameWithType: BigInteger
+  fullName: System.Numerics.BigInteger
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Objects.CacheableBigInteger.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.CacheableBigInteger)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<CacheableBigInteger>(CacheableBigInteger, CacheableBigInteger)
+  nameWithType: ComparisonExtensions.BeginCompare<CacheableBigInteger>(CacheableBigInteger, CacheableBigInteger)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.CacheableBigInteger>(Garyon.Objects.CacheableBigInteger, Garyon.Objects.CacheableBigInteger)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of CacheableBigInteger)(CacheableBigInteger, CacheableBigInteger)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.CacheableBigInteger)(Garyon.Objects.CacheableBigInteger, Garyon.Objects.CacheableBigInteger)
+  name.vb: BeginCompare(Of CacheableBigInteger)(CacheableBigInteger, CacheableBigInteger)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.CacheableBigInteger,Garyon.Objects.CacheableBigInteger)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.CacheableBigInteger,Garyon.Objects.CacheableBigInteger)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+- uid: Garyon.Objects.CacheableBigInteger.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<CacheableBigInteger, TValue>(CacheableBigInteger)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<CacheableBigInteger, TValue>(CacheableBigInteger)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.CacheableBigInteger, TValue>(Garyon.Objects.CacheableBigInteger)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of CacheableBigInteger, TValue)(CacheableBigInteger)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.CacheableBigInteger, TValue)(Garyon.Objects.CacheableBigInteger)
+  name.vb: GetEnumerator(Of CacheableBigInteger, TValue)(CacheableBigInteger)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.CacheableBigInteger)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.CacheableBigInteger)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+- uid: Garyon.Objects.CacheableBigInteger.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.CacheableBigInteger})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<CacheableBigInteger>(CacheableBigInteger, Action<CacheableBigInteger>)
+  nameWithType: MoreLinqExtensions.Apply<CacheableBigInteger>(CacheableBigInteger, Action<CacheableBigInteger>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.CacheableBigInteger>(Garyon.Objects.CacheableBigInteger, System.Action<Garyon.Objects.CacheableBigInteger>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of CacheableBigInteger)(CacheableBigInteger, Action(Of CacheableBigInteger))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.CacheableBigInteger)(Garyon.Objects.CacheableBigInteger, System.Action(Of Garyon.Objects.CacheableBigInteger))
+  name.vb: Apply(Of CacheableBigInteger)(CacheableBigInteger, Action(Of CacheableBigInteger))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.CacheableBigInteger,System.Action{Garyon.Objects.CacheableBigInteger})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.CacheableBigInteger,System.Action{Garyon.Objects.CacheableBigInteger})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  - name: )
+- uid: Garyon.Objects.CacheableBigInteger.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.CacheableBigInteger,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<CacheableBigInteger, TResult>(CacheableBigInteger, Func<CacheableBigInteger, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<CacheableBigInteger, TResult>(CacheableBigInteger, Func<CacheableBigInteger, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.CacheableBigInteger, TResult>(Garyon.Objects.CacheableBigInteger, System.Func<Garyon.Objects.CacheableBigInteger, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of CacheableBigInteger, TResult)(CacheableBigInteger, Func(Of CacheableBigInteger, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.CacheableBigInteger, TResult)(Garyon.Objects.CacheableBigInteger, System.Func(Of Garyon.Objects.CacheableBigInteger, TResult))
+  name.vb: Apply(Of CacheableBigInteger, TResult)(CacheableBigInteger, Func(Of CacheableBigInteger, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.CacheableBigInteger,System.Func{Garyon.Objects.CacheableBigInteger,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.CacheableBigInteger,System.Func{Garyon.Objects.CacheableBigInteger,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.CacheableBigInteger.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<CacheableBigInteger>(CacheableBigInteger)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<CacheableBigInteger>(CacheableBigInteger)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.CacheableBigInteger>(Garyon.Objects.CacheableBigInteger)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of CacheableBigInteger)(CacheableBigInteger)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.CacheableBigInteger)(Garyon.Objects.CacheableBigInteger)
+  name.vb: EnumerateSingle(Of CacheableBigInteger)(CacheableBigInteger)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.CacheableBigInteger)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.CacheableBigInteger)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.CacheableBigInteger
+    name: CacheableBigInteger
+    href: Garyon.Objects.CacheableBigInteger.html
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects.CacheableBigInteger.Value*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.Value
+  href: Garyon.Objects.CacheableBigInteger.html#Garyon_Objects_CacheableBigInteger_Value
+  name: Value
+  nameWithType: CacheableBigInteger.Value
+  fullName: Garyon.Objects.CacheableBigInteger.Value
+- uid: Garyon.Objects.CacheableBigInteger
+  commentId: T:Garyon.Objects.CacheableBigInteger
+  parent: Garyon.Objects
+  href: Garyon.Objects.CacheableBigInteger.html
+  name: CacheableBigInteger
+  nameWithType: CacheableBigInteger
+  fullName: Garyon.Objects.CacheableBigInteger
+- uid: Garyon.Objects.CacheableBigInteger.#ctor*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.#ctor
+  href: Garyon.Objects.CacheableBigInteger.html#Garyon_Objects_CacheableBigInteger__ctor
+  name: CacheableBigInteger
+  nameWithType: CacheableBigInteger.CacheableBigInteger
+  fullName: Garyon.Objects.CacheableBigInteger.CacheableBigInteger
+  nameWithType.vb: CacheableBigInteger.New
+  fullName.vb: Garyon.Objects.CacheableBigInteger.New
+  name.vb: New
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Garyon.Objects.CacheableBigInteger.Add*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.Add
+  href: Garyon.Objects.CacheableBigInteger.html#Garyon_Objects_CacheableBigInteger_Add_System_Int64_
+  name: Add
+  nameWithType: CacheableBigInteger.Add
+  fullName: Garyon.Objects.CacheableBigInteger.Add
+- uid: Garyon.Objects.CacheableBigInteger.Subtract*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.Subtract
+  href: Garyon.Objects.CacheableBigInteger.html#Garyon_Objects_CacheableBigInteger_Subtract_System_Int64_
+  name: Subtract
+  nameWithType: CacheableBigInteger.Subtract
+  fullName: Garyon.Objects.CacheableBigInteger.Subtract
+- uid: Garyon.Objects.CacheableBigInteger.Multiply*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.Multiply
+  href: Garyon.Objects.CacheableBigInteger.html#Garyon_Objects_CacheableBigInteger_Multiply_System_Int64_
+  name: Multiply
+  nameWithType: CacheableBigInteger.Multiply
+  fullName: Garyon.Objects.CacheableBigInteger.Multiply
+- uid: Garyon.Objects.CacheableBigInteger.Divide*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.Divide
+  href: Garyon.Objects.CacheableBigInteger.html#Garyon_Objects_CacheableBigInteger_Divide_System_Int64_
+  name: Divide
+  nameWithType: CacheableBigInteger.Divide
+  fullName: Garyon.Objects.CacheableBigInteger.Divide
+- uid: Garyon.Objects.CacheableBigInteger.op_Implicit*
+  commentId: Overload:Garyon.Objects.CacheableBigInteger.op_Implicit
+  name: implicit operator
+  nameWithType: CacheableBigInteger.implicit operator
+  fullName: Garyon.Objects.CacheableBigInteger.implicit operator
+  nameWithType.vb: CacheableBigInteger.CType
+  fullName.vb: Garyon.Objects.CacheableBigInteger.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator

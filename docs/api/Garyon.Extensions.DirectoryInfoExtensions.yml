@@ -1,0 +1,1526 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.DirectoryInfoExtensions
+  commentId: T:Garyon.Extensions.DirectoryInfoExtensions
+  id: DirectoryInfoExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  - Garyon.Extensions.DirectoryInfoExtensions.CombinePath(System.IO.DirectoryInfo,System.String)
+  - Garyon.Extensions.DirectoryInfoExtensions.Depth(System.IO.DirectoryInfo)
+  - Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents(System.IO.DirectoryInfo)
+  - Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory(System.IO.DirectoryInfo)
+  - Garyon.Extensions.DirectoryInfoExtensions.File(System.IO.DirectoryInfo,System.String)
+  - Garyon.Extensions.DirectoryInfoExtensions.MoveTo(System.IO.DirectoryInfo,System.IO.DirectoryInfo)
+  - Garyon.Extensions.DirectoryInfoExtensions.MoveUp(System.IO.DirectoryInfo,System.Int32)
+  - Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound(System.IO.DirectoryInfo,System.Int32)
+  - Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  - Garyon.Extensions.DirectoryInfoExtensions.Subdirectory(System.IO.DirectoryInfo,System.String)
+  - Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  - Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep(System.IO.DirectoryInfo)
+  - Garyon.Extensions.DirectoryInfoExtensions.TryDelete(System.IO.DirectoryInfo,System.Boolean)
+  - Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory(System.IO.DirectoryInfo)
+  langs:
+  - csharp
+  - vb
+  name: DirectoryInfoExtensions
+  nameWithType: DirectoryInfoExtensions
+  fullName: Garyon.Extensions.DirectoryInfoExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DirectoryInfoExtensions
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Contains extensions for the <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class DirectoryInfoExtensions
+    content.vb: Public Module DirectoryInfoExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents(System.IO.DirectoryInfo)
+  id: EnumerateParents(System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnumerateParents(DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.EnumerateParents(DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents(System.IO.DirectoryInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnumerateParents
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Enumerates all parent directories.
+  remarks: >-
+    This only includes all types returned from
+
+    <xref href="System.IO.DirectoryInfo.Parent" data-throw-if-not-resolved="false"></xref> recursively. It does not include
+
+    implemented interfaces.
+  example: []
+  syntax:
+    content: public static IEnumerable<DirectoryInfo> EnumerateParents(this DirectoryInfo directory)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+    return:
+      type: System.Collections.Generic.IEnumerable{System.IO.DirectoryInfo}
+      description: >-
+        A lazily evaluated collection of directories, with the first being the
+
+        direct parent, and the last being the root of the path.
+    content.vb: Public Shared Function EnumerateParents(directory As DirectoryInfo) As IEnumerable(Of DirectoryInfo)
+  overload: Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents*
+- uid: Garyon.Extensions.DirectoryInfoExtensions.Depth(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.Depth(System.IO.DirectoryInfo)
+  id: Depth(System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: Depth(DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.Depth(DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.Depth(System.IO.DirectoryInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Depth
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 42
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the depth of this directory, meaning the number of directories
+
+    between the root and this directory.
+  example: []
+  syntax:
+    content: public static int Depth(this DirectoryInfo directory)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory whose depth to get.
+    return:
+      type: System.Int32
+      description: >-
+        The number of parent directories that must be traversed before reaching
+
+        the file system root.
+    content.vb: Public Shared Function Depth(directory As DirectoryInfo) As Integer
+  overload: Garyon.Extensions.DirectoryInfoExtensions.Depth*
+- uid: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  id: RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: RecursiveParent(DirectoryInfo, int)
+  nameWithType: DirectoryInfoExtensions.RecursiveParent(DirectoryInfo, int)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RecursiveParent
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 65
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the ancestor directory of this directory, at a specified number of
+
+    levels up in the directory tree. If the current directory's depth is
+
+    less than the provided number of levels to walk up,
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> is returned.
+  example: []
+  syntax:
+    content: public static DirectoryInfo? RecursiveParent(this DirectoryInfo directory, int levels = 1)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory to walk up from.
+    - id: levels
+      type: System.Int32
+      description: >-
+        The number of levels to walk up the directory tree. 0 returns the
+
+        current directory.
+    return:
+      type: System.IO.DirectoryInfo
+      description: >-
+        The ancestor directory at the given level, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if
+
+        the given directory's depth was less than the given number of levels to
+
+        walk up.
+    content.vb: Public Shared Function RecursiveParent(directory As DirectoryInfo, levels As Integer = 1) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent*
+  nameWithType.vb: DirectoryInfoExtensions.RecursiveParent(DirectoryInfo, Integer)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo, Integer)
+  name.vb: RecursiveParent(DirectoryInfo, Integer)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  id: BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: BoundRecursiveParent(DirectoryInfo, int)
+  nameWithType: DirectoryInfoExtensions.BoundRecursiveParent(DirectoryInfo, int)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: BoundRecursiveParent
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 91
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the ancestor directory of this directory, at a specified number of
+
+    levels up in the directory tree. If the current directory's depth is
+
+    less than the provided number of levels to walk up, the returned
+
+    directory is the root directory.
+  example: []
+  syntax:
+    content: public static DirectoryInfo BoundRecursiveParent(this DirectoryInfo directory, int levels = 1)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory to walk up from.
+    - id: levels
+      type: System.Int32
+      description: >-
+        The number of levels to walk up the directory tree. 0 returns the
+
+        current directory.
+    return:
+      type: System.IO.DirectoryInfo
+      description: The ancestor directory at the given level, or the root directory.
+    content.vb: Public Shared Function BoundRecursiveParent(directory As DirectoryInfo, levels As Integer = 1) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent*
+  nameWithType.vb: DirectoryInfoExtensions.BoundRecursiveParent(DirectoryInfo, Integer)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo, Integer)
+  name.vb: BoundRecursiveParent(DirectoryInfo, Integer)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound(System.IO.DirectoryInfo,System.Int32)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound(System.IO.DirectoryInfo,System.Int32)
+  id: MoveUpBound(System.IO.DirectoryInfo,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveUpBound(DirectoryInfo, int)
+  nameWithType: DirectoryInfoExtensions.MoveUpBound(DirectoryInfo, int)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound(System.IO.DirectoryInfo, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveUpBound
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 111
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Moves the given subdirectory a number of levels up, based on
+
+    <xref href="Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static DirectoryInfo MoveUpBound(this DirectoryInfo directory, int levels = 1)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory to move up.
+    - id: levels
+      type: System.Int32
+      description: >-
+        The number of levels to walk up the directory tree. 0 returns the
+
+        current directory.
+    return:
+      type: System.IO.DirectoryInfo
+      description: The result of <xref href="Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function MoveUpBound(directory As DirectoryInfo, levels As Integer = 1) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound*
+  nameWithType.vb: DirectoryInfoExtensions.MoveUpBound(DirectoryInfo, Integer)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound(System.IO.DirectoryInfo, Integer)
+  name.vb: MoveUpBound(DirectoryInfo, Integer)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.MoveUp(System.IO.DirectoryInfo,System.Int32)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.MoveUp(System.IO.DirectoryInfo,System.Int32)
+  id: MoveUp(System.IO.DirectoryInfo,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveUp(DirectoryInfo, int)
+  nameWithType: DirectoryInfoExtensions.MoveUp(DirectoryInfo, int)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.MoveUp(System.IO.DirectoryInfo, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveUp
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 138
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Moves the given subdirectory a number of levels up, based on
+
+    <xref href="Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>. If the returned
+
+    directory from that method is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, an exception is
+
+    thrown.
+  example: []
+  syntax:
+    content: public static DirectoryInfo MoveUp(this DirectoryInfo directory, int levels = 1)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory to move up.
+    - id: levels
+      type: System.Int32
+      description: >-
+        The number of levels to walk up the directory tree. 0 returns the
+
+        current directory.
+    return:
+      type: System.IO.DirectoryInfo
+      description: The result of <xref href="Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function MoveUp(directory As DirectoryInfo, levels As Integer = 1) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.MoveUp*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: >-
+      Thrown when <xref href="Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref> returns
+
+      <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: DirectoryInfoExtensions.MoveUp(DirectoryInfo, Integer)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.MoveUp(System.IO.DirectoryInfo, Integer)
+  name.vb: MoveUp(DirectoryInfo, Integer)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.MoveTo(System.IO.DirectoryInfo,System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.MoveTo(System.IO.DirectoryInfo,System.IO.DirectoryInfo)
+  id: MoveTo(System.IO.DirectoryInfo,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveTo(DirectoryInfo, DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.MoveTo(DirectoryInfo, DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.MoveTo(System.IO.DirectoryInfo, System.IO.DirectoryInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveTo
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 155
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Moves a directory to the given destination directory.
+  example: []
+  syntax:
+    content: public static void MoveTo(this DirectoryInfo directory, DirectoryInfo destination)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory to move.
+    - id: destination
+      type: System.IO.DirectoryInfo
+      description: The target directory to move the source directory to.
+    content.vb: Public Shared Sub MoveTo(directory As DirectoryInfo, destination As DirectoryInfo)
+  overload: Garyon.Extensions.DirectoryInfoExtensions.MoveTo*
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep(System.IO.DirectoryInfo)
+  id: TotalSizeDeep(System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: TotalSizeDeep(DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.TotalSizeDeep(DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep(System.IO.DirectoryInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TotalSizeDeep
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 172
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the total size of the files contained in this directory, traversing
+
+    subdirectories and including their total sizes.
+  example: []
+  syntax:
+    content: public static long TotalSizeDeep(this DirectoryInfo directory)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory whose total file size to get.
+    return:
+      type: System.Int64
+      description: >-
+        The total size of the files contained in this and nested subdirectories,
+
+        in bytes as returned for each file by <xref href="System.IO.FileInfo.Length" data-throw-if-not-resolved="false"></xref> and
+
+        via <xref href="Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)" data-throw-if-not-resolved="false"></xref> for each directory.
+    content.vb: Public Shared Function TotalSizeDeep(directory As DirectoryInfo) As Long
+  overload: Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep*
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  id: TotalSize(System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: TotalSize(DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.TotalSize(DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TotalSize
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 198
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the total size of the files contained in this directory, only
+
+    accounting for the directly contained files, and not ones in
+
+    subdirectories.
+  example: []
+  syntax:
+    content: public static long TotalSize(this DirectoryInfo directory)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory that contains the files.
+    return:
+      type: System.Int64
+      description: >-
+        The total size of the files directly contained in this directory only,
+
+        in bytes as returned for each file by <xref href="System.IO.FileInfo.Length" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function TotalSize(directory As DirectoryInfo) As Long
+  overload: Garyon.Extensions.DirectoryInfoExtensions.TotalSize*
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory(System.IO.DirectoryInfo)
+  id: TryGetSingleSubdirectory(System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetSingleSubdirectory(DirectoryInfo?)
+  nameWithType: DirectoryInfoExtensions.TryGetSingleSubdirectory(DirectoryInfo?)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory(System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryGetSingleSubdirectory
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 219
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the single subdirectory contained in the given directory.
+  remarks: >-
+    For the method to return a non-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> result, the
+
+    directory must contain exactly 1 subdirectory and no files.
+  example: []
+  syntax:
+    content: public static DirectoryInfo? TryGetSingleSubdirectory(this DirectoryInfo? directoryInfo)
+    parameters:
+    - id: directoryInfo
+      type: System.IO.DirectoryInfo
+    return:
+      type: System.IO.DirectoryInfo
+      description: >-
+        The single subdirectory inside the given directory, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Shared Function TryGetSingleSubdirectory(directoryInfo As DirectoryInfo) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory*
+  nameWithType.vb: DirectoryInfoExtensions.TryGetSingleSubdirectory(DirectoryInfo)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory(System.IO.DirectoryInfo)
+  name.vb: TryGetSingleSubdirectory(DirectoryInfo)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory(System.IO.DirectoryInfo)
+  id: ExploreDeepestSingleDirectory(System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExploreDeepestSingleDirectory(DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.ExploreDeepestSingleDirectory(DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory(System.IO.DirectoryInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ExploreDeepestSingleDirectory
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 245
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Traverses the single subdirectory recursively and finds the deepest
+
+    subdirectory that does not contain only a single subdirectory. The
+
+    resulting subdirectory will contain more one file system objects, or a
+
+    single file, or nothing.
+  example: []
+  syntax:
+    content: public static DirectoryInfo ExploreDeepestSingleDirectory(this DirectoryInfo directoryInfo)
+    parameters:
+    - id: directoryInfo
+      type: System.IO.DirectoryInfo
+      description: >-
+        The directory whose deepest single directory to get. It does not matter
+
+        how many other directories are contained in the parent directory of the
+
+        given directory. For instance, the given directory is D, and P is the
+
+        parent directory of D. Whether P only contains a single directory, i.e.
+
+        D, does not prevent the exploration of the subdirectories of D.
+    return:
+      type: System.IO.DirectoryInfo
+      description: >-
+        The deepest directory that does not contain a single directory, starting
+
+        from the given directory. For example, assume the starting directory is
+
+        D, D only contains the directory E, E only contains the directory F and
+
+        F contains two other directories. This method will return F, which is
+
+        the last directory that was the only option to explore into.
+    content.vb: Public Shared Function ExploreDeepestSingleDirectory(directoryInfo As DirectoryInfo) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory*
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TryDelete(System.IO.DirectoryInfo,System.Boolean)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.TryDelete(System.IO.DirectoryInfo,System.Boolean)
+  id: TryDelete(System.IO.DirectoryInfo,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryDelete(DirectoryInfo, bool)
+  nameWithType: DirectoryInfoExtensions.TryDelete(DirectoryInfo, bool)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TryDelete(System.IO.DirectoryInfo, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryDelete
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 278
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to delete the given directory, catching any thrown exception
+
+    from the operation and returning whether the operation succeeded.
+  example: []
+  syntax:
+    content: public static bool TryDelete(this DirectoryInfo directory, bool recursive)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+      description: The directory to delete.
+    - id: recursive
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to delete all the contents of the directory and
+
+        subdirectories; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to delete only the directory
+
+        itself if it is empty, following
+
+        <xref href="System.IO.DirectoryInfo.Delete(System.Boolean)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the operation succeeded, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryDelete(directory As DirectoryInfo, recursive As Boolean) As Boolean
+  overload: Garyon.Extensions.DirectoryInfoExtensions.TryDelete*
+  nameWithType.vb: DirectoryInfoExtensions.TryDelete(DirectoryInfo, Boolean)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.TryDelete(System.IO.DirectoryInfo, Boolean)
+  name.vb: TryDelete(DirectoryInfo, Boolean)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.CombinePath(System.IO.DirectoryInfo,System.String)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.CombinePath(System.IO.DirectoryInfo,System.String)
+  id: CombinePath(System.IO.DirectoryInfo,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: CombinePath(DirectoryInfo, string)
+  nameWithType: DirectoryInfoExtensions.CombinePath(DirectoryInfo, string)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.CombinePath(System.IO.DirectoryInfo, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CombinePath
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 302
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Returns a path that combines the directory's full path with the
+
+    specified next part of the path.
+  example: []
+  syntax:
+    content: public static string CombinePath(this DirectoryInfo directory, string next)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+    - id: next
+      type: System.String
+      description: >-
+        The next part of the path to append after the directory's path. Leading
+
+        separators are not required.
+    return:
+      type: System.String
+      description: The combined path using <xref href="System.IO.Path.Combine(System.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function CombinePath(directory As DirectoryInfo, [next] As String) As String
+  overload: Garyon.Extensions.DirectoryInfoExtensions.CombinePath*
+  nameWithType.vb: DirectoryInfoExtensions.CombinePath(DirectoryInfo, String)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.CombinePath(System.IO.DirectoryInfo, String)
+  name.vb: CombinePath(DirectoryInfo, String)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.Subdirectory(System.IO.DirectoryInfo,System.String)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.Subdirectory(System.IO.DirectoryInfo,System.String)
+  id: Subdirectory(System.IO.DirectoryInfo,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: Subdirectory(DirectoryInfo, string)
+  nameWithType: DirectoryInfoExtensions.Subdirectory(DirectoryInfo, string)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.Subdirectory(System.IO.DirectoryInfo, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Subdirectory
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 317
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> of a subdirectory within the given
+
+    directory.
+  example: []
+  syntax:
+    content: public static DirectoryInfo Subdirectory(this DirectoryInfo directory, string subdirectoryName)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+    - id: subdirectoryName
+      type: System.String
+      description: >-
+        The name of the subdirectory to get. Nested subdirectories are allowed,
+
+        if the path is properly separated.
+    return:
+      type: System.IO.DirectoryInfo
+    content.vb: Public Shared Function Subdirectory(directory As DirectoryInfo, subdirectoryName As String) As DirectoryInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.Subdirectory*
+  nameWithType.vb: DirectoryInfoExtensions.Subdirectory(DirectoryInfo, String)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.Subdirectory(System.IO.DirectoryInfo, String)
+  name.vb: Subdirectory(DirectoryInfo, String)
+- uid: Garyon.Extensions.DirectoryInfoExtensions.File(System.IO.DirectoryInfo,System.String)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.File(System.IO.DirectoryInfo,System.String)
+  id: File(System.IO.DirectoryInfo,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DirectoryInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: File(DirectoryInfo, string)
+  nameWithType: DirectoryInfoExtensions.File(DirectoryInfo, string)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.File(System.IO.DirectoryInfo, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DirectoryInfoExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: File
+    path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
+    startLine: 332
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> of a file within the given directory, or
+
+    a subdirectory of it.
+  example: []
+  syntax:
+    content: public static FileInfo File(this DirectoryInfo directory, string fileName)
+    parameters:
+    - id: directory
+      type: System.IO.DirectoryInfo
+    - id: fileName
+      type: System.String
+      description: >-
+        The name of the file to get. Nested subdirectories are allowed, if the
+
+        path is properly separated.
+    return:
+      type: System.IO.FileInfo
+    content.vb: Public Shared Function File(directory As DirectoryInfo, fileName As String) As FileInfo
+  overload: Garyon.Extensions.DirectoryInfoExtensions.File*
+  nameWithType.vb: DirectoryInfoExtensions.File(DirectoryInfo, String)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.File(System.IO.DirectoryInfo, String)
+  name.vb: File(DirectoryInfo, String)
+references:
+- uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: DirectoryInfo
+  nameWithType: DirectoryInfo
+  fullName: System.IO.DirectoryInfo
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO.DirectoryInfo.Parent
+  commentId: P:System.IO.DirectoryInfo.Parent
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo.parent
+  name: Parent
+  nameWithType: DirectoryInfo.Parent
+  fullName: System.IO.DirectoryInfo.Parent
+- uid: Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_EnumerateParents_System_IO_DirectoryInfo_
+  name: EnumerateParents
+  nameWithType: DirectoryInfoExtensions.EnumerateParents
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.EnumerateParents
+- uid: System.Collections.Generic.IEnumerable{System.IO.DirectoryInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{System.IO.DirectoryInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<DirectoryInfo>
+  nameWithType: IEnumerable<DirectoryInfo>
+  fullName: System.Collections.Generic.IEnumerable<System.IO.DirectoryInfo>
+  nameWithType.vb: IEnumerable(Of DirectoryInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.IO.DirectoryInfo)
+  name.vb: IEnumerable(Of DirectoryInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Extensions.DirectoryInfoExtensions.Depth*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.Depth
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_Depth_System_IO_DirectoryInfo_
+  name: Depth
+  nameWithType: DirectoryInfoExtensions.Depth
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.Depth
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_RecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  name: RecursiveParent
+  nameWithType: DirectoryInfoExtensions.RecursiveParent
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent
+- uid: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_BoundRecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  name: BoundRecursiveParent
+  nameWithType: DirectoryInfoExtensions.BoundRecursiveParent
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent
+- uid: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  isExternal: true
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_BoundRecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  name: BoundRecursiveParent(DirectoryInfo, int)
+  nameWithType: DirectoryInfoExtensions.BoundRecursiveParent(DirectoryInfo, int)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo, int)
+  nameWithType.vb: DirectoryInfoExtensions.BoundRecursiveParent(DirectoryInfo, Integer)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo, Integer)
+  name.vb: BoundRecursiveParent(DirectoryInfo, Integer)
+  spec.csharp:
+  - uid: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+    name: BoundRecursiveParent
+    href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_BoundRecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.DirectoryInfoExtensions.BoundRecursiveParent(System.IO.DirectoryInfo,System.Int32)
+    name: BoundRecursiveParent
+    href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_BoundRecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_MoveUpBound_System_IO_DirectoryInfo_System_Int32_
+  name: MoveUpBound
+  nameWithType: DirectoryInfoExtensions.MoveUpBound
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.MoveUpBound
+- uid: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+  isExternal: true
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_RecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  name: RecursiveParent(DirectoryInfo, int)
+  nameWithType: DirectoryInfoExtensions.RecursiveParent(DirectoryInfo, int)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo, int)
+  nameWithType.vb: DirectoryInfoExtensions.RecursiveParent(DirectoryInfo, Integer)
+  fullName.vb: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo, Integer)
+  name.vb: RecursiveParent(DirectoryInfo, Integer)
+  spec.csharp:
+  - uid: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+    name: RecursiveParent
+    href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_RecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.DirectoryInfoExtensions.RecursiveParent(System.IO.DirectoryInfo,System.Int32)
+    name: RecursiveParent
+    href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_RecursiveParent_System_IO_DirectoryInfo_System_Int32_
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Garyon.Extensions.DirectoryInfoExtensions.MoveUp*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.MoveUp
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_MoveUp_System_IO_DirectoryInfo_System_Int32_
+  name: MoveUp
+  nameWithType: DirectoryInfoExtensions.MoveUp
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.MoveUp
+- uid: Garyon.Extensions.DirectoryInfoExtensions.MoveTo*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.MoveTo
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_MoveTo_System_IO_DirectoryInfo_System_IO_DirectoryInfo_
+  name: MoveTo
+  nameWithType: DirectoryInfoExtensions.MoveTo
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.MoveTo
+- uid: System.IO.FileInfo.Length
+  commentId: P:System.IO.FileInfo.Length
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo.length
+  name: Length
+  nameWithType: FileInfo.Length
+  fullName: System.IO.FileInfo.Length
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  isExternal: true
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TotalSize_System_IO_DirectoryInfo_
+  name: TotalSize(DirectoryInfo)
+  nameWithType: DirectoryInfoExtensions.TotalSize(DirectoryInfo)
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+  spec.csharp:
+  - uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+    name: TotalSize
+    href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TotalSize_System_IO_DirectoryInfo_
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSize(System.IO.DirectoryInfo)
+    name: TotalSize
+    href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TotalSize_System_IO_DirectoryInfo_
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: )
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TotalSizeDeep_System_IO_DirectoryInfo_
+  name: TotalSizeDeep
+  nameWithType: DirectoryInfoExtensions.TotalSizeDeep
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TotalSizeDeep
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TotalSize*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.TotalSize
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TotalSize_System_IO_DirectoryInfo_
+  name: TotalSize
+  nameWithType: DirectoryInfoExtensions.TotalSize
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TotalSize
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TryGetSingleSubdirectory_System_IO_DirectoryInfo_
+  name: TryGetSingleSubdirectory
+  nameWithType: DirectoryInfoExtensions.TryGetSingleSubdirectory
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TryGetSingleSubdirectory
+- uid: Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_ExploreDeepestSingleDirectory_System_IO_DirectoryInfo_
+  name: ExploreDeepestSingleDirectory
+  nameWithType: DirectoryInfoExtensions.ExploreDeepestSingleDirectory
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.ExploreDeepestSingleDirectory
+- uid: System.IO.DirectoryInfo.Delete(System.Boolean)
+  commentId: M:System.IO.DirectoryInfo.Delete(System.Boolean)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo.delete#system-io-directoryinfo-delete(system-boolean)
+  name: Delete(bool)
+  nameWithType: DirectoryInfo.Delete(bool)
+  fullName: System.IO.DirectoryInfo.Delete(bool)
+  nameWithType.vb: DirectoryInfo.Delete(Boolean)
+  fullName.vb: System.IO.DirectoryInfo.Delete(Boolean)
+  name.vb: Delete(Boolean)
+  spec.csharp:
+  - uid: System.IO.DirectoryInfo.Delete(System.Boolean)
+    name: Delete
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo.delete#system-io-directoryinfo-delete(system-boolean)
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: System.IO.DirectoryInfo.Delete(System.Boolean)
+    name: Delete
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo.delete#system-io-directoryinfo-delete(system-boolean)
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Garyon.Extensions.DirectoryInfoExtensions.TryDelete*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.TryDelete
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_TryDelete_System_IO_DirectoryInfo_System_Boolean_
+  name: TryDelete
+  nameWithType: DirectoryInfoExtensions.TryDelete
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.TryDelete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IO.Path.Combine(System.String,System.String)
+  commentId: M:System.IO.Path.Combine(System.String,System.String)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.path.combine#system-io-path-combine(system-string-system-string)
+  name: Combine(string, string)
+  nameWithType: Path.Combine(string, string)
+  fullName: System.IO.Path.Combine(string, string)
+  nameWithType.vb: Path.Combine(String, String)
+  fullName.vb: System.IO.Path.Combine(String, String)
+  name.vb: Combine(String, String)
+  spec.csharp:
+  - uid: System.IO.Path.Combine(System.String,System.String)
+    name: Combine
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.path.combine#system-io-path-combine(system-string-system-string)
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.IO.Path.Combine(System.String,System.String)
+    name: Combine
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.path.combine#system-io-path-combine(system-string-system-string)
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Garyon.Extensions.DirectoryInfoExtensions.CombinePath*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.CombinePath
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_CombinePath_System_IO_DirectoryInfo_System_String_
+  name: CombinePath
+  nameWithType: DirectoryInfoExtensions.CombinePath
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.CombinePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Extensions.DirectoryInfoExtensions.Subdirectory*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.Subdirectory
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_Subdirectory_System_IO_DirectoryInfo_System_String_
+  name: Subdirectory
+  nameWithType: DirectoryInfoExtensions.Subdirectory
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.Subdirectory
+- uid: System.IO.FileInfo
+  commentId: T:System.IO.FileInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  name: FileInfo
+  nameWithType: FileInfo
+  fullName: System.IO.FileInfo
+- uid: Garyon.Extensions.DirectoryInfoExtensions.File*
+  commentId: Overload:Garyon.Extensions.DirectoryInfoExtensions.File
+  href: Garyon.Extensions.DirectoryInfoExtensions.html#Garyon_Extensions_DirectoryInfoExtensions_File_System_IO_DirectoryInfo_System_String_
+  name: File
+  nameWithType: DirectoryInfoExtensions.File
+  fullName: Garyon.Extensions.DirectoryInfoExtensions.File

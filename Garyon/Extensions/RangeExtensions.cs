@@ -1,6 +1,4 @@
-﻿#if HAS_SLICES
-
-using System;
+﻿using System;
 
 namespace Garyon.Extensions;
 
@@ -18,5 +16,3 @@ public static class RangeExtensions
         end = range.End.GetOffset(length);
     }
 }
-
-#endif

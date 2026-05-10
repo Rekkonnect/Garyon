@@ -78,6 +78,6 @@ public static partial class IEnumerableExtensions
         }
 
         var finalCount = countCaching.ForceCount();
-        return finalCount != table.Count;
+        return finalCount == table.Count;
     }
 }

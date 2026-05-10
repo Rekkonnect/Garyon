@@ -1,0 +1,1120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.IKeyValuePairComparer`2
+  commentId: T:Garyon.Objects.IKeyValuePairComparer`2
+  id: IKeyValuePairComparer`2
+  parent: Garyon.Objects
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IKeyValuePairComparer<TKey, TValue>
+  nameWithType: IKeyValuePairComparer<TKey, TValue>
+  fullName: Garyon.Objects.IKeyValuePairComparer<TKey, TValue>
+  type: Interface
+  source:
+    remote:
+      path: Garyon/Objects/EntryComparers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IKeyValuePairComparer
+    path: ../Garyon/Objects/EntryComparers.cs
+    startLine: 15
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Represents a comparer for <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface IKeyValuePairComparer<TKey, TValue> : IComparer<KeyValuePair<TKey, TValue>>'
+    typeParameters:
+    - id: TKey
+      description: The type of the key.
+    - id: TValue
+      description: The type of the value.
+    content.vb: Public Interface IKeyValuePairComparer(Of TKey, TValue) Inherits IComparer(Of KeyValuePair(Of TKey, TValue))
+  derivedClasses:
+  - Garyon.Objects.EntryKeyComparer`2
+  - Garyon.Objects.EntryKeyOverValueComparer`2
+  - Garyon.Objects.EntryValueComparer`2
+  - Garyon.Objects.EntryValueOverKeyComparer`2
+  inheritedMembers:
+  - System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}.Compare(System.Collections.Generic.KeyValuePair{{TKey},{TValue}},System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  extensionMethods:
+  - Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IKeyValuePairComparer{{TKey},{TValue}})
+  - Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.IKeyValuePairComparer{{TKey},{TValue}}})
+  - Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.IKeyValuePairComparer{{TKey},{TValue}},{TResult}})
+  - Garyon.Objects.IKeyValuePairComparer`2.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  nameWithType.vb: IKeyValuePairComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue)
+  name.vb: IKeyValuePairComparer(Of TKey, TValue)
+references:
+- uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}.Compare(System.Collections.Generic.KeyValuePair{{TKey},{TValue}},System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  commentId: M:System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{`0,`1}}.Compare(System.Collections.Generic.KeyValuePair{`0,`1},System.Collections.Generic.KeyValuePair{`0,`1})
+  parent: System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  definition: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  name: Compare(KeyValuePair<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  nameWithType: IComparer<KeyValuePair<TKey, TValue>>.Compare(KeyValuePair<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.IComparer<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Compare(System.Collections.Generic.KeyValuePair<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  nameWithType.vb: IComparer(Of KeyValuePair(Of TKey, TValue)).Compare(KeyValuePair(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.IComparer(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)).Compare(System.Collections.Generic.KeyValuePair(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: Compare(KeyValuePair(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{`0,`1}}.Compare(System.Collections.Generic.KeyValuePair{`0,`1},System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{`0,`1}}.Compare(System.Collections.Generic.KeyValuePair{`0,`1},System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IKeyValuePairComparer{{TKey},{TValue}})
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<IKeyValuePairComparer<TKey, TValue>>(IKeyValuePairComparer<TKey, TValue>, IKeyValuePairComparer<TKey, TValue>)
+  nameWithType: ComparisonExtensions.BeginCompare<IKeyValuePairComparer<TKey, TValue>>(IKeyValuePairComparer<TKey, TValue>, IKeyValuePairComparer<TKey, TValue>)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>>(Garyon.Objects.IKeyValuePairComparer<TKey, TValue>, Garyon.Objects.IKeyValuePairComparer<TKey, TValue>)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of IKeyValuePairComparer(Of TKey, TValue))(IKeyValuePairComparer(Of TKey, TValue), IKeyValuePairComparer(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue))(Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue), Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue))
+  name.vb: BeginCompare(Of IKeyValuePairComparer(Of TKey, TValue))(IKeyValuePairComparer(Of TKey, TValue), IKeyValuePairComparer(Of TKey, TValue))
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IKeyValuePairComparer{`0,`1},Garyon.Objects.IKeyValuePairComparer{`0,`1})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IKeyValuePairComparer{`0,`1},Garyon.Objects.IKeyValuePairComparer{`0,`1})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<IKeyValuePairComparer<TKey, TValue>, TValue>(IKeyValuePairComparer<TKey, TValue>)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<IKeyValuePairComparer<TKey, TValue>, TValue>(IKeyValuePairComparer<TKey, TValue>)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>, TValue>(Garyon.Objects.IKeyValuePairComparer<TKey, TValue>)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of IKeyValuePairComparer(Of TKey, TValue), TValue)(IKeyValuePairComparer(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue), TValue)(Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue))
+  name.vb: GetEnumerator(Of IKeyValuePairComparer(Of TKey, TValue), TValue)(IKeyValuePairComparer(Of TKey, TValue))
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.IKeyValuePairComparer{`0,`1})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.IKeyValuePairComparer{`0,`1})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.IKeyValuePairComparer{{TKey},{TValue}}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<IKeyValuePairComparer<TKey, TValue>>(IKeyValuePairComparer<TKey, TValue>, Action<IKeyValuePairComparer<TKey, TValue>>)
+  nameWithType: MoreLinqExtensions.Apply<IKeyValuePairComparer<TKey, TValue>>(IKeyValuePairComparer<TKey, TValue>, Action<IKeyValuePairComparer<TKey, TValue>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>>(Garyon.Objects.IKeyValuePairComparer<TKey, TValue>, System.Action<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of IKeyValuePairComparer(Of TKey, TValue))(IKeyValuePairComparer(Of TKey, TValue), Action(Of IKeyValuePairComparer(Of TKey, TValue)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue))(Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue), System.Action(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue)))
+  name.vb: Apply(Of IKeyValuePairComparer(Of TKey, TValue))(IKeyValuePairComparer(Of TKey, TValue), Action(Of IKeyValuePairComparer(Of TKey, TValue)))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.IKeyValuePairComparer{`0,`1},System.Action{Garyon.Objects.IKeyValuePairComparer{`0,`1}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.IKeyValuePairComparer{`0,`1},System.Action{Garyon.Objects.IKeyValuePairComparer{`0,`1}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IKeyValuePairComparer`2.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.IKeyValuePairComparer{{TKey},{TValue}},{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<IKeyValuePairComparer<TKey, TValue>, TResult>(IKeyValuePairComparer<TKey, TValue>, Func<IKeyValuePairComparer<TKey, TValue>, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<IKeyValuePairComparer<TKey, TValue>, TResult>(IKeyValuePairComparer<TKey, TValue>, Func<IKeyValuePairComparer<TKey, TValue>, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>, TResult>(Garyon.Objects.IKeyValuePairComparer<TKey, TValue>, System.Func<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of IKeyValuePairComparer(Of TKey, TValue), TResult)(IKeyValuePairComparer(Of TKey, TValue), Func(Of IKeyValuePairComparer(Of TKey, TValue), TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue), TResult)(Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue), System.Func(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue), TResult))
+  name.vb: Apply(Of IKeyValuePairComparer(Of TKey, TValue), TResult)(IKeyValuePairComparer(Of TKey, TValue), Func(Of IKeyValuePairComparer(Of TKey, TValue), TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.IKeyValuePairComparer{`0,`1},System.Func{Garyon.Objects.IKeyValuePairComparer{`0,`1},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.IKeyValuePairComparer{`0,`1},System.Func{Garyon.Objects.IKeyValuePairComparer{`0,`1},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IKeyValuePairComparer`2.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<IKeyValuePairComparer<TKey, TValue>>(IKeyValuePairComparer<TKey, TValue>)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<IKeyValuePairComparer<TKey, TValue>>(IKeyValuePairComparer<TKey, TValue>)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.IKeyValuePairComparer<TKey, TValue>>(Garyon.Objects.IKeyValuePairComparer<TKey, TValue>)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of IKeyValuePairComparer(Of TKey, TValue))(IKeyValuePairComparer(Of TKey, TValue))
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue))(Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue))
+  name.vb: EnumerateSingle(Of IKeyValuePairComparer(Of TKey, TValue))(IKeyValuePairComparer(Of TKey, TValue))
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.IKeyValuePairComparer{`0,`1})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.IKeyValuePairComparer{`0,`1})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  commentId: M:System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  name: Compare(T, T)
+  nameWithType: IComparer<T>.Compare(T, T)
+  fullName: System.Collections.Generic.IComparer<T>.Compare(T, T)
+  nameWithType.vb: IComparer(Of T).Compare(T, T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T).Compare(T, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: T:System.Collections.Generic.IComparer{System.Collections.Generic.KeyValuePair{`0,`1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<KeyValuePair<TKey, TValue>>
+  nameWithType: IComparer<KeyValuePair<TKey, TValue>>
+  fullName: System.Collections.Generic.IComparer<System.Collections.Generic.KeyValuePair<TKey, TValue>>
+  nameWithType.vb: IComparer(Of KeyValuePair(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.IComparer(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: IComparer(Of KeyValuePair(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: System.Collections.Generic.IComparer`1
+  commentId: T:System.Collections.Generic.IComparer`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<T>
+  nameWithType: IComparer<T>
+  fullName: System.Collections.Generic.IComparer<T>
+  nameWithType.vb: IComparer(Of T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T)
+  name.vb: IComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html

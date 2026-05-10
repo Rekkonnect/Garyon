@@ -1,0 +1,1276 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  commentId: T:Garyon.Extensions.EarlyTerminatingLinqExtensions
+  id: EarlyTerminatingLinqExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},System.Boolean)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt32},Garyon.Objects.ComparisonKinds,System.UInt32)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt64},Garyon.Objects.ComparisonKinds,System.UInt64)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  langs:
+  - csharp
+  - vb
+  name: EarlyTerminatingLinqExtensions
+  nameWithType: EarlyTerminatingLinqExtensions
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EarlyTerminatingLinqExtensions
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Contains a collection of early-termiating LINQ-like extensions.
+  example: []
+  syntax:
+    content: public static class EarlyTerminatingLinqExtensions
+    content.vb: Public Module EarlyTerminatingLinqExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  id: SumsBelow(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsBelow(IEnumerable<uint>, uint)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsBelow(IEnumerable<uint>, uint)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable<uint>, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsBelow
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 37
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is strictly less
+
+    than the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsBelow(this IEnumerable<uint> values, uint target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt32
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is strictly less than (&lt;) the
+
+        target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsBelow(values As IEnumerable(Of UInteger), target As UInteger) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsBelow(IEnumerable(Of UInteger), UInteger)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable(Of UInteger), UInteger)
+  name.vb: SumsBelow(IEnumerable(Of UInteger), UInteger)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  id: SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsAtMost(IEnumerable<uint>, uint)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsAtMost(IEnumerable<uint>, uint)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable<uint>, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsAtMost
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 47
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is at most equal to
+
+    the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsAtMost(this IEnumerable<uint> values, uint target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt32
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is less than or equal to (&lt;=) the
+
+        target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsAtMost(values As IEnumerable(Of UInteger), target As UInteger) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsAtMost(IEnumerable(Of UInteger), UInteger)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable(Of UInteger), UInteger)
+  name.vb: SumsAtMost(IEnumerable(Of UInteger), UInteger)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  id: SumsOver(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsOver(IEnumerable<uint>, uint)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsOver(IEnumerable<uint>, uint)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable<uint>, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsOver
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 57
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is strictly greater
+
+    than the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsOver(this IEnumerable<uint> values, uint target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt32
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is strictly greater than (&gt;) the
+
+        target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsOver(values As IEnumerable(Of UInteger), target As UInteger) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsOver(IEnumerable(Of UInteger), UInteger)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable(Of UInteger), UInteger)
+  name.vb: SumsOver(IEnumerable(Of UInteger), UInteger)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  id: SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsAtLeast(IEnumerable<uint>, uint)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsAtLeast(IEnumerable<uint>, uint)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable<uint>, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsAtLeast
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 67
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is at least equal
+
+    to the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsAtLeast(this IEnumerable<uint> values, uint target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt32
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is greater than or equal to (&gt;=)
+
+        the target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsAtLeast(values As IEnumerable(Of UInteger), target As UInteger) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsAtLeast(IEnumerable(Of UInteger), UInteger)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable(Of UInteger), UInteger)
+  name.vb: SumsAtLeast(IEnumerable(Of UInteger), UInteger)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt32},Garyon.Objects.ComparisonKinds,System.UInt32)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt32},Garyon.Objects.ComparisonKinds,System.UInt32)
+  id: SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt32},Garyon.Objects.ComparisonKinds,System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumSatisfies(IEnumerable<uint>, ComparisonKinds, uint)
+  nameWithType: EarlyTerminatingLinqExtensions.SumSatisfies(IEnumerable<uint>, ComparisonKinds, uint)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable<uint>, Garyon.Objects.ComparisonKinds, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumSatisfies
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 81
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values satisfies a
+
+    comparison against the target value.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumSatisfies(this IEnumerable<uint> values, ComparisonKinds comparisonKinds, uint target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The collection of values whose sum to calculate.
+    - id: comparisonKinds
+      type: Garyon.Objects.ComparisonKinds
+      description: The comparison kinds that must be satisfied.
+    - id: target
+      type: System.UInt32
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum satisfies the given comparison,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumSatisfies(values As IEnumerable(Of UInteger), comparisonKinds As ComparisonKinds, target As UInteger) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumSatisfies(IEnumerable(Of UInteger), ComparisonKinds, UInteger)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable(Of UInteger), Garyon.Objects.ComparisonKinds, UInteger)
+  name.vb: SumSatisfies(IEnumerable(Of UInteger), ComparisonKinds, UInteger)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  id: SumsBelow(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsBelow(IEnumerable<ulong>, ulong)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsBelow(IEnumerable<ulong>, ulong)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable<ulong>, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsBelow
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 103
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is strictly less
+
+    than the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsBelow(this IEnumerable<ulong> values, ulong target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt64
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is strictly less than (&lt;) the
+
+        target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsBelow(values As IEnumerable(Of ULong), target As ULong) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsBelow(IEnumerable(Of ULong), ULong)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow(System.Collections.Generic.IEnumerable(Of ULong), ULong)
+  name.vb: SumsBelow(IEnumerable(Of ULong), ULong)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  id: SumsAtMost(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsAtMost(IEnumerable<ulong>, ulong)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsAtMost(IEnumerable<ulong>, ulong)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable<ulong>, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsAtMost
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 105
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is at most equal to
+
+    the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsAtMost(this IEnumerable<ulong> values, ulong target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt64
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is less than or equal to (&lt;=) the
+
+        target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsAtMost(values As IEnumerable(Of ULong), target As ULong) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsAtMost(IEnumerable(Of ULong), ULong)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost(System.Collections.Generic.IEnumerable(Of ULong), ULong)
+  name.vb: SumsAtMost(IEnumerable(Of ULong), ULong)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  id: SumsOver(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsOver(IEnumerable<ulong>, ulong)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsOver(IEnumerable<ulong>, ulong)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable<ulong>, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsOver
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 107
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is strictly greater
+
+    than the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsOver(this IEnumerable<ulong> values, ulong target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt64
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is strictly greater than (&gt;) the
+
+        target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsOver(values As IEnumerable(Of ULong), target As ULong) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsOver(IEnumerable(Of ULong), ULong)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver(System.Collections.Generic.IEnumerable(Of ULong), ULong)
+  name.vb: SumsOver(IEnumerable(Of ULong), ULong)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  id: SumsAtLeast(System.Collections.Generic.IEnumerable{System.UInt64},System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumsAtLeast(IEnumerable<ulong>, ulong)
+  nameWithType: EarlyTerminatingLinqExtensions.SumsAtLeast(IEnumerable<ulong>, ulong)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable<ulong>, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumsAtLeast
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 109
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values is at least equal
+
+    to the target.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumsAtLeast(this IEnumerable<ulong> values, ulong target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The collection of values whose sum to calculate.
+    - id: target
+      type: System.UInt64
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum is greater than or equal to (&gt;=)
+
+        the target, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumsAtLeast(values As IEnumerable(Of ULong), target As ULong) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumsAtLeast(IEnumerable(Of ULong), ULong)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast(System.Collections.Generic.IEnumerable(Of ULong), ULong)
+  name.vb: SumsAtLeast(IEnumerable(Of ULong), ULong)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt64},Garyon.Objects.ComparisonKinds,System.UInt64)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt64},Garyon.Objects.ComparisonKinds,System.UInt64)
+  id: SumSatisfies(System.Collections.Generic.IEnumerable{System.UInt64},Garyon.Objects.ComparisonKinds,System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SumSatisfies(IEnumerable<ulong>, ComparisonKinds, ulong)
+  nameWithType: EarlyTerminatingLinqExtensions.SumSatisfies(IEnumerable<ulong>, ComparisonKinds, ulong)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable<ulong>, Garyon.Objects.ComparisonKinds, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SumSatisfies
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 112
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the sum of a collection of values satisfies a
+
+    comparison against the target value.
+  remarks: >-
+    It is not necessary that the entire collection is enumerated.
+
+    Enumeration halts upon alternation of satisfying the given comparison.
+
+    <br />
+
+    Overflows are not accounted for. Ensure that the sum of the entire
+
+    collection will not overflow, causing this result to appear wrong.
+  example: []
+  syntax:
+    content: public static bool SumSatisfies(this IEnumerable<ulong> values, ComparisonKinds comparisonKinds, ulong target)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The collection of values whose sum to calculate.
+    - id: comparisonKinds
+      type: Garyon.Objects.ComparisonKinds
+      description: The comparison kinds that must be satisfied.
+    - id: target
+      type: System.UInt64
+      description: The target value to compare the collection's sum against.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the sum satisfies the given comparison,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function SumSatisfies(values As IEnumerable(Of ULong), comparisonKinds As ComparisonKinds, target As ULong) As Boolean
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.SumSatisfies(IEnumerable(Of ULong), ComparisonKinds, ULong)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies(System.Collections.Generic.IEnumerable(Of ULong), Garyon.Objects.ComparisonKinds, ULong)
+  name.vb: SumSatisfies(IEnumerable(Of ULong), ComparisonKinds, ULong)
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},System.Boolean)
+  commentId: M:Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},System.Boolean)
+  id: CutAt``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CutAt<T>(IEnumerable<T>, Predicate<T>, bool)
+  nameWithType: EarlyTerminatingLinqExtensions.CutAt<T>(IEnumerable<T>, Predicate<T>, bool)
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt<T>(System.Collections.Generic.IEnumerable<T>, System.Predicate<T>, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CutAt
+    path: ../Garyon/Extensions/EarlyTerminatingLinqExtensions.cs
+    startLine: 155
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Enumerates a collection, but halts enumeration as soon as a value that
+
+    satisfies the given predicate is found.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> CutAt<T>(this IEnumerable<T> source, Predicate<T> predicate, bool includeHaltingValue = false)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The collection whose values to enumerate and evaluate through
+
+        <code class="paramref">predicate</code>.
+    - id: predicate
+      type: System.Predicate{{T}}
+      description: The predicate which will cause enumeration to halt upon being satisfied.
+    - id: includeHaltingValue
+      type: System.Boolean
+      description: >-
+        Determines whether the final value that causes enumeration to halt
+
+        should be retuned or not.
+    typeParameters:
+    - id: T
+      description: The type of the values the collection contains.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The first elements that do not satisfy <code class="paramref">predicate</code>,
+
+        and, optionally, the first value that satisfies it.
+    content.vb: Public Shared Function CutAt(Of T)(source As IEnumerable(Of T), predicate As Predicate(Of T), includeHaltingValue As Boolean = False) As IEnumerable(Of T)
+  overload: Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt*
+  nameWithType.vb: EarlyTerminatingLinqExtensions.CutAt(Of T)(IEnumerable(Of T), Predicate(Of T), Boolean)
+  fullName.vb: Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Predicate(Of T), Boolean)
+  name.vb: CutAt(Of T)(IEnumerable(Of T), Predicate(Of T), Boolean)
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow*
+  commentId: Overload:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html#Garyon_Extensions_EarlyTerminatingLinqExtensions_SumsBelow_System_Collections_Generic_IEnumerable_System_UInt32__System_UInt32_
+  name: SumsBelow
+  nameWithType: EarlyTerminatingLinqExtensions.SumsBelow
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsBelow
+- uid: System.Collections.Generic.IEnumerable{System.UInt32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.UInt32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<uint>
+  nameWithType: IEnumerable<uint>
+  fullName: System.Collections.Generic.IEnumerable<uint>
+  nameWithType.vb: IEnumerable(Of UInteger)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UInteger)
+  name.vb: IEnumerable(Of UInteger)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost*
+  commentId: Overload:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html#Garyon_Extensions_EarlyTerminatingLinqExtensions_SumsAtMost_System_Collections_Generic_IEnumerable_System_UInt32__System_UInt32_
+  name: SumsAtMost
+  nameWithType: EarlyTerminatingLinqExtensions.SumsAtMost
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtMost
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver*
+  commentId: Overload:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html#Garyon_Extensions_EarlyTerminatingLinqExtensions_SumsOver_System_Collections_Generic_IEnumerable_System_UInt32__System_UInt32_
+  name: SumsOver
+  nameWithType: EarlyTerminatingLinqExtensions.SumsOver
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsOver
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast*
+  commentId: Overload:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html#Garyon_Extensions_EarlyTerminatingLinqExtensions_SumsAtLeast_System_Collections_Generic_IEnumerable_System_UInt32__System_UInt32_
+  name: SumsAtLeast
+  nameWithType: EarlyTerminatingLinqExtensions.SumsAtLeast
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumsAtLeast
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies*
+  commentId: Overload:Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html#Garyon_Extensions_EarlyTerminatingLinqExtensions_SumSatisfies_System_Collections_Generic_IEnumerable_System_UInt32__Garyon_Objects_ComparisonKinds_System_UInt32_
+  name: SumSatisfies
+  nameWithType: EarlyTerminatingLinqExtensions.SumSatisfies
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.SumSatisfies
+- uid: Garyon.Objects.ComparisonKinds
+  commentId: T:Garyon.Objects.ComparisonKinds
+  parent: Garyon.Objects
+  href: Garyon.Objects.ComparisonKinds.html
+  name: ComparisonKinds
+  nameWithType: ComparisonKinds
+  fullName: Garyon.Objects.ComparisonKinds
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Collections.Generic.IEnumerable{System.UInt64}
+  commentId: T:System.Collections.Generic.IEnumerable{System.UInt64}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ulong>
+  nameWithType: IEnumerable<ulong>
+  fullName: System.Collections.Generic.IEnumerable<ulong>
+  nameWithType.vb: IEnumerable(Of ULong)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ULong)
+  name.vb: IEnumerable(Of ULong)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: )
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt*
+  commentId: Overload:Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html#Garyon_Extensions_EarlyTerminatingLinqExtensions_CutAt__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__System_Boolean_
+  name: CutAt
+  nameWithType: EarlyTerminatingLinqExtensions.CutAt
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions.CutAt
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Predicate{{T}}
+  commentId: T:System.Predicate{``0}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

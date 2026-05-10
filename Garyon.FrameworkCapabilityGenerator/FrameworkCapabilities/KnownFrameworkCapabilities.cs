@@ -63,6 +63,7 @@ internal static class KnownFrameworkCapabilities
                     "HAS_DYNAMIC_INVOCATION",
                     "HAS_MATH_LOG2",
                     "HAS_MATH_ILOGB",
+                    "HAS_CODE_PAGES_ENCODING_PROVIDER",
                 ]),
 
             new(

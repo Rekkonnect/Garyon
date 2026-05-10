@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Garyon.Functions;
+using System;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace Garyon.Reflection;
 
@@ -31,5 +33,42 @@ public static class FieldInfoExtensions
             return InvokableTypeKind.Delegate;
 
         return InvokableTypeKind.Invalid;
+    }
+
+    public static AccessibilityModifiers GetAccessibilityModifiers(this FieldInfo field)
+    {
+        return Misc.ValueIf(AccessibilityModifiers.Public, field.IsPublic)
+            | Misc.ValueIf(AccessibilityModifiers.Internal, field.IsAssembly)
+            | Misc.ValueIf(AccessibilityModifiers.ProtectedInternal, field.IsFamilyOrAssembly)
+            | Misc.ValueIf(AccessibilityModifiers.Protected, field.IsFamily)
+            | Misc.ValueIf(AccessibilityModifiers.PrivateProtected, field.IsFamilyAndAssembly)
+            | Misc.ValueIf(AccessibilityModifiers.Private, field.IsPrivate)
+            ;
+    }
+}
+
+/// <summary>
+/// Contains extension methods for the <seealso cref="PropertyInfo"/> class.
+/// </summary>
+public static class PropertyInfoExtensions
+{
+    public static AccessibilityModifiers GetAccessibilityModifiers(this PropertyInfo property)
+    {
+        var getterAccessibility = property.GetMethod?.GetAccessibilityModifiers() ?? AccessibilityModifiers.None;
+        var setterAccessibility = property.SetMethod?.GetAccessibilityModifiers() ?? AccessibilityModifiers.None;
+        return (AccessibilityModifiers)Math.Max((int)getterAccessibility, (int)setterAccessibility);
+    }
+}
+
+/// <summary>
+/// Contains extension methods for the <seealso cref="EventInfo"/> class.
+/// </summary>
+public static class EventInfoExtensions
+{
+    public static AccessibilityModifiers GetAccessibilityModifiers(this EventInfo @event)
+    {
+        var addMethodAccessibility = @event.AddMethod?.GetAccessibilityModifiers() ?? AccessibilityModifiers.None;
+        var removeMethodAccessibility = @event.RemoveMethod?.GetAccessibilityModifiers() ?? AccessibilityModifiers.None;
+        return (AccessibilityModifiers)Math.Max((int)addMethodAccessibility, (int)removeMethodAccessibility);
     }
 }

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.Arrays
+  commentId: N:Garyon.Functions.Arrays
+  id: Garyon.Functions.Arrays
+  children:
+  - Garyon.Functions.Arrays.ArrayIdentification
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Functions.Arrays
+  nameWithType: Garyon.Functions.Arrays
+  fullName: Garyon.Functions.Arrays
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Functions.Arrays.ArrayIdentification
+  commentId: T:Garyon.Functions.Arrays.ArrayIdentification
+  href: Garyon.Functions.Arrays.ArrayIdentification.html
+  name: ArrayIdentification
+  nameWithType: ArrayIdentification
+  fullName: Garyon.Functions.Arrays.ArrayIdentification

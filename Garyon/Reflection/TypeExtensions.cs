@@ -38,6 +38,36 @@ public static class TypeExtensions
 
         return type.FullName?.SubstringUntilLast('`');
     }
+
+    public static AccessibilityModifiers GetAccessibilityModifiers(this Type? type)
+    {
+        if (type is null)
+        {
+            return AccessibilityModifiers.None;
+        }
+
+        var result = AccessibilityModifiers.None;
+
+        if (!type.IsNested)
+        {
+            result |= Misc.ValueIf(AccessibilityModifiers.Public, type.IsPublic)
+                | Misc.ValueIf(AccessibilityModifiers.Internal, type.IsNotPublic)
+                ;
+        }
+        // Nested types require looking through the specific properties for nested types
+        else
+        {
+            result |= Misc.ValueIf(AccessibilityModifiers.Public, type.IsNestedPublic)
+                | Misc.ValueIf(AccessibilityModifiers.Internal, type.IsNestedAssembly)
+                | Misc.ValueIf(AccessibilityModifiers.ProtectedInternal, type.IsNestedFamORAssem)
+                | Misc.ValueIf(AccessibilityModifiers.Protected, type.IsNestedFamily)
+                | Misc.ValueIf(AccessibilityModifiers.PrivateProtected, type.IsNestedFamANDAssem)
+                | Misc.ValueIf(AccessibilityModifiers.Private, type.IsNestedPrivate)
+                ;
+        }
+
+        return result;
+    }
     #endregion
 
     #region Inheritance
@@ -341,7 +371,7 @@ public static class TypeExtensions
                 leaves.Enqueue(interfaceNode);
 
                 // Remove indirectly inherited interfaces
-                foreach (var parent in node.EnumerateRecursiveProperty(static s => s.Parent))
+                foreach (var parent in node.EnumerateRecursively(static s => s.Parent))
                 {
                     parent.RemoveChild(@interface);
                 }
@@ -386,7 +416,7 @@ public static class TypeExtensions
                 leaves.Enqueue(interfaceNode);
 
                 // Remove indirectly inherited interfaces
-                foreach (var parent in node.EnumerateRecursiveProperty(static s => s.Parent))
+                foreach (var parent in node.EnumerateRecursively(static s => s.Parent))
                 {
                     parent.RemoveChild(@interface);
                 }
@@ -429,7 +459,7 @@ public static class TypeExtensions
     /// </remarks>
     public static IEnumerable<Type> EnumerateBaseTypes(this Type type)
     {
-        return type.EnumerateRecursiveProperty(s => s.BaseType);
+        return type.EnumerateRecursively(s => s.BaseType);
     }
     #endregion
 
@@ -781,8 +811,7 @@ public static class TypeExtensions
     /// <returns>
     /// A value determining whether the type is an attribute.
     /// </returns>
-    // TODO: Remove the generic type check when generic attributes are implemented in the language
-    public static bool IsAttribute(this Type type) => !type.IsGenericType && type.InheritsOrEquals<Attribute>();
+    public static bool IsAttribute(this Type type) => type.InheritsOrEquals<Attribute>();
     /// <summary>
     /// Determines whether the type is a tuple; that is, any generic variant of
     /// the <seealso cref="ValueTuple"/> struct, nullable or not.
@@ -920,7 +949,7 @@ public static class TypeExtensions
     /// </returns>
     public static int GetArrayJaggingLevel(this Type type)
     {
-        return type.EnumerateRecursiveProperty(GetArrayElementType).Count();
+        return type.EnumerateRecursively(GetArrayElementType).Count();
 
         static Type? GetArrayElementType(Type type)
         {
@@ -962,7 +991,7 @@ public static class TypeExtensions
     /// </returns>
     public static int GetMultiplePointerLevel(this Type type)
     {
-        return type.EnumerateRecursiveProperty(GetPointerElementType).Count();
+        return type.EnumerateRecursively(GetPointerElementType).Count();
 
         static Type? GetPointerElementType(Type type)
         {
@@ -984,7 +1013,7 @@ public static class TypeExtensions
     /// </returns>
     public static Type GetDeepestElementType(this Type type)
     {
-        return type.EnumerateRecursiveProperty(s => s.GetElementType()).LastOrDefault() ?? type;
+        return type.EnumerateRecursively(s => s.GetElementType()).LastOrDefault() ?? type;
     }
     /// <summary>
     /// Determines whether the provided type contains elements of type
@@ -1002,7 +1031,7 @@ public static class TypeExtensions
     /// </returns>
     public static bool ContainsElementsOfType(this Type type, Type elementType)
     {
-        return type.EnumerateRecursiveProperty(s => s.GetElementType()).Contains(elementType);
+        return type.EnumerateRecursively(s => s.GetElementType()).Contains(elementType);
     }
     /// <summary>
     /// Determines whether the provided type contains elements of type
@@ -1093,9 +1122,8 @@ public static class TypeExtensions
         return type.GetConstructor(CommonBindingFlags.AnyAccessibilityInstance, null, argumentTypes, null);
     }
 
-    #region Generic Overloads (up to 16 arguments)
-    // The largest constructor that is found in the core assemblies has 15 arguments,
-    // which is why there are overloads with up to 16 arguments
+    #region Generic Overloads
+    // The largest constructor that is found in the core assemblies has 15 arguments
     // It is generally bad practice to manually invoke constructors with more than at most 4 arguments
 
     // Warnings are disabled because the analyzer falsely reports the diagnostics when inheriting docs
@@ -1161,174 +1189,6 @@ public static class TypeExtensions
     {
         return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4));
     }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 5 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4}(Type)"/>
-    /// <typeparam name="T5">
-    /// The type of the 5th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 6 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5}(Type)"/>
-    /// <typeparam name="T6">
-    /// The type of the 6th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 7 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6}(Type)"/>
-    /// <typeparam name="T7">
-    /// The type of the 7th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 8 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7}(Type)"/>
-    /// <typeparam name="T8">
-    /// The type of the 8th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 9 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8}(Type)"/>
-    /// <typeparam name="T9">
-    /// The type of the 9th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 10 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9}(Type)"/>
-    /// <typeparam name="T10">
-    /// The type of the 10th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 11 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10}(Type)"/>
-    /// <typeparam name="T11">
-    /// The type of the 11th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 12 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11}(Type)"/>
-    /// <typeparam name="T12">
-    /// The type of the 12th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 13 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12}(Type)"/>
-    /// <typeparam name="T13">
-    /// The type of the 13th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 14 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13}(Type)"/>
-    /// <typeparam name="T14">
-    /// The type of the 14th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 15 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14}(Type)"/>
-    /// <typeparam name="T15">
-    /// The type of the 15th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 16 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments.
-    /// </summary>
-    /// <inheritdoc cref="GetConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15}(Type)"/>
-    /// <typeparam name="T16">
-    /// The type of the 16th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Type type)
-    {
-        return type.GetConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15), typeof(T16));
-    }
 
     /// <summary>
     /// Gets the constructor of the <see cref="Type"/> that has 1 argument and
@@ -1390,174 +1250,6 @@ public static class TypeExtensions
     public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4>(this Type type)
     {
         return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 5 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4}(Type)"/>
-    /// <typeparam name="T5">
-    /// The type of the 5th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 6 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5}(Type)"/>
-    /// <typeparam name="T6">
-    /// The type of the 6th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 7 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6}(Type)"/>
-    /// <typeparam name="T7">
-    /// The type of the 7th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 8 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7}(Type)"/>
-    /// <typeparam name="T8">
-    /// The type of the 8th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 9 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8}(Type)"/>
-    /// <typeparam name="T9">
-    /// The type of the 9th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 10 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9}(Type)"/>
-    /// <typeparam name="T10">
-    /// The type of the 10th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 11 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10}(Type)"/>
-    /// <typeparam name="T11">
-    /// The type of the 11th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 12 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11}(Type)"/>
-    /// <typeparam name="T12">
-    /// The type of the 12th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 13 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12}(Type)"/>
-    /// <typeparam name="T13">
-    /// The type of the 13th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 14 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13}(Type)"/>
-    /// <typeparam name="T14">
-    /// The type of the 14th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 15 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14}(Type)"/>
-    /// <typeparam name="T15">
-    /// The type of the 15th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15));
-    }
-    /// <summary>
-    /// Gets the constructor of the <see cref="Type"/> that has 16 arguments and
-    /// whose argument types are in the order they are provided in the type
-    /// arguments. The constructor may have any accessibility.
-    /// </summary>
-    /// <inheritdoc cref="GetAnyAccessibilityConstructor{T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15}(Type)"/>
-    /// <typeparam name="T16">
-    /// The type of the 16th argument of the constructor to get.
-    /// </typeparam>
-    [Autogenerated]
-    public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Type type)
-    {
-        return type.GetAnyAccessibilityConstructor(typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5), typeof(T6), typeof(T7), typeof(T8), typeof(T9), typeof(T10), typeof(T11), typeof(T12), typeof(T13), typeof(T14), typeof(T15), typeof(T16));
     }
 #pragma warning restore
     #endregion

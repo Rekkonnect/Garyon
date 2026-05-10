@@ -1,0 +1,764 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.IndexExtensions
+  commentId: T:Garyon.Extensions.IndexExtensions
+  id: IndexExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.IndexExtensions.GetOffset(System.Index,System.Array,System.Int32)
+  - Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,System.Collections.Generic.ICollection{``0})
+  - Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,``0[])
+  - Garyon.Extensions.IndexExtensions.Invert(System.Index)
+  langs:
+  - csharp
+  - vb
+  name: IndexExtensions
+  nameWithType: IndexExtensions
+  fullName: Garyon.Extensions.IndexExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/IndexExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IndexExtensions
+    path: ../Garyon/Extensions/IndexExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extension functions for the <xref href="System.Index" data-throw-if-not-resolved="false"></xref> type.
+  example: []
+  syntax:
+    content: public static class IndexExtensions
+    content.vb: Public Module IndexExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.IndexExtensions.GetOffset(System.Index,System.Array,System.Int32)
+  commentId: M:Garyon.Extensions.IndexExtensions.GetOffset(System.Index,System.Array,System.Int32)
+  id: GetOffset(System.Index,System.Array,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IndexExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOffset(Index, Array, int)
+  nameWithType: IndexExtensions.GetOffset(Index, Array, int)
+  fullName: Garyon.Extensions.IndexExtensions.GetOffset(System.Index, System.Array, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IndexExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetOffset
+    path: ../Garyon/Extensions/IndexExtensions.cs
+    startLine: 15
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the offset for the provided dimension in an array.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int GetOffset(this Index index, Array array, int dimension)
+    parameters:
+    - id: index
+      type: System.Index
+      description: The index in the dimension.
+    - id: array
+      type: System.Array
+      description: The array to get the offset from.
+    - id: dimension
+      type: System.Int32
+      description: The dimension within the array.
+    return:
+      type: System.Int32
+      description: The offset.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetOffset(index As Index, array As Array, dimension As Integer) As Integer
+  overload: Garyon.Extensions.IndexExtensions.GetOffset*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: IndexExtensions.GetOffset(Index, Array, Integer)
+  fullName.vb: Garyon.Extensions.IndexExtensions.GetOffset(System.Index, System.Array, Integer)
+  name.vb: GetOffset(Index, Array, Integer)
+- uid: Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,``0[])
+  commentId: M:Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,``0[])
+  id: GetOffset``1(System.Index,``0[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IndexExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOffset<T>(Index, T[])
+  nameWithType: IndexExtensions.GetOffset<T>(Index, T[])
+  fullName: Garyon.Extensions.IndexExtensions.GetOffset<T>(System.Index, T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IndexExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetOffset
+    path: ../Garyon/Extensions/IndexExtensions.cs
+    startLine: 21
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the offset for the provided dimension in a single-dimensional array.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int GetOffset<T>(this Index index, T[] array)
+    parameters:
+    - id: index
+      type: System.Index
+      description: The index in the array.
+    - id: array
+      type: '{T}[]'
+      description: The array to get the offset from.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+      description: The offset.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetOffset(Of T)(index As Index, array As T()) As Integer
+  overload: Garyon.Extensions.IndexExtensions.GetOffset*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: IndexExtensions.GetOffset(Of T)(Index, T())
+  fullName.vb: Garyon.Extensions.IndexExtensions.GetOffset(Of T)(System.Index, T())
+  name.vb: GetOffset(Of T)(Index, T())
+- uid: Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,System.Collections.Generic.IEnumerable{``0})
+  id: GetOffset``1(System.Index,System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IndexExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOffset<T>(Index, IEnumerable<T>)
+  nameWithType: IndexExtensions.GetOffset<T>(Index, IEnumerable<T>)
+  fullName: Garyon.Extensions.IndexExtensions.GetOffset<T>(System.Index, System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IndexExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetOffset
+    path: ../Garyon/Extensions/IndexExtensions.cs
+    startLine: 27
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the offset for the provided dimension in a collection.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int GetOffset<T>(this Index index, IEnumerable<T> collection)
+    parameters:
+    - id: index
+      type: System.Index
+      description: The index in the collection.
+    - id: collection
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The collection to get the offset from.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+      description: The offset.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetOffset(Of T)(index As Index, collection As IEnumerable(Of T)) As Integer
+  overload: Garyon.Extensions.IndexExtensions.GetOffset*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: IndexExtensions.GetOffset(Of T)(Index, IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.IndexExtensions.GetOffset(Of T)(System.Index, System.Collections.Generic.IEnumerable(Of T))
+  name.vb: GetOffset(Of T)(Index, IEnumerable(Of T))
+- uid: Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,System.Collections.Generic.ICollection{``0})
+  commentId: M:Garyon.Extensions.IndexExtensions.GetOffset``1(System.Index,System.Collections.Generic.ICollection{``0})
+  id: GetOffset``1(System.Index,System.Collections.Generic.ICollection{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IndexExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOffset<T>(Index, ICollection<T>)
+  nameWithType: IndexExtensions.GetOffset<T>(Index, ICollection<T>)
+  fullName: Garyon.Extensions.IndexExtensions.GetOffset<T>(System.Index, System.Collections.Generic.ICollection<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IndexExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetOffset
+    path: ../Garyon/Extensions/IndexExtensions.cs
+    startLine: 33
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the offset for the provided dimension in a collection.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int GetOffset<T>(this Index index, ICollection<T> collection)
+    parameters:
+    - id: index
+      type: System.Index
+      description: The index in the collection.
+    - id: collection
+      type: System.Collections.Generic.ICollection{{T}}
+      description: The collection to get the offset from.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+      description: The offset.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetOffset(Of T)(index As Index, collection As ICollection(Of T)) As Integer
+  overload: Garyon.Extensions.IndexExtensions.GetOffset*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: IndexExtensions.GetOffset(Of T)(Index, ICollection(Of T))
+  fullName.vb: Garyon.Extensions.IndexExtensions.GetOffset(Of T)(System.Index, System.Collections.Generic.ICollection(Of T))
+  name.vb: GetOffset(Of T)(Index, ICollection(Of T))
+- uid: Garyon.Extensions.IndexExtensions.Invert(System.Index)
+  commentId: M:Garyon.Extensions.IndexExtensions.Invert(System.Index)
+  id: Invert(System.Index)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IndexExtensions
+  langs:
+  - csharp
+  - vb
+  name: Invert(Index)
+  nameWithType: IndexExtensions.Invert(Index)
+  fullName: Garyon.Extensions.IndexExtensions.Invert(System.Index)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IndexExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Invert
+    path: ../Garyon/Extensions/IndexExtensions.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Inverts the index to reflect the respective index symmetric to the middle of the collection.
+  example: []
+  syntax:
+    content: public static Index Invert(this Index index)
+    parameters:
+    - id: index
+      type: System.Index
+      description: The index to invert.
+    return:
+      type: System.Index
+      description: The inverted index.
+    content.vb: Public Shared Function Invert(index As Index) As Index
+  overload: Garyon.Extensions.IndexExtensions.Invert*
+references:
+- uid: System.Index
+  commentId: T:System.Index
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.index
+  name: Index
+  nameWithType: Index
+  fullName: System.Index
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.IndexExtensions.GetOffset*
+  commentId: Overload:Garyon.Extensions.IndexExtensions.GetOffset
+  href: Garyon.Extensions.IndexExtensions.html#Garyon_Extensions_IndexExtensions_GetOffset_System_Index_System_Array_System_Int32_
+  name: GetOffset
+  nameWithType: IndexExtensions.GetOffset
+  fullName: Garyon.Extensions.IndexExtensions.GetOffset
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.ICollection{{T}}
+  commentId: T:System.Collections.Generic.ICollection{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.IndexExtensions.Invert*
+  commentId: Overload:Garyon.Extensions.IndexExtensions.Invert
+  href: Garyon.Extensions.IndexExtensions.html#Garyon_Extensions_IndexExtensions_Invert_System_Index_
+  name: Invert
+  nameWithType: IndexExtensions.Invert
+  fullName: Garyon.Extensions.IndexExtensions.Invert

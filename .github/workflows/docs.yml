@@ -1,0 +1,71 @@
+name: Docs (DocFX)
+
+on:
+  push:
+    branches: [ master, dev/** ]
+    paths:
+      - 'docs/**'
+      - 'Garyon/**'
+      - '.github/workflows/docs.yml'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'docs/**'
+      - 'Garyon/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+
+      - name: Install DocFX
+        run: |
+          dotnet tool install -g docfx
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Restore
+        run: dotnet restore Garyon/Garyon.csproj
+
+      - name: Build (Release)
+        run: dotnet build Garyon/Garyon.csproj -c Release --no-restore
+
+      - name: Generate API metadata
+        run: docfx metadata docs/docfx.json
+
+      - name: Build docs
+        run: docfx build docs/docfx.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/_site
+
+  deploy:
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,15 @@
+# Documentation build outputs
+_site/
+api/
+obj/
+
+# DocFX temporary files
+.docfx/
+
+# IDE
+.vs/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

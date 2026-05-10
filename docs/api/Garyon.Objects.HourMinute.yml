@@ -1,0 +1,2802 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.HourMinute
+  commentId: T:Garyon.Objects.HourMinute
+  id: HourMinute
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.HourMinute.#ctor(System.Int32)
+  - Garyon.Objects.HourMinute.#ctor(System.Int32,System.Int32)
+  - Garyon.Objects.HourMinute.Add(System.Int32)
+  - Garyon.Objects.HourMinute.Add(System.Int32,System.Int32)
+  - Garyon.Objects.HourMinute.Equals(Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.Equals(System.Object)
+  - Garyon.Objects.HourMinute.GetHashCode
+  - Garyon.Objects.HourMinute.Hour
+  - Garyon.Objects.HourMinute.Minute
+  - Garyon.Objects.HourMinute.NextHour
+  - Garyon.Objects.HourMinute.NextMinute
+  - Garyon.Objects.HourMinute.Now
+  - Garyon.Objects.HourMinute.Parse(System.String)
+  - Garyon.Objects.HourMinute.Subtract(System.Int32)
+  - Garyon.Objects.HourMinute.Subtract(System.Int32,System.Int32)
+  - Garyon.Objects.HourMinute.ToString
+  - Garyon.Objects.HourMinute.TotalHours
+  - Garyon.Objects.HourMinute.TotalMinutes
+  - Garyon.Objects.HourMinute.TotalSeconds
+  - Garyon.Objects.HourMinute.op_Addition(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_Addition(Garyon.Objects.HourMinute,System.Int32)
+  - Garyon.Objects.HourMinute.op_Equality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_Explicit(System.DateTime)~Garyon.Objects.HourMinute
+  - Garyon.Objects.HourMinute.op_Explicit(System.DateTimeOffset)~Garyon.Objects.HourMinute
+  - Garyon.Objects.HourMinute.op_Explicit(System.TimeSpan)~Garyon.Objects.HourMinute
+  - Garyon.Objects.HourMinute.op_GreaterThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_GreaterThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.DateTime
+  - Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.DateTimeOffset
+  - Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.TimeSpan
+  - Garyon.Objects.HourMinute.op_Inequality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_LessThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_LessThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_Subtraction(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.op_Subtraction(Garyon.Objects.HourMinute,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: HourMinute
+  nameWithType: HourMinute
+  fullName: Garyon.Objects.HourMinute
+  type: Struct
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: HourMinute
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Represents a time instance with the hour and minute.
+  example: []
+  syntax:
+    content: 'public struct HourMinute : IEquatable<HourMinute>, IHasHour, IHasMinute, ITimeObject'
+    content.vb: Public Structure HourMinute Implements IEquatable(Of HourMinute), IHasHour, IHasMinute, ITimeObject
+  implements:
+  - System.IEquatable{Garyon.Objects.HourMinute}
+  - Garyon.Objects.IHasHour
+  - Garyon.Objects.IHasMinute
+  - Garyon.Objects.ITimeObject
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Garyon.Objects.HourMinute.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.HourMinute)
+  - Garyon.Objects.HourMinute.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.HourMinute.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.HourMinute})
+  - Garyon.Objects.HourMinute.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.HourMinute,{TResult}})
+  - Garyon.Objects.HourMinute.Garyon.Extensions.UnsafeExtensions.GetBytes``1
+  - Garyon.Objects.HourMinute.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  - Garyon.Objects.HourMinute.Garyon.Objects.StructRefHelperExtensions.CreateReference``1
+- uid: Garyon.Objects.HourMinute.Now
+  commentId: P:Garyon.Objects.HourMinute.Now
+  id: Now
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Now
+  nameWithType: HourMinute.Now
+  fullName: Garyon.Objects.HourMinute.Now
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Now
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets the current time's <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> representation.
+  example: []
+  syntax:
+    content: public static HourMinute Now { get; }
+    parameters: []
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared ReadOnly Property Now As HourMinute
+  overload: Garyon.Objects.HourMinute.Now*
+- uid: Garyon.Objects.HourMinute.NextMinute
+  commentId: P:Garyon.Objects.HourMinute.NextMinute
+  id: NextMinute
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: NextMinute
+  nameWithType: HourMinute.NextMinute
+  fullName: Garyon.Objects.HourMinute.NextMinute
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NextMinute
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 18
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Gets the <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> representation of the next minute
+
+    from the current time.
+  example: []
+  syntax:
+    content: public static HourMinute NextMinute { get; }
+    parameters: []
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared ReadOnly Property NextMinute As HourMinute
+  overload: Garyon.Objects.HourMinute.NextMinute*
+- uid: Garyon.Objects.HourMinute.NextHour
+  commentId: P:Garyon.Objects.HourMinute.NextHour
+  id: NextHour
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: NextHour
+  nameWithType: HourMinute.NextHour
+  fullName: Garyon.Objects.HourMinute.NextHour
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NextHour
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 23
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Gets the <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> representation of the next hour
+
+    from the current time.
+  example: []
+  syntax:
+    content: public static HourMinute NextHour { get; }
+    parameters: []
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared ReadOnly Property NextHour As HourMinute
+  overload: Garyon.Objects.HourMinute.NextHour*
+- uid: Garyon.Objects.HourMinute.TotalHours
+  commentId: P:Garyon.Objects.HourMinute.TotalHours
+  id: TotalHours
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: TotalHours
+  nameWithType: HourMinute.TotalHours
+  fullName: Garyon.Objects.HourMinute.TotalHours
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TotalHours
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets or sets the total hours as a <xref href="System.Double" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public double TotalHours { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TotalHours As Double
+  overload: Garyon.Objects.HourMinute.TotalHours*
+- uid: Garyon.Objects.HourMinute.TotalMinutes
+  commentId: P:Garyon.Objects.HourMinute.TotalMinutes
+  id: TotalMinutes
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: TotalMinutes
+  nameWithType: HourMinute.TotalMinutes
+  fullName: Garyon.Objects.HourMinute.TotalMinutes
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TotalMinutes
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 38
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets or sets the total minutes.
+  example: []
+  syntax:
+    content: public int TotalMinutes { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalMinutes As Integer
+  overload: Garyon.Objects.HourMinute.TotalMinutes*
+- uid: Garyon.Objects.HourMinute.TotalSeconds
+  commentId: P:Garyon.Objects.HourMinute.TotalSeconds
+  id: TotalSeconds
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: TotalSeconds
+  nameWithType: HourMinute.TotalSeconds
+  fullName: Garyon.Objects.HourMinute.TotalSeconds
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TotalSeconds
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 46
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets the total seconds.
+  example: []
+  syntax:
+    content: public int TotalSeconds { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalSeconds As Integer
+  overload: Garyon.Objects.HourMinute.TotalSeconds*
+- uid: Garyon.Objects.HourMinute.Hour
+  commentId: P:Garyon.Objects.HourMinute.Hour
+  id: Hour
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Hour
+  nameWithType: HourMinute.Hour
+  fullName: Garyon.Objects.HourMinute.Hour
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Hour
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 51
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets or sets the hour.
+  example: []
+  syntax:
+    content: public int Hour { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Hour As Integer
+  overload: Garyon.Objects.HourMinute.Hour*
+  implements:
+  - Garyon.Objects.IHasHour.Hour
+- uid: Garyon.Objects.HourMinute.Minute
+  commentId: P:Garyon.Objects.HourMinute.Minute
+  id: Minute
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Minute
+  nameWithType: HourMinute.Minute
+  fullName: Garyon.Objects.HourMinute.Minute
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Minute
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 59
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets or sets the minute.
+  example: []
+  syntax:
+    content: public int Minute { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Minute As Integer
+  overload: Garyon.Objects.HourMinute.Minute*
+  implements:
+  - Garyon.Objects.IHasMinute.Minute
+- uid: Garyon.Objects.HourMinute.#ctor(System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: HourMinute(int)
+  nameWithType: HourMinute.HourMinute(int)
+  fullName: Garyon.Objects.HourMinute.HourMinute(int)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 72
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> struct
+
+    from the total minutes of the time.
+  example: []
+  syntax:
+    content: public HourMinute(int totalMinutes)
+    parameters:
+    - id: totalMinutes
+      type: System.Int32
+      description: The total minutes of the time.
+    content.vb: Public Sub New(totalMinutes As Integer)
+  overload: Garyon.Objects.HourMinute.#ctor*
+  nameWithType.vb: HourMinute.New(Integer)
+  fullName.vb: Garyon.Objects.HourMinute.New(Integer)
+  name.vb: New(Integer)
+- uid: Garyon.Objects.HourMinute.#ctor(System.Int32,System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: HourMinute(int, int)
+  nameWithType: HourMinute.HourMinute(int, int)
+  fullName: Garyon.Objects.HourMinute.HourMinute(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 83
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> struct
+
+    from the hour and the minute of the time.
+  example: []
+  syntax:
+    content: public HourMinute(int hour, int minute)
+    parameters:
+    - id: hour
+      type: System.Int32
+      description: The hour of the time.
+    - id: minute
+      type: System.Int32
+      description: The minute of the time.
+    content.vb: Public Sub New(hour As Integer, minute As Integer)
+  overload: Garyon.Objects.HourMinute.#ctor*
+  nameWithType.vb: HourMinute.New(Integer, Integer)
+  fullName.vb: Garyon.Objects.HourMinute.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: Garyon.Objects.HourMinute.Add(System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.Add(System.Int32)
+  id: Add(System.Int32)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Add(int)
+  nameWithType: HourMinute.Add(int)
+  fullName: Garyon.Objects.HourMinute.Add(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Add
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 92
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a number of minutes to the time of this instance.
+  example: []
+  syntax:
+    content: public void Add(int minutes)
+    parameters:
+    - id: minutes
+      type: System.Int32
+      description: The minutes to add.
+    content.vb: Public Sub Add(minutes As Integer)
+  overload: Garyon.Objects.HourMinute.Add*
+  nameWithType.vb: HourMinute.Add(Integer)
+  fullName.vb: Garyon.Objects.HourMinute.Add(Integer)
+  name.vb: Add(Integer)
+- uid: Garyon.Objects.HourMinute.Add(System.Int32,System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.Add(System.Int32,System.Int32)
+  id: Add(System.Int32,System.Int32)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Add(int, int)
+  nameWithType: HourMinute.Add(int, int)
+  fullName: Garyon.Objects.HourMinute.Add(int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Add
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 102
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a number of minutes to the time of this instance.
+  example: []
+  syntax:
+    content: public void Add(int hours, int minutes)
+    parameters:
+    - id: hours
+      type: System.Int32
+      description: The hours to add.
+    - id: minutes
+      type: System.Int32
+      description: The minutes to add.
+    content.vb: Public Sub Add(hours As Integer, minutes As Integer)
+  overload: Garyon.Objects.HourMinute.Add*
+  nameWithType.vb: HourMinute.Add(Integer, Integer)
+  fullName.vb: Garyon.Objects.HourMinute.Add(Integer, Integer)
+  name.vb: Add(Integer, Integer)
+- uid: Garyon.Objects.HourMinute.Subtract(System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.Subtract(System.Int32)
+  id: Subtract(System.Int32)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Subtract(int)
+  nameWithType: HourMinute.Subtract(int)
+  fullName: Garyon.Objects.HourMinute.Subtract(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Subtract
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 109
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Subtracts a number of minutes from the time of this instance.
+  example: []
+  syntax:
+    content: public void Subtract(int minutes)
+    parameters:
+    - id: minutes
+      type: System.Int32
+      description: The minutes to subtract.
+    content.vb: Public Sub Subtract(minutes As Integer)
+  overload: Garyon.Objects.HourMinute.Subtract*
+  nameWithType.vb: HourMinute.Subtract(Integer)
+  fullName.vb: Garyon.Objects.HourMinute.Subtract(Integer)
+  name.vb: Subtract(Integer)
+- uid: Garyon.Objects.HourMinute.Subtract(System.Int32,System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.Subtract(System.Int32,System.Int32)
+  id: Subtract(System.Int32,System.Int32)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Subtract(int, int)
+  nameWithType: HourMinute.Subtract(int, int)
+  fullName: Garyon.Objects.HourMinute.Subtract(int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Subtract
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 119
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Subtracts a number of minutes from the time of this instance.
+  example: []
+  syntax:
+    content: public void Subtract(int hours, int minutes)
+    parameters:
+    - id: hours
+      type: System.Int32
+      description: The hours to subtract.
+    - id: minutes
+      type: System.Int32
+      description: The minutes to subtract.
+    content.vb: Public Sub Subtract(hours As Integer, minutes As Integer)
+  overload: Garyon.Objects.HourMinute.Subtract*
+  nameWithType.vb: HourMinute.Subtract(Integer, Integer)
+  fullName.vb: Garyon.Objects.HourMinute.Subtract(Integer, Integer)
+  name.vb: Subtract(Integer, Integer)
+- uid: Garyon.Objects.HourMinute.op_Addition(Garyon.Objects.HourMinute,System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.op_Addition(Garyon.Objects.HourMinute,System.Int32)
+  id: op_Addition(Garyon.Objects.HourMinute,System.Int32)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator +(HourMinute, int)
+  nameWithType: HourMinute.operator +(HourMinute, int)
+  fullName: Garyon.Objects.HourMinute.operator +(Garyon.Objects.HourMinute, int)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Addition
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 121
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static HourMinute operator +(HourMinute hm, int minutes)
+    parameters:
+    - id: hm
+      type: Garyon.Objects.HourMinute
+    - id: minutes
+      type: System.Int32
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Operator +(hm As HourMinute, minutes As Integer) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Addition*
+  nameWithType.vb: HourMinute.+(HourMinute, Integer)
+  fullName.vb: Garyon.Objects.HourMinute.+(Garyon.Objects.HourMinute, Integer)
+  name.vb: +(HourMinute, Integer)
+- uid: Garyon.Objects.HourMinute.op_Addition(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_Addition(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_Addition(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator +(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator +(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator +(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Addition
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 122
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static HourMinute operator +(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Operator +(left As HourMinute, right As HourMinute) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Addition*
+  nameWithType.vb: HourMinute.+(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.+(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: +(HourMinute, HourMinute)
+- uid: Garyon.Objects.HourMinute.op_Subtraction(Garyon.Objects.HourMinute,System.Int32)
+  commentId: M:Garyon.Objects.HourMinute.op_Subtraction(Garyon.Objects.HourMinute,System.Int32)
+  id: op_Subtraction(Garyon.Objects.HourMinute,System.Int32)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator -(HourMinute, int)
+  nameWithType: HourMinute.operator -(HourMinute, int)
+  fullName: Garyon.Objects.HourMinute.operator -(Garyon.Objects.HourMinute, int)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Subtraction
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 123
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static HourMinute operator -(HourMinute hm, int minutes)
+    parameters:
+    - id: hm
+      type: Garyon.Objects.HourMinute
+    - id: minutes
+      type: System.Int32
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Operator -(hm As HourMinute, minutes As Integer) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Subtraction*
+  nameWithType.vb: HourMinute.-(HourMinute, Integer)
+  fullName.vb: Garyon.Objects.HourMinute.-(Garyon.Objects.HourMinute, Integer)
+  name.vb: -(HourMinute, Integer)
+- uid: Garyon.Objects.HourMinute.op_Subtraction(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_Subtraction(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_Subtraction(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator -(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator -(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator -(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Subtraction
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 124
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static HourMinute operator -(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Operator -(left As HourMinute, right As HourMinute) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Subtraction*
+  nameWithType.vb: HourMinute.-(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.-(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: -(HourMinute, HourMinute)
+- uid: Garyon.Objects.HourMinute.op_LessThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_LessThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_LessThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator <(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator <(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator <(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_LessThan
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 126
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static bool operator <(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <(left As HourMinute, right As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.op_LessThan*
+  nameWithType.vb: HourMinute.<(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.<(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: <(HourMinute, HourMinute)
+- uid: Garyon.Objects.HourMinute.op_LessThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_LessThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_LessThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator <=(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator <=(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator <=(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_LessThanOrEqual
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 127
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static bool operator <=(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <=(left As HourMinute, right As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.op_LessThanOrEqual*
+  nameWithType.vb: HourMinute.<=(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.<=(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: <=(HourMinute, HourMinute)
+- uid: Garyon.Objects.HourMinute.op_Equality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_Equality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_Equality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator ==(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator ==(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator ==(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Equality
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 128
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static bool operator ==(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As HourMinute, right As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.op_Equality*
+  nameWithType.vb: HourMinute.=(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.=(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: =(HourMinute, HourMinute)
+- uid: Garyon.Objects.HourMinute.op_GreaterThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_GreaterThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_GreaterThanOrEqual(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator >=(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator >=(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator >=(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_GreaterThanOrEqual
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 129
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static bool operator >=(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >=(left As HourMinute, right As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.op_GreaterThanOrEqual*
+  nameWithType.vb: HourMinute.>=(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.>=(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: '>=(HourMinute, HourMinute)'
+- uid: Garyon.Objects.HourMinute.op_GreaterThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_GreaterThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_GreaterThan(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator >(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator >(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator >(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_GreaterThan
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 130
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static bool operator >(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >(left As HourMinute, right As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.op_GreaterThan*
+  nameWithType.vb: HourMinute.>(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.>(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: '>(HourMinute, HourMinute)'
+- uid: Garyon.Objects.HourMinute.op_Inequality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.op_Inequality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  id: op_Inequality(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: operator !=(HourMinute, HourMinute)
+  nameWithType: HourMinute.operator !=(HourMinute, HourMinute)
+  fullName: Garyon.Objects.HourMinute.operator !=(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Inequality
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 131
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static bool operator !=(HourMinute left, HourMinute right)
+    parameters:
+    - id: left
+      type: Garyon.Objects.HourMinute
+    - id: right
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As HourMinute, right As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.op_Inequality*
+  nameWithType.vb: HourMinute.<>(HourMinute, HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.<>(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: <>(HourMinute, HourMinute)
+- uid: Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.DateTimeOffset
+  commentId: M:Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.DateTimeOffset
+  id: op_Implicit(Garyon.Objects.HourMinute)~System.DateTimeOffset
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: implicit operator DateTimeOffset(HourMinute)
+  nameWithType: HourMinute.implicit operator DateTimeOffset(HourMinute)
+  fullName: Garyon.Objects.HourMinute.implicit operator System.DateTimeOffset(Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 133
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static implicit operator DateTimeOffset(HourMinute t)
+    parameters:
+    - id: t
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.DateTimeOffset
+    content.vb: Public Shared Widening Operator CType(t As HourMinute) As DateTimeOffset
+  overload: Garyon.Objects.HourMinute.op_Implicit*
+  nameWithType.vb: HourMinute.CType(HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.CType(Garyon.Objects.HourMinute)
+  name.vb: CType(HourMinute)
+- uid: Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.DateTime
+  commentId: M:Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.DateTime
+  id: op_Implicit(Garyon.Objects.HourMinute)~System.DateTime
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: implicit operator DateTime(HourMinute)
+  nameWithType: HourMinute.implicit operator DateTime(HourMinute)
+  fullName: Garyon.Objects.HourMinute.implicit operator System.DateTime(Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 134
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static implicit operator DateTime(HourMinute t)
+    parameters:
+    - id: t
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.DateTime
+    content.vb: Public Shared Widening Operator CType(t As HourMinute) As Date
+  overload: Garyon.Objects.HourMinute.op_Implicit*
+  nameWithType.vb: HourMinute.CType(HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.CType(Garyon.Objects.HourMinute)
+  name.vb: CType(HourMinute)
+- uid: Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.TimeSpan
+  commentId: M:Garyon.Objects.HourMinute.op_Implicit(Garyon.Objects.HourMinute)~System.TimeSpan
+  id: op_Implicit(Garyon.Objects.HourMinute)~System.TimeSpan
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: implicit operator TimeSpan(HourMinute)
+  nameWithType: HourMinute.implicit operator TimeSpan(HourMinute)
+  fullName: Garyon.Objects.HourMinute.implicit operator System.TimeSpan(Garyon.Objects.HourMinute)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 135
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static implicit operator TimeSpan(HourMinute t)
+    parameters:
+    - id: t
+      type: Garyon.Objects.HourMinute
+    return:
+      type: System.TimeSpan
+    content.vb: Public Shared Widening Operator CType(t As HourMinute) As TimeSpan
+  overload: Garyon.Objects.HourMinute.op_Implicit*
+  nameWithType.vb: HourMinute.CType(HourMinute)
+  fullName.vb: Garyon.Objects.HourMinute.CType(Garyon.Objects.HourMinute)
+  name.vb: CType(HourMinute)
+- uid: Garyon.Objects.HourMinute.op_Explicit(System.DateTimeOffset)~Garyon.Objects.HourMinute
+  commentId: M:Garyon.Objects.HourMinute.op_Explicit(System.DateTimeOffset)~Garyon.Objects.HourMinute
+  id: op_Explicit(System.DateTimeOffset)~Garyon.Objects.HourMinute
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: explicit operator HourMinute(DateTimeOffset)
+  nameWithType: HourMinute.explicit operator HourMinute(DateTimeOffset)
+  fullName: Garyon.Objects.HourMinute.explicit operator Garyon.Objects.HourMinute(System.DateTimeOffset)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Explicit
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 136
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static explicit operator HourMinute(DateTimeOffset t)
+    parameters:
+    - id: t
+      type: System.DateTimeOffset
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Narrowing Operator CType(t As DateTimeOffset) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Explicit*
+  nameWithType.vb: HourMinute.CType(DateTimeOffset)
+  fullName.vb: Garyon.Objects.HourMinute.CType(System.DateTimeOffset)
+  name.vb: CType(DateTimeOffset)
+- uid: Garyon.Objects.HourMinute.op_Explicit(System.DateTime)~Garyon.Objects.HourMinute
+  commentId: M:Garyon.Objects.HourMinute.op_Explicit(System.DateTime)~Garyon.Objects.HourMinute
+  id: op_Explicit(System.DateTime)~Garyon.Objects.HourMinute
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: explicit operator HourMinute(DateTime)
+  nameWithType: HourMinute.explicit operator HourMinute(DateTime)
+  fullName: Garyon.Objects.HourMinute.explicit operator Garyon.Objects.HourMinute(System.DateTime)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Explicit
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 137
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static explicit operator HourMinute(DateTime t)
+    parameters:
+    - id: t
+      type: System.DateTime
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Narrowing Operator CType(t As Date) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Explicit*
+  nameWithType.vb: HourMinute.CType(Date)
+  fullName.vb: Garyon.Objects.HourMinute.CType(Date)
+  name.vb: CType(Date)
+- uid: Garyon.Objects.HourMinute.op_Explicit(System.TimeSpan)~Garyon.Objects.HourMinute
+  commentId: M:Garyon.Objects.HourMinute.op_Explicit(System.TimeSpan)~Garyon.Objects.HourMinute
+  id: op_Explicit(System.TimeSpan)~Garyon.Objects.HourMinute
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: explicit operator HourMinute(TimeSpan)
+  nameWithType: HourMinute.explicit operator HourMinute(TimeSpan)
+  fullName: Garyon.Objects.HourMinute.explicit operator Garyon.Objects.HourMinute(System.TimeSpan)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Explicit
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 138
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static explicit operator HourMinute(TimeSpan t)
+    parameters:
+    - id: t
+      type: System.TimeSpan
+    return:
+      type: Garyon.Objects.HourMinute
+    content.vb: Public Shared Narrowing Operator CType(t As TimeSpan) As HourMinute
+  overload: Garyon.Objects.HourMinute.op_Explicit*
+  nameWithType.vb: HourMinute.CType(TimeSpan)
+  fullName.vb: Garyon.Objects.HourMinute.CType(System.TimeSpan)
+  name.vb: CType(TimeSpan)
+- uid: Garyon.Objects.HourMinute.Parse(System.String)
+  commentId: M:Garyon.Objects.HourMinute.Parse(System.String)
+  id: Parse(System.String)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: HourMinute.Parse(string)
+  fullName: Garyon.Objects.HourMinute.Parse(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Parse
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 152
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Parses the given string representation of an hour-minute time into a
+
+    <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public static HourMinute Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: >-
+        The string representation of an hour-minute of the form "HH:MM". The
+
+        string may contain additional numbers split with ":", which will be
+
+        ignored.
+    return:
+      type: Garyon.Objects.HourMinute
+      description: The parsed <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Parse(s As String) As HourMinute
+  overload: Garyon.Objects.HourMinute.Parse*
+  nameWithType.vb: HourMinute.Parse(String)
+  fullName.vb: Garyon.Objects.HourMinute.Parse(String)
+  name.vb: Parse(String)
+- uid: Garyon.Objects.HourMinute.Equals(Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Objects.HourMinute.Equals(Garyon.Objects.HourMinute)
+  id: Equals(Garyon.Objects.HourMinute)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Equals(HourMinute)
+  nameWithType: HourMinute.Equals(HourMinute)
+  fullName: Garyon.Objects.HourMinute.Equals(Garyon.Objects.HourMinute)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Equals
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 168
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Determines whether another <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> instance is
+
+    equal to this one.
+  example: []
+  syntax:
+    content: public bool Equals(HourMinute other)
+    parameters:
+    - id: other
+      type: Garyon.Objects.HourMinute
+      description: The other <xref href="Garyon.Objects.HourMinute" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: System.Boolean
+      description: A value determining whether both objects are equal or not.
+    content.vb: Public Function Equals(other As HourMinute) As Boolean
+  overload: Garyon.Objects.HourMinute.Equals*
+  implements:
+  - System.IEquatable{Garyon.Objects.HourMinute}.Equals(Garyon.Objects.HourMinute)
+- uid: Garyon.Objects.HourMinute.Equals(System.Object)
+  commentId: M:Garyon.Objects.HourMinute.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: HourMinute.Equals(object?)
+  fullName: Garyon.Objects.HourMinute.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Equals
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 169
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Garyon.Objects.HourMinute.Equals*
+  nameWithType.vb: HourMinute.Equals(Object)
+  fullName.vb: Garyon.Objects.HourMinute.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Garyon.Objects.HourMinute.GetHashCode
+  commentId: M:Garyon.Objects.HourMinute.GetHashCode
+  id: GetHashCode
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: HourMinute.GetHashCode()
+  fullName: Garyon.Objects.HourMinute.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetHashCode
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 170
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Garyon.Objects.HourMinute.GetHashCode*
+- uid: Garyon.Objects.HourMinute.ToString
+  commentId: M:Garyon.Objects.HourMinute.ToString
+  id: ToString
+  parent: Garyon.Objects.HourMinute
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: HourMinute.ToString()
+  fullName: Garyon.Objects.HourMinute.ToString()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/HourMinute.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToString
+    path: ../Garyon/Objects/HourMinute.cs
+    startLine: 177
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets the string representation of the hour-minute time.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The string representation of the hour-minute time in the form "HH:MM".
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Garyon.Objects.HourMinute.ToString*
+references:
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.IEquatable{Garyon.Objects.HourMinute}
+  commentId: T:System.IEquatable{Garyon.Objects.HourMinute}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<HourMinute>
+  nameWithType: IEquatable<HourMinute>
+  fullName: System.IEquatable<Garyon.Objects.HourMinute>
+  nameWithType.vb: IEquatable(Of HourMinute)
+  fullName.vb: System.IEquatable(Of Garyon.Objects.HourMinute)
+  name.vb: IEquatable(Of HourMinute)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: Garyon.Objects.IHasHour
+  commentId: T:Garyon.Objects.IHasHour
+  parent: Garyon.Objects
+  href: Garyon.Objects.IHasHour.html
+  name: IHasHour
+  nameWithType: IHasHour
+  fullName: Garyon.Objects.IHasHour
+- uid: Garyon.Objects.IHasMinute
+  commentId: T:Garyon.Objects.IHasMinute
+  parent: Garyon.Objects
+  href: Garyon.Objects.IHasMinute.html
+  name: IHasMinute
+  nameWithType: IHasMinute
+  fullName: Garyon.Objects.IHasMinute
+- uid: Garyon.Objects.ITimeObject
+  commentId: T:Garyon.Objects.ITimeObject
+  parent: Garyon.Objects
+  href: Garyon.Objects.ITimeObject.html
+  name: ITimeObject
+  nameWithType: ITimeObject
+  fullName: Garyon.Objects.ITimeObject
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<HourMinute>(HourMinute, HourMinute)
+  nameWithType: ComparisonExtensions.BeginCompare<HourMinute>(HourMinute, HourMinute)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.HourMinute>(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of HourMinute)(HourMinute, HourMinute)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.HourMinute)(Garyon.Objects.HourMinute, Garyon.Objects.HourMinute)
+  name.vb: BeginCompare(Of HourMinute)(HourMinute, HourMinute)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.HourMinute,Garyon.Objects.HourMinute)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<HourMinute, TValue>(HourMinute)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<HourMinute, TValue>(HourMinute)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.HourMinute, TValue>(Garyon.Objects.HourMinute)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of HourMinute, TValue)(HourMinute)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.HourMinute, TValue)(Garyon.Objects.HourMinute)
+  name.vb: GetEnumerator(Of HourMinute, TValue)(HourMinute)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.HourMinute)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.HourMinute)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.HourMinute})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<HourMinute>(HourMinute, Action<HourMinute>)
+  nameWithType: MoreLinqExtensions.Apply<HourMinute>(HourMinute, Action<HourMinute>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.HourMinute>(Garyon.Objects.HourMinute, System.Action<Garyon.Objects.HourMinute>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of HourMinute)(HourMinute, Action(Of HourMinute))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.HourMinute)(Garyon.Objects.HourMinute, System.Action(Of Garyon.Objects.HourMinute))
+  name.vb: Apply(Of HourMinute)(HourMinute, Action(Of HourMinute))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.HourMinute,System.Action{Garyon.Objects.HourMinute})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.HourMinute,System.Action{Garyon.Objects.HourMinute})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.HourMinute,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<HourMinute, TResult>(HourMinute, Func<HourMinute, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<HourMinute, TResult>(HourMinute, Func<HourMinute, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.HourMinute, TResult>(Garyon.Objects.HourMinute, System.Func<Garyon.Objects.HourMinute, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of HourMinute, TResult)(HourMinute, Func(Of HourMinute, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.HourMinute, TResult)(Garyon.Objects.HourMinute, System.Func(Of Garyon.Objects.HourMinute, TResult))
+  name.vb: Apply(Of HourMinute, TResult)(HourMinute, Func(Of HourMinute, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.HourMinute,System.Func{Garyon.Objects.HourMinute,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.HourMinute,System.Func{Garyon.Objects.HourMinute,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Extensions.UnsafeExtensions.GetBytes``1
+  commentId: M:Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  parent: Garyon.Extensions.UnsafeExtensions
+  definition: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  name: GetBytes<HourMinute>(ref HourMinute)
+  nameWithType: UnsafeExtensions.GetBytes<HourMinute>(ref HourMinute)
+  fullName: Garyon.Extensions.UnsafeExtensions.GetBytes<Garyon.Objects.HourMinute>(ref Garyon.Objects.HourMinute)
+  nameWithType.vb: UnsafeExtensions.GetBytes(Of HourMinute)(HourMinute)
+  fullName.vb: Garyon.Extensions.UnsafeExtensions.GetBytes(Of Garyon.Objects.HourMinute)(Garyon.Objects.HourMinute)
+  name.vb: GetBytes(Of HourMinute)(HourMinute)
+  spec.csharp:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(Garyon.Objects.HourMinute@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(Garyon.Objects.HourMinute@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<HourMinute>(HourMinute)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<HourMinute>(HourMinute)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.HourMinute>(Garyon.Objects.HourMinute)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of HourMinute)(HourMinute)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.HourMinute)(Garyon.Objects.HourMinute)
+  name.vb: EnumerateSingle(Of HourMinute)(HourMinute)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.HourMinute)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.HourMinute)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: Garyon.Objects.HourMinute.Garyon.Objects.StructRefHelperExtensions.CreateReference``1
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  parent: Garyon.Objects.StructRefHelperExtensions
+  definition: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference<HourMinute>(ref HourMinute)
+  nameWithType: StructRefHelperExtensions.CreateReference<HourMinute>(ref HourMinute)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<Garyon.Objects.HourMinute>(ref Garyon.Objects.HourMinute)
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of HourMinute)(HourMinute)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of Garyon.Objects.HourMinute)(Garyon.Objects.HourMinute)
+  name.vb: CreateReference(Of HourMinute)(HourMinute)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(Garyon.Objects.HourMinute@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: <
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(Garyon.Objects.HourMinute@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  commentId: M:Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  name: GetBytes<T>(ref T)
+  nameWithType: UnsafeExtensions.GetBytes<T>(ref T)
+  fullName: Garyon.Extensions.UnsafeExtensions.GetBytes<T>(ref T)
+  nameWithType.vb: UnsafeExtensions.GetBytes(Of T)(T)
+  fullName.vb: Garyon.Extensions.UnsafeExtensions.GetBytes(Of T)(T)
+  name.vb: GetBytes(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.UnsafeExtensions
+  commentId: T:Garyon.Extensions.UnsafeExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.UnsafeExtensions.html
+  name: UnsafeExtensions
+  nameWithType: UnsafeExtensions
+  fullName: Garyon.Extensions.UnsafeExtensions
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference<T>(ref T)
+  nameWithType: StructRefHelperExtensions.CreateReference<T>(ref T)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<T>(ref T)
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of T)(T)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of T)(T)
+  name.vb: CreateReference(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.StructRefHelperExtensions
+  commentId: T:Garyon.Objects.StructRefHelperExtensions
+  parent: Garyon.Objects
+  href: Garyon.Objects.StructRefHelperExtensions.html
+  name: StructRefHelperExtensions
+  nameWithType: StructRefHelperExtensions
+  fullName: Garyon.Objects.StructRefHelperExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects.HourMinute
+  commentId: T:Garyon.Objects.HourMinute
+  parent: Garyon.Objects
+  href: Garyon.Objects.HourMinute.html
+  name: HourMinute
+  nameWithType: HourMinute
+  fullName: Garyon.Objects.HourMinute
+- uid: Garyon.Objects.HourMinute.Now*
+  commentId: Overload:Garyon.Objects.HourMinute.Now
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Now
+  name: Now
+  nameWithType: HourMinute.Now
+  fullName: Garyon.Objects.HourMinute.Now
+- uid: Garyon.Objects.HourMinute.NextMinute*
+  commentId: Overload:Garyon.Objects.HourMinute.NextMinute
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_NextMinute
+  name: NextMinute
+  nameWithType: HourMinute.NextMinute
+  fullName: Garyon.Objects.HourMinute.NextMinute
+- uid: Garyon.Objects.HourMinute.NextHour*
+  commentId: Overload:Garyon.Objects.HourMinute.NextHour
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_NextHour
+  name: NextHour
+  nameWithType: HourMinute.NextHour
+  fullName: Garyon.Objects.HourMinute.NextHour
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Garyon.Objects.HourMinute.TotalHours*
+  commentId: Overload:Garyon.Objects.HourMinute.TotalHours
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_TotalHours
+  name: TotalHours
+  nameWithType: HourMinute.TotalHours
+  fullName: Garyon.Objects.HourMinute.TotalHours
+- uid: Garyon.Objects.HourMinute.TotalMinutes*
+  commentId: Overload:Garyon.Objects.HourMinute.TotalMinutes
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_TotalMinutes
+  name: TotalMinutes
+  nameWithType: HourMinute.TotalMinutes
+  fullName: Garyon.Objects.HourMinute.TotalMinutes
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Objects.HourMinute.TotalSeconds*
+  commentId: Overload:Garyon.Objects.HourMinute.TotalSeconds
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_TotalSeconds
+  name: TotalSeconds
+  nameWithType: HourMinute.TotalSeconds
+  fullName: Garyon.Objects.HourMinute.TotalSeconds
+- uid: Garyon.Objects.HourMinute.Hour*
+  commentId: Overload:Garyon.Objects.HourMinute.Hour
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Hour
+  name: Hour
+  nameWithType: HourMinute.Hour
+  fullName: Garyon.Objects.HourMinute.Hour
+- uid: Garyon.Objects.IHasHour.Hour
+  commentId: P:Garyon.Objects.IHasHour.Hour
+  parent: Garyon.Objects.IHasHour
+  href: Garyon.Objects.IHasHour.html#Garyon_Objects_IHasHour_Hour
+  name: Hour
+  nameWithType: IHasHour.Hour
+  fullName: Garyon.Objects.IHasHour.Hour
+- uid: Garyon.Objects.HourMinute.Minute*
+  commentId: Overload:Garyon.Objects.HourMinute.Minute
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Minute
+  name: Minute
+  nameWithType: HourMinute.Minute
+  fullName: Garyon.Objects.HourMinute.Minute
+- uid: Garyon.Objects.IHasMinute.Minute
+  commentId: P:Garyon.Objects.IHasMinute.Minute
+  parent: Garyon.Objects.IHasMinute
+  href: Garyon.Objects.IHasMinute.html#Garyon_Objects_IHasMinute_Minute
+  name: Minute
+  nameWithType: IHasMinute.Minute
+  fullName: Garyon.Objects.IHasMinute.Minute
+- uid: Garyon.Objects.HourMinute.#ctor*
+  commentId: Overload:Garyon.Objects.HourMinute.#ctor
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute__ctor_System_Int32_
+  name: HourMinute
+  nameWithType: HourMinute.HourMinute
+  fullName: Garyon.Objects.HourMinute.HourMinute
+  nameWithType.vb: HourMinute.New
+  fullName.vb: Garyon.Objects.HourMinute.New
+  name.vb: New
+- uid: Garyon.Objects.HourMinute.Add*
+  commentId: Overload:Garyon.Objects.HourMinute.Add
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Add_System_Int32_
+  name: Add
+  nameWithType: HourMinute.Add
+  fullName: Garyon.Objects.HourMinute.Add
+- uid: Garyon.Objects.HourMinute.Subtract*
+  commentId: Overload:Garyon.Objects.HourMinute.Subtract
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Subtract_System_Int32_
+  name: Subtract
+  nameWithType: HourMinute.Subtract
+  fullName: Garyon.Objects.HourMinute.Subtract
+- uid: Garyon.Objects.HourMinute.op_Addition*
+  commentId: Overload:Garyon.Objects.HourMinute.op_Addition
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Addition_Garyon_Objects_HourMinute_System_Int32_
+  name: operator +
+  nameWithType: HourMinute.operator +
+  fullName: Garyon.Objects.HourMinute.operator +
+  nameWithType.vb: HourMinute.+
+  fullName.vb: Garyon.Objects.HourMinute.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_Addition*
+    name: +
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Addition_Garyon_Objects_HourMinute_System_Int32_
+- uid: Garyon.Objects.HourMinute.op_Subtraction*
+  commentId: Overload:Garyon.Objects.HourMinute.op_Subtraction
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Subtraction_Garyon_Objects_HourMinute_System_Int32_
+  name: operator -
+  nameWithType: HourMinute.operator -
+  fullName: Garyon.Objects.HourMinute.operator -
+  nameWithType.vb: HourMinute.-
+  fullName.vb: Garyon.Objects.HourMinute.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_Subtraction*
+    name: '-'
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Subtraction_Garyon_Objects_HourMinute_System_Int32_
+- uid: Garyon.Objects.HourMinute.op_LessThan*
+  commentId: Overload:Garyon.Objects.HourMinute.op_LessThan
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_LessThan_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+  name: operator <
+  nameWithType: HourMinute.operator <
+  fullName: Garyon.Objects.HourMinute.operator <
+  nameWithType.vb: HourMinute.<
+  fullName.vb: Garyon.Objects.HourMinute.<
+  name.vb: <
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_LessThan*
+    name: <
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_LessThan_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Objects.HourMinute.op_LessThanOrEqual*
+  commentId: Overload:Garyon.Objects.HourMinute.op_LessThanOrEqual
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_LessThanOrEqual_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+  name: operator <=
+  nameWithType: HourMinute.operator <=
+  fullName: Garyon.Objects.HourMinute.operator <=
+  nameWithType.vb: HourMinute.<=
+  fullName.vb: Garyon.Objects.HourMinute.<=
+  name.vb: <=
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_LessThanOrEqual*
+    name: <=
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_LessThanOrEqual_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+- uid: Garyon.Objects.HourMinute.op_Equality*
+  commentId: Overload:Garyon.Objects.HourMinute.op_Equality
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Equality_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+  name: operator ==
+  nameWithType: HourMinute.operator ==
+  fullName: Garyon.Objects.HourMinute.operator ==
+  nameWithType.vb: HourMinute.=
+  fullName.vb: Garyon.Objects.HourMinute.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_Equality*
+    name: ==
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Equality_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+- uid: Garyon.Objects.HourMinute.op_GreaterThanOrEqual*
+  commentId: Overload:Garyon.Objects.HourMinute.op_GreaterThanOrEqual
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_GreaterThanOrEqual_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+  name: operator >=
+  nameWithType: HourMinute.operator >=
+  fullName: Garyon.Objects.HourMinute.operator >=
+  nameWithType.vb: HourMinute.>=
+  fullName.vb: Garyon.Objects.HourMinute.>=
+  name.vb: '>='
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_GreaterThanOrEqual*
+    name: '>='
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_GreaterThanOrEqual_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+- uid: Garyon.Objects.HourMinute.op_GreaterThan*
+  commentId: Overload:Garyon.Objects.HourMinute.op_GreaterThan
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_GreaterThan_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+  name: operator >
+  nameWithType: HourMinute.operator >
+  fullName: Garyon.Objects.HourMinute.operator >
+  nameWithType.vb: HourMinute.>
+  fullName.vb: Garyon.Objects.HourMinute.>
+  name.vb: '>'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_GreaterThan*
+    name: '>'
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_GreaterThan_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+- uid: Garyon.Objects.HourMinute.op_Inequality*
+  commentId: Overload:Garyon.Objects.HourMinute.op_Inequality
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Inequality_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+  name: operator !=
+  nameWithType: HourMinute.operator !=
+  fullName: Garyon.Objects.HourMinute.operator !=
+  nameWithType.vb: HourMinute.<>
+  fullName.vb: Garyon.Objects.HourMinute.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Garyon.Objects.HourMinute.op_Inequality*
+    name: '!='
+    href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_op_Inequality_Garyon_Objects_HourMinute_Garyon_Objects_HourMinute_
+- uid: Garyon.Objects.HourMinute.op_Implicit*
+  commentId: Overload:Garyon.Objects.HourMinute.op_Implicit
+  name: implicit operator
+  nameWithType: HourMinute.implicit operator
+  fullName: Garyon.Objects.HourMinute.implicit operator
+  nameWithType.vb: HourMinute.CType
+  fullName.vb: Garyon.Objects.HourMinute.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Garyon.Objects.HourMinute.op_Explicit*
+  commentId: Overload:Garyon.Objects.HourMinute.op_Explicit
+  name: explicit operator
+  nameWithType: HourMinute.explicit operator
+  fullName: Garyon.Objects.HourMinute.explicit operator
+  nameWithType.vb: HourMinute.CType
+  fullName.vb: Garyon.Objects.HourMinute.CType
+  name.vb: CType
+  spec.csharp:
+  - name: explicit
+  - name: " "
+  - name: operator
+- uid: Garyon.Objects.HourMinute.Parse*
+  commentId: Overload:Garyon.Objects.HourMinute.Parse
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Parse_System_String_
+  name: Parse
+  nameWithType: HourMinute.Parse
+  fullName: Garyon.Objects.HourMinute.Parse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Objects.HourMinute.Equals*
+  commentId: Overload:Garyon.Objects.HourMinute.Equals
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_Equals_Garyon_Objects_HourMinute_
+  name: Equals
+  nameWithType: HourMinute.Equals
+  fullName: Garyon.Objects.HourMinute.Equals
+- uid: System.IEquatable{Garyon.Objects.HourMinute}.Equals(Garyon.Objects.HourMinute)
+  commentId: M:System.IEquatable{Garyon.Objects.HourMinute}.Equals(Garyon.Objects.HourMinute)
+  parent: System.IEquatable{Garyon.Objects.HourMinute}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(HourMinute)
+  nameWithType: IEquatable<HourMinute>.Equals(HourMinute)
+  fullName: System.IEquatable<Garyon.Objects.HourMinute>.Equals(Garyon.Objects.HourMinute)
+  nameWithType.vb: IEquatable(Of HourMinute).Equals(HourMinute)
+  fullName.vb: System.IEquatable(Of Garyon.Objects.HourMinute).Equals(Garyon.Objects.HourMinute)
+  spec.csharp:
+  - uid: System.IEquatable{Garyon.Objects.HourMinute}.Equals(Garyon.Objects.HourMinute)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Garyon.Objects.HourMinute}.Equals(Garyon.Objects.HourMinute)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Garyon.Objects.HourMinute
+    name: HourMinute
+    href: Garyon.Objects.HourMinute.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Garyon.Objects.HourMinute.GetHashCode*
+  commentId: Overload:Garyon.Objects.HourMinute.GetHashCode
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_GetHashCode
+  name: GetHashCode
+  nameWithType: HourMinute.GetHashCode
+  fullName: Garyon.Objects.HourMinute.GetHashCode
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Objects.HourMinute.ToString*
+  commentId: Overload:Garyon.Objects.HourMinute.ToString
+  href: Garyon.Objects.HourMinute.html#Garyon_Objects_HourMinute_ToString
+  name: ToString
+  nameWithType: HourMinute.ToString
+  fullName: Garyon.Objects.HourMinute.ToString

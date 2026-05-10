@@ -1,0 +1,2342 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  id: MoreLinqExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.MoreLinqExtensions.AnyDeep``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  - Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  - Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  - Garyon.Extensions.MoreLinqExtensions.CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32,System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  - Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action{``0},System.Action{``0})
+  - Garyon.Extensions.MoreLinqExtensions.NotNullCount``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.MoreLinqExtensions.NullCount``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.MoreLinqExtensions.SelectOrDefault``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  - Garyon.Extensions.MoreLinqExtensions.ToListDictionary``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  - Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  - Garyon.Extensions.MoreLinqExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.MoreLinqExtensions.WhereNot``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  - Garyon.Extensions.MoreLinqExtensions.WhereOrSource``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  - Garyon.Extensions.MoreLinqExtensions.WherePredicate``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+  - Garyon.Extensions.MoreLinqExtensions.Zip``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})
+  langs:
+  - csharp
+  - vb
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoreLinqExtensions
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 12
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Provides more LINQ-like extensions that are not that likely to be considered
+
+    candidates for being imported into System.Linq.
+  example: []
+  syntax:
+    content: public static class MoreLinqExtensions
+    content.vb: Public Module MoreLinqExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.MoreLinqExtensions.WherePredicate``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.WherePredicate``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+  id: WherePredicate``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: WherePredicate<T>(IEnumerable<T>, Predicate<T>)
+  nameWithType: MoreLinqExtensions.WherePredicate<T>(IEnumerable<T>, Predicate<T>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.WherePredicate<T>(System.Collections.Generic.IEnumerable<T>, System.Predicate<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WherePredicate
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 15
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Filters a sequence of values based on a predicate.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> WherePredicate<T>(this IEnumerable<T> source, Predicate<T> predicate)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to filter.
+    - id: predicate
+      type: System.Predicate{{T}}
+      description: A function to test each element for a condition.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains elements from the input sequence that satisfy the condition.
+    content.vb: Public Shared Function WherePredicate(Of T)(source As IEnumerable(Of T), predicate As Predicate(Of T)) As IEnumerable(Of T)
+  overload: Garyon.Extensions.MoreLinqExtensions.WherePredicate*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code class="paramref">source</code> or <code class="paramref">predicate</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: MoreLinqExtensions.WherePredicate(Of T)(IEnumerable(Of T), Predicate(Of T))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.WherePredicate(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Predicate(Of T))
+  name.vb: WherePredicate(Of T)(IEnumerable(Of T), Predicate(Of T))
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereOrSource``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.WhereOrSource``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  id: WhereOrSource``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereOrSource<T>(IEnumerable<T>, Func<T, bool>?)
+  nameWithType: MoreLinqExtensions.WhereOrSource<T>(IEnumerable<T>, Func<T, bool>?)
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereOrSource<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, bool>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WhereOrSource
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 21
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Filters out the contents of the enumerable, if a predicate is provided.
+
+    Otherwise, returns the source enumerable as-is.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> WhereOrSource<T>(this IEnumerable<T> source, Func<T, bool>? predicate)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function WhereOrSource(Of T)(source As IEnumerable(Of T), predicate As Func(Of T, Boolean)) As IEnumerable(Of T)
+  overload: Garyon.Extensions.MoreLinqExtensions.WhereOrSource*
+  nameWithType.vb: MoreLinqExtensions.WhereOrSource(Of T)(IEnumerable(Of T), Func(Of T, Boolean))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.WhereOrSource(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Boolean))
+  name.vb: WhereOrSource(Of T)(IEnumerable(Of T), Func(Of T, Boolean))
+- uid: Garyon.Extensions.MoreLinqExtensions.SelectOrDefault``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.SelectOrDefault``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  id: SelectOrDefault``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectOrDefault<TSource, TResult>(IEnumerable<TSource>, Func<TSource, TResult>?)
+  nameWithType: MoreLinqExtensions.SelectOrDefault<TSource, TResult>(IEnumerable<TSource>, Func<TSource, TResult>?)
+  fullName: Garyon.Extensions.MoreLinqExtensions.SelectOrDefault<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TResult>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SelectOrDefault
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 31
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Selects the enumerable's items based on a selector. If the selector is
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> enumerable is returned
+
+    instead.
+  example: []
+  syntax:
+    content: public static IEnumerable<TResult>? SelectOrDefault<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult>? selector)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{TSource}}
+    - id: selector
+      type: System.Func{{TSource},{TResult}}
+    typeParameters:
+    - id: TSource
+    - id: TResult
+    return:
+      type: System.Collections.Generic.IEnumerable{{TResult}}
+    content.vb: Public Shared Function SelectOrDefault(Of TSource, TResult)(source As IEnumerable(Of TSource), selector As Func(Of TSource, TResult)) As IEnumerable(Of TResult)
+  overload: Garyon.Extensions.MoreLinqExtensions.SelectOrDefault*
+  nameWithType.vb: MoreLinqExtensions.SelectOrDefault(Of TSource, TResult)(IEnumerable(Of TSource), Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.SelectOrDefault(Of TSource, TResult)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TSource, TResult))
+  name.vb: SelectOrDefault(Of TSource, TResult)(IEnumerable(Of TSource), Func(Of TSource, TResult))
+- uid: Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault``1(System.Collections.Generic.IEnumerable{``0})
+  id: OnlyOrDefault``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: OnlyOrDefault<T>(IEnumerable<T>?)
+  nameWithType: MoreLinqExtensions.OnlyOrDefault<T>(IEnumerable<T>?)
+  fullName: Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OnlyOrDefault
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 51
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the only element of the sequence, if it only has one element,
+
+    otherwise returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>.
+  example: []
+  syntax:
+    content: public static T? OnlyOrDefault<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source sequence.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the sequence.
+    return:
+      type: '{T}'
+      description: The only element of the sequence, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>.
+    content.vb: Public Shared Function OnlyOrDefault(Of T)(source As IEnumerable(Of T)) As T
+  overload: Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault*
+  nameWithType.vb: MoreLinqExtensions.OnlyOrDefault(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: OnlyOrDefault(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.MoreLinqExtensions.AnyDeep``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.AnyDeep``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  id: AnyDeep``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: AnyDeep<T>(IEnumerable<IEnumerable<T>>)
+  nameWithType: MoreLinqExtensions.AnyDeep<T>(IEnumerable<IEnumerable<T>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.AnyDeep<T>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyDeep
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 86
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are any elements contained in any sequence of
+
+    the sequences that are provided.
+  example: []
+  syntax:
+    content: public static bool AnyDeep<T>(this IEnumerable<IEnumerable<T>> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+      description: >-
+        The sequence of sequences to analyze on whether any elements are
+
+        contained.
+    typeParameters:
+    - id: T
+      description: The type of elements stored in the sequences.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if there is at least one element in any of the
+
+        sequences, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function AnyDeep(Of T)(source As IEnumerable(Of IEnumerable(Of T))) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.AnyDeep*
+  nameWithType.vb: MoreLinqExtensions.AnyDeep(Of T)(IEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.AnyDeep(Of T)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: AnyDeep(Of T)(IEnumerable(Of IEnumerable(Of T)))
+- uid: Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action{``0},System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action{``0},System.Action{``0})
+  id: EnumeratePerformAction``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action{``0},System.Action{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnumeratePerformAction<T>(IEnumerable<T>, Action<T>?, Action<T>?, Action<T>)
+  nameWithType: MoreLinqExtensions.EnumeratePerformAction<T>(IEnumerable<T>, Action<T>?, Action<T>?, Action<T>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>?, System.Action<T>?, System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnumeratePerformAction
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 121
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Performs an action for each element in a collection, while also
+
+    performing an additional specified action for the first and the last
+
+    elements.
+  example: []
+  syntax:
+    content: public static bool EnumeratePerformAction<T>(this IEnumerable<T> source, Action<T>? firstElementAction, Action<T>? lastElementAction, Action<T> enumerationAction)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source collection whose elements to perform the actions on. If the
+
+        collection is empty, no action will be taken.
+    - id: firstElementAction
+      type: System.Action{{T}}
+      description: The action to perform on the first element.
+    - id: lastElementAction
+      type: System.Action{{T}}
+      description: The action to perform on the last element.
+    - id: enumerationAction
+      type: System.Action{{T}}
+      description: >-
+        The action to perform on all enumerated elements. This is also applied
+
+        to the first and the last elements.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the collection.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">source</code> contained at least
+
+        one element and actions were performed, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function EnumeratePerformAction(Of T)(source As IEnumerable(Of T), firstElementAction As Action(Of T), lastElementAction As Action(Of T), enumerationAction As Action(Of T)) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction*
+  nameWithType.vb: MoreLinqExtensions.EnumeratePerformAction(Of T)(IEnumerable(Of T), Action(Of T), Action(Of T), Action(Of T))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T), System.Action(Of T), System.Action(Of T))
+  name.vb: EnumeratePerformAction(Of T)(IEnumerable(Of T), Action(Of T), Action(Of T), Action(Of T))
+- uid: Garyon.Extensions.MoreLinqExtensions.CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  id: CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountAtLeast<T>(IEnumerable<T>, int)
+  nameWithType: MoreLinqExtensions.CountAtLeast<T>(IEnumerable<T>, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountAtLeast<T>(System.Collections.Generic.IEnumerable<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountAtLeast
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 159
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are at least a specified number of occurrences
+
+    of elements in an enumerable.
+  example: []
+  syntax:
+    content: public static bool CountAtLeast<T>(this IEnumerable<T> source, int minCount)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: minCount
+      type: System.Int32
+      description: The minimum number of elements that must exist in the enumerable.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains at least
+
+        <code class="paramref">minCount</code> elements, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountAtLeast(Of T)(source As IEnumerable(Of T), minCount As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountAtLeast*
+  nameWithType.vb: MoreLinqExtensions.CountAtLeast(Of T)(IEnumerable(Of T), Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountAtLeast(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer)
+  name.vb: CountAtLeast(Of T)(IEnumerable(Of T), Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  id: CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountAtMost<T>(IEnumerable<T>, int)
+  nameWithType: MoreLinqExtensions.CountAtMost<T>(IEnumerable<T>, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountAtMost<T>(System.Collections.Generic.IEnumerable<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountAtMost
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 175
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are at most a specified number of occurrences
+
+    of elements in an enumerable.
+  example: []
+  syntax:
+    content: public static bool CountAtMost<T>(this IEnumerable<T> source, int maxCount)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: maxCount
+      type: System.Int32
+      description: The maximum number of elements that must exist in the enumerable.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains at most
+
+        <code class="paramref">maxCount</code> elements, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountAtMost(Of T)(source As IEnumerable(Of T), maxCount As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountAtMost*
+  nameWithType.vb: MoreLinqExtensions.CountAtMost(Of T)(IEnumerable(Of T), Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountAtMost(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer)
+  name.vb: CountAtMost(Of T)(IEnumerable(Of T), Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  id: CountAtLeast``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountAtLeast<T>(IEnumerable<T>, Func<T, bool>, int)
+  nameWithType: MoreLinqExtensions.CountAtLeast<T>(IEnumerable<T>, Func<T, bool>, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountAtLeast<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, bool>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountAtLeast
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 201
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are at least a specified number of occurrences
+
+    of elements meeting a condition in a collection.
+  example: []
+  syntax:
+    content: public static bool CountAtLeast<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source collection whose elements to compare against the condition.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: The condition that the elements must meet.
+    - id: occurrences
+      type: System.Int32
+      description: The minimum number of elements that must meet the condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the collection.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains at least
+
+        <code class="paramref">occurrences</code> elements that meet the given condition,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountAtLeast(Of T)(source As IEnumerable(Of T), predicate As Func(Of T, Boolean), occurrences As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountAtLeast*
+  nameWithType.vb: MoreLinqExtensions.CountAtLeast(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountAtLeast(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Boolean), Integer)
+  name.vb: CountAtLeast(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  id: CountAtMost``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountAtMost<T>(IEnumerable<T>, Func<T, bool>, int)
+  nameWithType: MoreLinqExtensions.CountAtMost<T>(IEnumerable<T>, Func<T, bool>, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountAtMost<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, bool>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountAtMost
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 227
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are at most a specified number of occurrences
+
+    of elements meeting a condition in a collection.
+  example: []
+  syntax:
+    content: public static bool CountAtMost<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source collection whose elements to compare against the condition.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: The condition that the elements must meet.
+    - id: occurrences
+      type: System.Int32
+      description: The minimum number of elements that must meet the condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the collection.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains at least
+
+        <code class="paramref">occurrences</code> elements that meet the given condition,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountAtMost(Of T)(source As IEnumerable(Of T), predicate As Func(Of T, Boolean), occurrences As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountAtMost*
+  nameWithType.vb: MoreLinqExtensions.CountAtMost(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountAtMost(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Boolean), Integer)
+  name.vb: CountAtMost(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  id: CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountExactly<T>(IEnumerable<T>, int)
+  nameWithType: MoreLinqExtensions.CountExactly<T>(IEnumerable<T>, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountExactly<T>(System.Collections.Generic.IEnumerable<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountExactly
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 243
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are exactly a specified number of occurrences
+
+    of elements in an enumerable.
+  example: []
+  syntax:
+    content: public static bool CountExactly<T>(this IEnumerable<T> source, int count)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: count
+      type: System.Int32
+      description: The exact number of elements that must exist in the enumerable.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains exactly
+
+        <code class="paramref">count</code> elements, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountExactly(Of T)(source As IEnumerable(Of T), count As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountExactly*
+  nameWithType.vb: MoreLinqExtensions.CountExactly(Of T)(IEnumerable(Of T), Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountExactly(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer)
+  name.vb: CountExactly(Of T)(IEnumerable(Of T), Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  id: CountExactly``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountExactly<T>(IEnumerable<T>, Func<T, bool>, int)
+  nameWithType: MoreLinqExtensions.CountExactly<T>(IEnumerable<T>, Func<T, bool>, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountExactly<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, bool>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountExactly
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 283
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are exactly a specified number of occurrences
+
+    of elements meeting a condition in a collection.
+  example: []
+  syntax:
+    content: public static bool CountExactly<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source collection whose elements to compare against the condition.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: The condition that the elements must meet.
+    - id: occurrences
+      type: System.Int32
+      description: The exact number of elements that must meet the given condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the collection.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains exactly
+
+        <code class="paramref">occurrences</code> elements that meet the given condition,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountExactly(Of T)(source As IEnumerable(Of T), predicate As Func(Of T, Boolean), occurrences As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountExactly*
+  nameWithType.vb: MoreLinqExtensions.CountExactly(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountExactly(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Boolean), Integer)
+  name.vb: CountExactly(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)
+  id: CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountBetween<T>(IEnumerable<T>, int, int)
+  nameWithType: MoreLinqExtensions.CountBetween<T>(IEnumerable<T>, int, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountBetween<T>(System.Collections.Generic.IEnumerable<T>, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountBetween
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 303
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are between a specified range (inclusive) of
+
+    occurrences of elements in an enumerable.
+  example: []
+  syntax:
+    content: public static bool CountBetween<T>(this IEnumerable<T> source, int minCount, int maxCount)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: minCount
+      type: System.Int32
+      description: The minimum number of elements that must exist in the enumerable.
+    - id: maxCount
+      type: System.Int32
+      description: The maximum number of elements that may exist in the enumerable.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains between
+
+        <code class="paramref">minCount</code> and <code class="paramref">maxCount</code> (inclusive)
+
+        elements, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountBetween(Of T)(source As IEnumerable(Of T), minCount As Integer, maxCount As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountBetween*
+  nameWithType.vb: MoreLinqExtensions.CountBetween(Of T)(IEnumerable(Of T), Integer, Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountBetween(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer, Integer)
+  name.vb: CountBetween(Of T)(IEnumerable(Of T), Integer, Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32,System.Int32)
+  id: CountBetween``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: CountBetween<T>(IEnumerable<T>, Func<T, bool>, int, int)
+  nameWithType: MoreLinqExtensions.CountBetween<T>(IEnumerable<T>, Func<T, bool>, int, int)
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountBetween<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, bool>, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CountBetween
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 351
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether there are between a specified range (inclusive) of
+
+    occurrences of elements meeting a condition in a collection.
+  example: []
+  syntax:
+    content: public static bool CountBetween<T>(this IEnumerable<T> source, Func<T, bool> predicate, int minOccurrences, int maxOccurrences)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source collection whose elements to compare against the condition.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: The condition that the elements must meet.
+    - id: minOccurrences
+      type: System.Int32
+      description: The minimum number of elements that must meet the given condition.
+    - id: maxOccurrences
+      type: System.Int32
+      description: The maximum number of elements that may meet the given condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the collection.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the provided collection contains between
+
+        <code class="paramref">minOccurrences</code> and <code class="paramref">maxOccurrences</code>
+
+        (inclusive) elements that meet the given condition, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CountBetween(Of T)(source As IEnumerable(Of T), predicate As Func(Of T, Boolean), minOccurrences As Integer, maxOccurrences As Integer) As Boolean
+  overload: Garyon.Extensions.MoreLinqExtensions.CountBetween*
+  nameWithType.vb: MoreLinqExtensions.CountBetween(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer, Integer)
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.CountBetween(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Boolean), Integer, Integer)
+  name.vb: CountBetween(Of T)(IEnumerable(Of T), Func(Of T, Boolean), Integer, Integer)
+- uid: Garyon.Extensions.MoreLinqExtensions.NotNullCount``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.NotNullCount``1(System.Collections.Generic.IEnumerable{``0})
+  id: NotNullCount``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: NotNullCount<T>(IEnumerable<T>)
+  nameWithType: MoreLinqExtensions.NotNullCount<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.NotNullCount<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NotNullCount
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 368
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the count of elements that are not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  example: []
+  syntax:
+    content: public static int NotNullCount<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> whose elements to iterate.
+    typeParameters:
+    - id: T
+      description: The type of the elements stored in the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: The total number of elements that are not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Shared Function NotNullCount(Of T)(source As IEnumerable(Of T)) As Integer
+  overload: Garyon.Extensions.MoreLinqExtensions.NotNullCount*
+  nameWithType.vb: MoreLinqExtensions.NotNullCount(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.NotNullCount(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: NotNullCount(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.MoreLinqExtensions.NullCount``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.NullCount``1(System.Collections.Generic.IEnumerable{``0})
+  id: NullCount``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: NullCount<T>(IEnumerable<T>)
+  nameWithType: MoreLinqExtensions.NullCount<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.NullCount<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NullCount
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 384
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the count of elements that are not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  example: []
+  syntax:
+    content: public static int NullCount<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> whose elements to iterate.
+    typeParameters:
+    - id: T
+      description: The type of the elements stored in the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: The total number of elements that are not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Shared Function NullCount(Of T)(source As IEnumerable(Of T)) As Integer
+  overload: Garyon.Extensions.MoreLinqExtensions.NullCount*
+  nameWithType.vb: MoreLinqExtensions.NullCount(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.NullCount(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: NullCount(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  id: WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereNotNull<T>(IEnumerable<T?>)
+  nameWithType: MoreLinqExtensions.WhereNotNull<T>(IEnumerable<T?>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereNotNull<T>(System.Collections.Generic.IEnumerable<T?>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WhereNotNull
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 391
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Filters the items and returns only those that are not null.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T?> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function WhereNotNull(Of T)(source As IEnumerable(Of T)) As IEnumerable(Of T)
+  overload: Garyon.Extensions.MoreLinqExtensions.WhereNotNull*
+  nameWithType.vb: MoreLinqExtensions.WhereNotNull(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.WhereNotNull(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: WhereNotNull(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereNot``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.WhereNot``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  id: WhereNot``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereNot<T>(IEnumerable<T>, Func<T, bool>)
+  nameWithType: MoreLinqExtensions.WhereNot<T>(IEnumerable<T>, Func<T, bool>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereNot<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WhereNot
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 407
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Checks all elements against a predicate and returns only those elements
+
+    that do NOT meet the condition.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> WhereNot<T>(this IEnumerable<T> source, Func<T, bool> predicate)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The sequence of elements to filter.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: >-
+        A function to test each element for a condition. Elements for which this
+
+        function returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> are included in the result.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function WhereNot(Of T)(source As IEnumerable(Of T), predicate As Func(Of T, Boolean)) As IEnumerable(Of T)
+  overload: Garyon.Extensions.MoreLinqExtensions.WhereNot*
+  nameWithType.vb: MoreLinqExtensions.WhereNot(Of T)(IEnumerable(Of T), Func(Of T, Boolean))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.WhereNot(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, Boolean))
+  name.vb: WhereNot(Of T)(IEnumerable(Of T), Func(Of T, Boolean))
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  id: Apply``2(``0,System.Func{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Apply
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 431
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Applies a function to the given value and returns the result.
+  example: []
+  syntax:
+    content: public static TResult Apply<TSource, TResult>(this TSource source, Func<TSource, TResult> function)
+    parameters:
+    - id: source
+      type: '{TSource}'
+      description: The source value.
+    - id: function
+      type: System.Func{{TSource},{TResult}}
+      description: The function to apply to the source value.
+    typeParameters:
+    - id: TSource
+      description: The type of the source value.
+    - id: TResult
+      description: The type of the result value.
+    return:
+      type: '{TResult}'
+      description: >-
+        The resulting value after applying <code class="paramref">function</code> to
+
+        <code class="paramref">source</code>.
+    content.vb: Public Shared Function Apply(Of TSource, TResult)(source As TSource, [function] As Func(Of TSource, TResult)) As TResult
+  overload: Garyon.Extensions.MoreLinqExtensions.Apply*
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  id: Apply``1(``0,System.Action{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Apply
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 451
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Applies a function to the given value and returns the same value.
+  example: []
+  syntax:
+    content: public static TSource Apply<TSource>(this TSource source, Action<TSource> function)
+    parameters:
+    - id: source
+      type: '{TSource}'
+      description: The source value.
+    - id: function
+      type: System.Action{{TSource}}
+      description: The function to apply to the source value.
+    typeParameters:
+    - id: TSource
+      description: The type of the source value.
+    return:
+      type: '{TSource}'
+      description: The same source value for chaining purposes.
+    content.vb: Public Shared Function Apply(Of TSource)(source As TSource, [function] As Action(Of TSource)) As TSource
+  overload: Garyon.Extensions.MoreLinqExtensions.Apply*
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  id: WhereNotNullKeys``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereNotNullKeys<TKey, TValue>(IEnumerable<IGrouping<TKey?, TValue>>)
+  nameWithType: MoreLinqExtensions.WhereNotNullKeys<TKey, TValue>(IEnumerable<IGrouping<TKey?, TValue>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys<TKey, TValue>(System.Collections.Generic.IEnumerable<System.Linq.IGrouping<TKey?, TValue>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WhereNotNullKeys
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 460
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Filters all groupings and returns only those that have non-null keys.
+  example: []
+  syntax:
+    content: public static IEnumerable<IGrouping<TKey, TValue>> WhereNotNullKeys<TKey, TValue>(this IEnumerable<IGrouping<TKey?, TValue>> grouping)
+    parameters:
+    - id: grouping
+      type: System.Collections.Generic.IEnumerable{System.Linq.IGrouping{{TKey},{TValue}}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Linq.IGrouping{{TKey},{TValue}}}
+    content.vb: Public Shared Function WhereNotNullKeys(Of TKey, TValue)(grouping As IEnumerable(Of IGrouping(Of TKey, TValue))) As IEnumerable(Of IGrouping(Of TKey, TValue))
+  overload: Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys*
+  nameWithType.vb: MoreLinqExtensions.WhereNotNullKeys(Of TKey, TValue)(IEnumerable(Of IGrouping(Of TKey, TValue)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys(Of TKey, TValue)(System.Collections.Generic.IEnumerable(Of System.Linq.IGrouping(Of TKey, TValue)))
+  name.vb: WhereNotNullKeys(Of TKey, TValue)(IEnumerable(Of IGrouping(Of TKey, TValue)))
+- uid: Garyon.Extensions.MoreLinqExtensions.Zip``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Zip``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})
+  id: Zip``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: Zip<TA, TB>(IEnumerable<TA>, IEnumerable<TB>)
+  nameWithType: MoreLinqExtensions.Zip<TA, TB>(IEnumerable<TA>, IEnumerable<TB>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Zip<TA, TB>(System.Collections.Generic.IEnumerable<TA>, System.Collections.Generic.IEnumerable<TB>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Zip
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 472
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Zips both sequences into a sequence of tuples.
+  example: []
+  syntax:
+    content: public static IEnumerable<(TA First, TB Second)> Zip<TA, TB>(this IEnumerable<TA> source, IEnumerable<TB> other)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{TA}}
+    - id: other
+      type: System.Collections.Generic.IEnumerable{{TB}}
+    typeParameters:
+    - id: TA
+    - id: TB
+    return:
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{{TA},{TB}}}
+    content.vb: Public Shared Function Zip(Of TA, TB)(source As IEnumerable(Of TA), other As IEnumerable(Of TB)) As IEnumerable(Of (First As TA, Second As TB))
+  overload: Garyon.Extensions.MoreLinqExtensions.Zip*
+  nameWithType.vb: MoreLinqExtensions.Zip(Of TA, TB)(IEnumerable(Of TA), IEnumerable(Of TB))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Zip(Of TA, TB)(System.Collections.Generic.IEnumerable(Of TA), System.Collections.Generic.IEnumerable(Of TB))
+  name.vb: Zip(Of TA, TB)(IEnumerable(Of TA), IEnumerable(Of TB))
+- uid: Garyon.Extensions.MoreLinqExtensions.ToListDictionary``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.ToListDictionary``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  id: ToListDictionary``2(System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.MoreLinqExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToListDictionary<TKey, TValue>(IEnumerable<IGrouping<TKey, TValue>>)
+  nameWithType: MoreLinqExtensions.ToListDictionary<TKey, TValue>(IEnumerable<IGrouping<TKey, TValue>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.ToListDictionary<TKey, TValue>(System.Collections.Generic.IEnumerable<System.Linq.IGrouping<TKey, TValue>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/MoreLinqExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToListDictionary
+    path: ../Garyon/Extensions/MoreLinqExtensions.cs
+    startLine: 483
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Converts all groupings to a dictionary, with the values being a
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public static Dictionary<TKey, List<TValue>> ToListDictionary<TKey, TValue>(this IEnumerable<IGrouping<TKey, TValue>> groupings) where TKey : notnull'
+    parameters:
+    - id: groupings
+      type: System.Collections.Generic.IEnumerable{System.Linq.IGrouping{{TKey},{TValue}}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    return:
+      type: System.Collections.Generic.Dictionary{{TKey},System.Collections.Generic.List{{TValue}}}
+    content.vb: Public Shared Function ToListDictionary(Of TKey, TValue)(groupings As IEnumerable(Of IGrouping(Of TKey, TValue))) As Dictionary(Of TKey, List(Of TValue))
+  overload: Garyon.Extensions.MoreLinqExtensions.ToListDictionary*
+  nameWithType.vb: MoreLinqExtensions.ToListDictionary(Of TKey, TValue)(IEnumerable(Of IGrouping(Of TKey, TValue)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.ToListDictionary(Of TKey, TValue)(System.Collections.Generic.IEnumerable(Of System.Linq.IGrouping(Of TKey, TValue)))
+  name.vb: ToListDictionary(Of TKey, TValue)(IEnumerable(Of IGrouping(Of TKey, TValue)))
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Garyon.Extensions.MoreLinqExtensions.WherePredicate*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.WherePredicate
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_WherePredicate__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__
+  name: WherePredicate
+  nameWithType: MoreLinqExtensions.WherePredicate
+  fullName: Garyon.Extensions.MoreLinqExtensions.WherePredicate
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Predicate{{T}}
+  commentId: T:System.Predicate{``0}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereOrSource*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.WhereOrSource
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_WhereOrSource__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__
+  name: WhereOrSource
+  nameWithType: MoreLinqExtensions.WhereOrSource
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereOrSource
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{``0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.SelectOrDefault*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.SelectOrDefault
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_SelectOrDefault__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__
+  name: SelectOrDefault
+  nameWithType: MoreLinqExtensions.SelectOrDefault
+  fullName: Garyon.Extensions.MoreLinqExtensions.SelectOrDefault
+- uid: System.Collections.Generic.IEnumerable{{TSource}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TSource>
+  nameWithType: IEnumerable<TSource>
+  fullName: System.Collections.Generic.IEnumerable<TSource>
+  nameWithType.vb: IEnumerable(Of TSource)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TSource)
+  name.vb: IEnumerable(Of TSource)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+- uid: System.Func{{TSource},{TResult}}
+  commentId: T:System.Func{``0,``1}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TSource, TResult>
+  nameWithType: Func<TSource, TResult>
+  fullName: System.Func<TSource, TResult>
+  nameWithType.vb: Func(Of TSource, TResult)
+  fullName.vb: System.Func(Of TSource, TResult)
+  name.vb: Func(Of TSource, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{TResult}}
+  commentId: T:System.Collections.Generic.IEnumerable{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TResult>
+  nameWithType: IEnumerable<TResult>
+  fullName: System.Collections.Generic.IEnumerable<TResult>
+  nameWithType.vb: IEnumerable(Of TResult)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TResult)
+  name.vb: IEnumerable(Of TResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_OnlyOrDefault__1_System_Collections_Generic_IEnumerable___0__
+  name: OnlyOrDefault
+  nameWithType: MoreLinqExtensions.OnlyOrDefault
+  fullName: Garyon.Extensions.MoreLinqExtensions.OnlyOrDefault
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Extensions.MoreLinqExtensions.AnyDeep*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.AnyDeep
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_AnyDeep__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___
+  name: AnyDeep
+  nameWithType: MoreLinqExtensions.AnyDeep
+  fullName: Garyon.Extensions.MoreLinqExtensions.AnyDeep
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IEnumerable<T>>
+  nameWithType: IEnumerable<IEnumerable<T>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>
+  nameWithType.vb: IEnumerable(Of IEnumerable(Of T))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IEnumerable(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_EnumeratePerformAction__1_System_Collections_Generic_IEnumerable___0__System_Action___0__System_Action___0__System_Action___0__
+  name: EnumeratePerformAction
+  nameWithType: MoreLinqExtensions.EnumeratePerformAction
+  fullName: Garyon.Extensions.MoreLinqExtensions.EnumeratePerformAction
+- uid: System.Action{{T}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.CountAtLeast*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.CountAtLeast
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_CountAtLeast__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  name: CountAtLeast
+  nameWithType: MoreLinqExtensions.CountAtLeast
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountAtLeast
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.MoreLinqExtensions.CountAtMost*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.CountAtMost
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_CountAtMost__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  name: CountAtMost
+  nameWithType: MoreLinqExtensions.CountAtMost
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountAtMost
+- uid: Garyon.Extensions.MoreLinqExtensions.CountExactly*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.CountExactly
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_CountExactly__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  name: CountExactly
+  nameWithType: MoreLinqExtensions.CountExactly
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountExactly
+- uid: Garyon.Extensions.MoreLinqExtensions.CountBetween*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.CountBetween
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_CountBetween__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Int32_
+  name: CountBetween
+  nameWithType: MoreLinqExtensions.CountBetween
+  fullName: Garyon.Extensions.MoreLinqExtensions.CountBetween
+- uid: Garyon.Extensions.MoreLinqExtensions.NotNullCount*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.NotNullCount
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_NotNullCount__1_System_Collections_Generic_IEnumerable___0__
+  name: NotNullCount
+  nameWithType: MoreLinqExtensions.NotNullCount
+  fullName: Garyon.Extensions.MoreLinqExtensions.NotNullCount
+- uid: Garyon.Extensions.MoreLinqExtensions.NullCount*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.NullCount
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_NullCount__1_System_Collections_Generic_IEnumerable___0__
+  name: NullCount
+  nameWithType: MoreLinqExtensions.NullCount
+  fullName: Garyon.Extensions.MoreLinqExtensions.NullCount
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereNotNull*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.WhereNotNull
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_WhereNotNull__1_System_Collections_Generic_IEnumerable___0__
+  name: WhereNotNull
+  nameWithType: MoreLinqExtensions.WhereNotNull
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereNotNull
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereNot*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.WhereNot
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_WhereNot__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__
+  name: WhereNot
+  nameWithType: MoreLinqExtensions.WhereNot
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereNot
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.Apply
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply
+  nameWithType: MoreLinqExtensions.Apply
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply
+- uid: '{TSource}'
+  commentId: '!:TSource'
+  definition: TSource
+  name: TSource
+  nameWithType: TSource
+  fullName: TSource
+- uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TSource
+  name: TSource
+  nameWithType: TSource
+  fullName: TSource
+- uid: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: System.Action{{TSource}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TSource>
+  nameWithType: Action<TSource>
+  fullName: System.Action<TSource>
+  nameWithType.vb: Action(Of TSource)
+  fullName.vb: System.Action(Of TSource)
+  name.vb: Action(Of TSource)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_WhereNotNullKeys__2_System_Collections_Generic_IEnumerable_System_Linq_IGrouping___0___1___
+  name: WhereNotNullKeys
+  nameWithType: MoreLinqExtensions.WhereNotNullKeys
+  fullName: Garyon.Extensions.MoreLinqExtensions.WhereNotNullKeys
+- uid: System.Collections.Generic.IEnumerable{System.Linq.IGrouping{{TKey},{TValue}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``0,``1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IGrouping<TKey, TValue>>
+  nameWithType: IEnumerable<IGrouping<TKey, TValue>>
+  fullName: System.Collections.Generic.IEnumerable<System.Linq.IGrouping<TKey, TValue>>
+  nameWithType.vb: IEnumerable(Of IGrouping(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Linq.IGrouping(Of TKey, TValue))
+  name.vb: IEnumerable(Of IGrouping(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Linq.IGrouping`2
+    name: IGrouping
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.igrouping-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IGrouping`2
+    name: IGrouping
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.igrouping-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.Zip*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.Zip
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Zip__2_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__
+  name: Zip
+  nameWithType: MoreLinqExtensions.Zip
+  fullName: Garyon.Extensions.MoreLinqExtensions.Zip
+- uid: System.Collections.Generic.IEnumerable{{TA}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TA>
+  nameWithType: IEnumerable<TA>
+  fullName: System.Collections.Generic.IEnumerable<TA>
+  nameWithType.vb: IEnumerable(Of TA)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TA)
+  name.vb: IEnumerable(Of TA)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TA
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TA
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{TB}}
+  commentId: T:System.Collections.Generic.IEnumerable{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TB>
+  nameWithType: IEnumerable<TB>
+  fullName: System.Collections.Generic.IEnumerable<TB>
+  nameWithType.vb: IEnumerable(Of TB)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TB)
+  name.vb: IEnumerable(Of TB)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TB
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TB
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{{TA},{TB}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{``0,``1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(TA First, TB Second)>
+  nameWithType: IEnumerable<(TA First, TB Second)>
+  fullName: System.Collections.Generic.IEnumerable<(TA First, TB Second)>
+  nameWithType.vb: IEnumerable(Of (First As TA, Second As TB))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (First As TA, Second As TB))
+  name.vb: IEnumerable(Of (First As TA, Second As TB))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - name: TA
+  - name: " "
+  - uid: System.ValueTuple{``0,``1}.First
+    name: First
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple---0,--1-.first
+  - name: ','
+  - name: " "
+  - name: TB
+  - name: " "
+  - uid: System.ValueTuple{``0,``1}.Second
+    name: Second
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple---0,--1-.second
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{``0,``1}.First
+    name: First
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple---0,--1-.first
+  - name: " "
+  - name: As
+  - name: " "
+  - name: TA
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{``0,``1}.Second
+    name: Second
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple---0,--1-.second
+  - name: " "
+  - name: As
+  - name: " "
+  - name: TB
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions.ToListDictionary*
+  commentId: Overload:Garyon.Extensions.MoreLinqExtensions.ToListDictionary
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_ToListDictionary__2_System_Collections_Generic_IEnumerable_System_Linq_IGrouping___0___1___
+  name: ToListDictionary
+  nameWithType: MoreLinqExtensions.ToListDictionary
+  fullName: Garyon.Extensions.MoreLinqExtensions.ToListDictionary
+- uid: System.Collections.Generic.Dictionary{{TKey},System.Collections.Generic.List{{TValue}}}
+  commentId: T:System.Collections.Generic.Dictionary{``0,System.Collections.Generic.List{``1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, List<TValue>>
+  nameWithType: Dictionary<TKey, List<TValue>>
+  fullName: System.Collections.Generic.Dictionary<TKey, System.Collections.Generic.List<TValue>>
+  nameWithType.vb: Dictionary(Of TKey, List(Of TValue))
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, System.Collections.Generic.List(Of TValue))
+  name.vb: Dictionary(Of TKey, List(Of TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )

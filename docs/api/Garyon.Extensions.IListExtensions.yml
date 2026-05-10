@@ -1,0 +1,1497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.IListExtensions
+  commentId: T:Garyon.Extensions.IListExtensions
+  id: IListExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.IListExtensions.AddRange(System.Collections.IList,System.Collections.IEnumerable)
+  - Garyon.Extensions.IListExtensions.AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  - Garyon.Extensions.IListExtensions.AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{``0})
+  - Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32)
+  - Garyon.Extensions.IListExtensions.AtIndexOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)
+  - Garyon.Extensions.IListExtensions.ClearSetRange(System.Collections.IList,System.Collections.IEnumerable)
+  - Garyon.Extensions.IListExtensions.Insert``1(System.Collections.Generic.IList{``0},System.Index,``0)
+  - Garyon.Extensions.IListExtensions.Pop``1(System.Collections.Generic.IList{``0})
+  - Garyon.Extensions.IListExtensions.RemoveAtDecrement``1(System.Collections.Generic.IList{``0},System.Int32@)
+  - Garyon.Extensions.IListExtensions.RemoveAt``1(System.Collections.Generic.IList{``0},System.Index)
+  - Garyon.Extensions.IListExtensions.RemoveLast``1(System.Collections.Generic.IList{``0})
+  - Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0})
+  - Garyon.Extensions.IListExtensions.SingleOrDefaultSafe``1(System.Collections.Generic.IList{``0})
+  - Garyon.Extensions.IListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Index,System.Index)
+  - Garyon.Extensions.IListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  - Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32,``0@)
+  - Garyon.Extensions.IListExtensions.TryGetAtIndex``1(System.Collections.Generic.IList{``0},System.Int32,``0@)
+  langs:
+  - csharp
+  - vb
+  name: IListExtensions
+  nameWithType: IListExtensions
+  fullName: Garyon.Extensions.IListExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IListExtensions
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extension methods for the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> interface.
+  example: []
+  syntax:
+    content: public static class IListExtensions
+    content.vb: Public Module IListExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.IListExtensions.Insert``1(System.Collections.Generic.IList{``0},System.Index,``0)
+  commentId: M:Garyon.Extensions.IListExtensions.Insert``1(System.Collections.Generic.IList{``0},System.Index,``0)
+  id: Insert``1(System.Collections.Generic.IList{``0},System.Index,``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: Insert<T>(IList<T>, Index, T)
+  nameWithType: IListExtensions.Insert<T>(IList<T>, Index, T)
+  fullName: Garyon.Extensions.IListExtensions.Insert<T>(System.Collections.Generic.IList<T>, System.Index, T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Insert
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 18
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Inserts an element to the list at the specified index.
+  example: []
+  syntax:
+    content: public static void Insert<T>(this IList<T> list, Index index, T element)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The list to add an element to.
+    - id: index
+      type: System.Index
+      description: The index that the element will be located at after insertion.
+    - id: element
+      type: '{T}'
+      description: The element to insert to the list.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Sub Insert(Of T)(list As IList(Of T), index As Index, element As T)
+  overload: Garyon.Extensions.IListExtensions.Insert*
+  nameWithType.vb: IListExtensions.Insert(Of T)(IList(Of T), Index, T)
+  fullName.vb: Garyon.Extensions.IListExtensions.Insert(Of T)(System.Collections.Generic.IList(Of T), System.Index, T)
+  name.vb: Insert(Of T)(IList(Of T), Index, T)
+- uid: Garyon.Extensions.IListExtensions.RemoveAt``1(System.Collections.Generic.IList{``0},System.Index)
+  commentId: M:Garyon.Extensions.IListExtensions.RemoveAt``1(System.Collections.Generic.IList{``0},System.Index)
+  id: RemoveAt``1(System.Collections.Generic.IList{``0},System.Index)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveAt<T>(IList<T>, Index)
+  nameWithType: IListExtensions.RemoveAt<T>(IList<T>, Index)
+  fullName: Garyon.Extensions.IListExtensions.RemoveAt<T>(System.Collections.Generic.IList<T>, System.Index)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveAt
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 27
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes an element from the list at the specified index.
+  example: []
+  syntax:
+    content: public static void RemoveAt<T>(this IList<T> list, Index index)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The list to remove an element from.
+    - id: index
+      type: System.Index
+      description: The index of the element in the list to remove.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Sub RemoveAt(Of T)(list As IList(Of T), index As Index)
+  overload: Garyon.Extensions.IListExtensions.RemoveAt*
+  nameWithType.vb: IListExtensions.RemoveAt(Of T)(IList(Of T), Index)
+  fullName.vb: Garyon.Extensions.IListExtensions.RemoveAt(Of T)(System.Collections.Generic.IList(Of T), System.Index)
+  name.vb: RemoveAt(Of T)(IList(Of T), Index)
+- uid: Garyon.Extensions.IListExtensions.RemoveLast``1(System.Collections.Generic.IList{``0})
+  commentId: M:Garyon.Extensions.IListExtensions.RemoveLast``1(System.Collections.Generic.IList{``0})
+  id: RemoveLast``1(System.Collections.Generic.IList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLast<T>(IList<T>)
+  nameWithType: IListExtensions.RemoveLast<T>(IList<T>)
+  fullName: Garyon.Extensions.IListExtensions.RemoveLast<T>(System.Collections.Generic.IList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLast
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 41
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes the last element from the provided list.
+  example: []
+  syntax:
+    content: public static void RemoveLast<T>(this IList<T> list)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The list to remove the last element from.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Sub RemoveLast(Of T)(list As IList(Of T))
+  overload: Garyon.Extensions.IListExtensions.RemoveLast*
+  nameWithType.vb: IListExtensions.RemoveLast(Of T)(IList(Of T))
+  fullName.vb: Garyon.Extensions.IListExtensions.RemoveLast(Of T)(System.Collections.Generic.IList(Of T))
+  name.vb: RemoveLast(Of T)(IList(Of T))
+- uid: Garyon.Extensions.IListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.IListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  id: Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: Swap<T>(IList<T>, int, int)
+  nameWithType: IListExtensions.Swap<T>(IList<T>, int, int)
+  fullName: Garyon.Extensions.IListExtensions.Swap<T>(System.Collections.Generic.IList<T>, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Swap
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 62
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Swaps two elements in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IList<T> Swap<T>(this IList<T> list, int a, int b)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> within which to swap two elements.
+    - id: a
+      type: System.Int32
+      description: The index of the first element to swap.
+    - id: b
+      type: System.Int32
+      description: The index of the second element to swap.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.IList{{T}}
+      description: >-
+        The instance of the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> in which two elements
+
+        were swapped.
+    content.vb: Public Shared Function Swap(Of T)(list As IList(Of T), a As Integer, b As Integer) As IList(Of T)
+  overload: Garyon.Extensions.IListExtensions.Swap*
+  nameWithType.vb: IListExtensions.Swap(Of T)(IList(Of T), Integer, Integer)
+  fullName.vb: Garyon.Extensions.IListExtensions.Swap(Of T)(System.Collections.Generic.IList(Of T), Integer, Integer)
+  name.vb: Swap(Of T)(IList(Of T), Integer, Integer)
+- uid: Garyon.Extensions.IListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Index,System.Index)
+  commentId: M:Garyon.Extensions.IListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Index,System.Index)
+  id: Swap``1(System.Collections.Generic.IList{``0},System.Index,System.Index)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: Swap<T>(IList<T>, Index, Index)
+  nameWithType: IListExtensions.Swap<T>(IList<T>, Index, Index)
+  fullName: Garyon.Extensions.IListExtensions.Swap<T>(System.Collections.Generic.IList<T>, System.Index, System.Index)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Swap
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 74
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Swaps two elements in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IList<T> Swap<T>(this IList<T> list, Index a, Index b)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> within which to swap two elements.
+    - id: a
+      type: System.Index
+      description: The index of the first element to swap.
+    - id: b
+      type: System.Index
+      description: The index of the second element to swap.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.IList{{T}}
+      description: The instance of the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> in which two elements were swapped.
+    content.vb: Public Shared Function Swap(Of T)(list As IList(Of T), a As Index, b As Index) As IList(Of T)
+  overload: Garyon.Extensions.IListExtensions.Swap*
+  nameWithType.vb: IListExtensions.Swap(Of T)(IList(Of T), Index, Index)
+  fullName.vb: Garyon.Extensions.IListExtensions.Swap(Of T)(System.Collections.Generic.IList(Of T), System.Index, System.Index)
+  name.vb: Swap(Of T)(IList(Of T), Index, Index)
+- uid: Garyon.Extensions.IListExtensions.AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{``0})
+  commentId: M:Garyon.Extensions.IListExtensions.AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{``0})
+  id: AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRangeAsync<T>(IList<T>, IAsyncEnumerable<T>)
+  nameWithType: IListExtensions.AddRangeAsync<T>(IList<T>, IAsyncEnumerable<T>)
+  fullName: Garyon.Extensions.IListExtensions.AddRangeAsync<T>(System.Collections.Generic.IList<T>, System.Collections.Generic.IAsyncEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddRangeAsync
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 86
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Adds a range of elements from an <xref href="System.Collections.Generic.IAsyncEnumerable%601" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Task AddRangeAsync<T>(this IList<T> list, IAsyncEnumerable<T> collection)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> to which to add the elements.
+    - id: collection
+      type: System.Collections.Generic.IAsyncEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IAsyncEnumerable%601" data-throw-if-not-resolved="false"></xref> whose elements to add to the provided list.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the operation of adding all the elements.
+    content.vb: Public Shared Function AddRangeAsync(Of T)(list As IList(Of T), collection As IAsyncEnumerable(Of T)) As Task
+  overload: Garyon.Extensions.IListExtensions.AddRangeAsync*
+  nameWithType.vb: IListExtensions.AddRangeAsync(Of T)(IList(Of T), IAsyncEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.IListExtensions.AddRangeAsync(Of T)(System.Collections.Generic.IList(Of T), System.Collections.Generic.IAsyncEnumerable(Of T))
+  name.vb: AddRangeAsync(Of T)(IList(Of T), IAsyncEnumerable(Of T))
+- uid: Garyon.Extensions.IListExtensions.AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:Garyon.Extensions.IListExtensions.AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  id: AddRangeAsync``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRangeAsync<T>(IList<T>, IAsyncEnumerable<IEnumerable<T>>)
+  nameWithType: IListExtensions.AddRangeAsync<T>(IList<T>, IAsyncEnumerable<IEnumerable<T>>)
+  fullName: Garyon.Extensions.IListExtensions.AddRangeAsync<T>(System.Collections.Generic.IList<T>, System.Collections.Generic.IAsyncEnumerable<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddRangeAsync
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 93
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Adds a range of elements from an <xref href="System.Collections.Generic.IAsyncEnumerable%601" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Task AddRangeAsync<T>(this IList<T> list, IAsyncEnumerable<IEnumerable<T>> collection)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> to which to add the elements.
+    - id: collection
+      type: System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+      description: The <xref href="System.Collections.Generic.IAsyncEnumerable%601" data-throw-if-not-resolved="false"></xref> whose elements to add to the provided list.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the operation of adding all the elements.
+    content.vb: Public Shared Function AddRangeAsync(Of T)(list As IList(Of T), collection As IAsyncEnumerable(Of IEnumerable(Of T))) As Task
+  overload: Garyon.Extensions.IListExtensions.AddRangeAsync*
+  nameWithType.vb: IListExtensions.AddRangeAsync(Of T)(IList(Of T), IAsyncEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: Garyon.Extensions.IListExtensions.AddRangeAsync(Of T)(System.Collections.Generic.IList(Of T), System.Collections.Generic.IAsyncEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: AddRangeAsync(Of T)(IList(Of T), IAsyncEnumerable(Of IEnumerable(Of T)))
+- uid: Garyon.Extensions.IListExtensions.RemoveAtDecrement``1(System.Collections.Generic.IList{``0},System.Int32@)
+  commentId: M:Garyon.Extensions.IListExtensions.RemoveAtDecrement``1(System.Collections.Generic.IList{``0},System.Int32@)
+  id: RemoveAtDecrement``1(System.Collections.Generic.IList{``0},System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveAtDecrement<T>(IList<T>, ref int)
+  nameWithType: IListExtensions.RemoveAtDecrement<T>(IList<T>, ref int)
+  fullName: Garyon.Extensions.IListExtensions.RemoveAtDecrement<T>(System.Collections.Generic.IList<T>, ref int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveAtDecrement
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 114
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Removes an element from the list at the specified index and decrements
+
+    the provided index by reference.
+  example: []
+  syntax:
+    content: public static void RemoveAtDecrement<T>(this IList<T> list, ref int index)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The list from which to remove the element.
+    - id: index
+      type: System.Int32
+      description: >-
+        A reference to the index that will be decremented after removing the
+
+        element from the list.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the list.
+    content.vb: Public Shared Sub RemoveAtDecrement(Of T)(list As IList(Of T), index As Integer)
+  overload: Garyon.Extensions.IListExtensions.RemoveAtDecrement*
+  nameWithType.vb: IListExtensions.RemoveAtDecrement(Of T)(IList(Of T), Integer)
+  fullName.vb: Garyon.Extensions.IListExtensions.RemoveAtDecrement(Of T)(System.Collections.Generic.IList(Of T), Integer)
+  name.vb: RemoveAtDecrement(Of T)(IList(Of T), Integer)
+- uid: Garyon.Extensions.IListExtensions.Pop``1(System.Collections.Generic.IList{``0})
+  commentId: M:Garyon.Extensions.IListExtensions.Pop``1(System.Collections.Generic.IList{``0})
+  id: Pop``1(System.Collections.Generic.IList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: Pop<T>(IList<T>)
+  nameWithType: IListExtensions.Pop<T>(IList<T>)
+  fullName: Garyon.Extensions.IListExtensions.Pop<T>(System.Collections.Generic.IList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Pop
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 132
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Pops the last element from the list and returns it.
+  example: []
+  syntax:
+    content: public static T Pop<T>(this IList<T> list)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.IList{{T}}
+      description: The list from which to pop the element.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the list.
+    return:
+      type: '{T}'
+      description: The popped element.
+    content.vb: Public Shared Function Pop(Of T)(list As IList(Of T)) As T
+  overload: Garyon.Extensions.IListExtensions.Pop*
+  nameWithType.vb: IListExtensions.Pop(Of T)(IList(Of T))
+  fullName.vb: Garyon.Extensions.IListExtensions.Pop(Of T)(System.Collections.Generic.IList(Of T))
+  name.vb: Pop(Of T)(IList(Of T))
+- uid: Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32)
+  commentId: M:Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32)
+  id: AtIndexOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: AtIndexOrDefaultReadOnly<T>(IReadOnlyList<T>, int)
+  nameWithType: IListExtensions.AtIndexOrDefaultReadOnly<T>(IReadOnlyList<T>, int)
+  fullName: Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly<T>(System.Collections.Generic.IReadOnlyList<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AtIndexOrDefaultReadOnly
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 139
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static T? AtIndexOrDefaultReadOnly<T>(this IReadOnlyList<T> source, int index)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    - id: index
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function AtIndexOrDefaultReadOnly(Of T)(source As IReadOnlyList(Of T), index As Integer) As T
+  overload: Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly*
+  nameWithType.vb: IListExtensions.AtIndexOrDefaultReadOnly(Of T)(IReadOnlyList(Of T), Integer)
+  fullName.vb: Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly(Of T)(System.Collections.Generic.IReadOnlyList(Of T), Integer)
+  name.vb: AtIndexOrDefaultReadOnly(Of T)(IReadOnlyList(Of T), Integer)
+- uid: Garyon.Extensions.IListExtensions.AtIndexOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)
+  commentId: M:Garyon.Extensions.IListExtensions.AtIndexOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)
+  id: AtIndexOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: AtIndexOrDefault<T>(IList<T>, int)
+  nameWithType: IListExtensions.AtIndexOrDefault<T>(IList<T>, int)
+  fullName: Garyon.Extensions.IListExtensions.AtIndexOrDefault<T>(System.Collections.Generic.IList<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AtIndexOrDefault
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 146
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static T? AtIndexOrDefault<T>(this IList<T> source, int index)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IList{{T}}
+    - id: index
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function AtIndexOrDefault(Of T)(source As IList(Of T), index As Integer) As T
+  overload: Garyon.Extensions.IListExtensions.AtIndexOrDefault*
+  nameWithType.vb: IListExtensions.AtIndexOrDefault(Of T)(IList(Of T), Integer)
+  fullName.vb: Garyon.Extensions.IListExtensions.AtIndexOrDefault(Of T)(System.Collections.Generic.IList(Of T), Integer)
+  name.vb: AtIndexOrDefault(Of T)(IList(Of T), Integer)
+- uid: Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32,``0@)
+  commentId: M:Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32,``0@)
+  id: TryGetAtIndexReadOnly``1(System.Collections.Generic.IReadOnlyList{``0},System.Int32,``0@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetAtIndexReadOnly<T>(IReadOnlyList<T>, int, out T?)
+  nameWithType: IListExtensions.TryGetAtIndexReadOnly<T>(IReadOnlyList<T>, int, out T?)
+  fullName: Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly<T>(System.Collections.Generic.IReadOnlyList<T>, int, out T?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryGetAtIndexReadOnly
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 153
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryGetAtIndexReadOnly<T>(this IReadOnlyList<T> source, int index, out T? value)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    - id: index
+      type: System.Int32
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryGetAtIndexReadOnly(Of T)(source As IReadOnlyList(Of T), index As Integer, value As T) As Boolean
+  overload: Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly*
+  nameWithType.vb: IListExtensions.TryGetAtIndexReadOnly(Of T)(IReadOnlyList(Of T), Integer, T)
+  fullName.vb: Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly(Of T)(System.Collections.Generic.IReadOnlyList(Of T), Integer, T)
+  name.vb: TryGetAtIndexReadOnly(Of T)(IReadOnlyList(Of T), Integer, T)
+- uid: Garyon.Extensions.IListExtensions.TryGetAtIndex``1(System.Collections.Generic.IList{``0},System.Int32,``0@)
+  commentId: M:Garyon.Extensions.IListExtensions.TryGetAtIndex``1(System.Collections.Generic.IList{``0},System.Int32,``0@)
+  id: TryGetAtIndex``1(System.Collections.Generic.IList{``0},System.Int32,``0@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetAtIndex<T>(IList<T>, int, out T?)
+  nameWithType: IListExtensions.TryGetAtIndex<T>(IList<T>, int, out T?)
+  fullName: Garyon.Extensions.IListExtensions.TryGetAtIndex<T>(System.Collections.Generic.IList<T>, int, out T?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryGetAtIndex
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 166
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryGetAtIndex<T>(this IList<T> source, int index, out T? value)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IList{{T}}
+    - id: index
+      type: System.Int32
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryGetAtIndex(Of T)(source As IList(Of T), index As Integer, value As T) As Boolean
+  overload: Garyon.Extensions.IListExtensions.TryGetAtIndex*
+  nameWithType.vb: IListExtensions.TryGetAtIndex(Of T)(IList(Of T), Integer, T)
+  fullName.vb: Garyon.Extensions.IListExtensions.TryGetAtIndex(Of T)(System.Collections.Generic.IList(Of T), Integer, T)
+  name.vb: TryGetAtIndex(Of T)(IList(Of T), Integer, T)
+- uid: Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0})
+  commentId: M:Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0})
+  id: SingleOrDefaultReadOnly``1(System.Collections.Generic.IReadOnlyList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: SingleOrDefaultReadOnly<T>(IReadOnlyList<T>)
+  nameWithType: IListExtensions.SingleOrDefaultReadOnly<T>(IReadOnlyList<T>)
+  fullName: Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly<T>(System.Collections.Generic.IReadOnlyList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SingleOrDefaultReadOnly
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 179
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static T? SingleOrDefaultReadOnly<T>(this IReadOnlyList<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function SingleOrDefaultReadOnly(Of T)(source As IReadOnlyList(Of T)) As T
+  overload: Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly*
+  nameWithType.vb: IListExtensions.SingleOrDefaultReadOnly(Of T)(IReadOnlyList(Of T))
+  fullName.vb: Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly(Of T)(System.Collections.Generic.IReadOnlyList(Of T))
+  name.vb: SingleOrDefaultReadOnly(Of T)(IReadOnlyList(Of T))
+- uid: Garyon.Extensions.IListExtensions.SingleOrDefaultSafe``1(System.Collections.Generic.IList{``0})
+  commentId: M:Garyon.Extensions.IListExtensions.SingleOrDefaultSafe``1(System.Collections.Generic.IList{``0})
+  id: SingleOrDefaultSafe``1(System.Collections.Generic.IList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: SingleOrDefaultSafe<T>(IList<T>)
+  nameWithType: IListExtensions.SingleOrDefaultSafe<T>(IList<T>)
+  fullName: Garyon.Extensions.IListExtensions.SingleOrDefaultSafe<T>(System.Collections.Generic.IList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SingleOrDefaultSafe
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 189
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static T? SingleOrDefaultSafe<T>(this IList<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IList{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function SingleOrDefaultSafe(Of T)(source As IList(Of T)) As T
+  overload: Garyon.Extensions.IListExtensions.SingleOrDefaultSafe*
+  nameWithType.vb: IListExtensions.SingleOrDefaultSafe(Of T)(IList(Of T))
+  fullName.vb: Garyon.Extensions.IListExtensions.SingleOrDefaultSafe(Of T)(System.Collections.Generic.IList(Of T))
+  name.vb: SingleOrDefaultSafe(Of T)(IList(Of T))
+- uid: Garyon.Extensions.IListExtensions.ClearSetRange(System.Collections.IList,System.Collections.IEnumerable)
+  commentId: M:Garyon.Extensions.IListExtensions.ClearSetRange(System.Collections.IList,System.Collections.IEnumerable)
+  id: ClearSetRange(System.Collections.IList,System.Collections.IEnumerable)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: ClearSetRange(IList, IEnumerable)
+  nameWithType: IListExtensions.ClearSetRange(IList, IEnumerable)
+  fullName: Garyon.Extensions.IListExtensions.ClearSetRange(System.Collections.IList, System.Collections.IEnumerable)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ClearSetRange
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 209
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Clears the entire list and sets its contents to the given range.
+  example: []
+  syntax:
+    content: public static void ClearSetRange(this IList list, IEnumerable items)
+    parameters:
+    - id: list
+      type: System.Collections.IList
+      description: The <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> to clear and whose items to set.
+    - id: items
+      type: System.Collections.IEnumerable
+      description: The items to set to the list.
+    content.vb: Public Shared Sub ClearSetRange(list As IList, items As IEnumerable)
+  overload: Garyon.Extensions.IListExtensions.ClearSetRange*
+- uid: Garyon.Extensions.IListExtensions.AddRange(System.Collections.IList,System.Collections.IEnumerable)
+  commentId: M:Garyon.Extensions.IListExtensions.AddRange(System.Collections.IList,System.Collections.IEnumerable)
+  id: AddRange(System.Collections.IList,System.Collections.IEnumerable)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IListExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRange(IList, IEnumerable)
+  nameWithType: IListExtensions.AddRange(IList, IEnumerable)
+  fullName: Garyon.Extensions.IListExtensions.AddRange(System.Collections.IList, System.Collections.IEnumerable)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IListExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddRange
+    path: ../Garyon/Extensions/IListExtensions.cs
+    startLine: 224
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Adds a range of items to the given list.
+  example: []
+  syntax:
+    content: public static void AddRange(this IList list, IEnumerable items)
+    parameters:
+    - id: list
+      type: System.Collections.IList
+      description: The <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> on which to add the items.
+    - id: items
+      type: System.Collections.IEnumerable
+      description: The items to add to the list.
+    content.vb: Public Shared Sub AddRange(list As IList, items As IEnumerable)
+  overload: Garyon.Extensions.IListExtensions.AddRange*
+references:
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.IListExtensions.Insert*
+  commentId: Overload:Garyon.Extensions.IListExtensions.Insert
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_Insert__1_System_Collections_Generic_IList___0__System_Index___0_
+  name: Insert
+  nameWithType: IListExtensions.Insert
+  fullName: Garyon.Extensions.IListExtensions.Insert
+- uid: System.Collections.Generic.IList{{T}}
+  commentId: T:System.Collections.Generic.IList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Index
+  commentId: T:System.Index
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.index
+  name: Index
+  nameWithType: Index
+  fullName: System.Index
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Extensions.IListExtensions.RemoveAt*
+  commentId: Overload:Garyon.Extensions.IListExtensions.RemoveAt
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_RemoveAt__1_System_Collections_Generic_IList___0__System_Index_
+  name: RemoveAt
+  nameWithType: IListExtensions.RemoveAt
+  fullName: Garyon.Extensions.IListExtensions.RemoveAt
+- uid: Garyon.Extensions.IListExtensions.RemoveLast*
+  commentId: Overload:Garyon.Extensions.IListExtensions.RemoveLast
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_RemoveLast__1_System_Collections_Generic_IList___0__
+  name: RemoveLast
+  nameWithType: IListExtensions.RemoveLast
+  fullName: Garyon.Extensions.IListExtensions.RemoveLast
+- uid: Garyon.Extensions.IListExtensions.Swap*
+  commentId: Overload:Garyon.Extensions.IListExtensions.Swap
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_Swap__1_System_Collections_Generic_IList___0__System_Int32_System_Int32_
+  name: Swap
+  nameWithType: IListExtensions.Swap
+  fullName: Garyon.Extensions.IListExtensions.Swap
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IAsyncEnumerable`1
+  commentId: T:System.Collections.Generic.IAsyncEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<T>
+  nameWithType: IAsyncEnumerable<T>
+  fullName: System.Collections.Generic.IAsyncEnumerable<T>
+  nameWithType.vb: IAsyncEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of T)
+  name.vb: IAsyncEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Garyon.Extensions.IListExtensions.AddRangeAsync*
+  commentId: Overload:Garyon.Extensions.IListExtensions.AddRangeAsync
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_AddRangeAsync__1_System_Collections_Generic_IList___0__System_Collections_Generic_IAsyncEnumerable___0__
+  name: AddRangeAsync
+  nameWithType: IListExtensions.AddRangeAsync
+  fullName: Garyon.Extensions.IListExtensions.AddRangeAsync
+- uid: System.Collections.Generic.IAsyncEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IAsyncEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IAsyncEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<T>
+  nameWithType: IAsyncEnumerable<T>
+  fullName: System.Collections.Generic.IAsyncEnumerable<T>
+  nameWithType.vb: IAsyncEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of T)
+  name.vb: IAsyncEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+  commentId: T:System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IAsyncEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<IEnumerable<T>>
+  nameWithType: IAsyncEnumerable<IEnumerable<T>>
+  fullName: System.Collections.Generic.IAsyncEnumerable<System.Collections.Generic.IEnumerable<T>>
+  nameWithType.vb: IAsyncEnumerable(Of IEnumerable(Of T))
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IAsyncEnumerable(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.IListExtensions.RemoveAtDecrement*
+  commentId: Overload:Garyon.Extensions.IListExtensions.RemoveAtDecrement
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_RemoveAtDecrement__1_System_Collections_Generic_IList___0__System_Int32__
+  name: RemoveAtDecrement
+  nameWithType: IListExtensions.RemoveAtDecrement
+  fullName: Garyon.Extensions.IListExtensions.RemoveAtDecrement
+- uid: Garyon.Extensions.IListExtensions.Pop*
+  commentId: Overload:Garyon.Extensions.IListExtensions.Pop
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_Pop__1_System_Collections_Generic_IList___0__
+  name: Pop
+  nameWithType: IListExtensions.Pop
+  fullName: Garyon.Extensions.IListExtensions.Pop
+- uid: Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly*
+  commentId: Overload:Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_AtIndexOrDefaultReadOnly__1_System_Collections_Generic_IReadOnlyList___0__System_Int32_
+  name: AtIndexOrDefaultReadOnly
+  nameWithType: IListExtensions.AtIndexOrDefaultReadOnly
+  fullName: Garyon.Extensions.IListExtensions.AtIndexOrDefaultReadOnly
+- uid: System.Collections.Generic.IReadOnlyList{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.IListExtensions.AtIndexOrDefault*
+  commentId: Overload:Garyon.Extensions.IListExtensions.AtIndexOrDefault
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_AtIndexOrDefault__1_System_Collections_Generic_IList___0__System_Int32_
+  name: AtIndexOrDefault
+  nameWithType: IListExtensions.AtIndexOrDefault
+  fullName: Garyon.Extensions.IListExtensions.AtIndexOrDefault
+- uid: Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly*
+  commentId: Overload:Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_TryGetAtIndexReadOnly__1_System_Collections_Generic_IReadOnlyList___0__System_Int32___0__
+  name: TryGetAtIndexReadOnly
+  nameWithType: IListExtensions.TryGetAtIndexReadOnly
+  fullName: Garyon.Extensions.IListExtensions.TryGetAtIndexReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.IListExtensions.TryGetAtIndex*
+  commentId: Overload:Garyon.Extensions.IListExtensions.TryGetAtIndex
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_TryGetAtIndex__1_System_Collections_Generic_IList___0__System_Int32___0__
+  name: TryGetAtIndex
+  nameWithType: IListExtensions.TryGetAtIndex
+  fullName: Garyon.Extensions.IListExtensions.TryGetAtIndex
+- uid: Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly*
+  commentId: Overload:Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_SingleOrDefaultReadOnly__1_System_Collections_Generic_IReadOnlyList___0__
+  name: SingleOrDefaultReadOnly
+  nameWithType: IListExtensions.SingleOrDefaultReadOnly
+  fullName: Garyon.Extensions.IListExtensions.SingleOrDefaultReadOnly
+- uid: Garyon.Extensions.IListExtensions.SingleOrDefaultSafe*
+  commentId: Overload:Garyon.Extensions.IListExtensions.SingleOrDefaultSafe
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_SingleOrDefaultSafe__1_System_Collections_Generic_IList___0__
+  name: SingleOrDefaultSafe
+  nameWithType: IListExtensions.SingleOrDefaultSafe
+  fullName: Garyon.Extensions.IListExtensions.SingleOrDefaultSafe
+- uid: System.Collections.IList
+  commentId: T:System.Collections.IList
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  name: IList
+  nameWithType: IList
+  fullName: System.Collections.IList
+- uid: Garyon.Extensions.IListExtensions.ClearSetRange*
+  commentId: Overload:Garyon.Extensions.IListExtensions.ClearSetRange
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_ClearSetRange_System_Collections_IList_System_Collections_IEnumerable_
+  name: ClearSetRange
+  nameWithType: IListExtensions.ClearSetRange
+  fullName: Garyon.Extensions.IListExtensions.ClearSetRange
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: Garyon.Extensions.IListExtensions.AddRange*
+  commentId: Overload:Garyon.Extensions.IListExtensions.AddRange
+  href: Garyon.Extensions.IListExtensions.html#Garyon_Extensions_IListExtensions_AddRange_System_Collections_IList_System_Collections_IEnumerable_
+  name: AddRange
+  nameWithType: IListExtensions.AddRange
+  fullName: Garyon.Extensions.IListExtensions.AddRange

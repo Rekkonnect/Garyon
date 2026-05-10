@@ -1,0 +1,3296 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.TypeModifiers
+  commentId: T:Garyon.Reflection.TypeModifiers
+  id: TypeModifiers
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.TypeModifiers.Abstract
+  - Garyon.Reflection.TypeModifiers.AllAccessibilities
+  - Garyon.Reflection.TypeModifiers.AllDefinitions
+  - Garyon.Reflection.TypeModifiers.AllModifiers
+  - Garyon.Reflection.TypeModifiers.File
+  - Garyon.Reflection.TypeModifiers.Internal
+  - Garyon.Reflection.TypeModifiers.InternalAbstract
+  - Garyon.Reflection.TypeModifiers.InternalReadonly
+  - Garyon.Reflection.TypeModifiers.InternalReadonlyRef
+  - Garyon.Reflection.TypeModifiers.InternalRef
+  - Garyon.Reflection.TypeModifiers.InternalSealed
+  - Garyon.Reflection.TypeModifiers.InternalStatic
+  - Garyon.Reflection.TypeModifiers.None
+  - Garyon.Reflection.TypeModifiers.Private
+  - Garyon.Reflection.TypeModifiers.PrivateAbstract
+  - Garyon.Reflection.TypeModifiers.PrivateProtected
+  - Garyon.Reflection.TypeModifiers.PrivateProtectedAbstract
+  - Garyon.Reflection.TypeModifiers.PrivateProtectedReadonly
+  - Garyon.Reflection.TypeModifiers.PrivateProtectedReadonlyRef
+  - Garyon.Reflection.TypeModifiers.PrivateProtectedRef
+  - Garyon.Reflection.TypeModifiers.PrivateProtectedSealed
+  - Garyon.Reflection.TypeModifiers.PrivateProtectedStatic
+  - Garyon.Reflection.TypeModifiers.PrivateReadonly
+  - Garyon.Reflection.TypeModifiers.PrivateReadonlyRef
+  - Garyon.Reflection.TypeModifiers.PrivateRef
+  - Garyon.Reflection.TypeModifiers.PrivateSealed
+  - Garyon.Reflection.TypeModifiers.PrivateStatic
+  - Garyon.Reflection.TypeModifiers.Protected
+  - Garyon.Reflection.TypeModifiers.ProtectedAbstract
+  - Garyon.Reflection.TypeModifiers.ProtectedInternal
+  - Garyon.Reflection.TypeModifiers.ProtectedInternalAbstract
+  - Garyon.Reflection.TypeModifiers.ProtectedInternalReadonly
+  - Garyon.Reflection.TypeModifiers.ProtectedInternalReadonlyRef
+  - Garyon.Reflection.TypeModifiers.ProtectedInternalRef
+  - Garyon.Reflection.TypeModifiers.ProtectedInternalSealed
+  - Garyon.Reflection.TypeModifiers.ProtectedInternalStatic
+  - Garyon.Reflection.TypeModifiers.ProtectedReadonly
+  - Garyon.Reflection.TypeModifiers.ProtectedReadonlyRef
+  - Garyon.Reflection.TypeModifiers.ProtectedRef
+  - Garyon.Reflection.TypeModifiers.ProtectedSealed
+  - Garyon.Reflection.TypeModifiers.ProtectedStatic
+  - Garyon.Reflection.TypeModifiers.Public
+  - Garyon.Reflection.TypeModifiers.PublicAbstract
+  - Garyon.Reflection.TypeModifiers.PublicReadonly
+  - Garyon.Reflection.TypeModifiers.PublicReadonlyRef
+  - Garyon.Reflection.TypeModifiers.PublicRef
+  - Garyon.Reflection.TypeModifiers.PublicSealed
+  - Garyon.Reflection.TypeModifiers.PublicStatic
+  - Garyon.Reflection.TypeModifiers.Readonly
+  - Garyon.Reflection.TypeModifiers.ReadonlyRef
+  - Garyon.Reflection.TypeModifiers.Ref
+  - Garyon.Reflection.TypeModifiers.Sealed
+  - Garyon.Reflection.TypeModifiers.Static
+  langs:
+  - csharp
+  - vb
+  name: TypeModifiers
+  nameWithType: TypeModifiers
+  fullName: Garyon.Reflection.TypeModifiers
+  type: Enum
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TypeModifiers
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 7
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Contains values representing the modifiers of a <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum TypeModifiers : ushort
+    content.vb: >-
+      <Flags>
+
+      Public Enum TypeModifiers As UShort
+  extensionMethods:
+  - Garyon.Reflection.TypeModifiers.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeModifiers)
+  - Garyon.Reflection.TypeModifiers.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Reflection.TypeModifiers.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Reflection.TypeModifiers})
+  - Garyon.Reflection.TypeModifiers.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Reflection.TypeModifiers,{TResult}})
+  - Garyon.Reflection.TypeModifiers.Garyon.Extensions.UnsafeExtensions.GetBytes``1
+  - Garyon.Reflection.TypeModifiers.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  - Garyon.Reflection.TypeModifiers.Garyon.Objects.StructRefHelperExtensions.CreateReference``1
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.EqualTo(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThan(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.LessThan(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.Object,Garyon.Objects.ComparisonResult)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.NotEqualTo(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.Object,Garyon.Objects.ComparisonKinds)
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: Garyon.Reflection.TypeModifiers.None
+  commentId: F:Garyon.Reflection.TypeModifiers.None
+  id: None
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: TypeModifiers.None
+  fullName: Garyon.Reflection.TypeModifiers.None
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: None
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The default value, representing no type modifiers.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Public
+  commentId: F:Garyon.Reflection.TypeModifiers.Public
+  id: Public
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Public
+  nameWithType: TypeModifiers.Public
+  fullName: Garyon.Reflection.TypeModifiers.Public
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Public
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/public">public</a> modifier.
+  example: []
+  syntax:
+    content: Public = 1
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Internal
+  commentId: F:Garyon.Reflection.TypeModifiers.Internal
+  id: Internal
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Internal
+  nameWithType: TypeModifiers.Internal
+  fullName: Garyon.Reflection.TypeModifiers.Internal
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Internal
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 23
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/internal">internal</a> modifier.
+  example: []
+  syntax:
+    content: Internal = 2
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternal
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternal
+  id: ProtectedInternal
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternal
+  nameWithType: TypeModifiers.ProtectedInternal
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternal
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternal
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 27
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected internal</code> modifier.
+  example: []
+  syntax:
+    content: ProtectedInternal = 4
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Protected
+  commentId: F:Garyon.Reflection.TypeModifiers.Protected
+  id: Protected
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Protected
+  nameWithType: TypeModifiers.Protected
+  fullName: Garyon.Reflection.TypeModifiers.Protected
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Protected
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 31
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/protected">protected</a> modifier.
+  example: []
+  syntax:
+    content: Protected = 8
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtected
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtected
+  id: PrivateProtected
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtected
+  nameWithType: TypeModifiers.PrivateProtected
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtected
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtected
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 35
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private protected</code> modifier.
+  example: []
+  syntax:
+    content: PrivateProtected = 16
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Private
+  commentId: F:Garyon.Reflection.TypeModifiers.Private
+  id: Private
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Private
+  nameWithType: TypeModifiers.Private
+  fullName: Garyon.Reflection.TypeModifiers.Private
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Private
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/private">private</a> modifier.
+  example: []
+  syntax:
+    content: Private = 32
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.AllAccessibilities
+  commentId: F:Garyon.Reflection.TypeModifiers.AllAccessibilities
+  id: AllAccessibilities
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: AllAccessibilities
+  nameWithType: TypeModifiers.AllAccessibilities
+  fullName: Garyon.Reflection.TypeModifiers.AllAccessibilities
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AllAccessibilities
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 44
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: All accessibility modifiers.
+  example: []
+  syntax:
+    content: AllAccessibilities = 127
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Static
+  commentId: F:Garyon.Reflection.TypeModifiers.Static
+  id: Static
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Static
+  nameWithType: TypeModifiers.Static
+  fullName: Garyon.Reflection.TypeModifiers.Static
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Static
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/static">static</a> modifier.
+  example: []
+  syntax:
+    content: Static = 256
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Abstract
+  commentId: F:Garyon.Reflection.TypeModifiers.Abstract
+  id: Abstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Abstract
+  nameWithType: TypeModifiers.Abstract
+  fullName: Garyon.Reflection.TypeModifiers.Abstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Abstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 54
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/abstract">abstract</a> modifier.
+  example: []
+  syntax:
+    content: Abstract = 512
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Sealed
+  commentId: F:Garyon.Reflection.TypeModifiers.Sealed
+  id: Sealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Sealed
+  nameWithType: TypeModifiers.Sealed
+  fullName: Garyon.Reflection.TypeModifiers.Sealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Sealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 58
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/sealed">sealed</a> modifier.
+  example: []
+  syntax:
+    content: Sealed = 1024
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Readonly
+  commentId: F:Garyon.Reflection.TypeModifiers.Readonly
+  id: Readonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Readonly
+  nameWithType: TypeModifiers.Readonly
+  fullName: Garyon.Reflection.TypeModifiers.Readonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Readonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 62
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/readonly">readonly</a> modifier.
+  example: []
+  syntax:
+    content: Readonly = 2048
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.Ref
+  commentId: F:Garyon.Reflection.TypeModifiers.Ref
+  id: Ref
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: Ref
+  nameWithType: TypeModifiers.Ref
+  fullName: Garyon.Reflection.TypeModifiers.Ref
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Ref
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 66
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/ref">ref</a> modifier.
+  example: []
+  syntax:
+    content: Ref = 4096
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.ReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.ReadonlyRef
+  id: ReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ReadonlyRef
+  nameWithType: TypeModifiers.ReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.ReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 70
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>readonly ref</code> modifier.
+  example: []
+  syntax:
+    content: ReadonlyRef = Readonly | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ReadonlyRef = Readonly Or Ref
+- uid: Garyon.Reflection.TypeModifiers.File
+  commentId: F:Garyon.Reflection.TypeModifiers.File
+  id: File
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: TypeModifiers.File
+  fullName: Garyon.Reflection.TypeModifiers.File
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: File
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 74
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/file">file</a> modifier.
+  example: []
+  syntax:
+    content: File = 8192
+    return:
+      type: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeModifiers.AllDefinitions
+  commentId: F:Garyon.Reflection.TypeModifiers.AllDefinitions
+  id: AllDefinitions
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: AllDefinitions
+  nameWithType: TypeModifiers.AllDefinitions
+  fullName: Garyon.Reflection.TypeModifiers.AllDefinitions
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AllDefinitions
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 79
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: All definition modifiers.
+  example: []
+  syntax:
+    content: AllDefinitions = Static | Abstract | Sealed | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: AllDefinitions = Static Or Abstract Or Sealed Or ReadonlyRef
+- uid: Garyon.Reflection.TypeModifiers.AllModifiers
+  commentId: F:Garyon.Reflection.TypeModifiers.AllModifiers
+  id: AllModifiers
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: AllModifiers
+  nameWithType: TypeModifiers.AllModifiers
+  fullName: Garyon.Reflection.TypeModifiers.AllModifiers
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AllModifiers
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 84
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: All modifiers.
+  example: []
+  syntax:
+    content: AllModifiers = AllAccessibilities | AllDefinitions
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: AllModifiers = AllAccessibilities Or AllDefinitions
+- uid: Garyon.Reflection.TypeModifiers.PublicStatic
+  commentId: F:Garyon.Reflection.TypeModifiers.PublicStatic
+  id: PublicStatic
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PublicStatic
+  nameWithType: TypeModifiers.PublicStatic
+  fullName: Garyon.Reflection.TypeModifiers.PublicStatic
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PublicStatic
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 94
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>public static</code> modifier combination.
+  example: []
+  syntax:
+    content: PublicStatic = Public | Static
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PublicStatic = Public Or Static
+- uid: Garyon.Reflection.TypeModifiers.InternalStatic
+  commentId: F:Garyon.Reflection.TypeModifiers.InternalStatic
+  id: InternalStatic
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: InternalStatic
+  nameWithType: TypeModifiers.InternalStatic
+  fullName: Garyon.Reflection.TypeModifiers.InternalStatic
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InternalStatic
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 98
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>internal static</code> modifier combination.
+  example: []
+  syntax:
+    content: InternalStatic = Internal | Static
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: InternalStatic = Internal Or Static
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternalStatic
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternalStatic
+  id: ProtectedInternalStatic
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternalStatic
+  nameWithType: TypeModifiers.ProtectedInternalStatic
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternalStatic
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternalStatic
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 102
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected internal static</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedInternalStatic = ProtectedInternal | Static
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedInternalStatic = ProtectedInternal Or Static
+- uid: Garyon.Reflection.TypeModifiers.ProtectedStatic
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedStatic
+  id: ProtectedStatic
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedStatic
+  nameWithType: TypeModifiers.ProtectedStatic
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedStatic
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedStatic
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 106
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected static</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedStatic = Protected | Static
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedStatic = Protected Or Static
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtectedStatic
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtectedStatic
+  id: PrivateProtectedStatic
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtectedStatic
+  nameWithType: TypeModifiers.PrivateProtectedStatic
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtectedStatic
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtectedStatic
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 110
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private protected static</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateProtectedStatic = PrivateProtected | Static
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateProtectedStatic = PrivateProtected Or Static
+- uid: Garyon.Reflection.TypeModifiers.PrivateStatic
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateStatic
+  id: PrivateStatic
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateStatic
+  nameWithType: TypeModifiers.PrivateStatic
+  fullName: Garyon.Reflection.TypeModifiers.PrivateStatic
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateStatic
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 114
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private static</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateStatic = Private | Static
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateStatic = Private Or Static
+- uid: Garyon.Reflection.TypeModifiers.PublicAbstract
+  commentId: F:Garyon.Reflection.TypeModifiers.PublicAbstract
+  id: PublicAbstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PublicAbstract
+  nameWithType: TypeModifiers.PublicAbstract
+  fullName: Garyon.Reflection.TypeModifiers.PublicAbstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PublicAbstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 120
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>public abstract</code> modifier combination.
+  example: []
+  syntax:
+    content: PublicAbstract = Public | Abstract
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PublicAbstract = Public Or Abstract
+- uid: Garyon.Reflection.TypeModifiers.InternalAbstract
+  commentId: F:Garyon.Reflection.TypeModifiers.InternalAbstract
+  id: InternalAbstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: InternalAbstract
+  nameWithType: TypeModifiers.InternalAbstract
+  fullName: Garyon.Reflection.TypeModifiers.InternalAbstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InternalAbstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 124
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>internal abstract</code> modifier combination.
+  example: []
+  syntax:
+    content: InternalAbstract = Internal | Abstract
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: InternalAbstract = Internal Or Abstract
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternalAbstract
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternalAbstract
+  id: ProtectedInternalAbstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternalAbstract
+  nameWithType: TypeModifiers.ProtectedInternalAbstract
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternalAbstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternalAbstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 128
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected internal abstract</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedInternalAbstract = ProtectedInternal | Abstract
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedInternalAbstract = ProtectedInternal Or Abstract
+- uid: Garyon.Reflection.TypeModifiers.ProtectedAbstract
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedAbstract
+  id: ProtectedAbstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedAbstract
+  nameWithType: TypeModifiers.ProtectedAbstract
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedAbstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedAbstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 132
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected abstract</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedAbstract = Protected | Abstract
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedAbstract = Protected Or Abstract
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtectedAbstract
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtectedAbstract
+  id: PrivateProtectedAbstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtectedAbstract
+  nameWithType: TypeModifiers.PrivateProtectedAbstract
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtectedAbstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtectedAbstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 136
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private protected abstract</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateProtectedAbstract = PrivateProtected | Abstract
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateProtectedAbstract = PrivateProtected Or Abstract
+- uid: Garyon.Reflection.TypeModifiers.PrivateAbstract
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateAbstract
+  id: PrivateAbstract
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateAbstract
+  nameWithType: TypeModifiers.PrivateAbstract
+  fullName: Garyon.Reflection.TypeModifiers.PrivateAbstract
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateAbstract
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 140
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private abstract</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateAbstract = Private | Abstract
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateAbstract = Private Or Abstract
+- uid: Garyon.Reflection.TypeModifiers.PublicSealed
+  commentId: F:Garyon.Reflection.TypeModifiers.PublicSealed
+  id: PublicSealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PublicSealed
+  nameWithType: TypeModifiers.PublicSealed
+  fullName: Garyon.Reflection.TypeModifiers.PublicSealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PublicSealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 146
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>public sealed</code> modifier combination.
+  example: []
+  syntax:
+    content: PublicSealed = Public | Sealed
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PublicSealed = Public Or Sealed
+- uid: Garyon.Reflection.TypeModifiers.InternalSealed
+  commentId: F:Garyon.Reflection.TypeModifiers.InternalSealed
+  id: InternalSealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: InternalSealed
+  nameWithType: TypeModifiers.InternalSealed
+  fullName: Garyon.Reflection.TypeModifiers.InternalSealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InternalSealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 150
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>internal sealed</code> modifier combination.
+  example: []
+  syntax:
+    content: InternalSealed = Internal | Sealed
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: InternalSealed = Internal Or Sealed
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternalSealed
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternalSealed
+  id: ProtectedInternalSealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternalSealed
+  nameWithType: TypeModifiers.ProtectedInternalSealed
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternalSealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternalSealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 154
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected internal sealed</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedInternalSealed = ProtectedInternal | Sealed
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedInternalSealed = ProtectedInternal Or Sealed
+- uid: Garyon.Reflection.TypeModifiers.ProtectedSealed
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedSealed
+  id: ProtectedSealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedSealed
+  nameWithType: TypeModifiers.ProtectedSealed
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedSealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedSealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 158
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected sealed</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedSealed = Protected | Sealed
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedSealed = Protected Or Sealed
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtectedSealed
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtectedSealed
+  id: PrivateProtectedSealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtectedSealed
+  nameWithType: TypeModifiers.PrivateProtectedSealed
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtectedSealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtectedSealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 162
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private protected sealed</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateProtectedSealed = PrivateProtected | Sealed
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateProtectedSealed = PrivateProtected Or Sealed
+- uid: Garyon.Reflection.TypeModifiers.PrivateSealed
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateSealed
+  id: PrivateSealed
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateSealed
+  nameWithType: TypeModifiers.PrivateSealed
+  fullName: Garyon.Reflection.TypeModifiers.PrivateSealed
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateSealed
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 166
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private sealed</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateSealed = Private | Sealed
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateSealed = Private Or Sealed
+- uid: Garyon.Reflection.TypeModifiers.PublicReadonly
+  commentId: F:Garyon.Reflection.TypeModifiers.PublicReadonly
+  id: PublicReadonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PublicReadonly
+  nameWithType: TypeModifiers.PublicReadonly
+  fullName: Garyon.Reflection.TypeModifiers.PublicReadonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PublicReadonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 172
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>public readonly</code> modifier combination.
+  example: []
+  syntax:
+    content: PublicReadonly = Public | Readonly
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PublicReadonly = Public Or Readonly
+- uid: Garyon.Reflection.TypeModifiers.InternalReadonly
+  commentId: F:Garyon.Reflection.TypeModifiers.InternalReadonly
+  id: InternalReadonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: InternalReadonly
+  nameWithType: TypeModifiers.InternalReadonly
+  fullName: Garyon.Reflection.TypeModifiers.InternalReadonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InternalReadonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 176
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>internal readonly</code> modifier combination.
+  example: []
+  syntax:
+    content: InternalReadonly = Internal | Readonly
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: InternalReadonly = Internal Or Readonly
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternalReadonly
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternalReadonly
+  id: ProtectedInternalReadonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternalReadonly
+  nameWithType: TypeModifiers.ProtectedInternalReadonly
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternalReadonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternalReadonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 180
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected internal readonly</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedInternalReadonly = ProtectedInternal | Readonly
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedInternalReadonly = ProtectedInternal Or Readonly
+- uid: Garyon.Reflection.TypeModifiers.ProtectedReadonly
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedReadonly
+  id: ProtectedReadonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedReadonly
+  nameWithType: TypeModifiers.ProtectedReadonly
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedReadonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedReadonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 184
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected readonly</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedReadonly = Protected | Readonly
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedReadonly = Protected Or Readonly
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtectedReadonly
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtectedReadonly
+  id: PrivateProtectedReadonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtectedReadonly
+  nameWithType: TypeModifiers.PrivateProtectedReadonly
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtectedReadonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtectedReadonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 188
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private protected readonly</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateProtectedReadonly = PrivateProtected | Readonly
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateProtectedReadonly = PrivateProtected Or Readonly
+- uid: Garyon.Reflection.TypeModifiers.PrivateReadonly
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateReadonly
+  id: PrivateReadonly
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateReadonly
+  nameWithType: TypeModifiers.PrivateReadonly
+  fullName: Garyon.Reflection.TypeModifiers.PrivateReadonly
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateReadonly
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 192
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private readonly</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateReadonly = Private | Readonly
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateReadonly = Private Or Readonly
+- uid: Garyon.Reflection.TypeModifiers.PublicRef
+  commentId: F:Garyon.Reflection.TypeModifiers.PublicRef
+  id: PublicRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PublicRef
+  nameWithType: TypeModifiers.PublicRef
+  fullName: Garyon.Reflection.TypeModifiers.PublicRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PublicRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 198
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>public ref</code> modifier combination.
+  example: []
+  syntax:
+    content: PublicRef = Public | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PublicRef = Public Or Ref
+- uid: Garyon.Reflection.TypeModifiers.InternalRef
+  commentId: F:Garyon.Reflection.TypeModifiers.InternalRef
+  id: InternalRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: InternalRef
+  nameWithType: TypeModifiers.InternalRef
+  fullName: Garyon.Reflection.TypeModifiers.InternalRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InternalRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 202
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>internal ref</code> modifier combination.
+  example: []
+  syntax:
+    content: InternalRef = Internal | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: InternalRef = Internal Or Ref
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternalRef
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternalRef
+  id: ProtectedInternalRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternalRef
+  nameWithType: TypeModifiers.ProtectedInternalRef
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternalRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternalRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 206
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected internal ref</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedInternalRef = ProtectedInternal | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedInternalRef = ProtectedInternal Or Ref
+- uid: Garyon.Reflection.TypeModifiers.ProtectedRef
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedRef
+  id: ProtectedRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedRef
+  nameWithType: TypeModifiers.ProtectedRef
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 210
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected ref</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedRef = Protected | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedRef = Protected Or Ref
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtectedRef
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtectedRef
+  id: PrivateProtectedRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtectedRef
+  nameWithType: TypeModifiers.PrivateProtectedRef
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtectedRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtectedRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 214
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private protected ref</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateProtectedRef = PrivateProtected | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateProtectedRef = PrivateProtected Or Ref
+- uid: Garyon.Reflection.TypeModifiers.PrivateRef
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateRef
+  id: PrivateRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateRef
+  nameWithType: TypeModifiers.PrivateRef
+  fullName: Garyon.Reflection.TypeModifiers.PrivateRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 218
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private ref</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateRef = Private | Ref
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateRef = Private Or Ref
+- uid: Garyon.Reflection.TypeModifiers.PublicReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.PublicReadonlyRef
+  id: PublicReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PublicReadonlyRef
+  nameWithType: TypeModifiers.PublicReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.PublicReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PublicReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 224
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>public readonly ref</code> modifier combination.
+  example: []
+  syntax:
+    content: PublicReadonlyRef = Public | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PublicReadonlyRef = Public Or ReadonlyRef
+- uid: Garyon.Reflection.TypeModifiers.InternalReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.InternalReadonlyRef
+  id: InternalReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: InternalReadonlyRef
+  nameWithType: TypeModifiers.InternalReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.InternalReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InternalReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 228
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>internal readonly ref</code> modifier combination.
+  example: []
+  syntax:
+    content: InternalReadonlyRef = Internal | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: InternalReadonlyRef = Internal Or ReadonlyRef
+- uid: Garyon.Reflection.TypeModifiers.ProtectedInternalReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedInternalReadonlyRef
+  id: ProtectedInternalReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedInternalReadonlyRef
+  nameWithType: TypeModifiers.ProtectedInternalReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedInternalReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedInternalReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 233
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    The <code>protected internal readonly ref</code> modifier
+
+    combination.
+  example: []
+  syntax:
+    content: ProtectedInternalReadonlyRef = ProtectedInternal | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedInternalReadonlyRef = ProtectedInternal Or ReadonlyRef
+- uid: Garyon.Reflection.TypeModifiers.ProtectedReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.ProtectedReadonlyRef
+  id: ProtectedReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: ProtectedReadonlyRef
+  nameWithType: TypeModifiers.ProtectedReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.ProtectedReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProtectedReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 237
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>protected readonly ref</code> modifier combination.
+  example: []
+  syntax:
+    content: ProtectedReadonlyRef = Protected | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: ProtectedReadonlyRef = Protected Or ReadonlyRef
+- uid: Garyon.Reflection.TypeModifiers.PrivateProtectedReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateProtectedReadonlyRef
+  id: PrivateProtectedReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateProtectedReadonlyRef
+  nameWithType: TypeModifiers.PrivateProtectedReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.PrivateProtectedReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateProtectedReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 242
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    The <code>private protected readonly ref</code> modifier
+
+    combination.
+  example: []
+  syntax:
+    content: PrivateProtectedReadonlyRef = PrivateProtected | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateProtectedReadonlyRef = PrivateProtected Or ReadonlyRef
+- uid: Garyon.Reflection.TypeModifiers.PrivateReadonlyRef
+  commentId: F:Garyon.Reflection.TypeModifiers.PrivateReadonlyRef
+  id: PrivateReadonlyRef
+  parent: Garyon.Reflection.TypeModifiers
+  langs:
+  - csharp
+  - vb
+  name: PrivateReadonlyRef
+  nameWithType: TypeModifiers.PrivateReadonlyRef
+  fullName: Garyon.Reflection.TypeModifiers.PrivateReadonlyRef
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeModifiers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PrivateReadonlyRef
+    path: ../Garyon/Reflection/TypeModifiers.cs
+    startLine: 246
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The <code>private readonly ref</code> modifier combination.
+  example: []
+  syntax:
+    content: PrivateReadonlyRef = Private | ReadonlyRef
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: PrivateReadonlyRef = Private Or ReadonlyRef
+references:
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeModifiers)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<TypeModifiers>(TypeModifiers, TypeModifiers)
+  nameWithType: ComparisonExtensions.BeginCompare<TypeModifiers>(TypeModifiers, TypeModifiers)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Reflection.TypeModifiers>(Garyon.Reflection.TypeModifiers, Garyon.Reflection.TypeModifiers)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of TypeModifiers)(TypeModifiers, TypeModifiers)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Reflection.TypeModifiers)(Garyon.Reflection.TypeModifiers, Garyon.Reflection.TypeModifiers)
+  name.vb: BeginCompare(Of TypeModifiers)(TypeModifiers, TypeModifiers)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeModifiers,Garyon.Reflection.TypeModifiers)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeModifiers,Garyon.Reflection.TypeModifiers)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TypeModifiers, TValue>(TypeModifiers)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TypeModifiers, TValue>(TypeModifiers)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Reflection.TypeModifiers, TValue>(Garyon.Reflection.TypeModifiers)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TypeModifiers, TValue)(TypeModifiers)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Reflection.TypeModifiers, TValue)(Garyon.Reflection.TypeModifiers)
+  name.vb: GetEnumerator(Of TypeModifiers, TValue)(TypeModifiers)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Reflection.TypeModifiers)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Reflection.TypeModifiers)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Reflection.TypeModifiers})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TypeModifiers>(TypeModifiers, Action<TypeModifiers>)
+  nameWithType: MoreLinqExtensions.Apply<TypeModifiers>(TypeModifiers, Action<TypeModifiers>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Reflection.TypeModifiers>(Garyon.Reflection.TypeModifiers, System.Action<Garyon.Reflection.TypeModifiers>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TypeModifiers)(TypeModifiers, Action(Of TypeModifiers))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Reflection.TypeModifiers)(Garyon.Reflection.TypeModifiers, System.Action(Of Garyon.Reflection.TypeModifiers))
+  name.vb: Apply(Of TypeModifiers)(TypeModifiers, Action(Of TypeModifiers))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Reflection.TypeModifiers,System.Action{Garyon.Reflection.TypeModifiers})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Reflection.TypeModifiers,System.Action{Garyon.Reflection.TypeModifiers})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Reflection.TypeModifiers,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TypeModifiers, TResult>(TypeModifiers, Func<TypeModifiers, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TypeModifiers, TResult>(TypeModifiers, Func<TypeModifiers, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Reflection.TypeModifiers, TResult>(Garyon.Reflection.TypeModifiers, System.Func<Garyon.Reflection.TypeModifiers, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TypeModifiers, TResult)(TypeModifiers, Func(Of TypeModifiers, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Reflection.TypeModifiers, TResult)(Garyon.Reflection.TypeModifiers, System.Func(Of Garyon.Reflection.TypeModifiers, TResult))
+  name.vb: Apply(Of TypeModifiers, TResult)(TypeModifiers, Func(Of TypeModifiers, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Reflection.TypeModifiers,System.Func{Garyon.Reflection.TypeModifiers,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Reflection.TypeModifiers,System.Func{Garyon.Reflection.TypeModifiers,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Extensions.UnsafeExtensions.GetBytes``1
+  commentId: M:Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  parent: Garyon.Extensions.UnsafeExtensions
+  definition: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  name: GetBytes<TypeModifiers>(ref TypeModifiers)
+  nameWithType: UnsafeExtensions.GetBytes<TypeModifiers>(ref TypeModifiers)
+  fullName: Garyon.Extensions.UnsafeExtensions.GetBytes<Garyon.Reflection.TypeModifiers>(ref Garyon.Reflection.TypeModifiers)
+  nameWithType.vb: UnsafeExtensions.GetBytes(Of TypeModifiers)(TypeModifiers)
+  fullName.vb: Garyon.Extensions.UnsafeExtensions.GetBytes(Of Garyon.Reflection.TypeModifiers)(Garyon.Reflection.TypeModifiers)
+  name.vb: GetBytes(Of TypeModifiers)(TypeModifiers)
+  spec.csharp:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(Garyon.Reflection.TypeModifiers@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(Garyon.Reflection.TypeModifiers@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<TypeModifiers>(TypeModifiers)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<TypeModifiers>(TypeModifiers)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Reflection.TypeModifiers>(Garyon.Reflection.TypeModifiers)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of TypeModifiers)(TypeModifiers)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Reflection.TypeModifiers)(Garyon.Reflection.TypeModifiers)
+  name.vb: EnumerateSingle(Of TypeModifiers)(TypeModifiers)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Reflection.TypeModifiers)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Reflection.TypeModifiers)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+- uid: Garyon.Reflection.TypeModifiers.Garyon.Objects.StructRefHelperExtensions.CreateReference``1
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  parent: Garyon.Objects.StructRefHelperExtensions
+  definition: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference<TypeModifiers>(ref TypeModifiers)
+  nameWithType: StructRefHelperExtensions.CreateReference<TypeModifiers>(ref TypeModifiers)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<Garyon.Reflection.TypeModifiers>(ref Garyon.Reflection.TypeModifiers)
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of TypeModifiers)(TypeModifiers)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of Garyon.Reflection.TypeModifiers)(Garyon.Reflection.TypeModifiers)
+  name.vb: CreateReference(Of TypeModifiers)(TypeModifiers)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(Garyon.Reflection.TypeModifiers@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: <
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(Garyon.Reflection.TypeModifiers@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeModifiers
+    name: TypeModifiers
+    href: Garyon.Reflection.TypeModifiers.html
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.EqualTo(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  name: EqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.EqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.EqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, Object)
+  name.vb: EqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  name: GetComparisonResult(IComparable, object)
+  nameWithType: IComparableExtensions.GetComparisonResult(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GetComparisonResult(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, Object)
+  name.vb: GetComparisonResult(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThan(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  name: GreaterThan(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, Object)
+  name.vb: GreaterThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  name: GreaterThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, Object)
+  name.vb: GreaterThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.LessThan(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  name: LessThan(IComparable, object)
+  nameWithType: IComparableExtensions.LessThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, Object)
+  name.vb: LessThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  name: LessThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.LessThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, Object)
+  name.vb: LessThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.Object,Garyon.Objects.ComparisonResult)
+  commentId: M:Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  name: MatchesComparisonResult(IComparable, object, ComparisonResult)
+  nameWithType: IComparableExtensions.MatchesComparisonResult(IComparable, object, ComparisonResult)
+  fullName: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, object, Garyon.Objects.ComparisonResult)
+  nameWithType.vb: IComparableExtensions.MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, Object, Garyon.Objects.ComparisonResult)
+  name.vb: MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.NotEqualTo(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  name: NotEqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.NotEqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.NotEqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, Object)
+  name.vb: NotEqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.Object,Garyon.Objects.ComparisonKinds)
+  commentId: M:Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  name: SatisfiesComparison(IComparable, object, ComparisonKinds)
+  nameWithType: IComparableExtensions.SatisfiesComparison(IComparable, object, ComparisonKinds)
+  fullName: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, object, Garyon.Objects.ComparisonKinds)
+  nameWithType.vb: IComparableExtensions.SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, Object, Garyon.Objects.ComparisonKinds)
+  name.vb: SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  commentId: M:Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  name: GetBytes<T>(ref T)
+  nameWithType: UnsafeExtensions.GetBytes<T>(ref T)
+  fullName: Garyon.Extensions.UnsafeExtensions.GetBytes<T>(ref T)
+  nameWithType.vb: UnsafeExtensions.GetBytes(Of T)(T)
+  fullName.vb: Garyon.Extensions.UnsafeExtensions.GetBytes(Of T)(T)
+  name.vb: GetBytes(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.UnsafeExtensions
+  commentId: T:Garyon.Extensions.UnsafeExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.UnsafeExtensions.html
+  name: UnsafeExtensions
+  nameWithType: UnsafeExtensions
+  fullName: Garyon.Extensions.UnsafeExtensions
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference<T>(ref T)
+  nameWithType: StructRefHelperExtensions.CreateReference<T>(ref T)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<T>(ref T)
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of T)(T)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of T)(T)
+  name.vb: CreateReference(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.StructRefHelperExtensions
+  commentId: T:Garyon.Objects.StructRefHelperExtensions
+  parent: Garyon.Objects
+  href: Garyon.Objects.StructRefHelperExtensions.html
+  name: StructRefHelperExtensions
+  nameWithType: StructRefHelperExtensions
+  fullName: Garyon.Objects.StructRefHelperExtensions
+- uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  name: EqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.EqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.EqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, Object)
+  name.vb: EqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions
+  commentId: T:Garyon.Extensions.IComparableExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IComparableExtensions.html
+  name: IComparableExtensions
+  nameWithType: IComparableExtensions
+  fullName: Garyon.Extensions.IComparableExtensions
+- uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  name: GetComparisonResult(IComparable, object)
+  nameWithType: IComparableExtensions.GetComparisonResult(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GetComparisonResult(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, Object)
+  name.vb: GetComparisonResult(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  name: GreaterThan(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, Object)
+  name.vb: GreaterThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  name: GreaterThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, Object)
+  name.vb: GreaterThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  name: LessThan(IComparable, object)
+  nameWithType: IComparableExtensions.LessThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, Object)
+  name.vb: LessThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  name: LessThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.LessThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, Object)
+  name.vb: LessThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  commentId: M:Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  name: MatchesComparisonResult(IComparable, object, ComparisonResult)
+  nameWithType: IComparableExtensions.MatchesComparisonResult(IComparable, object, ComparisonResult)
+  fullName: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, object, Garyon.Objects.ComparisonResult)
+  nameWithType.vb: IComparableExtensions.MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, Object, Garyon.Objects.ComparisonResult)
+  name.vb: MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  name: NotEqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.NotEqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.NotEqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, Object)
+  name.vb: NotEqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  commentId: M:Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  name: SatisfiesComparison(IComparable, object, ComparisonKinds)
+  nameWithType: IComparableExtensions.SatisfiesComparison(IComparable, object, ComparisonKinds)
+  fullName: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, object, Garyon.Objects.ComparisonKinds)
+  nameWithType.vb: IComparableExtensions.SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, Object, Garyon.Objects.ComparisonKinds)
+  name.vb: SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: Garyon.Reflection.TypeModifiers
+  commentId: T:Garyon.Reflection.TypeModifiers
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeModifiers.html
+  name: TypeModifiers
+  nameWithType: TypeModifiers
+  fullName: Garyon.Reflection.TypeModifiers

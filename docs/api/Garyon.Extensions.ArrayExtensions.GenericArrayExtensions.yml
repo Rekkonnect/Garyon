@@ -1,0 +1,1175 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  commentId: T:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  id: GenericArrayExtensions
+  parent: Garyon.Extensions.ArrayExtensions
+  children:
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear(System.Array)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray``1(``0[])
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill``1(``0[],``0)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths(System.Array)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType``1(System.Array)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType``1(System.Array,System.Int32)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd``1(``0[],System.Int32)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart``1(``0[],System.Int32)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement``1(``0[],System.Int32,System.Int32)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse``1(``0[])
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds``1(``0[],System.Int32,System.Int32)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment``1(``0[])
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment``1(``0[],System.Int32,System.Int32)
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap``1(``0[],System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: GenericArrayExtensions
+  nameWithType: GenericArrayExtensions
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GenericArrayExtensions
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: Provides generic extension methods for arrays.
+  example: []
+  syntax:
+    content: public static class GenericArrayExtensions
+    content.vb: Public Module GenericArrayExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray``1(``0[])
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray``1(``0[])
+  id: CopyArray``1(``0[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: CopyArray<T>(T[])
+  nameWithType: GenericArrayExtensions.CopyArray<T>(T[])
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray<T>(T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CopyArray
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 21
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Copies the original array and returns a new array which contains the
+
+    same elements at the same indices.
+  example: []
+  syntax:
+    content: public static T[] CopyArray<T>(this T[] array)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The original array to copy.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function CopyArray(Of T)(array As T()) As T()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray*
+  nameWithType.vb: GenericArrayExtensions.CopyArray(Of T)(T())
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray(Of T)(T())
+  name.vb: CopyArray(Of T)(T())
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement``1(``0[],System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement``1(``0[],System.Int32,System.Int32)
+  id: MoveElement``1(``0[],System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveElement<T>(T[], int, int)
+  nameWithType: GenericArrayExtensions.MoveElement<T>(T[], int, int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement<T>(T[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveElement
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 45
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Moves an array element at a specified index to another. This affects the
+
+    original array and returns its instance.
+  example: []
+  syntax:
+    content: public static T[] MoveElement<T>(this T[] array, int from, int to)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The original array whose element to move.
+    - id: from
+      type: System.Int32
+      description: The old index of the element to move.
+    - id: to
+      type: System.Int32
+      description: The new index of the element to move.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function MoveElement(Of T)(array As T(), from As Integer, [to] As Integer) As T()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement*
+  nameWithType.vb: GenericArrayExtensions.MoveElement(Of T)(T(), Integer, Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement(Of T)(T(), Integer, Integer)
+  name.vb: MoveElement(Of T)(T(), Integer, Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd``1(``0[],System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd``1(``0[],System.Int32)
+  id: MoveElementToEnd``1(``0[],System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveElementToEnd<T>(T[], int)
+  nameWithType: GenericArrayExtensions.MoveElementToEnd<T>(T[], int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd<T>(T[], int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveElementToEnd
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 71
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Moves an array element at a specified index to the end of the array.
+
+    This affects the original array and returns its instance.
+  example: []
+  syntax:
+    content: public static T[] MoveElementToEnd<T>(this T[] array, int from)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The original array whose element to move.
+    - id: from
+      type: System.Int32
+      description: The old index of the element to move.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function MoveElementToEnd(Of T)(array As T(), from As Integer) As T()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd*
+  nameWithType.vb: GenericArrayExtensions.MoveElementToEnd(Of T)(T(), Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd(Of T)(T(), Integer)
+  name.vb: MoveElementToEnd(Of T)(T(), Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart``1(``0[],System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart``1(``0[],System.Int32)
+  id: MoveElementToStart``1(``0[],System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveElementToStart<T>(T[], int)
+  nameWithType: GenericArrayExtensions.MoveElementToStart<T>(T[], int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart<T>(T[], int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveElementToStart
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 85
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Moves an array element at a specified index to the start of the array.
+
+    This affects the original array and returns its instance.
+  example: []
+  syntax:
+    content: public static T[] MoveElementToStart<T>(this T[] array, int from)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The original array whose element to move.
+    - id: from
+      type: System.Int32
+      description: The old index of the element to move.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function MoveElementToStart(Of T)(array As T(), from As Integer) As T()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart*
+  nameWithType.vb: GenericArrayExtensions.MoveElementToStart(Of T)(T(), Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart(Of T)(T(), Integer)
+  name.vb: MoveElementToStart(Of T)(T(), Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse``1(``0[])
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse``1(``0[])
+  id: Reverse``1(``0[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Reverse<T>(T[])
+  nameWithType: GenericArrayExtensions.Reverse<T>(T[])
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse<T>(T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Reverse
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 97
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Reverses the elements of the array. Returns the instance of the original
+
+    array.
+  example: []
+  syntax:
+    content: public static T[] Reverse<T>(this T[] array)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The original array to reverse.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function Reverse(Of T)(array As T()) As T()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse*
+  nameWithType.vb: GenericArrayExtensions.Reverse(Of T)(T())
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse(Of T)(T())
+  name.vb: Reverse(Of T)(T())
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap``1(``0[],System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap``1(``0[],System.Int32,System.Int32)
+  id: Swap``1(``0[],System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Swap<T>(T[], int, int)
+  nameWithType: GenericArrayExtensions.Swap<T>(T[], int, int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap<T>(T[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Swap
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 119
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Swaps two elements in the array. Returns the instance of the original
+
+    array.
+  example: []
+  syntax:
+    content: public static T[] Swap<T>(this T[] array, int a, int b)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The array whose elements to swap.
+    - id: a
+      type: System.Int32
+      description: The index of the first element to swap.
+    - id: b
+      type: System.Int32
+      description: The index of the second element to swap.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function Swap(Of T)(array As T(), a As Integer, b As Integer) As T()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap*
+  nameWithType.vb: GenericArrayExtensions.Swap(Of T)(T(), Integer, Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap(Of T)(T(), Integer, Integer)
+  name.vb: Swap(Of T)(T(), Integer, Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment``1(``0[])
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment``1(``0[])
+  id: Segment``1(``0[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Segment<T>(T[])
+  nameWithType: GenericArrayExtensions.Segment<T>(T[])
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment<T>(T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Segment
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 134
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Creates an <xref href="System.ArraySegment%601" data-throw-if-not-resolved="false"></xref> that reflects the entire
+
+    array's range.
+  example: []
+  syntax:
+    content: public static ArraySegment<T> Segment<T>(this T[] array)
+    parameters:
+    - id: array
+      type: '{T}[]'
+    typeParameters:
+    - id: T
+    return:
+      type: System.ArraySegment{{T}}
+    content.vb: Public Shared Function Segment(Of T)(array As T()) As ArraySegment(Of T)
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment*
+  nameWithType.vb: GenericArrayExtensions.Segment(Of T)(T())
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment(Of T)(T())
+  name.vb: Segment(Of T)(T())
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment``1(``0[],System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment``1(``0[],System.Int32,System.Int32)
+  id: Segment``1(``0[],System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Segment<T>(T[], int, int)
+  nameWithType: GenericArrayExtensions.Segment<T>(T[], int, int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment<T>(T[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Segment
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 143
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Creates an <xref href="System.ArraySegment%601" data-throw-if-not-resolved="false"></xref> that reflects a subset of the
+
+    array's range.
+  example: []
+  syntax:
+    content: public static ArraySegment<T> Segment<T>(this T[] array, int start, int count)
+    parameters:
+    - id: array
+      type: '{T}[]'
+    - id: start
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.ArraySegment{{T}}
+    content.vb: Public Shared Function Segment(Of T)(array As T(), start As Integer, count As Integer) As ArraySegment(Of T)
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment*
+  nameWithType.vb: GenericArrayExtensions.Segment(Of T)(T(), Integer, Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment(Of T)(T(), Integer, Integer)
+  name.vb: Segment(Of T)(T(), Integer, Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds``1(``0[],System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds``1(``0[],System.Int32,System.Int32)
+  id: SegmentFromBounds``1(``0[],System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: SegmentFromBounds<T>(T[], int, int)
+  nameWithType: GenericArrayExtensions.SegmentFromBounds<T>(T[], int, int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds<T>(T[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SegmentFromBounds
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 161
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Creates an <xref href="System.ArraySegment%601" data-throw-if-not-resolved="false"></xref> that reflects a subset of the
+
+    array's range.
+  example: []
+  syntax:
+    content: public static ArraySegment<T> SegmentFromBounds<T>(this T[] array, int start, int end)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The array whose segment to get.
+    - id: start
+      type: System.Int32
+      description: The starting index within the array, inclusive.
+    - id: end
+      type: System.Int32
+      description: The end index of the array, exclusive.
+    typeParameters:
+    - id: T
+    return:
+      type: System.ArraySegment{{T}}
+    content.vb: Public Shared Function SegmentFromBounds(Of T)(array As T(), start As Integer, [end] As Integer) As ArraySegment(Of T)
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds*
+  nameWithType.vb: GenericArrayExtensions.SegmentFromBounds(Of T)(T(), Integer, Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds(Of T)(T(), Integer, Integer)
+  name.vb: SegmentFromBounds(Of T)(T(), Integer, Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType``1(System.Array)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType``1(System.Array)
+  id: IsArrayOfType``1(System.Array)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsArrayOfType<TElement>(Array)
+  nameWithType: GenericArrayExtensions.IsArrayOfType<TElement>(Array)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType<TElement>(System.Array)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArrayOfType
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 200
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Determines whether an array type contains elements of the provided type.
+
+    It only checks for multidimensional arrays (of the form [(,)*]). Jagged
+
+    arrays are not taken into consideration in this implementation. Also
+
+    built as an extension method to allow per-instance call.
+  example: []
+  syntax:
+    content: public static bool IsArrayOfType<TElement>(this Array array)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The array whose type to examine.
+    typeParameters:
+    - id: TElement
+      description: The type of the element the array stores.
+    return:
+      type: System.Boolean
+      description: >-
+        Whether the given array type stores elements of the
+
+        <code class="typeparamref">TElement</code> type.
+    content.vb: Public Shared Function IsArrayOfType(Of TElement)(array As Array) As Boolean
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType*
+  nameWithType.vb: GenericArrayExtensions.IsArrayOfType(Of TElement)(Array)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType(Of TElement)(System.Array)
+  name.vb: IsArrayOfType(Of TElement)(Array)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType``1(System.Array,System.Int32)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType``1(System.Array,System.Int32)
+  id: IsArrayOfType``1(System.Array,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsArrayOfType<TElement>(Array, int)
+  nameWithType: GenericArrayExtensions.IsArrayOfType<TElement>(Array, int)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType<TElement>(System.Array, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArrayOfType
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 220
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Determines whether an array type contains elements of the provided type.
+
+    It also checks for jagged arrays up to a maximum jagging level. Also
+
+    built as an extension method to allow per-instance call.
+  example: []
+  syntax:
+    content: public static bool IsArrayOfType<TElement>(this Array array, int maxJaggingLevel)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The array whose type to examine.
+    - id: maxJaggingLevel
+      type: System.Int32
+      description: >-
+        The maximum jagging level of the array (1 means up to [], 2 means up to
+
+        [][], etc.).
+    typeParameters:
+    - id: TElement
+      description: The type of the element the array stores.
+    return:
+      type: System.Boolean
+      description: >-
+        Whether the given array type stores elements of the
+
+        <code class="typeparamref">TElement</code> type.
+    content.vb: Public Shared Function IsArrayOfType(Of TElement)(array As Array, maxJaggingLevel As Integer) As Boolean
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType*
+  nameWithType.vb: GenericArrayExtensions.IsArrayOfType(Of TElement)(Array, Integer)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType(Of TElement)(System.Array, Integer)
+  name.vb: IsArrayOfType(Of TElement)(Array, Integer)
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths(System.Array)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths(System.Array)
+  id: GetDimensionLengths(System.Array)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDimensionLengths(Array)
+  nameWithType: GenericArrayExtensions.GetDimensionLengths(Array)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths(System.Array)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDimensionLengths
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 233
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: Gets the lengths of the array's dimensions.
+  example: []
+  syntax:
+    content: public static int[] GetDimensionLengths(this Array array)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The array whose dimension lengths to get.
+    return:
+      type: System.Int32[]
+      description: An <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>[] containing the dimension lengths in order.
+    content.vb: Public Shared Function GetDimensionLengths(array As Array) As Integer()
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths*
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear(System.Array)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear(System.Array)
+  id: Clear(System.Array)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Clear(Array)
+  nameWithType: GenericArrayExtensions.Clear(Array)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear(System.Array)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Clear
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 247
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Clears the array by zeroing out all its elements. This affects the
+
+    original instance.
+  example: []
+  syntax:
+    content: public static void Clear(this Array array)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The array to clear.
+    content.vb: Public Shared Sub Clear(array As Array)
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear*
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill``1(``0[],``0)
+  commentId: M:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill``1(``0[],``0)
+  id: Fill``1(``0[],``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Fill<T>(T[], T)
+  nameWithType: GenericArrayExtensions.Fill<T>(T[], T)
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill<T>(T[], T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Fill
+    path: ../Garyon/Extensions/ArrayExtensions/GenericArrayExtensions.cs
+    startLine: 262
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Assigns the given <code class="paramref">value</code> of type
+
+    <code class="typeparamref">T</code> to each element of the specified
+
+    <code class="paramref">array</code>. This affects the original instance.
+  example: []
+  syntax:
+    content: public static void Fill<T>(this T[] array, T value)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The array to be filled.
+    - id: value
+      type: '{T}'
+      description: The value to assign to each array element.
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub Fill(Of T)(array As T(), value As T)
+  overload: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill*
+  nameWithType.vb: GenericArrayExtensions.Fill(Of T)(T(), T)
+  fullName.vb: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill(Of T)(T(), T)
+  name.vb: Fill(Of T)(T(), T)
+references:
+- uid: Garyon.Extensions.ArrayExtensions
+  commentId: N:Garyon.Extensions.ArrayExtensions
+  href: Garyon.html
+  name: Garyon.Extensions.ArrayExtensions
+  nameWithType: Garyon.Extensions.ArrayExtensions
+  fullName: Garyon.Extensions.ArrayExtensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.ArrayExtensions
+    name: ArrayExtensions
+    href: Garyon.Extensions.ArrayExtensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.ArrayExtensions
+    name: ArrayExtensions
+    href: Garyon.Extensions.ArrayExtensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_CopyArray__1___0___
+  name: CopyArray
+  nameWithType: GenericArrayExtensions.CopyArray
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.CopyArray
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_MoveElement__1___0___System_Int32_System_Int32_
+  name: MoveElement
+  nameWithType: GenericArrayExtensions.MoveElement
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElement
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_MoveElementToEnd__1___0___System_Int32_
+  name: MoveElementToEnd
+  nameWithType: GenericArrayExtensions.MoveElementToEnd
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToEnd
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_MoveElementToStart__1___0___System_Int32_
+  name: MoveElementToStart
+  nameWithType: GenericArrayExtensions.MoveElementToStart
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.MoveElementToStart
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_Reverse__1___0___
+  name: Reverse
+  nameWithType: GenericArrayExtensions.Reverse
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Reverse
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_Swap__1___0___System_Int32_System_Int32_
+  name: Swap
+  nameWithType: GenericArrayExtensions.Swap
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Swap
+- uid: System.ArraySegment`1
+  commentId: T:System.ArraySegment`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  name: ArraySegment<T>
+  nameWithType: ArraySegment<T>
+  fullName: System.ArraySegment<T>
+  nameWithType.vb: ArraySegment(Of T)
+  fullName.vb: System.ArraySegment(Of T)
+  name.vb: ArraySegment(Of T)
+  spec.csharp:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_Segment__1___0___
+  name: Segment
+  nameWithType: GenericArrayExtensions.Segment
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Segment
+- uid: System.ArraySegment{{T}}
+  commentId: T:System.ArraySegment{``0}
+  parent: System
+  definition: System.ArraySegment`1
+  href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  name: ArraySegment<T>
+  nameWithType: ArraySegment<T>
+  fullName: System.ArraySegment<T>
+  nameWithType.vb: ArraySegment(Of T)
+  fullName.vb: System.ArraySegment(Of T)
+  name.vb: ArraySegment(Of T)
+  spec.csharp:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_SegmentFromBounds__1___0___System_Int32_System_Int32_
+  name: SegmentFromBounds
+  nameWithType: GenericArrayExtensions.SegmentFromBounds
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.SegmentFromBounds
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_IsArrayOfType__1_System_Array_
+  name: IsArrayOfType
+  nameWithType: GenericArrayExtensions.IsArrayOfType
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.IsArrayOfType
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_GetDimensionLengths_System_Array_
+  name: GetDimensionLengths
+  nameWithType: GenericArrayExtensions.GetDimensionLengths
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.GetDimensionLengths
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_Clear_System_Array_
+  name: Clear
+  nameWithType: GenericArrayExtensions.Clear
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Clear
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html#Garyon_Extensions_ArrayExtensions_GenericArrayExtensions_Fill__1___0_____0_
+  name: Fill
+  nameWithType: GenericArrayExtensions.Fill
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.Fill
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

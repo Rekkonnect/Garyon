@@ -1,0 +1,874 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.Selectors
+  commentId: T:Garyon.Functions.Selectors
+  id: Selectors
+  parent: Garyon.Functions
+  children:
+  - Garyon.Functions.Selectors.DefaultValueReturner``1(``0)
+  - Garyon.Functions.Selectors.KeyReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  - Garyon.Functions.Selectors.NullReturner``1(``0)
+  - Garyon.Functions.Selectors.SelfObjectReturner``1(``0)
+  - Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+  - Garyon.Functions.Selectors.ValueReturner``1(System.Nullable{``0})
+  - Garyon.Functions.Selectors.ValueReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  langs:
+  - csharp
+  - vb
+  name: Selectors
+  nameWithType: Selectors
+  fullName: Garyon.Functions.Selectors
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Selectors
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Contains functions that can be used as selectors in functions that
+
+    manipulate objects. Using these functions is advised over lambdas, as
+
+    lambdas create a new delegate instance, effectively reducing performance.
+  example: []
+  syntax:
+    content: public static class Selectors
+    content.vb: Public Module Selectors
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Functions.Selectors.SelfObjectReturner``1(``0)
+  commentId: M:Garyon.Functions.Selectors.SelfObjectReturner``1(``0)
+  id: SelfObjectReturner``1(``0)
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: SelfObjectReturner<T>(T)
+  nameWithType: Selectors.SelfObjectReturner<T>(T)
+  fullName: Garyon.Functions.Selectors.SelfObjectReturner<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SelfObjectReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 24
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Returns the provided object without performing any manipulations.
+  example: []
+  syntax:
+    content: public static T SelfObjectReturner<T>(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The provided object.
+    typeParameters:
+    - id: T
+      description: The type of the object.
+    return:
+      type: '{T}'
+      description: The provided object without manipulating it.
+    content.vb: Public Shared Function SelfObjectReturner(Of T)(value As T) As T
+  overload: Garyon.Functions.Selectors.SelfObjectReturner*
+  nameWithType.vb: Selectors.SelfObjectReturner(Of T)(T)
+  fullName.vb: Garyon.Functions.Selectors.SelfObjectReturner(Of T)(T)
+  name.vb: SelfObjectReturner(Of T)(T)
+- uid: Garyon.Functions.Selectors.NullReturner``1(``0)
+  commentId: M:Garyon.Functions.Selectors.NullReturner``1(``0)
+  id: NullReturner``1(``0)
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: NullReturner<T>(T)
+  nameWithType: Selectors.NullReturner<T>(T)
+  fullName: Garyon.Functions.Selectors.NullReturner<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NullReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 38
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> without caring about the provided object.
+  example: []
+  syntax:
+    content: 'public static T? NullReturner<T>(T value) where T : class'
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The provided object.
+    typeParameters:
+    - id: T
+      description: The type of the object. Must be a reference type.
+    return:
+      type: '{T}'
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, ignoring the provided object.
+    content.vb: Public Shared Function NullReturner(Of T As Class)(value As T) As T
+  overload: Garyon.Functions.Selectors.NullReturner*
+  nameWithType.vb: Selectors.NullReturner(Of T)(T)
+  fullName.vb: Garyon.Functions.Selectors.NullReturner(Of T)(T)
+  name.vb: NullReturner(Of T)(T)
+- uid: Garyon.Functions.Selectors.DefaultValueReturner``1(``0)
+  commentId: M:Garyon.Functions.Selectors.DefaultValueReturner``1(``0)
+  id: DefaultValueReturner``1(``0)
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: DefaultValueReturner<T>(T)
+  nameWithType: Selectors.DefaultValueReturner<T>(T)
+  fullName: Garyon.Functions.Selectors.DefaultValueReturner<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DefaultValueReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 56
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a> without caring about the provided
+
+    object.
+  example: []
+  syntax:
+    content: public static T? DefaultValueReturner<T>(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The provided object.
+    typeParameters:
+    - id: T
+      description: The type of the object.
+    return:
+      type: '{T}'
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>, ignoring the provided object.
+    content.vb: Public Shared Function DefaultValueReturner(Of T)(value As T) As T
+  overload: Garyon.Functions.Selectors.DefaultValueReturner*
+  nameWithType.vb: Selectors.DefaultValueReturner(Of T)(T)
+  fullName.vb: Garyon.Functions.Selectors.DefaultValueReturner(Of T)(T)
+  name.vb: DefaultValueReturner(Of T)(T)
+- uid: Garyon.Functions.Selectors.ValueReturner``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Selectors.ValueReturner``1(System.Nullable{``0})
+  id: ValueReturner``1(System.Nullable{``0})
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: ValueReturner<T>(T?)
+  nameWithType: Selectors.ValueReturner<T>(T?)
+  fullName: Garyon.Functions.Selectors.ValueReturner<T>(T?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ValueReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 80
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Returns the value in a nullable struct object without checking whether
+
+    it has a value.
+  remarks: >-
+    <xref href="Garyon.Functions.Selectors.ValueOrDefaultReturner%60%601(System.Nullable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> checks for whether the
+
+    nullable struct object has a value.
+  example: []
+  syntax:
+    content: 'public static T ValueReturner<T>(T? value) where T : struct'
+    parameters:
+    - id: value
+      type: System.Nullable{{T}}
+      description: The provided nullable struct object.
+    typeParameters:
+    - id: T
+      description: The type of the struct.
+    return:
+      type: '{T}'
+      description: The value stored in the nullable struct object.
+    content.vb: Public Shared Function ValueReturner(Of T As Structure)(value As T?) As T
+  overload: Garyon.Functions.Selectors.ValueReturner*
+  nameWithType.vb: Selectors.ValueReturner(Of T)(T?)
+  fullName.vb: Garyon.Functions.Selectors.ValueReturner(Of T)(T?)
+  name.vb: ValueReturner(Of T)(T?)
+- uid: Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+  id: ValueOrDefaultReturner``1(System.Nullable{``0})
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: ValueOrDefaultReturner<T>(T?)
+  nameWithType: Selectors.ValueOrDefaultReturner<T>(T?)
+  fullName: Garyon.Functions.Selectors.ValueOrDefaultReturner<T>(T?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ValueOrDefaultReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 98
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Returns the value in a nullable struct object, if it has any, otherwise
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>.
+  example: []
+  syntax:
+    content: 'public static T ValueOrDefaultReturner<T>(T? value) where T : struct'
+    parameters:
+    - id: value
+      type: System.Nullable{{T}}
+      description: The provided nullable struct object.
+    typeParameters:
+    - id: T
+      description: The type of the struct.
+    return:
+      type: '{T}'
+      description: The value stored in the nullable struct object.
+    content.vb: Public Shared Function ValueOrDefaultReturner(Of T As Structure)(value As T?) As T
+  overload: Garyon.Functions.Selectors.ValueOrDefaultReturner*
+  nameWithType.vb: Selectors.ValueOrDefaultReturner(Of T)(T?)
+  fullName.vb: Garyon.Functions.Selectors.ValueOrDefaultReturner(Of T)(T?)
+  name.vb: ValueOrDefaultReturner(Of T)(T?)
+- uid: Garyon.Functions.Selectors.KeyReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  commentId: M:Garyon.Functions.Selectors.KeyReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  id: KeyReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: KeyReturner<TKey, TValue>(KeyValuePair<TKey, TValue>)
+  nameWithType: Selectors.KeyReturner<TKey, TValue>(KeyValuePair<TKey, TValue>)
+  fullName: Garyon.Functions.Selectors.KeyReturner<TKey, TValue>(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: KeyReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 123
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Returns the key in a <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>
+
+    object.
+  example: []
+  syntax:
+    content: public static TKey KeyReturner<TKey, TValue>(KeyValuePair<TKey, TValue> kvp)
+    parameters:
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: The provided <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> object.
+    typeParameters:
+    - id: TKey
+      description: The type of the key.
+    - id: TValue
+      description: The type of the value.
+    return:
+      type: '{TKey}'
+      description: >-
+        The key stored in the <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>
+
+        object.
+    content.vb: Public Shared Function KeyReturner(Of TKey, TValue)(kvp As KeyValuePair(Of TKey, TValue)) As TKey
+  overload: Garyon.Functions.Selectors.KeyReturner*
+  nameWithType.vb: Selectors.KeyReturner(Of TKey, TValue)(KeyValuePair(Of TKey, TValue))
+  fullName.vb: Garyon.Functions.Selectors.KeyReturner(Of TKey, TValue)(System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: KeyReturner(Of TKey, TValue)(KeyValuePair(Of TKey, TValue))
+- uid: Garyon.Functions.Selectors.ValueReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  commentId: M:Garyon.Functions.Selectors.ValueReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  id: ValueReturner``2(System.Collections.Generic.KeyValuePair{``0,``1})
+  parent: Garyon.Functions.Selectors
+  langs:
+  - csharp
+  - vb
+  name: ValueReturner<TKey, TValue>(KeyValuePair<TKey, TValue>)
+  nameWithType: Selectors.ValueReturner<TKey, TValue>(KeyValuePair<TKey, TValue>)
+  fullName: Garyon.Functions.Selectors.ValueReturner<TKey, TValue>(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Selectors.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ValueReturner
+    path: ../Garyon/Functions/Selectors.cs
+    startLine: 144
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Returns the value in a <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>
+
+    object.
+  example: []
+  syntax:
+    content: public static TValue ValueReturner<TKey, TValue>(KeyValuePair<TKey, TValue> kvp)
+    parameters:
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: The provided <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> object.
+    typeParameters:
+    - id: TKey
+      description: The type of the key.
+    - id: TValue
+      description: The type of the value.
+    return:
+      type: '{TValue}'
+      description: >-
+        The value stored in the <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>
+
+        object.
+    content.vb: Public Shared Function ValueReturner(Of TKey, TValue)(kvp As KeyValuePair(Of TKey, TValue)) As TValue
+  overload: Garyon.Functions.Selectors.ValueReturner*
+  nameWithType.vb: Selectors.ValueReturner(Of TKey, TValue)(KeyValuePair(Of TKey, TValue))
+  fullName.vb: Garyon.Functions.Selectors.ValueReturner(Of TKey, TValue)(System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: ValueReturner(Of TKey, TValue)(KeyValuePair(Of TKey, TValue))
+references:
+- uid: Garyon.Functions
+  commentId: N:Garyon.Functions
+  href: Garyon.html
+  name: Garyon.Functions
+  nameWithType: Garyon.Functions
+  fullName: Garyon.Functions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.Selectors.SelfObjectReturner*
+  commentId: Overload:Garyon.Functions.Selectors.SelfObjectReturner
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_SelfObjectReturner__1___0_
+  name: SelfObjectReturner
+  nameWithType: Selectors.SelfObjectReturner
+  fullName: Garyon.Functions.Selectors.SelfObjectReturner
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Functions.Selectors.NullReturner*
+  commentId: Overload:Garyon.Functions.Selectors.NullReturner
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_NullReturner__1___0_
+  name: NullReturner
+  nameWithType: Selectors.NullReturner
+  fullName: Garyon.Functions.Selectors.NullReturner
+- uid: Garyon.Functions.Selectors.DefaultValueReturner*
+  commentId: Overload:Garyon.Functions.Selectors.DefaultValueReturner
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_DefaultValueReturner__1___0_
+  name: DefaultValueReturner
+  nameWithType: Selectors.DefaultValueReturner
+  fullName: Garyon.Functions.Selectors.DefaultValueReturner
+- uid: Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_ValueOrDefaultReturner__1_System_Nullable___0__
+  name: ValueOrDefaultReturner<T>(T?)
+  nameWithType: Selectors.ValueOrDefaultReturner<T>(T?)
+  fullName: Garyon.Functions.Selectors.ValueOrDefaultReturner<T>(T?)
+  nameWithType.vb: Selectors.ValueOrDefaultReturner(Of T)(T?)
+  fullName.vb: Garyon.Functions.Selectors.ValueOrDefaultReturner(Of T)(T?)
+  name.vb: ValueOrDefaultReturner(Of T)(T?)
+  spec.csharp:
+  - uid: Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+    name: ValueOrDefaultReturner
+    href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_ValueOrDefaultReturner__1_System_Nullable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Functions.Selectors.ValueOrDefaultReturner``1(System.Nullable{``0})
+    name: ValueOrDefaultReturner
+    href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_ValueOrDefaultReturner__1_System_Nullable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: '?'
+  - name: )
+- uid: Garyon.Functions.Selectors.ValueReturner*
+  commentId: Overload:Garyon.Functions.Selectors.ValueReturner
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_ValueReturner__1_System_Nullable___0__
+  name: ValueReturner
+  nameWithType: Selectors.ValueReturner
+  fullName: Garyon.Functions.Selectors.ValueReturner
+- uid: System.Nullable{{T}}
+  commentId: T:System.Nullable{``0}
+  parent: System
+  definition: System.Nullable`1
+  name: T?
+  nameWithType: T?
+  fullName: T?
+  spec.csharp:
+  - name: T
+  - name: '?'
+  spec.vb:
+  - name: T
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Functions.Selectors.ValueOrDefaultReturner*
+  commentId: Overload:Garyon.Functions.Selectors.ValueOrDefaultReturner
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_ValueOrDefaultReturner__1_System_Nullable___0__
+  name: ValueOrDefaultReturner
+  nameWithType: Selectors.ValueOrDefaultReturner
+  fullName: Garyon.Functions.Selectors.ValueOrDefaultReturner
+- uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Functions.Selectors.KeyReturner*
+  commentId: Overload:Garyon.Functions.Selectors.KeyReturner
+  href: Garyon.Functions.Selectors.html#Garyon_Functions_Selectors_KeyReturner__2_System_Collections_Generic_KeyValuePair___0___1__
+  name: KeyReturner
+  nameWithType: Selectors.KeyReturner
+  fullName: Garyon.Functions.Selectors.KeyReturner
+- uid: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.KeyValuePair{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue

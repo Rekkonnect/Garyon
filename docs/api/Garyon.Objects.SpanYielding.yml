@@ -1,0 +1,939 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.SpanYielding
+  commentId: T:Garyon.Objects.SpanYielding
+  id: SpanYielding
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.SpanYielding.FillRest``1(Garyon.Objects.SpanYielder{``0}@)
+  - Garyon.Objects.SpanYielding.FillRest``1(Garyon.Objects.SpanYielder{``0}@,System.Func{``0})
+  - Garyon.Objects.SpanYielding.For``1(System.Span{``0},System.Func{``0})
+  - Garyon.Objects.SpanYielding.For``1(System.Span{``0},System.Func{``0},System.Int32)
+  - Garyon.Objects.SpanYielding.YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0})
+  - Garyon.Objects.SpanYielding.YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0},System.Int32)
+  - Garyon.Objects.SpanYielding.Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32)
+  - Garyon.Objects.SpanYielding.Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32,System.Func{``0})
+  langs:
+  - csharp
+  - vb
+  name: SpanYielding
+  nameWithType: SpanYielding
+  fullName: Garyon.Objects.SpanYielding
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SpanYielding
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Provides helper methods for yielding values from a factory
+
+    into a <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static class SpanYielding
+    content.vb: Public Module SpanYielding
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Objects.SpanYielding.For``1(System.Span{``0},System.Func{``0})
+  commentId: M:Garyon.Objects.SpanYielding.For``1(System.Span{``0},System.Func{``0})
+  id: For``1(System.Span{``0},System.Func{``0})
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: For<T>(Span<T>, Func<T>)
+  nameWithType: SpanYielding.For<T>(Span<T>, Func<T>)
+  fullName: Garyon.Objects.SpanYielding.For<T>(System.Span<T>, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: For
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 23
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Creates a new <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> from the
+
+    affected <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> and the factory method.
+  remarks: >-
+    <xref href="Garyon.Objects.SpanYielder%601.Factory" data-throw-if-not-resolved="false"></xref> is mutable, and the
+
+    underlying factory method may be changed from another
+
+    external source.
+  example: []
+  syntax:
+    content: public static SpanYielder<T> For<T>(Span<T> span, Func<T> factory)
+    parameters:
+    - id: span
+      type: System.Span{{T}}
+      description: >-
+        The <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> that the yielded values will
+
+        be inserted into.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory that will be used to yield values.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: >-
+        The new <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> instance with the
+
+        provided underlying factory method.
+    content.vb: Public Shared Function [For](Of T)(span As Span(Of T), factory As Func(Of T)) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.For*
+  nameWithType.vb: SpanYielding.For(Of T)(Span(Of T), Func(Of T))
+  fullName.vb: Garyon.Objects.SpanYielding.For(Of T)(System.Span(Of T), System.Func(Of T))
+  name.vb: For(Of T)(Span(Of T), Func(Of T))
+- uid: Garyon.Objects.SpanYielding.For``1(System.Span{``0},System.Func{``0},System.Int32)
+  commentId: M:Garyon.Objects.SpanYielding.For``1(System.Span{``0},System.Func{``0},System.Int32)
+  id: For``1(System.Span{``0},System.Func{``0},System.Int32)
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: For<T>(Span<T>, Func<T>, int)
+  nameWithType: SpanYielding.For<T>(Span<T>, Func<T>, int)
+  fullName: Garyon.Objects.SpanYielding.For<T>(System.Span<T>, System.Func<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: For
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 29
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Creates a new <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> from the
+
+    affected <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> and the factory method
+
+    with a speicifed starting index in the span.
+  remarks: >-
+    <xref href="Garyon.Objects.SpanYielder%601.Factory" data-throw-if-not-resolved="false"></xref> is mutable, and the
+
+    underlying factory method may be changed from another
+
+    external source.
+  example: []
+  syntax:
+    content: public static SpanYielder<T> For<T>(Span<T> span, Func<T> factory, int startingSpanIndex)
+    parameters:
+    - id: span
+      type: System.Span{{T}}
+      description: >-
+        The <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> that the yielded values will
+
+        be inserted into.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory that will be used to yield values.
+    - id: startingSpanIndex
+      type: System.Int32
+      description: The first index in the span that the values will be yielded on.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: >-
+        The new <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> instance with the
+
+        provided underlying factory method.
+    content.vb: Public Shared Function [For](Of T)(span As Span(Of T), factory As Func(Of T), startingSpanIndex As Integer) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.For*
+  nameWithType.vb: SpanYielding.For(Of T)(Span(Of T), Func(Of T), Integer)
+  fullName.vb: Garyon.Objects.SpanYielding.For(Of T)(System.Span(Of T), System.Func(Of T), Integer)
+  name.vb: For(Of T)(Span(Of T), Func(Of T), Integer)
+- uid: Garyon.Objects.SpanYielding.YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.SpanYielding.YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0})
+  id: YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0})
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: YieldOntoSpan<T>(Span<T>, int, Func<T>)
+  nameWithType: SpanYielding.YieldOntoSpan<T>(Span<T>, int, Func<T>)
+  fullName: Garyon.Objects.SpanYielding.YieldOntoSpan<T>(System.Span<T>, int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldOntoSpan
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance
+
+    of <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static SpanYielder<T> YieldOntoSpan<T>(Span<T> span, int count, Func<T> factory)
+    parameters:
+    - id: span
+      type: System.Span{{T}}
+      description: The <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: >-
+        A constructed <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> instance for yielding
+
+        further into the specified <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> with the given
+
+        factory method.
+    content.vb: Public Shared Function YieldOntoSpan(Of T)(span As Span(Of T), count As Integer, factory As Func(Of T)) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.YieldOntoSpan*
+  nameWithType.vb: SpanYielding.YieldOntoSpan(Of T)(Span(Of T), Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.SpanYielding.YieldOntoSpan(Of T)(System.Span(Of T), Integer, System.Func(Of T))
+  name.vb: YieldOntoSpan(Of T)(Span(Of T), Integer, Func(Of T))
+- uid: Garyon.Objects.SpanYielding.YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0},System.Int32)
+  commentId: M:Garyon.Objects.SpanYielding.YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0},System.Int32)
+  id: YieldOntoSpan``1(System.Span{``0},System.Int32,System.Func{``0},System.Int32)
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: YieldOntoSpan<T>(Span<T>, int, Func<T>, int)
+  nameWithType: SpanYielding.YieldOntoSpan<T>(Span<T>, int, Func<T>, int)
+  fullName: Garyon.Objects.SpanYielding.YieldOntoSpan<T>(System.Span<T>, int, System.Func<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldOntoSpan
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 79
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance
+
+    of <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static SpanYielder<T> YieldOntoSpan<T>(Span<T> span, int count, Func<T> factory, int startingIndex)
+    parameters:
+    - id: span
+      type: System.Span{{T}}
+      description: The <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    - id: startingIndex
+      type: System.Int32
+      description: The first index in the span that the values will be yielded on.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: >-
+        A constructed <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> instance for yielding
+
+        further into the specified <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> with the given
+
+        factory method.
+    content.vb: Public Shared Function YieldOntoSpan(Of T)(span As Span(Of T), count As Integer, factory As Func(Of T), startingIndex As Integer) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.YieldOntoSpan*
+  nameWithType.vb: SpanYielding.YieldOntoSpan(Of T)(Span(Of T), Integer, Func(Of T), Integer)
+  fullName.vb: Garyon.Objects.SpanYielding.YieldOntoSpan(Of T)(System.Span(Of T), Integer, System.Func(Of T), Integer)
+  name.vb: YieldOntoSpan(Of T)(Span(Of T), Integer, Func(Of T), Integer)
+- uid: Garyon.Objects.SpanYielding.Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32)
+  commentId: M:Garyon.Objects.SpanYielding.Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32)
+  id: Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: Yield<T>(ref SpanYielder<T>, int)
+  nameWithType: SpanYielding.Yield<T>(ref SpanYielder<T>, int)
+  fullName: Garyon.Objects.SpanYielding.Yield<T>(ref Garyon.Objects.SpanYielder<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Yield
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 86
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static ref SpanYielder<T> Yield<T>(this ref SpanYielder<T> yielder, int count)
+    parameters:
+    - id: yielder
+      type: Garyon.Objects.SpanYielder{{T}}
+    - id: count
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+    content.vb: Public Shared ByRef Function Yield(Of T)(yielder As SpanYielder(Of T), count As Integer) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.Yield*
+  nameWithType.vb: SpanYielding.Yield(Of T)(SpanYielder(Of T), Integer)
+  fullName.vb: Garyon.Objects.SpanYielding.Yield(Of T)(Garyon.Objects.SpanYielder(Of T), Integer)
+  name.vb: Yield(Of T)(SpanYielder(Of T), Integer)
+- uid: Garyon.Objects.SpanYielding.Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.SpanYielding.Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32,System.Func{``0})
+  id: Yield``1(Garyon.Objects.SpanYielder{``0}@,System.Int32,System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: Yield<T>(ref SpanYielder<T>, int, Func<T>)
+  nameWithType: SpanYielding.Yield<T>(ref SpanYielder<T>, int, Func<T>)
+  fullName: Garyon.Objects.SpanYielding.Yield<T>(ref Garyon.Objects.SpanYielder<T>, int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Yield
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 91
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  syntax:
+    content: public static ref SpanYielder<T> Yield<T>(this ref SpanYielder<T> yielder, int count, Func<T> factory)
+    parameters:
+    - id: yielder
+      type: Garyon.Objects.SpanYielder{{T}}
+    - id: count
+      type: System.Int32
+    - id: factory
+      type: System.Func{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+    content.vb: Public Shared ByRef Function Yield(Of T)(yielder As SpanYielder(Of T), count As Integer, factory As Func(Of T)) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.Yield*
+  nameWithType.vb: SpanYielding.Yield(Of T)(SpanYielder(Of T), Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.SpanYielding.Yield(Of T)(Garyon.Objects.SpanYielder(Of T), Integer, System.Func(Of T))
+  name.vb: Yield(Of T)(SpanYielder(Of T), Integer, Func(Of T))
+- uid: Garyon.Objects.SpanYielding.FillRest``1(Garyon.Objects.SpanYielder{``0}@)
+  commentId: M:Garyon.Objects.SpanYielding.FillRest``1(Garyon.Objects.SpanYielder{``0}@)
+  id: FillRest``1(Garyon.Objects.SpanYielder{``0}@)
+  isExtensionMethod: true
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: FillRest<T>(ref SpanYielder<T>)
+  nameWithType: SpanYielding.FillRest<T>(ref SpanYielder<T>)
+  fullName: Garyon.Objects.SpanYielding.FillRest<T>(ref Garyon.Objects.SpanYielder<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FillRest
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 110
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Fills the rest of the <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> from the
+
+    given instance of <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> using the
+
+    underlying factory method.
+  example: []
+  syntax:
+    content: public static ref SpanYielder<T> FillRest<T>(this ref SpanYielder<T> yielder)
+    parameters:
+    - id: yielder
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: >-
+        The <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> that yields values into
+
+        the <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> using its current factory method.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: A reference to the provided <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared ByRef Function FillRest(Of T)(yielder As SpanYielder(Of T)) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.FillRest*
+  nameWithType.vb: SpanYielding.FillRest(Of T)(SpanYielder(Of T))
+  fullName.vb: Garyon.Objects.SpanYielding.FillRest(Of T)(Garyon.Objects.SpanYielder(Of T))
+  name.vb: FillRest(Of T)(SpanYielder(Of T))
+- uid: Garyon.Objects.SpanYielding.FillRest``1(Garyon.Objects.SpanYielder{``0}@,System.Func{``0})
+  commentId: M:Garyon.Objects.SpanYielding.FillRest``1(Garyon.Objects.SpanYielder{``0}@,System.Func{``0})
+  id: FillRest``1(Garyon.Objects.SpanYielder{``0}@,System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.SpanYielding
+  langs:
+  - csharp
+  - vb
+  name: FillRest<T>(ref SpanYielder<T>, Func<T>)
+  nameWithType: SpanYielding.FillRest<T>(ref SpanYielder<T>, Func<T>)
+  fullName: Garyon.Objects.SpanYielding.FillRest<T>(ref Garyon.Objects.SpanYielder<T>, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/SpanYielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FillRest
+    path: ../Garyon/Objects/SpanYielding.cs
+    startLine: 131
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Fills the rest of the <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> from the
+
+    given instance of <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> using a
+
+    provided factory method.
+  example: []
+  syntax:
+    content: public static ref SpanYielder<T> FillRest<T>(this ref SpanYielder<T> yielder, Func<T> factory)
+    parameters:
+    - id: yielder
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: >-
+        The <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref> that yields values into
+
+        the <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> using the provided factory method.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method to use for yielding the remaining values.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.SpanYielder{{T}}
+      description: A reference to the provided <xref href="Garyon.Objects.SpanYielder%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared ByRef Function FillRest(Of T)(yielder As SpanYielder(Of T), factory As Func(Of T)) As SpanYielder(Of T)
+  overload: Garyon.Objects.SpanYielding.FillRest*
+  nameWithType.vb: SpanYielding.FillRest(Of T)(SpanYielder(Of T), Func(Of T))
+  fullName.vb: Garyon.Objects.SpanYielding.FillRest(Of T)(Garyon.Objects.SpanYielder(Of T), System.Func(Of T))
+  name.vb: FillRest(Of T)(SpanYielder(Of T), Func(Of T))
+references:
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Objects.SpanYielder`1
+  commentId: T:Garyon.Objects.SpanYielder`1
+  href: Garyon.Objects.SpanYielder-1.html
+  name: SpanYielder<T>
+  nameWithType: SpanYielder<T>
+  fullName: Garyon.Objects.SpanYielder<T>
+  nameWithType.vb: SpanYielder(Of T)
+  fullName.vb: Garyon.Objects.SpanYielder(Of T)
+  name.vb: SpanYielder(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.SpanYielder`1
+    name: SpanYielder
+    href: Garyon.Objects.SpanYielder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.SpanYielder`1
+    name: SpanYielder
+    href: Garyon.Objects.SpanYielder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.SpanYielder`1.Factory
+  commentId: P:Garyon.Objects.SpanYielder`1.Factory
+  href: Garyon.Objects.SpanYielder-1.html#Garyon_Objects_SpanYielder_1_Factory
+  name: Factory
+  nameWithType: SpanYielder<T>.Factory
+  fullName: Garyon.Objects.SpanYielder<T>.Factory
+  nameWithType.vb: SpanYielder(Of T).Factory
+  fullName.vb: Garyon.Objects.SpanYielder(Of T).Factory
+- uid: Garyon.Objects.SpanYielding.For*
+  commentId: Overload:Garyon.Objects.SpanYielding.For
+  href: Garyon.Objects.SpanYielding.html#Garyon_Objects_SpanYielding_For__1_System_Span___0__System_Func___0__
+  name: For
+  nameWithType: SpanYielding.For
+  fullName: Garyon.Objects.SpanYielding.For
+- uid: System.Span{{T}}
+  commentId: T:System.Span{``0}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func{{T}}
+  commentId: T:System.Func{``0}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<T>
+  nameWithType: Func<T>
+  fullName: System.Func<T>
+  nameWithType.vb: Func(Of T)
+  fullName.vb: System.Func(Of T)
+  name.vb: Func(Of T)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.SpanYielder{{T}}
+  commentId: T:Garyon.Objects.SpanYielder{``0}
+  parent: Garyon.Objects
+  definition: Garyon.Objects.SpanYielder`1
+  href: Garyon.Objects.SpanYielder-1.html
+  name: SpanYielder<T>
+  nameWithType: SpanYielder<T>
+  fullName: Garyon.Objects.SpanYielder<T>
+  nameWithType.vb: SpanYielder(Of T)
+  fullName.vb: Garyon.Objects.SpanYielder(Of T)
+  name.vb: SpanYielder(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.SpanYielder`1
+    name: SpanYielder
+    href: Garyon.Objects.SpanYielder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.SpanYielder`1
+    name: SpanYielder
+    href: Garyon.Objects.SpanYielder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Objects.SpanYielding.YieldOntoSpan*
+  commentId: Overload:Garyon.Objects.SpanYielding.YieldOntoSpan
+  href: Garyon.Objects.SpanYielding.html#Garyon_Objects_SpanYielding_YieldOntoSpan__1_System_Span___0__System_Int32_System_Func___0__
+  name: YieldOntoSpan
+  nameWithType: SpanYielding.YieldOntoSpan
+  fullName: Garyon.Objects.SpanYielding.YieldOntoSpan
+- uid: Garyon.Objects.SpanYielding.Yield*
+  commentId: Overload:Garyon.Objects.SpanYielding.Yield
+  href: Garyon.Objects.SpanYielding.html#Garyon_Objects_SpanYielding_Yield__1_Garyon_Objects_SpanYielder___0___System_Int32_
+  name: Yield
+  nameWithType: SpanYielding.Yield
+  fullName: Garyon.Objects.SpanYielding.Yield
+- uid: Garyon.Objects.SpanYielding.FillRest*
+  commentId: Overload:Garyon.Objects.SpanYielding.FillRest
+  href: Garyon.Objects.SpanYielding.html#Garyon_Objects_SpanYielding_FillRest__1_Garyon_Objects_SpanYielder___0___
+  name: FillRest
+  nameWithType: SpanYielding.FillRest
+  fullName: Garyon.Objects.SpanYielding.FillRest

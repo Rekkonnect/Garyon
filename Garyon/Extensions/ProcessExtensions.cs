@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Garyon.Functions;
+using System.Diagnostics;
 
 namespace Garyon.Extensions;
 
@@ -11,12 +12,7 @@ public static class ProcessExtensions
     {
         public void AwaitProcessInitialized()
         {
-            if (process.HasExited)
-            {
-                return;
-            }
-
-            process.WaitForInputIdle();
+            DelegateHelpers.Try(process.WaitForInputIdle);
         }
     }
 }

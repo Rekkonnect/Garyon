@@ -67,7 +67,7 @@ public abstract class DefaultInstanceContainer<TBase>
     protected DefaultInstanceContainer()
     {
         DefaultInstanceTypes = AppDomainCache
-            .Current.AllTypes
+            .Current.GetAllTypes()
             .Where(IsValidInstanceTypeFullCheck)
 #if HAS_IMMUTABLE
             .ToImmutableArray();

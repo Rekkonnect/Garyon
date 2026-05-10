@@ -1,0 +1,417 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.StructRefHelperExtensions
+  commentId: T:Garyon.Objects.StructRefHelperExtensions
+  id: StructRefHelperExtensions
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  langs:
+  - csharp
+  - vb
+  name: StructRefHelperExtensions
+  nameWithType: StructRefHelperExtensions
+  fullName: Garyon.Objects.StructRefHelperExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/StructRef.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: StructRefHelperExtensions
+    path: ../Garyon/Objects/StructRef.cs
+    startLine: 65
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Provides extensions related to <xref href="Garyon.Objects.StructRef%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static class StructRefHelperExtensions
+    content.vb: Public Module StructRefHelperExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  id: CreateReference``1(``0@)
+  isExtensionMethod: true
+  parent: Garyon.Objects.StructRefHelperExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateReference<T>(ref T)
+  nameWithType: StructRefHelperExtensions.CreateReference<T>(ref T)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<T>(ref T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/StructRef.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CreateReference
+    path: ../Garyon/Objects/StructRef.cs
+    startLine: 81
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Creates a new instance of the <xref href="Garyon.Objects.StructRef%601" data-throw-if-not-resolved="false"></xref> class out
+
+    of the desired struct instance reference.
+  example: []
+  syntax:
+    content: 'public static StructRef<T> CreateReference<T>(this ref T instance) where T : unmanaged'
+    parameters:
+    - id: instance
+      type: '{T}'
+      description: The reference to the struct instance.
+    typeParameters:
+    - id: T
+      description: The type of the struct instance whose reference is obtained.
+    return:
+      type: Garyon.Objects.StructRef{{T}}
+      description: >-
+        A <xref href="Garyon.Objects.StructRef%601" data-throw-if-not-resolved="false"></xref> instance holding a reference to the
+
+        passed struct instance reference.
+    content.vb: Public Shared Function CreateReference(Of T As Structure)(instance As T) As StructRef(Of T)
+  overload: Garyon.Objects.StructRefHelperExtensions.CreateReference*
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of T)(T)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of T)(T)
+  name.vb: CreateReference(Of T)(T)
+references:
+- uid: Garyon.Objects.StructRef`1
+  commentId: T:Garyon.Objects.StructRef`1
+  href: Garyon.Objects.StructRef-1.html
+  name: StructRef<T>
+  nameWithType: StructRef<T>
+  fullName: Garyon.Objects.StructRef<T>
+  nameWithType.vb: StructRef(Of T)
+  fullName.vb: Garyon.Objects.StructRef(Of T)
+  name.vb: StructRef(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRef`1
+    name: StructRef
+    href: Garyon.Objects.StructRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.StructRef`1
+    name: StructRef
+    href: Garyon.Objects.StructRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Objects.StructRefHelperExtensions.CreateReference*
+  commentId: Overload:Garyon.Objects.StructRefHelperExtensions.CreateReference
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference
+  nameWithType: StructRefHelperExtensions.CreateReference
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Objects.StructRef{{T}}
+  commentId: T:Garyon.Objects.StructRef{``0}
+  parent: Garyon.Objects
+  definition: Garyon.Objects.StructRef`1
+  href: Garyon.Objects.StructRef-1.html
+  name: StructRef<T>
+  nameWithType: StructRef<T>
+  fullName: Garyon.Objects.StructRef<T>
+  nameWithType.vb: StructRef(Of T)
+  fullName.vb: Garyon.Objects.StructRef(Of T)
+  name.vb: StructRef(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRef`1
+    name: StructRef
+    href: Garyon.Objects.StructRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.StructRef`1
+    name: StructRef
+    href: Garyon.Objects.StructRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

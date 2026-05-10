@@ -1,0 +1,3618 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.StringExtensions
+  commentId: T:Garyon.Extensions.StringExtensions
+  id: StringExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String})
+  - Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String},System.Char)
+  - Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String},System.String)
+  - Garyon.Extensions.StringExtensions.EnsureAffix(System.String,System.String,Garyon.Extensions.AffixType)
+  - Garyon.Extensions.StringExtensions.EnsureEndsWith(System.String,System.String)
+  - Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(System.String,System.String)
+  - Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(System.String,System.String,System.String)
+  - Garyon.Extensions.StringExtensions.EnsureStartsWith(System.String,System.String)
+  - Garyon.Extensions.StringExtensions.FindOccurrence(System.String,System.String,System.Int32)
+  - Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd(System.String,System.String,System.Int32)
+  - Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String)
+  - Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String,System.Int32)
+  - Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String,System.Int32,System.Int32)
+  - Garyon.Extensions.StringExtensions.IsValidHexString(System.String)
+  - Garyon.Extensions.StringExtensions.NonEmpty(System.Collections.Generic.IEnumerable{System.String})
+  - Garyon.Extensions.StringExtensions.NormalizeLineEndings(System.String)
+  - Garyon.Extensions.StringExtensions.NullIfEmpty(System.String)
+  - Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace(System.String)
+  - Garyon.Extensions.StringExtensions.ParseByte(System.String)
+  - Garyon.Extensions.StringExtensions.ParseDecimal(System.String)
+  - Garyon.Extensions.StringExtensions.ParseDouble(System.String)
+  - Garyon.Extensions.StringExtensions.ParseInt16(System.String)
+  - Garyon.Extensions.StringExtensions.ParseInt32(System.String)
+  - Garyon.Extensions.StringExtensions.ParseInt64(System.String)
+  - Garyon.Extensions.StringExtensions.ParseNullableDouble(System.String)
+  - Garyon.Extensions.StringExtensions.ParseNullableInt32(System.String)
+  - Garyon.Extensions.StringExtensions.ParseNullableInt64(System.String)
+  - Garyon.Extensions.StringExtensions.ParseNullableSingle(System.String)
+  - Garyon.Extensions.StringExtensions.ParseNullableUInt32(System.String)
+  - Garyon.Extensions.StringExtensions.ParseNullableUInt64(System.String)
+  - Garyon.Extensions.StringExtensions.ParseSByte(System.String)
+  - Garyon.Extensions.StringExtensions.ParseSingle(System.String)
+  - Garyon.Extensions.StringExtensions.ParseUInt16(System.String)
+  - Garyon.Extensions.StringExtensions.ParseUInt32(System.String)
+  - Garyon.Extensions.StringExtensions.ParseUInt64(System.String)
+  - Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions(System.String)
+  - Garyon.Extensions.StringExtensions.RemoveLast(System.String)
+  - Garyon.Extensions.StringExtensions.RemoveLast(System.String,System.Int32)
+  - Garyon.Extensions.StringExtensions.Repeat(System.String,System.Int32)
+  - Garyon.Extensions.StringExtensions.Replace(System.String,System.String,System.Int32,System.Int32)
+  - Garyon.Extensions.StringExtensions.ReplaceWholeWord(System.String,System.String,System.String)
+  - Garyon.Extensions.StringExtensions.Substring(System.String,System.String,System.String)
+  - Garyon.Extensions.StringExtensions.SubstringUntilFirst(System.String,System.Char)
+  - Garyon.Extensions.StringExtensions.SubstringUntilFirst(System.String,System.String)
+  - Garyon.Extensions.StringExtensions.SubstringUntilLast(System.String,System.Char)
+  - Garyon.Extensions.StringExtensions.SubstringUntilLast(System.String,System.String)
+  - Garyon.Extensions.StringExtensions.TryParseByte(System.String,System.Byte@)
+  - Garyon.Extensions.StringExtensions.TryParseDecimal(System.String,System.Decimal@)
+  - Garyon.Extensions.StringExtensions.TryParseDouble(System.String,System.Double@)
+  - Garyon.Extensions.StringExtensions.TryParseInt16(System.String,System.Int16@)
+  - Garyon.Extensions.StringExtensions.TryParseInt32(System.String,System.Int32@)
+  - Garyon.Extensions.StringExtensions.TryParseInt64(System.String,System.Int64@)
+  - Garyon.Extensions.StringExtensions.TryParseSByte(System.String,System.SByte@)
+  - Garyon.Extensions.StringExtensions.TryParseSingle(System.String,System.Single@)
+  - Garyon.Extensions.StringExtensions.TryParseUInt16(System.String,System.UInt16@)
+  - Garyon.Extensions.StringExtensions.TryParseUInt32(System.String,System.UInt32@)
+  - Garyon.Extensions.StringExtensions.TryParseUInt64(System.String,System.UInt64@)
+  langs:
+  - csharp
+  - vb
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Garyon.Extensions.StringExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: StringExtensions
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extension methods for the <xref href="System.String" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class StringExtensions
+    content.vb: Public Module StringExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.StringExtensions.FindOccurrence(System.String,System.String,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.FindOccurrence(System.String,System.String,System.Int32)
+  id: FindOccurrence(System.String,System.String,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindOccurrence(string, string, int)
+  nameWithType: StringExtensions.FindOccurrence(string, string, int)
+  fullName: Garyon.Extensions.StringExtensions.FindOccurrence(string, string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FindOccurrence
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Finds a substring within the string. Returns the index of the first
+
+    character where the match occurred, otherwise -1.
+  example: []
+  syntax:
+    content: public static int FindOccurrence(this string s, string match, int occurrence)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string within which the search will be performed.
+    - id: match
+      type: System.String
+      description: The substring to match from the original string.
+    - id: occurrence
+      type: System.Int32
+      description: The 1-based index of the occurrence to find.
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function FindOccurrence(s As String, match As String, occurrence As Integer) As Integer
+  overload: Garyon.Extensions.StringExtensions.FindOccurrence*
+  nameWithType.vb: StringExtensions.FindOccurrence(String, String, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.FindOccurrence(String, String, Integer)
+  name.vb: FindOccurrence(String, String, Integer)
+- uid: Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd(System.String,System.String,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd(System.String,System.String,System.Int32)
+  id: FindOccurrenceFromEnd(System.String,System.String,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindOccurrenceFromEnd(string, string, int)
+  nameWithType: StringExtensions.FindOccurrenceFromEnd(string, string, int)
+  fullName: Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd(string, string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FindOccurrenceFromEnd
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 69
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Finds a substring within the string from the end. Returns the index of
+
+    the first character where the match occurred, otherwise -1.
+  example: []
+  syntax:
+    content: public static int FindOccurrenceFromEnd(this string s, string match, int occurrence)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string within which the search will be performed.
+    - id: match
+      type: System.String
+      description: The substring to match from the original string.
+    - id: occurrence
+      type: System.Int32
+      description: The 1-based index of the occurrence to find.
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function FindOccurrenceFromEnd(s As String, match As String, occurrence As Integer) As Integer
+  overload: Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd*
+  nameWithType.vb: StringExtensions.FindOccurrenceFromEnd(String, String, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd(String, String, Integer)
+  name.vb: FindOccurrenceFromEnd(String, String, Integer)
+- uid: Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String)
+  id: IndexOfAfter(System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IndexOfAfter(string, string)
+  nameWithType: StringExtensions.IndexOfAfter(string, string)
+  fullName: Garyon.Extensions.StringExtensions.IndexOfAfter(string, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IndexOfAfter
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 104
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the index of the first character after the first occurrence of the
+
+    given sequence in the original string.
+  example: []
+  syntax:
+    content: public static int IndexOfAfter(this string source, string match)
+    parameters:
+    - id: source
+      type: System.String
+      description: The original string from which to get the first occurrence.
+    - id: match
+      type: System.String
+      description: The matching sequence to find the first occurrence of.
+    return:
+      type: System.Int32
+      description: >-
+        The index of the first character after the first occurrence of
+
+        <code class="paramref">match</code> in <code class="paramref">source</code>, if found,
+
+        otherwise -1.
+    content.vb: Public Shared Function IndexOfAfter(source As String, match As String) As Integer
+  overload: Garyon.Extensions.StringExtensions.IndexOfAfter*
+  nameWithType.vb: StringExtensions.IndexOfAfter(String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.IndexOfAfter(String, String)
+  name.vb: IndexOfAfter(String, String)
+- uid: Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String,System.Int32)
+  id: IndexOfAfter(System.String,System.String,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IndexOfAfter(string, string, int)
+  nameWithType: StringExtensions.IndexOfAfter(string, string, int)
+  fullName: Garyon.Extensions.StringExtensions.IndexOfAfter(string, string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IndexOfAfter
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 127
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the index of the first character after the first occurrence of the
+
+    given sequence in the original string.
+  example: []
+  syntax:
+    content: public static int IndexOfAfter(this string source, string match, int startIndex)
+    parameters:
+    - id: source
+      type: System.String
+      description: The original string from which to get the first occurrence.
+    - id: match
+      type: System.String
+      description: The matching sequence to find the first occurrence of.
+    - id: startIndex
+      type: System.Int32
+      description: >-
+        The index of the first character to include to the search, from which
+
+        onwards the search will be performed.
+    return:
+      type: System.Int32
+      description: >-
+        The index of the first character after the first occurrence of
+
+        <code class="paramref">match</code> in <code class="paramref">source</code>, if found,
+
+        otherwise -1.
+    content.vb: Public Shared Function IndexOfAfter(source As String, match As String, startIndex As Integer) As Integer
+  overload: Garyon.Extensions.StringExtensions.IndexOfAfter*
+  nameWithType.vb: StringExtensions.IndexOfAfter(String, String, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.IndexOfAfter(String, String, Integer)
+  name.vb: IndexOfAfter(String, String, Integer)
+- uid: Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.IndexOfAfter(System.String,System.String,System.Int32,System.Int32)
+  id: IndexOfAfter(System.String,System.String,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IndexOfAfter(string, string, int, int)
+  nameWithType: StringExtensions.IndexOfAfter(string, string, int, int)
+  fullName: Garyon.Extensions.StringExtensions.IndexOfAfter(string, string, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IndexOfAfter
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 154
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the index of the first character after the first occurrence of the
+
+    given sequence in the original string.
+  example: []
+  syntax:
+    content: public static int IndexOfAfter(this string source, string match, int startIndex, int length)
+    parameters:
+    - id: source
+      type: System.String
+      description: The original string from which to get the first occurrence.
+    - id: match
+      type: System.String
+      description: The matching sequence to find the first occurrence of.
+    - id: startIndex
+      type: System.Int32
+      description: >-
+        The index of the first character to include to the search, from which
+
+        onwards the search will be performed.
+    - id: length
+      type: System.Int32
+      description: >-
+        The number of characters that will be searched, starting from the
+
+        provided starting index.
+    return:
+      type: System.Int32
+      description: >-
+        The index of the first character after the first occurrence of
+
+        <code class="paramref">match</code> in <code class="paramref">source</code>, if found,
+
+        otherwise -1.
+    content.vb: Public Shared Function IndexOfAfter(source As String, match As String, startIndex As Integer, length As Integer) As Integer
+  overload: Garyon.Extensions.StringExtensions.IndexOfAfter*
+  nameWithType.vb: StringExtensions.IndexOfAfter(String, String, Integer, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.IndexOfAfter(String, String, Integer, Integer)
+  name.vb: IndexOfAfter(String, String, Integer, Integer)
+- uid: Garyon.Extensions.StringExtensions.RemoveLast(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.RemoveLast(System.String)
+  id: RemoveLast(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLast(string)
+  nameWithType: StringExtensions.RemoveLast(string)
+  fullName: Garyon.Extensions.StringExtensions.RemoveLast(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLast
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 172
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes one character from the end of the string.
+  example: []
+  syntax:
+    content: public static string RemoveLast(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string whose last character to remove.
+    return:
+      type: System.String
+      description: The string without the removed last character.
+    content.vb: Public Shared Function RemoveLast(s As String) As String
+  overload: Garyon.Extensions.StringExtensions.RemoveLast*
+  nameWithType.vb: StringExtensions.RemoveLast(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.RemoveLast(String)
+  name.vb: RemoveLast(String)
+- uid: Garyon.Extensions.StringExtensions.RemoveLast(System.String,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.RemoveLast(System.String,System.Int32)
+  id: RemoveLast(System.String,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLast(string, int)
+  nameWithType: StringExtensions.RemoveLast(string, int)
+  fullName: Garyon.Extensions.StringExtensions.RemoveLast(string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLast
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 185
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes a number of characters from the end of the string.
+  example: []
+  syntax:
+    content: public static string RemoveLast(this string s, int characters)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string whose last characters to remove.
+    - id: characters
+      type: System.Int32
+      description: The number of characters to remove.
+    return:
+      type: System.String
+      description: The string without the removed last characters.
+    content.vb: Public Shared Function RemoveLast(s As String, characters As Integer) As String
+  overload: Garyon.Extensions.StringExtensions.RemoveLast*
+  nameWithType.vb: StringExtensions.RemoveLast(String, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.RemoveLast(String, Integer)
+  name.vb: RemoveLast(String, Integer)
+- uid: Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions(System.String)
+  id: RemoveCharacterRepetitions(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveCharacterRepetitions(string)
+  nameWithType: StringExtensions.RemoveCharacterRepetitions(string)
+  fullName: Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveCharacterRepetitions
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 193
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: "    Returns a string that removes repetitions of the same character.\r\n    Example: \r\n<pre><code class=\"lang-csharp\">RemoveCharacterRepetitions(\"aabcc\") = \"abc\"</code></pre>"
+  example: []
+  syntax:
+    content: public static string RemoveCharacterRepetitions(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string to remove the character repetitions from.
+    return:
+      type: System.String
+    content.vb: Public Shared Function RemoveCharacterRepetitions(s As String) As String
+  overload: Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions*
+  nameWithType.vb: StringExtensions.RemoveCharacterRepetitions(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions(String)
+  name.vb: RemoveCharacterRepetitions(String)
+- uid: Garyon.Extensions.StringExtensions.Substring(System.String,System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.Substring(System.String,System.String,System.String)
+  id: Substring(System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Substring(string, string, string)
+  nameWithType: StringExtensions.Substring(string, string, string)
+  fullName: Garyon.Extensions.StringExtensions.Substring(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Substring
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 223
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Returns a substring that begins with the beginning matched string and
+
+    ends before the ending matched string.
+  example: []
+  syntax:
+    content: public static string Substring(this string s, string from, string to)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string whose substring to return.
+    - id: from
+      type: System.String
+      description: The beginning matching string to begin the substring from.
+    - id: to
+      type: System.String
+      description: The ending matching string to end the substring at.
+    return:
+      type: System.String
+    content.vb: Public Shared Function Substring(s As String, from As String, [to] As String) As String
+  overload: Garyon.Extensions.StringExtensions.Substring*
+  nameWithType.vb: StringExtensions.Substring(String, String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.Substring(String, String, String)
+  name.vb: Substring(String, String, String)
+- uid: Garyon.Extensions.StringExtensions.Replace(System.String,System.String,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.Replace(System.String,System.String,System.Int32,System.Int32)
+  id: Replace(System.String,System.String,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Replace(string, string, int, int)
+  nameWithType: StringExtensions.Replace(string, string, int, int)
+  fullName: Garyon.Extensions.StringExtensions.Replace(string, string, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Replace
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 245
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Replaces a part of the string with a new one.
+  example: []
+  syntax:
+    content: public static string Replace(this string originalString, string replacedString, int startIndex, int length)
+    parameters:
+    - id: originalString
+      type: System.String
+      description: The original string.
+    - id: replacedString
+      type: System.String
+      description: The new string to replace to the part of the original one.
+    - id: startIndex
+      type: System.Int32
+      description: The starting index of the substring to replace.
+    - id: length
+      type: System.Int32
+      description: The length of the substring to replace.
+    return:
+      type: System.String
+    content.vb: Public Shared Function Replace(originalString As String, replacedString As String, startIndex As Integer, length As Integer) As String
+  overload: Garyon.Extensions.StringExtensions.Replace*
+  nameWithType.vb: StringExtensions.Replace(String, String, Integer, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.Replace(String, String, Integer, Integer)
+  name.vb: Replace(String, String, Integer, Integer)
+- uid: Garyon.Extensions.StringExtensions.ReplaceWholeWord(System.String,System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ReplaceWholeWord(System.String,System.String,System.String)
+  id: ReplaceWholeWord(System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReplaceWholeWord(string, string, string)
+  nameWithType: StringExtensions.ReplaceWholeWord(string, string, string)
+  fullName: Garyon.Extensions.StringExtensions.ReplaceWholeWord(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ReplaceWholeWord
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 262
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Replaces a whole word of the original string and returns the new one.
+  example: []
+  syntax:
+    content: public static string ReplaceWholeWord(this string originalString, string oldString, string newString)
+    parameters:
+    - id: originalString
+      type: System.String
+      description: The original string which will be replaced.
+    - id: oldString
+      type: System.String
+      description: The old part of the string in the original string to replace.
+    - id: newString
+      type: System.String
+      description: >-
+        The new part of the string which will be contained in the returned
+
+        string.
+    return:
+      type: System.String
+    content.vb: Public Shared Function ReplaceWholeWord(originalString As String, oldString As String, newString As String) As String
+  overload: Garyon.Extensions.StringExtensions.ReplaceWholeWord*
+  nameWithType.vb: StringExtensions.ReplaceWholeWord(String, String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ReplaceWholeWord(String, String, String)
+  name.vb: ReplaceWholeWord(String, String, String)
+- uid: Garyon.Extensions.StringExtensions.NormalizeLineEndings(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.NormalizeLineEndings(System.String)
+  id: NormalizeLineEndings(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: NormalizeLineEndings(string)
+  nameWithType: StringExtensions.NormalizeLineEndings(string)
+  fullName: Garyon.Extensions.StringExtensions.NormalizeLineEndings(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NormalizeLineEndings
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 308
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Normalizes the line endings of a string to \n.
+  example: []
+  syntax:
+    content: public static string NormalizeLineEndings(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string whose line endings to normalize.
+    return:
+      type: System.String
+      description: The string with normalized line endings.
+    content.vb: Public Shared Function NormalizeLineEndings(s As String) As String
+  overload: Garyon.Extensions.StringExtensions.NormalizeLineEndings*
+  nameWithType.vb: StringExtensions.NormalizeLineEndings(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.NormalizeLineEndings(String)
+  name.vb: NormalizeLineEndings(String)
+- uid: Garyon.Extensions.StringExtensions.Repeat(System.String,System.Int32)
+  commentId: M:Garyon.Extensions.StringExtensions.Repeat(System.String,System.Int32)
+  id: Repeat(System.String,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Repeat(string, int)
+  nameWithType: StringExtensions.Repeat(string, int)
+  fullName: Garyon.Extensions.StringExtensions.Repeat(string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Repeat
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 327
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Repeats a string a number of times.
+  example: []
+  syntax:
+    content: public static string Repeat(this string s, int count)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string to repeat the specified number of times.
+    - id: count
+      type: System.Int32
+      description: The number of times to repeat the string. The value cannot be negative.
+    return:
+      type: System.String
+      description: >-
+        The given string repeated the specified number of times. If
+
+        <code class="paramref">count</code> is 0, <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref> is
+
+        returned.
+    content.vb: Public Shared Function Repeat(s As String, count As Integer) As String
+  overload: Garyon.Extensions.StringExtensions.Repeat*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown when <code class="paramref">count</code> is negative.
+  nameWithType.vb: StringExtensions.Repeat(String, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.Repeat(String, Integer)
+  name.vb: Repeat(String, Integer)
+- uid: Garyon.Extensions.StringExtensions.IsValidHexString(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.IsValidHexString(System.String)
+  id: IsValidHexString(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsValidHexString(string)
+  nameWithType: StringExtensions.IsValidHexString(string)
+  fullName: Garyon.Extensions.StringExtensions.IsValidHexString(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsValidHexString
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 357
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Determines whether the string is a valid hex string.
+  example: []
+  syntax:
+    content: public static bool IsValidHexString(this string hex)
+    parameters:
+    - id: hex
+      type: System.String
+      description: The string.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the string is a valid hex string; that is, it
+
+        only consists of valid hex characters, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsValidHexString(hex As String) As Boolean
+  overload: Garyon.Extensions.StringExtensions.IsValidHexString*
+  nameWithType.vb: StringExtensions.IsValidHexString(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.IsValidHexString(String)
+  name.vb: IsValidHexString(String)
+- uid: Garyon.Extensions.StringExtensions.ParseByte(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseByte(System.String)
+  id: ParseByte(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseByte(string)
+  nameWithType: StringExtensions.ParseByte(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseByte(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseByte
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 374
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static byte ParseByte(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Byte
+      description: The <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseByte(s As String) As Byte
+  overload: Garyon.Extensions.StringExtensions.ParseByte*
+  nameWithType.vb: StringExtensions.ParseByte(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseByte(String)
+  name.vb: ParseByte(String)
+- uid: Garyon.Extensions.StringExtensions.ParseSByte(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseSByte(System.String)
+  id: ParseSByte(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseSByte(string)
+  nameWithType: StringExtensions.ParseSByte(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseSByte(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseSByte
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 385
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static sbyte ParseSByte(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.SByte
+      description: The <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseSByte(s As String) As SByte
+  overload: Garyon.Extensions.StringExtensions.ParseSByte*
+  nameWithType.vb: StringExtensions.ParseSByte(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseSByte(String)
+  name.vb: ParseSByte(String)
+- uid: Garyon.Extensions.StringExtensions.ParseInt16(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseInt16(System.String)
+  id: ParseInt16(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseInt16(string)
+  nameWithType: StringExtensions.ParseInt16(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseInt16(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseInt16
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 396
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static short ParseInt16(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Int16
+      description: The <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseInt16(s As String) As Short
+  overload: Garyon.Extensions.StringExtensions.ParseInt16*
+  nameWithType.vb: StringExtensions.ParseInt16(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseInt16(String)
+  name.vb: ParseInt16(String)
+- uid: Garyon.Extensions.StringExtensions.ParseUInt16(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseUInt16(System.String)
+  id: ParseUInt16(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseUInt16(string)
+  nameWithType: StringExtensions.ParseUInt16(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseUInt16(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseUInt16
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 407
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ushort ParseUInt16(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.UInt16
+      description: The <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseUInt16(s As String) As UShort
+  overload: Garyon.Extensions.StringExtensions.ParseUInt16*
+  nameWithType.vb: StringExtensions.ParseUInt16(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseUInt16(String)
+  name.vb: ParseUInt16(String)
+- uid: Garyon.Extensions.StringExtensions.ParseInt32(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseInt32(System.String)
+  id: ParseInt32(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseInt32(string)
+  nameWithType: StringExtensions.ParseInt32(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseInt32(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseInt32
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 418
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static int ParseInt32(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Int32
+      description: The <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseInt32(s As String) As Integer
+  overload: Garyon.Extensions.StringExtensions.ParseInt32*
+  nameWithType.vb: StringExtensions.ParseInt32(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseInt32(String)
+  name.vb: ParseInt32(String)
+- uid: Garyon.Extensions.StringExtensions.ParseUInt32(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseUInt32(System.String)
+  id: ParseUInt32(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseUInt32(string)
+  nameWithType: StringExtensions.ParseUInt32(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseUInt32(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseUInt32
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 429
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static uint ParseUInt32(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.UInt32
+      description: The <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseUInt32(s As String) As UInteger
+  overload: Garyon.Extensions.StringExtensions.ParseUInt32*
+  nameWithType.vb: StringExtensions.ParseUInt32(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseUInt32(String)
+  name.vb: ParseUInt32(String)
+- uid: Garyon.Extensions.StringExtensions.ParseInt64(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseInt64(System.String)
+  id: ParseInt64(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseInt64(string)
+  nameWithType: StringExtensions.ParseInt64(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseInt64(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseInt64
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 440
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static long ParseInt64(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Int64
+      description: The <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseInt64(s As String) As Long
+  overload: Garyon.Extensions.StringExtensions.ParseInt64*
+  nameWithType.vb: StringExtensions.ParseInt64(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseInt64(String)
+  name.vb: ParseInt64(String)
+- uid: Garyon.Extensions.StringExtensions.ParseUInt64(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseUInt64(System.String)
+  id: ParseUInt64(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseUInt64(string)
+  nameWithType: StringExtensions.ParseUInt64(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseUInt64(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseUInt64
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 451
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ulong ParseUInt64(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.UInt64
+      description: The <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseUInt64(s As String) As ULong
+  overload: Garyon.Extensions.StringExtensions.ParseUInt64*
+  nameWithType.vb: StringExtensions.ParseUInt64(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseUInt64(String)
+  name.vb: ParseUInt64(String)
+- uid: Garyon.Extensions.StringExtensions.ParseSingle(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseSingle(System.String)
+  id: ParseSingle(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseSingle(string)
+  nameWithType: StringExtensions.ParseSingle(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseSingle(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseSingle
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 462
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Single" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static float ParseSingle(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Single
+      description: The <xref href="System.Single" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseSingle(s As String) As Single
+  overload: Garyon.Extensions.StringExtensions.ParseSingle*
+  nameWithType.vb: StringExtensions.ParseSingle(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseSingle(String)
+  name.vb: ParseSingle(String)
+- uid: Garyon.Extensions.StringExtensions.ParseDouble(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseDouble(System.String)
+  id: ParseDouble(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseDouble(string)
+  nameWithType: StringExtensions.ParseDouble(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseDouble(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseDouble
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 473
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Double" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double ParseDouble(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Double
+      description: The <xref href="System.Double" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseDouble(s As String) As Double
+  overload: Garyon.Extensions.StringExtensions.ParseDouble*
+  nameWithType.vb: StringExtensions.ParseDouble(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseDouble(String)
+  name.vb: ParseDouble(String)
+- uid: Garyon.Extensions.StringExtensions.ParseDecimal(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseDecimal(System.String)
+  id: ParseDecimal(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseDecimal(string)
+  nameWithType: StringExtensions.ParseDecimal(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseDecimal(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseDecimal
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 484
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Parses the <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static decimal ParseDecimal(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to parse.
+    return:
+      type: System.Decimal
+      description: The <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ParseDecimal(s As String) As Decimal
+  overload: Garyon.Extensions.StringExtensions.ParseDecimal*
+  nameWithType.vb: StringExtensions.ParseDecimal(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseDecimal(String)
+  name.vb: ParseDecimal(String)
+- uid: Garyon.Extensions.StringExtensions.TryParseByte(System.String,System.Byte@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseByte(System.String,System.Byte@)
+  id: TryParseByte(System.String,System.Byte@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseByte(string, out byte)
+  nameWithType: StringExtensions.TryParseByte(string, out byte)
+  fullName: Garyon.Extensions.StringExtensions.TryParseByte(string, out byte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseByte
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 501
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseByte(this string s, out byte value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Byte
+      description: >-
+        The <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if the
+
+        parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseByte(s As String, value As Byte) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseByte*
+  nameWithType.vb: StringExtensions.TryParseByte(String, Byte)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseByte(String, Byte)
+  name.vb: TryParseByte(String, Byte)
+- uid: Garyon.Extensions.StringExtensions.TryParseSByte(System.String,System.SByte@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseSByte(System.String,System.SByte@)
+  id: TryParseSByte(System.String,System.SByte@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseSByte(string, out sbyte)
+  nameWithType: StringExtensions.TryParseSByte(string, out sbyte)
+  fullName: Garyon.Extensions.StringExtensions.TryParseSByte(string, out sbyte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseSByte
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 517
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseSByte(this string s, out sbyte value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.SByte
+      description: >-
+        The <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseSByte(s As String, value As SByte) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseSByte*
+  nameWithType.vb: StringExtensions.TryParseSByte(String, SByte)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseSByte(String, SByte)
+  name.vb: TryParseSByte(String, SByte)
+- uid: Garyon.Extensions.StringExtensions.TryParseInt16(System.String,System.Int16@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseInt16(System.String,System.Int16@)
+  id: TryParseInt16(System.String,System.Int16@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt16(string, out short)
+  nameWithType: StringExtensions.TryParseInt16(string, out short)
+  fullName: Garyon.Extensions.StringExtensions.TryParseInt16(string, out short)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt16
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 533
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseInt16(this string s, out short value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Int16
+      description: >-
+        The <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseInt16(s As String, value As Short) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseInt16*
+  nameWithType.vb: StringExtensions.TryParseInt16(String, Short)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseInt16(String, Short)
+  name.vb: TryParseInt16(String, Short)
+- uid: Garyon.Extensions.StringExtensions.TryParseUInt16(System.String,System.UInt16@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseUInt16(System.String,System.UInt16@)
+  id: TryParseUInt16(System.String,System.UInt16@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt16(string, out ushort)
+  nameWithType: StringExtensions.TryParseUInt16(string, out ushort)
+  fullName: Garyon.Extensions.StringExtensions.TryParseUInt16(string, out ushort)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt16
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 549
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseUInt16(this string s, out ushort value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.UInt16
+      description: >-
+        The <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseUInt16(s As String, value As UShort) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseUInt16*
+  nameWithType.vb: StringExtensions.TryParseUInt16(String, UShort)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseUInt16(String, UShort)
+  name.vb: TryParseUInt16(String, UShort)
+- uid: Garyon.Extensions.StringExtensions.TryParseInt32(System.String,System.Int32@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseInt32(System.String,System.Int32@)
+  id: TryParseInt32(System.String,System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt32(string, out int)
+  nameWithType: StringExtensions.TryParseInt32(string, out int)
+  fullName: Garyon.Extensions.StringExtensions.TryParseInt32(string, out int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt32
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 565
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseInt32(this string s, out int value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Int32
+      description: >-
+        The <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if the
+
+        parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseInt32(s As String, value As Integer) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseInt32*
+  nameWithType.vb: StringExtensions.TryParseInt32(String, Integer)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseInt32(String, Integer)
+  name.vb: TryParseInt32(String, Integer)
+- uid: Garyon.Extensions.StringExtensions.TryParseUInt32(System.String,System.UInt32@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseUInt32(System.String,System.UInt32@)
+  id: TryParseUInt32(System.String,System.UInt32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt32(string, out uint)
+  nameWithType: StringExtensions.TryParseUInt32(string, out uint)
+  fullName: Garyon.Extensions.StringExtensions.TryParseUInt32(string, out uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt32
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 581
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseUInt32(this string s, out uint value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.UInt32
+      description: >-
+        The <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if the
+
+        parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseUInt32(s As String, value As UInteger) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseUInt32*
+  nameWithType.vb: StringExtensions.TryParseUInt32(String, UInteger)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseUInt32(String, UInteger)
+  name.vb: TryParseUInt32(String, UInteger)
+- uid: Garyon.Extensions.StringExtensions.TryParseInt64(System.String,System.Int64@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseInt64(System.String,System.Int64@)
+  id: TryParseInt64(System.String,System.Int64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt64(string, out long)
+  nameWithType: StringExtensions.TryParseInt64(string, out long)
+  fullName: Garyon.Extensions.StringExtensions.TryParseInt64(string, out long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt64
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 597
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseInt64(this string s, out long value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Int64
+      description: >-
+        The <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if the
+
+        parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseInt64(s As String, value As Long) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseInt64*
+  nameWithType.vb: StringExtensions.TryParseInt64(String, Long)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseInt64(String, Long)
+  name.vb: TryParseInt64(String, Long)
+- uid: Garyon.Extensions.StringExtensions.TryParseUInt64(System.String,System.UInt64@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseUInt64(System.String,System.UInt64@)
+  id: TryParseUInt64(System.String,System.UInt64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt64(string, out ulong)
+  nameWithType: StringExtensions.TryParseUInt64(string, out ulong)
+  fullName: Garyon.Extensions.StringExtensions.TryParseUInt64(string, out ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt64
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 613
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseUInt64(this string s, out ulong value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.UInt64
+      description: >-
+        The <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseUInt64(s As String, value As ULong) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseUInt64*
+  nameWithType.vb: StringExtensions.TryParseUInt64(String, ULong)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseUInt64(String, ULong)
+  name.vb: TryParseUInt64(String, ULong)
+- uid: Garyon.Extensions.StringExtensions.TryParseSingle(System.String,System.Single@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseSingle(System.String,System.Single@)
+  id: TryParseSingle(System.String,System.Single@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseSingle(string, out float)
+  nameWithType: StringExtensions.TryParseSingle(string, out float)
+  fullName: Garyon.Extensions.StringExtensions.TryParseSingle(string, out float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseSingle
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 629
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Single" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseSingle(this string s, out float value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Single
+      description: >-
+        The <xref href="System.Single" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseSingle(s As String, value As Single) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseSingle*
+  nameWithType.vb: StringExtensions.TryParseSingle(String, Single)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseSingle(String, Single)
+  name.vb: TryParseSingle(String, Single)
+- uid: Garyon.Extensions.StringExtensions.TryParseDouble(System.String,System.Double@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseDouble(System.String,System.Double@)
+  id: TryParseDouble(System.String,System.Double@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseDouble(string, out double)
+  nameWithType: StringExtensions.TryParseDouble(string, out double)
+  fullName: Garyon.Extensions.StringExtensions.TryParseDouble(string, out double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseDouble
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 645
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Double" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseDouble(this string s, out double value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Double
+      description: >-
+        The <xref href="System.Double" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseDouble(s As String, value As Double) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseDouble*
+  nameWithType.vb: StringExtensions.TryParseDouble(String, Double)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseDouble(String, Double)
+  name.vb: TryParseDouble(String, Double)
+- uid: Garyon.Extensions.StringExtensions.TryParseDecimal(System.String,System.Decimal@)
+  commentId: M:Garyon.Extensions.StringExtensions.TryParseDecimal(System.String,System.Decimal@)
+  id: TryParseDecimal(System.String,System.Decimal@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseDecimal(string, out decimal)
+  nameWithType: StringExtensions.TryParseDecimal(string, out decimal)
+  fullName: Garyon.Extensions.StringExtensions.TryParseDecimal(string, out decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseDecimal
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 661
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Tries to parse the <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> value of the specified
+
+    <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryParseDecimal(this string s, out decimal value)
+    parameters:
+    - id: s
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> to try to parse.
+    - id: value
+      type: System.Decimal
+      description: >-
+        The <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> value of the <xref href="System.String" data-throw-if-not-resolved="false"></xref>, if
+
+        the parsing was successful, otherwise 0.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the parsing was successful, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryParseDecimal(s As String, value As Decimal) As Boolean
+  overload: Garyon.Extensions.StringExtensions.TryParseDecimal*
+  nameWithType.vb: StringExtensions.TryParseDecimal(String, Decimal)
+  fullName.vb: Garyon.Extensions.StringExtensions.TryParseDecimal(String, Decimal)
+  name.vb: TryParseDecimal(String, Decimal)
+- uid: Garyon.Extensions.StringExtensions.ParseNullableInt32(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseNullableInt32(System.String)
+  id: ParseNullableInt32(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseNullableInt32(string)
+  nameWithType: StringExtensions.ParseNullableInt32(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableInt32(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseNullableInt32
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 663
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static int? ParseNullableInt32(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Shared Function ParseNullableInt32(str As String) As Integer?
+  overload: Garyon.Extensions.StringExtensions.ParseNullableInt32*
+  nameWithType.vb: StringExtensions.ParseNullableInt32(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseNullableInt32(String)
+  name.vb: ParseNullableInt32(String)
+- uid: Garyon.Extensions.StringExtensions.ParseNullableUInt32(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseNullableUInt32(System.String)
+  id: ParseNullableUInt32(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseNullableUInt32(string)
+  nameWithType: StringExtensions.ParseNullableUInt32(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableUInt32(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseNullableUInt32
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 668
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static uint? ParseNullableUInt32(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    return:
+      type: System.Nullable{System.UInt32}
+    content.vb: Public Shared Function ParseNullableUInt32(str As String) As UInteger?
+  overload: Garyon.Extensions.StringExtensions.ParseNullableUInt32*
+  nameWithType.vb: StringExtensions.ParseNullableUInt32(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseNullableUInt32(String)
+  name.vb: ParseNullableUInt32(String)
+- uid: Garyon.Extensions.StringExtensions.ParseNullableInt64(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseNullableInt64(System.String)
+  id: ParseNullableInt64(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseNullableInt64(string)
+  nameWithType: StringExtensions.ParseNullableInt64(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableInt64(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseNullableInt64
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 673
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static long? ParseNullableInt64(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: Public Shared Function ParseNullableInt64(str As String) As Long?
+  overload: Garyon.Extensions.StringExtensions.ParseNullableInt64*
+  nameWithType.vb: StringExtensions.ParseNullableInt64(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseNullableInt64(String)
+  name.vb: ParseNullableInt64(String)
+- uid: Garyon.Extensions.StringExtensions.ParseNullableUInt64(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseNullableUInt64(System.String)
+  id: ParseNullableUInt64(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseNullableUInt64(string)
+  nameWithType: StringExtensions.ParseNullableUInt64(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableUInt64(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseNullableUInt64
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 678
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ulong? ParseNullableUInt64(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Shared Function ParseNullableUInt64(str As String) As ULong?
+  overload: Garyon.Extensions.StringExtensions.ParseNullableUInt64*
+  nameWithType.vb: StringExtensions.ParseNullableUInt64(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseNullableUInt64(String)
+  name.vb: ParseNullableUInt64(String)
+- uid: Garyon.Extensions.StringExtensions.ParseNullableSingle(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseNullableSingle(System.String)
+  id: ParseNullableSingle(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseNullableSingle(string)
+  nameWithType: StringExtensions.ParseNullableSingle(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableSingle(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseNullableSingle
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 683
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static float? ParseNullableSingle(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Shared Function ParseNullableSingle(str As String) As Single?
+  overload: Garyon.Extensions.StringExtensions.ParseNullableSingle*
+  nameWithType.vb: StringExtensions.ParseNullableSingle(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseNullableSingle(String)
+  name.vb: ParseNullableSingle(String)
+- uid: Garyon.Extensions.StringExtensions.ParseNullableDouble(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.ParseNullableDouble(System.String)
+  id: ParseNullableDouble(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseNullableDouble(string)
+  nameWithType: StringExtensions.ParseNullableDouble(string)
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableDouble(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseNullableDouble
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 688
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static double? ParseNullableDouble(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Shared Function ParseNullableDouble(str As String) As Double?
+  overload: Garyon.Extensions.StringExtensions.ParseNullableDouble*
+  nameWithType.vb: StringExtensions.ParseNullableDouble(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.ParseNullableDouble(String)
+  name.vb: ParseNullableDouble(String)
+- uid: Garyon.Extensions.StringExtensions.SubstringUntilFirst(System.String,System.Char)
+  commentId: M:Garyon.Extensions.StringExtensions.SubstringUntilFirst(System.String,System.Char)
+  id: SubstringUntilFirst(System.String,System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringUntilFirst(string, char)
+  nameWithType: StringExtensions.SubstringUntilFirst(string, char)
+  fullName: Garyon.Extensions.StringExtensions.SubstringUntilFirst(string, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringUntilFirst
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 696
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static string SubstringUntilFirst(this string s, char match)
+    parameters:
+    - id: s
+      type: System.String
+    - id: match
+      type: System.Char
+    return:
+      type: System.String
+    content.vb: Public Shared Function SubstringUntilFirst(s As String, match As Char) As String
+  overload: Garyon.Extensions.StringExtensions.SubstringUntilFirst*
+  nameWithType.vb: StringExtensions.SubstringUntilFirst(String, Char)
+  fullName.vb: Garyon.Extensions.StringExtensions.SubstringUntilFirst(String, Char)
+  name.vb: SubstringUntilFirst(String, Char)
+- uid: Garyon.Extensions.StringExtensions.SubstringUntilFirst(System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.SubstringUntilFirst(System.String,System.String)
+  id: SubstringUntilFirst(System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringUntilFirst(string, string)
+  nameWithType: StringExtensions.SubstringUntilFirst(string, string)
+  fullName: Garyon.Extensions.StringExtensions.SubstringUntilFirst(string, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringUntilFirst
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 704
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static string SubstringUntilFirst(this string s, string match)
+    parameters:
+    - id: s
+      type: System.String
+    - id: match
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SubstringUntilFirst(s As String, match As String) As String
+  overload: Garyon.Extensions.StringExtensions.SubstringUntilFirst*
+  nameWithType.vb: StringExtensions.SubstringUntilFirst(String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.SubstringUntilFirst(String, String)
+  name.vb: SubstringUntilFirst(String, String)
+- uid: Garyon.Extensions.StringExtensions.SubstringUntilLast(System.String,System.Char)
+  commentId: M:Garyon.Extensions.StringExtensions.SubstringUntilLast(System.String,System.Char)
+  id: SubstringUntilLast(System.String,System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringUntilLast(string, char)
+  nameWithType: StringExtensions.SubstringUntilLast(string, char)
+  fullName: Garyon.Extensions.StringExtensions.SubstringUntilLast(string, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringUntilLast
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 712
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static string SubstringUntilLast(this string s, char match)
+    parameters:
+    - id: s
+      type: System.String
+    - id: match
+      type: System.Char
+    return:
+      type: System.String
+    content.vb: Public Shared Function SubstringUntilLast(s As String, match As Char) As String
+  overload: Garyon.Extensions.StringExtensions.SubstringUntilLast*
+  nameWithType.vb: StringExtensions.SubstringUntilLast(String, Char)
+  fullName.vb: Garyon.Extensions.StringExtensions.SubstringUntilLast(String, Char)
+  name.vb: SubstringUntilLast(String, Char)
+- uid: Garyon.Extensions.StringExtensions.SubstringUntilLast(System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.SubstringUntilLast(System.String,System.String)
+  id: SubstringUntilLast(System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringUntilLast(string, string)
+  nameWithType: StringExtensions.SubstringUntilLast(string, string)
+  fullName: Garyon.Extensions.StringExtensions.SubstringUntilLast(string, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringUntilLast
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 720
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static string SubstringUntilLast(this string s, string match)
+    parameters:
+    - id: s
+      type: System.String
+    - id: match
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SubstringUntilLast(s As String, match As String) As String
+  overload: Garyon.Extensions.StringExtensions.SubstringUntilLast*
+  nameWithType.vb: StringExtensions.SubstringUntilLast(String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.SubstringUntilLast(String, String)
+  name.vb: SubstringUntilLast(String, String)
+- uid: Garyon.Extensions.StringExtensions.EnsureStartsWith(System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.EnsureStartsWith(System.String,System.String)
+  id: EnsureStartsWith(System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureStartsWith(string?, string)
+  nameWithType: StringExtensions.EnsureStartsWith(string?, string)
+  fullName: Garyon.Extensions.StringExtensions.EnsureStartsWith(string?, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnsureStartsWith
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 745
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Evaluates a string such that the returned result will begin with the
+
+    specified prefix, without concatenating it if it is already present.
+  example: []
+  syntax:
+    content: public static string EnsureStartsWith(this string? source, string prefix)
+    parameters:
+    - id: source
+      type: System.String
+      description: The source string to which to guarantee a prefix.
+    - id: prefix
+      type: System.String
+      description: The prefix that will be contained in the resulting string.
+    return:
+      type: System.String
+      description: >-
+        The prefix itself if the source string is null or empty, or the source
+
+        string if it already starts with the prefix, otherwise a concatenation
+
+        of the prefix and the source string.
+    content.vb: Public Shared Function EnsureStartsWith(source As String, prefix As String) As String
+  overload: Garyon.Extensions.StringExtensions.EnsureStartsWith*
+  nameWithType.vb: StringExtensions.EnsureStartsWith(String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.EnsureStartsWith(String, String)
+  name.vb: EnsureStartsWith(String, String)
+- uid: Garyon.Extensions.StringExtensions.EnsureEndsWith(System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.EnsureEndsWith(System.String,System.String)
+  id: EnsureEndsWith(System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureEndsWith(string?, string)
+  nameWithType: StringExtensions.EnsureEndsWith(string?, string)
+  fullName: Garyon.Extensions.StringExtensions.EnsureEndsWith(string?, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnsureEndsWith
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 771
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Evaluates a string such that the returned result will end with the
+
+    specified suffix, without concatenating it if it is already present.
+  example: []
+  syntax:
+    content: public static string EnsureEndsWith(this string? source, string suffix)
+    parameters:
+    - id: source
+      type: System.String
+      description: The source string to which to guarantee a suffix.
+    - id: suffix
+      type: System.String
+      description: The suffix that will be contained in the resulting string.
+    return:
+      type: System.String
+      description: >-
+        The suffix itself if the source string is null or empty, or the source
+
+        string if it already ends with the suffix, otherwise a concatenation of
+
+        the source string and the suffix.
+    content.vb: Public Shared Function EnsureEndsWith(source As String, suffix As String) As String
+  overload: Garyon.Extensions.StringExtensions.EnsureEndsWith*
+  nameWithType.vb: StringExtensions.EnsureEndsWith(String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.EnsureEndsWith(String, String)
+  name.vb: EnsureEndsWith(String, String)
+- uid: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(System.String,System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(System.String,System.String,System.String)
+  id: EnsureStartsEndsWith(System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureStartsEndsWith(string?, string, string)
+  nameWithType: StringExtensions.EnsureStartsEndsWith(string?, string, string)
+  fullName: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(string?, string, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnsureStartsEndsWith
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 800
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Evaluates a string such that the returned result will begin with the
+
+    specified prefix and end with the specified suffix, without
+
+    concatenating either if it is already present.
+  example: []
+  syntax:
+    content: public static string EnsureStartsEndsWith(this string? source, string prefix, string suffix)
+    parameters:
+    - id: source
+      type: System.String
+      description: The source string to which to guarantee a prefix and a suffix.
+    - id: prefix
+      type: System.String
+      description: The prefix that will be contained in the resulting string.
+    - id: suffix
+      type: System.String
+      description: The suffix that will be contained in the resulting string.
+    return:
+      type: System.String
+      description: >-
+        A concatenation of the prefix and suffix if the source string is null or
+
+        empty, or the source string with the ensured prefix and suffix.
+    content.vb: Public Shared Function EnsureStartsEndsWith(source As String, prefix As String, suffix As String) As String
+  overload: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith*
+  nameWithType.vb: StringExtensions.EnsureStartsEndsWith(String, String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(String, String, String)
+  name.vb: EnsureStartsEndsWith(String, String, String)
+- uid: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(System.String,System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(System.String,System.String)
+  id: EnsureStartsEndsWith(System.String,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureStartsEndsWith(string?, string)
+  nameWithType: StringExtensions.EnsureStartsEndsWith(string?, string)
+  fullName: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(string?, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnsureStartsEndsWith
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 821
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Evaluates a string such that the returned result will begin and end with
+
+    the specified affix, without concatenating it if it is already present.
+  example: []
+  syntax:
+    content: public static string EnsureStartsEndsWith(this string? source, string affix)
+    parameters:
+    - id: source
+      type: System.String
+      description: >-
+        The source string to which to guarantee an affix at the start and the
+
+        end.
+    - id: affix
+      type: System.String
+      description: The affix that will be contained in the resulting string.
+    return:
+      type: System.String
+    content.vb: Public Shared Function EnsureStartsEndsWith(source As String, affix As String) As String
+  overload: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith*
+  nameWithType.vb: StringExtensions.EnsureStartsEndsWith(String, String)
+  fullName.vb: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith(String, String)
+  name.vb: EnsureStartsEndsWith(String, String)
+- uid: Garyon.Extensions.StringExtensions.EnsureAffix(System.String,System.String,Garyon.Extensions.AffixType)
+  commentId: M:Garyon.Extensions.StringExtensions.EnsureAffix(System.String,System.String,Garyon.Extensions.AffixType)
+  id: EnsureAffix(System.String,System.String,Garyon.Extensions.AffixType)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureAffix(string?, string, AffixType)
+  nameWithType: StringExtensions.EnsureAffix(string?, string, AffixType)
+  fullName: Garyon.Extensions.StringExtensions.EnsureAffix(string?, string, Garyon.Extensions.AffixType)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnsureAffix
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 844
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Evaluates a string such that the returned result will contain the
+
+    specified affix depending on the provided affix type, without
+
+    concatenating it if it is already present.
+  example: []
+  syntax:
+    content: public static string EnsureAffix(this string? source, string affix, AffixType affixType)
+    parameters:
+    - id: source
+      type: System.String
+      description: The source string to which to guarantee an affix.
+    - id: affix
+      type: System.String
+      description: The affix that will be contained in the resulting string.
+    - id: affixType
+      type: Garyon.Extensions.AffixType
+      description: Determines whether to ensure the affix at the start, the end, or both.
+    return:
+      type: System.String
+      description: >-
+        The affix itself if the source string is null or empty, or the source
+
+        string with the ensured affix.
+    content.vb: Public Shared Function EnsureAffix(source As String, affix As String, affixType As AffixType) As String
+  overload: Garyon.Extensions.StringExtensions.EnsureAffix*
+  nameWithType.vb: StringExtensions.EnsureAffix(String, String, AffixType)
+  fullName.vb: Garyon.Extensions.StringExtensions.EnsureAffix(String, String, Garyon.Extensions.AffixType)
+  name.vb: EnsureAffix(String, String, AffixType)
+- uid: Garyon.Extensions.StringExtensions.NullIfEmpty(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.NullIfEmpty(System.String)
+  id: NullIfEmpty(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: NullIfEmpty(string)
+  nameWithType: StringExtensions.NullIfEmpty(string)
+  fullName: Garyon.Extensions.StringExtensions.NullIfEmpty(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NullIfEmpty
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 857
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static string? NullIfEmpty(this string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function NullIfEmpty(s As String) As String
+  overload: Garyon.Extensions.StringExtensions.NullIfEmpty*
+  nameWithType.vb: StringExtensions.NullIfEmpty(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.NullIfEmpty(String)
+  name.vb: NullIfEmpty(String)
+- uid: Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace(System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace(System.String)
+  id: NullIfEmptyOrWhitespace(System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: NullIfEmptyOrWhitespace(string)
+  nameWithType: StringExtensions.NullIfEmptyOrWhitespace(string)
+  fullName: Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NullIfEmptyOrWhitespace
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 862
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static string? NullIfEmptyOrWhitespace(this string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function NullIfEmptyOrWhitespace(s As String) As String
+  overload: Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace*
+  nameWithType.vb: StringExtensions.NullIfEmptyOrWhitespace(String)
+  fullName.vb: Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace(String)
+  name.vb: NullIfEmptyOrWhitespace(String)
+- uid: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String},System.Char)
+  commentId: M:Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String},System.Char)
+  id: Combine(System.Collections.Generic.IEnumerable{System.String},System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Combine(IEnumerable<string>, char)
+  nameWithType: StringExtensions.Combine(IEnumerable<string>, char)
+  fullName: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable<string>, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Combine
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 879
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Combines the strings of a string collection with a separator and returns
+
+    the new string.
+  example: []
+  syntax:
+    content: public static string Combine(this IEnumerable<string> strings, char separator)
+    parameters:
+    - id: strings
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The collection of strings.
+    - id: separator
+      type: System.Char
+      description: The separator of the strings.
+    return:
+      type: System.String
+    content.vb: Public Shared Function Combine(strings As IEnumerable(Of String), separator As Char) As String
+  overload: Garyon.Extensions.StringExtensions.Combine*
+  nameWithType.vb: StringExtensions.Combine(IEnumerable(Of String), Char)
+  fullName.vb: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable(Of String), Char)
+  name.vb: Combine(IEnumerable(Of String), Char)
+- uid: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String},System.String)
+  id: Combine(System.Collections.Generic.IEnumerable{System.String},System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Combine(IEnumerable<string>, string)
+  nameWithType: StringExtensions.Combine(IEnumerable<string>, string)
+  fullName: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable<string>, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Combine
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 897
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Combines the strings of a string collection with a separator and returns
+
+    the new string.
+  example: []
+  syntax:
+    content: public static string Combine(this IEnumerable<string> strings, string separator)
+    parameters:
+    - id: strings
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The collection of strings.
+    - id: separator
+      type: System.String
+      description: The separator of the strings.
+    return:
+      type: System.String
+    content.vb: Public Shared Function Combine(strings As IEnumerable(Of String), separator As String) As String
+  overload: Garyon.Extensions.StringExtensions.Combine*
+  nameWithType.vb: StringExtensions.Combine(IEnumerable(Of String), String)
+  fullName.vb: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable(Of String), String)
+  name.vb: Combine(IEnumerable(Of String), String)
+- uid: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable{System.String})
+  id: Combine(System.Collections.Generic.IEnumerable{System.String})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Combine(IEnumerable<string>)
+  nameWithType: StringExtensions.Combine(IEnumerable<string>)
+  fullName: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Combine
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 907
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Combines the strings of a string collection and returns the new string.
+  example: []
+  syntax:
+    content: public static string Combine(this IEnumerable<string> strings)
+    parameters:
+    - id: strings
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The collection of strings.
+    return:
+      type: System.String
+    content.vb: Public Shared Function Combine(strings As IEnumerable(Of String)) As String
+  overload: Garyon.Extensions.StringExtensions.Combine*
+  nameWithType.vb: StringExtensions.Combine(IEnumerable(Of String))
+  fullName.vb: Garyon.Extensions.StringExtensions.Combine(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: Combine(IEnumerable(Of String))
+- uid: Garyon.Extensions.StringExtensions.NonEmpty(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Garyon.Extensions.StringExtensions.NonEmpty(System.Collections.Generic.IEnumerable{System.String})
+  id: NonEmpty(System.Collections.Generic.IEnumerable{System.String})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: NonEmpty(IEnumerable<string?>)
+  nameWithType: StringExtensions.NonEmpty(IEnumerable<string?>)
+  fullName: Garyon.Extensions.StringExtensions.NonEmpty(System.Collections.Generic.IEnumerable<string?>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NonEmpty
+    path: ../Garyon/Extensions/StringExtensions.cs
+    startLine: 918
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets all the non-null and non-empty strings from a collection.
+  example: []
+  syntax:
+    content: public static IEnumerable<string> NonEmpty(this IEnumerable<string?> strings)
+    parameters:
+    - id: strings
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The collection of strings.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public Shared Function NonEmpty(strings As IEnumerable(Of String)) As IEnumerable(Of String)
+  overload: Garyon.Extensions.StringExtensions.NonEmpty*
+  nameWithType.vb: StringExtensions.NonEmpty(IEnumerable(Of String))
+  fullName.vb: Garyon.Extensions.StringExtensions.NonEmpty(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: NonEmpty(IEnumerable(Of String))
+references:
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.StringExtensions.FindOccurrence*
+  commentId: Overload:Garyon.Extensions.StringExtensions.FindOccurrence
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_FindOccurrence_System_String_System_String_System_Int32_
+  name: FindOccurrence
+  nameWithType: StringExtensions.FindOccurrence
+  fullName: Garyon.Extensions.StringExtensions.FindOccurrence
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd*
+  commentId: Overload:Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_FindOccurrenceFromEnd_System_String_System_String_System_Int32_
+  name: FindOccurrenceFromEnd
+  nameWithType: StringExtensions.FindOccurrenceFromEnd
+  fullName: Garyon.Extensions.StringExtensions.FindOccurrenceFromEnd
+- uid: Garyon.Extensions.StringExtensions.IndexOfAfter*
+  commentId: Overload:Garyon.Extensions.StringExtensions.IndexOfAfter
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_IndexOfAfter_System_String_System_String_
+  name: IndexOfAfter
+  nameWithType: StringExtensions.IndexOfAfter
+  fullName: Garyon.Extensions.StringExtensions.IndexOfAfter
+- uid: Garyon.Extensions.StringExtensions.RemoveLast*
+  commentId: Overload:Garyon.Extensions.StringExtensions.RemoveLast
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_RemoveLast_System_String_
+  name: RemoveLast
+  nameWithType: StringExtensions.RemoveLast
+  fullName: Garyon.Extensions.StringExtensions.RemoveLast
+- uid: Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions*
+  commentId: Overload:Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_RemoveCharacterRepetitions_System_String_
+  name: RemoveCharacterRepetitions
+  nameWithType: StringExtensions.RemoveCharacterRepetitions
+  fullName: Garyon.Extensions.StringExtensions.RemoveCharacterRepetitions
+- uid: Garyon.Extensions.StringExtensions.Substring*
+  commentId: Overload:Garyon.Extensions.StringExtensions.Substring
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_Substring_System_String_System_String_System_String_
+  name: Substring
+  nameWithType: StringExtensions.Substring
+  fullName: Garyon.Extensions.StringExtensions.Substring
+- uid: Garyon.Extensions.StringExtensions.Replace*
+  commentId: Overload:Garyon.Extensions.StringExtensions.Replace
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_Replace_System_String_System_String_System_Int32_System_Int32_
+  name: Replace
+  nameWithType: StringExtensions.Replace
+  fullName: Garyon.Extensions.StringExtensions.Replace
+- uid: Garyon.Extensions.StringExtensions.ReplaceWholeWord*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ReplaceWholeWord
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ReplaceWholeWord_System_String_System_String_System_String_
+  name: ReplaceWholeWord
+  nameWithType: StringExtensions.ReplaceWholeWord
+  fullName: Garyon.Extensions.StringExtensions.ReplaceWholeWord
+- uid: Garyon.Extensions.StringExtensions.NormalizeLineEndings*
+  commentId: Overload:Garyon.Extensions.StringExtensions.NormalizeLineEndings
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_NormalizeLineEndings_System_String_
+  name: NormalizeLineEndings
+  nameWithType: StringExtensions.NormalizeLineEndings
+  fullName: Garyon.Extensions.StringExtensions.NormalizeLineEndings
+- uid: System.String.Empty
+  commentId: F:System.String.Empty
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string.empty
+  name: Empty
+  nameWithType: string.Empty
+  fullName: string.Empty
+  nameWithType.vb: String.Empty
+  fullName.vb: String.Empty
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: Garyon.Extensions.StringExtensions.Repeat*
+  commentId: Overload:Garyon.Extensions.StringExtensions.Repeat
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_Repeat_System_String_System_Int32_
+  name: Repeat
+  nameWithType: StringExtensions.Repeat
+  fullName: Garyon.Extensions.StringExtensions.Repeat
+- uid: Garyon.Extensions.StringExtensions.IsValidHexString*
+  commentId: Overload:Garyon.Extensions.StringExtensions.IsValidHexString
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_IsValidHexString_System_String_
+  name: IsValidHexString
+  nameWithType: StringExtensions.IsValidHexString
+  fullName: Garyon.Extensions.StringExtensions.IsValidHexString
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: Garyon.Extensions.StringExtensions.ParseByte*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseByte
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseByte_System_String_
+  name: ParseByte
+  nameWithType: StringExtensions.ParseByte
+  fullName: Garyon.Extensions.StringExtensions.ParseByte
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: Garyon.Extensions.StringExtensions.ParseSByte*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseSByte
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseSByte_System_String_
+  name: ParseSByte
+  nameWithType: StringExtensions.ParseSByte
+  fullName: Garyon.Extensions.StringExtensions.ParseSByte
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: Garyon.Extensions.StringExtensions.ParseInt16*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseInt16
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseInt16_System_String_
+  name: ParseInt16
+  nameWithType: StringExtensions.ParseInt16
+  fullName: Garyon.Extensions.StringExtensions.ParseInt16
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: Garyon.Extensions.StringExtensions.ParseUInt16*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseUInt16
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseUInt16_System_String_
+  name: ParseUInt16
+  nameWithType: StringExtensions.ParseUInt16
+  fullName: Garyon.Extensions.StringExtensions.ParseUInt16
+- uid: Garyon.Extensions.StringExtensions.ParseInt32*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseInt32
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseInt32_System_String_
+  name: ParseInt32
+  nameWithType: StringExtensions.ParseInt32
+  fullName: Garyon.Extensions.StringExtensions.ParseInt32
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Garyon.Extensions.StringExtensions.ParseUInt32*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseUInt32
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseUInt32_System_String_
+  name: ParseUInt32
+  nameWithType: StringExtensions.ParseUInt32
+  fullName: Garyon.Extensions.StringExtensions.ParseUInt32
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Garyon.Extensions.StringExtensions.ParseInt64*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseInt64
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseInt64_System_String_
+  name: ParseInt64
+  nameWithType: StringExtensions.ParseInt64
+  fullName: Garyon.Extensions.StringExtensions.ParseInt64
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Extensions.StringExtensions.ParseUInt64*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseUInt64
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseUInt64_System_String_
+  name: ParseUInt64
+  nameWithType: StringExtensions.ParseUInt64
+  fullName: Garyon.Extensions.StringExtensions.ParseUInt64
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Garyon.Extensions.StringExtensions.ParseSingle*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseSingle
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseSingle_System_String_
+  name: ParseSingle
+  nameWithType: StringExtensions.ParseSingle
+  fullName: Garyon.Extensions.StringExtensions.ParseSingle
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Garyon.Extensions.StringExtensions.ParseDouble*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseDouble
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseDouble_System_String_
+  name: ParseDouble
+  nameWithType: StringExtensions.ParseDouble
+  fullName: Garyon.Extensions.StringExtensions.ParseDouble
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Garyon.Extensions.StringExtensions.ParseDecimal*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseDecimal
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseDecimal_System_String_
+  name: ParseDecimal
+  nameWithType: StringExtensions.ParseDecimal
+  fullName: Garyon.Extensions.StringExtensions.ParseDecimal
+- uid: Garyon.Extensions.StringExtensions.TryParseByte*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseByte
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseByte_System_String_System_Byte__
+  name: TryParseByte
+  nameWithType: StringExtensions.TryParseByte
+  fullName: Garyon.Extensions.StringExtensions.TryParseByte
+- uid: Garyon.Extensions.StringExtensions.TryParseSByte*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseSByte
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseSByte_System_String_System_SByte__
+  name: TryParseSByte
+  nameWithType: StringExtensions.TryParseSByte
+  fullName: Garyon.Extensions.StringExtensions.TryParseSByte
+- uid: Garyon.Extensions.StringExtensions.TryParseInt16*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseInt16
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseInt16_System_String_System_Int16__
+  name: TryParseInt16
+  nameWithType: StringExtensions.TryParseInt16
+  fullName: Garyon.Extensions.StringExtensions.TryParseInt16
+- uid: Garyon.Extensions.StringExtensions.TryParseUInt16*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseUInt16
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseUInt16_System_String_System_UInt16__
+  name: TryParseUInt16
+  nameWithType: StringExtensions.TryParseUInt16
+  fullName: Garyon.Extensions.StringExtensions.TryParseUInt16
+- uid: Garyon.Extensions.StringExtensions.TryParseInt32*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseInt32
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseInt32_System_String_System_Int32__
+  name: TryParseInt32
+  nameWithType: StringExtensions.TryParseInt32
+  fullName: Garyon.Extensions.StringExtensions.TryParseInt32
+- uid: Garyon.Extensions.StringExtensions.TryParseUInt32*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseUInt32
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseUInt32_System_String_System_UInt32__
+  name: TryParseUInt32
+  nameWithType: StringExtensions.TryParseUInt32
+  fullName: Garyon.Extensions.StringExtensions.TryParseUInt32
+- uid: Garyon.Extensions.StringExtensions.TryParseInt64*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseInt64
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseInt64_System_String_System_Int64__
+  name: TryParseInt64
+  nameWithType: StringExtensions.TryParseInt64
+  fullName: Garyon.Extensions.StringExtensions.TryParseInt64
+- uid: Garyon.Extensions.StringExtensions.TryParseUInt64*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseUInt64
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseUInt64_System_String_System_UInt64__
+  name: TryParseUInt64
+  nameWithType: StringExtensions.TryParseUInt64
+  fullName: Garyon.Extensions.StringExtensions.TryParseUInt64
+- uid: Garyon.Extensions.StringExtensions.TryParseSingle*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseSingle
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseSingle_System_String_System_Single__
+  name: TryParseSingle
+  nameWithType: StringExtensions.TryParseSingle
+  fullName: Garyon.Extensions.StringExtensions.TryParseSingle
+- uid: Garyon.Extensions.StringExtensions.TryParseDouble*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseDouble
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseDouble_System_String_System_Double__
+  name: TryParseDouble
+  nameWithType: StringExtensions.TryParseDouble
+  fullName: Garyon.Extensions.StringExtensions.TryParseDouble
+- uid: Garyon.Extensions.StringExtensions.TryParseDecimal*
+  commentId: Overload:Garyon.Extensions.StringExtensions.TryParseDecimal
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_TryParseDecimal_System_String_System_Decimal__
+  name: TryParseDecimal
+  nameWithType: StringExtensions.TryParseDecimal
+  fullName: Garyon.Extensions.StringExtensions.TryParseDecimal
+- uid: Garyon.Extensions.StringExtensions.ParseNullableInt32*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseNullableInt32
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseNullableInt32_System_String_
+  name: ParseNullableInt32
+  nameWithType: StringExtensions.ParseNullableInt32
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableInt32
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.StringExtensions.ParseNullableUInt32*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseNullableUInt32
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseNullableUInt32_System_String_
+  name: ParseNullableUInt32
+  nameWithType: StringExtensions.ParseNullableUInt32
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableUInt32
+- uid: System.Nullable{System.UInt32}
+  commentId: T:System.Nullable{System.UInt32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint?
+  nameWithType: uint?
+  fullName: uint?
+  nameWithType.vb: UInteger?
+  fullName.vb: UInteger?
+  name.vb: UInteger?
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+- uid: Garyon.Extensions.StringExtensions.ParseNullableInt64*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseNullableInt64
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseNullableInt64_System_String_
+  name: ParseNullableInt64
+  nameWithType: StringExtensions.ParseNullableInt64
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableInt64
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: Garyon.Extensions.StringExtensions.ParseNullableUInt64*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseNullableUInt64
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseNullableUInt64_System_String_
+  name: ParseNullableUInt64
+  nameWithType: StringExtensions.ParseNullableUInt64
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableUInt64
+- uid: System.Nullable{System.UInt64}
+  commentId: T:System.Nullable{System.UInt64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong?
+  nameWithType: ulong?
+  fullName: ulong?
+  nameWithType.vb: ULong?
+  fullName.vb: ULong?
+  name.vb: ULong?
+  spec.csharp:
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '?'
+  spec.vb:
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '?'
+- uid: Garyon.Extensions.StringExtensions.ParseNullableSingle*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseNullableSingle
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseNullableSingle_System_String_
+  name: ParseNullableSingle
+  nameWithType: StringExtensions.ParseNullableSingle
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableSingle
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: Garyon.Extensions.StringExtensions.ParseNullableDouble*
+  commentId: Overload:Garyon.Extensions.StringExtensions.ParseNullableDouble
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_ParseNullableDouble_System_String_
+  name: ParseNullableDouble
+  nameWithType: StringExtensions.ParseNullableDouble
+  fullName: Garyon.Extensions.StringExtensions.ParseNullableDouble
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: Garyon.Extensions.StringExtensions.SubstringUntilFirst*
+  commentId: Overload:Garyon.Extensions.StringExtensions.SubstringUntilFirst
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_SubstringUntilFirst_System_String_System_Char_
+  name: SubstringUntilFirst
+  nameWithType: StringExtensions.SubstringUntilFirst
+  fullName: Garyon.Extensions.StringExtensions.SubstringUntilFirst
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Garyon.Extensions.StringExtensions.SubstringUntilLast*
+  commentId: Overload:Garyon.Extensions.StringExtensions.SubstringUntilLast
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_SubstringUntilLast_System_String_System_Char_
+  name: SubstringUntilLast
+  nameWithType: StringExtensions.SubstringUntilLast
+  fullName: Garyon.Extensions.StringExtensions.SubstringUntilLast
+- uid: Garyon.Extensions.StringExtensions.EnsureStartsWith*
+  commentId: Overload:Garyon.Extensions.StringExtensions.EnsureStartsWith
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_EnsureStartsWith_System_String_System_String_
+  name: EnsureStartsWith
+  nameWithType: StringExtensions.EnsureStartsWith
+  fullName: Garyon.Extensions.StringExtensions.EnsureStartsWith
+- uid: Garyon.Extensions.StringExtensions.EnsureEndsWith*
+  commentId: Overload:Garyon.Extensions.StringExtensions.EnsureEndsWith
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_EnsureEndsWith_System_String_System_String_
+  name: EnsureEndsWith
+  nameWithType: StringExtensions.EnsureEndsWith
+  fullName: Garyon.Extensions.StringExtensions.EnsureEndsWith
+- uid: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith*
+  commentId: Overload:Garyon.Extensions.StringExtensions.EnsureStartsEndsWith
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_EnsureStartsEndsWith_System_String_System_String_System_String_
+  name: EnsureStartsEndsWith
+  nameWithType: StringExtensions.EnsureStartsEndsWith
+  fullName: Garyon.Extensions.StringExtensions.EnsureStartsEndsWith
+- uid: Garyon.Extensions.StringExtensions.EnsureAffix*
+  commentId: Overload:Garyon.Extensions.StringExtensions.EnsureAffix
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_EnsureAffix_System_String_System_String_Garyon_Extensions_AffixType_
+  name: EnsureAffix
+  nameWithType: StringExtensions.EnsureAffix
+  fullName: Garyon.Extensions.StringExtensions.EnsureAffix
+- uid: Garyon.Extensions.AffixType
+  commentId: T:Garyon.Extensions.AffixType
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.AffixType.html
+  name: AffixType
+  nameWithType: AffixType
+  fullName: Garyon.Extensions.AffixType
+- uid: Garyon.Extensions.StringExtensions.NullIfEmpty*
+  commentId: Overload:Garyon.Extensions.StringExtensions.NullIfEmpty
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_NullIfEmpty_System_String_
+  name: NullIfEmpty
+  nameWithType: StringExtensions.NullIfEmpty
+  fullName: Garyon.Extensions.StringExtensions.NullIfEmpty
+- uid: Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace*
+  commentId: Overload:Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_NullIfEmptyOrWhitespace_System_String_
+  name: NullIfEmptyOrWhitespace
+  nameWithType: StringExtensions.NullIfEmptyOrWhitespace
+  fullName: Garyon.Extensions.StringExtensions.NullIfEmptyOrWhitespace
+- uid: Garyon.Extensions.StringExtensions.Combine*
+  commentId: Overload:Garyon.Extensions.StringExtensions.Combine
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_Combine_System_Collections_Generic_IEnumerable_System_String__System_Char_
+  name: Combine
+  nameWithType: StringExtensions.Combine
+  fullName: Garyon.Extensions.StringExtensions.Combine
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Extensions.StringExtensions.NonEmpty*
+  commentId: Overload:Garyon.Extensions.StringExtensions.NonEmpty
+  href: Garyon.Extensions.StringExtensions.html#Garyon_Extensions_StringExtensions_NonEmpty_System_Collections_Generic_IEnumerable_System_String__
+  name: NonEmpty
+  nameWithType: StringExtensions.NonEmpty
+  fullName: Garyon.Extensions.StringExtensions.NonEmpty

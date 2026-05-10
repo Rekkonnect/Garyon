@@ -1,8 +1,11 @@
-﻿namespace Garyon.Extensions;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Garyon.Extensions;
 
 /// <summary>
 /// Provides inline extensions for applying unary operators.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class UnaryOperatorExtensions
 {
     /// <summary>

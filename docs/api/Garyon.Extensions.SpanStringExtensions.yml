@@ -1,0 +1,2514 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.SpanStringExtensions
+  commentId: T:Garyon.Extensions.SpanStringExtensions
+  id: SpanStringExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.SpanStringExtensions.GetLines(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.LastNumberSlice(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseByte(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseDecimal(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseDouble(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@)
+  - Garyon.Extensions.SpanStringExtensions.ParseInt16(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseInt32(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseInt64(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseLastInt32(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseLastInt64(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseLastUInt32(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseLastUInt64(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseSByte(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseSingle(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseUInt16(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseUInt32(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.ParseUInt64(System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.Parse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Garyon.Extensions.SpanStringExtensions.SelectLines``1(System.ReadOnlySpan{System.Char},Garyon.Extensions.SpanStringSelector{``0})
+  - Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan{System.Char},System.Char)
+  - Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan{System.Char},System.Decimal@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Decimal@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan{System.Char},System.Double@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Double@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@,System.Int32@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int32@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan{System.Char},System.Int32@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int64@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan{System.Char},System.Int64@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Single@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan{System.Char},System.Single@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt32@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan{System.Char},System.UInt32@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt64@)
+  - Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan{System.Char},System.UInt64@)
+  - Garyon.Extensions.SpanStringExtensions.TryParse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider,``0@)
+  langs:
+  - csharp
+  - vb
+  name: SpanStringExtensions
+  nameWithType: SpanStringExtensions
+  fullName: Garyon.Extensions.SpanStringExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SpanStringExtensions
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 16
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for the <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref> type.
+  example: []
+  syntax:
+    content: public static class SpanStringExtensions
+    content.vb: Public Module SpanStringExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.SpanStringExtensions.Parse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.Parse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: Parse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Parse<T>(ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: SpanStringExtensions.Parse<T>(ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Garyon.Extensions.SpanStringExtensions.Parse<T>(System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Parse
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 20
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: 'public static T Parse<T>(this ReadOnlySpan<char> spanString, IFormatProvider? formatProvider = null) where T : struct, ISpanParsable<T>'
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: formatProvider
+      type: System.IFormatProvider
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Parse(Of T As {Structure, ISpanParsable(Of T)})(spanString As ReadOnlySpan(Of Char), formatProvider As IFormatProvider = Nothing) As T
+  overload: Garyon.Extensions.SpanStringExtensions.Parse*
+  nameWithType.vb: SpanStringExtensions.Parse(Of T)(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.Parse(Of T)(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(Of T)(ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Garyon.Extensions.SpanStringExtensions.ParseByte(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseByte(System.ReadOnlySpan{System.Char})
+  id: ParseByte(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseByte(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseByte(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseByte(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseByte
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static byte ParseByte(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Byte
+    content.vb: Public Shared Function ParseByte(spanString As ReadOnlySpan(Of Char)) As Byte
+  overload: Garyon.Extensions.SpanStringExtensions.ParseByte*
+  nameWithType.vb: SpanStringExtensions.ParseByte(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseByte(System.ReadOnlySpan(Of Char))
+  name.vb: ParseByte(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseSByte(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseSByte(System.ReadOnlySpan{System.Char})
+  id: ParseSByte(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseSByte(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseSByte(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseSByte(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseSByte
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 34
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static sbyte ParseSByte(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.SByte
+    content.vb: Public Shared Function ParseSByte(spanString As ReadOnlySpan(Of Char)) As SByte
+  overload: Garyon.Extensions.SpanStringExtensions.ParseSByte*
+  nameWithType.vb: SpanStringExtensions.ParseSByte(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseSByte(System.ReadOnlySpan(Of Char))
+  name.vb: ParseSByte(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseInt16(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseInt16(System.ReadOnlySpan{System.Char})
+  id: ParseInt16(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseInt16(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseInt16(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseInt16(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseInt16
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 38
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static short ParseInt16(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Int16
+    content.vb: Public Shared Function ParseInt16(spanString As ReadOnlySpan(Of Char)) As Short
+  overload: Garyon.Extensions.SpanStringExtensions.ParseInt16*
+  nameWithType.vb: SpanStringExtensions.ParseInt16(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseInt16(System.ReadOnlySpan(Of Char))
+  name.vb: ParseInt16(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseUInt16(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseUInt16(System.ReadOnlySpan{System.Char})
+  id: ParseUInt16(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseUInt16(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseUInt16(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseUInt16(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseUInt16
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 42
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ushort ParseUInt16(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.UInt16
+    content.vb: Public Shared Function ParseUInt16(spanString As ReadOnlySpan(Of Char)) As UShort
+  overload: Garyon.Extensions.SpanStringExtensions.ParseUInt16*
+  nameWithType.vb: SpanStringExtensions.ParseUInt16(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseUInt16(System.ReadOnlySpan(Of Char))
+  name.vb: ParseUInt16(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseInt32(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseInt32(System.ReadOnlySpan{System.Char})
+  id: ParseInt32(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseInt32(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseInt32(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseInt32(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 46
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static int ParseInt32(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ParseInt32(spanString As ReadOnlySpan(Of Char)) As Integer
+  overload: Garyon.Extensions.SpanStringExtensions.ParseInt32*
+  nameWithType.vb: SpanStringExtensions.ParseInt32(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseInt32(System.ReadOnlySpan(Of Char))
+  name.vb: ParseInt32(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseUInt32(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseUInt32(System.ReadOnlySpan{System.Char})
+  id: ParseUInt32(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseUInt32(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseUInt32(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseUInt32(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseUInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static uint ParseUInt32(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function ParseUInt32(spanString As ReadOnlySpan(Of Char)) As UInteger
+  overload: Garyon.Extensions.SpanStringExtensions.ParseUInt32*
+  nameWithType.vb: SpanStringExtensions.ParseUInt32(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseUInt32(System.ReadOnlySpan(Of Char))
+  name.vb: ParseUInt32(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseInt64(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseInt64(System.ReadOnlySpan{System.Char})
+  id: ParseInt64(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseInt64(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseInt64(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseInt64(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 54
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static long ParseInt64(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function ParseInt64(spanString As ReadOnlySpan(Of Char)) As Long
+  overload: Garyon.Extensions.SpanStringExtensions.ParseInt64*
+  nameWithType.vb: SpanStringExtensions.ParseInt64(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseInt64(System.ReadOnlySpan(Of Char))
+  name.vb: ParseInt64(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseUInt64(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseUInt64(System.ReadOnlySpan{System.Char})
+  id: ParseUInt64(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseUInt64(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseUInt64(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseUInt64(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseUInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 58
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ulong ParseUInt64(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Function ParseUInt64(spanString As ReadOnlySpan(Of Char)) As ULong
+  overload: Garyon.Extensions.SpanStringExtensions.ParseUInt64*
+  nameWithType.vb: SpanStringExtensions.ParseUInt64(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseUInt64(System.ReadOnlySpan(Of Char))
+  name.vb: ParseUInt64(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseSingle(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseSingle(System.ReadOnlySpan{System.Char})
+  id: ParseSingle(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseSingle(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseSingle(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseSingle(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseSingle
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 62
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static float ParseSingle(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ParseSingle(spanString As ReadOnlySpan(Of Char)) As Single
+  overload: Garyon.Extensions.SpanStringExtensions.ParseSingle*
+  nameWithType.vb: SpanStringExtensions.ParseSingle(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseSingle(System.ReadOnlySpan(Of Char))
+  name.vb: ParseSingle(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseDouble(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseDouble(System.ReadOnlySpan{System.Char})
+  id: ParseDouble(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseDouble(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseDouble(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseDouble(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseDouble
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 66
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static double ParseDouble(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Double
+    content.vb: Public Shared Function ParseDouble(spanString As ReadOnlySpan(Of Char)) As Double
+  overload: Garyon.Extensions.SpanStringExtensions.ParseDouble*
+  nameWithType.vb: SpanStringExtensions.ParseDouble(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseDouble(System.ReadOnlySpan(Of Char))
+  name.vb: ParseDouble(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseDecimal(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseDecimal(System.ReadOnlySpan{System.Char})
+  id: ParseDecimal(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseDecimal(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseDecimal(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseDecimal(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseDecimal
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 70
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static decimal ParseDecimal(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Decimal
+    content.vb: Public Shared Function ParseDecimal(spanString As ReadOnlySpan(Of Char)) As Decimal
+  overload: Garyon.Extensions.SpanStringExtensions.ParseDecimal*
+  nameWithType.vb: SpanStringExtensions.ParseDecimal(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseDecimal(System.ReadOnlySpan(Of Char))
+  name.vb: ParseDecimal(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.TryParse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider,``0@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider,``0@)
+  id: TryParse``1(System.ReadOnlySpan{System.Char},System.IFormatProvider,``0@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParse<T>(ReadOnlySpan<char>, IFormatProvider?, out T)
+  nameWithType: SpanStringExtensions.TryParse<T>(ReadOnlySpan<char>, IFormatProvider?, out T)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParse<T>(System.ReadOnlySpan<char>, System.IFormatProvider?, out T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParse
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 76
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: 'public static bool TryParse<T>(this ReadOnlySpan<char> spanString, IFormatProvider? formatProvider, out T result) where T : struct, ISpanParsable<T>'
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: result
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(Of T As {Structure, ISpanParsable(Of T)})(spanString As ReadOnlySpan(Of Char), formatProvider As IFormatProvider, result As T) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParse*
+  nameWithType.vb: SpanStringExtensions.TryParse(Of T)(ReadOnlySpan(Of Char), IFormatProvider, T)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParse(Of T)(System.ReadOnlySpan(Of Char), System.IFormatProvider, T)
+  name.vb: TryParse(Of T)(ReadOnlySpan(Of Char), IFormatProvider, T)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan{System.Char},System.Int32@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan{System.Char},System.Int32@)
+  id: TryParseInt32(System.ReadOnlySpan{System.Char},System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt32(ReadOnlySpan<char>, out int)
+  nameWithType: SpanStringExtensions.TryParseInt32(ReadOnlySpan<char>, out int)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan<char>, out int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 86
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseInt32(this ReadOnlySpan<char> spanString, out int value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseInt32(spanString As ReadOnlySpan(Of Char), value As Integer) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseInt32*
+  nameWithType.vb: SpanStringExtensions.TryParseInt32(ReadOnlySpan(Of Char), Integer)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan(Of Char), Integer)
+  name.vb: TryParseInt32(ReadOnlySpan(Of Char), Integer)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan{System.Char},System.Int64@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan{System.Char},System.Int64@)
+  id: TryParseInt64(System.ReadOnlySpan{System.Char},System.Int64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt64(ReadOnlySpan<char>, out long)
+  nameWithType: SpanStringExtensions.TryParseInt64(ReadOnlySpan<char>, out long)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan<char>, out long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 90
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseInt64(this ReadOnlySpan<char> spanString, out long value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.Int64
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseInt64(spanString As ReadOnlySpan(Of Char), value As Long) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseInt64*
+  nameWithType.vb: SpanStringExtensions.TryParseInt64(ReadOnlySpan(Of Char), Long)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan(Of Char), Long)
+  name.vb: TryParseInt64(ReadOnlySpan(Of Char), Long)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan{System.Char},System.UInt32@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan{System.Char},System.UInt32@)
+  id: TryParseUInt32(System.ReadOnlySpan{System.Char},System.UInt32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt32(ReadOnlySpan<char>, out uint)
+  nameWithType: SpanStringExtensions.TryParseUInt32(ReadOnlySpan<char>, out uint)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan<char>, out uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 94
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseUInt32(this ReadOnlySpan<char> spanString, out uint value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseUInt32(spanString As ReadOnlySpan(Of Char), value As UInteger) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseUInt32*
+  nameWithType.vb: SpanStringExtensions.TryParseUInt32(ReadOnlySpan(Of Char), UInteger)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan(Of Char), UInteger)
+  name.vb: TryParseUInt32(ReadOnlySpan(Of Char), UInteger)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan{System.Char},System.UInt64@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan{System.Char},System.UInt64@)
+  id: TryParseUInt64(System.ReadOnlySpan{System.Char},System.UInt64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt64(ReadOnlySpan<char>, out ulong)
+  nameWithType: SpanStringExtensions.TryParseUInt64(ReadOnlySpan<char>, out ulong)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan<char>, out ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 98
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseUInt64(this ReadOnlySpan<char> spanString, out ulong value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.UInt64
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseUInt64(spanString As ReadOnlySpan(Of Char), value As ULong) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseUInt64*
+  nameWithType.vb: SpanStringExtensions.TryParseUInt64(ReadOnlySpan(Of Char), ULong)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan(Of Char), ULong)
+  name.vb: TryParseUInt64(ReadOnlySpan(Of Char), ULong)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan{System.Char},System.Single@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan{System.Char},System.Single@)
+  id: TryParseSingle(System.ReadOnlySpan{System.Char},System.Single@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseSingle(ReadOnlySpan<char>, out float)
+  nameWithType: SpanStringExtensions.TryParseSingle(ReadOnlySpan<char>, out float)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan<char>, out float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseSingle
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 102
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseSingle(this ReadOnlySpan<char> spanString, out float value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseSingle(spanString As ReadOnlySpan(Of Char), value As Single) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseSingle*
+  nameWithType.vb: SpanStringExtensions.TryParseSingle(ReadOnlySpan(Of Char), Single)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan(Of Char), Single)
+  name.vb: TryParseSingle(ReadOnlySpan(Of Char), Single)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan{System.Char},System.Double@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan{System.Char},System.Double@)
+  id: TryParseDouble(System.ReadOnlySpan{System.Char},System.Double@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseDouble(ReadOnlySpan<char>, out double)
+  nameWithType: SpanStringExtensions.TryParseDouble(ReadOnlySpan<char>, out double)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan<char>, out double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseDouble
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 106
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseDouble(this ReadOnlySpan<char> spanString, out double value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.Double
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseDouble(spanString As ReadOnlySpan(Of Char), value As Double) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseDouble*
+  nameWithType.vb: SpanStringExtensions.TryParseDouble(ReadOnlySpan(Of Char), Double)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan(Of Char), Double)
+  name.vb: TryParseDouble(ReadOnlySpan(Of Char), Double)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan{System.Char},System.Decimal@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan{System.Char},System.Decimal@)
+  id: TryParseDecimal(System.ReadOnlySpan{System.Char},System.Decimal@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseDecimal(ReadOnlySpan<char>, out decimal)
+  nameWithType: SpanStringExtensions.TryParseDecimal(ReadOnlySpan<char>, out decimal)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan<char>, out decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseDecimal
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 110
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseDecimal(this ReadOnlySpan<char> spanString, out decimal value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: value
+      type: System.Decimal
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseDecimal(spanString As ReadOnlySpan(Of Char), value As Decimal) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseDecimal*
+  nameWithType.vb: SpanStringExtensions.TryParseDecimal(ReadOnlySpan(Of Char), Decimal)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan(Of Char), Decimal)
+  name.vb: TryParseDecimal(ReadOnlySpan(Of Char), Decimal)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int32@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int32@)
+  id: TryParseInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt32(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out int)
+  nameWithType: SpanStringExtensions.TryParseInt32(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out int)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 115
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseInt32(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out int value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseInt32(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As Integer) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseInt32*
+  nameWithType.vb: SpanStringExtensions.TryParseInt32(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Integer)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseInt32(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, Integer)
+  name.vb: TryParseInt32(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Integer)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int64@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int64@)
+  id: TryParseInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Int64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseInt64(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out long)
+  nameWithType: SpanStringExtensions.TryParseInt64(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out long)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 119
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseInt64(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out long value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.Int64
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseInt64(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As Long) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseInt64*
+  nameWithType.vb: SpanStringExtensions.TryParseInt64(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Long)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseInt64(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, Long)
+  name.vb: TryParseInt64(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Long)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt32@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt32@)
+  id: TryParseUInt32(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt32(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out uint)
+  nameWithType: SpanStringExtensions.TryParseUInt32(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out uint)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 123
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseUInt32(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out uint value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseUInt32(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As UInteger) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseUInt32*
+  nameWithType.vb: SpanStringExtensions.TryParseUInt32(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, UInteger)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseUInt32(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, UInteger)
+  name.vb: TryParseUInt32(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, UInteger)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt64@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt64@)
+  id: TryParseUInt64(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.UInt64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseUInt64(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out ulong)
+  nameWithType: SpanStringExtensions.TryParseUInt64(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out ulong)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseUInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 127
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseUInt64(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out ulong value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.UInt64
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseUInt64(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As ULong) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseUInt64*
+  nameWithType.vb: SpanStringExtensions.TryParseUInt64(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, ULong)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseUInt64(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, ULong)
+  name.vb: TryParseUInt64(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, ULong)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Single@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Single@)
+  id: TryParseSingle(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Single@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseSingle(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out float)
+  nameWithType: SpanStringExtensions.TryParseSingle(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out float)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseSingle
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 131
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseSingle(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out float value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseSingle(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As Single) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseSingle*
+  nameWithType.vb: SpanStringExtensions.TryParseSingle(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Single)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseSingle(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, Single)
+  name.vb: TryParseSingle(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Single)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Double@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Double@)
+  id: TryParseDouble(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Double@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseDouble(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out double)
+  nameWithType: SpanStringExtensions.TryParseDouble(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out double)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseDouble
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 135
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseDouble(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out double value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.Double
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseDouble(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As Double) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseDouble*
+  nameWithType.vb: SpanStringExtensions.TryParseDouble(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Double)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseDouble(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, Double)
+  name.vb: TryParseDouble(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Double)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Decimal@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Decimal@)
+  id: TryParseDecimal(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,System.Decimal@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseDecimal(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out decimal)
+  nameWithType: SpanStringExtensions.TryParseDecimal(ReadOnlySpan<char>, NumberStyles, IFormatProvider?, out decimal)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseDecimal
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 139
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseDecimal(this ReadOnlySpan<char> spanString, NumberStyles numberStyles, IFormatProvider? formatProvider, out decimal value)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: numberStyles
+      type: System.Globalization.NumberStyles
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: value
+      type: System.Decimal
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseDecimal(spanString As ReadOnlySpan(Of Char), numberStyles As NumberStyles, formatProvider As IFormatProvider, value As Decimal) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseDecimal*
+  nameWithType.vb: SpanStringExtensions.TryParseDecimal(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Decimal)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseDecimal(System.ReadOnlySpan(Of Char), System.Globalization.NumberStyles, System.IFormatProvider, Decimal)
+  name.vb: TryParseDecimal(ReadOnlySpan(Of Char), NumberStyles, IFormatProvider, Decimal)
+- uid: Garyon.Extensions.SpanStringExtensions.ParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@)
+  id: ParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseFirstInt32(ReadOnlySpan<char>, int, out int)
+  nameWithType: SpanStringExtensions.ParseFirstInt32(ReadOnlySpan<char>, int, out int)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseFirstInt32(System.ReadOnlySpan<char>, int, out int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseFirstInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 148
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static int ParseFirstInt32(this ReadOnlySpan<char> spanString, int startingIndex, out int endIndex)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: startingIndex
+      type: System.Int32
+    - id: endIndex
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ParseFirstInt32(spanString As ReadOnlySpan(Of Char), startingIndex As Integer, endIndex As Integer) As Integer
+  overload: Garyon.Extensions.SpanStringExtensions.ParseFirstInt32*
+  nameWithType.vb: SpanStringExtensions.ParseFirstInt32(ReadOnlySpan(Of Char), Integer, Integer)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseFirstInt32(System.ReadOnlySpan(Of Char), Integer, Integer)
+  name.vb: ParseFirstInt32(ReadOnlySpan(Of Char), Integer, Integer)
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@,System.Int32@)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@,System.Int32@)
+  id: TryParseFirstInt32(System.ReadOnlySpan{System.Char},System.Int32,System.Int32@,System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryParseFirstInt32(ReadOnlySpan<char>, int, out int, out int)
+  nameWithType: SpanStringExtensions.TryParseFirstInt32(ReadOnlySpan<char>, int, out int, out int)
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32(System.ReadOnlySpan<char>, int, out int, out int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryParseFirstInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 156
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static bool TryParseFirstInt32(this ReadOnlySpan<char> spanString, int startingIndex, out int value, out int endIndex)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: startingIndex
+      type: System.Int32
+    - id: value
+      type: System.Int32
+    - id: endIndex
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParseFirstInt32(spanString As ReadOnlySpan(Of Char), startingIndex As Integer, value As Integer, endIndex As Integer) As Boolean
+  overload: Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32*
+  nameWithType.vb: SpanStringExtensions.TryParseFirstInt32(ReadOnlySpan(Of Char), Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32(System.ReadOnlySpan(Of Char), Integer, Integer, Integer)
+  name.vb: TryParseFirstInt32(ReadOnlySpan(Of Char), Integer, Integer, Integer)
+- uid: Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex(System.ReadOnlySpan{System.Char})
+  id: LastNumberStartIndex(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: LastNumberStartIndex(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.LastNumberStartIndex(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LastNumberStartIndex
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 169
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static int LastNumberStartIndex(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function LastNumberStartIndex(spanString As ReadOnlySpan(Of Char)) As Integer
+  overload: Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex*
+  nameWithType.vb: SpanStringExtensions.LastNumberStartIndex(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex(System.ReadOnlySpan(Of Char))
+  name.vb: LastNumberStartIndex(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.LastNumberSlice(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.LastNumberSlice(System.ReadOnlySpan{System.Char})
+  id: LastNumberSlice(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: LastNumberSlice(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.LastNumberSlice(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.LastNumberSlice(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LastNumberSlice
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 187
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ReadOnlySpan<char> LastNumberSlice(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.ReadOnlySpan{System.Char}
+    content.vb: Public Shared Function LastNumberSlice(spanString As ReadOnlySpan(Of Char)) As ReadOnlySpan(Of Char)
+  overload: Garyon.Extensions.SpanStringExtensions.LastNumberSlice*
+  nameWithType.vb: SpanStringExtensions.LastNumberSlice(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.LastNumberSlice(System.ReadOnlySpan(Of Char))
+  name.vb: LastNumberSlice(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastInt32(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseLastInt32(System.ReadOnlySpan{System.Char})
+  id: ParseLastInt32(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseLastInt32(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseLastInt32(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastInt32(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseLastInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 192
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static int ParseLastInt32(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ParseLastInt32(spanString As ReadOnlySpan(Of Char)) As Integer
+  overload: Garyon.Extensions.SpanStringExtensions.ParseLastInt32*
+  nameWithType.vb: SpanStringExtensions.ParseLastInt32(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseLastInt32(System.ReadOnlySpan(Of Char))
+  name.vb: ParseLastInt32(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastInt64(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseLastInt64(System.ReadOnlySpan{System.Char})
+  id: ParseLastInt64(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseLastInt64(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseLastInt64(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastInt64(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseLastInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 196
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static long ParseLastInt64(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function ParseLastInt64(spanString As ReadOnlySpan(Of Char)) As Long
+  overload: Garyon.Extensions.SpanStringExtensions.ParseLastInt64*
+  nameWithType.vb: SpanStringExtensions.ParseLastInt64(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseLastInt64(System.ReadOnlySpan(Of Char))
+  name.vb: ParseLastInt64(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastUInt32(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseLastUInt32(System.ReadOnlySpan{System.Char})
+  id: ParseLastUInt32(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseLastUInt32(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseLastUInt32(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastUInt32(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseLastUInt32
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 200
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static uint ParseLastUInt32(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function ParseLastUInt32(spanString As ReadOnlySpan(Of Char)) As UInteger
+  overload: Garyon.Extensions.SpanStringExtensions.ParseLastUInt32*
+  nameWithType.vb: SpanStringExtensions.ParseLastUInt32(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseLastUInt32(System.ReadOnlySpan(Of Char))
+  name.vb: ParseLastUInt32(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastUInt64(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.ParseLastUInt64(System.ReadOnlySpan{System.Char})
+  id: ParseLastUInt64(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ParseLastUInt64(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.ParseLastUInt64(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastUInt64(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ParseLastUInt64
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 204
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ulong ParseLastUInt64(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Function ParseLastUInt64(spanString As ReadOnlySpan(Of Char)) As ULong
+  overload: Garyon.Extensions.SpanStringExtensions.ParseLastUInt64*
+  nameWithType.vb: SpanStringExtensions.ParseLastUInt64(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.ParseLastUInt64(System.ReadOnlySpan(Of Char))
+  name.vb: ParseLastUInt64(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})
+  id: SplitToStrings(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SplitToStrings(ReadOnlySpan<char>, ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.SplitToStrings(ReadOnlySpan<char>, ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan<char>, System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SplitToStrings
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 212
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static IReadOnlyList<string> SplitToStrings(this ReadOnlySpan<char> spanString, ReadOnlySpan<char> delimiter)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: delimiter
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public Shared Function SplitToStrings(spanString As ReadOnlySpan(Of Char), delimiter As ReadOnlySpan(Of Char)) As IReadOnlyList(Of String)
+  overload: Garyon.Extensions.SpanStringExtensions.SplitToStrings*
+  nameWithType.vb: SpanStringExtensions.SplitToStrings(ReadOnlySpan(Of Char), ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan(Of Char), System.ReadOnlySpan(Of Char))
+  name.vb: SplitToStrings(ReadOnlySpan(Of Char), ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan{System.Char},System.Char)
+  commentId: M:Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan{System.Char},System.Char)
+  id: SplitToStrings(System.ReadOnlySpan{System.Char},System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SplitToStrings(ReadOnlySpan<char>, char)
+  nameWithType: SpanStringExtensions.SplitToStrings(ReadOnlySpan<char>, char)
+  fullName: Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan<char>, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SplitToStrings
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 216
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static IReadOnlyList<string> SplitToStrings(this ReadOnlySpan<char> spanString, char delimiter)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: delimiter
+      type: System.Char
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public Shared Function SplitToStrings(spanString As ReadOnlySpan(Of Char), delimiter As Char) As IReadOnlyList(Of String)
+  overload: Garyon.Extensions.SpanStringExtensions.SplitToStrings*
+  nameWithType.vb: SpanStringExtensions.SplitToStrings(ReadOnlySpan(Of Char), Char)
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.SplitToStrings(System.ReadOnlySpan(Of Char), Char)
+  name.vb: SplitToStrings(ReadOnlySpan(Of Char), Char)
+- uid: Garyon.Extensions.SpanStringExtensions.GetLines(System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.GetLines(System.ReadOnlySpan{System.Char})
+  id: GetLines(System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetLines(ReadOnlySpan<char>)
+  nameWithType: SpanStringExtensions.GetLines(ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.SpanStringExtensions.GetLines(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetLines
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 222
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ImmutableArray<string> GetLines(this ReadOnlySpan<char> spanString)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: System.Collections.Immutable.ImmutableArray{System.String}
+    content.vb: Public Shared Function GetLines(spanString As ReadOnlySpan(Of Char)) As ImmutableArray(Of String)
+  overload: Garyon.Extensions.SpanStringExtensions.GetLines*
+  nameWithType.vb: SpanStringExtensions.GetLines(ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.GetLines(System.ReadOnlySpan(Of Char))
+  name.vb: GetLines(ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.SpanStringExtensions.SelectLines``1(System.ReadOnlySpan{System.Char},Garyon.Extensions.SpanStringSelector{``0})
+  commentId: M:Garyon.Extensions.SpanStringExtensions.SelectLines``1(System.ReadOnlySpan{System.Char},Garyon.Extensions.SpanStringSelector{``0})
+  id: SelectLines``1(System.ReadOnlySpan{System.Char},Garyon.Extensions.SpanStringSelector{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.SpanStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectLines<TResult>(ReadOnlySpan<char>, SpanStringSelector<TResult>)
+  nameWithType: SpanStringExtensions.SelectLines<TResult>(ReadOnlySpan<char>, SpanStringSelector<TResult>)
+  fullName: Garyon.Extensions.SpanStringExtensions.SelectLines<TResult>(System.ReadOnlySpan<char>, Garyon.Extensions.SpanStringSelector<TResult>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanStringExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SelectLines
+    path: ../Garyon/Extensions/SpanStringExtensions.cs
+    startLine: 226
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static ImmutableArray<TResult> SelectLines<TResult>(this ReadOnlySpan<char> spanString, SpanStringSelector<TResult> selector)
+    parameters:
+    - id: spanString
+      type: System.ReadOnlySpan{System.Char}
+    - id: selector
+      type: Garyon.Extensions.SpanStringSelector{{TResult}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: System.Collections.Immutable.ImmutableArray{{TResult}}
+    content.vb: Public Shared Function SelectLines(Of TResult)(spanString As ReadOnlySpan(Of Char), selector As SpanStringSelector(Of TResult)) As ImmutableArray(Of TResult)
+  overload: Garyon.Extensions.SpanStringExtensions.SelectLines*
+  nameWithType.vb: SpanStringExtensions.SelectLines(Of TResult)(ReadOnlySpan(Of Char), SpanStringSelector(Of TResult))
+  fullName.vb: Garyon.Extensions.SpanStringExtensions.SelectLines(Of TResult)(System.ReadOnlySpan(Of Char), Garyon.Extensions.SpanStringSelector(Of TResult))
+  name.vb: SelectLines(Of TResult)(ReadOnlySpan(Of Char), SpanStringSelector(Of TResult))
+references:
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.SpanStringExtensions.Parse*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.Parse
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_Parse__1_System_ReadOnlySpan_System_Char__System_IFormatProvider_
+  name: Parse
+  nameWithType: SpanStringExtensions.Parse
+  fullName: Garyon.Extensions.SpanStringExtensions.Parse
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Extensions.SpanStringExtensions.ParseByte*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseByte
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseByte_System_ReadOnlySpan_System_Char__
+  name: ParseByte
+  nameWithType: SpanStringExtensions.ParseByte
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseByte
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: Garyon.Extensions.SpanStringExtensions.ParseSByte*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseSByte
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseSByte_System_ReadOnlySpan_System_Char__
+  name: ParseSByte
+  nameWithType: SpanStringExtensions.ParseSByte
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseSByte
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: Garyon.Extensions.SpanStringExtensions.ParseInt16*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseInt16
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseInt16_System_ReadOnlySpan_System_Char__
+  name: ParseInt16
+  nameWithType: SpanStringExtensions.ParseInt16
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseInt16
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: Garyon.Extensions.SpanStringExtensions.ParseUInt16*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseUInt16
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseUInt16_System_ReadOnlySpan_System_Char__
+  name: ParseUInt16
+  nameWithType: SpanStringExtensions.ParseUInt16
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseUInt16
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: Garyon.Extensions.SpanStringExtensions.ParseInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseInt32_System_ReadOnlySpan_System_Char__
+  name: ParseInt32
+  nameWithType: SpanStringExtensions.ParseInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseInt32
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.SpanStringExtensions.ParseUInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseUInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseUInt32_System_ReadOnlySpan_System_Char__
+  name: ParseUInt32
+  nameWithType: SpanStringExtensions.ParseUInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseUInt32
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Garyon.Extensions.SpanStringExtensions.ParseInt64*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseInt64
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseInt64_System_ReadOnlySpan_System_Char__
+  name: ParseInt64
+  nameWithType: SpanStringExtensions.ParseInt64
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseInt64
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Garyon.Extensions.SpanStringExtensions.ParseUInt64*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseUInt64
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseUInt64_System_ReadOnlySpan_System_Char__
+  name: ParseUInt64
+  nameWithType: SpanStringExtensions.ParseUInt64
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseUInt64
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Extensions.SpanStringExtensions.ParseSingle*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseSingle
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseSingle_System_ReadOnlySpan_System_Char__
+  name: ParseSingle
+  nameWithType: SpanStringExtensions.ParseSingle
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseSingle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Garyon.Extensions.SpanStringExtensions.ParseDouble*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseDouble
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseDouble_System_ReadOnlySpan_System_Char__
+  name: ParseDouble
+  nameWithType: SpanStringExtensions.ParseDouble
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseDouble
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Garyon.Extensions.SpanStringExtensions.ParseDecimal*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseDecimal
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseDecimal_System_ReadOnlySpan_System_Char__
+  name: ParseDecimal
+  nameWithType: SpanStringExtensions.ParseDecimal
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseDecimal
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Garyon.Extensions.SpanStringExtensions.TryParse*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParse
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParse__1_System_ReadOnlySpan_System_Char__System_IFormatProvider___0__
+  name: TryParse
+  nameWithType: SpanStringExtensions.TryParse
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParse
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseInt32_System_ReadOnlySpan_System_Char__System_Int32__
+  name: TryParseInt32
+  nameWithType: SpanStringExtensions.TryParseInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseInt32
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseInt64*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseInt64
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseInt64_System_ReadOnlySpan_System_Char__System_Int64__
+  name: TryParseInt64
+  nameWithType: SpanStringExtensions.TryParseInt64
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseInt64
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseUInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseUInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseUInt32_System_ReadOnlySpan_System_Char__System_UInt32__
+  name: TryParseUInt32
+  nameWithType: SpanStringExtensions.TryParseUInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseUInt32
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseUInt64*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseUInt64
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseUInt64_System_ReadOnlySpan_System_Char__System_UInt64__
+  name: TryParseUInt64
+  nameWithType: SpanStringExtensions.TryParseUInt64
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseUInt64
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseSingle*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseSingle
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseSingle_System_ReadOnlySpan_System_Char__System_Single__
+  name: TryParseSingle
+  nameWithType: SpanStringExtensions.TryParseSingle
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseSingle
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseDouble*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseDouble
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseDouble_System_ReadOnlySpan_System_Char__System_Double__
+  name: TryParseDouble
+  nameWithType: SpanStringExtensions.TryParseDouble
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseDouble
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseDecimal*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseDecimal
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseDecimal_System_ReadOnlySpan_System_Char__System_Decimal__
+  name: TryParseDecimal
+  nameWithType: SpanStringExtensions.TryParseDecimal
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseDecimal
+- uid: System.Globalization.NumberStyles
+  commentId: T:System.Globalization.NumberStyles
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.numberstyles
+  name: NumberStyles
+  nameWithType: NumberStyles
+  fullName: System.Globalization.NumberStyles
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+- uid: Garyon.Extensions.SpanStringExtensions.ParseFirstInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseFirstInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseFirstInt32_System_ReadOnlySpan_System_Char__System_Int32_System_Int32__
+  name: ParseFirstInt32
+  nameWithType: SpanStringExtensions.ParseFirstInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseFirstInt32
+- uid: Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_TryParseFirstInt32_System_ReadOnlySpan_System_Char__System_Int32_System_Int32__System_Int32__
+  name: TryParseFirstInt32
+  nameWithType: SpanStringExtensions.TryParseFirstInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.TryParseFirstInt32
+- uid: Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_LastNumberStartIndex_System_ReadOnlySpan_System_Char__
+  name: LastNumberStartIndex
+  nameWithType: SpanStringExtensions.LastNumberStartIndex
+  fullName: Garyon.Extensions.SpanStringExtensions.LastNumberStartIndex
+- uid: Garyon.Extensions.SpanStringExtensions.LastNumberSlice*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.LastNumberSlice
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_LastNumberSlice_System_ReadOnlySpan_System_Char__
+  name: LastNumberSlice
+  nameWithType: SpanStringExtensions.LastNumberSlice
+  fullName: Garyon.Extensions.SpanStringExtensions.LastNumberSlice
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseLastInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseLastInt32_System_ReadOnlySpan_System_Char__
+  name: ParseLastInt32
+  nameWithType: SpanStringExtensions.ParseLastInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastInt32
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastInt64*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseLastInt64
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseLastInt64_System_ReadOnlySpan_System_Char__
+  name: ParseLastInt64
+  nameWithType: SpanStringExtensions.ParseLastInt64
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastInt64
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastUInt32*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseLastUInt32
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseLastUInt32_System_ReadOnlySpan_System_Char__
+  name: ParseLastUInt32
+  nameWithType: SpanStringExtensions.ParseLastUInt32
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastUInt32
+- uid: Garyon.Extensions.SpanStringExtensions.ParseLastUInt64*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.ParseLastUInt64
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_ParseLastUInt64_System_ReadOnlySpan_System_Char__
+  name: ParseLastUInt64
+  nameWithType: SpanStringExtensions.ParseLastUInt64
+  fullName: Garyon.Extensions.SpanStringExtensions.ParseLastUInt64
+- uid: Garyon.Extensions.SpanStringExtensions.SplitToStrings*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.SplitToStrings
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_SplitToStrings_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__
+  name: SplitToStrings
+  nameWithType: SpanStringExtensions.SplitToStrings
+  fullName: Garyon.Extensions.SpanStringExtensions.SplitToStrings
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Garyon.Extensions.SpanStringExtensions.GetLines*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.GetLines
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_GetLines_System_ReadOnlySpan_System_Char__
+  name: GetLines
+  nameWithType: SpanStringExtensions.GetLines
+  fullName: Garyon.Extensions.SpanStringExtensions.GetLines
+- uid: System.Collections.Immutable.ImmutableArray{System.String}
+  commentId: T:System.Collections.Immutable.ImmutableArray{System.String}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<string>
+  nameWithType: ImmutableArray<string>
+  fullName: System.Collections.Immutable.ImmutableArray<string>
+  nameWithType.vb: ImmutableArray(Of String)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of String)
+  name.vb: ImmutableArray(Of String)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: Garyon.Extensions.SpanStringExtensions.SelectLines*
+  commentId: Overload:Garyon.Extensions.SpanStringExtensions.SelectLines
+  href: Garyon.Extensions.SpanStringExtensions.html#Garyon_Extensions_SpanStringExtensions_SelectLines__1_System_ReadOnlySpan_System_Char__Garyon_Extensions_SpanStringSelector___0__
+  name: SelectLines
+  nameWithType: SpanStringExtensions.SelectLines
+  fullName: Garyon.Extensions.SpanStringExtensions.SelectLines
+- uid: Garyon.Extensions.SpanStringSelector{{TResult}}
+  commentId: T:Garyon.Extensions.SpanStringSelector{``0}
+  parent: Garyon.Extensions
+  definition: Garyon.Extensions.SpanStringSelector`1
+  href: Garyon.Extensions.SpanStringSelector-1.html
+  name: SpanStringSelector<TResult>
+  nameWithType: SpanStringSelector<TResult>
+  fullName: Garyon.Extensions.SpanStringSelector<TResult>
+  nameWithType.vb: SpanStringSelector(Of TResult)
+  fullName.vb: Garyon.Extensions.SpanStringSelector(Of TResult)
+  name.vb: SpanStringSelector(Of TResult)
+  spec.csharp:
+  - uid: Garyon.Extensions.SpanStringSelector`1
+    name: SpanStringSelector
+    href: Garyon.Extensions.SpanStringSelector-1.html
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.SpanStringSelector`1
+    name: SpanStringSelector
+    href: Garyon.Extensions.SpanStringSelector-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray{{TResult}}
+  commentId: T:System.Collections.Immutable.ImmutableArray{``0}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<TResult>
+  nameWithType: ImmutableArray<TResult>
+  fullName: System.Collections.Immutable.ImmutableArray<TResult>
+  nameWithType.vb: ImmutableArray(Of TResult)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of TResult)
+  name.vb: ImmutableArray(Of TResult)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Extensions.SpanStringSelector`1
+  commentId: T:Garyon.Extensions.SpanStringSelector`1
+  href: Garyon.Extensions.SpanStringSelector-1.html
+  name: SpanStringSelector<T>
+  nameWithType: SpanStringSelector<T>
+  fullName: Garyon.Extensions.SpanStringSelector<T>
+  nameWithType.vb: SpanStringSelector(Of T)
+  fullName.vb: Garyon.Extensions.SpanStringSelector(Of T)
+  name.vb: SpanStringSelector(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.SpanStringSelector`1
+    name: SpanStringSelector
+    href: Garyon.Extensions.SpanStringSelector-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.SpanStringSelector`1
+    name: SpanStringSelector
+    href: Garyon.Extensions.SpanStringSelector-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

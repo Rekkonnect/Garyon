@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.ComparisonKindsExtensions
+  commentId: T:Garyon.Objects.ComparisonKindsExtensions
+  id: ComparisonKindsExtensions
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.ComparisonKindsExtensions.AsResult(Garyon.Objects.ComparisonKinds)
+  - Garyon.Objects.ComparisonKindsExtensions.HasKinds(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonKinds)
+  - Garyon.Objects.ComparisonKindsExtensions.Matches(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonResult)
+  langs:
+  - csharp
+  - vb
+  name: ComparisonKindsExtensions
+  nameWithType: ComparisonKindsExtensions
+  fullName: Garyon.Objects.ComparisonKindsExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/ComparisonKinds.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ComparisonKindsExtensions
+    path: ../Garyon/Objects/ComparisonKinds.cs
+    startLine: 70
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Contains extensions for the <xref href="Garyon.Objects.ComparisonKinds" data-throw-if-not-resolved="false"></xref> enum.
+  example: []
+  syntax:
+    content: public static class ComparisonKindsExtensions
+    content.vb: Public Module ComparisonKindsExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Objects.ComparisonKindsExtensions.Matches(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonResult)
+  commentId: M:Garyon.Objects.ComparisonKindsExtensions.Matches(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonResult)
+  id: Matches(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonResult)
+  isExtensionMethod: true
+  parent: Garyon.Objects.ComparisonKindsExtensions
+  langs:
+  - csharp
+  - vb
+  name: Matches(ComparisonKinds, ComparisonResult)
+  nameWithType: ComparisonKindsExtensions.Matches(ComparisonKinds, ComparisonResult)
+  fullName: Garyon.Objects.ComparisonKindsExtensions.Matches(Garyon.Objects.ComparisonKinds, Garyon.Objects.ComparisonResult)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/ComparisonKinds.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Matches
+    path: ../Garyon/Objects/ComparisonKinds.cs
+    startLine: 113
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Determines whether a <xref href="Garyon.Objects.ComparisonKinds" data-throw-if-not-resolved="false"></xref> contains a
+
+    comparison kind that matches the given
+
+    <xref href="Garyon.Objects.ComparisonResult" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool Matches(this ComparisonKinds kinds, ComparisonResult result)
+    parameters:
+    - id: kinds
+      type: Garyon.Objects.ComparisonKinds
+      description: >-
+        The comparison kinds to determine whether they are satisfied by the
+
+        result.
+    - id: result
+      type: Garyon.Objects.ComparisonResult
+      description: The
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if there is at least one comparison kind in
+
+        <code class="paramref">kinds</code> that was matched by the
+
+        <code class="paramref">result</code>, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function Matches(kinds As ComparisonKinds, result As ComparisonResult) As Boolean
+  overload: Garyon.Objects.ComparisonKindsExtensions.Matches*
+- uid: Garyon.Objects.ComparisonKindsExtensions.HasKinds(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonKinds)
+  commentId: M:Garyon.Objects.ComparisonKindsExtensions.HasKinds(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonKinds)
+  id: HasKinds(Garyon.Objects.ComparisonKinds,Garyon.Objects.ComparisonKinds)
+  isExtensionMethod: true
+  parent: Garyon.Objects.ComparisonKindsExtensions
+  langs:
+  - csharp
+  - vb
+  name: HasKinds(ComparisonKinds, ComparisonKinds)
+  nameWithType: ComparisonKindsExtensions.HasKinds(ComparisonKinds, ComparisonKinds)
+  fullName: Garyon.Objects.ComparisonKindsExtensions.HasKinds(Garyon.Objects.ComparisonKinds, Garyon.Objects.ComparisonKinds)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/ComparisonKinds.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: HasKinds
+    path: ../Garyon/Objects/ComparisonKinds.cs
+    startLine: 131
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Determines whether a <xref href="Garyon.Objects.ComparisonKinds" data-throw-if-not-resolved="false"></xref> value contains
+
+    the given kinds.
+  example: []
+  syntax:
+    content: public static bool HasKinds(this ComparisonKinds kinds, ComparisonKinds other)
+    parameters:
+    - id: kinds
+      type: Garyon.Objects.ComparisonKinds
+      description: The kinds value to determine if it contains the requested kinds.
+    - id: other
+      type: Garyon.Objects.ComparisonKinds
+      description: >-
+        The requested comparison kinds to check if they are contained in the
+
+        given <xref href="Garyon.Objects.ComparisonKinds" data-throw-if-not-resolved="false"></xref> value.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">kinds</code> contains at least all
+
+        of the requested kinds in <code class="paramref">other</code>, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function HasKinds(kinds As ComparisonKinds, other As ComparisonKinds) As Boolean
+  overload: Garyon.Objects.ComparisonKindsExtensions.HasKinds*
+- uid: Garyon.Objects.ComparisonKindsExtensions.AsResult(Garyon.Objects.ComparisonKinds)
+  commentId: M:Garyon.Objects.ComparisonKindsExtensions.AsResult(Garyon.Objects.ComparisonKinds)
+  id: AsResult(Garyon.Objects.ComparisonKinds)
+  isExtensionMethod: true
+  parent: Garyon.Objects.ComparisonKindsExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsResult(ComparisonKinds)
+  nameWithType: ComparisonKindsExtensions.AsResult(ComparisonKinds)
+  fullName: Garyon.Objects.ComparisonKindsExtensions.AsResult(Garyon.Objects.ComparisonKinds)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/ComparisonKinds.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AsResult
+    path: ../Garyon/Objects/ComparisonKinds.cs
+    startLine: 148
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Converts the given comparison kind into a
+
+    <xref href="Garyon.Objects.ComparisonResult" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static ComparisonResult AsResult(this ComparisonKinds kind)
+    parameters:
+    - id: kind
+      type: Garyon.Objects.ComparisonKinds
+      description: The single comparison kind that should be
+    return:
+      type: Garyon.Objects.ComparisonResult
+      description: The respective <xref href="Garyon.Objects.ComparisonResult" data-throw-if-not-resolved="false"></xref> value.
+    content.vb: Public Shared Function AsResult(kind As ComparisonKinds) As ComparisonResult
+  overload: Garyon.Objects.ComparisonKindsExtensions.AsResult*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      Thrown if <code class="paramref">kind</code> does not represent exactly a single
+
+      comparison kind.
+references:
+- uid: Garyon.Objects.ComparisonKinds
+  commentId: T:Garyon.Objects.ComparisonKinds
+  parent: Garyon.Objects
+  href: Garyon.Objects.ComparisonKinds.html
+  name: ComparisonKinds
+  nameWithType: ComparisonKinds
+  fullName: Garyon.Objects.ComparisonKinds
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Objects.ComparisonResult
+  commentId: T:Garyon.Objects.ComparisonResult
+  parent: Garyon.Objects
+  href: Garyon.Objects.ComparisonResult.html
+  name: ComparisonResult
+  nameWithType: ComparisonResult
+  fullName: Garyon.Objects.ComparisonResult
+- uid: Garyon.Objects.ComparisonKindsExtensions.Matches*
+  commentId: Overload:Garyon.Objects.ComparisonKindsExtensions.Matches
+  href: Garyon.Objects.ComparisonKindsExtensions.html#Garyon_Objects_ComparisonKindsExtensions_Matches_Garyon_Objects_ComparisonKinds_Garyon_Objects_ComparisonResult_
+  name: Matches
+  nameWithType: ComparisonKindsExtensions.Matches
+  fullName: Garyon.Objects.ComparisonKindsExtensions.Matches
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Objects.ComparisonKindsExtensions.HasKinds*
+  commentId: Overload:Garyon.Objects.ComparisonKindsExtensions.HasKinds
+  href: Garyon.Objects.ComparisonKindsExtensions.html#Garyon_Objects_ComparisonKindsExtensions_HasKinds_Garyon_Objects_ComparisonKinds_Garyon_Objects_ComparisonKinds_
+  name: HasKinds
+  nameWithType: ComparisonKindsExtensions.HasKinds
+  fullName: Garyon.Objects.ComparisonKindsExtensions.HasKinds
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Garyon.Objects.ComparisonKindsExtensions.AsResult*
+  commentId: Overload:Garyon.Objects.ComparisonKindsExtensions.AsResult
+  href: Garyon.Objects.ComparisonKindsExtensions.html#Garyon_Objects_ComparisonKindsExtensions_AsResult_Garyon_Objects_ComparisonKinds_
+  name: AsResult
+  nameWithType: ComparisonKindsExtensions.AsResult
+  fullName: Garyon.Objects.ComparisonKindsExtensions.AsResult

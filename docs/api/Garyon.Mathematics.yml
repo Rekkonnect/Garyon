@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Mathematics
+  commentId: N:Garyon.Mathematics
+  id: Garyon.Mathematics
+  children:
+  - Garyon.Mathematics.BinaryExtensions
+  - Garyon.Mathematics.GeneralMath
+  - Garyon.Mathematics.MathConstants
+  - Garyon.Mathematics.MathExtensions
+  - Garyon.Mathematics.MathNumberExtensions
+  - Garyon.Mathematics.Overflowing
+  - Garyon.Mathematics.SequencesMath
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Mathematics
+  nameWithType: Garyon.Mathematics
+  fullName: Garyon.Mathematics
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Mathematics.BinaryExtensions
+  commentId: T:Garyon.Mathematics.BinaryExtensions
+  href: Garyon.Mathematics.BinaryExtensions.html
+  name: BinaryExtensions
+  nameWithType: BinaryExtensions
+  fullName: Garyon.Mathematics.BinaryExtensions
+- uid: Garyon.Mathematics.GeneralMath
+  commentId: T:Garyon.Mathematics.GeneralMath
+  href: Garyon.Mathematics.GeneralMath.html
+  name: GeneralMath
+  nameWithType: GeneralMath
+  fullName: Garyon.Mathematics.GeneralMath
+- uid: Garyon.Mathematics.MathConstants
+  commentId: T:Garyon.Mathematics.MathConstants
+  href: Garyon.Mathematics.MathConstants.html
+  name: MathConstants
+  nameWithType: MathConstants
+  fullName: Garyon.Mathematics.MathConstants
+- uid: Garyon.Mathematics.MathExtensions
+  commentId: T:Garyon.Mathematics.MathExtensions
+  href: Garyon.Mathematics.MathExtensions.html
+  name: MathExtensions
+  nameWithType: MathExtensions
+  fullName: Garyon.Mathematics.MathExtensions
+- uid: Garyon.Mathematics.MathNumberExtensions
+  commentId: T:Garyon.Mathematics.MathNumberExtensions
+  href: Garyon.Mathematics.MathNumberExtensions.html
+  name: MathNumberExtensions
+  nameWithType: MathNumberExtensions
+  fullName: Garyon.Mathematics.MathNumberExtensions
+- uid: Garyon.Mathematics.Overflowing
+  commentId: T:Garyon.Mathematics.Overflowing
+  href: Garyon.Mathematics.Overflowing.html
+  name: Overflowing
+  nameWithType: Overflowing
+  fullName: Garyon.Mathematics.Overflowing
+- uid: Garyon.Mathematics.SequencesMath
+  commentId: T:Garyon.Mathematics.SequencesMath
+  href: Garyon.Mathematics.SequencesMath.html
+  name: SequencesMath
+  nameWithType: SequencesMath
+  fullName: Garyon.Mathematics.SequencesMath

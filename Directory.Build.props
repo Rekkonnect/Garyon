@@ -3,6 +3,7 @@
   <PropertyGroup>
     <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
     <FrameworkCapabilitiesPropsPath>$(RepoRoot)FrameworkCapabilities.Generated.props</FrameworkCapabilitiesPropsPath>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <Import Project="$(FrameworkCapabilitiesPropsPath)" />

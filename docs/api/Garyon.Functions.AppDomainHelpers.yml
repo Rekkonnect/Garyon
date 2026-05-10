@@ -1,0 +1,681 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.AppDomainHelpers
+  commentId: T:Garyon.Functions.AppDomainHelpers
+  id: AppDomainHelpers
+  parent: Garyon.Functions
+  children:
+  - Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  - Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent
+  - Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies(System.AppDomain)
+  - Garyon.Functions.AppDomainHelpers.GetStaticAssemblies(System.AppDomain)
+  langs:
+  - csharp
+  - vb
+  name: AppDomainHelpers
+  nameWithType: AppDomainHelpers
+  fullName: Garyon.Functions.AppDomainHelpers
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/AppDomainHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppDomainHelpers
+    path: ../Garyon/Functions/AppDomainHelpers.cs
+    startLine: 14
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Provides helper functions and extensions for the <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref>
+
+    class.
+  example: []
+  syntax:
+    content: public static class AppDomainHelpers
+    content.vb: Public Module AppDomainHelpers
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  commentId: M:Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  id: ForceLoadAllAssemblies(System.AppDomain)
+  isExtensionMethod: true
+  parent: Garyon.Functions.AppDomainHelpers
+  langs:
+  - csharp
+  - vb
+  name: ForceLoadAllAssemblies(AppDomain)
+  nameWithType: AppDomainHelpers.ForceLoadAllAssemblies(AppDomain)
+  fullName: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/AppDomainHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ForceLoadAllAssemblies
+    path: ../Garyon/Functions/AppDomainHelpers.cs
+    startLine: 24
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Forces loading all assemblies that are referenced in the given
+
+    <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static void ForceLoadAllAssemblies(this AppDomain domain)
+    parameters:
+    - id: domain
+      type: System.AppDomain
+      description: >-
+        The <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> whose referenced assemblies to force
+
+        loading.
+    content.vb: Public Shared Sub ForceLoadAllAssemblies(domain As AppDomain)
+  overload: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies*
+- uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent
+  commentId: M:Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent
+  id: ForceLoadAllAssembliesCurrent
+  parent: Garyon.Functions.AppDomainHelpers
+  langs:
+  - csharp
+  - vb
+  name: ForceLoadAllAssembliesCurrent()
+  nameWithType: AppDomainHelpers.ForceLoadAllAssembliesCurrent()
+  fullName: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/AppDomainHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ForceLoadAllAssembliesCurrent
+    path: ../Garyon/Functions/AppDomainHelpers.cs
+    startLine: 43
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Forces loading all assemblies that are referenced in
+
+    <xref href="System.AppDomain.CurrentDomain" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static void ForceLoadAllAssembliesCurrent()
+    content.vb: Public Shared Sub ForceLoadAllAssembliesCurrent()
+  overload: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent*
+- uid: Garyon.Functions.AppDomainHelpers.GetStaticAssemblies(System.AppDomain)
+  commentId: M:Garyon.Functions.AppDomainHelpers.GetStaticAssemblies(System.AppDomain)
+  id: GetStaticAssemblies(System.AppDomain)
+  isExtensionMethod: true
+  parent: Garyon.Functions.AppDomainHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetStaticAssemblies(AppDomain)
+  nameWithType: AppDomainHelpers.GetStaticAssemblies(AppDomain)
+  fullName: Garyon.Functions.AppDomainHelpers.GetStaticAssemblies(System.AppDomain)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/AppDomainHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetStaticAssemblies
+    path: ../Garyon/Functions/AppDomainHelpers.cs
+    startLine: 62
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Gets all the static assemblies that are loaded.
+  remarks: >-
+    Only the loaded assemblies are included. Consider using
+
+    <xref href="Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static IEnumerable<Assembly> GetStaticAssemblies(this AppDomain domain)
+    parameters:
+    - id: domain
+      type: System.AppDomain
+      description: The <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> whose static assemblies to get.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Reflection.Assembly}
+      description: >-
+        A collection of <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref> instances representing the
+
+        static assemblies that the given <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> contains.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetStaticAssemblies(domain As AppDomain) As IEnumerable(Of Assembly)
+  overload: Garyon.Functions.AppDomainHelpers.GetStaticAssemblies*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies(System.AppDomain)
+  commentId: M:Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies(System.AppDomain)
+  id: GetDynamicAssemblies(System.AppDomain)
+  isExtensionMethod: true
+  parent: Garyon.Functions.AppDomainHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetDynamicAssemblies(AppDomain)
+  nameWithType: AppDomainHelpers.GetDynamicAssemblies(AppDomain)
+  fullName: Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies(System.AppDomain)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/AppDomainHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDynamicAssemblies
+    path: ../Garyon/Functions/AppDomainHelpers.cs
+    startLine: 80
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Gets all the dynamic assemblies that are loaded.
+  remarks: Only the loaded assemblies are included..
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static IEnumerable<Assembly> GetDynamicAssemblies(this AppDomain domain)
+    parameters:
+    - id: domain
+      type: System.AppDomain
+      description: The <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> whose dynamic assemblies to get.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Reflection.Assembly}
+      description: >-
+        A collection of <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref> instances representing the
+
+        dynamic assemblies that the given <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> contains.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetDynamicAssemblies(domain As AppDomain) As IEnumerable(Of Assembly)
+  overload: Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+references:
+- uid: System.AppDomain
+  commentId: T:System.AppDomain
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.appdomain
+  name: AppDomain
+  nameWithType: AppDomain
+  fullName: System.AppDomain
+- uid: Garyon.Functions
+  commentId: N:Garyon.Functions
+  href: Garyon.html
+  name: Garyon.Functions
+  nameWithType: Garyon.Functions
+  fullName: Garyon.Functions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies*
+  commentId: Overload:Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies
+  href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_ForceLoadAllAssemblies_System_AppDomain_
+  name: ForceLoadAllAssemblies
+  nameWithType: AppDomainHelpers.ForceLoadAllAssemblies
+  fullName: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies
+- uid: System.AppDomain.CurrentDomain
+  commentId: P:System.AppDomain.CurrentDomain
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.appdomain.currentdomain
+  name: CurrentDomain
+  nameWithType: AppDomain.CurrentDomain
+  fullName: System.AppDomain.CurrentDomain
+- uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent*
+  commentId: Overload:Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent
+  href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_ForceLoadAllAssembliesCurrent
+  name: ForceLoadAllAssembliesCurrent
+  nameWithType: AppDomainHelpers.ForceLoadAllAssembliesCurrent
+  fullName: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssembliesCurrent
+- uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.assembly
+  name: Assembly
+  nameWithType: Assembly
+  fullName: System.Reflection.Assembly
+- uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  commentId: M:Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  isExternal: true
+  href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_ForceLoadAllAssemblies_System_AppDomain_
+  name: ForceLoadAllAssemblies(AppDomain)
+  nameWithType: AppDomainHelpers.ForceLoadAllAssemblies(AppDomain)
+  fullName: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+  spec.csharp:
+  - uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+    name: ForceLoadAllAssemblies
+    href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_ForceLoadAllAssemblies_System_AppDomain_
+  - name: (
+  - uid: System.AppDomain
+    name: AppDomain
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.appdomain
+  - name: )
+  spec.vb:
+  - uid: Garyon.Functions.AppDomainHelpers.ForceLoadAllAssemblies(System.AppDomain)
+    name: ForceLoadAllAssemblies
+    href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_ForceLoadAllAssemblies_System_AppDomain_
+  - name: (
+  - uid: System.AppDomain
+    name: AppDomain
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.appdomain
+  - name: )
+- uid: Garyon.Functions.AppDomainHelpers.GetStaticAssemblies*
+  commentId: Overload:Garyon.Functions.AppDomainHelpers.GetStaticAssemblies
+  href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_GetStaticAssemblies_System_AppDomain_
+  name: GetStaticAssemblies
+  nameWithType: AppDomainHelpers.GetStaticAssemblies
+  fullName: Garyon.Functions.AppDomainHelpers.GetStaticAssemblies
+- uid: System.Collections.Generic.IEnumerable{System.Reflection.Assembly}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Reflection.Assembly}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Assembly>
+  nameWithType: IEnumerable<Assembly>
+  fullName: System.Collections.Generic.IEnumerable<System.Reflection.Assembly>
+  nameWithType.vb: IEnumerable(Of Assembly)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.Assembly)
+  name.vb: IEnumerable(Of Assembly)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.assembly
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.assembly
+  - name: )
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies*
+  commentId: Overload:Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies
+  href: Garyon.Functions.AppDomainHelpers.html#Garyon_Functions_AppDomainHelpers_GetDynamicAssemblies_System_AppDomain_
+  name: GetDynamicAssemblies
+  nameWithType: AppDomainHelpers.GetDynamicAssemblies
+  fullName: Garyon.Functions.AppDomainHelpers.GetDynamicAssemblies

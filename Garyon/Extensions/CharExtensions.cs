@@ -1,3 +1,4 @@
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
 namespace Garyon.Extensions;
@@ -77,48 +78,70 @@ public static class CharExtensions
 
     #region Extension Variants
     /// <inheritdoc cref="char.GetNumericValue(char)"/>
+    [ExcludeFromCodeCoverage]
     public static double GetNumericValue(this char c) => char.GetNumericValue(c);
     /// <inheritdoc cref="char.GetUnicodeCategory(char)"/>
+    [ExcludeFromCodeCoverage]
     public static UnicodeCategory GetUnicodeCategory(this char c) => char.GetUnicodeCategory(c);
     /// <inheritdoc cref="char.IsControl(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsControl(this char c) => char.IsControl(c);
     /// <inheritdoc cref="char.IsDigit(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsDigit(this char c) => char.IsDigit(c);
     /// <inheritdoc cref="char.IsHighSurrogate(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsHighSurrogate(this char c) => char.IsHighSurrogate(c);
     /// <inheritdoc cref="char.IsLetter(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsLetter(this char c) => char.IsLetter(c);
     /// <inheritdoc cref="char.IsLetterOrDigit(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsLetterOrDigit(this char c) => char.IsLetterOrDigit(c);
     /// <inheritdoc cref="char.IsLower(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsLower(this char c) => char.IsLower(c);
     /// <inheritdoc cref="char.IsLowSurrogate(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsLowSurrogate(this char c) => char.IsLowSurrogate(c);
     /// <inheritdoc cref="char.IsNumber(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsNumber(this char c) => char.IsNumber(c);
     /// <inheritdoc cref="char.IsPunctuation(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsPunctuation(this char c) => char.IsPunctuation(c);
     /// <inheritdoc cref="char.IsSeparator(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsSeparator(this char c) => char.IsSeparator(c);
     /// <inheritdoc cref="char.IsSurrogate(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsSurrogate(this char c) => char.IsSurrogate(c);
     /// <inheritdoc cref="char.IsSymbol(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsSymbol(this char c) => char.IsSymbol(c);
     /// <inheritdoc cref="char.IsUpper(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsUpper(this char c) => char.IsUpper(c);
     /// <inheritdoc cref="char.IsWhiteSpace(char)"/>
+    [ExcludeFromCodeCoverage]
     public static bool IsWhiteSpace(this char c) => char.IsWhiteSpace(c);
     /// <inheritdoc cref="char.ToLower(char, CultureInfo)"/>
+    [ExcludeFromCodeCoverage]
     public static char ToLower(this char c, CultureInfo culture) => char.ToLower(c, culture);
     /// <inheritdoc cref="char.ToLower(char)"/>
+    [ExcludeFromCodeCoverage]
     public static char ToLower(this char c) => char.ToLower(c);
     /// <inheritdoc cref="char.ToLowerInvariant(char)"/>
+    [ExcludeFromCodeCoverage]
     public static char ToLowerInvariant(this char c) => char.ToLowerInvariant(c);
     /// <inheritdoc cref="char.ToUpper(char)"/>
+    [ExcludeFromCodeCoverage]
     public static char ToUpper(this char c) => char.ToUpper(c);
     /// <inheritdoc cref="char.ToUpper(char, CultureInfo)"/>
+    [ExcludeFromCodeCoverage]
     public static char ToUpper(this char c, CultureInfo culture) => char.ToUpper(c, culture);
     /// <inheritdoc cref="char.ToUpperInvariant(char)"/>
+    [ExcludeFromCodeCoverage]
     public static char ToUpperInvariant(this char c) => char.ToUpperInvariant(c);
     #endregion
 

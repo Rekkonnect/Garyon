@@ -527,6 +527,7 @@ public abstract class BaseTree<TValue, TTree, TTreeNode> : ITree<TValue, TTree, 
         return true;
     }
 
-    public override bool Equals(object obj) => Equals(obj as TTree);
+#nullable enable
+    public override bool Equals(object? obj) => Equals(obj as TTree);
     public override int GetHashCode() => Root.GetHashCode() | CachedCount.GetHashCode();
 }

@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  id: Garyon.Reflection
+  children:
+  - Garyon.Reflection.AccessibilityModifiers
+  - Garyon.Reflection.AppDomainCache
+  - Garyon.Reflection.AppDomainExtensions
+  - Garyon.Reflection.AttributeMapping
+  - Garyon.Reflection.CodeAttribute
+  - Garyon.Reflection.CommonBindingFlags
+  - Garyon.Reflection.ConstructorInfoExtensions
+  - Garyon.Reflection.DefaultInstanceContainer`1
+  - Garyon.Reflection.DelegateTypeExtensions
+  - Garyon.Reflection.EnumAttributeMappingBuilder`1
+  - Garyon.Reflection.EnumAttributeMappingBuilder`3
+  - Garyon.Reflection.EnumReflectionHelpers
+  - Garyon.Reflection.EventInfoExtensions
+  - Garyon.Reflection.FieldInfoExtensions
+  - Garyon.Reflection.InvokableTypeKind
+  - Garyon.Reflection.MemberInfoExtensions
+  - Garyon.Reflection.MethodInfoExtensions
+  - Garyon.Reflection.PropertyInfoExtensions
+  - Garyon.Reflection.TypeDefinitionInfo
+  - Garyon.Reflection.TypeExtensions
+  - Garyon.Reflection.TypeKind
+  - Garyon.Reflection.TypeListCache
+  - Garyon.Reflection.TypeModifiers
+  - Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Reflection.AccessibilityModifiers
+  commentId: T:Garyon.Reflection.AccessibilityModifiers
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.AccessibilityModifiers.html
+  name: AccessibilityModifiers
+  nameWithType: AccessibilityModifiers
+  fullName: Garyon.Reflection.AccessibilityModifiers
+- uid: Garyon.Reflection.AppDomainCache
+  commentId: T:Garyon.Reflection.AppDomainCache
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.AppDomainCache.html
+  name: AppDomainCache
+  nameWithType: AppDomainCache
+  fullName: Garyon.Reflection.AppDomainCache
+- uid: Garyon.Reflection.AppDomainExtensions
+  commentId: T:Garyon.Reflection.AppDomainExtensions
+  href: Garyon.Reflection.AppDomainExtensions.html
+  name: AppDomainExtensions
+  nameWithType: AppDomainExtensions
+  fullName: Garyon.Reflection.AppDomainExtensions
+- uid: Garyon.Reflection.AttributeMapping
+  commentId: T:Garyon.Reflection.AttributeMapping
+  href: Garyon.Reflection.AttributeMapping.html
+  name: AttributeMapping
+  nameWithType: AttributeMapping
+  fullName: Garyon.Reflection.AttributeMapping
+- uid: Garyon.Reflection.EnumAttributeMappingBuilder`1
+  commentId: T:Garyon.Reflection.EnumAttributeMappingBuilder`1
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.EnumAttributeMappingBuilder-1.html
+  name: EnumAttributeMappingBuilder<TEnum>
+  nameWithType: EnumAttributeMappingBuilder<TEnum>
+  fullName: Garyon.Reflection.EnumAttributeMappingBuilder<TEnum>
+  nameWithType.vb: EnumAttributeMappingBuilder(Of TEnum)
+  fullName.vb: Garyon.Reflection.EnumAttributeMappingBuilder(Of TEnum)
+  name.vb: EnumAttributeMappingBuilder(Of TEnum)
+  spec.csharp:
+  - uid: Garyon.Reflection.EnumAttributeMappingBuilder`1
+    name: EnumAttributeMappingBuilder
+    href: Garyon.Reflection.EnumAttributeMappingBuilder-1.html
+  - name: <
+  - name: TEnum
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Reflection.EnumAttributeMappingBuilder`1
+    name: EnumAttributeMappingBuilder
+    href: Garyon.Reflection.EnumAttributeMappingBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnum
+  - name: )
+- uid: Garyon.Reflection.EnumAttributeMappingBuilder`3
+  commentId: T:Garyon.Reflection.EnumAttributeMappingBuilder`3
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.EnumAttributeMappingBuilder-3.html
+  name: EnumAttributeMappingBuilder<TEnum, TAttribute, TMappedValue>
+  nameWithType: EnumAttributeMappingBuilder<TEnum, TAttribute, TMappedValue>
+  fullName: Garyon.Reflection.EnumAttributeMappingBuilder<TEnum, TAttribute, TMappedValue>
+  nameWithType.vb: EnumAttributeMappingBuilder(Of TEnum, TAttribute, TMappedValue)
+  fullName.vb: Garyon.Reflection.EnumAttributeMappingBuilder(Of TEnum, TAttribute, TMappedValue)
+  name.vb: EnumAttributeMappingBuilder(Of TEnum, TAttribute, TMappedValue)
+  spec.csharp:
+  - uid: Garyon.Reflection.EnumAttributeMappingBuilder`3
+    name: EnumAttributeMappingBuilder
+    href: Garyon.Reflection.EnumAttributeMappingBuilder-3.html
+  - name: <
+  - name: TEnum
+  - name: ','
+  - name: " "
+  - name: TAttribute
+  - name: ','
+  - name: " "
+  - name: TMappedValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Reflection.EnumAttributeMappingBuilder`3
+    name: EnumAttributeMappingBuilder
+    href: Garyon.Reflection.EnumAttributeMappingBuilder-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnum
+  - name: ','
+  - name: " "
+  - name: TAttribute
+  - name: ','
+  - name: " "
+  - name: TMappedValue
+  - name: )
+- uid: Garyon.Reflection.CodeAttribute
+  commentId: T:Garyon.Reflection.CodeAttribute
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.CodeAttribute.html
+  name: CodeAttribute
+  nameWithType: CodeAttribute
+  fullName: Garyon.Reflection.CodeAttribute
+- uid: Garyon.Reflection.CommonBindingFlags
+  commentId: T:Garyon.Reflection.CommonBindingFlags
+  href: Garyon.Reflection.CommonBindingFlags.html
+  name: CommonBindingFlags
+  nameWithType: CommonBindingFlags
+  fullName: Garyon.Reflection.CommonBindingFlags
+- uid: Garyon.Reflection.ConstructorInfoExtensions
+  commentId: T:Garyon.Reflection.ConstructorInfoExtensions
+  href: Garyon.Reflection.ConstructorInfoExtensions.html
+  name: ConstructorInfoExtensions
+  nameWithType: ConstructorInfoExtensions
+  fullName: Garyon.Reflection.ConstructorInfoExtensions
+- uid: Garyon.Reflection.DefaultInstanceContainer`1
+  commentId: T:Garyon.Reflection.DefaultInstanceContainer`1
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  name: DefaultInstanceContainer<TBase>
+  nameWithType: DefaultInstanceContainer<TBase>
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>
+  nameWithType.vb: DefaultInstanceContainer(Of TBase)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase)
+  name.vb: DefaultInstanceContainer(Of TBase)
+  spec.csharp:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: Garyon.Reflection.DelegateTypeExtensions
+  commentId: T:Garyon.Reflection.DelegateTypeExtensions
+  href: Garyon.Reflection.DelegateTypeExtensions.html
+  name: DelegateTypeExtensions
+  nameWithType: DelegateTypeExtensions
+  fullName: Garyon.Reflection.DelegateTypeExtensions
+- uid: Garyon.Reflection.EnumReflectionHelpers
+  commentId: T:Garyon.Reflection.EnumReflectionHelpers
+  href: Garyon.Reflection.EnumReflectionHelpers.html
+  name: EnumReflectionHelpers
+  nameWithType: EnumReflectionHelpers
+  fullName: Garyon.Reflection.EnumReflectionHelpers
+- uid: Garyon.Reflection.FieldInfoExtensions
+  commentId: T:Garyon.Reflection.FieldInfoExtensions
+  href: Garyon.Reflection.FieldInfoExtensions.html
+  name: FieldInfoExtensions
+  nameWithType: FieldInfoExtensions
+  fullName: Garyon.Reflection.FieldInfoExtensions
+- uid: Garyon.Reflection.PropertyInfoExtensions
+  commentId: T:Garyon.Reflection.PropertyInfoExtensions
+  href: Garyon.Reflection.PropertyInfoExtensions.html
+  name: PropertyInfoExtensions
+  nameWithType: PropertyInfoExtensions
+  fullName: Garyon.Reflection.PropertyInfoExtensions
+- uid: Garyon.Reflection.EventInfoExtensions
+  commentId: T:Garyon.Reflection.EventInfoExtensions
+  href: Garyon.Reflection.EventInfoExtensions.html
+  name: EventInfoExtensions
+  nameWithType: EventInfoExtensions
+  fullName: Garyon.Reflection.EventInfoExtensions
+- uid: Garyon.Reflection.InvokableTypeKind
+  commentId: T:Garyon.Reflection.InvokableTypeKind
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.InvokableTypeKind.html
+  name: InvokableTypeKind
+  nameWithType: InvokableTypeKind
+  fullName: Garyon.Reflection.InvokableTypeKind
+- uid: Garyon.Reflection.MemberInfoExtensions
+  commentId: T:Garyon.Reflection.MemberInfoExtensions
+  href: Garyon.Reflection.MemberInfoExtensions.html
+  name: MemberInfoExtensions
+  nameWithType: MemberInfoExtensions
+  fullName: Garyon.Reflection.MemberInfoExtensions
+- uid: Garyon.Reflection.MethodInfoExtensions
+  commentId: T:Garyon.Reflection.MethodInfoExtensions
+  href: Garyon.Reflection.MethodInfoExtensions.html
+  name: MethodInfoExtensions
+  nameWithType: MethodInfoExtensions
+  fullName: Garyon.Reflection.MethodInfoExtensions
+- uid: Garyon.Reflection.TypeDefinitionInfo
+  commentId: T:Garyon.Reflection.TypeDefinitionInfo
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeDefinitionInfo.html
+  name: TypeDefinitionInfo
+  nameWithType: TypeDefinitionInfo
+  fullName: Garyon.Reflection.TypeDefinitionInfo
+- uid: Garyon.Reflection.TypeExtensions
+  commentId: T:Garyon.Reflection.TypeExtensions
+  href: Garyon.Reflection.TypeExtensions.html
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: Garyon.Reflection.TypeExtensions
+- uid: Garyon.Reflection.TypeKind
+  commentId: T:Garyon.Reflection.TypeKind
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeKind.html
+  name: TypeKind
+  nameWithType: TypeKind
+  fullName: Garyon.Reflection.TypeKind
+- uid: Garyon.Reflection.TypeListCache
+  commentId: T:Garyon.Reflection.TypeListCache
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeListCache.html
+  name: TypeListCache
+  nameWithType: TypeListCache
+  fullName: Garyon.Reflection.TypeListCache
+- uid: Garyon.Reflection.TypeModifiers
+  commentId: T:Garyon.Reflection.TypeModifiers
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeModifiers.html
+  name: TypeModifiers
+  nameWithType: TypeModifiers
+  fullName: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypePredicates
+  commentId: T:Garyon.Reflection.TypePredicates
+  href: Garyon.Reflection.TypePredicates.html
+  name: TypePredicates
+  nameWithType: TypePredicates
+  fullName: Garyon.Reflection.TypePredicates
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html

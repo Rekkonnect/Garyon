@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
-
 namespace Garyon.Objects.Advanced;
 
 /// <summary>
@@ -13,6 +11,7 @@ public sealed class AdvancedLazy<T>
 {
     private T? _value;
     private readonly Func<T> _factory;
+    private readonly object _syncLock = new();
 
     /// <summary>
     /// Determines whether the value has been created or not.
@@ -24,22 +23,6 @@ public sealed class AdvancedLazy<T>
     /// not initialized yet.
     /// </summary>
     public T? ValueOrDefault => _value;
-
-    /// <summary>
-    /// Gets the lazily initializable value. If the value has not been
-    /// initialized yet, this property activates its initialization.
-    /// </summary>
-    public T Value
-    {
-        get
-        {
-            if (IsValueCreated)
-                return _value!;
-
-            IsValueCreated = true;
-            return _value = _factory();
-        }
-    }
 
     /// <summary>
     /// Initializes a new instance of the <seealso cref="AdvancedLazy{T}"/>
@@ -67,35 +50,33 @@ public sealed class AdvancedLazy<T>
     }
 
     /// <summary>
-    /// Gets the value asynchronously, executing the factory method if the value
-    /// has not been created yet.
+    /// Gets the lazily initializable value. If the value has not been
+    /// initialized yet, this property activates its initialization.
     /// </summary>
-    public async Task<T> GetValueAsync()
+    public T GetValue()
     {
-        if (IsValueCreated)
+        lock (_syncLock)
         {
-            return _value!;
+            if (IsValueCreated)
+                return _value!;
+
+            _value = _factory();
+            IsValueCreated = true;
+            return _value;
         }
-
-        return await CalculateValueAsync();
-    }
-
-    private Task<T> CalculateValueAsync()
-    {
-        var value = _factory();
-        _value = value;
-        IsValueCreated = true;
-        return Task.FromResult(value);
     }
 
     /// <summary>
     /// Clears the cached value. Upon the next call of the
-    /// <seealso cref="Value"/> property, the value will be lazily initialized
+    /// <seealso cref="GetValue"/> method, the value will be lazily initialized
     /// again.
     /// </summary>
     public void ClearValue()
     {
-        IsValueCreated = false;
-        _value = default;
+        lock (_syncLock)
+        {
+            IsValueCreated = false;
+            _value = default;
+        }
     }
 }

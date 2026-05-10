@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  id: Garyon.Extensions
+  children:
+  - Garyon.Extensions.AffixType
+  - Garyon.Extensions.BinaryRepresentationExtensions
+  - Garyon.Extensions.BitVector32Extensions
+  - Garyon.Extensions.BoolExtensions
+  - Garyon.Extensions.CachedCountEnumerable
+  - Garyon.Extensions.CachedCountEnumerable`1
+  - Garyon.Extensions.CancellationTokenExtensions
+  - Garyon.Extensions.CancellationTokenSourceExtensions
+  - Garyon.Extensions.CharExtensions
+  - Garyon.Extensions.CloningExtensions
+  - Garyon.Extensions.CollectionToStringExtensions
+  - Garyon.Extensions.ConcurrentBagExtensions
+  - Garyon.Extensions.ConfigureAwaitFalseExtensions
+  - Garyon.Extensions.DataSetExtensions
+  - Garyon.Extensions.DateTimeComponent
+  - Garyon.Extensions.DateTimeExtensions
+  - Garyon.Extensions.DayOfWeekExtensions
+  - Garyon.Extensions.DbDataReaderExtensions
+  - Garyon.Extensions.DictionaryEntryExtensions
+  - Garyon.Extensions.DirectoryInfoExtensions
+  - Garyon.Extensions.DriveFormatType
+  - Garyon.Extensions.DriveInfoExtensions
+  - Garyon.Extensions.EarlyTerminatingLinqExtensions
+  - Garyon.Extensions.EncodingExtensions
+  - Garyon.Extensions.EnumerableCartesianProducts
+  - Garyon.Extensions.EnumerableExtremumExtensions
+  - Garyon.Extensions.EnumerableProducts
+  - Garyon.Extensions.ExtendedDateTimeExtensions
+  - Garyon.Extensions.FileInfoExtensions
+  - Garyon.Extensions.FileSystemInfoExtensions
+  - Garyon.Extensions.GeneralCollectionExtensions
+  - Garyon.Extensions.GeneralObjectExtensions
+  - Garyon.Extensions.HashCodeExtensions
+  - Garyon.Extensions.IAsyncEnumerableExtensions
+  - Garyon.Extensions.ICollectionExtensions
+  - Garyon.Extensions.IComparableExtensions
+  - Garyon.Extensions.IDictionaryExtensions
+  - Garyon.Extensions.IEnumerableExtensions
+  - Garyon.Extensions.IEnumeratorExtensions
+  - Garyon.Extensions.IListExtensions
+  - Garyon.Extensions.IQueryableExtensions
+  - Garyon.Extensions.IReadOnlyCollectionExtensions
+  - Garyon.Extensions.IndexExtensions
+  - Garyon.Extensions.InterlockedExtensions
+  - Garyon.Extensions.KeyValuePairExtensions
+  - Garyon.Extensions.ListExtensions
+  - Garyon.Extensions.ListPatternExtensions
+  - Garyon.Extensions.MoreLinqExtensions
+  - Garyon.Extensions.NonGenericICollectionExtensions
+  - Garyon.Extensions.NotifyPropertyChangedExtensions
+  - Garyon.Extensions.NumericExtensions
+  - Garyon.Extensions.ObservableExtensions
+  - Garyon.Extensions.OfTypeEnumerableExtensions
+  - Garyon.Extensions.PendingLinqExtensions
+  - Garyon.Extensions.ProcessExtensions
+  - Garyon.Extensions.QueueExtensions
+  - Garyon.Extensions.RangeExtensions
+  - Garyon.Extensions.ReadOnlySpanExtensions
+  - Garyon.Extensions.RegexExtensions
+  - Garyon.Extensions.RepeatExtensions
+  - Garyon.Extensions.RepeatedChar
+  - Garyon.Extensions.RepeatedString
+  - Garyon.Extensions.SpanExtensions
+  - Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector`2
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  - Garyon.Extensions.SpanLineEnumeratorExtensions
+  - Garyon.Extensions.SpanStringExtensions
+  - Garyon.Extensions.SpanStringSelector`1
+  - Garyon.Extensions.SpanStringSelectors
+  - Garyon.Extensions.StackExtensions
+  - Garyon.Extensions.StaticEnumerableExtensions
+  - Garyon.Extensions.StreamExtensions
+  - Garyon.Extensions.StringBuilderExtensions
+  - Garyon.Extensions.StringExtensions
+  - Garyon.Extensions.StringOperatorExtensions
+  - Garyon.Extensions.StringReplacement
+  - Garyon.Extensions.StringReplacementExtensions
+  - Garyon.Extensions.TaskAwaiting
+  - Garyon.Extensions.TimeSpanComponent
+  - Garyon.Extensions.TimeSpanExtensions
+  - Garyon.Extensions.ToCollectionExtensions
+  - Garyon.Extensions.UnaryOperatorExtensions
+  - Garyon.Extensions.UnsafeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Extensions.BinaryRepresentationExtensions
+  commentId: T:Garyon.Extensions.BinaryRepresentationExtensions
+  href: Garyon.Extensions.BinaryRepresentationExtensions.html
+  name: BinaryRepresentationExtensions
+  nameWithType: BinaryRepresentationExtensions
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions
+- uid: Garyon.Extensions.BitVector32Extensions
+  commentId: T:Garyon.Extensions.BitVector32Extensions
+  href: Garyon.Extensions.BitVector32Extensions.html
+  name: BitVector32Extensions
+  nameWithType: BitVector32Extensions
+  fullName: Garyon.Extensions.BitVector32Extensions
+- uid: Garyon.Extensions.BoolExtensions
+  commentId: T:Garyon.Extensions.BoolExtensions
+  href: Garyon.Extensions.BoolExtensions.html
+  name: BoolExtensions
+  nameWithType: BoolExtensions
+  fullName: Garyon.Extensions.BoolExtensions
+- uid: Garyon.Extensions.CachedCountEnumerable
+  commentId: T:Garyon.Extensions.CachedCountEnumerable
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.CachedCountEnumerable.html
+  name: CachedCountEnumerable
+  nameWithType: CachedCountEnumerable
+  fullName: Garyon.Extensions.CachedCountEnumerable
+- uid: Garyon.Extensions.CachedCountEnumerable`1
+  commentId: T:Garyon.Extensions.CachedCountEnumerable`1
+  href: Garyon.Extensions.CachedCountEnumerable-1.html
+  name: CachedCountEnumerable<T>
+  nameWithType: CachedCountEnumerable<T>
+  fullName: Garyon.Extensions.CachedCountEnumerable<T>
+  nameWithType.vb: CachedCountEnumerable(Of T)
+  fullName.vb: Garyon.Extensions.CachedCountEnumerable(Of T)
+  name.vb: CachedCountEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.CachedCountEnumerable`1
+    name: CachedCountEnumerable
+    href: Garyon.Extensions.CachedCountEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.CachedCountEnumerable`1
+    name: CachedCountEnumerable
+    href: Garyon.Extensions.CachedCountEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.CancellationTokenExtensions
+  commentId: T:Garyon.Extensions.CancellationTokenExtensions
+  href: Garyon.Extensions.CancellationTokenExtensions.html
+  name: CancellationTokenExtensions
+  nameWithType: CancellationTokenExtensions
+  fullName: Garyon.Extensions.CancellationTokenExtensions
+- uid: Garyon.Extensions.CancellationTokenSourceExtensions
+  commentId: T:Garyon.Extensions.CancellationTokenSourceExtensions
+  href: Garyon.Extensions.CancellationTokenSourceExtensions.html
+  name: CancellationTokenSourceExtensions
+  nameWithType: CancellationTokenSourceExtensions
+  fullName: Garyon.Extensions.CancellationTokenSourceExtensions
+- uid: Garyon.Extensions.CharExtensions
+  commentId: T:Garyon.Extensions.CharExtensions
+  href: Garyon.Extensions.CharExtensions.html
+  name: CharExtensions
+  nameWithType: CharExtensions
+  fullName: Garyon.Extensions.CharExtensions
+- uid: Garyon.Extensions.CloningExtensions
+  commentId: T:Garyon.Extensions.CloningExtensions
+  href: Garyon.Extensions.CloningExtensions.html
+  name: CloningExtensions
+  nameWithType: CloningExtensions
+  fullName: Garyon.Extensions.CloningExtensions
+- uid: Garyon.Extensions.CollectionToStringExtensions
+  commentId: T:Garyon.Extensions.CollectionToStringExtensions
+  href: Garyon.Extensions.CollectionToStringExtensions.html
+  name: CollectionToStringExtensions
+  nameWithType: CollectionToStringExtensions
+  fullName: Garyon.Extensions.CollectionToStringExtensions
+- uid: Garyon.Extensions.ConcurrentBagExtensions
+  commentId: T:Garyon.Extensions.ConcurrentBagExtensions
+  href: Garyon.Extensions.ConcurrentBagExtensions.html
+  name: ConcurrentBagExtensions
+  nameWithType: ConcurrentBagExtensions
+  fullName: Garyon.Extensions.ConcurrentBagExtensions
+- uid: Garyon.Extensions.ConfigureAwaitFalseExtensions
+  commentId: T:Garyon.Extensions.ConfigureAwaitFalseExtensions
+  href: Garyon.Extensions.ConfigureAwaitFalseExtensions.html
+  name: ConfigureAwaitFalseExtensions
+  nameWithType: ConfigureAwaitFalseExtensions
+  fullName: Garyon.Extensions.ConfigureAwaitFalseExtensions
+- uid: Garyon.Extensions.DataSetExtensions
+  commentId: T:Garyon.Extensions.DataSetExtensions
+  href: Garyon.Extensions.DataSetExtensions.html
+  name: DataSetExtensions
+  nameWithType: DataSetExtensions
+  fullName: Garyon.Extensions.DataSetExtensions
+- uid: Garyon.Extensions.DateTimeComponent
+  commentId: T:Garyon.Extensions.DateTimeComponent
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.DateTimeComponent.html
+  name: DateTimeComponent
+  nameWithType: DateTimeComponent
+  fullName: Garyon.Extensions.DateTimeComponent
+- uid: Garyon.Extensions.DateTimeExtensions
+  commentId: T:Garyon.Extensions.DateTimeExtensions
+  href: Garyon.Extensions.DateTimeExtensions.html
+  name: DateTimeExtensions
+  nameWithType: DateTimeExtensions
+  fullName: Garyon.Extensions.DateTimeExtensions
+- uid: Garyon.Extensions.DayOfWeekExtensions
+  commentId: T:Garyon.Extensions.DayOfWeekExtensions
+  href: Garyon.Extensions.DayOfWeekExtensions.html
+  name: DayOfWeekExtensions
+  nameWithType: DayOfWeekExtensions
+  fullName: Garyon.Extensions.DayOfWeekExtensions
+- uid: Garyon.Extensions.DbDataReaderExtensions
+  commentId: T:Garyon.Extensions.DbDataReaderExtensions
+  href: Garyon.Extensions.DbDataReaderExtensions.html
+  name: DbDataReaderExtensions
+  nameWithType: DbDataReaderExtensions
+  fullName: Garyon.Extensions.DbDataReaderExtensions
+- uid: Garyon.Extensions.DictionaryEntryExtensions
+  commentId: T:Garyon.Extensions.DictionaryEntryExtensions
+  href: Garyon.Extensions.DictionaryEntryExtensions.html
+  name: DictionaryEntryExtensions
+  nameWithType: DictionaryEntryExtensions
+  fullName: Garyon.Extensions.DictionaryEntryExtensions
+- uid: Garyon.Extensions.DirectoryInfoExtensions
+  commentId: T:Garyon.Extensions.DirectoryInfoExtensions
+  href: Garyon.Extensions.DirectoryInfoExtensions.html
+  name: DirectoryInfoExtensions
+  nameWithType: DirectoryInfoExtensions
+  fullName: Garyon.Extensions.DirectoryInfoExtensions
+- uid: Garyon.Extensions.DriveFormatType
+  commentId: T:Garyon.Extensions.DriveFormatType
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.DriveFormatType.html
+  name: DriveFormatType
+  nameWithType: DriveFormatType
+  fullName: Garyon.Extensions.DriveFormatType
+- uid: Garyon.Extensions.DriveInfoExtensions
+  commentId: T:Garyon.Extensions.DriveInfoExtensions
+  href: Garyon.Extensions.DriveInfoExtensions.html
+  name: DriveInfoExtensions
+  nameWithType: DriveInfoExtensions
+  fullName: Garyon.Extensions.DriveInfoExtensions
+- uid: Garyon.Extensions.EarlyTerminatingLinqExtensions
+  commentId: T:Garyon.Extensions.EarlyTerminatingLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.EarlyTerminatingLinqExtensions.html
+  name: EarlyTerminatingLinqExtensions
+  nameWithType: EarlyTerminatingLinqExtensions
+  fullName: Garyon.Extensions.EarlyTerminatingLinqExtensions
+- uid: Garyon.Extensions.EncodingExtensions
+  commentId: T:Garyon.Extensions.EncodingExtensions
+  href: Garyon.Extensions.EncodingExtensions.html
+  name: EncodingExtensions
+  nameWithType: EncodingExtensions
+  fullName: Garyon.Extensions.EncodingExtensions
+- uid: Garyon.Extensions.EnumerableCartesianProducts
+  commentId: T:Garyon.Extensions.EnumerableCartesianProducts
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.EnumerableCartesianProducts.html
+  name: EnumerableCartesianProducts
+  nameWithType: EnumerableCartesianProducts
+  fullName: Garyon.Extensions.EnumerableCartesianProducts
+- uid: Garyon.Extensions.EnumerableExtremumExtensions
+  commentId: T:Garyon.Extensions.EnumerableExtremumExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.EnumerableExtremumExtensions.html
+  name: EnumerableExtremumExtensions
+  nameWithType: EnumerableExtremumExtensions
+  fullName: Garyon.Extensions.EnumerableExtremumExtensions
+- uid: Garyon.Extensions.EnumerableProducts
+  commentId: T:Garyon.Extensions.EnumerableProducts
+  href: Garyon.Extensions.EnumerableProducts.html
+  name: EnumerableProducts
+  nameWithType: EnumerableProducts
+  fullName: Garyon.Extensions.EnumerableProducts
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions
+  commentId: T:Garyon.Extensions.ExtendedDateTimeExtensions
+  href: Garyon.Extensions.ExtendedDateTimeExtensions.html
+  name: ExtendedDateTimeExtensions
+  nameWithType: ExtendedDateTimeExtensions
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions
+- uid: Garyon.Extensions.FileInfoExtensions
+  commentId: T:Garyon.Extensions.FileInfoExtensions
+  href: Garyon.Extensions.FileInfoExtensions.html
+  name: FileInfoExtensions
+  nameWithType: FileInfoExtensions
+  fullName: Garyon.Extensions.FileInfoExtensions
+- uid: Garyon.Extensions.FileSystemInfoExtensions
+  commentId: T:Garyon.Extensions.FileSystemInfoExtensions
+  href: Garyon.Extensions.FileSystemInfoExtensions.html
+  name: FileSystemInfoExtensions
+  nameWithType: FileSystemInfoExtensions
+  fullName: Garyon.Extensions.FileSystemInfoExtensions
+- uid: Garyon.Extensions.GeneralCollectionExtensions
+  commentId: T:Garyon.Extensions.GeneralCollectionExtensions
+  href: Garyon.Extensions.GeneralCollectionExtensions.html
+  name: GeneralCollectionExtensions
+  nameWithType: GeneralCollectionExtensions
+  fullName: Garyon.Extensions.GeneralCollectionExtensions
+- uid: Garyon.Extensions.GeneralObjectExtensions
+  commentId: T:Garyon.Extensions.GeneralObjectExtensions
+  href: Garyon.Extensions.GeneralObjectExtensions.html
+  name: GeneralObjectExtensions
+  nameWithType: GeneralObjectExtensions
+  fullName: Garyon.Extensions.GeneralObjectExtensions
+- uid: Garyon.Extensions.HashCodeExtensions
+  commentId: T:Garyon.Extensions.HashCodeExtensions
+  href: Garyon.Extensions.HashCodeExtensions.html
+  name: HashCodeExtensions
+  nameWithType: HashCodeExtensions
+  fullName: Garyon.Extensions.HashCodeExtensions
+- uid: Garyon.Extensions.IAsyncEnumerableExtensions
+  commentId: T:Garyon.Extensions.IAsyncEnumerableExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IAsyncEnumerableExtensions.html
+  name: IAsyncEnumerableExtensions
+  nameWithType: IAsyncEnumerableExtensions
+  fullName: Garyon.Extensions.IAsyncEnumerableExtensions
+- uid: Garyon.Extensions.ICollectionExtensions
+  commentId: T:Garyon.Extensions.ICollectionExtensions
+  href: Garyon.Extensions.ICollectionExtensions.html
+  name: ICollectionExtensions
+  nameWithType: ICollectionExtensions
+  fullName: Garyon.Extensions.ICollectionExtensions
+- uid: Garyon.Extensions.IComparableExtensions
+  commentId: T:Garyon.Extensions.IComparableExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IComparableExtensions.html
+  name: IComparableExtensions
+  nameWithType: IComparableExtensions
+  fullName: Garyon.Extensions.IComparableExtensions
+- uid: Garyon.Extensions.IDictionaryExtensions
+  commentId: T:Garyon.Extensions.IDictionaryExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IDictionaryExtensions.html
+  name: IDictionaryExtensions
+  nameWithType: IDictionaryExtensions
+  fullName: Garyon.Extensions.IDictionaryExtensions
+- uid: Garyon.Extensions.IEnumerableExtensions
+  commentId: T:Garyon.Extensions.IEnumerableExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumerableExtensions.html
+  name: IEnumerableExtensions
+  nameWithType: IEnumerableExtensions
+  fullName: Garyon.Extensions.IEnumerableExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.IListExtensions
+  commentId: T:Garyon.Extensions.IListExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IListExtensions.html
+  name: IListExtensions
+  nameWithType: IListExtensions
+  fullName: Garyon.Extensions.IListExtensions
+- uid: Garyon.Extensions.IndexExtensions
+  commentId: T:Garyon.Extensions.IndexExtensions
+  href: Garyon.Extensions.IndexExtensions.html
+  name: IndexExtensions
+  nameWithType: IndexExtensions
+  fullName: Garyon.Extensions.IndexExtensions
+- uid: Garyon.Extensions.InterlockedExtensions
+  commentId: T:Garyon.Extensions.InterlockedExtensions
+  href: Garyon.Extensions.InterlockedExtensions.html
+  name: InterlockedExtensions
+  nameWithType: InterlockedExtensions
+  fullName: Garyon.Extensions.InterlockedExtensions
+- uid: Garyon.Extensions.IQueryableExtensions
+  commentId: T:Garyon.Extensions.IQueryableExtensions
+  href: Garyon.Extensions.IQueryableExtensions.html
+  name: IQueryableExtensions
+  nameWithType: IQueryableExtensions
+  fullName: Garyon.Extensions.IQueryableExtensions
+- uid: Garyon.Extensions.IReadOnlyCollectionExtensions
+  commentId: T:Garyon.Extensions.IReadOnlyCollectionExtensions
+  href: Garyon.Extensions.IReadOnlyCollectionExtensions.html
+  name: IReadOnlyCollectionExtensions
+  nameWithType: IReadOnlyCollectionExtensions
+  fullName: Garyon.Extensions.IReadOnlyCollectionExtensions
+- uid: Garyon.Extensions.KeyValuePairExtensions
+  commentId: T:Garyon.Extensions.KeyValuePairExtensions
+  href: Garyon.Extensions.KeyValuePairExtensions.html
+  name: KeyValuePairExtensions
+  nameWithType: KeyValuePairExtensions
+  fullName: Garyon.Extensions.KeyValuePairExtensions
+- uid: Garyon.Extensions.ListExtensions
+  commentId: T:Garyon.Extensions.ListExtensions
+  href: Garyon.Extensions.ListExtensions.html
+  name: ListExtensions
+  nameWithType: ListExtensions
+  fullName: Garyon.Extensions.ListExtensions
+- uid: Garyon.Extensions.ListPatternExtensions
+  commentId: T:Garyon.Extensions.ListPatternExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.ListPatternExtensions.html
+  name: ListPatternExtensions
+  nameWithType: ListPatternExtensions
+  fullName: Garyon.Extensions.ListPatternExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.NonGenericICollectionExtensions
+  commentId: T:Garyon.Extensions.NonGenericICollectionExtensions
+  href: Garyon.Extensions.NonGenericICollectionExtensions.html
+  name: NonGenericICollectionExtensions
+  nameWithType: NonGenericICollectionExtensions
+  fullName: Garyon.Extensions.NonGenericICollectionExtensions
+- uid: Garyon.Extensions.NotifyPropertyChangedExtensions
+  commentId: T:Garyon.Extensions.NotifyPropertyChangedExtensions
+  href: Garyon.Extensions.NotifyPropertyChangedExtensions.html
+  name: NotifyPropertyChangedExtensions
+  nameWithType: NotifyPropertyChangedExtensions
+  fullName: Garyon.Extensions.NotifyPropertyChangedExtensions
+- uid: Garyon.Extensions.NumericExtensions
+  commentId: T:Garyon.Extensions.NumericExtensions
+  href: Garyon.Extensions.NumericExtensions.html
+  name: NumericExtensions
+  nameWithType: NumericExtensions
+  fullName: Garyon.Extensions.NumericExtensions
+- uid: Garyon.Extensions.ObservableExtensions
+  commentId: T:Garyon.Extensions.ObservableExtensions
+  href: Garyon.Extensions.ObservableExtensions.html
+  name: ObservableExtensions
+  nameWithType: ObservableExtensions
+  fullName: Garyon.Extensions.ObservableExtensions
+- uid: Garyon.Extensions.OfTypeEnumerableExtensions
+  commentId: T:Garyon.Extensions.OfTypeEnumerableExtensions
+  href: Garyon.Extensions.OfTypeEnumerableExtensions.html
+  name: OfTypeEnumerableExtensions
+  nameWithType: OfTypeEnumerableExtensions
+  fullName: Garyon.Extensions.OfTypeEnumerableExtensions
+- uid: Garyon.Extensions.PendingLinqExtensions
+  commentId: T:Garyon.Extensions.PendingLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.PendingLinqExtensions.html
+  name: PendingLinqExtensions
+  nameWithType: PendingLinqExtensions
+  fullName: Garyon.Extensions.PendingLinqExtensions
+- uid: Garyon.Extensions.ProcessExtensions
+  commentId: T:Garyon.Extensions.ProcessExtensions
+  href: Garyon.Extensions.ProcessExtensions.html
+  name: ProcessExtensions
+  nameWithType: ProcessExtensions
+  fullName: Garyon.Extensions.ProcessExtensions
+- uid: Garyon.Extensions.QueueExtensions
+  commentId: T:Garyon.Extensions.QueueExtensions
+  href: Garyon.Extensions.QueueExtensions.html
+  name: QueueExtensions
+  nameWithType: QueueExtensions
+  fullName: Garyon.Extensions.QueueExtensions
+- uid: Garyon.Extensions.RangeExtensions
+  commentId: T:Garyon.Extensions.RangeExtensions
+  href: Garyon.Extensions.RangeExtensions.html
+  name: RangeExtensions
+  nameWithType: RangeExtensions
+  fullName: Garyon.Extensions.RangeExtensions
+- uid: Garyon.Extensions.ReadOnlySpanExtensions
+  commentId: T:Garyon.Extensions.ReadOnlySpanExtensions
+  href: Garyon.Extensions.ReadOnlySpanExtensions.html
+  name: ReadOnlySpanExtensions
+  nameWithType: ReadOnlySpanExtensions
+  fullName: Garyon.Extensions.ReadOnlySpanExtensions
+- uid: Garyon.Extensions.RegexExtensions
+  commentId: T:Garyon.Extensions.RegexExtensions
+  href: Garyon.Extensions.RegexExtensions.html
+  name: RegexExtensions
+  nameWithType: RegexExtensions
+  fullName: Garyon.Extensions.RegexExtensions
+- uid: Garyon.Extensions.RepeatedChar
+  commentId: T:Garyon.Extensions.RepeatedChar
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.RepeatedChar.html
+  name: RepeatedChar
+  nameWithType: RepeatedChar
+  fullName: Garyon.Extensions.RepeatedChar
+- uid: Garyon.Extensions.RepeatedString
+  commentId: T:Garyon.Extensions.RepeatedString
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.RepeatedString.html
+  name: RepeatedString
+  nameWithType: RepeatedString
+  fullName: Garyon.Extensions.RepeatedString
+- uid: Garyon.Extensions.RepeatExtensions
+  commentId: T:Garyon.Extensions.RepeatExtensions
+  href: Garyon.Extensions.RepeatExtensions.html
+  name: RepeatExtensions
+  nameWithType: RepeatExtensions
+  fullName: Garyon.Extensions.RepeatExtensions
+- uid: Garyon.Extensions.SpanExtensions
+  commentId: T:Garyon.Extensions.SpanExtensions
+  href: Garyon.Extensions.SpanExtensions.html
+  name: SpanExtensions
+  nameWithType: SpanExtensions
+  fullName: Garyon.Extensions.SpanExtensions
+- uid: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector`2
+  commentId: T:Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector`2
+  href: Garyon.Extensions.SpanExtensions.html
+  name: SpanExtensions.ReadOnlySpanSelector<TSource, TResult>
+  nameWithType: SpanExtensions.ReadOnlySpanSelector<TSource, TResult>
+  fullName: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector<TSource, TResult>
+  nameWithType.vb: SpanExtensions.ReadOnlySpanSelector(Of TSource, TResult)
+  fullName.vb: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector(Of TSource, TResult)
+  name.vb: SpanExtensions.ReadOnlySpanSelector(Of TSource, TResult)
+  spec.csharp:
+  - uid: Garyon.Extensions.SpanExtensions
+    name: SpanExtensions
+    href: Garyon.Extensions.SpanExtensions.html
+  - name: .
+  - uid: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector`2
+    name: ReadOnlySpanSelector
+    href: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector-2.html
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.SpanExtensions
+    name: SpanExtensions
+    href: Garyon.Extensions.SpanExtensions.html
+  - name: .
+  - uid: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector`2
+    name: ReadOnlySpanSelector
+    href: Garyon.Extensions.SpanExtensions.ReadOnlySpanSelector-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  commentId: T:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.SpanExtensions.html
+  name: SpanExtensions.SplitSpanEnumerator<TSource>
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource)
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource)
+  name.vb: SpanExtensions.SplitSpanEnumerator(Of TSource)
+  spec.csharp:
+  - uid: Garyon.Extensions.SpanExtensions
+    name: SpanExtensions
+    href: Garyon.Extensions.SpanExtensions.html
+  - name: .
+  - uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+    name: SplitSpanEnumerator
+    href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.SpanExtensions
+    name: SpanExtensions
+    href: Garyon.Extensions.SpanExtensions.html
+  - name: .
+  - uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+    name: SplitSpanEnumerator
+    href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+- uid: Garyon.Extensions.SpanLineEnumeratorExtensions
+  commentId: T:Garyon.Extensions.SpanLineEnumeratorExtensions
+  href: Garyon.Extensions.SpanLineEnumeratorExtensions.html
+  name: SpanLineEnumeratorExtensions
+  nameWithType: SpanLineEnumeratorExtensions
+  fullName: Garyon.Extensions.SpanLineEnumeratorExtensions
+- uid: Garyon.Extensions.SpanStringExtensions
+  commentId: T:Garyon.Extensions.SpanStringExtensions
+  href: Garyon.Extensions.SpanStringExtensions.html
+  name: SpanStringExtensions
+  nameWithType: SpanStringExtensions
+  fullName: Garyon.Extensions.SpanStringExtensions
+- uid: Garyon.Extensions.SpanStringSelector`1
+  commentId: T:Garyon.Extensions.SpanStringSelector`1
+  href: Garyon.Extensions.SpanStringSelector-1.html
+  name: SpanStringSelector<T>
+  nameWithType: SpanStringSelector<T>
+  fullName: Garyon.Extensions.SpanStringSelector<T>
+  nameWithType.vb: SpanStringSelector(Of T)
+  fullName.vb: Garyon.Extensions.SpanStringSelector(Of T)
+  name.vb: SpanStringSelector(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.SpanStringSelector`1
+    name: SpanStringSelector
+    href: Garyon.Extensions.SpanStringSelector-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.SpanStringSelector`1
+    name: SpanStringSelector
+    href: Garyon.Extensions.SpanStringSelector-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.SpanStringSelectors
+  commentId: T:Garyon.Extensions.SpanStringSelectors
+  href: Garyon.Extensions.SpanStringSelectors.html
+  name: SpanStringSelectors
+  nameWithType: SpanStringSelectors
+  fullName: Garyon.Extensions.SpanStringSelectors
+- uid: Garyon.Extensions.StackExtensions
+  commentId: T:Garyon.Extensions.StackExtensions
+  href: Garyon.Extensions.StackExtensions.html
+  name: StackExtensions
+  nameWithType: StackExtensions
+  fullName: Garyon.Extensions.StackExtensions
+- uid: Garyon.Extensions.StaticEnumerableExtensions
+  commentId: T:Garyon.Extensions.StaticEnumerableExtensions
+  href: Garyon.Extensions.StaticEnumerableExtensions.html
+  name: StaticEnumerableExtensions
+  nameWithType: StaticEnumerableExtensions
+  fullName: Garyon.Extensions.StaticEnumerableExtensions
+- uid: Garyon.Extensions.StreamExtensions
+  commentId: T:Garyon.Extensions.StreamExtensions
+  href: Garyon.Extensions.StreamExtensions.html
+  name: StreamExtensions
+  nameWithType: StreamExtensions
+  fullName: Garyon.Extensions.StreamExtensions
+- uid: Garyon.Extensions.StringBuilderExtensions
+  commentId: T:Garyon.Extensions.StringBuilderExtensions
+  href: Garyon.Extensions.StringBuilderExtensions.html
+  name: StringBuilderExtensions
+  nameWithType: StringBuilderExtensions
+  fullName: Garyon.Extensions.StringBuilderExtensions
+- uid: Garyon.Extensions.AffixType
+  commentId: T:Garyon.Extensions.AffixType
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.AffixType.html
+  name: AffixType
+  nameWithType: AffixType
+  fullName: Garyon.Extensions.AffixType
+- uid: Garyon.Extensions.StringExtensions
+  commentId: T:Garyon.Extensions.StringExtensions
+  href: Garyon.Extensions.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Garyon.Extensions.StringExtensions
+- uid: Garyon.Extensions.StringOperatorExtensions
+  commentId: T:Garyon.Extensions.StringOperatorExtensions
+  href: Garyon.Extensions.StringOperatorExtensions.html
+  name: StringOperatorExtensions
+  nameWithType: StringOperatorExtensions
+  fullName: Garyon.Extensions.StringOperatorExtensions
+- uid: Garyon.Extensions.StringReplacement
+  commentId: T:Garyon.Extensions.StringReplacement
+  href: Garyon.Extensions.StringReplacement.html
+  name: StringReplacement
+  nameWithType: StringReplacement
+  fullName: Garyon.Extensions.StringReplacement
+- uid: Garyon.Extensions.StringReplacementExtensions
+  commentId: T:Garyon.Extensions.StringReplacementExtensions
+  href: Garyon.Extensions.StringReplacementExtensions.html
+  name: StringReplacementExtensions
+  nameWithType: StringReplacementExtensions
+  fullName: Garyon.Extensions.StringReplacementExtensions
+- uid: Garyon.Extensions.TaskAwaiting
+  commentId: T:Garyon.Extensions.TaskAwaiting
+  href: Garyon.Extensions.TaskAwaiting.html
+  name: TaskAwaiting
+  nameWithType: TaskAwaiting
+  fullName: Garyon.Extensions.TaskAwaiting
+- uid: Garyon.Extensions.TimeSpanComponent
+  commentId: T:Garyon.Extensions.TimeSpanComponent
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.TimeSpanComponent.html
+  name: TimeSpanComponent
+  nameWithType: TimeSpanComponent
+  fullName: Garyon.Extensions.TimeSpanComponent
+- uid: Garyon.Extensions.TimeSpanExtensions
+  commentId: T:Garyon.Extensions.TimeSpanExtensions
+  href: Garyon.Extensions.TimeSpanExtensions.html
+  name: TimeSpanExtensions
+  nameWithType: TimeSpanExtensions
+  fullName: Garyon.Extensions.TimeSpanExtensions
+- uid: Garyon.Extensions.ToCollectionExtensions
+  commentId: T:Garyon.Extensions.ToCollectionExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.ToCollectionExtensions.html
+  name: ToCollectionExtensions
+  nameWithType: ToCollectionExtensions
+  fullName: Garyon.Extensions.ToCollectionExtensions
+- uid: Garyon.Extensions.UnaryOperatorExtensions
+  commentId: T:Garyon.Extensions.UnaryOperatorExtensions
+  href: Garyon.Extensions.UnaryOperatorExtensions.html
+  name: UnaryOperatorExtensions
+  nameWithType: UnaryOperatorExtensions
+  fullName: Garyon.Extensions.UnaryOperatorExtensions
+- uid: Garyon.Extensions.UnsafeExtensions
+  commentId: T:Garyon.Extensions.UnsafeExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.UnsafeExtensions.html
+  name: UnsafeExtensions
+  nameWithType: UnsafeExtensions
+  fullName: Garyon.Extensions.UnsafeExtensions
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html

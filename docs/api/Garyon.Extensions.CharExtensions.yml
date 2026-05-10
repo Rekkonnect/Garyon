@@ -1,0 +1,1999 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.CharExtensions
+  commentId: T:Garyon.Extensions.CharExtensions
+  id: CharExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.CharExtensions.GetNumericValue(System.Char)
+  - Garyon.Extensions.CharExtensions.GetNumericValueInteger(System.Char)
+  - Garyon.Extensions.CharExtensions.GetNumericalValue(System.Char)
+  - Garyon.Extensions.CharExtensions.GetUnicodeCategory(System.Char)
+  - Garyon.Extensions.CharExtensions.IsBase64Character(System.Char)
+  - Garyon.Extensions.CharExtensions.IsControl(System.Char)
+  - Garyon.Extensions.CharExtensions.IsDigit(System.Char)
+  - Garyon.Extensions.CharExtensions.IsEnglishLetter(System.Char)
+  - Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit(System.Char)
+  - Garyon.Extensions.CharExtensions.IsHighSurrogate(System.Char)
+  - Garyon.Extensions.CharExtensions.IsLetter(System.Char)
+  - Garyon.Extensions.CharExtensions.IsLetterOrDigit(System.Char)
+  - Garyon.Extensions.CharExtensions.IsLowSurrogate(System.Char)
+  - Garyon.Extensions.CharExtensions.IsLower(System.Char)
+  - Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter(System.Char)
+  - Garyon.Extensions.CharExtensions.IsNumber(System.Char)
+  - Garyon.Extensions.CharExtensions.IsPunctuation(System.Char)
+  - Garyon.Extensions.CharExtensions.IsSeparator(System.Char)
+  - Garyon.Extensions.CharExtensions.IsSurrogate(System.Char)
+  - Garyon.Extensions.CharExtensions.IsSymbol(System.Char)
+  - Garyon.Extensions.CharExtensions.IsUpper(System.Char)
+  - Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter(System.Char)
+  - Garyon.Extensions.CharExtensions.IsValidHexCharacter(System.Char)
+  - Garyon.Extensions.CharExtensions.IsWhiteSpace(System.Char)
+  - Garyon.Extensions.CharExtensions.ToLower(System.Char)
+  - Garyon.Extensions.CharExtensions.ToLower(System.Char,System.Globalization.CultureInfo)
+  - Garyon.Extensions.CharExtensions.ToLowerInvariant(System.Char)
+  - Garyon.Extensions.CharExtensions.ToUpper(System.Char)
+  - Garyon.Extensions.CharExtensions.ToUpper(System.Char,System.Globalization.CultureInfo)
+  - Garyon.Extensions.CharExtensions.ToUpperInvariant(System.Char)
+  langs:
+  - csharp
+  - vb
+  name: CharExtensions
+  nameWithType: CharExtensions
+  fullName: Garyon.Extensions.CharExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CharExtensions
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for the <xref href="System.Char" data-throw-if-not-resolved="false"></xref> type.
+  example: []
+  syntax:
+    content: public static class CharExtensions
+    content.vb: Public Module CharExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter(System.Char)
+  id: IsLowerCaseEnglishLetter(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLowerCaseEnglishLetter(char)
+  nameWithType: CharExtensions.IsLowerCaseEnglishLetter(char)
+  fullName: Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsLowerCaseEnglishLetter
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 17
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Checks whether the character is a lower case English letter.
+  example: []
+  syntax:
+    content: public static bool IsLowerCaseEnglishLetter(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to check whether it is a lower case English letter.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsLowerCaseEnglishLetter(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter*
+  nameWithType.vb: CharExtensions.IsLowerCaseEnglishLetter(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter(Char)
+  name.vb: IsLowerCaseEnglishLetter(Char)
+- uid: Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter(System.Char)
+  id: IsUpperCaseEnglishLetter(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsUpperCaseEnglishLetter(char)
+  nameWithType: CharExtensions.IsUpperCaseEnglishLetter(char)
+  fullName: Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsUpperCaseEnglishLetter
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 24
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Checks whether the character is a upper case English letter.
+  example: []
+  syntax:
+    content: public static bool IsUpperCaseEnglishLetter(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to check whether it is a upper case English letter.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsUpperCaseEnglishLetter(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter*
+  nameWithType.vb: CharExtensions.IsUpperCaseEnglishLetter(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter(Char)
+  name.vb: IsUpperCaseEnglishLetter(Char)
+- uid: Garyon.Extensions.CharExtensions.IsEnglishLetter(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsEnglishLetter(System.Char)
+  id: IsEnglishLetter(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsEnglishLetter(char)
+  nameWithType: CharExtensions.IsEnglishLetter(char)
+  fullName: Garyon.Extensions.CharExtensions.IsEnglishLetter(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsEnglishLetter
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 31
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Checks whether the character is a English letter character.
+  example: []
+  syntax:
+    content: public static bool IsEnglishLetter(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to check whether it is a English letter character.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsEnglishLetter(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsEnglishLetter*
+  nameWithType.vb: CharExtensions.IsEnglishLetter(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsEnglishLetter(Char)
+  name.vb: IsEnglishLetter(Char)
+- uid: Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit(System.Char)
+  id: IsEnglishLetterOrDigit(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsEnglishLetterOrDigit(char)
+  nameWithType: CharExtensions.IsEnglishLetterOrDigit(char)
+  fullName: Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsEnglishLetterOrDigit
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Checks whether the character is a English letter or a digit character.
+  example: []
+  syntax:
+    content: public static bool IsEnglishLetterOrDigit(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: >-
+        The character to check whether it is a English letter or a digit
+
+        character.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsEnglishLetterOrDigit(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit*
+  nameWithType.vb: CharExtensions.IsEnglishLetterOrDigit(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit(Char)
+  name.vb: IsEnglishLetterOrDigit(Char)
+- uid: Garyon.Extensions.CharExtensions.GetNumericValueInteger(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.GetNumericValueInteger(System.Char)
+  id: GetNumericValueInteger(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNumericValueInteger(char)
+  nameWithType: CharExtensions.GetNumericValueInteger(char)
+  fullName: Garyon.Extensions.CharExtensions.GetNumericValueInteger(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetNumericValueInteger
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the integer numeric value of the specified character.
+  example: []
+  syntax:
+    content: public static int GetNumericValueInteger(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character whose numeric value to get.
+    return:
+      type: System.Int32
+      description: The integer numeric value that the character represents, otherwise -1.
+    content.vb: Public Shared Function GetNumericValueInteger(c As Char) As Integer
+  overload: Garyon.Extensions.CharExtensions.GetNumericValueInteger*
+  nameWithType.vb: CharExtensions.GetNumericValueInteger(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.GetNumericValueInteger(Char)
+  name.vb: GetNumericValueInteger(Char)
+- uid: Garyon.Extensions.CharExtensions.GetNumericalValue(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.GetNumericalValue(System.Char)
+  id: GetNumericalValue(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNumericalValue(char)
+  nameWithType: CharExtensions.GetNumericalValue(char)
+  fullName: Garyon.Extensions.CharExtensions.GetNumericalValue(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetNumericalValue
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 63
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the numerical value of the decimal digit character.
+  example: []
+  syntax:
+    content: public static int GetNumericalValue(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The decimal digit character.
+    return:
+      type: System.Int32
+      description: The numerical value.
+    content.vb: Public Shared Function GetNumericalValue(c As Char) As Integer
+  overload: Garyon.Extensions.CharExtensions.GetNumericalValue*
+  nameWithType.vb: CharExtensions.GetNumericalValue(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.GetNumericalValue(Char)
+  name.vb: GetNumericalValue(Char)
+- uid: Garyon.Extensions.CharExtensions.IsValidHexCharacter(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsValidHexCharacter(System.Char)
+  id: IsValidHexCharacter(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsValidHexCharacter(char)
+  nameWithType: CharExtensions.IsValidHexCharacter(char)
+  fullName: Garyon.Extensions.CharExtensions.IsValidHexCharacter(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsValidHexCharacter
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 75
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Determines whether the character is a valid hex character.
+  example: []
+  syntax:
+    content: public static bool IsValidHexCharacter(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the character is a valid hex character;
+
+        equivalent to the regular expression [0-9a-fA-F], otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsValidHexCharacter(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsValidHexCharacter*
+  nameWithType.vb: CharExtensions.IsValidHexCharacter(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsValidHexCharacter(Char)
+  name.vb: IsValidHexCharacter(Char)
+- uid: Garyon.Extensions.CharExtensions.GetNumericValue(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.GetNumericValue(System.Char)
+  id: GetNumericValue(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNumericValue(char)
+  nameWithType: CharExtensions.GetNumericValue(char)
+  fullName: Garyon.Extensions.CharExtensions.GetNumericValue(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetNumericValue
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 80
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the specified numeric Unicode character to a double-precision floating point number.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static double GetNumericValue(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    return:
+      type: System.Double
+      description: The numeric value of <code class="paramref">c</code> if that character represents a number; otherwise, -1.0.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetNumericValue(c As Char) As Double
+  overload: Garyon.Extensions.CharExtensions.GetNumericValue*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.GetNumericValue(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.GetNumericValue(Char)
+  name.vb: GetNumericValue(Char)
+- uid: Garyon.Extensions.CharExtensions.GetUnicodeCategory(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.GetUnicodeCategory(System.Char)
+  id: GetUnicodeCategory(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetUnicodeCategory(char)
+  nameWithType: CharExtensions.GetUnicodeCategory(char)
+  fullName: Garyon.Extensions.CharExtensions.GetUnicodeCategory(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetUnicodeCategory
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 83
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Categorizes a specified Unicode character into a group identified by one of the <xref href="System.Globalization.UnicodeCategory" data-throw-if-not-resolved="false"></xref> values.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static UnicodeCategory GetUnicodeCategory(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to categorize.
+    return:
+      type: System.Globalization.UnicodeCategory
+      description: A <xref href="System.Globalization.UnicodeCategory" data-throw-if-not-resolved="false"></xref> value that identifies the group that contains <code class="paramref">c</code>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function GetUnicodeCategory(c As Char) As UnicodeCategory
+  overload: Garyon.Extensions.CharExtensions.GetUnicodeCategory*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.GetUnicodeCategory(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.GetUnicodeCategory(Char)
+  name.vb: GetUnicodeCategory(Char)
+- uid: Garyon.Extensions.CharExtensions.IsControl(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsControl(System.Char)
+  id: IsControl(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsControl(char)
+  nameWithType: CharExtensions.IsControl(char)
+  fullName: Garyon.Extensions.CharExtensions.IsControl(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsControl
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 86
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a control character.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsControl(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a control character; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsControl(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsControl*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsControl(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsControl(Char)
+  name.vb: IsControl(Char)
+- uid: Garyon.Extensions.CharExtensions.IsDigit(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsDigit(System.Char)
+  id: IsDigit(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDigit(char)
+  nameWithType: CharExtensions.IsDigit(char)
+  fullName: Garyon.Extensions.CharExtensions.IsDigit(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsDigit
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 89
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a decimal digit.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsDigit(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a decimal digit; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsDigit(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsDigit*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsDigit(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsDigit(Char)
+  name.vb: IsDigit(Char)
+- uid: Garyon.Extensions.CharExtensions.IsHighSurrogate(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsHighSurrogate(System.Char)
+  id: IsHighSurrogate(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsHighSurrogate(char)
+  nameWithType: CharExtensions.IsHighSurrogate(char)
+  fullName: Garyon.Extensions.CharExtensions.IsHighSurrogate(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsHighSurrogate
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 92
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified <xref href="System.Char" data-throw-if-not-resolved="false"></xref> object is a high surrogate.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsHighSurrogate(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the numeric value of the <code class="paramref">c</code> parameter ranges from U+D800 through U+DBFF; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsHighSurrogate(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsHighSurrogate*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsHighSurrogate(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsHighSurrogate(Char)
+  name.vb: IsHighSurrogate(Char)
+- uid: Garyon.Extensions.CharExtensions.IsLetter(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsLetter(System.Char)
+  id: IsLetter(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLetter(char)
+  nameWithType: CharExtensions.IsLetter(char)
+  fullName: Garyon.Extensions.CharExtensions.IsLetter(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsLetter
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 95
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a Unicode letter.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsLetter(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a letter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsLetter(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsLetter*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsLetter(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsLetter(Char)
+  name.vb: IsLetter(Char)
+- uid: Garyon.Extensions.CharExtensions.IsLetterOrDigit(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsLetterOrDigit(System.Char)
+  id: IsLetterOrDigit(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLetterOrDigit(char)
+  nameWithType: CharExtensions.IsLetterOrDigit(char)
+  fullName: Garyon.Extensions.CharExtensions.IsLetterOrDigit(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsLetterOrDigit
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 98
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a letter or a decimal digit.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsLetterOrDigit(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a letter or a decimal digit; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsLetterOrDigit(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsLetterOrDigit*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsLetterOrDigit(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsLetterOrDigit(Char)
+  name.vb: IsLetterOrDigit(Char)
+- uid: Garyon.Extensions.CharExtensions.IsLower(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsLower(System.Char)
+  id: IsLower(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLower(char)
+  nameWithType: CharExtensions.IsLower(char)
+  fullName: Garyon.Extensions.CharExtensions.IsLower(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsLower
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 101
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a lowercase letter.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsLower(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a lowercase letter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsLower(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsLower*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsLower(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsLower(Char)
+  name.vb: IsLower(Char)
+- uid: Garyon.Extensions.CharExtensions.IsLowSurrogate(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsLowSurrogate(System.Char)
+  id: IsLowSurrogate(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLowSurrogate(char)
+  nameWithType: CharExtensions.IsLowSurrogate(char)
+  fullName: Garyon.Extensions.CharExtensions.IsLowSurrogate(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsLowSurrogate
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 104
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified <xref href="System.Char" data-throw-if-not-resolved="false"></xref> object is a low surrogate.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsLowSurrogate(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the numeric value of the <code class="paramref">c</code> parameter ranges from U+DC00 through U+DFFF; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsLowSurrogate(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsLowSurrogate*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsLowSurrogate(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsLowSurrogate(Char)
+  name.vb: IsLowSurrogate(Char)
+- uid: Garyon.Extensions.CharExtensions.IsNumber(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsNumber(System.Char)
+  id: IsNumber(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsNumber(char)
+  nameWithType: CharExtensions.IsNumber(char)
+  fullName: Garyon.Extensions.CharExtensions.IsNumber(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNumber
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 107
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a number.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsNumber(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a number; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsNumber(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsNumber*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsNumber(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsNumber(Char)
+  name.vb: IsNumber(Char)
+- uid: Garyon.Extensions.CharExtensions.IsPunctuation(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsPunctuation(System.Char)
+  id: IsPunctuation(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPunctuation(char)
+  nameWithType: CharExtensions.IsPunctuation(char)
+  fullName: Garyon.Extensions.CharExtensions.IsPunctuation(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPunctuation
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 110
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a punctuation mark.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsPunctuation(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a punctuation mark; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsPunctuation(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsPunctuation*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsPunctuation(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsPunctuation(Char)
+  name.vb: IsPunctuation(Char)
+- uid: Garyon.Extensions.CharExtensions.IsSeparator(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsSeparator(System.Char)
+  id: IsSeparator(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSeparator(char)
+  nameWithType: CharExtensions.IsSeparator(char)
+  fullName: Garyon.Extensions.CharExtensions.IsSeparator(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsSeparator
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 113
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a separator character.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsSeparator(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a separator character; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsSeparator(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsSeparator*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsSeparator(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsSeparator(Char)
+  name.vb: IsSeparator(Char)
+- uid: Garyon.Extensions.CharExtensions.IsSurrogate(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsSurrogate(System.Char)
+  id: IsSurrogate(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSurrogate(char)
+  nameWithType: CharExtensions.IsSurrogate(char)
+  fullName: Garyon.Extensions.CharExtensions.IsSurrogate(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsSurrogate
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 116
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified character has a surrogate code unit.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsSurrogate(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is either a high surrogate or a low surrogate; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsSurrogate(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsSurrogate*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsSurrogate(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsSurrogate(Char)
+  name.vb: IsSurrogate(Char)
+- uid: Garyon.Extensions.CharExtensions.IsSymbol(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsSymbol(System.Char)
+  id: IsSymbol(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSymbol(char)
+  nameWithType: CharExtensions.IsSymbol(char)
+  fullName: Garyon.Extensions.CharExtensions.IsSymbol(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsSymbol
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 119
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as a symbol character.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsSymbol(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is a symbol character; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsSymbol(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsSymbol*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsSymbol(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsSymbol(Char)
+  name.vb: IsSymbol(Char)
+- uid: Garyon.Extensions.CharExtensions.IsUpper(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsUpper(System.Char)
+  id: IsUpper(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsUpper(char)
+  nameWithType: CharExtensions.IsUpper(char)
+  fullName: Garyon.Extensions.CharExtensions.IsUpper(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsUpper
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 122
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as an uppercase letter.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsUpper(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is an uppercase letter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsUpper(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsUpper*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsUpper(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsUpper(Char)
+  name.vb: IsUpper(Char)
+- uid: Garyon.Extensions.CharExtensions.IsWhiteSpace(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsWhiteSpace(System.Char)
+  id: IsWhiteSpace(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsWhiteSpace(char)
+  nameWithType: CharExtensions.IsWhiteSpace(char)
+  fullName: Garyon.Extensions.CharExtensions.IsWhiteSpace(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsWhiteSpace
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 125
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Indicates whether the specified Unicode character is categorized as white space.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsWhiteSpace(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to evaluate.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">c</code> is white space; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsWhiteSpace(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsWhiteSpace*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.IsWhiteSpace(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsWhiteSpace(Char)
+  name.vb: IsWhiteSpace(Char)
+- uid: Garyon.Extensions.CharExtensions.ToLower(System.Char,System.Globalization.CultureInfo)
+  commentId: M:Garyon.Extensions.CharExtensions.ToLower(System.Char,System.Globalization.CultureInfo)
+  id: ToLower(System.Char,System.Globalization.CultureInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToLower(char, CultureInfo)
+  nameWithType: CharExtensions.ToLower(char, CultureInfo)
+  fullName: Garyon.Extensions.CharExtensions.ToLower(char, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToLower
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 128
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the value of a specified Unicode character to its lowercase equivalent using specified culture-specific formatting information.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static char ToLower(this char c, CultureInfo culture)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    - id: culture
+      type: System.Globalization.CultureInfo
+      description: An object that supplies culture-specific casing rules.
+    return:
+      type: System.Char
+      description: The lowercase equivalent of <code class="paramref">c</code>, modified according to <code class="paramref">culture</code>, or the unchanged value of <code class="paramref">c</code>, if <code class="paramref">c</code> is already lowercase or not alphabetic.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function ToLower(c As Char, culture As CultureInfo) As Char
+  overload: Garyon.Extensions.CharExtensions.ToLower*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code class="paramref">culture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.ToLower(Char, CultureInfo)
+  fullName.vb: Garyon.Extensions.CharExtensions.ToLower(Char, System.Globalization.CultureInfo)
+  name.vb: ToLower(Char, CultureInfo)
+- uid: Garyon.Extensions.CharExtensions.ToLower(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.ToLower(System.Char)
+  id: ToLower(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToLower(char)
+  nameWithType: CharExtensions.ToLower(char)
+  fullName: Garyon.Extensions.CharExtensions.ToLower(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToLower
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 131
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the value of a Unicode character to its lowercase equivalent.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static char ToLower(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    return:
+      type: System.Char
+      description: The lowercase equivalent of <code class="paramref">c</code>, or the unchanged value of <code class="paramref">c</code>, if <code class="paramref">c</code> is already lowercase or not alphabetic.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function ToLower(c As Char) As Char
+  overload: Garyon.Extensions.CharExtensions.ToLower*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.ToLower(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.ToLower(Char)
+  name.vb: ToLower(Char)
+- uid: Garyon.Extensions.CharExtensions.ToLowerInvariant(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.ToLowerInvariant(System.Char)
+  id: ToLowerInvariant(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToLowerInvariant(char)
+  nameWithType: CharExtensions.ToLowerInvariant(char)
+  fullName: Garyon.Extensions.CharExtensions.ToLowerInvariant(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToLowerInvariant
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 134
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the value of a Unicode character to its lowercase equivalent using the casing rules of the invariant culture.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static char ToLowerInvariant(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    return:
+      type: System.Char
+      description: The lowercase equivalent of the <code class="paramref">c</code> parameter, or the unchanged value of <code class="paramref">c</code>, if <code class="paramref">c</code> is already lowercase or not alphabetic.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function ToLowerInvariant(c As Char) As Char
+  overload: Garyon.Extensions.CharExtensions.ToLowerInvariant*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.ToLowerInvariant(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.ToLowerInvariant(Char)
+  name.vb: ToLowerInvariant(Char)
+- uid: Garyon.Extensions.CharExtensions.ToUpper(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.ToUpper(System.Char)
+  id: ToUpper(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToUpper(char)
+  nameWithType: CharExtensions.ToUpper(char)
+  fullName: Garyon.Extensions.CharExtensions.ToUpper(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToUpper
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 137
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the value of a Unicode character to its uppercase equivalent.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static char ToUpper(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    return:
+      type: System.Char
+      description: The uppercase equivalent of <code class="paramref">c</code>, or the unchanged value of <code class="paramref">c</code> if <code class="paramref">c</code> is already uppercase, has no uppercase equivalent, or is not alphabetic.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function ToUpper(c As Char) As Char
+  overload: Garyon.Extensions.CharExtensions.ToUpper*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.ToUpper(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.ToUpper(Char)
+  name.vb: ToUpper(Char)
+- uid: Garyon.Extensions.CharExtensions.ToUpper(System.Char,System.Globalization.CultureInfo)
+  commentId: M:Garyon.Extensions.CharExtensions.ToUpper(System.Char,System.Globalization.CultureInfo)
+  id: ToUpper(System.Char,System.Globalization.CultureInfo)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToUpper(char, CultureInfo)
+  nameWithType: CharExtensions.ToUpper(char, CultureInfo)
+  fullName: Garyon.Extensions.CharExtensions.ToUpper(char, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToUpper
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 140
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the value of a specified Unicode character to its uppercase equivalent using specified culture-specific formatting information.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static char ToUpper(this char c, CultureInfo culture)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    - id: culture
+      type: System.Globalization.CultureInfo
+      description: An object that supplies culture-specific casing rules.
+    return:
+      type: System.Char
+      description: The uppercase equivalent of <code class="paramref">c</code>, modified according to <code class="paramref">culture</code>, or the unchanged value of <code class="paramref">c</code> if <code class="paramref">c</code> is already uppercase, has no uppercase equivalent, or is not alphabetic.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function ToUpper(c As Char, culture As CultureInfo) As Char
+  overload: Garyon.Extensions.CharExtensions.ToUpper*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code class="paramref">culture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.ToUpper(Char, CultureInfo)
+  fullName.vb: Garyon.Extensions.CharExtensions.ToUpper(Char, System.Globalization.CultureInfo)
+  name.vb: ToUpper(Char, CultureInfo)
+- uid: Garyon.Extensions.CharExtensions.ToUpperInvariant(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.ToUpperInvariant(System.Char)
+  id: ToUpperInvariant(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToUpperInvariant(char)
+  nameWithType: CharExtensions.ToUpperInvariant(char)
+  fullName: Garyon.Extensions.CharExtensions.ToUpperInvariant(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToUpperInvariant
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 143
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts the value of a Unicode character to its uppercase equivalent using the casing rules of the invariant culture.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static char ToUpperInvariant(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The Unicode character to convert.
+    return:
+      type: System.Char
+      description: The uppercase equivalent of the <code class="paramref">c</code> parameter, or the unchanged value of <code class="paramref">c</code>, if <code class="paramref">c</code> is already uppercase or not alphabetic.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function ToUpperInvariant(c As Char) As Char
+  overload: Garyon.Extensions.CharExtensions.ToUpperInvariant*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CharExtensions.ToUpperInvariant(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.ToUpperInvariant(Char)
+  name.vb: ToUpperInvariant(Char)
+- uid: Garyon.Extensions.CharExtensions.IsBase64Character(System.Char)
+  commentId: M:Garyon.Extensions.CharExtensions.IsBase64Character(System.Char)
+  id: IsBase64Character(System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.CharExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsBase64Character(char)
+  nameWithType: CharExtensions.IsBase64Character(char)
+  fullName: Garyon.Extensions.CharExtensions.IsBase64Character(char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/CharExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsBase64Character
+    path: ../Garyon/Extensions/CharExtensions.cs
+    startLine: 154
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Checks whether the character is a valid Base 64 character.
+  example: []
+  syntax:
+    content: public static bool IsBase64Character(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to check whether it is a valid Base 64 character.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsBase64Character(c As Char) As Boolean
+  overload: Garyon.Extensions.CharExtensions.IsBase64Character*
+  nameWithType.vb: CharExtensions.IsBase64Character(Char)
+  fullName.vb: Garyon.Extensions.CharExtensions.IsBase64Character(Char)
+  name.vb: IsBase64Character(Char)
+references:
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsLowerCaseEnglishLetter_System_Char_
+  name: IsLowerCaseEnglishLetter
+  nameWithType: CharExtensions.IsLowerCaseEnglishLetter
+  fullName: Garyon.Extensions.CharExtensions.IsLowerCaseEnglishLetter
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsUpperCaseEnglishLetter_System_Char_
+  name: IsUpperCaseEnglishLetter
+  nameWithType: CharExtensions.IsUpperCaseEnglishLetter
+  fullName: Garyon.Extensions.CharExtensions.IsUpperCaseEnglishLetter
+- uid: Garyon.Extensions.CharExtensions.IsEnglishLetter*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsEnglishLetter
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsEnglishLetter_System_Char_
+  name: IsEnglishLetter
+  nameWithType: CharExtensions.IsEnglishLetter
+  fullName: Garyon.Extensions.CharExtensions.IsEnglishLetter
+- uid: Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsEnglishLetterOrDigit_System_Char_
+  name: IsEnglishLetterOrDigit
+  nameWithType: CharExtensions.IsEnglishLetterOrDigit
+  fullName: Garyon.Extensions.CharExtensions.IsEnglishLetterOrDigit
+- uid: Garyon.Extensions.CharExtensions.GetNumericValueInteger*
+  commentId: Overload:Garyon.Extensions.CharExtensions.GetNumericValueInteger
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_GetNumericValueInteger_System_Char_
+  name: GetNumericValueInteger
+  nameWithType: CharExtensions.GetNumericValueInteger
+  fullName: Garyon.Extensions.CharExtensions.GetNumericValueInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.CharExtensions.GetNumericalValue*
+  commentId: Overload:Garyon.Extensions.CharExtensions.GetNumericalValue
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_GetNumericalValue_System_Char_
+  name: GetNumericalValue
+  nameWithType: CharExtensions.GetNumericalValue
+  fullName: Garyon.Extensions.CharExtensions.GetNumericalValue
+- uid: Garyon.Extensions.CharExtensions.IsValidHexCharacter*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsValidHexCharacter
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsValidHexCharacter_System_Char_
+  name: IsValidHexCharacter
+  nameWithType: CharExtensions.IsValidHexCharacter
+  fullName: Garyon.Extensions.CharExtensions.IsValidHexCharacter
+- uid: Garyon.Extensions.CharExtensions.GetNumericValue*
+  commentId: Overload:Garyon.Extensions.CharExtensions.GetNumericValue
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_GetNumericValue_System_Char_
+  name: GetNumericValue
+  nameWithType: CharExtensions.GetNumericValue
+  fullName: Garyon.Extensions.CharExtensions.GetNumericValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Globalization.UnicodeCategory
+  commentId: T:System.Globalization.UnicodeCategory
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.unicodecategory
+  name: UnicodeCategory
+  nameWithType: UnicodeCategory
+  fullName: System.Globalization.UnicodeCategory
+- uid: Garyon.Extensions.CharExtensions.GetUnicodeCategory*
+  commentId: Overload:Garyon.Extensions.CharExtensions.GetUnicodeCategory
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_GetUnicodeCategory_System_Char_
+  name: GetUnicodeCategory
+  nameWithType: CharExtensions.GetUnicodeCategory
+  fullName: Garyon.Extensions.CharExtensions.GetUnicodeCategory
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+- uid: Garyon.Extensions.CharExtensions.IsControl*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsControl
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsControl_System_Char_
+  name: IsControl
+  nameWithType: CharExtensions.IsControl
+  fullName: Garyon.Extensions.CharExtensions.IsControl
+- uid: Garyon.Extensions.CharExtensions.IsDigit*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsDigit
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsDigit_System_Char_
+  name: IsDigit
+  nameWithType: CharExtensions.IsDigit
+  fullName: Garyon.Extensions.CharExtensions.IsDigit
+- uid: Garyon.Extensions.CharExtensions.IsHighSurrogate*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsHighSurrogate
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsHighSurrogate_System_Char_
+  name: IsHighSurrogate
+  nameWithType: CharExtensions.IsHighSurrogate
+  fullName: Garyon.Extensions.CharExtensions.IsHighSurrogate
+- uid: Garyon.Extensions.CharExtensions.IsLetter*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsLetter
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsLetter_System_Char_
+  name: IsLetter
+  nameWithType: CharExtensions.IsLetter
+  fullName: Garyon.Extensions.CharExtensions.IsLetter
+- uid: Garyon.Extensions.CharExtensions.IsLetterOrDigit*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsLetterOrDigit
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsLetterOrDigit_System_Char_
+  name: IsLetterOrDigit
+  nameWithType: CharExtensions.IsLetterOrDigit
+  fullName: Garyon.Extensions.CharExtensions.IsLetterOrDigit
+- uid: Garyon.Extensions.CharExtensions.IsLower*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsLower
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsLower_System_Char_
+  name: IsLower
+  nameWithType: CharExtensions.IsLower
+  fullName: Garyon.Extensions.CharExtensions.IsLower
+- uid: Garyon.Extensions.CharExtensions.IsLowSurrogate*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsLowSurrogate
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsLowSurrogate_System_Char_
+  name: IsLowSurrogate
+  nameWithType: CharExtensions.IsLowSurrogate
+  fullName: Garyon.Extensions.CharExtensions.IsLowSurrogate
+- uid: Garyon.Extensions.CharExtensions.IsNumber*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsNumber
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsNumber_System_Char_
+  name: IsNumber
+  nameWithType: CharExtensions.IsNumber
+  fullName: Garyon.Extensions.CharExtensions.IsNumber
+- uid: Garyon.Extensions.CharExtensions.IsPunctuation*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsPunctuation
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsPunctuation_System_Char_
+  name: IsPunctuation
+  nameWithType: CharExtensions.IsPunctuation
+  fullName: Garyon.Extensions.CharExtensions.IsPunctuation
+- uid: Garyon.Extensions.CharExtensions.IsSeparator*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsSeparator
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsSeparator_System_Char_
+  name: IsSeparator
+  nameWithType: CharExtensions.IsSeparator
+  fullName: Garyon.Extensions.CharExtensions.IsSeparator
+- uid: Garyon.Extensions.CharExtensions.IsSurrogate*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsSurrogate
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsSurrogate_System_Char_
+  name: IsSurrogate
+  nameWithType: CharExtensions.IsSurrogate
+  fullName: Garyon.Extensions.CharExtensions.IsSurrogate
+- uid: Garyon.Extensions.CharExtensions.IsSymbol*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsSymbol
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsSymbol_System_Char_
+  name: IsSymbol
+  nameWithType: CharExtensions.IsSymbol
+  fullName: Garyon.Extensions.CharExtensions.IsSymbol
+- uid: Garyon.Extensions.CharExtensions.IsUpper*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsUpper
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsUpper_System_Char_
+  name: IsUpper
+  nameWithType: CharExtensions.IsUpper
+  fullName: Garyon.Extensions.CharExtensions.IsUpper
+- uid: Garyon.Extensions.CharExtensions.IsWhiteSpace*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsWhiteSpace
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsWhiteSpace_System_Char_
+  name: IsWhiteSpace
+  nameWithType: CharExtensions.IsWhiteSpace
+  fullName: Garyon.Extensions.CharExtensions.IsWhiteSpace
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Garyon.Extensions.CharExtensions.ToLower*
+  commentId: Overload:Garyon.Extensions.CharExtensions.ToLower
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_ToLower_System_Char_System_Globalization_CultureInfo_
+  name: ToLower
+  nameWithType: CharExtensions.ToLower
+  fullName: Garyon.Extensions.CharExtensions.ToLower
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: Garyon.Extensions.CharExtensions.ToLowerInvariant*
+  commentId: Overload:Garyon.Extensions.CharExtensions.ToLowerInvariant
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_ToLowerInvariant_System_Char_
+  name: ToLowerInvariant
+  nameWithType: CharExtensions.ToLowerInvariant
+  fullName: Garyon.Extensions.CharExtensions.ToLowerInvariant
+- uid: Garyon.Extensions.CharExtensions.ToUpper*
+  commentId: Overload:Garyon.Extensions.CharExtensions.ToUpper
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_ToUpper_System_Char_
+  name: ToUpper
+  nameWithType: CharExtensions.ToUpper
+  fullName: Garyon.Extensions.CharExtensions.ToUpper
+- uid: Garyon.Extensions.CharExtensions.ToUpperInvariant*
+  commentId: Overload:Garyon.Extensions.CharExtensions.ToUpperInvariant
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_ToUpperInvariant_System_Char_
+  name: ToUpperInvariant
+  nameWithType: CharExtensions.ToUpperInvariant
+  fullName: Garyon.Extensions.CharExtensions.ToUpperInvariant
+- uid: Garyon.Extensions.CharExtensions.IsBase64Character*
+  commentId: Overload:Garyon.Extensions.CharExtensions.IsBase64Character
+  href: Garyon.Extensions.CharExtensions.html#Garyon_Extensions_CharExtensions_IsBase64Character_System_Char_
+  name: IsBase64Character
+  nameWithType: CharExtensions.IsBase64Character
+  fullName: Garyon.Extensions.CharExtensions.IsBase64Character

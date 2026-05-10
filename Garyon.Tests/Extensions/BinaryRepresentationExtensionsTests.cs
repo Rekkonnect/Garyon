@@ -26,7 +26,7 @@ public class BinaryRepresentationExtensionsTests
     private const string u8ValueRepresentation = "00100101";
 
     #region Binary Representation
-    private static readonly int[] edgeTotalBitsValues = { 0, -1 };
+    private static readonly int[] edgeTotalBitsValues = [0, -1];
 
     [Test]
     public async Task ByteBinaryRepresentationTest()

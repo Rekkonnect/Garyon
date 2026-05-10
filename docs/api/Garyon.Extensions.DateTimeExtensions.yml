@@ -1,0 +1,3632 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.DateTimeExtensions
+  commentId: T:Garyon.Extensions.DateTimeExtensions
+  id: DateTimeExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.DateTimeExtensions.AddWeeks(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.DaysInMonth(System.DateTime)
+  - Garyon.Extensions.DateTimeExtensions.DaysInYear(System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.DaysInYear(System.DateTime)
+  - Garyon.Extensions.DateTimeExtensions.DaysInYear(System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.GetComponent(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  - Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  - Garyon.Extensions.DateTimeExtensions.IsInLeapYear(System.DateTime)
+  - Garyon.Extensions.DateTimeExtensions.LeapYearDays
+  - Garyon.Extensions.DateTimeExtensions.NormalYearDays
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextDay(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextHour(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextMinute(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextMonth(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextSecond(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToNextYear(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear(System.DateTime,System.Boolean)
+  - Garyon.Extensions.DateTimeExtensions.TimeOnly(System.DateTime)
+  - Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int32,Garyon.Extensions.DateTimeComponent)
+  - Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+  - Garyon.Extensions.DateTimeExtensions.WithDay(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithDayOfWeek(System.DateTime,System.DayOfWeek,System.DayOfWeek)
+  - Garyon.Extensions.DateTimeExtensions.WithDayOfYear(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithHour(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime,Garyon.Objects.HourMinute)
+  - Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond(System.DateTime,System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithMillisecond(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithMinute(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime,Garyon.Objects.MinuteSecond)
+  - Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithMonth(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithMonthDay(System.DateTime,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithSecond(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond(System.DateTime,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithTime(System.DateTime,System.TimeSpan)
+  - Garyon.Extensions.DateTimeExtensions.WithYear(System.DateTime,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithYearMonth(System.DateTime,System.Int32,System.Int32)
+  - Garyon.Extensions.DateTimeExtensions.WithYearMonthDay(System.DateTime,System.Int32,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: DateTimeExtensions
+  nameWithType: DateTimeExtensions
+  fullName: Garyon.Extensions.DateTimeExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DateTimeExtensions
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extension functions for the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
+  syntax:
+    content: public static class DateTimeExtensions
+    content.vb: Public Module DateTimeExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.DateTimeExtensions.NormalYearDays
+  commentId: F:Garyon.Extensions.DateTimeExtensions.NormalYearDays
+  id: NormalYearDays
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: NormalYearDays
+  nameWithType: DateTimeExtensions.NormalYearDays
+  fullName: Garyon.Extensions.DateTimeExtensions.NormalYearDays
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NormalYearDays
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 55
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public const int NormalYearDays = 365
+    return:
+      type: System.Int32
+    content.vb: Public Const NormalYearDays As Integer = 365
+- uid: Garyon.Extensions.DateTimeExtensions.LeapYearDays
+  commentId: F:Garyon.Extensions.DateTimeExtensions.LeapYearDays
+  id: LeapYearDays
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: LeapYearDays
+  nameWithType: DateTimeExtensions.LeapYearDays
+  fullName: Garyon.Extensions.DateTimeExtensions.LeapYearDays
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LeapYearDays
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 56
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public const int LeapYearDays = 366
+    return:
+      type: System.Int32
+    content.vb: Public Const LeapYearDays As Integer = 366
+- uid: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  id: GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComponentInt64(DateTime, DateTimeComponent)
+  nameWithType: DateTimeExtensions.GetComponentInt64(DateTime, DateTimeComponent)
+  fullName: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime, Garyon.Extensions.DateTimeComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetComponentInt64
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 72
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the specified component of the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>
+
+    instance.
+  example: []
+  syntax:
+    content: public static long GetComponentInt64(this DateTime dateTime, DateTimeComponent component)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance whose component to get.
+    - id: component
+      type: Garyon.Extensions.DateTimeComponent
+      description: The component of the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance to get.
+    return:
+      type: System.Int64
+      description: >-
+        The requested component of the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance,
+
+        represented by the specified <xref href="Garyon.Extensions.DateTimeComponent" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetComponentInt64(dateTime As Date, component As DateTimeComponent) As Long
+  overload: Garyon.Extensions.DateTimeExtensions.GetComponentInt64*
+  nameWithType.vb: DateTimeExtensions.GetComponentInt64(Date, DateTimeComponent)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(Date, Garyon.Extensions.DateTimeComponent)
+  name.vb: GetComponentInt64(Date, DateTimeComponent)
+- uid: Garyon.Extensions.DateTimeExtensions.GetComponent(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.GetComponent(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  id: GetComponent(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComponent(DateTime, DateTimeComponent)
+  nameWithType: DateTimeExtensions.GetComponent(DateTime, DateTimeComponent)
+  fullName: Garyon.Extensions.DateTimeExtensions.GetComponent(System.DateTime, Garyon.Extensions.DateTimeComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetComponent
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 97
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the specified component of the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>
+
+    instance.
+  example: []
+  syntax:
+    content: public static int GetComponent(this DateTime dateTime, DateTimeComponent component)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance whose component to get.
+    - id: component
+      type: Garyon.Extensions.DateTimeComponent
+      description: >-
+        The component of the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance to get. To get
+
+        the <xref href="Garyon.Extensions.DateTimeComponent.Ticks" data-throw-if-not-resolved="false"></xref> component, use
+
+        <xref href="Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime%2cGaryon.Extensions.DateTimeComponent)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: >-
+        The requested component of the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance,
+
+        represented by the specified <xref href="Garyon.Extensions.DateTimeComponent" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetComponent(dateTime As Date, component As DateTimeComponent) As Integer
+  overload: Garyon.Extensions.DateTimeExtensions.GetComponent*
+  nameWithType.vb: DateTimeExtensions.GetComponent(Date, DateTimeComponent)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.GetComponent(Date, Garyon.Extensions.DateTimeComponent)
+  name.vb: GetComponent(Date, DateTimeComponent)
+- uid: Garyon.Extensions.DateTimeExtensions.DaysInMonth(System.DateTime)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.DaysInMonth(System.DateTime)
+  id: DaysInMonth(System.DateTime)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: DaysInMonth(DateTime)
+  nameWithType: DateTimeExtensions.DaysInMonth(DateTime)
+  fullName: Garyon.Extensions.DateTimeExtensions.DaysInMonth(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DaysInMonth
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 139
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the days the month of the provided <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> has.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int DaysInMonth(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> whose month's day count to get.
+    return:
+      type: System.Int32
+      description: The number of days the month of <code class="paramref">dateTime</code> has.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function DaysInMonth(dateTime As Date) As Integer
+  overload: Garyon.Extensions.DateTimeExtensions.DaysInMonth*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.DaysInMonth(Date)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.DaysInMonth(Date)
+  name.vb: DaysInMonth(Date)
+- uid: Garyon.Extensions.DateTimeExtensions.IsInLeapYear(System.DateTime)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.IsInLeapYear(System.DateTime)
+  id: IsInLeapYear(System.DateTime)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInLeapYear(DateTime)
+  nameWithType: DateTimeExtensions.IsInLeapYear(DateTime)
+  fullName: Garyon.Extensions.DateTimeExtensions.IsInLeapYear(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsInLeapYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 152
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the year of the provided <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>
+
+    is a leap year.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsInLeapYear(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> whose year to determine if it is a leap
+
+        one.
+    return:
+      type: System.Boolean
+      description: Whether the year of <code class="paramref">dateTime</code> is a leap year.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsInLeapYear(dateTime As Date) As Boolean
+  overload: Garyon.Extensions.DateTimeExtensions.IsInLeapYear*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.IsInLeapYear(Date)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.IsInLeapYear(Date)
+  name.vb: IsInLeapYear(Date)
+- uid: Garyon.Extensions.DateTimeExtensions.DaysInYear(System.DateTime)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.DaysInYear(System.DateTime)
+  id: DaysInYear(System.DateTime)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: DaysInYear(DateTime)
+  nameWithType: DateTimeExtensions.DaysInYear(DateTime)
+  fullName: Garyon.Extensions.DateTimeExtensions.DaysInYear(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DaysInYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 163
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the days the year of the provided <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> has.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int DaysInYear(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> whose year's day count to get.
+    return:
+      type: System.Int32
+      description: The number of days the year of <code class="paramref">dateTime</code> has.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function DaysInYear(dateTime As Date) As Integer
+  overload: Garyon.Extensions.DateTimeExtensions.DaysInYear*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.DaysInYear(Date)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.DaysInYear(Date)
+  name.vb: DaysInYear(Date)
+- uid: Garyon.Extensions.DateTimeExtensions.DaysInYear(System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.DaysInYear(System.Int32)
+  id: DaysInYear(System.Int32)
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: DaysInYear(int)
+  nameWithType: DateTimeExtensions.DaysInYear(int)
+  fullName: Garyon.Extensions.DateTimeExtensions.DaysInYear(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DaysInYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 175
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the days the specified year contains.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int DaysInYear(int year)
+    parameters:
+    - id: year
+      type: System.Int32
+      description: The year whose days to determine.
+    return:
+      type: System.Int32
+      description: The number of days the given year has.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function DaysInYear(year As Integer) As Integer
+  overload: Garyon.Extensions.DateTimeExtensions.DaysInYear*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.DaysInYear(Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.DaysInYear(Integer)
+  name.vb: DaysInYear(Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.DaysInYear(System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.DaysInYear(System.Boolean)
+  id: DaysInYear(System.Boolean)
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: DaysInYear(bool)
+  nameWithType: DateTimeExtensions.DaysInYear(bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.DaysInYear(bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DaysInYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 187
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the days a year contains, determined by whether it's a leap year or
+
+    not.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static int DaysInYear(bool isLeapYear)
+    parameters:
+    - id: isLeapYear
+      type: System.Boolean
+      description: Determines whether the year is a leap year or not.
+    return:
+      type: System.Int32
+      description: The number of days the year has.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function DaysInYear(isLeapYear As Boolean) As Integer
+  overload: Garyon.Extensions.DateTimeExtensions.DaysInYear*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.DaysInYear(Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.DaysInYear(Boolean)
+  name.vb: DaysInYear(Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.WithMillisecond(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithMillisecond(System.DateTime,System.Int32)
+  id: WithMillisecond(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMillisecond(DateTime, int)
+  nameWithType: DateTimeExtensions.WithMillisecond(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMillisecond(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMillisecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 212
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the
+
+    millisecond of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithMillisecond(this DateTime dateTime, int millisecond)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted millisecond component.
+    - id: millisecond
+      type: System.Int32
+      description: >-
+        The value of the millisecond component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 999].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the millisecond
+
+        set to the specified value.
+    content.vb: Public Shared Function WithMillisecond(dateTime As Date, millisecond As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithMillisecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">millisecond</code> is outside the range
+
+      [0, 999].
+  nameWithType.vb: DateTimeExtensions.WithMillisecond(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithMillisecond(Date, Integer)
+  name.vb: WithMillisecond(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithSecond(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithSecond(System.DateTime,System.Int32)
+  id: WithSecond(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSecond(DateTime, int)
+  nameWithType: DateTimeExtensions.WithSecond(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithSecond(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 237
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the second
+
+    of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithSecond(this DateTime dateTime, int second)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted second component.
+    - id: second
+      type: System.Int32
+      description: >-
+        The value of the second component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the second set to
+
+        the specified value.
+    content.vb: Public Shared Function WithSecond(dateTime As Date, second As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithSecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">second</code> is outside the range [0,
+
+      59].
+  nameWithType.vb: DateTimeExtensions.WithSecond(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithSecond(Date, Integer)
+  name.vb: WithSecond(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithMinute(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithMinute(System.DateTime,System.Int32)
+  id: WithMinute(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinute(DateTime, int)
+  nameWithType: DateTimeExtensions.WithMinute(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMinute(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinute
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 262
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the minute
+
+    of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithMinute(this DateTime dateTime, int minute)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minute component.
+    - id: minute
+      type: System.Int32
+      description: >-
+        The value of the minute component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the minute set to
+
+        the specified value.
+    content.vb: Public Shared Function WithMinute(dateTime As Date, minute As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithMinute*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">minute</code> is outside the range [0,
+
+      59].
+  nameWithType.vb: DateTimeExtensions.WithMinute(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithMinute(Date, Integer)
+  name.vb: WithMinute(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithHour(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithHour(System.DateTime,System.Int32)
+  id: WithHour(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHour(DateTime, int)
+  nameWithType: DateTimeExtensions.WithHour(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHour(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHour
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 287
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the hour of
+
+    the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithHour(this DateTime dateTime, int hour)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hour component.
+    - id: hour
+      type: System.Int32
+      description: >-
+        The value of the hour component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 23].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the hour set to
+
+        the specified value.
+    content.vb: Public Shared Function WithHour(dateTime As Date, hour As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithHour*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hour</code> is outside the range [0,
+
+      23].
+  nameWithType.vb: DateTimeExtensions.WithHour(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithHour(Date, Integer)
+  name.vb: WithHour(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithDay(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithDay(System.DateTime,System.Int32)
+  id: WithDay(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithDay(DateTime, int)
+  nameWithType: DateTimeExtensions.WithDay(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithDay(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithDay
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 314
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the day of
+
+    the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithDay(this DateTime dateTime, int day)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted day component.
+    - id: day
+      type: System.Int32
+      description: >-
+        The value of the day component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 31] and
+
+        available for the given year/month combination.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the day set to
+
+        the specified value.
+    content.vb: Public Shared Function WithDay(dateTime As Date, day As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithDay*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">day</code> is outside the range [1, 31]
+
+      -or- the year/month combination originating from the given
+
+      <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> does not have the specified day.
+  nameWithType.vb: DateTimeExtensions.WithDay(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithDay(Date, Integer)
+  name.vb: WithDay(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithMonth(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithMonth(System.DateTime,System.Int32)
+  id: WithMonth(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMonth(DateTime, int)
+  nameWithType: DateTimeExtensions.WithMonth(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMonth(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMonth
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 341
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the month of
+
+    the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithMonth(this DateTime dateTime, int month)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted month component.
+    - id: month
+      type: System.Int32
+      description: >-
+        The value of the month component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 12] and the
+
+        given day should be available for the resulting year/month combination.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the month set to
+
+        the specified value.
+    content.vb: Public Shared Function WithMonth(dateTime As Date, month As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithMonth*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">month</code> is outside the range [1,
+
+      12] -or- the resulting year/month combination does not have the day from
+
+      the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: DateTimeExtensions.WithMonth(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithMonth(Date, Integer)
+  name.vb: WithMonth(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithYear(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithYear(System.DateTime,System.Int32)
+  id: WithYear(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithYear(DateTime, int)
+  nameWithType: DateTimeExtensions.WithYear(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithYear(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 369
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the year of
+
+    the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static DateTime WithYear(this DateTime dateTime, int year)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted year component.
+    - id: year
+      type: System.Int32
+      description: >-
+        The value of the year component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 9999] and
+
+        the given day should be available for the resulting year/month
+
+        combination.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the year set to
+
+        the specified value.
+    content.vb: Public Shared Function WithYear(dateTime As Date, year As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithYear*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">year</code> is outside the range [1,
+
+      9999] -or- the resulting year/month combination does not have the day
+
+      from the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: DateTimeExtensions.WithYear(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithYear(Date, Integer)
+  name.vb: WithYear(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond(System.DateTime,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond(System.DateTime,System.Int32,System.Int32)
+  id: WithSecondMillisecond(System.DateTime,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSecondMillisecond(DateTime, int, int)
+  nameWithType: DateTimeExtensions.WithSecondMillisecond(DateTime, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond(System.DateTime, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSecondMillisecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 401
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the second
+
+    and the millisecond components of the copied value are set to specified
+
+    values.
+  example: []
+  syntax:
+    content: public static DateTime WithSecondMillisecond(this DateTime dateTime, int second, int millisecond)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted second and millisecond components.
+    - id: second
+      type: System.Int32
+      description: >-
+        The value of the second component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    - id: millisecond
+      type: System.Int32
+      description: >-
+        The value of the second component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 999].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the second and
+
+        millisecond components set to the specified values.
+    content.vb: Public Shared Function WithSecondMillisecond(dateTime As Date, second As Integer, millisecond As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">second</code> is outside the range [0,
+
+      59] -or- the given value for <code class="paramref">millisecond</code> is outside
+
+      the range [0, 999].
+  nameWithType.vb: DateTimeExtensions.WithSecondMillisecond(Date, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond(Date, Integer, Integer)
+  name.vb: WithSecondMillisecond(Date, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime,System.Int32,System.Int32)
+  id: WithMinuteSecond(System.DateTime,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinuteSecond(DateTime, int, int)
+  nameWithType: DateTimeExtensions.WithMinuteSecond(DateTime, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinuteSecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 435
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the minute
+
+    and the second components of the copied value are set to specified
+
+    values.
+  example: []
+  syntax:
+    content: public static DateTime WithMinuteSecond(this DateTime dateTime, int minute, int second)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minute and second components.
+    - id: minute
+      type: System.Int32
+      description: >-
+        The value of the minute component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    - id: second
+      type: System.Int32
+      description: >-
+        The value of the second component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the minute and
+
+        second components set to the specified values.
+    content.vb: Public Shared Function WithMinuteSecond(dateTime As Date, minute As Integer, second As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">minute</code> is outside the range [0,
+
+      59] -or- the given value for <code class="paramref">second</code> is outside the
+
+      range [0, 59].
+  nameWithType.vb: DateTimeExtensions.WithMinuteSecond(Date, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(Date, Integer, Integer)
+  name.vb: WithMinuteSecond(Date, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime,System.Int32,System.Int32)
+  id: WithHourMinute(System.DateTime,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHourMinute(DateTime, int, int)
+  nameWithType: DateTimeExtensions.WithHourMinute(DateTime, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHourMinute
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 468
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the hour and
+
+    minute components of the copied value are set to specified values.
+  example: []
+  syntax:
+    content: public static DateTime WithHourMinute(this DateTime dateTime, int hour, int minute)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hour and minute components.
+    - id: hour
+      type: System.Int32
+      description: >-
+        The value of the hour component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 23].
+    - id: minute
+      type: System.Int32
+      description: >-
+        The value of the minute component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the hour and
+
+        minute components set to the specified values.
+    content.vb: Public Shared Function WithHourMinute(dateTime As Date, hour As Integer, minute As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithHourMinute*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hour</code> is outside the range [0, 23]
+
+      -or- the given value for <code class="paramref">minute</code> is outside the range
+
+      [0, 59].
+  nameWithType.vb: DateTimeExtensions.WithHourMinute(Date, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithHourMinute(Date, Integer, Integer)
+  name.vb: WithHourMinute(Date, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond(System.DateTime,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond(System.DateTime,System.Int32,System.Int32,System.Int32)
+  id: WithHourMinuteSecond(System.DateTime,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHourMinuteSecond(DateTime, int, int, int)
+  nameWithType: DateTimeExtensions.WithHourMinuteSecond(DateTime, int, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond(System.DateTime, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHourMinuteSecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 507
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the hour,
+
+    minute and second components of the copied value are set to specified
+
+    values.
+  example: []
+  syntax:
+    content: public static DateTime WithHourMinuteSecond(this DateTime dateTime, int hour, int minute, int second)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hour, minute and second components.
+    - id: hour
+      type: System.Int32
+      description: >-
+        The value of the hour component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 23].
+    - id: minute
+      type: System.Int32
+      description: >-
+        The value of the minute component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    - id: second
+      type: System.Int32
+      description: >-
+        The value of the second component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the hour, minute
+
+        and second components set to the specified values.
+    content.vb: Public Shared Function WithHourMinuteSecond(dateTime As Date, hour As Integer, minute As Integer, second As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hour</code> is outside the range [0, 23]
+
+      -or- the given value for <code class="paramref">minute</code> is outside the range
+
+      [0, 59] -or- the given value for <code class="paramref">second</code> is outside
+
+      the range [0, 59].
+  nameWithType.vb: DateTimeExtensions.WithHourMinuteSecond(Date, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond(Date, Integer, Integer, Integer)
+  name.vb: WithHourMinuteSecond(Date, Integer, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: WithHourMinuteSecondMillisecond(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHourMinuteSecondMillisecond(DateTime, int, int, int, int)
+  nameWithType: DateTimeExtensions.WithHourMinuteSecondMillisecond(DateTime, int, int, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond(System.DateTime, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHourMinuteSecondMillisecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 552
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the hour,
+
+    minute, second and millisecond components of the copied value are set to
+
+    specified values.
+  example: []
+  syntax:
+    content: public static DateTime WithHourMinuteSecondMillisecond(this DateTime dateTime, int hour, int minute, int second, int millisecond)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hour, minute, second and millisecond components.
+    - id: hour
+      type: System.Int32
+      description: >-
+        The value of the hour component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 23].
+    - id: minute
+      type: System.Int32
+      description: >-
+        The value of the minute component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    - id: second
+      type: System.Int32
+      description: >-
+        The value of the second component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 59].
+    - id: millisecond
+      type: System.Int32
+      description: >-
+        The value of the millisecond component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [0, 999].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the hour, minute,
+
+        second and millisecond components set to the specified values.
+    content.vb: Public Shared Function WithHourMinuteSecondMillisecond(dateTime As Date, hour As Integer, minute As Integer, second As Integer, millisecond As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hour</code> is outside the range [0, 23]
+
+      -or- the given value for <code class="paramref">minute</code> is outside the range
+
+      [0, 59] -or- the given value for <code class="paramref">second</code> is outside
+
+      the range [0, 59]. -or- the given value for
+
+      <code class="paramref">millisecond</code> is outside the range [0, 999].
+  nameWithType.vb: DateTimeExtensions.WithHourMinuteSecondMillisecond(Date, Integer, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond(Date, Integer, Integer, Integer, Integer)
+  name.vb: WithHourMinuteSecondMillisecond(Date, Integer, Integer, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime,Garyon.Objects.MinuteSecond)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime,Garyon.Objects.MinuteSecond)
+  id: WithMinuteSecond(System.DateTime,Garyon.Objects.MinuteSecond)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinuteSecond(DateTime, MinuteSecond)
+  nameWithType: DateTimeExtensions.WithMinuteSecond(DateTime, MinuteSecond)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(System.DateTime, Garyon.Objects.MinuteSecond)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinuteSecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 584
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the minute
+
+    and the second components of the copied value are set to specified
+
+    values.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static DateTime WithMinuteSecond(this DateTime dateTime, MinuteSecond minuteSecond)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minute and second components.
+    - id: minuteSecond
+      type: Garyon.Objects.MinuteSecond
+      description: >-
+        The minute and second components of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the minute and
+
+        second components set to the specified values.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function WithMinuteSecond(dateTime As Date, minuteSecond As MinuteSecond) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">minuteSecond</code> represents a minute
+
+      or a second outside the range [0, 59].
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.WithMinuteSecond(Date, MinuteSecond)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond(Date, Garyon.Objects.MinuteSecond)
+  name.vb: WithMinuteSecond(Date, MinuteSecond)
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime,Garyon.Objects.HourMinute)
+  id: WithHourMinute(System.DateTime,Garyon.Objects.HourMinute)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHourMinute(DateTime, HourMinute)
+  nameWithType: DateTimeExtensions.WithHourMinute(DateTime, HourMinute)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinute(System.DateTime, Garyon.Objects.HourMinute)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHourMinute
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 609
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the hour and
+
+    minute components of the copied value are set to specified values.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static DateTime WithHourMinute(this DateTime dateTime, HourMinute hourMinute)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hour and minute components.
+    - id: hourMinute
+      type: Garyon.Objects.HourMinute
+      description: >-
+        The hour and minute components of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the hour and
+
+        minute components set to the specified values.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function WithHourMinute(dateTime As Date, hourMinute As HourMinute) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithHourMinute*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hourMinute</code> represents an hour
+
+      outside the range [0, 23], or a minute outside the range [0, 59].
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.WithHourMinute(Date, HourMinute)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithHourMinute(Date, Garyon.Objects.HourMinute)
+  name.vb: WithHourMinute(Date, HourMinute)
+- uid: Garyon.Extensions.DateTimeExtensions.WithTime(System.DateTime,System.TimeSpan)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithTime(System.DateTime,System.TimeSpan)
+  id: WithTime(System.DateTime,System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithTime(DateTime, TimeSpan)
+  nameWithType: DateTimeExtensions.WithTime(DateTime, TimeSpan)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithTime(System.DateTime, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithTime
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 642
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the time
+
+    components of the copied value are set to specified values.
+  remarks: >-
+    Consider normalizing the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> using the
+
+    <xref href="Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)" data-throw-if-not-resolved="false"></xref> extension.
+
+    <br />
+
+    Since the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> also retains ticks below the
+
+    millisecond interval, its ticks will replace the existing
+
+    <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance's.
+  example: []
+  syntax:
+    content: public static DateTime WithTime(this DateTime dateTime, TimeSpan time)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted time components.
+    - id: time
+      type: System.TimeSpan
+      description: >-
+        The time components of the resulting copied <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>,
+
+        whose <xref href="System.TimeSpan.Days" data-throw-if-not-resolved="false"></xref> property should be 0.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the time
+
+        components set to the specified values.
+    content.vb: Public Shared Function WithTime(dateTime As Date, time As TimeSpan) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithTime*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">time</code> represents an absolute time
+
+      interval lasting at least an entire day.
+  nameWithType.vb: DateTimeExtensions.WithTime(Date, TimeSpan)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithTime(Date, System.TimeSpan)
+  name.vb: WithTime(Date, TimeSpan)
+- uid: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int32,Garyon.Extensions.DateTimeComponent)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int32,Garyon.Extensions.DateTimeComponent)
+  id: WithComponent(System.DateTime,System.Int32,Garyon.Extensions.DateTimeComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithComponent(DateTime, int, DateTimeComponent)
+  nameWithType: DateTimeExtensions.WithComponent(DateTime, int, DateTimeComponent)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime, int, Garyon.Extensions.DateTimeComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithComponent
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 674
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the
+
+    specified component of the copied value is set to the specified value.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static DateTime WithComponent(this DateTime dateTime, int value, DateTimeComponent component)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted time components.
+    - id: value
+      type: System.Int32
+      description: The value to set the component to.
+    - id: component
+      type: Garyon.Extensions.DateTimeComponent
+      description: >-
+        The component of the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance that will be
+
+        changed. <xref href="Garyon.Extensions.DateTimeComponent.Ticks" data-throw-if-not-resolved="false"></xref> is not accepted in
+
+        this overload, consider using
+
+        <xref href="Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime%2cSystem.Int64%2cGaryon.Extensions.DateTimeComponent)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the specified
+
+        component set to the specified value.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function WithComponent(dateTime As Date, value As Integer, component As DateTimeComponent) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithComponent*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">value</code> falls out of the valid
+
+      range for the given component, or an invalid day is represented.
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.WithComponent(Date, Integer, DateTimeComponent)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithComponent(Date, Integer, Garyon.Extensions.DateTimeComponent)
+  name.vb: WithComponent(Date, Integer, DateTimeComponent)
+- uid: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+  id: WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithComponent(DateTime, long, DateTimeComponent)
+  nameWithType: DateTimeExtensions.WithComponent(DateTime, long, DateTimeComponent)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime, long, Garyon.Extensions.DateTimeComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithComponent
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 729
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the
+
+    specified component of the copied value is set to the specified value.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static DateTime WithComponent(this DateTime dateTime, long value, DateTimeComponent component)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted time components.
+    - id: value
+      type: System.Int64
+      description: The value to set the component to.
+    - id: component
+      type: Garyon.Extensions.DateTimeComponent
+      description: >-
+        The component of the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance that will be
+
+        changed. <xref href="Garyon.Extensions.DateTimeComponent.Ticks" data-throw-if-not-resolved="false"></xref> is also accepted.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the specified
+
+        component set to the specified value.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function WithComponent(dateTime As Date, value As Long, component As DateTimeComponent) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithComponent*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">value</code> falls out of the valid
+
+      range for the given component, or an invalid day is represented.
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.WithComponent(Date, Long, DateTimeComponent)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithComponent(Date, Long, Garyon.Extensions.DateTimeComponent)
+  name.vb: WithComponent(Date, Long, DateTimeComponent)
+- uid: Garyon.Extensions.DateTimeExtensions.WithYearMonth(System.DateTime,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithYearMonth(System.DateTime,System.Int32,System.Int32)
+  id: WithYearMonth(System.DateTime,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithYearMonth(DateTime, int, int)
+  nameWithType: DateTimeExtensions.WithYearMonth(DateTime, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithYearMonth(System.DateTime, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithYearMonth
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 766
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the year and
+
+    month components of the copied value are set to specified values.
+  example: []
+  syntax:
+    content: public static DateTime WithYearMonth(this DateTime dateTime, int year, int month)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted year and month components.
+    - id: year
+      type: System.Int32
+      description: >-
+        The value of the year component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 9999].
+    - id: month
+      type: System.Int32
+      description: >-
+        The value of the month component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 12].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the year and
+
+        month components set to the specified values.
+    content.vb: Public Shared Function WithYearMonth(dateTime As Date, year As Integer, month As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithYearMonth*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given year, month, day combination is not a valid one -or- the given
+
+      value for <code class="paramref">year</code> is outside the range [1, 9999] -or-
+
+      the given value for <code class="paramref">month</code> is outside the range [1,
+
+      12].
+  nameWithType.vb: DateTimeExtensions.WithYearMonth(Date, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithYearMonth(Date, Integer, Integer)
+  name.vb: WithYearMonth(Date, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithMonthDay(System.DateTime,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithMonthDay(System.DateTime,System.Int32,System.Int32)
+  id: WithMonthDay(System.DateTime,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMonthDay(DateTime, int, int)
+  nameWithType: DateTimeExtensions.WithMonthDay(DateTime, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMonthDay(System.DateTime, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMonthDay
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 795
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the month
+
+    and day components of the copied value are set to specified values.
+  example: []
+  syntax:
+    content: public static DateTime WithMonthDay(this DateTime dateTime, int month, int day)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted month and day components.
+    - id: month
+      type: System.Int32
+      description: >-
+        The value of the month component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 12].
+    - id: day
+      type: System.Int32
+      description: >-
+        The value of the day component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 31].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the month and day
+
+        components set to the specified values.
+    content.vb: Public Shared Function WithMonthDay(dateTime As Date, month As Integer, day As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithMonthDay*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given year, month, day combination is not a valid one -or- the given
+
+      value for <code class="paramref">month</code> is outside the range [1, 12] -or- the
+
+      given value for <code class="paramref">day</code> is outside the range [1, 31].
+  nameWithType.vb: DateTimeExtensions.WithMonthDay(Date, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithMonthDay(Date, Integer, Integer)
+  name.vb: WithMonthDay(Date, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithYearMonthDay(System.DateTime,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithYearMonthDay(System.DateTime,System.Int32,System.Int32,System.Int32)
+  id: WithYearMonthDay(System.DateTime,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithYearMonthDay(DateTime, int, int, int)
+  nameWithType: DateTimeExtensions.WithYearMonthDay(DateTime, int, int, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithYearMonthDay(System.DateTime, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithYearMonthDay
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 831
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the year,
+
+    month and day components of the copied value are set to specified
+
+    values.
+  example: []
+  syntax:
+    content: public static DateTime WithYearMonthDay(this DateTime dateTime, int year, int month, int day)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted year, month and day components.
+    - id: year
+      type: System.Int32
+      description: >-
+        The value of the year component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 9999].
+    - id: month
+      type: System.Int32
+      description: >-
+        The value of the month component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 12].
+    - id: day
+      type: System.Int32
+      description: >-
+        The value of the day component of the resulting copied
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>. It must be within the range [1, 31].
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the year, month
+
+        and day components set to the specified values.
+    content.vb: Public Shared Function WithYearMonthDay(dateTime As Date, year As Integer, month As Integer, day As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithYearMonthDay*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given year, month, day combination is not a valid one -or- the given
+
+      value for <code class="paramref">year</code> is outside the range [1, 9999] -or-
+
+      the given value for <code class="paramref">month</code> is outside the range [1,
+
+      12] -or- the given value for <code class="paramref">day</code> is outside the range
+
+      [1, 31].
+  nameWithType.vb: DateTimeExtensions.WithYearMonthDay(Date, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithYearMonthDay(Date, Integer, Integer, Integer)
+  name.vb: WithYearMonthDay(Date, Integer, Integer, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.TimeOnly(System.DateTime)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.TimeOnly(System.DateTime)
+  id: TimeOnly(System.DateTime)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: TimeOnly(DateTime)
+  nameWithType: DateTimeExtensions.TimeOnly(DateTime)
+  fullName: Garyon.Extensions.DateTimeExtensions.TimeOnly(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TimeOnly
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 855
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance only containing the time
+
+    components of the original instance.
+  remarks: >-
+    There is not much usage considered for this method, and the ideal design
+
+    choice would involve using the <xref href="System.DateTime.TimeOfDay" data-throw-if-not-resolved="false"></xref>
+
+    property.
+  example: []
+  syntax:
+    content: public static DateTime TimeOnly(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance whose time components to
+
+        retrieve.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the year, month
+
+        and day components set to their default values (01/01/0001), and the
+
+        time components remaining as is.
+    content.vb: Public Shared Function TimeOnly(dateTime As Date) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.TimeOnly*
+  nameWithType.vb: DateTimeExtensions.TimeOnly(Date)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.TimeOnly(Date)
+  name.vb: TimeOnly(Date)
+- uid: Garyon.Extensions.DateTimeExtensions.AddWeeks(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.AddWeeks(System.DateTime,System.Int32)
+  id: AddWeeks(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddWeeks(DateTime, int)
+  nameWithType: DateTimeExtensions.AddWeeks(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.AddWeeks(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddWeeks
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 875
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the date is
+
+    adjusted by the specified number of weeks.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static DateTime AddWeeks(this DateTime dateTime, int weeks)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted date.
+    - id: weeks
+      type: System.Int32
+      description: The number of weeks to advance the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> by.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the date adjusted
+
+        by the given weeks.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function AddWeeks(dateTime As Date, weeks As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.AddWeeks*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: DateTimeExtensions.AddWeeks(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.AddWeeks(Date, Integer)
+  name.vb: AddWeeks(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.WithDayOfWeek(System.DateTime,System.DayOfWeek,System.DayOfWeek)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithDayOfWeek(System.DateTime,System.DayOfWeek,System.DayOfWeek)
+  id: WithDayOfWeek(System.DateTime,System.DayOfWeek,System.DayOfWeek)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithDayOfWeek(DateTime, DayOfWeek, DayOfWeek)
+  nameWithType: DateTimeExtensions.WithDayOfWeek(DateTime, DayOfWeek, DayOfWeek)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithDayOfWeek(System.DateTime, System.DayOfWeek, System.DayOfWeek)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithDayOfWeek
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 900
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the day is
+
+    adjusted to the one specified in the same week.
+  example: []
+  syntax:
+    content: public static DateTime WithDayOfWeek(this DateTime dateTime, DayOfWeek dayOfWeek, DayOfWeek firstDayOfWeek = DayOfWeek.Sunday)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted day.
+    - id: dayOfWeek
+      type: System.DayOfWeek
+      description: >-
+        The <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> reflecting the day in the current week
+
+        the new day will be.
+    - id: firstDayOfWeek
+      type: System.DayOfWeek
+      description: The first day of the week, within which the new day will be.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the day of week
+
+        set to the specified value.
+    content.vb: Public Shared Function WithDayOfWeek(dateTime As Date, dayOfWeek As DayOfWeek, firstDayOfWeek As DayOfWeek = DayOfWeek.Sunday) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithDayOfWeek*
+  nameWithType.vb: DateTimeExtensions.WithDayOfWeek(Date, DayOfWeek, DayOfWeek)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithDayOfWeek(Date, System.DayOfWeek, System.DayOfWeek)
+  name.vb: WithDayOfWeek(Date, DayOfWeek, DayOfWeek)
+- uid: Garyon.Extensions.DateTimeExtensions.WithDayOfYear(System.DateTime,System.Int32)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithDayOfYear(System.DateTime,System.Int32)
+  id: WithDayOfYear(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithDayOfYear(DateTime, int)
+  nameWithType: DateTimeExtensions.WithDayOfYear(DateTime, int)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithDayOfYear(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithDayOfYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 929
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, where the day is
+
+    adjusted to the one specified in the same year.
+  example: []
+  syntax:
+    content: public static DateTime WithDayOfYear(this DateTime dateTime, int day)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: >-
+        The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted day.
+    - id: day
+      type: System.Int32
+      description: >-
+        The day in the same year that will be set. It must range in [1, 365] for
+
+        normal years, or [1, 366] for leap years.
+    return:
+      type: System.DateTime
+      description: >-
+        A copy of the original <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> with the day of year
+
+        set to the specified value.
+    content.vb: Public Shared Function WithDayOfYear(dateTime As Date, day As Integer) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.WithDayOfYear*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">day</code> is outside the range [1,
+
+      365], if the year is a normal one, or [1, 366] if the year is a leap
+
+      one.
+  nameWithType.vb: DateTimeExtensions.WithDayOfYear(Date, Integer)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithDayOfYear(Date, Integer)
+  name.vb: WithDayOfYear(Date, Integer)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond(System.DateTime,System.Boolean)
+  id: RoundToNextMillisecond(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextMillisecond(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextMillisecond(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextMillisecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1047
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next millisecond, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextMillisecond(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next millisecond.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        millisecond.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next
+
+        millisecond, as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextMillisecond(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond*
+  nameWithType.vb: DateTimeExtensions.RoundToNextMillisecond(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond(Date, Boolean)
+  name.vb: RoundToNextMillisecond(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextSecond(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextSecond(System.DateTime,System.Boolean)
+  id: RoundToNextSecond(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextSecond(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextSecond(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextSecond(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextSecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1067
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next second, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextSecond(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next second.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        second.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next second, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextSecond(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextSecond*
+  nameWithType.vb: DateTimeExtensions.RoundToNextSecond(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextSecond(Date, Boolean)
+  name.vb: RoundToNextSecond(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextMinute(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextMinute(System.DateTime,System.Boolean)
+  id: RoundToNextMinute(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextMinute(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextMinute(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextMinute(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextMinute
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1087
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next minute, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextMinute(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next minute.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        minute.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next minute, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextMinute(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextMinute*
+  nameWithType.vb: DateTimeExtensions.RoundToNextMinute(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextMinute(Date, Boolean)
+  name.vb: RoundToNextMinute(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextHour(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextHour(System.DateTime,System.Boolean)
+  id: RoundToNextHour(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextHour(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextHour(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextHour(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextHour
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1107
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next hour, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextHour(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next hour.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        hour.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next hour, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextHour(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextHour*
+  nameWithType.vb: DateTimeExtensions.RoundToNextHour(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextHour(Date, Boolean)
+  name.vb: RoundToNextHour(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextDay(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextDay(System.DateTime,System.Boolean)
+  id: RoundToNextDay(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextDay(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextDay(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextDay(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextDay
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1127
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next day, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextDay(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next day.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        day.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next day, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextDay(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextDay*
+  nameWithType.vb: DateTimeExtensions.RoundToNextDay(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextDay(Date, Boolean)
+  name.vb: RoundToNextDay(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextMonth(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextMonth(System.DateTime,System.Boolean)
+  id: RoundToNextMonth(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextMonth(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextMonth(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextMonth(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextMonth
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1147
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next month, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextMonth(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next month.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        month.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next month, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextMonth(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextMonth*
+  nameWithType.vb: DateTimeExtensions.RoundToNextMonth(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextMonth(Date, Boolean)
+  name.vb: RoundToNextMonth(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextYear(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToNextYear(System.DateTime,System.Boolean)
+  id: RoundToNextYear(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToNextYear(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToNextYear(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextYear(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToNextYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1167
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the next year, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToNextYear(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the next year.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        year.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the next year, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToNextYear(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToNextYear*
+  nameWithType.vb: DateTimeExtensions.RoundToNextYear(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToNextYear(Date, Boolean)
+  name.vb: RoundToNextYear(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond(System.DateTime,System.Boolean)
+  id: RoundToPreviousMillisecond(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousMillisecond(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousMillisecond(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousMillisecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1188
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous millisecond,
+
+    and possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousMillisecond(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous millisecond.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        millisecond.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous
+
+        millisecond, as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousMillisecond(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousMillisecond(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond(Date, Boolean)
+  name.vb: RoundToPreviousMillisecond(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond(System.DateTime,System.Boolean)
+  id: RoundToPreviousSecond(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousSecond(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousSecond(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousSecond
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1208
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous second, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousSecond(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous second.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        second.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous second,
+
+        as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousSecond(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousSecond(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond(Date, Boolean)
+  name.vb: RoundToPreviousSecond(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute(System.DateTime,System.Boolean)
+  id: RoundToPreviousMinute(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousMinute(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousMinute(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousMinute
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1228
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous minute, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousMinute(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous minute.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        minute.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous minute,
+
+        as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousMinute(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousMinute(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute(Date, Boolean)
+  name.vb: RoundToPreviousMinute(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour(System.DateTime,System.Boolean)
+  id: RoundToPreviousHour(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousHour(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousHour(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousHour
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1248
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous hour, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousHour(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous hour.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        hour.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous hour,
+
+        as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousHour(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousHour(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour(Date, Boolean)
+  name.vb: RoundToPreviousHour(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay(System.DateTime,System.Boolean)
+  id: RoundToPreviousDay(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousDay(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousDay(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousDay
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1268
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous day, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousDay(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous day.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        day.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous day, as
+
+        specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousDay(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousDay(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay(Date, Boolean)
+  name.vb: RoundToPreviousDay(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth(System.DateTime,System.Boolean)
+  id: RoundToPreviousMonth(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousMonth(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousMonth(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousMonth
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1288
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous month, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousMonth(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous month.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        month.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous month,
+
+        as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousMonth(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousMonth(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth(Date, Boolean)
+  name.vb: RoundToPreviousMonth(Date, Boolean)
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear(System.DateTime,System.Boolean)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear(System.DateTime,System.Boolean)
+  id: RoundToPreviousYear(System.DateTime,System.Boolean)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: RoundToPreviousYear(DateTime, bool)
+  nameWithType: DateTimeExtensions.RoundToPreviousYear(DateTime, bool)
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear(System.DateTime, bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RoundToPreviousYear
+    path: ../Garyon/Extensions/DateTimeExtensions.cs
+    startLine: 1308
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Rounds the given <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to the previous year, and
+
+    possibly retains it if rounded.
+  example: []
+  syntax:
+    content: public static DateTime RoundToPreviousYear(this DateTime dateTime, bool retainIfRounded = false)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: The date time to round to the previous year.
+    - id: retainIfRounded
+      type: System.Boolean
+      description: >-
+        Determines whether the result will be the same as the provided
+
+        <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> in the case that it already is rounded to a
+
+        year.
+    return:
+      type: System.DateTime
+      description: >-
+        The resulting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> rounded to the previous year,
+
+        as specified by <code class="paramref">retainIfRounded</code>.
+    content.vb: Public Shared Function RoundToPreviousYear(dateTime As Date, retainIfRounded As Boolean = False) As Date
+  overload: Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear*
+  nameWithType.vb: DateTimeExtensions.RoundToPreviousYear(Date, Boolean)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear(Date, Boolean)
+  name.vb: RoundToPreviousYear(Date, Boolean)
+references:
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.DateTimeComponent
+  commentId: T:Garyon.Extensions.DateTimeComponent
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.DateTimeComponent.html
+  name: DateTimeComponent
+  nameWithType: DateTimeComponent
+  fullName: Garyon.Extensions.DateTimeComponent
+- uid: Garyon.Extensions.DateTimeExtensions.GetComponentInt64*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.GetComponentInt64
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_GetComponentInt64_System_DateTime_Garyon_Extensions_DateTimeComponent_
+  name: GetComponentInt64
+  nameWithType: DateTimeExtensions.GetComponentInt64
+  fullName: Garyon.Extensions.DateTimeExtensions.GetComponentInt64
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Garyon.Extensions.DateTimeComponent.Ticks
+  commentId: F:Garyon.Extensions.DateTimeComponent.Ticks
+  href: Garyon.Extensions.DateTimeComponent.html#Garyon_Extensions_DateTimeComponent_Ticks
+  name: Ticks
+  nameWithType: DateTimeComponent.Ticks
+  fullName: Garyon.Extensions.DateTimeComponent.Ticks
+- uid: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+  isExternal: true
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_GetComponentInt64_System_DateTime_Garyon_Extensions_DateTimeComponent_
+  name: GetComponentInt64(DateTime, DateTimeComponent)
+  nameWithType: DateTimeExtensions.GetComponentInt64(DateTime, DateTimeComponent)
+  fullName: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime, Garyon.Extensions.DateTimeComponent)
+  nameWithType.vb: DateTimeExtensions.GetComponentInt64(Date, DateTimeComponent)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(Date, Garyon.Extensions.DateTimeComponent)
+  name.vb: GetComponentInt64(Date, DateTimeComponent)
+  spec.csharp:
+  - uid: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+    name: GetComponentInt64
+    href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_GetComponentInt64_System_DateTime_Garyon_Extensions_DateTimeComponent_
+  - name: (
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.DateTimeComponent
+    name: DateTimeComponent
+    href: Garyon.Extensions.DateTimeComponent.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.DateTimeExtensions.GetComponentInt64(System.DateTime,Garyon.Extensions.DateTimeComponent)
+    name: GetComponentInt64
+    href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_GetComponentInt64_System_DateTime_Garyon_Extensions_DateTimeComponent_
+  - name: (
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.DateTimeComponent
+    name: DateTimeComponent
+    href: Garyon.Extensions.DateTimeComponent.html
+  - name: )
+- uid: Garyon.Extensions.DateTimeExtensions.GetComponent*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.GetComponent
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_GetComponent_System_DateTime_Garyon_Extensions_DateTimeComponent_
+  name: GetComponent
+  nameWithType: DateTimeExtensions.GetComponent
+  fullName: Garyon.Extensions.DateTimeExtensions.GetComponent
+- uid: Garyon.Extensions.DateTimeExtensions.DaysInMonth*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.DaysInMonth
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_DaysInMonth_System_DateTime_
+  name: DaysInMonth
+  nameWithType: DateTimeExtensions.DaysInMonth
+  fullName: Garyon.Extensions.DateTimeExtensions.DaysInMonth
+- uid: Garyon.Extensions.DateTimeExtensions.IsInLeapYear*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.IsInLeapYear
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_IsInLeapYear_System_DateTime_
+  name: IsInLeapYear
+  nameWithType: DateTimeExtensions.IsInLeapYear
+  fullName: Garyon.Extensions.DateTimeExtensions.IsInLeapYear
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.DateTimeExtensions.DaysInYear*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.DaysInYear
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_DaysInYear_System_DateTime_
+  name: DaysInYear
+  nameWithType: DateTimeExtensions.DaysInYear
+  fullName: Garyon.Extensions.DateTimeExtensions.DaysInYear
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: Garyon.Extensions.DateTimeExtensions.WithMillisecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithMillisecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithMillisecond_System_DateTime_System_Int32_
+  name: WithMillisecond
+  nameWithType: DateTimeExtensions.WithMillisecond
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMillisecond
+- uid: Garyon.Extensions.DateTimeExtensions.WithSecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithSecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithSecond_System_DateTime_System_Int32_
+  name: WithSecond
+  nameWithType: DateTimeExtensions.WithSecond
+  fullName: Garyon.Extensions.DateTimeExtensions.WithSecond
+- uid: Garyon.Extensions.DateTimeExtensions.WithMinute*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithMinute
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithMinute_System_DateTime_System_Int32_
+  name: WithMinute
+  nameWithType: DateTimeExtensions.WithMinute
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMinute
+- uid: Garyon.Extensions.DateTimeExtensions.WithHour*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithHour
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithHour_System_DateTime_System_Int32_
+  name: WithHour
+  nameWithType: DateTimeExtensions.WithHour
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHour
+- uid: Garyon.Extensions.DateTimeExtensions.WithDay*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithDay
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithDay_System_DateTime_System_Int32_
+  name: WithDay
+  nameWithType: DateTimeExtensions.WithDay
+  fullName: Garyon.Extensions.DateTimeExtensions.WithDay
+- uid: Garyon.Extensions.DateTimeExtensions.WithMonth*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithMonth
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithMonth_System_DateTime_System_Int32_
+  name: WithMonth
+  nameWithType: DateTimeExtensions.WithMonth
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMonth
+- uid: Garyon.Extensions.DateTimeExtensions.WithYear*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithYear
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithYear_System_DateTime_System_Int32_
+  name: WithYear
+  nameWithType: DateTimeExtensions.WithYear
+  fullName: Garyon.Extensions.DateTimeExtensions.WithYear
+- uid: Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithSecondMillisecond_System_DateTime_System_Int32_System_Int32_
+  name: WithSecondMillisecond
+  nameWithType: DateTimeExtensions.WithSecondMillisecond
+  fullName: Garyon.Extensions.DateTimeExtensions.WithSecondMillisecond
+- uid: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithMinuteSecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithMinuteSecond_System_DateTime_System_Int32_System_Int32_
+  name: WithMinuteSecond
+  nameWithType: DateTimeExtensions.WithMinuteSecond
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMinuteSecond
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinute*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithHourMinute
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithHourMinute_System_DateTime_System_Int32_System_Int32_
+  name: WithHourMinute
+  nameWithType: DateTimeExtensions.WithHourMinute
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinute
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithHourMinuteSecond_System_DateTime_System_Int32_System_Int32_System_Int32_
+  name: WithHourMinuteSecond
+  nameWithType: DateTimeExtensions.WithHourMinuteSecond
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecond
+- uid: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithHourMinuteSecondMillisecond_System_DateTime_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: WithHourMinuteSecondMillisecond
+  nameWithType: DateTimeExtensions.WithHourMinuteSecondMillisecond
+  fullName: Garyon.Extensions.DateTimeExtensions.WithHourMinuteSecondMillisecond
+- uid: Garyon.Objects.MinuteSecond
+  commentId: T:Garyon.Objects.MinuteSecond
+  parent: Garyon.Objects
+  href: Garyon.Objects.MinuteSecond.html
+  name: MinuteSecond
+  nameWithType: MinuteSecond
+  fullName: Garyon.Objects.MinuteSecond
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: Garyon.Objects.HourMinute
+  commentId: T:Garyon.Objects.HourMinute
+  parent: Garyon.Objects
+  href: Garyon.Objects.HourMinute.html
+  name: HourMinute
+  nameWithType: HourMinute
+  fullName: Garyon.Objects.HourMinute
+- uid: System.TimeSpan.Days
+  commentId: P:System.TimeSpan.Days
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.days
+  name: Days
+  nameWithType: TimeSpan.Days
+  fullName: System.TimeSpan.Days
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  isExternal: true
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinDay_System_TimeSpan_
+  name: WithinDay(TimeSpan)
+  nameWithType: TimeSpanExtensions.WithinDay(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  spec.csharp:
+  - uid: Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+    name: WithinDay
+    href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinDay_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+    name: WithinDay
+    href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinDay_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+- uid: Garyon.Extensions.DateTimeExtensions.WithTime*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithTime
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithTime_System_DateTime_System_TimeSpan_
+  name: WithTime
+  nameWithType: DateTimeExtensions.WithTime
+  fullName: Garyon.Extensions.DateTimeExtensions.WithTime
+- uid: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+  commentId: M:Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+  isExternal: true
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithComponent_System_DateTime_System_Int64_Garyon_Extensions_DateTimeComponent_
+  name: WithComponent(DateTime, long, DateTimeComponent)
+  nameWithType: DateTimeExtensions.WithComponent(DateTime, long, DateTimeComponent)
+  fullName: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime, long, Garyon.Extensions.DateTimeComponent)
+  nameWithType.vb: DateTimeExtensions.WithComponent(Date, Long, DateTimeComponent)
+  fullName.vb: Garyon.Extensions.DateTimeExtensions.WithComponent(Date, Long, Garyon.Extensions.DateTimeComponent)
+  name.vb: WithComponent(Date, Long, DateTimeComponent)
+  spec.csharp:
+  - uid: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+    name: WithComponent
+    href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithComponent_System_DateTime_System_Int64_Garyon_Extensions_DateTimeComponent_
+  - name: (
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.DateTimeComponent
+    name: DateTimeComponent
+    href: Garyon.Extensions.DateTimeComponent.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.DateTimeExtensions.WithComponent(System.DateTime,System.Int64,Garyon.Extensions.DateTimeComponent)
+    name: WithComponent
+    href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithComponent_System_DateTime_System_Int64_Garyon_Extensions_DateTimeComponent_
+  - name: (
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.DateTimeComponent
+    name: DateTimeComponent
+    href: Garyon.Extensions.DateTimeComponent.html
+  - name: )
+- uid: Garyon.Extensions.DateTimeExtensions.WithComponent*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithComponent
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithComponent_System_DateTime_System_Int32_Garyon_Extensions_DateTimeComponent_
+  name: WithComponent
+  nameWithType: DateTimeExtensions.WithComponent
+  fullName: Garyon.Extensions.DateTimeExtensions.WithComponent
+- uid: Garyon.Extensions.DateTimeExtensions.WithYearMonth*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithYearMonth
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithYearMonth_System_DateTime_System_Int32_System_Int32_
+  name: WithYearMonth
+  nameWithType: DateTimeExtensions.WithYearMonth
+  fullName: Garyon.Extensions.DateTimeExtensions.WithYearMonth
+- uid: Garyon.Extensions.DateTimeExtensions.WithMonthDay*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithMonthDay
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithMonthDay_System_DateTime_System_Int32_System_Int32_
+  name: WithMonthDay
+  nameWithType: DateTimeExtensions.WithMonthDay
+  fullName: Garyon.Extensions.DateTimeExtensions.WithMonthDay
+- uid: Garyon.Extensions.DateTimeExtensions.WithYearMonthDay*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithYearMonthDay
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithYearMonthDay_System_DateTime_System_Int32_System_Int32_System_Int32_
+  name: WithYearMonthDay
+  nameWithType: DateTimeExtensions.WithYearMonthDay
+  fullName: Garyon.Extensions.DateTimeExtensions.WithYearMonthDay
+- uid: System.DateTime.TimeOfDay
+  commentId: P:System.DateTime.TimeOfDay
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime.timeofday
+  name: TimeOfDay
+  nameWithType: DateTime.TimeOfDay
+  fullName: System.DateTime.TimeOfDay
+  nameWithType.vb: Date.TimeOfDay
+  fullName.vb: Date.TimeOfDay
+- uid: Garyon.Extensions.DateTimeExtensions.TimeOnly*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.TimeOnly
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_TimeOnly_System_DateTime_
+  name: TimeOnly
+  nameWithType: DateTimeExtensions.TimeOnly
+  fullName: Garyon.Extensions.DateTimeExtensions.TimeOnly
+- uid: Garyon.Extensions.DateTimeExtensions.AddWeeks*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.AddWeeks
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_AddWeeks_System_DateTime_System_Int32_
+  name: AddWeeks
+  nameWithType: DateTimeExtensions.AddWeeks
+  fullName: Garyon.Extensions.DateTimeExtensions.AddWeeks
+- uid: System.DayOfWeek
+  commentId: T:System.DayOfWeek
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dayofweek
+  name: DayOfWeek
+  nameWithType: DayOfWeek
+  fullName: System.DayOfWeek
+- uid: Garyon.Extensions.DateTimeExtensions.WithDayOfWeek*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithDayOfWeek
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithDayOfWeek_System_DateTime_System_DayOfWeek_System_DayOfWeek_
+  name: WithDayOfWeek
+  nameWithType: DateTimeExtensions.WithDayOfWeek
+  fullName: Garyon.Extensions.DateTimeExtensions.WithDayOfWeek
+- uid: Garyon.Extensions.DateTimeExtensions.WithDayOfYear*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.WithDayOfYear
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_WithDayOfYear_System_DateTime_System_Int32_
+  name: WithDayOfYear
+  nameWithType: DateTimeExtensions.WithDayOfYear
+  fullName: Garyon.Extensions.DateTimeExtensions.WithDayOfYear
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextMillisecond_System_DateTime_System_Boolean_
+  name: RoundToNextMillisecond
+  nameWithType: DateTimeExtensions.RoundToNextMillisecond
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextMillisecond
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextSecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextSecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextSecond_System_DateTime_System_Boolean_
+  name: RoundToNextSecond
+  nameWithType: DateTimeExtensions.RoundToNextSecond
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextSecond
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextMinute*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextMinute
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextMinute_System_DateTime_System_Boolean_
+  name: RoundToNextMinute
+  nameWithType: DateTimeExtensions.RoundToNextMinute
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextMinute
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextHour*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextHour
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextHour_System_DateTime_System_Boolean_
+  name: RoundToNextHour
+  nameWithType: DateTimeExtensions.RoundToNextHour
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextHour
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextDay*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextDay
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextDay_System_DateTime_System_Boolean_
+  name: RoundToNextDay
+  nameWithType: DateTimeExtensions.RoundToNextDay
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextDay
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextMonth*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextMonth
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextMonth_System_DateTime_System_Boolean_
+  name: RoundToNextMonth
+  nameWithType: DateTimeExtensions.RoundToNextMonth
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextMonth
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToNextYear*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToNextYear
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToNextYear_System_DateTime_System_Boolean_
+  name: RoundToNextYear
+  nameWithType: DateTimeExtensions.RoundToNextYear
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToNextYear
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousMillisecond_System_DateTime_System_Boolean_
+  name: RoundToPreviousMillisecond
+  nameWithType: DateTimeExtensions.RoundToPreviousMillisecond
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMillisecond
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousSecond_System_DateTime_System_Boolean_
+  name: RoundToPreviousSecond
+  nameWithType: DateTimeExtensions.RoundToPreviousSecond
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousSecond
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousMinute_System_DateTime_System_Boolean_
+  name: RoundToPreviousMinute
+  nameWithType: DateTimeExtensions.RoundToPreviousMinute
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMinute
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousHour_System_DateTime_System_Boolean_
+  name: RoundToPreviousHour
+  nameWithType: DateTimeExtensions.RoundToPreviousHour
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousHour
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousDay_System_DateTime_System_Boolean_
+  name: RoundToPreviousDay
+  nameWithType: DateTimeExtensions.RoundToPreviousDay
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousDay
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousMonth_System_DateTime_System_Boolean_
+  name: RoundToPreviousMonth
+  nameWithType: DateTimeExtensions.RoundToPreviousMonth
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousMonth
+- uid: Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear*
+  commentId: Overload:Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear
+  href: Garyon.Extensions.DateTimeExtensions.html#Garyon_Extensions_DateTimeExtensions_RoundToPreviousYear_System_DateTime_System_Boolean_
+  name: RoundToPreviousYear
+  nameWithType: DateTimeExtensions.RoundToPreviousYear
+  fullName: Garyon.Extensions.DateTimeExtensions.RoundToPreviousYear

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace Garyon.Reflection;
 
@@ -160,6 +161,19 @@ public static class MemberInfoExtensions
         {
             instances = member.GetCustomAttributes<T>();
             return instances.Any();
+        }
+
+        public AccessibilityModifiers GetAccessibilityModifiers()
+        {
+            return member switch
+            {
+                FieldInfo @field => @field.GetAccessibilityModifiers(),
+                PropertyInfo property => property.GetAccessibilityModifiers(),
+                EventInfo @event => @event.GetAccessibilityModifiers(),
+                MethodInfo method => method.GetAccessibilityModifiers(),
+                Type type => type.GetAccessibilityModifiers(),
+                _ => default,
+            };
         }
 
         public MemberInfo? GetDeclaringMember()

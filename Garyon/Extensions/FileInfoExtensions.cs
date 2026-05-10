@@ -41,6 +41,11 @@ public static class FileInfoExtensions
             return file.Directory?.BoundRecursiveParent(levels);
         }
 
+        public void CopyTo(FileInfo target, bool overwrite = false)
+        {
+            file.CopyTo(target.FullName, overwrite);
+        }
+
         /// <summary>
         /// Moves the file to a parent directory, up to a number of levels. If
         /// the levels are more than the current depth of the file, an exception
@@ -129,7 +134,7 @@ public static class FileInfoExtensions
         /// <inheritdoc cref="MoveTo(FileInfo, DirectoryInfo, string, string)"/>
         public FileInfo MoveTo(DirectoryInfo directory, string nameWithExtension)
         {
-            file.MoveTo(Path.Combine(directory.Name!, nameWithExtension));
+            file.MoveTo(Path.Combine(directory.FullName, nameWithExtension));
             return file;
         }
 

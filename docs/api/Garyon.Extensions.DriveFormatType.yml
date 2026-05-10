@@ -1,0 +1,1979 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.DriveFormatType
+  commentId: T:Garyon.Extensions.DriveFormatType
+  id: DriveFormatType
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.DriveFormatType.Apfs
+  - Garyon.Extensions.DriveFormatType.ExFat
+  - Garyon.Extensions.DriveFormatType.Fat
+  - Garyon.Extensions.DriveFormatType.Fat32
+  - Garyon.Extensions.DriveFormatType.Ntfs
+  - Garyon.Extensions.DriveFormatType.ReFS
+  - Garyon.Extensions.DriveFormatType.Udf
+  - Garyon.Extensions.DriveFormatType.Unknown
+  langs:
+  - csharp
+  - vb
+  name: DriveFormatType
+  nameWithType: DriveFormatType
+  fullName: Garyon.Extensions.DriveFormatType
+  type: Enum
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DriveFormatType
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Contains the known drive format types, including FAT, FAT32, NTFS, UDF, APFS
+
+    and more.
+  example: []
+  syntax:
+    content: public enum DriveFormatType
+    content.vb: Public Enum DriveFormatType
+  extensionMethods:
+  - Garyon.Extensions.DriveFormatType.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.DriveFormatType)
+  - Garyon.Extensions.DriveFormatType.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Extensions.DriveFormatType.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Extensions.DriveFormatType})
+  - Garyon.Extensions.DriveFormatType.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Extensions.DriveFormatType,{TResult}})
+  - Garyon.Extensions.DriveFormatType.Garyon.Extensions.UnsafeExtensions.GetBytes``1
+  - Garyon.Extensions.DriveFormatType.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  - Garyon.Extensions.DriveFormatType.Garyon.Objects.StructRefHelperExtensions.CreateReference``1
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.EqualTo(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThan(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.LessThan(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.Object,Garyon.Objects.ComparisonResult)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.NotEqualTo(System.Object)
+  - System.IComparable.Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.Object,Garyon.Objects.ComparisonKinds)
+- uid: Garyon.Extensions.DriveFormatType.Unknown
+  commentId: F:Garyon.Extensions.DriveFormatType.Unknown
+  id: Unknown
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: Unknown
+  nameWithType: DriveFormatType.Unknown
+  fullName: Garyon.Extensions.DriveFormatType.Unknown
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Unknown
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Denotes that the drive format type is unknown.
+  example: []
+  syntax:
+    content: Unknown = 0
+    return:
+      type: Garyon.Extensions.DriveFormatType
+- uid: Garyon.Extensions.DriveFormatType.Fat
+  commentId: F:Garyon.Extensions.DriveFormatType.Fat
+  id: Fat
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: Fat
+  nameWithType: DriveFormatType.Fat
+  fullName: Garyon.Extensions.DriveFormatType.Fat
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Fat
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 15
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("FAT")]
+
+      Fat = 1
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("FAT")>
+
+      Fat = 1
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: FAT
+- uid: Garyon.Extensions.DriveFormatType.Fat32
+  commentId: F:Garyon.Extensions.DriveFormatType.Fat32
+  id: Fat32
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: Fat32
+  nameWithType: DriveFormatType.Fat32
+  fullName: Garyon.Extensions.DriveFormatType.Fat32
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Fat32
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 17
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("FAT32")]
+
+      Fat32 = 2
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("FAT32")>
+
+      Fat32 = 2
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: FAT32
+- uid: Garyon.Extensions.DriveFormatType.Ntfs
+  commentId: F:Garyon.Extensions.DriveFormatType.Ntfs
+  id: Ntfs
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: Ntfs
+  nameWithType: DriveFormatType.Ntfs
+  fullName: Garyon.Extensions.DriveFormatType.Ntfs
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Ntfs
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("NTFS")]
+
+      Ntfs = 3
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("NTFS")>
+
+      Ntfs = 3
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: NTFS
+- uid: Garyon.Extensions.DriveFormatType.ExFat
+  commentId: F:Garyon.Extensions.DriveFormatType.ExFat
+  id: ExFat
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: ExFat
+  nameWithType: DriveFormatType.ExFat
+  fullName: Garyon.Extensions.DriveFormatType.ExFat
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ExFat
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 21
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("exFAT")]
+
+      ExFat = 4
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("exFAT")>
+
+      ExFat = 4
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exFAT
+- uid: Garyon.Extensions.DriveFormatType.ReFS
+  commentId: F:Garyon.Extensions.DriveFormatType.ReFS
+  id: ReFS
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: ReFS
+  nameWithType: DriveFormatType.ReFS
+  fullName: Garyon.Extensions.DriveFormatType.ReFS
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ReFS
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 23
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("ReFS")]
+
+      ReFS = 5
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("ReFS")>
+
+      ReFS = 5
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ReFS
+- uid: Garyon.Extensions.DriveFormatType.Udf
+  commentId: F:Garyon.Extensions.DriveFormatType.Udf
+  id: Udf
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: Udf
+  nameWithType: DriveFormatType.Udf
+  fullName: Garyon.Extensions.DriveFormatType.Udf
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Udf
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("UDF")]
+
+      Udf = 6
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("UDF")>
+
+      Udf = 6
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: UDF
+- uid: Garyon.Extensions.DriveFormatType.Apfs
+  commentId: F:Garyon.Extensions.DriveFormatType.Apfs
+  id: Apfs
+  parent: Garyon.Extensions.DriveFormatType
+  langs:
+  - csharp
+  - vb
+  name: Apfs
+  nameWithType: DriveFormatType.Apfs
+  fullName: Garyon.Extensions.DriveFormatType.Apfs
+  type: Field
+  source:
+    remote:
+      path: Garyon/Extensions/DriveFormatType.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Apfs
+    path: ../Garyon/Extensions/DriveFormatType.cs
+    startLine: 27
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: >-
+      [Code("APFS")]
+
+      Apfs = 7
+    return:
+      type: Garyon.Extensions.DriveFormatType
+    content.vb: >-
+      <Code("APFS")>
+
+      Apfs = 7
+  attributes:
+  - type: Garyon.Reflection.CodeAttribute
+    ctor: Garyon.Reflection.CodeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: APFS
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.DriveFormatType)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<DriveFormatType>(DriveFormatType, DriveFormatType)
+  nameWithType: ComparisonExtensions.BeginCompare<DriveFormatType>(DriveFormatType, DriveFormatType)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Extensions.DriveFormatType>(Garyon.Extensions.DriveFormatType, Garyon.Extensions.DriveFormatType)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of DriveFormatType)(DriveFormatType, DriveFormatType)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Extensions.DriveFormatType)(Garyon.Extensions.DriveFormatType, Garyon.Extensions.DriveFormatType)
+  name.vb: BeginCompare(Of DriveFormatType)(DriveFormatType, DriveFormatType)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.DriveFormatType,Garyon.Extensions.DriveFormatType)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.DriveFormatType,Garyon.Extensions.DriveFormatType)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<DriveFormatType, TValue>(DriveFormatType)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<DriveFormatType, TValue>(DriveFormatType)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Extensions.DriveFormatType, TValue>(Garyon.Extensions.DriveFormatType)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of DriveFormatType, TValue)(DriveFormatType)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Extensions.DriveFormatType, TValue)(Garyon.Extensions.DriveFormatType)
+  name.vb: GetEnumerator(Of DriveFormatType, TValue)(DriveFormatType)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Extensions.DriveFormatType)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Extensions.DriveFormatType)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Extensions.DriveFormatType})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<DriveFormatType>(DriveFormatType, Action<DriveFormatType>)
+  nameWithType: MoreLinqExtensions.Apply<DriveFormatType>(DriveFormatType, Action<DriveFormatType>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Extensions.DriveFormatType>(Garyon.Extensions.DriveFormatType, System.Action<Garyon.Extensions.DriveFormatType>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of DriveFormatType)(DriveFormatType, Action(Of DriveFormatType))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Extensions.DriveFormatType)(Garyon.Extensions.DriveFormatType, System.Action(Of Garyon.Extensions.DriveFormatType))
+  name.vb: Apply(Of DriveFormatType)(DriveFormatType, Action(Of DriveFormatType))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Extensions.DriveFormatType,System.Action{Garyon.Extensions.DriveFormatType})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Extensions.DriveFormatType,System.Action{Garyon.Extensions.DriveFormatType})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Extensions.DriveFormatType,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<DriveFormatType, TResult>(DriveFormatType, Func<DriveFormatType, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<DriveFormatType, TResult>(DriveFormatType, Func<DriveFormatType, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Extensions.DriveFormatType, TResult>(Garyon.Extensions.DriveFormatType, System.Func<Garyon.Extensions.DriveFormatType, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of DriveFormatType, TResult)(DriveFormatType, Func(Of DriveFormatType, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Extensions.DriveFormatType, TResult)(Garyon.Extensions.DriveFormatType, System.Func(Of Garyon.Extensions.DriveFormatType, TResult))
+  name.vb: Apply(Of DriveFormatType, TResult)(DriveFormatType, Func(Of DriveFormatType, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Extensions.DriveFormatType,System.Func{Garyon.Extensions.DriveFormatType,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Extensions.DriveFormatType,System.Func{Garyon.Extensions.DriveFormatType,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Extensions.UnsafeExtensions.GetBytes``1
+  commentId: M:Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  parent: Garyon.Extensions.UnsafeExtensions
+  definition: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  name: GetBytes<DriveFormatType>(ref DriveFormatType)
+  nameWithType: UnsafeExtensions.GetBytes<DriveFormatType>(ref DriveFormatType)
+  fullName: Garyon.Extensions.UnsafeExtensions.GetBytes<Garyon.Extensions.DriveFormatType>(ref Garyon.Extensions.DriveFormatType)
+  nameWithType.vb: UnsafeExtensions.GetBytes(Of DriveFormatType)(DriveFormatType)
+  fullName.vb: Garyon.Extensions.UnsafeExtensions.GetBytes(Of Garyon.Extensions.DriveFormatType)(Garyon.Extensions.DriveFormatType)
+  name.vb: GetBytes(Of DriveFormatType)(DriveFormatType)
+  spec.csharp:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(Garyon.Extensions.DriveFormatType@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(Garyon.Extensions.DriveFormatType@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<DriveFormatType>(DriveFormatType)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<DriveFormatType>(DriveFormatType)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Extensions.DriveFormatType>(Garyon.Extensions.DriveFormatType)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of DriveFormatType)(DriveFormatType)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Extensions.DriveFormatType)(Garyon.Extensions.DriveFormatType)
+  name.vb: EnumerateSingle(Of DriveFormatType)(DriveFormatType)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Extensions.DriveFormatType)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Extensions.DriveFormatType)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+- uid: Garyon.Extensions.DriveFormatType.Garyon.Objects.StructRefHelperExtensions.CreateReference``1
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  parent: Garyon.Objects.StructRefHelperExtensions
+  definition: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference<DriveFormatType>(ref DriveFormatType)
+  nameWithType: StructRefHelperExtensions.CreateReference<DriveFormatType>(ref DriveFormatType)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<Garyon.Extensions.DriveFormatType>(ref Garyon.Extensions.DriveFormatType)
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of DriveFormatType)(DriveFormatType)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of Garyon.Extensions.DriveFormatType)(Garyon.Extensions.DriveFormatType)
+  name.vb: CreateReference(Of DriveFormatType)(DriveFormatType)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(Garyon.Extensions.DriveFormatType@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: <
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(Garyon.Extensions.DriveFormatType@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.DriveFormatType
+    name: DriveFormatType
+    href: Garyon.Extensions.DriveFormatType.html
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.EqualTo(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  name: EqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.EqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.EqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, Object)
+  name.vb: EqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  name: GetComparisonResult(IComparable, object)
+  nameWithType: IComparableExtensions.GetComparisonResult(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GetComparisonResult(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, Object)
+  name.vb: GetComparisonResult(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThan(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  name: GreaterThan(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, Object)
+  name.vb: GreaterThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  name: GreaterThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, Object)
+  name.vb: GreaterThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.LessThan(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  name: LessThan(IComparable, object)
+  nameWithType: IComparableExtensions.LessThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, Object)
+  name.vb: LessThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  name: LessThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.LessThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, Object)
+  name.vb: LessThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.Object,Garyon.Objects.ComparisonResult)
+  commentId: M:Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  name: MatchesComparisonResult(IComparable, object, ComparisonResult)
+  nameWithType: IComparableExtensions.MatchesComparisonResult(IComparable, object, ComparisonResult)
+  fullName: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, object, Garyon.Objects.ComparisonResult)
+  nameWithType.vb: IComparableExtensions.MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, Object, Garyon.Objects.ComparisonResult)
+  name.vb: MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.NotEqualTo(System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  name: NotEqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.NotEqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.NotEqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, Object)
+  name.vb: NotEqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IComparable.Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.Object,Garyon.Objects.ComparisonKinds)
+  commentId: M:Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  parent: Garyon.Extensions.IComparableExtensions
+  definition: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  name: SatisfiesComparison(IComparable, object, ComparisonKinds)
+  nameWithType: IComparableExtensions.SatisfiesComparison(IComparable, object, ComparisonKinds)
+  fullName: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, object, Garyon.Objects.ComparisonKinds)
+  nameWithType.vb: IComparableExtensions.SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, Object, Garyon.Objects.ComparisonKinds)
+  name.vb: SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  commentId: M:Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+  href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  name: GetBytes<T>(ref T)
+  nameWithType: UnsafeExtensions.GetBytes<T>(ref T)
+  fullName: Garyon.Extensions.UnsafeExtensions.GetBytes<T>(ref T)
+  nameWithType.vb: UnsafeExtensions.GetBytes(Of T)(T)
+  fullName.vb: Garyon.Extensions.UnsafeExtensions.GetBytes(Of T)(T)
+  name.vb: GetBytes(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.UnsafeExtensions.GetBytes``1(``0@)
+    name: GetBytes
+    href: Garyon.Extensions.UnsafeExtensions.html#Garyon_Extensions_UnsafeExtensions_GetBytes__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.UnsafeExtensions
+  commentId: T:Garyon.Extensions.UnsafeExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.UnsafeExtensions.html
+  name: UnsafeExtensions
+  nameWithType: UnsafeExtensions
+  fullName: Garyon.Extensions.UnsafeExtensions
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  commentId: M:Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+  href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  name: CreateReference<T>(ref T)
+  nameWithType: StructRefHelperExtensions.CreateReference<T>(ref T)
+  fullName: Garyon.Objects.StructRefHelperExtensions.CreateReference<T>(ref T)
+  nameWithType.vb: StructRefHelperExtensions.CreateReference(Of T)(T)
+  fullName.vb: Garyon.Objects.StructRefHelperExtensions.CreateReference(Of T)(T)
+  name.vb: CreateReference(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.StructRefHelperExtensions.CreateReference``1(``0@)
+    name: CreateReference
+    href: Garyon.Objects.StructRefHelperExtensions.html#Garyon_Objects_StructRefHelperExtensions_CreateReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.StructRefHelperExtensions
+  commentId: T:Garyon.Objects.StructRefHelperExtensions
+  parent: Garyon.Objects
+  href: Garyon.Objects.StructRefHelperExtensions.html
+  name: StructRefHelperExtensions
+  nameWithType: StructRefHelperExtensions
+  fullName: Garyon.Objects.StructRefHelperExtensions
+- uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  name: EqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.EqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.EqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable, Object)
+  name.vb: EqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.EqualTo(System.IComparable,System.Object)
+    name: EqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_EqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions
+  commentId: T:Garyon.Extensions.IComparableExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IComparableExtensions.html
+  name: IComparableExtensions
+  nameWithType: IComparableExtensions
+  fullName: Garyon.Extensions.IComparableExtensions
+- uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  name: GetComparisonResult(IComparable, object)
+  nameWithType: IComparableExtensions.GetComparisonResult(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GetComparisonResult(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable, Object)
+  name.vb: GetComparisonResult(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GetComparisonResult(System.IComparable,System.Object)
+    name: GetComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GetComparisonResult_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  name: GreaterThan(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable, Object)
+  name.vb: GreaterThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThan(System.IComparable,System.Object)
+    name: GreaterThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  name: GreaterThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.GreaterThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.GreaterThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable, Object)
+  name.vb: GreaterThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.GreaterThanOrEqual(System.IComparable,System.Object)
+    name: GreaterThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_GreaterThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  name: LessThan(IComparable, object)
+  nameWithType: IComparableExtensions.LessThan(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThan(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable, Object)
+  name.vb: LessThan(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThan(System.IComparable,System.Object)
+    name: LessThan
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThan_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  name: LessThanOrEqual(IComparable, object)
+  nameWithType: IComparableExtensions.LessThanOrEqual(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.LessThanOrEqual(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable, Object)
+  name.vb: LessThanOrEqual(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.LessThanOrEqual(System.IComparable,System.Object)
+    name: LessThanOrEqual
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_LessThanOrEqual_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  commentId: M:Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  name: MatchesComparisonResult(IComparable, object, ComparisonResult)
+  nameWithType: IComparableExtensions.MatchesComparisonResult(IComparable, object, ComparisonResult)
+  fullName: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, object, Garyon.Objects.ComparisonResult)
+  nameWithType.vb: IComparableExtensions.MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable, Object, Garyon.Objects.ComparisonResult)
+  name.vb: MatchesComparisonResult(IComparable, Object, ComparisonResult)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.MatchesComparisonResult(System.IComparable,System.Object,Garyon.Objects.ComparisonResult)
+    name: MatchesComparisonResult
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_MatchesComparisonResult_System_IComparable_System_Object_Garyon_Objects_ComparisonResult_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonResult
+    name: ComparisonResult
+    href: Garyon.Objects.ComparisonResult.html
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  commentId: M:Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  name: NotEqualTo(IComparable, object)
+  nameWithType: IComparableExtensions.NotEqualTo(IComparable, object)
+  fullName: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, object)
+  nameWithType.vb: IComparableExtensions.NotEqualTo(IComparable, Object)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable, Object)
+  name.vb: NotEqualTo(IComparable, Object)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.NotEqualTo(System.IComparable,System.Object)
+    name: NotEqualTo
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_NotEqualTo_System_IComparable_System_Object_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  commentId: M:Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+  isExternal: true
+  href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  name: SatisfiesComparison(IComparable, object, ComparisonKinds)
+  nameWithType: IComparableExtensions.SatisfiesComparison(IComparable, object, ComparisonKinds)
+  fullName: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, object, Garyon.Objects.ComparisonKinds)
+  nameWithType.vb: IComparableExtensions.SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  fullName.vb: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable, Object, Garyon.Objects.ComparisonKinds)
+  name.vb: SatisfiesComparison(IComparable, Object, ComparisonKinds)
+  spec.csharp:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IComparableExtensions.SatisfiesComparison(System.IComparable,System.Object,Garyon.Objects.ComparisonKinds)
+    name: SatisfiesComparison
+    href: Garyon.Extensions.IComparableExtensions.html#Garyon_Extensions_IComparableExtensions_SatisfiesComparison_System_IComparable_System_Object_Garyon_Objects_ComparisonKinds_
+  - name: (
+  - uid: System.IComparable
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.ComparisonKinds
+    name: ComparisonKinds
+    href: Garyon.Objects.ComparisonKinds.html
+  - name: )
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: Garyon.Extensions.DriveFormatType
+  commentId: T:Garyon.Extensions.DriveFormatType
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.DriveFormatType.html
+  name: DriveFormatType
+  nameWithType: DriveFormatType
+  fullName: Garyon.Extensions.DriveFormatType

@@ -25,4 +25,7 @@
   <Folder Name="/tools/">
     <Project Path="Garyon.FrameworkCapabilityGenerator/Garyon.FrameworkCapabilityGenerator.csproj" Id="3be0b922-6889-4386-9454-ba45a34fa1a4" />
   </Folder>
+  <Folder Name="/tools/scripts/">
+    <File Path="tools/scripts/run-coverage.cs" />
+  </Folder>
 </Solution>

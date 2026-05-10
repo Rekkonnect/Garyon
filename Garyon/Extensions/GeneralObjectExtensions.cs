@@ -92,12 +92,12 @@ public static class GeneralObjectExtensions
         }
 
         /// <summary>
-        /// Based on a recursively-typed property, invokes it on the result
+        /// Based on a recursively-typed expression, invokes it on the result
         /// until the resulting instance is <see langword="null"/>.
         /// </summary>
         /// <returns>
         /// A lazily evaluated enumerable of values, with the first being the
-        /// directly returned value from the property, and the last being the
+        /// directly returned value from the expression, and the last being the
         /// latest in the inheritance tree.
         /// <br/>
         /// For example, assume a type IterableInt with a property Successor
@@ -129,7 +129,7 @@ public static class GeneralObjectExtensions
         /// </returns>
         /// <remarks>
         /// <para>
-        /// This method does NOT validate whether the recursively-typed property
+        /// This method does NOT validate whether the recursively-typed expression
         /// may fall into a circular path. Be absolutely cautious when calling
         /// materialization methods that immediately force full enumeration,
         /// possibly causing an infinite loop.
@@ -140,12 +140,12 @@ public static class GeneralObjectExtensions
         /// <see cref="IEnumerableExtensions.UntilFirstRecursive"/>.
         /// </para>
         /// </remarks>
-        public IEnumerable<T> EnumerateRecursiveProperty(Func<T, T?> property)
+        public IEnumerable<T> EnumerateRecursively(Func<T, T?> expression)
         {
             var current = source;
             while (true)
             {
-                var parent = property(current);
+                var parent = expression(current);
                 if (parent is null)
                     yield break;
 

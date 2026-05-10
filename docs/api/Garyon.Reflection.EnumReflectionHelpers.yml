@@ -1,0 +1,784 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.EnumReflectionHelpers
+  commentId: T:Garyon.Reflection.EnumReflectionHelpers
+  id: EnumReflectionHelpers
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary``1
+  - Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary``2
+  - Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary``3(System.Func{``1,``2})
+  - Garyon.Reflection.EnumReflectionHelpers.GetEnumFields``1
+  langs:
+  - csharp
+  - vb
+  name: EnumReflectionHelpers
+  nameWithType: EnumReflectionHelpers
+  fullName: Garyon.Reflection.EnumReflectionHelpers
+  type: Class
+  source:
+    remote:
+      path: Garyon/Reflection/EnumReflectionHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnumReflectionHelpers
+    path: ../Garyon/Reflection/EnumReflectionHelpers.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Provides reflection helpers for enum types.
+  example: []
+  syntax:
+    content: public static class EnumReflectionHelpers
+    content.vb: Public Module EnumReflectionHelpers
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary``1
+  commentId: M:Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary``1
+  id: GetEnumFieldDescriptionDictionary``1
+  parent: Garyon.Reflection.EnumReflectionHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetEnumFieldDescriptionDictionary<T>()
+  nameWithType: EnumReflectionHelpers.GetEnumFieldDescriptionDictionary<T>()
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary<T>()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/EnumReflectionHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetEnumFieldDescriptionDictionary
+    path: ../Garyon/Reflection/EnumReflectionHelpers.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Constructs a <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> mapping the
+
+    provided enum's fields to their descriptions, as provided through their
+
+    <xref href="System.ComponentModel.DescriptionAttribute" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: 'public static Dictionary<T, string> GetEnumFieldDescriptionDictionary<T>() where T : struct, Enum'
+    typeParameters:
+    - id: T
+      description: The type of the enum whose fields to construct the dictionary of.
+    return:
+      type: System.Collections.Generic.Dictionary{{T},System.String}
+      description: >-
+        The resulting constructed <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref>
+
+        containing the enum fields mapped to their descriptions.
+    content.vb: Public Shared Function GetEnumFieldDescriptionDictionary(Of T As {Structure, [Enum]})() As Dictionary(Of T, String)
+  overload: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary*
+  nameWithType.vb: EnumReflectionHelpers.GetEnumFieldDescriptionDictionary(Of T)()
+  fullName.vb: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary(Of T)()
+  name.vb: GetEnumFieldDescriptionDictionary(Of T)()
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary``2
+  commentId: M:Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary``2
+  id: GetEnumFieldDictionary``2
+  parent: Garyon.Reflection.EnumReflectionHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetEnumFieldDictionary<TEnum, TAttribute>()
+  nameWithType: EnumReflectionHelpers.GetEnumFieldDictionary<TEnum, TAttribute>()
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary<TEnum, TAttribute>()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/EnumReflectionHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetEnumFieldDictionary
+    path: ../Garyon/Reflection/EnumReflectionHelpers.cs
+    startLine: 48
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Constructs a <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> mapping the
+
+    provided enum's fields to a sought attribute.
+  example: []
+  syntax:
+    content: 'public static Dictionary<TEnum, TAttribute> GetEnumFieldDictionary<TEnum, TAttribute>() where TEnum : struct, Enum where TAttribute : Attribute'
+    typeParameters:
+    - id: TEnum
+      description: The type of the enum whose fields to construct the dictionary of.
+    - id: TAttribute
+      description: The type of the attribute to seek for in each field.
+    return:
+      type: System.Collections.Generic.Dictionary{{TEnum},{TAttribute}}
+      description: >-
+        The resulting constructed <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref>
+
+        containing the enum fields mapped to their chosen sought attributes.
+    content.vb: Public Shared Function GetEnumFieldDictionary(Of TEnum As {Structure, [Enum]}, TAttribute As Attribute)() As Dictionary(Of TEnum, TAttribute)
+  overload: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary*
+  nameWithType.vb: EnumReflectionHelpers.GetEnumFieldDictionary(Of TEnum, TAttribute)()
+  fullName.vb: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary(Of TEnum, TAttribute)()
+  name.vb: GetEnumFieldDictionary(Of TEnum, TAttribute)()
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary``3(System.Func{``1,``2})
+  commentId: M:Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary``3(System.Func{``1,``2})
+  id: GetEnumFieldDictionary``3(System.Func{``1,``2})
+  parent: Garyon.Reflection.EnumReflectionHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetEnumFieldDictionary<TEnum, TAttribute, TMappedValue>(Func<TAttribute?, TMappedValue?>)
+  nameWithType: EnumReflectionHelpers.GetEnumFieldDictionary<TEnum, TAttribute, TMappedValue>(Func<TAttribute?, TMappedValue?>)
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary<TEnum, TAttribute, TMappedValue>(System.Func<TAttribute?, TMappedValue?>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/EnumReflectionHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetEnumFieldDictionary
+    path: ../Garyon/Reflection/EnumReflectionHelpers.cs
+    startLine: 79
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Constructs a <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> mapping the
+
+    provided enum's fields to a value provided from a sought attribute.
+  example: []
+  syntax:
+    content: 'public static Dictionary<TEnum, TMappedValue> GetEnumFieldDictionary<TEnum, TAttribute, TMappedValue>(Func<TAttribute?, TMappedValue?> selector) where TEnum : struct, Enum where TAttribute : Attribute'
+    parameters:
+    - id: selector
+      type: System.Func{{TAttribute},{TMappedValue}}
+      description: >-
+        The function that selects the value to map the respective field to,
+
+        given its attribute instance, if found. It should expect nulls.
+    typeParameters:
+    - id: TEnum
+      description: The type of the enum whose fields to construct the dictionary of.
+    - id: TAttribute
+      description: The type of the attribute to seek for in each field.
+    - id: TMappedValue
+      description: The type of the value to map the fields to.
+    return:
+      type: System.Collections.Generic.Dictionary{{TEnum},{TMappedValue}}
+      description: >-
+        The resulting constructed <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref>
+
+        containing the enum fields mapped to their chosen values.
+    content.vb: Public Shared Function GetEnumFieldDictionary(Of TEnum As {Structure, [Enum]}, TAttribute As Attribute, TMappedValue)(selector As Func(Of TAttribute, TMappedValue)) As Dictionary(Of TEnum, TMappedValue)
+  overload: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary*
+  nameWithType.vb: EnumReflectionHelpers.GetEnumFieldDictionary(Of TEnum, TAttribute, TMappedValue)(Func(Of TAttribute, TMappedValue))
+  fullName.vb: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary(Of TEnum, TAttribute, TMappedValue)(System.Func(Of TAttribute, TMappedValue))
+  name.vb: GetEnumFieldDictionary(Of TEnum, TAttribute, TMappedValue)(Func(Of TAttribute, TMappedValue))
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFields``1
+  commentId: M:Garyon.Reflection.EnumReflectionHelpers.GetEnumFields``1
+  id: GetEnumFields``1
+  parent: Garyon.Reflection.EnumReflectionHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetEnumFields<T>()
+  nameWithType: EnumReflectionHelpers.GetEnumFields<T>()
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFields<T>()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/EnumReflectionHelpers.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetEnumFields
+    path: ../Garyon/Reflection/EnumReflectionHelpers.cs
+    startLine: 98
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets all the publicly available constant enum fields.
+  example: []
+  syntax:
+    content: 'public static FieldInfo[] GetEnumFields<T>() where T : struct, Enum'
+    typeParameters:
+    - id: T
+      description: The type of the enum whose enum fields to get.
+    return:
+      type: System.Reflection.FieldInfo[]
+      description: An array containing the enum fields of the provided type.
+    content.vb: Public Shared Function GetEnumFields(Of T As {Structure, [Enum]})() As FieldInfo()
+  overload: Garyon.Reflection.EnumReflectionHelpers.GetEnumFields*
+  nameWithType.vb: EnumReflectionHelpers.GetEnumFields(Of T)()
+  fullName.vb: Garyon.Reflection.EnumReflectionHelpers.GetEnumFields(Of T)()
+  name.vb: GetEnumFields(Of T)()
+references:
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.ComponentModel.DescriptionAttribute
+  commentId: T:System.ComponentModel.DescriptionAttribute
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.descriptionattribute
+  name: DescriptionAttribute
+  nameWithType: DescriptionAttribute
+  fullName: System.ComponentModel.DescriptionAttribute
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary*
+  commentId: Overload:Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary
+  href: Garyon.Reflection.EnumReflectionHelpers.html#Garyon_Reflection_EnumReflectionHelpers_GetEnumFieldDescriptionDictionary__1
+  name: GetEnumFieldDescriptionDictionary
+  nameWithType: EnumReflectionHelpers.GetEnumFieldDescriptionDictionary
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDescriptionDictionary
+- uid: System.Collections.Generic.Dictionary{{T},System.String}
+  commentId: T:System.Collections.Generic.Dictionary{``0,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<T, string>
+  nameWithType: Dictionary<T, string>
+  fullName: System.Collections.Generic.Dictionary<T, string>
+  nameWithType.vb: Dictionary(Of T, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of T, String)
+  name.vb: Dictionary(Of T, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary*
+  commentId: Overload:Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary
+  href: Garyon.Reflection.EnumReflectionHelpers.html#Garyon_Reflection_EnumReflectionHelpers_GetEnumFieldDictionary__2
+  name: GetEnumFieldDictionary
+  nameWithType: EnumReflectionHelpers.GetEnumFieldDictionary
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFieldDictionary
+- uid: System.Collections.Generic.Dictionary{{TEnum},{TAttribute}}
+  commentId: T:System.Collections.Generic.Dictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TEnum, TAttribute>
+  nameWithType: Dictionary<TEnum, TAttribute>
+  fullName: System.Collections.Generic.Dictionary<TEnum, TAttribute>
+  nameWithType.vb: Dictionary(Of TEnum, TAttribute)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TEnum, TAttribute)
+  name.vb: Dictionary(Of TEnum, TAttribute)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TEnum
+  - name: ','
+  - name: " "
+  - name: TAttribute
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnum
+  - name: ','
+  - name: " "
+  - name: TAttribute
+  - name: )
+- uid: System.Func{{TAttribute},{TMappedValue}}
+  commentId: T:System.Func{``0,``1}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TAttribute, TMappedValue>
+  nameWithType: Func<TAttribute, TMappedValue>
+  fullName: System.Func<TAttribute, TMappedValue>
+  nameWithType.vb: Func(Of TAttribute, TMappedValue)
+  fullName.vb: System.Func(Of TAttribute, TMappedValue)
+  name.vb: Func(Of TAttribute, TMappedValue)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TAttribute
+  - name: ','
+  - name: " "
+  - name: TMappedValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TAttribute
+  - name: ','
+  - name: " "
+  - name: TMappedValue
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TEnum},{TMappedValue}}
+  commentId: T:System.Collections.Generic.Dictionary{`0,`2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TEnum, TMappedValue>
+  nameWithType: Dictionary<TEnum, TMappedValue>
+  fullName: System.Collections.Generic.Dictionary<TEnum, TMappedValue>
+  nameWithType.vb: Dictionary(Of TEnum, TMappedValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TEnum, TMappedValue)
+  name.vb: Dictionary(Of TEnum, TMappedValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TEnum
+  - name: ','
+  - name: " "
+  - name: TMappedValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnum
+  - name: ','
+  - name: " "
+  - name: TMappedValue
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Reflection.EnumReflectionHelpers.GetEnumFields*
+  commentId: Overload:Garyon.Reflection.EnumReflectionHelpers.GetEnumFields
+  href: Garyon.Reflection.EnumReflectionHelpers.html#Garyon_Reflection_EnumReflectionHelpers_GetEnumFields__1
+  name: GetEnumFields
+  nameWithType: EnumReflectionHelpers.GetEnumFields
+  fullName: Garyon.Reflection.EnumReflectionHelpers.GetEnumFields
+- uid: System.Reflection.FieldInfo[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo
+  name: FieldInfo[]
+  nameWithType: FieldInfo[]
+  fullName: System.Reflection.FieldInfo[]
+  nameWithType.vb: FieldInfo()
+  fullName.vb: System.Reflection.FieldInfo()
+  name.vb: FieldInfo()
+  spec.csharp:
+  - uid: System.Reflection.FieldInfo
+    name: FieldInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Reflection.FieldInfo
+    name: FieldInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo
+  - name: (
+  - name: )

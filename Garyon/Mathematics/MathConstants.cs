@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Garyon.Mathematics;
 
 /// <summary>
 /// Provides common math constants.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class MathConstants
 {
     /// <summary>

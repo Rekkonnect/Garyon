@@ -1,0 +1,651 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.KeyValuePairExtensions
+  commentId: T:Garyon.Extensions.KeyValuePairExtensions
+  id: KeyValuePairExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.KeyValuePairExtensions.WithKey``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  - Garyon.Extensions.KeyValuePairExtensions.WithValue``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  langs:
+  - csharp
+  - vb
+  name: KeyValuePairExtensions
+  nameWithType: KeyValuePairExtensions
+  fullName: Garyon.Extensions.KeyValuePairExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/KeyValuePairExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: KeyValuePairExtensions
+    path: ../Garyon/Extensions/KeyValuePairExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Provides extensions for the <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>
+
+    struct.
+  example: []
+  syntax:
+    content: public static class KeyValuePairExtensions
+    content.vb: Public Module KeyValuePairExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.KeyValuePairExtensions.WithKey``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  commentId: M:Garyon.Extensions.KeyValuePairExtensions.WithKey``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  id: WithKey``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.KeyValuePairExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithKey<TKey, TValue, TNewKey>(KeyValuePair<TKey, TValue>, TNewKey)
+  nameWithType: KeyValuePairExtensions.WithKey<TKey, TValue, TNewKey>(KeyValuePair<TKey, TValue>, TNewKey)
+  fullName: Garyon.Extensions.KeyValuePairExtensions.WithKey<TKey, TValue, TNewKey>(System.Collections.Generic.KeyValuePair<TKey, TValue>, TNewKey)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/KeyValuePairExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithKey
+    path: ../Garyon/Extensions/KeyValuePairExtensions.cs
+    startLine: 38
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> from the
+
+    given existing one, but with a different key.
+  example: []
+  syntax:
+    content: public static KeyValuePair<TNewKey, TValue> WithKey<TKey, TValue, TNewKey>(this KeyValuePair<TKey, TValue> kvp, TNewKey key)
+    parameters:
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: The given <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    - id: key
+      type: '{TNewKey}'
+      description: >-
+        The new key to use in the new
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: TKey
+      description: >-
+        The type of the key stored in the original
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    - id: TValue
+      description: >-
+        The type of the value stored in the
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    - id: TNewKey
+      description: >-
+        The type of the key stored in the new
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.KeyValuePair{{TNewKey},{TValue}}
+      description: >-
+        A new <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> instance with
+
+        <code class="paramref">key</code> as the key, and the value of
+
+        <code class="paramref">kvp</code>.
+    content.vb: Public Shared Function WithKey(Of TKey, TValue, TNewKey)(kvp As KeyValuePair(Of TKey, TValue), key As TNewKey) As KeyValuePair(Of TNewKey, TValue)
+  overload: Garyon.Extensions.KeyValuePairExtensions.WithKey*
+  nameWithType.vb: KeyValuePairExtensions.WithKey(Of TKey, TValue, TNewKey)(KeyValuePair(Of TKey, TValue), TNewKey)
+  fullName.vb: Garyon.Extensions.KeyValuePairExtensions.WithKey(Of TKey, TValue, TNewKey)(System.Collections.Generic.KeyValuePair(Of TKey, TValue), TNewKey)
+  name.vb: WithKey(Of TKey, TValue, TNewKey)(KeyValuePair(Of TKey, TValue), TNewKey)
+- uid: Garyon.Extensions.KeyValuePairExtensions.WithValue``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  commentId: M:Garyon.Extensions.KeyValuePairExtensions.WithValue``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  id: WithValue``3(System.Collections.Generic.KeyValuePair{``0,``1},``2)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.KeyValuePairExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithValue<TKey, TValue, TNewValue>(KeyValuePair<TKey, TValue>, TNewValue)
+  nameWithType: KeyValuePairExtensions.WithValue<TKey, TValue, TNewValue>(KeyValuePair<TKey, TValue>, TNewValue)
+  fullName: Garyon.Extensions.KeyValuePairExtensions.WithValue<TKey, TValue, TNewValue>(System.Collections.Generic.KeyValuePair<TKey, TValue>, TNewValue)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/KeyValuePairExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithValue
+    path: ../Garyon/Extensions/KeyValuePairExtensions.cs
+    startLine: 67
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> from the
+
+    given existing one, but with a different value.
+  example: []
+  syntax:
+    content: public static KeyValuePair<TKey, TNewValue> WithValue<TKey, TValue, TNewValue>(this KeyValuePair<TKey, TValue> kvp, TNewValue value)
+    parameters:
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: The given <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    - id: value
+      type: '{TNewValue}'
+      description: >-
+        The new value to use in the new
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: TKey
+      description: >-
+        The type of the key stored in the
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    - id: TValue
+      description: >-
+        The type of the value stored in the original
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    - id: TNewValue
+      description: >-
+        The type of the value stored in the new
+
+        <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TNewValue}}
+      description: >-
+        A new <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> instance with the key
+
+        of <code class="paramref">kvp</code>, and <code class="paramref">value</code> as the value.
+    content.vb: Public Shared Function WithValue(Of TKey, TValue, TNewValue)(kvp As KeyValuePair(Of TKey, TValue), value As TNewValue) As KeyValuePair(Of TKey, TNewValue)
+  overload: Garyon.Extensions.KeyValuePairExtensions.WithValue*
+  nameWithType.vb: KeyValuePairExtensions.WithValue(Of TKey, TValue, TNewValue)(KeyValuePair(Of TKey, TValue), TNewValue)
+  fullName.vb: Garyon.Extensions.KeyValuePairExtensions.WithValue(Of TKey, TValue, TNewValue)(System.Collections.Generic.KeyValuePair(Of TKey, TValue), TNewValue)
+  name.vb: WithValue(Of TKey, TValue, TNewValue)(KeyValuePair(Of TKey, TValue), TNewValue)
+references:
+- uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.KeyValuePairExtensions.WithKey*
+  commentId: Overload:Garyon.Extensions.KeyValuePairExtensions.WithKey
+  href: Garyon.Extensions.KeyValuePairExtensions.html#Garyon_Extensions_KeyValuePairExtensions_WithKey__3_System_Collections_Generic_KeyValuePair___0___1____2_
+  name: WithKey
+  nameWithType: KeyValuePairExtensions.WithKey
+  fullName: Garyon.Extensions.KeyValuePairExtensions.WithKey
+- uid: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.KeyValuePair{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: '{TNewKey}'
+  commentId: '!:TNewKey'
+  definition: TNewKey
+  name: TNewKey
+  nameWithType: TNewKey
+  fullName: TNewKey
+- uid: System.Collections.Generic.KeyValuePair{{TNewKey},{TValue}}
+  commentId: T:System.Collections.Generic.KeyValuePair{``2,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TNewKey, TValue>
+  nameWithType: KeyValuePair<TNewKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TNewKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TNewKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TNewKey, TValue)
+  name.vb: KeyValuePair(Of TNewKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TNewKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNewKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TNewKey
+  commentId: '!:TNewKey'
+  name: TNewKey
+  nameWithType: TNewKey
+  fullName: TNewKey
+- uid: Garyon.Extensions.KeyValuePairExtensions.WithValue*
+  commentId: Overload:Garyon.Extensions.KeyValuePairExtensions.WithValue
+  href: Garyon.Extensions.KeyValuePairExtensions.html#Garyon_Extensions_KeyValuePairExtensions_WithValue__3_System_Collections_Generic_KeyValuePair___0___1____2_
+  name: WithValue
+  nameWithType: KeyValuePairExtensions.WithValue
+  fullName: Garyon.Extensions.KeyValuePairExtensions.WithValue
+- uid: '{TNewValue}'
+  commentId: '!:TNewValue'
+  definition: TNewValue
+  name: TNewValue
+  nameWithType: TNewValue
+  fullName: TNewValue
+- uid: System.Collections.Generic.KeyValuePair{{TKey},{TNewValue}}
+  commentId: T:System.Collections.Generic.KeyValuePair{``0,``2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TNewValue>
+  nameWithType: KeyValuePair<TKey, TNewValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TNewValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TNewValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TNewValue)
+  name.vb: KeyValuePair(Of TKey, TNewValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: )
+- uid: TNewValue
+  commentId: '!:TNewValue'
+  name: TNewValue
+  nameWithType: TNewValue
+  fullName: TNewValue

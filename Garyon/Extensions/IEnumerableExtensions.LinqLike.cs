@@ -1,5 +1,6 @@
 ﻿using Garyon.Functions;
 using Garyon.Objects.Enumerators;
+using Polyfills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +50,6 @@ public static partial class IEnumerableExtensions
             }
         }
 
-#if HAS_AGGREGATE_LINQ_BY
         /// <summary>
         /// Determines whether all elements in a sequence are distinct according to a value selector.
         /// </summary>
@@ -65,7 +65,6 @@ public static partial class IEnumerableExtensions
             int sourceCount = source.Count();
             return sourceCount == distinctCount;
         }
-#endif
 
         /// <summary>
         /// Enumerates a collection until the first duplicate item is found.

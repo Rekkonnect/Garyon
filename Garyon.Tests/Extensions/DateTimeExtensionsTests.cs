@@ -138,6 +138,37 @@ public class DateTimeExtensionsTests
     }
 
     [Test]
+    public async Task ComponentShortcutsAndTimeOnlyTest()
+    {
+        await Assert.That(sample.GetComponentInt64(DateTimeComponent.Ticks)).IsEqualTo(sample.Ticks);
+        await Assert.That(sample.DaysInMonth()).IsEqualTo(31);
+        await Assert.That(sample.IsInLeapYear()).IsTrue();
+        await Assert.That(sample.DaysInYear()).IsEqualTo(366);
+        await Assert.That(DateTimeExtensions.DaysInYear(2021)).IsEqualTo(365);
+        await Assert.That(DateTimeExtensions.DaysInYear(true)).IsEqualTo(366);
+
+        var timeOnly = sample.TimeOnly();
+        await Assert.That(timeOnly.Date).IsEqualTo(DateTime.MinValue.Date);
+        await Assert.That(timeOnly.TimeOfDay).IsEqualTo(sample.TimeOfDay);
+    }
+
+    [Test]
+    public async Task DateTimeComponentAndWeekHelpersTest()
+    {
+        var withTickComponent = sample.WithComponent(sample.Ticks + 5, DateTimeComponent.Ticks);
+        var withMinuteComponent = sample.WithComponent(45, DateTimeComponent.Minute);
+        var nextWeek = sample.AddWeeks(2);
+
+        await Assert.That(withTickComponent.Ticks).IsEqualTo(sample.Ticks + 5);
+        await Assert.That(withMinuteComponent.Minute).IsEqualTo(45);
+        await Assert.That(nextWeek - sample).IsEqualTo(TimeSpan.FromDays(14));
+
+        Assert.Throws<ArgumentException>(() => sample.GetComponent(DateTimeComponent.Ticks));
+        Assert.Throws<ArgumentException>(() => sample.WithComponent(1, DateTimeComponent.Ticks));
+        Assert.Throws<ArgumentOutOfRangeException>(() => sample.WithTime(TimeSpan.FromDays(1)));
+    }
+
+    [Test]
     public async Task WithDayOfWeekTest()
     {
         // Kinda trivial testing

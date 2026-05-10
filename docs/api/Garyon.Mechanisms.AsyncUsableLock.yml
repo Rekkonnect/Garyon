@@ -1,0 +1,1350 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Mechanisms.AsyncUsableLock
+  commentId: T:Garyon.Mechanisms.AsyncUsableLock
+  id: AsyncUsableLock
+  parent: Garyon.Mechanisms
+  children:
+  - Garyon.Mechanisms.AsyncUsableLock.IsLocked
+  - Garyon.Mechanisms.AsyncUsableLock.Lock
+  - Garyon.Mechanisms.AsyncUsableLock.LockAsync
+  - Garyon.Mechanisms.AsyncUsableLock.LockAsync(System.Threading.CancellationToken)
+  - Garyon.Mechanisms.AsyncUsableLock.TryLock(System.Boolean@)
+  - Garyon.Mechanisms.AsyncUsableLock.Unlock
+  langs:
+  - csharp
+  - vb
+  name: AsyncUsableLock
+  nameWithType: AsyncUsableLock
+  fullName: Garyon.Mechanisms.AsyncUsableLock
+  type: Class
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AsyncUsableLock
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: >-
+    Represents an asynchronous lock that can be used in an async/await context
+
+    without the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/lock">lock</a> statement.
+  example: []
+  syntax:
+    content: public sealed class AsyncUsableLock
+    content.vb: Public NotInheritable Class AsyncUsableLock
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Mechanisms.AsyncUsableLock)
+  - Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Mechanisms.AsyncUsableLock})
+  - Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Mechanisms.AsyncUsableLock,{TResult}})
+  - Garyon.Mechanisms.AsyncUsableLock.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+- uid: Garyon.Mechanisms.AsyncUsableLock.IsLocked
+  commentId: P:Garyon.Mechanisms.AsyncUsableLock.IsLocked
+  id: IsLocked
+  parent: Garyon.Mechanisms.AsyncUsableLock
+  langs:
+  - csharp
+  - vb
+  name: IsLocked
+  nameWithType: AsyncUsableLock.IsLocked
+  fullName: Garyon.Mechanisms.AsyncUsableLock.IsLocked
+  type: Property
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsLocked
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 20
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: Determines whether the lock is currently locked.
+  example: []
+  syntax:
+    content: public bool IsLocked { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLocked As Boolean
+  overload: Garyon.Mechanisms.AsyncUsableLock.IsLocked*
+- uid: Garyon.Mechanisms.AsyncUsableLock.TryLock(System.Boolean@)
+  commentId: M:Garyon.Mechanisms.AsyncUsableLock.TryLock(System.Boolean@)
+  id: TryLock(System.Boolean@)
+  parent: Garyon.Mechanisms.AsyncUsableLock
+  langs:
+  - csharp
+  - vb
+  name: TryLock(out bool)
+  nameWithType: AsyncUsableLock.TryLock(out bool)
+  fullName: Garyon.Mechanisms.AsyncUsableLock.TryLock(out bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryLock
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 36
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: >-
+    Attempts to lock the current lock, and immediately returns if already
+
+    held.
+  example: []
+  syntax:
+    content: public AsyncUsableLock.LockReleaser TryLock(out bool success)
+    parameters:
+    - id: success
+      type: System.Boolean
+      description: >-
+        Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this lock was successfully locked,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the lock was already held.
+    return:
+      type: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+      description: >-
+        A <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref> instance unlocking this instance once the
+
+        releaser is disposed, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a> if the lock was
+
+        already held. The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a> value can be simply ignored
+
+        and left to be disposed for a no-op.
+    content.vb: Public Function TryLock(success As Boolean) As AsyncUsableLock.LockReleaser
+  overload: Garyon.Mechanisms.AsyncUsableLock.TryLock*
+  nameWithType.vb: AsyncUsableLock.TryLock(Boolean)
+  fullName.vb: Garyon.Mechanisms.AsyncUsableLock.TryLock(Boolean)
+  name.vb: TryLock(Boolean)
+- uid: Garyon.Mechanisms.AsyncUsableLock.Lock
+  commentId: M:Garyon.Mechanisms.AsyncUsableLock.Lock
+  id: Lock
+  parent: Garyon.Mechanisms.AsyncUsableLock
+  langs:
+  - csharp
+  - vb
+  name: Lock()
+  nameWithType: AsyncUsableLock.Lock()
+  fullName: Garyon.Mechanisms.AsyncUsableLock.Lock()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Lock
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 55
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: >-
+    Locks the current instance and returns a <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref>
+
+    allowing the usage of the disposal pattern via <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/using">using</a>.
+
+    If the lock is currently locked, this method will block until the lock
+
+    is released from the current lock holder.
+  example: []
+  syntax:
+    content: public AsyncUsableLock.LockReleaser Lock()
+    return:
+      type: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+      description: >-
+        A <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref> instance unlocking this instance once the
+
+        releaser is disposed.
+    content.vb: Public Function Lock() As AsyncUsableLock.LockReleaser
+  overload: Garyon.Mechanisms.AsyncUsableLock.Lock*
+- uid: Garyon.Mechanisms.AsyncUsableLock.LockAsync
+  commentId: M:Garyon.Mechanisms.AsyncUsableLock.LockAsync
+  id: LockAsync
+  parent: Garyon.Mechanisms.AsyncUsableLock
+  langs:
+  - csharp
+  - vb
+  name: LockAsync()
+  nameWithType: AsyncUsableLock.LockAsync()
+  fullName: Garyon.Mechanisms.AsyncUsableLock.LockAsync()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LockAsync
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 71
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: >-
+    Locks the current instance and returns a <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref>
+
+    allowing the usage of the disposal pattern via <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/using">using</a>.
+
+    If the lock is currently locked, this method will block until the lock
+
+    is released from the current lock holder.
+  example: []
+  syntax:
+    content: public Task<AsyncUsableLock.LockReleaser> LockAsync()
+    return:
+      type: System.Threading.Tasks.Task{Garyon.Mechanisms.AsyncUsableLock.LockReleaser}
+      description: >-
+        A <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref> instance unlocking this instance once the
+
+        releaser is disposed.
+    content.vb: Public Function LockAsync() As Task(Of AsyncUsableLock.LockReleaser)
+  overload: Garyon.Mechanisms.AsyncUsableLock.LockAsync*
+- uid: Garyon.Mechanisms.AsyncUsableLock.LockAsync(System.Threading.CancellationToken)
+  commentId: M:Garyon.Mechanisms.AsyncUsableLock.LockAsync(System.Threading.CancellationToken)
+  id: LockAsync(System.Threading.CancellationToken)
+  parent: Garyon.Mechanisms.AsyncUsableLock
+  langs:
+  - csharp
+  - vb
+  name: LockAsync(CancellationToken)
+  nameWithType: AsyncUsableLock.LockAsync(CancellationToken)
+  fullName: Garyon.Mechanisms.AsyncUsableLock.LockAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LockAsync
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 91
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: >-
+    Locks the current instance and returns a <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref>
+
+    allowing the usage of the disposal pattern via <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/using">using</a>.
+
+    If the lock is currently locked, this method will block until the lock
+
+    is released from the current lock holder.
+  example: []
+  syntax:
+    content: public Task<AsyncUsableLock.LockReleaser> LockAsync(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+      description: >-
+        The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can cancel the wait from the
+
+        lock to be released.
+    return:
+      type: System.Threading.Tasks.Task{Garyon.Mechanisms.AsyncUsableLock.LockReleaser}
+      description: >-
+        A <xref href="Garyon.Mechanisms.AsyncUsableLock.LockReleaser" data-throw-if-not-resolved="false"></xref> instance unlocking this instance once the
+
+        releaser is disposed.
+    content.vb: Public Function LockAsync(token As CancellationToken) As Task(Of AsyncUsableLock.LockReleaser)
+  overload: Garyon.Mechanisms.AsyncUsableLock.LockAsync*
+- uid: Garyon.Mechanisms.AsyncUsableLock.Unlock
+  commentId: M:Garyon.Mechanisms.AsyncUsableLock.Unlock
+  id: Unlock
+  parent: Garyon.Mechanisms.AsyncUsableLock
+  langs:
+  - csharp
+  - vb
+  name: Unlock()
+  nameWithType: AsyncUsableLock.Unlock()
+  fullName: Garyon.Mechanisms.AsyncUsableLock.Unlock()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mechanisms/AsyncUsableLock.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Unlock
+    path: ../Garyon/Mechanisms/AsyncUsableLock.cs
+    startLine: 108
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mechanisms
+  summary: >-
+    Unlocks the current instance. If the instance is not currently locked,
+
+    this method will do nothing.
+  example: []
+  syntax:
+    content: public void Unlock()
+    content.vb: Public Sub Unlock()
+  overload: Garyon.Mechanisms.AsyncUsableLock.Unlock*
+references:
+- uid: Garyon.Mechanisms
+  commentId: N:Garyon.Mechanisms
+  href: Garyon.html
+  name: Garyon.Mechanisms
+  nameWithType: Garyon.Mechanisms
+  fullName: Garyon.Mechanisms
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mechanisms
+    name: Mechanisms
+    href: Garyon.Mechanisms.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mechanisms
+    name: Mechanisms
+    href: Garyon.Mechanisms.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Mechanisms.AsyncUsableLock)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<AsyncUsableLock>(AsyncUsableLock, AsyncUsableLock)
+  nameWithType: ComparisonExtensions.BeginCompare<AsyncUsableLock>(AsyncUsableLock, AsyncUsableLock)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Mechanisms.AsyncUsableLock>(Garyon.Mechanisms.AsyncUsableLock, Garyon.Mechanisms.AsyncUsableLock)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of AsyncUsableLock)(AsyncUsableLock, AsyncUsableLock)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Mechanisms.AsyncUsableLock)(Garyon.Mechanisms.AsyncUsableLock, Garyon.Mechanisms.AsyncUsableLock)
+  name.vb: BeginCompare(Of AsyncUsableLock)(AsyncUsableLock, AsyncUsableLock)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Mechanisms.AsyncUsableLock,Garyon.Mechanisms.AsyncUsableLock)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Mechanisms.AsyncUsableLock,Garyon.Mechanisms.AsyncUsableLock)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+- uid: Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<AsyncUsableLock, TValue>(AsyncUsableLock)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<AsyncUsableLock, TValue>(AsyncUsableLock)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Mechanisms.AsyncUsableLock, TValue>(Garyon.Mechanisms.AsyncUsableLock)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of AsyncUsableLock, TValue)(AsyncUsableLock)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Mechanisms.AsyncUsableLock, TValue)(Garyon.Mechanisms.AsyncUsableLock)
+  name.vb: GetEnumerator(Of AsyncUsableLock, TValue)(AsyncUsableLock)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Mechanisms.AsyncUsableLock)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Mechanisms.AsyncUsableLock)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+- uid: Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Mechanisms.AsyncUsableLock})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<AsyncUsableLock>(AsyncUsableLock, Action<AsyncUsableLock>)
+  nameWithType: MoreLinqExtensions.Apply<AsyncUsableLock>(AsyncUsableLock, Action<AsyncUsableLock>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Mechanisms.AsyncUsableLock>(Garyon.Mechanisms.AsyncUsableLock, System.Action<Garyon.Mechanisms.AsyncUsableLock>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of AsyncUsableLock)(AsyncUsableLock, Action(Of AsyncUsableLock))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Mechanisms.AsyncUsableLock)(Garyon.Mechanisms.AsyncUsableLock, System.Action(Of Garyon.Mechanisms.AsyncUsableLock))
+  name.vb: Apply(Of AsyncUsableLock)(AsyncUsableLock, Action(Of AsyncUsableLock))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Mechanisms.AsyncUsableLock,System.Action{Garyon.Mechanisms.AsyncUsableLock})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Mechanisms.AsyncUsableLock,System.Action{Garyon.Mechanisms.AsyncUsableLock})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  - name: )
+- uid: Garyon.Mechanisms.AsyncUsableLock.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Mechanisms.AsyncUsableLock,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<AsyncUsableLock, TResult>(AsyncUsableLock, Func<AsyncUsableLock, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<AsyncUsableLock, TResult>(AsyncUsableLock, Func<AsyncUsableLock, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Mechanisms.AsyncUsableLock, TResult>(Garyon.Mechanisms.AsyncUsableLock, System.Func<Garyon.Mechanisms.AsyncUsableLock, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of AsyncUsableLock, TResult)(AsyncUsableLock, Func(Of AsyncUsableLock, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Mechanisms.AsyncUsableLock, TResult)(Garyon.Mechanisms.AsyncUsableLock, System.Func(Of Garyon.Mechanisms.AsyncUsableLock, TResult))
+  name.vb: Apply(Of AsyncUsableLock, TResult)(AsyncUsableLock, Func(Of AsyncUsableLock, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Mechanisms.AsyncUsableLock,System.Func{Garyon.Mechanisms.AsyncUsableLock,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Mechanisms.AsyncUsableLock,System.Func{Garyon.Mechanisms.AsyncUsableLock,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Mechanisms.AsyncUsableLock.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<AsyncUsableLock>(AsyncUsableLock)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<AsyncUsableLock>(AsyncUsableLock)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Mechanisms.AsyncUsableLock>(Garyon.Mechanisms.AsyncUsableLock)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of AsyncUsableLock)(AsyncUsableLock)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Mechanisms.AsyncUsableLock)(Garyon.Mechanisms.AsyncUsableLock)
+  name.vb: EnumerateSingle(Of AsyncUsableLock)(AsyncUsableLock)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Mechanisms.AsyncUsableLock)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Mechanisms.AsyncUsableLock)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+  - name: (
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Mechanisms.AsyncUsableLock.IsLocked*
+  commentId: Overload:Garyon.Mechanisms.AsyncUsableLock.IsLocked
+  href: Garyon.Mechanisms.AsyncUsableLock.html#Garyon_Mechanisms_AsyncUsableLock_IsLocked
+  name: IsLocked
+  nameWithType: AsyncUsableLock.IsLocked
+  fullName: Garyon.Mechanisms.AsyncUsableLock.IsLocked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  commentId: T:Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.AsyncUsableLock.html
+  name: AsyncUsableLock.LockReleaser
+  nameWithType: AsyncUsableLock.LockReleaser
+  fullName: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  spec.csharp:
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: .
+  - uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+    name: LockReleaser
+    href: Garyon.Mechanisms.AsyncUsableLock.LockReleaser.html
+  spec.vb:
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: .
+  - uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+    name: LockReleaser
+    href: Garyon.Mechanisms.AsyncUsableLock.LockReleaser.html
+- uid: Garyon.Mechanisms.AsyncUsableLock.TryLock*
+  commentId: Overload:Garyon.Mechanisms.AsyncUsableLock.TryLock
+  href: Garyon.Mechanisms.AsyncUsableLock.html#Garyon_Mechanisms_AsyncUsableLock_TryLock_System_Boolean__
+  name: TryLock
+  nameWithType: AsyncUsableLock.TryLock
+  fullName: Garyon.Mechanisms.AsyncUsableLock.TryLock
+- uid: Garyon.Mechanisms.AsyncUsableLock.Lock*
+  commentId: Overload:Garyon.Mechanisms.AsyncUsableLock.Lock
+  href: Garyon.Mechanisms.AsyncUsableLock.html#Garyon_Mechanisms_AsyncUsableLock_Lock
+  name: Lock
+  nameWithType: AsyncUsableLock.Lock
+  fullName: Garyon.Mechanisms.AsyncUsableLock.Lock
+- uid: Garyon.Mechanisms.AsyncUsableLock.LockAsync*
+  commentId: Overload:Garyon.Mechanisms.AsyncUsableLock.LockAsync
+  href: Garyon.Mechanisms.AsyncUsableLock.html#Garyon_Mechanisms_AsyncUsableLock_LockAsync
+  name: LockAsync
+  nameWithType: AsyncUsableLock.LockAsync
+  fullName: Garyon.Mechanisms.AsyncUsableLock.LockAsync
+- uid: System.Threading.Tasks.Task{Garyon.Mechanisms.AsyncUsableLock.LockReleaser}
+  commentId: T:System.Threading.Tasks.Task{Garyon.Mechanisms.AsyncUsableLock.LockReleaser}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AsyncUsableLock.LockReleaser>
+  nameWithType: Task<AsyncUsableLock.LockReleaser>
+  fullName: System.Threading.Tasks.Task<Garyon.Mechanisms.AsyncUsableLock.LockReleaser>
+  nameWithType.vb: Task(Of AsyncUsableLock.LockReleaser)
+  fullName.vb: System.Threading.Tasks.Task(Of Garyon.Mechanisms.AsyncUsableLock.LockReleaser)
+  name.vb: Task(Of AsyncUsableLock.LockReleaser)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: .
+  - uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+    name: LockReleaser
+    href: Garyon.Mechanisms.AsyncUsableLock.LockReleaser.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: .
+  - uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+    name: LockReleaser
+    href: Garyon.Mechanisms.AsyncUsableLock.LockReleaser.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Garyon.Mechanisms.AsyncUsableLock.Unlock*
+  commentId: Overload:Garyon.Mechanisms.AsyncUsableLock.Unlock
+  href: Garyon.Mechanisms.AsyncUsableLock.html#Garyon_Mechanisms_AsyncUsableLock_Unlock
+  name: Unlock
+  nameWithType: AsyncUsableLock.Unlock
+  fullName: Garyon.Mechanisms.AsyncUsableLock.Unlock

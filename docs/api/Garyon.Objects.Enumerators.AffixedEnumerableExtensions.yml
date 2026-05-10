@@ -1,0 +1,805 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  commentId: T:Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  id: AffixedEnumerableExtensions
+  parent: Garyon.Objects.Enumerators
+  children:
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  langs:
+  - csharp
+  - vb
+  name: AffixedEnumerableExtensions
+  nameWithType: AffixedEnumerableExtensions
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AffixedEnumerableExtensions
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 7
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: Provides extensions for quickly affixing enumerables.
+  example: []
+  syntax:
+    content: public static class AffixedEnumerableExtensions
+    content.vb: Public Module AffixedEnumerableExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  commentId: M:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  id: WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  isExtensionMethod: true
+  parent: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithPrefix<T>(IEnumerable<T>, T)
+  nameWithType: AffixedEnumerableExtensions.WithPrefix<T>(IEnumerable<T>, T)
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix<T>(System.Collections.Generic.IEnumerable<T>, T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithPrefix
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 26
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: >-
+    Returns an <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> from the main
+
+    enumerable with the specified single value as the prefix.
+  example: []
+  syntax:
+    content: public static AffixedEnumerable<T> WithPrefix<T>(this IEnumerable<T> enumerable, T prefix)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The main enumerable that is being prefixed.
+    - id: prefix
+      type: '{T}'
+      description: The single value to prepend before the main enumerable.
+    typeParameters:
+    - id: T
+      description: The type of values contained in the enumerable.
+    return:
+      type: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+      description: >-
+        An <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains the main
+
+        enumerable prefixed by the given single value.
+    content.vb: Public Shared Function WithPrefix(Of T)(enumerable As IEnumerable(Of T), prefix As T) As AffixedEnumerable(Of T)
+  overload: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix*
+  nameWithType.vb: AffixedEnumerableExtensions.WithPrefix(Of T)(IEnumerable(Of T), T)
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: WithPrefix(Of T)(IEnumerable(Of T), T)
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  id: WithPrefix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithPrefix<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: AffixedEnumerableExtensions.WithPrefix<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithPrefix
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 47
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: >-
+    Returns an <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> from the main
+
+    enumerable with the specified enumerable as the prefix.
+  example: []
+  syntax:
+    content: public static AffixedEnumerable<T> WithPrefix<T>(this IEnumerable<T> enumerable, IEnumerable<T> prefix)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The main enumerable that is being prefixed.
+    - id: prefix
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The enumerable to prepend before the main enumerable.
+    typeParameters:
+    - id: T
+      description: The type of values contained in the enumerable.
+    return:
+      type: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+      description: >-
+        An <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains the main
+
+        enumerable prefixed by the given enumerable.
+    content.vb: Public Shared Function WithPrefix(Of T)(enumerable As IEnumerable(Of T), prefix As IEnumerable(Of T)) As AffixedEnumerable(Of T)
+  overload: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix*
+  nameWithType.vb: AffixedEnumerableExtensions.WithPrefix(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: WithPrefix(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  commentId: M:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  id: WithPrefix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  isExtensionMethod: true
+  parent: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithPrefix<T>(IEnumerable<T>, params T[])
+  nameWithType: AffixedEnumerableExtensions.WithPrefix<T>(IEnumerable<T>, params T[])
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix<T>(System.Collections.Generic.IEnumerable<T>, params T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithPrefix
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 68
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: >-
+    Returns an <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> from the main
+
+    enumerable with the specified enumerable as the prefix.
+  example: []
+  syntax:
+    content: public static AffixedEnumerable<T> WithPrefix<T>(this IEnumerable<T> enumerable, params T[] prefix)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The main enumerable that is being prefixed.
+    - id: prefix
+      type: '{T}[]'
+      description: The enumerable to prepend before the main enumerable.
+    typeParameters:
+    - id: T
+      description: The type of values contained in the enumerable.
+    return:
+      type: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+      description: >-
+        An <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains the main
+
+        enumerable prefixed by the given enumerable.
+    content.vb: Public Shared Function WithPrefix(Of T)(enumerable As IEnumerable(Of T), ParamArray prefix As T()) As AffixedEnumerable(Of T)
+  overload: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix*
+  nameWithType.vb: AffixedEnumerableExtensions.WithPrefix(Of T)(IEnumerable(Of T), ParamArray T())
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix(Of T)(System.Collections.Generic.IEnumerable(Of T), ParamArray T())
+  name.vb: WithPrefix(Of T)(IEnumerable(Of T), ParamArray T())
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  commentId: M:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  id: WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0)
+  isExtensionMethod: true
+  parent: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSuffix<T>(IEnumerable<T>, T)
+  nameWithType: AffixedEnumerableExtensions.WithSuffix<T>(IEnumerable<T>, T)
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix<T>(System.Collections.Generic.IEnumerable<T>, T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSuffix
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 90
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: >-
+    Returns an <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> from the main
+
+    enumerable with the specified single value as the suffix.
+  example: []
+  syntax:
+    content: public static AffixedEnumerable<T> WithSuffix<T>(this IEnumerable<T> enumerable, T suffix)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The main enumerable that is being suffixed.
+    - id: suffix
+      type: '{T}'
+      description: The single value to prepend before the main enumerable.
+    typeParameters:
+    - id: T
+      description: The type of values contained in the enumerable.
+    return:
+      type: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+      description: >-
+        An <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains the main
+
+        enumerable suffixed by the given single value.
+    content.vb: Public Shared Function WithSuffix(Of T)(enumerable As IEnumerable(Of T), suffix As T) As AffixedEnumerable(Of T)
+  overload: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix*
+  nameWithType.vb: AffixedEnumerableExtensions.WithSuffix(Of T)(IEnumerable(Of T), T)
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: WithSuffix(Of T)(IEnumerable(Of T), T)
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  id: WithSuffix``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSuffix<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: AffixedEnumerableExtensions.WithSuffix<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSuffix
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 111
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: >-
+    Returns an <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> from the main
+
+    enumerable with the specified enumerable as the suffix.
+  example: []
+  syntax:
+    content: public static AffixedEnumerable<T> WithSuffix<T>(this IEnumerable<T> enumerable, IEnumerable<T> suffix)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The main enumerable that is being suffixed.
+    - id: suffix
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The enumerable to prepend before the main enumerable.
+    typeParameters:
+    - id: T
+      description: The type of values contained in the enumerable.
+    return:
+      type: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+      description: >-
+        An <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains the main
+
+        enumerable suffixed by the given enumerable.
+    content.vb: Public Shared Function WithSuffix(Of T)(enumerable As IEnumerable(Of T), suffix As IEnumerable(Of T)) As AffixedEnumerable(Of T)
+  overload: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix*
+  nameWithType.vb: AffixedEnumerableExtensions.WithSuffix(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: WithSuffix(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  commentId: M:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  id: WithSuffix``1(System.Collections.Generic.IEnumerable{``0},``0[])
+  isExtensionMethod: true
+  parent: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSuffix<T>(IEnumerable<T>, params T[])
+  nameWithType: AffixedEnumerableExtensions.WithSuffix<T>(IEnumerable<T>, params T[])
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix<T>(System.Collections.Generic.IEnumerable<T>, params T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSuffix
+    path: ../Garyon/Objects/Enumerators/AffixedEnumerableExtensions.cs
+    startLine: 132
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.Enumerators
+  summary: >-
+    Returns an <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> from the main
+
+    enumerable with the specified enumerable as the suffix.
+  example: []
+  syntax:
+    content: public static AffixedEnumerable<T> WithSuffix<T>(this IEnumerable<T> enumerable, params T[] suffix)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The main enumerable that is being suffixed.
+    - id: suffix
+      type: '{T}[]'
+      description: The enumerable to prepend before the main enumerable.
+    typeParameters:
+    - id: T
+      description: The type of values contained in the enumerable.
+    return:
+      type: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+      description: >-
+        An <xref href="Garyon.Objects.Enumerators.AffixedEnumerable%601" data-throw-if-not-resolved="false"></xref> that contains the main
+
+        enumerable suffixed by the given enumerable.
+    content.vb: Public Shared Function WithSuffix(Of T)(enumerable As IEnumerable(Of T), ParamArray suffix As T()) As AffixedEnumerable(Of T)
+  overload: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix*
+  nameWithType.vb: AffixedEnumerableExtensions.WithSuffix(Of T)(IEnumerable(Of T), ParamArray T())
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix(Of T)(System.Collections.Generic.IEnumerable(Of T), ParamArray T())
+  name.vb: WithSuffix(Of T)(IEnumerable(Of T), ParamArray T())
+references:
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+  commentId: T:Garyon.Objects.Enumerators.AffixedEnumerable`1
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  name: AffixedEnumerable<T>
+  nameWithType: AffixedEnumerable<T>
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerable<T>
+  nameWithType.vb: AffixedEnumerable(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerable(Of T)
+  name.vb: AffixedEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+    name: AffixedEnumerable
+    href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+    name: AffixedEnumerable
+    href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix*
+  commentId: Overload:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix
+  href: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.html#Garyon_Objects_Enumerators_AffixedEnumerableExtensions_WithPrefix__1_System_Collections_Generic_IEnumerable___0____0_
+  name: WithPrefix
+  nameWithType: AffixedEnumerableExtensions.WithPrefix
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithPrefix
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Objects.Enumerators.AffixedEnumerable{{T}}
+  commentId: T:Garyon.Objects.Enumerators.AffixedEnumerable{``0}
+  parent: Garyon.Objects.Enumerators
+  definition: Garyon.Objects.Enumerators.AffixedEnumerable`1
+  href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  name: AffixedEnumerable<T>
+  nameWithType: AffixedEnumerable<T>
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerable<T>
+  nameWithType.vb: AffixedEnumerable(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerable(Of T)
+  name.vb: AffixedEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+    name: AffixedEnumerable
+    href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+    name: AffixedEnumerable
+    href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix*
+  commentId: Overload:Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix
+  href: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.html#Garyon_Objects_Enumerators_AffixedEnumerableExtensions_WithSuffix__1_System_Collections_Generic_IEnumerable___0____0_
+  name: WithSuffix
+  nameWithType: AffixedEnumerableExtensions.WithSuffix
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.WithSuffix

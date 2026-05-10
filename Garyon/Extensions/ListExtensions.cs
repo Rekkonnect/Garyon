@@ -199,38 +199,4 @@ public static class ListExtensions
         list[index] = element;
     }
     #endregion
-
-    #region Contain Checks
-    /// <summary>
-    /// Determines whether the list contains all the elements of an other list
-    /// in the specific order.
-    /// </summary>
-    /// <typeparam name="T">
-    /// The type of the list elements.
-    /// </typeparam>
-    /// <param name="list">
-    /// The list whose elements have to be contained on the other list.
-    /// </param>
-    /// <param name="containedList">
-    /// The list other list to check.
-    /// </param>
-    public static bool ContainsOrdered<T>(this List<T> list, List<T> containedList)
-    {
-        int originalIndex = 0;
-
-        for (int i = 0; i < containedList.Count; i++)
-        {
-            while (originalIndex < list.Count - i)
-            {
-                if (list[originalIndex]!.Equals(containedList[i]))
-                    break;
-                originalIndex++;
-            }
-
-            originalIndex++;
-        }
-
-        return true;
-    }
-    #endregion
 }

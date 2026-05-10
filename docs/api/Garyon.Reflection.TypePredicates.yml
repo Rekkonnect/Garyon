@@ -1,0 +1,574 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.TypePredicates
+  commentId: T:Garyon.Reflection.TypePredicates
+  id: TypePredicates
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.TypePredicates.IsAbstractClass(System.Type)
+  - Garyon.Reflection.TypePredicates.IsClass(System.Type)
+  - Garyon.Reflection.TypePredicates.IsInterface(System.Type)
+  - Garyon.Reflection.TypePredicates.IsNonAbstractClass(System.Type)
+  - Garyon.Reflection.TypePredicates.IsStatic(System.Type)
+  - Garyon.Reflection.TypePredicates.IsValueType(System.Type)
+  langs:
+  - csharp
+  - vb
+  name: TypePredicates
+  nameWithType: TypePredicates
+  fullName: Garyon.Reflection.TypePredicates
+  type: Class
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TypePredicates
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Contains a collection of predicates to apply on <xref href="System.Type" data-throw-if-not-resolved="false"></xref>
+
+    instances. Also contains several aliases for other scattered functions.
+  example: []
+  syntax:
+    content: public static class TypePredicates
+    content.vb: Public Module TypePredicates
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Reflection.TypePredicates.IsClass(System.Type)
+  commentId: M:Garyon.Reflection.TypePredicates.IsClass(System.Type)
+  id: IsClass(System.Type)
+  parent: Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: IsClass(Type)
+  nameWithType: TypePredicates.IsClass(Type)
+  fullName: Garyon.Reflection.TypePredicates.IsClass(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsClass
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is a class.
+  example: []
+  syntax:
+    content: public static bool IsClass(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">type</code> represents a class; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsClass(type As Type) As Boolean
+  overload: Garyon.Reflection.TypePredicates.IsClass*
+- uid: Garyon.Reflection.TypePredicates.IsAbstractClass(System.Type)
+  commentId: M:Garyon.Reflection.TypePredicates.IsAbstractClass(System.Type)
+  id: IsAbstractClass(System.Type)
+  parent: Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: IsAbstractClass(Type)
+  nameWithType: TypePredicates.IsAbstractClass(Type)
+  fullName: Garyon.Reflection.TypePredicates.IsAbstractClass(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsAbstractClass
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is an abstract class.
+  example: []
+  syntax:
+    content: public static bool IsAbstractClass(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">type</code> represents an abstract class; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsAbstractClass(type As Type) As Boolean
+  overload: Garyon.Reflection.TypePredicates.IsAbstractClass*
+- uid: Garyon.Reflection.TypePredicates.IsNonAbstractClass(System.Type)
+  commentId: M:Garyon.Reflection.TypePredicates.IsNonAbstractClass(System.Type)
+  id: IsNonAbstractClass(System.Type)
+  parent: Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: IsNonAbstractClass(Type)
+  nameWithType: TypePredicates.IsNonAbstractClass(Type)
+  fullName: Garyon.Reflection.TypePredicates.IsNonAbstractClass(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNonAbstractClass
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 41
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is a non-abstract class.
+  example: []
+  syntax:
+    content: public static bool IsNonAbstractClass(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">type</code> represents a class that is not abstract; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsNonAbstractClass(type As Type) As Boolean
+  overload: Garyon.Reflection.TypePredicates.IsNonAbstractClass*
+- uid: Garyon.Reflection.TypePredicates.IsValueType(System.Type)
+  commentId: M:Garyon.Reflection.TypePredicates.IsValueType(System.Type)
+  id: IsValueType(System.Type)
+  parent: Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: IsValueType(Type)
+  nameWithType: TypePredicates.IsValueType(Type)
+  fullName: Garyon.Reflection.TypePredicates.IsValueType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsValueType
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 52
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is a value type.
+  example: []
+  syntax:
+    content: public static bool IsValueType(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">type</code> represents a value type; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsValueType(type As Type) As Boolean
+  overload: Garyon.Reflection.TypePredicates.IsValueType*
+- uid: Garyon.Reflection.TypePredicates.IsInterface(System.Type)
+  commentId: M:Garyon.Reflection.TypePredicates.IsInterface(System.Type)
+  id: IsInterface(System.Type)
+  parent: Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: IsInterface(Type)
+  nameWithType: TypePredicates.IsInterface(Type)
+  fullName: Garyon.Reflection.TypePredicates.IsInterface(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsInterface
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 63
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is an interface.
+  example: []
+  syntax:
+    content: public static bool IsInterface(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">type</code> represents an interface; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsInterface(type As Type) As Boolean
+  overload: Garyon.Reflection.TypePredicates.IsInterface*
+- uid: Garyon.Reflection.TypePredicates.IsStatic(System.Type)
+  commentId: M:Garyon.Reflection.TypePredicates.IsStatic(System.Type)
+  id: IsStatic(System.Type)
+  parent: Garyon.Reflection.TypePredicates
+  langs:
+  - csharp
+  - vb
+  name: IsStatic(Type)
+  nameWithType: TypePredicates.IsStatic(Type)
+  fullName: Garyon.Reflection.TypePredicates.IsStatic(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypePredicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsStatic
+    path: ../Garyon/Reflection/TypePredicates.cs
+    startLine: 74
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is a static class.
+  example: []
+  syntax:
+    content: public static bool IsStatic(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">type</code> represents a static class; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsStatic(type As Type) As Boolean
+  overload: Garyon.Reflection.TypePredicates.IsStatic*
+references:
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Reflection.TypePredicates.IsClass*
+  commentId: Overload:Garyon.Reflection.TypePredicates.IsClass
+  href: Garyon.Reflection.TypePredicates.html#Garyon_Reflection_TypePredicates_IsClass_System_Type_
+  name: IsClass
+  nameWithType: TypePredicates.IsClass
+  fullName: Garyon.Reflection.TypePredicates.IsClass
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Reflection.TypePredicates.IsAbstractClass*
+  commentId: Overload:Garyon.Reflection.TypePredicates.IsAbstractClass
+  href: Garyon.Reflection.TypePredicates.html#Garyon_Reflection_TypePredicates_IsAbstractClass_System_Type_
+  name: IsAbstractClass
+  nameWithType: TypePredicates.IsAbstractClass
+  fullName: Garyon.Reflection.TypePredicates.IsAbstractClass
+- uid: Garyon.Reflection.TypePredicates.IsNonAbstractClass*
+  commentId: Overload:Garyon.Reflection.TypePredicates.IsNonAbstractClass
+  href: Garyon.Reflection.TypePredicates.html#Garyon_Reflection_TypePredicates_IsNonAbstractClass_System_Type_
+  name: IsNonAbstractClass
+  nameWithType: TypePredicates.IsNonAbstractClass
+  fullName: Garyon.Reflection.TypePredicates.IsNonAbstractClass
+- uid: Garyon.Reflection.TypePredicates.IsValueType*
+  commentId: Overload:Garyon.Reflection.TypePredicates.IsValueType
+  href: Garyon.Reflection.TypePredicates.html#Garyon_Reflection_TypePredicates_IsValueType_System_Type_
+  name: IsValueType
+  nameWithType: TypePredicates.IsValueType
+  fullName: Garyon.Reflection.TypePredicates.IsValueType
+- uid: Garyon.Reflection.TypePredicates.IsInterface*
+  commentId: Overload:Garyon.Reflection.TypePredicates.IsInterface
+  href: Garyon.Reflection.TypePredicates.html#Garyon_Reflection_TypePredicates_IsInterface_System_Type_
+  name: IsInterface
+  nameWithType: TypePredicates.IsInterface
+  fullName: Garyon.Reflection.TypePredicates.IsInterface
+- uid: Garyon.Reflection.TypePredicates.IsStatic*
+  commentId: Overload:Garyon.Reflection.TypePredicates.IsStatic
+  href: Garyon.Reflection.TypePredicates.html#Garyon_Reflection_TypePredicates_IsStatic_System_Type_
+  name: IsStatic
+  nameWithType: TypePredicates.IsStatic
+  fullName: Garyon.Reflection.TypePredicates.IsStatic

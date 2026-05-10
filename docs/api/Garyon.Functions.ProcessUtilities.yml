@@ -1,0 +1,467 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.ProcessUtilities
+  commentId: T:Garyon.Functions.ProcessUtilities
+  id: ProcessUtilities
+  parent: Garyon.Functions
+  children:
+  - Garyon.Functions.ProcessUtilities.OpenUrl(System.String)
+  - Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer(System.String)
+  - Garyon.Functions.ProcessUtilities.ShowFileInFileViewer(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ProcessUtilities
+  nameWithType: ProcessUtilities
+  fullName: Garyon.Functions.ProcessUtilities
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/ProcessUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ProcessUtilities
+    path: ../Garyon/Functions/ProcessUtilities.cs
+    startLine: 7
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static class ProcessUtilities
+    content.vb: Public Module ProcessUtilities
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Functions.ProcessUtilities.OpenUrl(System.String)
+  commentId: M:Garyon.Functions.ProcessUtilities.OpenUrl(System.String)
+  id: OpenUrl(System.String)
+  parent: Garyon.Functions.ProcessUtilities
+  langs:
+  - csharp
+  - vb
+  name: OpenUrl(string)
+  nameWithType: ProcessUtilities.OpenUrl(string)
+  fullName: Garyon.Functions.ProcessUtilities.OpenUrl(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/ProcessUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OpenUrl
+    path: ../Garyon/Functions/ProcessUtilities.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static Process OpenUrl(string url)
+    parameters:
+    - id: url
+      type: System.String
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function OpenUrl(url As String) As Process
+  overload: Garyon.Functions.ProcessUtilities.OpenUrl*
+  nameWithType.vb: ProcessUtilities.OpenUrl(String)
+  fullName.vb: Garyon.Functions.ProcessUtilities.OpenUrl(String)
+  name.vb: OpenUrl(String)
+- uid: Garyon.Functions.ProcessUtilities.ShowFileInFileViewer(System.String)
+  commentId: M:Garyon.Functions.ProcessUtilities.ShowFileInFileViewer(System.String)
+  id: ShowFileInFileViewer(System.String)
+  parent: Garyon.Functions.ProcessUtilities
+  langs:
+  - csharp
+  - vb
+  name: ShowFileInFileViewer(string)
+  nameWithType: ProcessUtilities.ShowFileInFileViewer(string)
+  fullName: Garyon.Functions.ProcessUtilities.ShowFileInFileViewer(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/ProcessUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ShowFileInFileViewer
+    path: ../Garyon/Functions/ProcessUtilities.cs
+    startLine: 43
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static Process ShowFileInFileViewer(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function ShowFileInFileViewer(filePath As String) As Process
+  overload: Garyon.Functions.ProcessUtilities.ShowFileInFileViewer*
+  nameWithType.vb: ProcessUtilities.ShowFileInFileViewer(String)
+  fullName.vb: Garyon.Functions.ProcessUtilities.ShowFileInFileViewer(String)
+  name.vb: ShowFileInFileViewer(String)
+- uid: Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer(System.String)
+  commentId: M:Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer(System.String)
+  id: ShowDirectoryInFileViewer(System.String)
+  parent: Garyon.Functions.ProcessUtilities
+  langs:
+  - csharp
+  - vb
+  name: ShowDirectoryInFileViewer(string)
+  nameWithType: ProcessUtilities.ShowDirectoryInFileViewer(string)
+  fullName: Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/ProcessUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ShowDirectoryInFileViewer
+    path: ../Garyon/Functions/ProcessUtilities.cs
+    startLine: 63
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static Process ShowDirectoryInFileViewer(string directoryPath)
+    parameters:
+    - id: directoryPath
+      type: System.String
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function ShowDirectoryInFileViewer(directoryPath As String) As Process
+  overload: Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer*
+  nameWithType.vb: ProcessUtilities.ShowDirectoryInFileViewer(String)
+  fullName.vb: Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer(String)
+  name.vb: ShowDirectoryInFileViewer(String)
+references:
+- uid: Garyon.Functions
+  commentId: N:Garyon.Functions
+  href: Garyon.html
+  name: Garyon.Functions
+  nameWithType: Garyon.Functions
+  fullName: Garyon.Functions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.ProcessUtilities.OpenUrl*
+  commentId: Overload:Garyon.Functions.ProcessUtilities.OpenUrl
+  href: Garyon.Functions.ProcessUtilities.html#Garyon_Functions_ProcessUtilities_OpenUrl_System_String_
+  name: OpenUrl
+  nameWithType: ProcessUtilities.OpenUrl
+  fullName: Garyon.Functions.ProcessUtilities.OpenUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Diagnostics.Process
+  commentId: T:System.Diagnostics.Process
+  parent: System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.process
+  name: Process
+  nameWithType: Process
+  fullName: System.Diagnostics.Process
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+- uid: Garyon.Functions.ProcessUtilities.ShowFileInFileViewer*
+  commentId: Overload:Garyon.Functions.ProcessUtilities.ShowFileInFileViewer
+  href: Garyon.Functions.ProcessUtilities.html#Garyon_Functions_ProcessUtilities_ShowFileInFileViewer_System_String_
+  name: ShowFileInFileViewer
+  nameWithType: ProcessUtilities.ShowFileInFileViewer
+  fullName: Garyon.Functions.ProcessUtilities.ShowFileInFileViewer
+- uid: Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer*
+  commentId: Overload:Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer
+  href: Garyon.Functions.ProcessUtilities.html#Garyon_Functions_ProcessUtilities_ShowDirectoryInFileViewer_System_String_
+  name: ShowDirectoryInFileViewer
+  nameWithType: ProcessUtilities.ShowDirectoryInFileViewer
+  fullName: Garyon.Functions.ProcessUtilities.ShowDirectoryInFileViewer

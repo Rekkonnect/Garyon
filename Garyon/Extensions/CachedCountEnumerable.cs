@@ -43,7 +43,13 @@ public class CachedCountEnumerable : IEnumerable
 
     private int ForceCountCore()
     {
-        return this.Count();
+        int count = 0;
+        foreach (var _ in _enumerable)
+            count++;
+
+        IncreaseMinCount(count);
+        CommitCount(count);
+        return count;
     }
 
     private void IncreaseMinCount(int count)

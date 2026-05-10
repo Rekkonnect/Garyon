@@ -1,0 +1,2457 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.ToCollectionExtensions
+  commentId: T:Garyon.Extensions.ToCollectionExtensions
+  id: ToCollectionExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  - Garyon.Extensions.ToCollectionExtensions.ToDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  - Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  - Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary``2(System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.ToCollectionExtensions.ToSortedList``2(System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.ToCollectionExtensions.ToSortedSet``1(System.Collections.Generic.IEnumerable{``0})
+  langs:
+  - csharp
+  - vb
+  name: ToCollectionExtensions
+  nameWithType: ToCollectionExtensions
+  fullName: Garyon.Extensions.ToCollectionExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToCollectionExtensions
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Contains extensions related to converting <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>
+
+    instances into collections.
+  example: []
+  syntax:
+    content: public static class ToCollectionExtensions
+    content.vb: Public Module ToCollectionExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.ToCollectionExtensions.ToDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  id: ToDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDictionary<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType: ToCollectionExtensions.ToDictionary<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToDictionary<TKey, TValue>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToDictionary
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: 'public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    return:
+      type: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+    content.vb: Public Shared Function ToDictionary(Of TKey, TValue)(source As IEnumerable(Of KeyValuePair(Of TKey, TValue))) As Dictionary(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToDictionary*
+  nameWithType.vb: ToCollectionExtensions.ToDictionary(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToDictionary(Of TKey, TValue)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)))
+  name.vb: ToDictionary(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedSet``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSortedSet``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToSortedSet``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSortedSet<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToSortedSet<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedSet<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSortedSet
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 28
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static SortedSet<T> ToSortedSet<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.SortedSet{{T}}
+    content.vb: Public Shared Function ToSortedSet(Of T)(source As IEnumerable(Of T)) As SortedSet(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSortedSet*
+  nameWithType.vb: ToCollectionExtensions.ToSortedSet(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSortedSet(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToSortedSet(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedList``2(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSortedList``2(System.Collections.Generic.IDictionary{``0,``1})
+  id: ToSortedList``2(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSortedList<TKey, TValue>(IDictionary<TKey, TValue>)
+  nameWithType: ToCollectionExtensions.ToSortedList<TKey, TValue>(IDictionary<TKey, TValue>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedList<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSortedList
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 32
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: 'public static SortedList<TKey, TValue> ToSortedList<TKey, TValue>(this IDictionary<TKey, TValue> source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    return:
+      type: System.Collections.Generic.SortedList{{TKey},{TValue}}
+    content.vb: Public Shared Function ToSortedList(Of TKey, TValue)(source As IDictionary(Of TKey, TValue)) As SortedList(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSortedList*
+  nameWithType.vb: ToCollectionExtensions.ToSortedList(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSortedList(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: ToSortedList(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary``2(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary``2(System.Collections.Generic.IDictionary{``0,``1})
+  id: ToSortedDictionary``2(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSortedDictionary<TKey, TValue>(IDictionary<TKey, TValue>)
+  nameWithType: ToCollectionExtensions.ToSortedDictionary<TKey, TValue>(IDictionary<TKey, TValue>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSortedDictionary
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 37
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: 'public static SortedDictionary<TKey, TValue> ToSortedDictionary<TKey, TValue>(this IDictionary<TKey, TValue> source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    return:
+      type: System.Collections.Generic.SortedDictionary{{TKey},{TValue}}
+    content.vb: Public Shared Function ToSortedDictionary(Of TKey, TValue)(source As IDictionary(Of TKey, TValue)) As SortedDictionary(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary*
+  nameWithType.vb: ToCollectionExtensions.ToSortedDictionary(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: ToSortedDictionary(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToArrayOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToArrayOrEmpty<T>(IEnumerable<T>?)
+  nameWithType: ToCollectionExtensions.ToArrayOrEmpty<T>(IEnumerable<T>?)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToArrayOrEmpty
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 58
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts a provided sequence of elements into an array.
+  example: []
+  syntax:
+    content: public static T[] ToArrayOrEmpty<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to convert into an array.
+    typeParameters:
+    - id: T
+      description: The type of elements stored in the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: '{T}[]'
+      description: >-
+        A newly created array containing the source sequence of elements, if not
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise <xref href="System.Array.Empty%60%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ToArrayOrEmpty(Of T)(source As IEnumerable(Of T)) As T()
+  overload: Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty*
+  nameWithType.vb: ToCollectionExtensions.ToArrayOrEmpty(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToArrayOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToListOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToListOrEmpty<T>(IEnumerable<T>?)
+  nameWithType: ToCollectionExtensions.ToListOrEmpty<T>(IEnumerable<T>?)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToListOrEmpty
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 77
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Converts a provided sequence of elements into a
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static List<T> ToListOrEmpty<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to convert into a
+
+        <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: T
+      description: The type of elements stored in the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: >-
+        A newly created <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> containing the source sequence
+
+        of elements, if not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise an empty list.
+    content.vb: Public Shared Function ToListOrEmpty(Of T)(source As IEnumerable(Of T)) As List(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty*
+  nameWithType.vb: ToCollectionExtensions.ToListOrEmpty(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToListOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToHashSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToHashSetOrEmpty<T>(IEnumerable<T>?)
+  nameWithType: ToCollectionExtensions.ToHashSetOrEmpty<T>(IEnumerable<T>?)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToHashSetOrEmpty
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 97
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Converts a provided sequence of elements into a
+
+    <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static HashSet<T> ToHashSetOrEmpty<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to convert into a
+
+        <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: T
+      description: The type of elements stored in the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.HashSet{{T}}
+      description: >-
+        A newly created <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> containing the source
+
+        sequence of elements, if not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise an empty
+
+        set.
+    content.vb: Public Shared Function ToHashSetOrEmpty(Of T)(source As IEnumerable(Of T)) As HashSet(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty*
+  nameWithType.vb: ToCollectionExtensions.ToHashSetOrEmpty(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToHashSetOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToSortedSetOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSortedSetOrEmpty<T>(IEnumerable<T>?)
+  nameWithType: ToCollectionExtensions.ToSortedSetOrEmpty<T>(IEnumerable<T>?)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSortedSetOrEmpty
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 117
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Converts a provided sequence of elements into a
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static SortedSet<T> ToSortedSetOrEmpty<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> to convert into a
+
+        <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: T
+      description: The type of elements stored in the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.SortedSet{{T}}
+      description: >-
+        A newly created <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> containing the source
+
+        sequence of elements, if not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise an empty
+
+        set.
+    content.vb: Public Shared Function ToSortedSetOrEmpty(Of T)(source As IEnumerable(Of T)) As SortedSet(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty*
+  nameWithType.vb: ToCollectionExtensions.ToSortedSetOrEmpty(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToSortedSetOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  id: ToSortedListOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSortedListOrEmpty<TKey, TValue>(IDictionary<TKey, TValue>?)
+  nameWithType: ToCollectionExtensions.ToSortedListOrEmpty<TKey, TValue>(IDictionary<TKey, TValue>?)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSortedListOrEmpty
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 142
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Converts a provided sequence of elements into a
+
+    <xref href="System.Collections.Generic.SortedList%602" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public static SortedList<TKey, TValue> ToSortedListOrEmpty<TKey, TValue>(this IDictionary<TKey, TValue>? source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> to convert into a
+
+        <xref href="System.Collections.Generic.SortedList%602" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: TKey
+      description: >-
+        The type of keys stored in the
+
+        <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>.
+    - id: TValue
+      description: >-
+        The type of values stored in the
+
+        <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.SortedList{{TKey},{TValue}}
+      description: >-
+        A newly created <xref href="System.Collections.Generic.SortedList%602" data-throw-if-not-resolved="false"></xref> containing
+
+        the source sequence of elements, if not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>,
+
+        otherwise an empty dictionary.
+    content.vb: Public Shared Function ToSortedListOrEmpty(Of TKey, TValue)(source As IDictionary(Of TKey, TValue)) As SortedList(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty*
+  nameWithType.vb: ToCollectionExtensions.ToSortedListOrEmpty(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: ToSortedListOrEmpty(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  id: ToSortedDictionaryOrEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSortedDictionaryOrEmpty<TKey, TValue>(IDictionary<TKey, TValue>?)
+  nameWithType: ToCollectionExtensions.ToSortedDictionaryOrEmpty<TKey, TValue>(IDictionary<TKey, TValue>?)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSortedDictionaryOrEmpty
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 168
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Converts a provided sequence of elements into a
+
+    <xref href="System.Collections.Generic.SortedDictionary%602" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public static SortedDictionary<TKey, TValue> ToSortedDictionaryOrEmpty<TKey, TValue>(this IDictionary<TKey, TValue>? source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: >-
+        The source <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> to convert into a
+
+        <xref href="System.Collections.Generic.SortedDictionary%602" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: TKey
+      description: >-
+        The type of keys stored in the
+
+        <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>.
+    - id: TValue
+      description: >-
+        The type of values stored in the
+
+        <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.SortedDictionary{{TKey},{TValue}}
+      description: >-
+        A newly created <xref href="System.Collections.Generic.SortedDictionary%602" data-throw-if-not-resolved="false"></xref>
+
+        containing the source sequence of elements, if not
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise an empty dictionary.
+    content.vb: Public Shared Function ToSortedDictionaryOrEmpty(Of TKey, TValue)(source As IDictionary(Of TKey, TValue)) As SortedDictionary(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty*
+  nameWithType.vb: ToCollectionExtensions.ToSortedDictionaryOrEmpty(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: ToSortedDictionaryOrEmpty(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToArrayOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToArrayOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToArrayOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToArrayOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 191
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into an array of elements of the
+
+    given source type, otherwise creates a new array and returns it.
+  example: []
+  syntax:
+    content: public static T[] ToArrayOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the source and the returned array.
+    return:
+      type: '{T}[]'
+      description: >-
+        The source collection as an array of elements, if it was already, or a
+
+        new array containing the enumerated values of the source.
+    content.vb: Public Shared Function ToArrayOrExisting(Of T)(source As IEnumerable(Of T)) As T()
+  overload: Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToArrayOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToArrayOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToListOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToListOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToListOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToListOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 212
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a list of elements of the given
+
+    source type, otherwise creates a new list and returns it.
+  example: []
+  syntax:
+    content: public static List<T> ToListOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the source and the returned list.
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: >-
+        The source collection as a list of elements, if it was already, or a new
+
+        list containing the enumerated values of the source.
+    content.vb: Public Shared Function ToListOrExisting(Of T)(source As IEnumerable(Of T)) As List(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToListOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToListOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToListOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToListOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToHashSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToHashSetOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToHashSetOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToHashSetOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 233
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a set of elements of the given
+
+    source type, otherwise creates a new set and returns it.
+  example: []
+  syntax:
+    content: public static HashSet<T> ToHashSetOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the source and the returned set.
+    return:
+      type: System.Collections.Generic.HashSet{{T}}
+      description: >-
+        The source collection as a set of elements, if it was already, or a new
+
+        set containing the enumerated values of the source.
+    content.vb: Public Shared Function ToHashSetOrExisting(Of T)(source As IEnumerable(Of T)) As HashSet(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToHashSetOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToHashSetOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToCollectionOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToCollectionOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToCollectionOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 258
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into an
+
+    <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref>, otherwise creates a new array and
+
+    returns it <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ICollection<T> ToCollectionOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: >-
+        The type of elements contained in the source and the returned
+
+        collection.
+    return:
+      type: System.Collections.Generic.ICollection{{T}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+        <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref>, if it was already, or a new array
+
+        containing the enumerated values of the source.
+    content.vb: Public Shared Function ToCollectionOrExisting(Of T)(source As IEnumerable(Of T)) As ICollection(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToCollectionOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToCollectionOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToSetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSetOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToSetOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToSetOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 281
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref>,
+
+    otherwise creates a new <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> and returns it
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ISet<T> ToSetOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the source and the returned set.
+    return:
+      type: System.Collections.Generic.ISet{{T}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref>, if
+
+        it was already, or a new <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> containing the
+
+        enumerated values of the source.
+    content.vb: Public Shared Function ToSetOrExisting(Of T)(source As IEnumerable(Of T)) As ISet(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToSetOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToSetOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToReadOnlyCollectionOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToReadOnlyCollectionOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToReadOnlyCollectionOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToReadOnlyCollectionOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 309
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a
+
+    <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref>, otherwise creates a new
+
+    collection and returns it <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+    <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IReadOnlyCollection<T> ToReadOnlyCollectionOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: >-
+        The type of elements contained in the source and the returned
+
+        collection.
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{{T}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+        <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref>, if it was already, or a new
+
+        collection containing the enumerated values of the source.
+    content.vb: Public Shared Function ToReadOnlyCollectionOrExisting(Of T)(source As IEnumerable(Of T)) As IReadOnlyCollection(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToReadOnlyCollectionOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToReadOnlyCollectionOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToReadOnlyListOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToReadOnlyListOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToReadOnlyListOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToReadOnlyListOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 332
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a
+
+    <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref>, otherwise creates a new collection
+
+    and returns it <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IReadOnlyList<T> ToReadOnlyListOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: The type of elements contained in the source and the returned list.
+    return:
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+        <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref>, if it was already, or a new
+
+        collection containing the enumerated values of the source.
+    content.vb: Public Shared Function ToReadOnlyListOrExisting(Of T)(source As IEnumerable(Of T)) As IReadOnlyList(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToReadOnlyListOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToReadOnlyListOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToReadOnlySetOrExisting``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToReadOnlySetOrExisting<T>(IEnumerable<T>)
+  nameWithType: ToCollectionExtensions.ToReadOnlySetOrExisting<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToReadOnlySetOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 358
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a
+
+    <xref href="System.Collections.Generic.IReadOnlySet%601" data-throw-if-not-resolved="false"></xref>, otherwise creates a
+
+    new collection and returns it
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.IReadOnlySet%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IReadOnlySet<T> ToReadOnlySetOrExisting<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source of elements.
+    typeParameters:
+    - id: T
+      description: >-
+        The type of elements contained in the source and the
+
+        returned set.
+    return:
+      type: System.Collections.Generic.IReadOnlySet{{T}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+        <xref href="System.Collections.Generic.IReadOnlySet%601" data-throw-if-not-resolved="false"></xref>, if it was already,
+
+        or a new collection containing the enumerated
+
+        values of the source.
+    content.vb: Public Shared Function ToReadOnlySetOrExisting(Of T)(source As IEnumerable(Of T)) As IReadOnlySet(Of T)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToReadOnlySetOrExisting(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToReadOnlySetOrExisting(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  id: ToDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDictionaryOrExisting<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType: ToCollectionExtensions.ToDictionaryOrExisting<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting<TKey, TValue>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToDictionaryOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 391
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a
+
+    <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>, otherwise creates a
+
+    new collection and returns it
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TValue> ToDictionaryOrExisting<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+      description: The source of elements.
+    typeParameters:
+    - id: TKey
+      description: >-
+        The type of keys contained in the source and the
+
+        returned dictionary.
+    - id: TValue
+      description: >-
+        The type of values contained in the source and the
+
+        returned dictionary.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+        <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>, if it was already,
+
+        or a new collection containing the enumerated
+
+        values of the source.
+    content.vb: Public Shared Function ToDictionaryOrExisting(Of TKey, TValue)(source As IEnumerable(Of KeyValuePair(Of TKey, TValue))) As IDictionary(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToDictionaryOrExisting(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting(Of TKey, TValue)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)))
+  name.vb: ToDictionaryOrExisting(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  commentId: M:Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  id: ToReadOnlyDictionaryOrExisting``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ToCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToReadOnlyDictionaryOrExisting<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType: ToCollectionExtensions.ToReadOnlyDictionaryOrExisting<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting<TKey, TValue>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ToCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToReadOnlyDictionaryOrExisting
+    path: ../Garyon/Extensions/ToCollectionExtensions.cs
+    startLine: 420
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to upcast the given source into a
+
+    <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref>, otherwise creates a
+
+    new collection and returns it
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a> <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public static IReadOnlyDictionary<TKey, TValue> ToReadOnlyDictionaryOrExisting<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+      description: The source of elements.
+    typeParameters:
+    - id: TKey
+      description: >-
+        The type of keys contained in the source and the
+
+        returned dictionary.
+    - id: TValue
+      description: >-
+        The type of values contained in the source and the
+
+        returned dictionary.
+    return:
+      type: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TValue}}
+      description: >-
+        The source collection <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator">as</a>
+
+        <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref>, if it was already,
+
+        or a new collection containing the enumerated
+
+        values of the source.
+    content.vb: Public Shared Function ToReadOnlyDictionaryOrExisting(Of TKey, TValue)(source As IEnumerable(Of KeyValuePair(Of TKey, TValue))) As IReadOnlyDictionary(Of TKey, TValue)
+  overload: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting*
+  nameWithType.vb: ToCollectionExtensions.ToReadOnlyDictionaryOrExisting(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName.vb: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting(Of TKey, TValue)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)))
+  name.vb: ToReadOnlyDictionaryOrExisting(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+references:
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.ToCollectionExtensions.ToDictionary*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToDictionary
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToDictionary__2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___
+  name: ToDictionary
+  nameWithType: ToCollectionExtensions.ToDictionary
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToDictionary
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<KeyValuePair<TKey, TValue>>
+  nameWithType: IEnumerable<KeyValuePair<TKey, TValue>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.Dictionary{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedSet*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSortedSet
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__
+  name: ToSortedSet
+  nameWithType: ToCollectionExtensions.ToSortedSet
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedSet
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.SortedSet{{T}}
+  commentId: T:System.Collections.Generic.SortedSet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.SortedSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  name: SortedSet<T>
+  nameWithType: SortedSet<T>
+  fullName: System.Collections.Generic.SortedSet<T>
+  nameWithType.vb: SortedSet(Of T)
+  fullName.vb: System.Collections.Generic.SortedSet(Of T)
+  name.vb: SortedSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.SortedSet`1
+  commentId: T:System.Collections.Generic.SortedSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  name: SortedSet<T>
+  nameWithType: SortedSet<T>
+  fullName: System.Collections.Generic.SortedSet<T>
+  nameWithType.vb: SortedSet(Of T)
+  fullName.vb: System.Collections.Generic.SortedSet(Of T)
+  name.vb: SortedSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedList*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSortedList
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSortedList__2_System_Collections_Generic_IDictionary___0___1__
+  name: ToSortedList
+  nameWithType: ToCollectionExtensions.ToSortedList
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedList
+- uid: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.IDictionary{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.SortedList{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.SortedList{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.SortedList`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2
+  name: SortedList<TKey, TValue>
+  nameWithType: SortedList<TKey, TValue>
+  fullName: System.Collections.Generic.SortedList<TKey, TValue>
+  nameWithType.vb: SortedList(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.SortedList(Of TKey, TValue)
+  name.vb: SortedList(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedList`2
+    name: SortedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedList`2
+    name: SortedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.SortedList`2
+  commentId: T:System.Collections.Generic.SortedList`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2
+  name: SortedList<TKey, TValue>
+  nameWithType: SortedList<TKey, TValue>
+  fullName: System.Collections.Generic.SortedList<TKey, TValue>
+  nameWithType.vb: SortedList(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.SortedList(Of TKey, TValue)
+  name.vb: SortedList(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedList`2
+    name: SortedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedList`2
+    name: SortedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSortedDictionary__2_System_Collections_Generic_IDictionary___0___1__
+  name: ToSortedDictionary
+  nameWithType: ToCollectionExtensions.ToSortedDictionary
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionary
+- uid: System.Collections.Generic.SortedDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.SortedDictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.SortedDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2
+  name: SortedDictionary<TKey, TValue>
+  nameWithType: SortedDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.SortedDictionary<TKey, TValue>
+  nameWithType.vb: SortedDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.SortedDictionary(Of TKey, TValue)
+  name.vb: SortedDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.SortedDictionary`2
+  commentId: T:System.Collections.Generic.SortedDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2
+  name: SortedDictionary<TKey, TValue>
+  nameWithType: SortedDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.SortedDictionary<TKey, TValue>
+  nameWithType.vb: SortedDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.SortedDictionary(Of TKey, TValue)
+  name.vb: SortedDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Array.Empty``1
+  commentId: M:System.Array.Empty``1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array.empty
+  name: Empty<T>()
+  nameWithType: Array.Empty<T>()
+  fullName: System.Array.Empty<T>()
+  nameWithType.vb: Array.Empty(Of T)()
+  fullName.vb: System.Array.Empty(Of T)()
+  name.vb: Empty(Of T)()
+  spec.csharp:
+  - uid: System.Array.Empty``1
+    name: Empty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array.empty
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Array.Empty``1
+    name: Empty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array.empty
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToArrayOrEmpty__1_System_Collections_Generic_IEnumerable___0__
+  name: ToArrayOrEmpty
+  nameWithType: ToCollectionExtensions.ToArrayOrEmpty
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToArrayOrEmpty
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToListOrEmpty__1_System_Collections_Generic_IEnumerable___0__
+  name: ToListOrEmpty
+  nameWithType: ToCollectionExtensions.ToListOrEmpty
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToListOrEmpty
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToHashSetOrEmpty__1_System_Collections_Generic_IEnumerable___0__
+  name: ToHashSetOrEmpty
+  nameWithType: ToCollectionExtensions.ToHashSetOrEmpty
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrEmpty
+- uid: System.Collections.Generic.HashSet{{T}}
+  commentId: T:System.Collections.Generic.HashSet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSortedSetOrEmpty__1_System_Collections_Generic_IEnumerable___0__
+  name: ToSortedSetOrEmpty
+  nameWithType: ToCollectionExtensions.ToSortedSetOrEmpty
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedSetOrEmpty
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSortedListOrEmpty__2_System_Collections_Generic_IDictionary___0___1__
+  name: ToSortedListOrEmpty
+  nameWithType: ToCollectionExtensions.ToSortedListOrEmpty
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedListOrEmpty
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSortedDictionaryOrEmpty__2_System_Collections_Generic_IDictionary___0___1__
+  name: ToSortedDictionaryOrEmpty
+  nameWithType: ToCollectionExtensions.ToSortedDictionaryOrEmpty
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSortedDictionaryOrEmpty
+- uid: Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToArrayOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToArrayOrExisting
+  nameWithType: ToCollectionExtensions.ToArrayOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToArrayOrExisting
+- uid: Garyon.Extensions.ToCollectionExtensions.ToListOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToListOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToListOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToListOrExisting
+  nameWithType: ToCollectionExtensions.ToListOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToListOrExisting
+- uid: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToHashSetOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToHashSetOrExisting
+  nameWithType: ToCollectionExtensions.ToHashSetOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToHashSetOrExisting
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToCollectionOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToCollectionOrExisting
+  nameWithType: ToCollectionExtensions.ToCollectionOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToCollectionOrExisting
+- uid: System.Collections.Generic.ICollection{{T}}
+  commentId: T:System.Collections.Generic.ICollection{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.ISet`1
+  commentId: T:System.Collections.Generic.ISet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<T>
+  nameWithType: ISet<T>
+  fullName: System.Collections.Generic.ISet<T>
+  nameWithType.vb: ISet(Of T)
+  fullName.vb: System.Collections.Generic.ISet(Of T)
+  name.vb: ISet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToSetOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToSetOrExisting
+  nameWithType: ToCollectionExtensions.ToSetOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToSetOrExisting
+- uid: System.Collections.Generic.ISet{{T}}
+  commentId: T:System.Collections.Generic.ISet{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ISet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<T>
+  nameWithType: ISet<T>
+  fullName: System.Collections.Generic.ISet<T>
+  nameWithType.vb: ISet(Of T)
+  fullName.vb: System.Collections.Generic.ISet(Of T)
+  name.vb: ISet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToReadOnlyCollectionOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToReadOnlyCollectionOrExisting
+  nameWithType: ToCollectionExtensions.ToReadOnlyCollectionOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyCollectionOrExisting
+- uid: System.Collections.Generic.IReadOnlyCollection{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToReadOnlyListOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToReadOnlyListOrExisting
+  nameWithType: ToCollectionExtensions.ToReadOnlyListOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyListOrExisting
+- uid: System.Collections.Generic.IReadOnlyList{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlySet`1
+  commentId: T:System.Collections.Generic.IReadOnlySet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<T>
+  nameWithType: IReadOnlySet<T>
+  fullName: System.Collections.Generic.IReadOnlySet<T>
+  nameWithType.vb: IReadOnlySet(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of T)
+  name.vb: IReadOnlySet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToReadOnlySetOrExisting__1_System_Collections_Generic_IEnumerable___0__
+  name: ToReadOnlySetOrExisting
+  nameWithType: ToCollectionExtensions.ToReadOnlySetOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlySetOrExisting
+- uid: System.Collections.Generic.IReadOnlySet{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlySet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlySet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<T>
+  nameWithType: IReadOnlySet<T>
+  fullName: System.Collections.Generic.IReadOnlySet<T>
+  nameWithType.vb: IReadOnlySet(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of T)
+  name.vb: IReadOnlySet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToDictionaryOrExisting__2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___
+  name: ToDictionaryOrExisting
+  nameWithType: ToCollectionExtensions.ToDictionaryOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToDictionaryOrExisting
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting*
+  commentId: Overload:Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting
+  href: Garyon.Extensions.ToCollectionExtensions.html#Garyon_Extensions_ToCollectionExtensions_ToReadOnlyDictionaryOrExisting__2_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___
+  name: ToReadOnlyDictionaryOrExisting
+  nameWithType: ToCollectionExtensions.ToReadOnlyDictionaryOrExisting
+  fullName: Garyon.Extensions.ToCollectionExtensions.ToReadOnlyDictionaryOrExisting
+- uid: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )

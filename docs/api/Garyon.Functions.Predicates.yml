@@ -1,0 +1,859 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.Predicates
+  commentId: T:Garyon.Functions.Predicates
+  id: Predicates
+  parent: Garyon.Functions
+  children:
+  - Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+  - Garyon.Functions.Predicates.False``1(``0)
+  - Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+  - Garyon.Functions.Predicates.NotEmpty(System.String)
+  - Garyon.Functions.Predicates.NotEmptyOrWhitespace(System.String)
+  - Garyon.Functions.Predicates.NotNull``1(``0)
+  - Garyon.Functions.Predicates.Null``1(``0)
+  - Garyon.Functions.Predicates.True``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: Predicates
+  nameWithType: Predicates
+  fullName: Garyon.Functions.Predicates
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Predicates
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Contains functions that can be used as predicates in functions that filter
+
+    collections. Using these functions is advised over lambdas, as lambdas
+
+    create a new delegate instance, effectively reducing performance.
+  example: []
+  syntax:
+    content: public static class Predicates
+    content.vb: Public Module Predicates
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Functions.Predicates.True``1(``0)
+  commentId: M:Garyon.Functions.Predicates.True``1(``0)
+  id: True``1(``0)
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: True<T>(T)
+  nameWithType: Predicates.True<T>(T)
+  fullName: Garyon.Functions.Predicates.True<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: "True"
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 23
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Always returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+  example: []
+  syntax:
+    content: public static bool True<T>(T _)
+    parameters:
+    - id: _
+      type: '{T}'
+      description: The element.
+    typeParameters:
+    - id: T
+      description: The type of the element.
+    return:
+      type: System.Boolean
+      description: Always <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+    content.vb: Public Shared Function [True](Of T)(_ As T) As Boolean
+  overload: Garyon.Functions.Predicates.True*
+  nameWithType.vb: Predicates.True(Of T)(T)
+  fullName.vb: Garyon.Functions.Predicates.True(Of T)(T)
+  name.vb: True(Of T)(T)
+- uid: Garyon.Functions.Predicates.False``1(``0)
+  commentId: M:Garyon.Functions.Predicates.False``1(``0)
+  id: False``1(``0)
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: False<T>(T)
+  nameWithType: Predicates.False<T>(T)
+  fullName: Garyon.Functions.Predicates.False<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: "False"
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 37
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Always returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+  example: []
+  syntax:
+    content: public static bool False<T>(T _)
+    parameters:
+    - id: _
+      type: '{T}'
+      description: The element.
+    typeParameters:
+    - id: T
+      description: The type of the element.
+    return:
+      type: System.Boolean
+      description: Always <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function [False](Of T)(_ As T) As Boolean
+  overload: Garyon.Functions.Predicates.False*
+  nameWithType.vb: Predicates.False(Of T)(T)
+  fullName.vb: Garyon.Functions.Predicates.False(Of T)(T)
+  name.vb: False(Of T)(T)
+- uid: Garyon.Functions.Predicates.NotNull``1(``0)
+  commentId: M:Garyon.Functions.Predicates.NotNull``1(``0)
+  id: NotNull``1(``0)
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: NotNull<T>(T)
+  nameWithType: Predicates.NotNull<T>(T)
+  fullName: Garyon.Functions.Predicates.NotNull<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NotNull
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 55
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Determines whether the provided element is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  remarks: For nullable structs, consider using <xref href="Garyon.Functions.Predicates.HasValue%60%601(System.Nullable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool NotNull<T>(T element)
+    parameters:
+    - id: element
+      type: '{T}'
+      description: The element.
+    typeParameters:
+    - id: T
+      description: The type of the element.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the element is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function NotNull(Of T)(element As T) As Boolean
+  overload: Garyon.Functions.Predicates.NotNull*
+  nameWithType.vb: Predicates.NotNull(Of T)(T)
+  fullName.vb: Garyon.Functions.Predicates.NotNull(Of T)(T)
+  name.vb: NotNull(Of T)(T)
+- uid: Garyon.Functions.Predicates.Null``1(``0)
+  commentId: M:Garyon.Functions.Predicates.Null``1(``0)
+  id: Null``1(``0)
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: Null<T>(T)
+  nameWithType: Predicates.Null<T>(T)
+  fullName: Garyon.Functions.Predicates.Null<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: "Null"
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 74
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Determines whether the provided element is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  remarks: >-
+    For nullable structs, consider using
+
+    <xref href="Garyon.Functions.Predicates.DoesNotHaveValue%60%601(System.Nullable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool Null<T>(T element)
+    parameters:
+    - id: element
+      type: '{T}'
+      description: The element.
+    typeParameters:
+    - id: T
+      description: The type of the element.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the element is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function Null(Of T)(element As T) As Boolean
+  overload: Garyon.Functions.Predicates.Null*
+  nameWithType.vb: Predicates.Null(Of T)(T)
+  fullName.vb: Garyon.Functions.Predicates.Null(Of T)(T)
+  name.vb: Null(Of T)(T)
+- uid: Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+  id: HasValue``1(System.Nullable{``0})
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: HasValue<T>(T?)
+  nameWithType: Predicates.HasValue<T>(T?)
+  fullName: Garyon.Functions.Predicates.HasValue<T>(T?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: HasValue
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 89
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Determines whether the provided nullable struct object has a value.
+  example: []
+  syntax:
+    content: 'public static bool HasValue<T>(T? element) where T : struct'
+    parameters:
+    - id: element
+      type: System.Nullable{{T}}
+      description: The nullable struct object.
+    typeParameters:
+    - id: T
+      description: The type of the struct.
+    return:
+      type: System.Boolean
+      description: >-
+        The value equal to <xref href="System.Nullable%601.HasValue" data-throw-if-not-resolved="false"></xref> for the
+
+        provided object.
+    content.vb: Public Shared Function HasValue(Of T As Structure)(element As T?) As Boolean
+  overload: Garyon.Functions.Predicates.HasValue*
+  nameWithType.vb: Predicates.HasValue(Of T)(T?)
+  fullName.vb: Garyon.Functions.Predicates.HasValue(Of T)(T?)
+  name.vb: HasValue(Of T)(T?)
+- uid: Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+  id: DoesNotHaveValue``1(System.Nullable{``0})
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: DoesNotHaveValue<T>(T?)
+  nameWithType: Predicates.DoesNotHaveValue<T>(T?)
+  fullName: Garyon.Functions.Predicates.DoesNotHaveValue<T>(T?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DoesNotHaveValue
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 109
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Determines whether the provided nullable struct object does not have a
+
+    value.
+  example: []
+  syntax:
+    content: 'public static bool DoesNotHaveValue<T>(T? element) where T : struct'
+    parameters:
+    - id: element
+      type: System.Nullable{{T}}
+      description: The nullable struct object.
+    typeParameters:
+    - id: T
+      description: The type of the struct.
+    return:
+      type: System.Boolean
+      description: >-
+        The value opposite to <xref href="System.Nullable%601.HasValue" data-throw-if-not-resolved="false"></xref> for the
+
+        provided object.
+    content.vb: Public Shared Function DoesNotHaveValue(Of T As Structure)(element As T?) As Boolean
+  overload: Garyon.Functions.Predicates.DoesNotHaveValue*
+  nameWithType.vb: Predicates.DoesNotHaveValue(Of T)(T?)
+  fullName.vb: Garyon.Functions.Predicates.DoesNotHaveValue(Of T)(T?)
+  name.vb: DoesNotHaveValue(Of T)(T?)
+- uid: Garyon.Functions.Predicates.NotEmpty(System.String)
+  commentId: M:Garyon.Functions.Predicates.NotEmpty(System.String)
+  id: NotEmpty(System.String)
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: NotEmpty(string?)
+  nameWithType: Predicates.NotEmpty(string?)
+  fullName: Garyon.Functions.Predicates.NotEmpty(string?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NotEmpty
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 128
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Determines whether the provided string is neither <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> nor empty.
+  remarks: Equivalent to <code>!string.IsNullOrEmpty(s)</code>.
+  example: []
+  syntax:
+    content: public static bool NotEmpty(string? s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">s</code> is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> and has a non-zero length;
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function NotEmpty(s As String) As Boolean
+  overload: Garyon.Functions.Predicates.NotEmpty*
+  nameWithType.vb: Predicates.NotEmpty(String)
+  fullName.vb: Garyon.Functions.Predicates.NotEmpty(String)
+  name.vb: NotEmpty(String)
+- uid: Garyon.Functions.Predicates.NotEmptyOrWhitespace(System.String)
+  commentId: M:Garyon.Functions.Predicates.NotEmptyOrWhitespace(System.String)
+  id: NotEmptyOrWhitespace(System.String)
+  parent: Garyon.Functions.Predicates
+  langs:
+  - csharp
+  - vb
+  name: NotEmptyOrWhitespace(string?)
+  nameWithType: Predicates.NotEmptyOrWhitespace(string?)
+  fullName: Garyon.Functions.Predicates.NotEmptyOrWhitespace(string?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Predicates.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NotEmptyOrWhitespace
+    path: ../Garyon/Functions/Predicates.cs
+    startLine: 143
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: Determines whether the provided string is neither <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, empty, nor consists exclusively of whitespace.
+  remarks: Equivalent to <code>!string.IsNullOrWhiteSpace(s)</code>.
+  example: []
+  syntax:
+    content: public static bool NotEmptyOrWhitespace(string? s)
+    parameters:
+    - id: s
+      type: System.String
+      description: The string.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when <code class="paramref">s</code> is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, not empty, and contains at least one
+
+        non-whitespace character; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function NotEmptyOrWhitespace(s As String) As Boolean
+  overload: Garyon.Functions.Predicates.NotEmptyOrWhitespace*
+  nameWithType.vb: Predicates.NotEmptyOrWhitespace(String)
+  fullName.vb: Garyon.Functions.Predicates.NotEmptyOrWhitespace(String)
+  name.vb: NotEmptyOrWhitespace(String)
+references:
+- uid: Garyon.Functions
+  commentId: N:Garyon.Functions
+  href: Garyon.html
+  name: Garyon.Functions
+  nameWithType: Garyon.Functions
+  fullName: Garyon.Functions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.Predicates.True*
+  commentId: Overload:Garyon.Functions.Predicates.True
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_True__1___0_
+  name: "True"
+  nameWithType: Predicates.True
+  fullName: Garyon.Functions.Predicates.True
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Functions.Predicates.False*
+  commentId: Overload:Garyon.Functions.Predicates.False
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_False__1___0_
+  name: "False"
+  nameWithType: Predicates.False
+  fullName: Garyon.Functions.Predicates.False
+- uid: Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_HasValue__1_System_Nullable___0__
+  name: HasValue<T>(T?)
+  nameWithType: Predicates.HasValue<T>(T?)
+  fullName: Garyon.Functions.Predicates.HasValue<T>(T?)
+  nameWithType.vb: Predicates.HasValue(Of T)(T?)
+  fullName.vb: Garyon.Functions.Predicates.HasValue(Of T)(T?)
+  name.vb: HasValue(Of T)(T?)
+  spec.csharp:
+  - uid: Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+    name: HasValue
+    href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_HasValue__1_System_Nullable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Functions.Predicates.HasValue``1(System.Nullable{``0})
+    name: HasValue
+    href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_HasValue__1_System_Nullable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: '?'
+  - name: )
+- uid: Garyon.Functions.Predicates.NotNull*
+  commentId: Overload:Garyon.Functions.Predicates.NotNull
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_NotNull__1___0_
+  name: NotNull
+  nameWithType: Predicates.NotNull
+  fullName: Garyon.Functions.Predicates.NotNull
+- uid: Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+  commentId: M:Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_DoesNotHaveValue__1_System_Nullable___0__
+  name: DoesNotHaveValue<T>(T?)
+  nameWithType: Predicates.DoesNotHaveValue<T>(T?)
+  fullName: Garyon.Functions.Predicates.DoesNotHaveValue<T>(T?)
+  nameWithType.vb: Predicates.DoesNotHaveValue(Of T)(T?)
+  fullName.vb: Garyon.Functions.Predicates.DoesNotHaveValue(Of T)(T?)
+  name.vb: DoesNotHaveValue(Of T)(T?)
+  spec.csharp:
+  - uid: Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+    name: DoesNotHaveValue
+    href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_DoesNotHaveValue__1_System_Nullable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Functions.Predicates.DoesNotHaveValue``1(System.Nullable{``0})
+    name: DoesNotHaveValue
+    href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_DoesNotHaveValue__1_System_Nullable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: '?'
+  - name: )
+- uid: Garyon.Functions.Predicates.Null*
+  commentId: Overload:Garyon.Functions.Predicates.Null
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_Null__1___0_
+  name: "Null"
+  nameWithType: Predicates.Null
+  fullName: Garyon.Functions.Predicates.Null
+- uid: System.Nullable`1.HasValue
+  commentId: P:System.Nullable`1.HasValue
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1.hasvalue
+  name: HasValue
+  nameWithType: Nullable<T>.HasValue
+  fullName: System.Nullable<T>.HasValue
+  nameWithType.vb: Nullable(Of T).HasValue
+  fullName.vb: System.Nullable(Of T).HasValue
+- uid: Garyon.Functions.Predicates.HasValue*
+  commentId: Overload:Garyon.Functions.Predicates.HasValue
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_HasValue__1_System_Nullable___0__
+  name: HasValue
+  nameWithType: Predicates.HasValue
+  fullName: Garyon.Functions.Predicates.HasValue
+- uid: System.Nullable{{T}}
+  commentId: T:System.Nullable{``0}
+  parent: System
+  definition: System.Nullable`1
+  name: T?
+  nameWithType: T?
+  fullName: T?
+  spec.csharp:
+  - name: T
+  - name: '?'
+  spec.vb:
+  - name: T
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Functions.Predicates.DoesNotHaveValue*
+  commentId: Overload:Garyon.Functions.Predicates.DoesNotHaveValue
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_DoesNotHaveValue__1_System_Nullable___0__
+  name: DoesNotHaveValue
+  nameWithType: Predicates.DoesNotHaveValue
+  fullName: Garyon.Functions.Predicates.DoesNotHaveValue
+- uid: Garyon.Functions.Predicates.NotEmpty*
+  commentId: Overload:Garyon.Functions.Predicates.NotEmpty
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_NotEmpty_System_String_
+  name: NotEmpty
+  nameWithType: Predicates.NotEmpty
+  fullName: Garyon.Functions.Predicates.NotEmpty
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Functions.Predicates.NotEmptyOrWhitespace*
+  commentId: Overload:Garyon.Functions.Predicates.NotEmptyOrWhitespace
+  href: Garyon.Functions.Predicates.html#Garyon_Functions_Predicates_NotEmptyOrWhitespace_System_String_
+  name: NotEmptyOrWhitespace
+  nameWithType: Predicates.NotEmptyOrWhitespace
+  fullName: Garyon.Functions.Predicates.NotEmptyOrWhitespace

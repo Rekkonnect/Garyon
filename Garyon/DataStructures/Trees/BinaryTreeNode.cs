@@ -485,15 +485,15 @@ public abstract class BinaryTreeNode<TValue, TTree, TTreeNode> : BaseTreeNode<TV
         {
             foreach (var n in currentNodes)
             {
-                if (LeftChild is not null)
+                if (n.LeftChild is not null)
                 {
-                    childrenNodes.Add(LeftChild);
-                    yield return LeftChild;
+                    childrenNodes.Add(n.LeftChild);
+                    yield return n.LeftChild;
                 }
-                if (RightChild is not null)
+                if (n.RightChild is not null)
                 {
-                    childrenNodes.Add(RightChild);
-                    yield return RightChild;
+                    childrenNodes.Add(n.RightChild);
+                    yield return n.RightChild;
                 }
             }
 

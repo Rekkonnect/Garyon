@@ -15,7 +15,7 @@ public static partial class IEnumerableExtensions
         /// The <seealso cref="IndexedEnumerable{T}"/> that wraps the source
         /// enumerable for indexed enumeration.
         /// </returns>
-        public IndexedEnumerable<T> WithIndex()
+        public IndexedEnumerable<T> Indexed()
         {
             return new IndexedEnumerable<T>(source);
         }

@@ -92,4 +92,19 @@ public class GeneralMathTests
             await Assert.That(GeneralMath.FactorialBigInteger(multiplier)).IsEqualTo(currentResult);
         }
     }
+
+    [Test]
+    public async Task MinMaxTest()
+    {
+        await Assert.That(GeneralMath.Min((byte)4, (byte)1, (byte)9)).IsEqualTo((byte)1);
+        await Assert.That(GeneralMath.Min(new[] { 4, 1, 9 })).IsEqualTo(1);
+        await Assert.That(GeneralMath.Min(System.Array.Empty<int>())).IsEqualTo(int.MinValue);
+        await Assert.That(GeneralMath.Max((byte)4, (byte)1, (byte)9)).IsEqualTo((byte)9);
+        await Assert.That(GeneralMath.Max(new[] { 4, 1, 9 })).IsEqualTo(9);
+        await Assert.That(GeneralMath.Max(System.Array.Empty<int>())).IsEqualTo(int.MaxValue);
+        await Assert.That(GeneralMath.Min(new long[] { 7, 2, 3 })).IsEqualTo(2L);
+        await Assert.That(GeneralMath.Max(new long[] { 7, 2, 3 })).IsEqualTo(7L);
+        await Assert.That(GeneralMath.Min(new ulong[] { 7, 2, 3 })).IsEqualTo(2UL);
+        await Assert.That(GeneralMath.Max(new ulong[] { 7, 2, 3 })).IsEqualTo(7UL);
+    }
 }

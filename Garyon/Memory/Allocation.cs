@@ -1,5 +1,6 @@
 ﻿using Garyon.Functions;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
 namespace Garyon.Memory;
@@ -7,6 +8,7 @@ namespace Garyon.Memory;
 /// <summary>
 /// Provides functions for memory allocation on the unmanaged heap.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static unsafe class Allocation
 {
     /// <summary>

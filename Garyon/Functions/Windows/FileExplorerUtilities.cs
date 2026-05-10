@@ -1,7 +1,5 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
 namespace Garyon.Functions.Windows;
@@ -9,9 +7,7 @@ namespace Garyon.Functions.Windows;
 /// <summary>
 /// Provides utility functions regarding the Windows file explorer.
 /// </summary>
-#if HAS_SUPPORTED_OS_PLATFORM
 [SupportedOSPlatform("windows")]
-#endif
 public static class FileExplorerUtilities
 {
     /// <summary>

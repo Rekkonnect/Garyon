@@ -57,6 +57,7 @@ public class ParallellyEnumerableTests
         await Assert.That((doubles, ints, strings).AsParallellyEnumerable()).IsEquivalentTo(expectedDoubleIntString);
         await Assert.That((doubles, strings, ints).AsParallellyEnumerable()).IsEquivalentTo(expectedDoubleStringInt);
     }
+
     [Test]
     public async Task Enumerate4Test()
     {

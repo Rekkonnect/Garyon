@@ -16,30 +16,34 @@ public enum AccessibilityModifiers : byte
     /// <summary>
     /// The <see langword="public"/> modifier.
     /// </summary>
-    Public = 0x1,
+    Public = 1 << 0,
     /// <summary>
     /// The <see langword="internal"/> modifier.
     /// </summary>
-    Internal = 0x2,
+    Internal = 1 << 1,
     /// <summary>
     /// The <see langword="protected internal"/> modifier.
     /// </summary>
-    ProtectedInternal = 0x4,
+    ProtectedInternal = 1 << 2,
     /// <summary>
     /// The <see langword="protected"/> modifier.
     /// </summary>
-    Protected = 0x8,
+    Protected = 1 << 3,
     /// <summary>
     /// The <see langword="private protected"/> modifier.
     /// </summary>
-    PrivateProtected = 0x10,
+    PrivateProtected = 1 << 4,
     /// <summary>
     /// The <see langword="private"/> modifier.
     /// </summary>
-    Private = 0x20,
+    Private = 1 << 5,
+    /// <summary>
+    /// The <see langword="file"/> modifier.
+    /// </summary>
+    File = 1 << 6,
 
     /// <summary>
     /// All accessibility modifiers.
     /// </summary>
-    AllAccessibilities = Public | Internal | ProtectedInternal | Protected | PrivateProtected | Private,
+    AllAccessibilities = Public | Internal | ProtectedInternal | Protected | PrivateProtected | Private | File,
 }

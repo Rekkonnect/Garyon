@@ -1,6 +1,4 @@
-﻿#if HAS_SLICES
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -49,5 +47,3 @@ public static class IndexExtensions
         };
     }
 }
-
-#endif

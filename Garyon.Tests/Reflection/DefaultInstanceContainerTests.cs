@@ -41,7 +41,7 @@ public class DefaultInstanceContainerTests
     {
         protected override object[] GetDefaultInstanceArguments()
         {
-            return new object[] { Array.Empty<int>() };
+            return [Array.Empty<int>()];
         }
 
         protected override bool IsValidInstanceType(Type type)

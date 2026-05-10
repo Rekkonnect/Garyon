@@ -1,0 +1,2455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.StringBuilderExtensions
+  commentId: T:Garyon.Extensions.StringBuilderExtensions
+  id: StringBuilderExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder,System.String,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char*,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char[])
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Object)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.ReadOnlyMemory{System.Char})
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.ReadOnlySpan{System.Char})
+  - Garyon.Extensions.StringBuilderExtensions.AppendLineCount(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLine``1(System.Text.StringBuilder,``0)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Collections.Generic.IEnumerable{System.Object})
+  - Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Collections.IEnumerable)
+  - Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Object[])
+  - Garyon.Extensions.StringBuilderExtensions.AppendLower(System.Text.StringBuilder,System.String)
+  - Garyon.Extensions.StringBuilderExtensions.AppendUpper(System.Text.StringBuilder,System.String)
+  - Garyon.Extensions.StringBuilderExtensions.Copy(System.Text.StringBuilder)
+  - Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder,System.Char)
+  - Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder,System.String)
+  - Garyon.Extensions.StringBuilderExtensions.Last(System.Text.StringBuilder)
+  - Garyon.Extensions.StringBuilderExtensions.LastOrNull(System.Text.StringBuilder)
+  - Garyon.Extensions.StringBuilderExtensions.Remove(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder)
+  - Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder,System.Char)
+  - Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder,System.String)
+  - Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone(System.Text.StringBuilder)
+  - Garyon.Extensions.StringBuilderExtensions.Replace(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.Substring(System.Text.StringBuilder,System.Int32,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.SubstringBuilder(System.Text.StringBuilder,System.Int32,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.SubstringLast(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.SubstringStart(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder(System.Text.StringBuilder,System.Int32)
+  - Garyon.Extensions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder)
+  - Garyon.Extensions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder)
+  langs:
+  - csharp
+  - vb
+  name: StringBuilderExtensions
+  nameWithType: StringBuilderExtensions
+  fullName: Garyon.Extensions.StringBuilderExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: StringBuilderExtensions
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extension methods for the <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class StringBuilderExtensions
+    content.vb: Public Module StringBuilderExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char[])
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char[])
+  id: AppendLine(System.Text.StringBuilder,System.Char[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(StringBuilder, char[])
+  nameWithType: StringBuilderExtensions.AppendLine(StringBuilder, char[])
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, char[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends an array of characters, and appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLine(this StringBuilder builder, char[] chars)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: chars
+      type: System.Char[]
+      description: The array of characters to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLine(builder As StringBuilder, chars As Char()) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(StringBuilder, Char())
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, Char())
+  name.vb: AppendLine(StringBuilder, Char())
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.ReadOnlySpan{System.Char})
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.ReadOnlySpan{System.Char})
+  id: AppendLine(System.Text.StringBuilder,System.ReadOnlySpan{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(StringBuilder, ReadOnlySpan<char>)
+  nameWithType: StringBuilderExtensions.AppendLine(StringBuilder, ReadOnlySpan<char>)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 34
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends a sequence of characters, and appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLine(this StringBuilder builder, ReadOnlySpan<char> chars)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: chars
+      type: System.ReadOnlySpan{System.Char}
+      description: The sequence of characters to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLine(builder As StringBuilder, chars As ReadOnlySpan(Of Char)) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(StringBuilder, ReadOnlySpan(Of Char))
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, System.ReadOnlySpan(Of Char))
+  name.vb: AppendLine(StringBuilder, ReadOnlySpan(Of Char))
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.ReadOnlyMemory{System.Char})
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.ReadOnlyMemory{System.Char})
+  id: AppendLine(System.Text.StringBuilder,System.ReadOnlyMemory{System.Char})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(StringBuilder, ReadOnlyMemory<char>)
+  nameWithType: StringBuilderExtensions.AppendLine(StringBuilder, ReadOnlyMemory<char>)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, System.ReadOnlyMemory<char>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends a sequence of characters, and appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLine(this StringBuilder builder, ReadOnlyMemory<char> chars)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: chars
+      type: System.ReadOnlyMemory{System.Char}
+      description: The sequence of characters to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLine(builder As StringBuilder, chars As ReadOnlyMemory(Of Char)) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(StringBuilder, ReadOnlyMemory(Of Char))
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, System.ReadOnlyMemory(Of Char))
+  name.vb: AppendLine(StringBuilder, ReadOnlyMemory(Of Char))
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char*,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char*,System.Int32)
+  id: AppendLine(System.Text.StringBuilder,System.Char*,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(StringBuilder, char*, int)
+  nameWithType: StringBuilderExtensions.AppendLine(StringBuilder, char*, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, char*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 59
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends a sequence of characters, and appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLine(this StringBuilder builder, char* chars, int charCount)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: chars
+      type: System.Char*
+      description: The sequence of characters to append.
+    - id: charCount
+      type: System.Int32
+      description: The number of characters to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLine(builder As StringBuilder, chars As Char*, charCount As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(StringBuilder, Char*, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, Char*, Integer)
+  name.vb: AppendLine(StringBuilder, Char*, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Object)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Object)
+  id: AppendLine(System.Text.StringBuilder,System.Object)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(StringBuilder, object)
+  nameWithType: StringBuilderExtensions.AppendLine(StringBuilder, object)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, object)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 76
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Appends an object's string representation, and appends a new line after
+
+    that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLine(this StringBuilder builder, object o)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: o
+      type: System.Object
+      description: The object whose string representation to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLine(builder As StringBuilder, o As Object) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(StringBuilder, Object)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, Object)
+  name.vb: AppendLine(StringBuilder, Object)
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Collections.IEnumerable)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Collections.IEnumerable)
+  id: AppendLines(System.Text.StringBuilder,System.Collections.IEnumerable)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLines(StringBuilder, IEnumerable)
+  nameWithType: StringBuilderExtensions.AppendLines(StringBuilder, IEnumerable)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder, System.Collections.IEnumerable)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLines
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 94
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Appends the string representations of objects in a collection, and
+
+    appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLines(this StringBuilder builder, IEnumerable objects)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: objects
+      type: System.Collections.IEnumerable
+      description: The objects whose string representations to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLines(builder As StringBuilder, objects As IEnumerable) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLines*
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Collections.Generic.IEnumerable{System.Object})
+  id: AppendLines(System.Text.StringBuilder,System.Collections.Generic.IEnumerable{System.Object})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLines(StringBuilder, IEnumerable<object>)
+  nameWithType: StringBuilderExtensions.AppendLines(StringBuilder, IEnumerable<object>)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder, System.Collections.Generic.IEnumerable<object>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLines
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 111
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Appends the string representations of objects in a collection, and
+
+    appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLines(this StringBuilder builder, IEnumerable<object> objects)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: objects
+      type: System.Collections.Generic.IEnumerable{System.Object}
+      description: The objects whose string representations to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLines(builder As StringBuilder, objects As IEnumerable(Of Object)) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLines*
+  nameWithType.vb: StringBuilderExtensions.AppendLines(StringBuilder, IEnumerable(Of Object))
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder, System.Collections.Generic.IEnumerable(Of Object))
+  name.vb: AppendLines(StringBuilder, IEnumerable(Of Object))
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Object[])
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder,System.Object[])
+  id: AppendLines(System.Text.StringBuilder,System.Object[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLines(StringBuilder, params object[])
+  nameWithType: StringBuilderExtensions.AppendLines(StringBuilder, params object[])
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder, params object[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLines
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 130
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Appends the string representations of objects in a collection, and
+
+    appends a new line after that.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLines(this StringBuilder builder, params object[] objects)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: objects
+      type: System.Object[]
+      description: The objects whose string representations to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLines(builder As StringBuilder, ParamArray objects As Object()) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLines*
+  nameWithType.vb: StringBuilderExtensions.AppendLines(StringBuilder, ParamArray Object())
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLines(System.Text.StringBuilder, ParamArray Object())
+  name.vb: AppendLines(StringBuilder, ParamArray Object())
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendUpper(System.Text.StringBuilder,System.String)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendUpper(System.Text.StringBuilder,System.String)
+  id: AppendUpper(System.Text.StringBuilder,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendUpper(StringBuilder, string)
+  nameWithType: StringBuilderExtensions.AppendUpper(StringBuilder, string)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendUpper(System.Text.StringBuilder, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendUpper
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 147
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends the given string's characters by converting them in uppercase.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendUpper(this StringBuilder stringBuilder, string value)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: value
+      type: System.String
+      description: The string to convert to uppercase.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendUpper(stringBuilder As StringBuilder, value As String) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendUpper*
+  nameWithType.vb: StringBuilderExtensions.AppendUpper(StringBuilder, String)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendUpper(System.Text.StringBuilder, String)
+  name.vb: AppendUpper(StringBuilder, String)
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLower(System.Text.StringBuilder,System.String)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLower(System.Text.StringBuilder,System.String)
+  id: AppendLower(System.Text.StringBuilder,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLower(StringBuilder, string)
+  nameWithType: StringBuilderExtensions.AppendLower(StringBuilder, string)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLower(System.Text.StringBuilder, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLower
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 166
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends the given string's characters by converting them in lowercase.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLower(this StringBuilder stringBuilder, string value)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: value
+      type: System.String
+      description: The string to convert to lowercase.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLower(stringBuilder As StringBuilder, value As String) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLower*
+  nameWithType.vb: StringBuilderExtensions.AppendLower(StringBuilder, String)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLower(System.Text.StringBuilder, String)
+  name.vb: AppendLower(StringBuilder, String)
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder,System.Char)
+  id: AppendLine(System.Text.StringBuilder,System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(StringBuilder, char)
+  nameWithType: StringBuilderExtensions.AppendLine(StringBuilder, char)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 174
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static StringBuilder AppendLine(this StringBuilder stringBuilder, char value)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+    - id: value
+      type: System.Char
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function AppendLine(stringBuilder As StringBuilder, value As Char) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(StringBuilder, Char)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(System.Text.StringBuilder, Char)
+  name.vb: AppendLine(StringBuilder, Char)
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine``1(System.Text.StringBuilder,``0)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLine``1(System.Text.StringBuilder,``0)
+  id: AppendLine``1(System.Text.StringBuilder,``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLine<T>(StringBuilder, T)
+  nameWithType: StringBuilderExtensions.AppendLine<T>(StringBuilder, T)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine<T>(System.Text.StringBuilder, T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLine
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 181
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static StringBuilder AppendLine<T>(this StringBuilder stringBuilder, T value)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function AppendLine(Of T)(stringBuilder As StringBuilder, value As T) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  nameWithType.vb: StringBuilderExtensions.AppendLine(Of T)(StringBuilder, T)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLine(Of T)(System.Text.StringBuilder, T)
+  name.vb: AppendLine(Of T)(StringBuilder, T)
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLineCount(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.AppendLineCount(System.Text.StringBuilder,System.Int32)
+  id: AppendLineCount(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AppendLineCount(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.AppendLineCount(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLineCount(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppendLineCount
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 200
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Appends a line to the string builder a number of times.
+  example: []
+  syntax:
+    content: public static StringBuilder AppendLineCount(this StringBuilder stringBuilder, int count)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append.
+    - id: count
+      type: System.Int32
+      description: The number of lines to append.
+    return:
+      type: System.Text.StringBuilder
+      description: The same <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function AppendLineCount(stringBuilder As StringBuilder, count As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.AppendLineCount*
+  nameWithType.vb: StringBuilderExtensions.AppendLineCount(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.AppendLineCount(System.Text.StringBuilder, Integer)
+  name.vb: AppendLineCount(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.Copy(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Copy(System.Text.StringBuilder)
+  id: Copy(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Copy(StringBuilder)
+  nameWithType: StringBuilderExtensions.Copy(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Copy(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Copy
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 222
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Copies this <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> into a new instance.
+  remarks: >-
+    In .NET Core 3.1 onwards, this uses the GetChunks method that enumerates
+
+    the chunks contained in the builder, whereas for the earlier versions of
+
+    the framework the builder is converted into the full string, and the new
+
+    instance is initialized through that.
+  example: []
+  syntax:
+    content: public static StringBuilder Copy(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to copy.
+    return:
+      type: System.Text.StringBuilder
+      description: The new copied <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Copy(s As StringBuilder) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.Copy*
+- uid: Garyon.Extensions.StringBuilderExtensions.Remove(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Remove(System.Text.StringBuilder,System.Int32)
+  id: Remove(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Remove(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.Remove(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Remove(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Remove
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 244
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Removes a range of characters from the specified starting index to the
+
+    end of the string.
+  example: []
+  syntax:
+    content: public static StringBuilder Remove(this StringBuilder s, int startingIndex)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose range of characters to remove.
+    - id: startingIndex
+      type: System.Int32
+      description: The starting index from which to remove all characters.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function Remove(s As StringBuilder, startingIndex As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.Remove*
+  nameWithType.vb: StringBuilderExtensions.Remove(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.Remove(System.Text.StringBuilder, Integer)
+  name.vb: Remove(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder,System.Int32)
+  id: RemoveLast(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLast(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.RemoveLast(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLast
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 254
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes a number of characters from the end of the string.
+  example: []
+  syntax:
+    content: public static StringBuilder RemoveLast(this StringBuilder s, int characterCount)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last characters to remove.
+    - id: characterCount
+      type: System.Int32
+      description: The count of characters to remove from the end of the string.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function RemoveLast(s As StringBuilder, characterCount As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.RemoveLast*
+  nameWithType.vb: StringBuilderExtensions.RemoveLast(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder, Integer)
+  name.vb: RemoveLast(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder)
+  id: RemoveLast(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLast(StringBuilder)
+  nameWithType: StringBuilderExtensions.RemoveLast(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLast(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLast
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 261
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes the last character of the string.
+  example: []
+  syntax:
+    content: public static StringBuilder RemoveLast(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last character to remove.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function RemoveLast(s As StringBuilder) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.RemoveLast*
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone(System.Text.StringBuilder)
+  id: RemoveLastOrNone(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLastOrNone(StringBuilder)
+  nameWithType: StringBuilderExtensions.RemoveLastOrNone(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLastOrNone
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 270
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Removes the last character of the string if it has any characters,
+
+    otherwise none.
+  example: []
+  syntax:
+    content: public static StringBuilder RemoveLastOrNone(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last character to remove, if
+
+        any.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function RemoveLastOrNone(s As StringBuilder) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone*
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder,System.Char)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder,System.Char)
+  id: RemoveLastIfEndsWith(System.Text.StringBuilder,System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLastIfEndsWith(StringBuilder, char)
+  nameWithType: StringBuilderExtensions.RemoveLastIfEndsWith(StringBuilder, char)
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLastIfEndsWith
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 283
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Removes the last character of the string if it ends with the requested
+
+    character, otherwise none.
+  example: []
+  syntax:
+    content: public static StringBuilder RemoveLastIfEndsWith(this StringBuilder s, char lastCharacter)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last character to remove, if
+
+        the condition is met.
+    - id: lastCharacter
+      type: System.Char
+      description: >-
+        The character that should be the last character of the string to remove
+
+        the last character.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function RemoveLastIfEndsWith(s As StringBuilder, lastCharacter As Char) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith*
+  nameWithType.vb: StringBuilderExtensions.RemoveLastIfEndsWith(StringBuilder, Char)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder, Char)
+  name.vb: RemoveLastIfEndsWith(StringBuilder, Char)
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder,System.String)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder,System.String)
+  id: RemoveLastIfEndsWith(System.Text.StringBuilder,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveLastIfEndsWith(StringBuilder, string)
+  nameWithType: StringBuilderExtensions.RemoveLastIfEndsWith(StringBuilder, string)
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: RemoveLastIfEndsWith
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 288
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Removes the last character of the string if it ends with the requested character, otherwise none.
+  example: []
+  syntax:
+    content: public static StringBuilder RemoveLastIfEndsWith(this StringBuilder s, string lastCharacters)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last character to remove, if the condition is met.
+    - id: lastCharacters
+      type: System.String
+      description: The characters that should be the last characters of the string to remove them.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function RemoveLastIfEndsWith(s As StringBuilder, lastCharacters As String) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith*
+  nameWithType.vb: StringBuilderExtensions.RemoveLastIfEndsWith(StringBuilder, String)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith(System.Text.StringBuilder, String)
+  name.vb: RemoveLastIfEndsWith(StringBuilder, String)
+- uid: Garyon.Extensions.StringBuilderExtensions.Last(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Last(System.Text.StringBuilder)
+  id: Last(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Last(StringBuilder)
+  nameWithType: StringBuilderExtensions.Last(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Last(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Last
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 297
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Retrieves the last character of the string.
+  example: []
+  syntax:
+    content: public static char Last(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last character to retrieve.
+    return:
+      type: System.Char
+    content.vb: Public Shared Function Last(s As StringBuilder) As Char
+  overload: Garyon.Extensions.StringBuilderExtensions.Last*
+- uid: Garyon.Extensions.StringBuilderExtensions.LastOrNull(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.LastOrNull(System.Text.StringBuilder)
+  id: LastOrNull(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: LastOrNull(StringBuilder)
+  nameWithType: StringBuilderExtensions.LastOrNull(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.LastOrNull(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LastOrNull
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 307
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Retrieves the last character of the string if the string has any
+
+    characters, otherwise returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the
+
+    <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or if it has
+
+    no characters.
+  example: []
+  syntax:
+    content: public static char? LastOrNull(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> whose last character to retrieve.
+    return:
+      type: System.Nullable{System.Char}
+    content.vb: Public Shared Function LastOrNull(s As StringBuilder) As Char?
+  overload: Garyon.Extensions.StringBuilderExtensions.LastOrNull*
+- uid: Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder,System.Char)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder,System.Char)
+  id: EndsWith(System.Text.StringBuilder,System.Char)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: EndsWith(StringBuilder, char)
+  nameWithType: StringBuilderExtensions.EndsWith(StringBuilder, char)
+  fullName: Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder, char)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EndsWith
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 325
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Determines whether the string ends with the specified character.
+  example: []
+  syntax:
+    content: public static bool EndsWith(this StringBuilder s, char lastCharacter)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to check whether it ends with the
+
+        specified character.
+    - id: lastCharacter
+      type: System.Char
+      description: The character to check if it is the last character of the string.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function EndsWith(s As StringBuilder, lastCharacter As Char) As Boolean
+  overload: Garyon.Extensions.StringBuilderExtensions.EndsWith*
+  nameWithType.vb: StringBuilderExtensions.EndsWith(StringBuilder, Char)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder, Char)
+  name.vb: EndsWith(StringBuilder, Char)
+- uid: Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder,System.String)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder,System.String)
+  id: EndsWith(System.Text.StringBuilder,System.String)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: EndsWith(StringBuilder, string)
+  nameWithType: StringBuilderExtensions.EndsWith(StringBuilder, string)
+  fullName: Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder, string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EndsWith
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 331
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Determines whether the string ends with the specified substring.
+  example: []
+  syntax:
+    content: public static bool EndsWith(this StringBuilder s, string lastCharacters)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to check whether it ends with the specified substring.
+    - id: lastCharacters
+      type: System.String
+      description: The characters to check if they are the last characters of the string.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function EndsWith(s As StringBuilder, lastCharacters As String) As Boolean
+  overload: Garyon.Extensions.StringBuilderExtensions.EndsWith*
+  nameWithType.vb: StringBuilderExtensions.EndsWith(StringBuilder, String)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.EndsWith(System.Text.StringBuilder, String)
+  name.vb: EndsWith(StringBuilder, String)
+- uid: Garyon.Extensions.StringBuilderExtensions.Substring(System.Text.StringBuilder,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Substring(System.Text.StringBuilder,System.Int32,System.Int32)
+  id: Substring(System.Text.StringBuilder,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Substring(StringBuilder, int, int)
+  nameWithType: StringBuilderExtensions.Substring(StringBuilder, int, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Substring(System.Text.StringBuilder, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Substring
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 337
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Returns a substring of this string with the specified number of characters from a starting index.
+  example: []
+  syntax:
+    content: public static string Substring(this StringBuilder s, int startingIndex, int length)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to get the substring of.
+    - id: startingIndex
+      type: System.Int32
+      description: The index of the original string that the new substring will start from.
+    - id: length
+      type: System.Int32
+      description: The number of characters of the substring.
+    return:
+      type: System.String
+    content.vb: Public Shared Function Substring(s As StringBuilder, startingIndex As Integer, length As Integer) As String
+  overload: Garyon.Extensions.StringBuilderExtensions.Substring*
+  nameWithType.vb: StringBuilderExtensions.Substring(StringBuilder, Integer, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.Substring(System.Text.StringBuilder, Integer, Integer)
+  name.vb: Substring(StringBuilder, Integer, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringBuilder(System.Text.StringBuilder,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.SubstringBuilder(System.Text.StringBuilder,System.Int32,System.Int32)
+  id: SubstringBuilder(System.Text.StringBuilder,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringBuilder(StringBuilder, int, int)
+  nameWithType: StringBuilderExtensions.SubstringBuilder(StringBuilder, int, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringBuilder(System.Text.StringBuilder, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringBuilder
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 342
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Returns a substring of this string with the specified number of characters from a starting index as a <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static StringBuilder SubstringBuilder(this StringBuilder s, int startingIndex, int length)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to get the substring of.
+    - id: startingIndex
+      type: System.Int32
+      description: The index of the original string that the new substring will start from.
+    - id: length
+      type: System.Int32
+      description: The number of characters of the substring.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function SubstringBuilder(s As StringBuilder, startingIndex As Integer, length As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.SubstringBuilder*
+  nameWithType.vb: StringBuilderExtensions.SubstringBuilder(StringBuilder, Integer, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.SubstringBuilder(System.Text.StringBuilder, Integer, Integer)
+  name.vb: SubstringBuilder(StringBuilder, Integer, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringStart(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.SubstringStart(System.Text.StringBuilder,System.Int32)
+  id: SubstringStart(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringStart(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.SubstringStart(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringStart(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringStart
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 375
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Returns a substring of this string with the specified number of characters from its start.
+  example: []
+  syntax:
+    content: public static string SubstringStart(this StringBuilder s, int length)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to get the substring of.
+    - id: length
+      type: System.Int32
+      description: The number of characters of the substring.
+    return:
+      type: System.String
+    content.vb: Public Shared Function SubstringStart(s As StringBuilder, length As Integer) As String
+  overload: Garyon.Extensions.StringBuilderExtensions.SubstringStart*
+  nameWithType.vb: StringBuilderExtensions.SubstringStart(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.SubstringStart(System.Text.StringBuilder, Integer)
+  name.vb: SubstringStart(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder(System.Text.StringBuilder,System.Int32)
+  id: SubstringStartBuilder(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringStartBuilder(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.SubstringStartBuilder(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringStartBuilder
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 379
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Returns a substring of this string with the specified number of characters from its start as a <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static StringBuilder SubstringStartBuilder(this StringBuilder s, int length)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to get the substring of.
+    - id: length
+      type: System.Int32
+      description: The number of characters of the substring.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function SubstringStartBuilder(s As StringBuilder, length As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder*
+  nameWithType.vb: StringBuilderExtensions.SubstringStartBuilder(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder(System.Text.StringBuilder, Integer)
+  name.vb: SubstringStartBuilder(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringLast(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.SubstringLast(System.Text.StringBuilder,System.Int32)
+  id: SubstringLast(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringLast(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.SubstringLast(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringLast(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringLast
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 383
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Returns a substring of this string with the specified number of characters from its end.
+  example: []
+  syntax:
+    content: public static string SubstringLast(this StringBuilder s, int length)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to get the substring of.
+    - id: length
+      type: System.Int32
+      description: The number of characters of the substring.
+    return:
+      type: System.String
+    content.vb: Public Shared Function SubstringLast(s As StringBuilder, length As Integer) As String
+  overload: Garyon.Extensions.StringBuilderExtensions.SubstringLast*
+  nameWithType.vb: StringBuilderExtensions.SubstringLast(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.SubstringLast(System.Text.StringBuilder, Integer)
+  name.vb: SubstringLast(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder(System.Text.StringBuilder,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder(System.Text.StringBuilder,System.Int32)
+  id: SubstringLastBuilder(System.Text.StringBuilder,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringLastBuilder(StringBuilder, int)
+  nameWithType: StringBuilderExtensions.SubstringLastBuilder(StringBuilder, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder(System.Text.StringBuilder, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SubstringLastBuilder
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 387
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Returns a substring of this string with the specified number of characters from its end as a <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static StringBuilder SubstringLastBuilder(this StringBuilder s, int length)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> to get the substring of.
+    - id: length
+      type: System.Int32
+      description: The number of characters of the substring.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function SubstringLastBuilder(s As StringBuilder, length As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder*
+  nameWithType.vb: StringBuilderExtensions.SubstringLastBuilder(StringBuilder, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder(System.Text.StringBuilder, Integer)
+  name.vb: SubstringLastBuilder(StringBuilder, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder)
+  id: TrimStart(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: TrimStart(StringBuilder)
+  nameWithType: StringBuilderExtensions.TrimStart(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TrimStart
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 401
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Removes the all leading whitespace characters from the current
+
+    <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static StringBuilder TrimStart(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> from which to remove all leading
+
+        whitespace characters.
+    return:
+      type: System.Text.StringBuilder
+      description: The original <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function TrimStart(s As StringBuilder) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.TrimStart*
+- uid: Garyon.Extensions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder)
+  id: TrimEnd(System.Text.StringBuilder)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: TrimEnd(StringBuilder)
+  nameWithType: StringBuilderExtensions.TrimEnd(StringBuilder)
+  fullName: Garyon.Extensions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TrimEnd
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 420
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Removes the all leading whitespace characters from the current
+
+    <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static StringBuilder TrimEnd(this StringBuilder s)
+    parameters:
+    - id: s
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> from which to remove all leading
+
+        whitespace characters.
+    return:
+      type: System.Text.StringBuilder
+      description: The original <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function TrimEnd(s As StringBuilder) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.TrimEnd*
+- uid: Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder,System.String,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder,System.String,System.Int32)
+  id: Append(System.Text.StringBuilder,System.String,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Append(StringBuilder, string, int)
+  nameWithType: StringBuilderExtensions.Append(StringBuilder, string, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder, string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Append
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 457
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Appends a string to the <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance, from
+
+    its start index up until its end.
+  example: []
+  syntax:
+    content: public static StringBuilder Append(this StringBuilder stringBuilder, string value, int startIndex)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append the
+
+        string.
+    - id: value
+      type: System.String
+      description: >-
+        The string to append to the <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> from the
+
+        specified index onwards.
+    - id: startIndex
+      type: System.Int32
+      description: >-
+        The index of the first character to append to the
+
+        <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance that the string was
+
+        appended to.
+    content.vb: Public Shared Function Append(stringBuilder As StringBuilder, value As String, startIndex As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.Append*
+  nameWithType.vb: StringBuilderExtensions.Append(StringBuilder, String, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder, String, Integer)
+  name.vb: Append(StringBuilder, String, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  id: Append(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Append(StringBuilder, string, int, int)
+  nameWithType: StringBuilderExtensions.Append(StringBuilder, string, int, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder, string, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Append
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 484
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Appends a string to the <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance, from
+
+    its start index up until its end.
+  example: []
+  syntax:
+    content: public static StringBuilder Append(this StringBuilder stringBuilder, string value, int startIndex, int length)
+    parameters:
+    - id: stringBuilder
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance on which to append the
+
+        string.
+    - id: value
+      type: System.String
+      description: >-
+        The string to append to the <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> from the
+
+        specified index onwards.
+    - id: startIndex
+      type: System.Int32
+      description: >-
+        The index of the first character to append to the
+
+        <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+    - id: length
+      type: System.Int32
+      description: The number of characters to include from the appended string.
+    return:
+      type: System.Text.StringBuilder
+      description: >-
+        The <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref> instance that the string was
+
+        appended to.
+    content.vb: Public Shared Function Append(stringBuilder As StringBuilder, value As String, startIndex As Integer, length As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.Append*
+  nameWithType.vb: StringBuilderExtensions.Append(StringBuilder, String, Integer, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.Append(System.Text.StringBuilder, String, Integer, Integer)
+  name.vb: Append(StringBuilder, String, Integer, Integer)
+- uid: Garyon.Extensions.StringBuilderExtensions.Replace(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.StringBuilderExtensions.Replace(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  id: Replace(System.Text.StringBuilder,System.String,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.StringBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Replace(StringBuilder, string, int, int)
+  nameWithType: StringBuilderExtensions.Replace(StringBuilder, string, int, int)
+  fullName: Garyon.Extensions.StringBuilderExtensions.Replace(System.Text.StringBuilder, string, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/StringBuilderExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Replace
+    path: ../Garyon/Extensions/StringBuilderExtensions.cs
+    startLine: 504
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Replaces a part of the string with a new one.
+  example: []
+  syntax:
+    content: public static StringBuilder Replace(this StringBuilder builder, string replacedString, int startIndex, int length)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+      description: The original <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>.
+    - id: replacedString
+      type: System.String
+      description: The new string to replace to the part of the original one.
+    - id: startIndex
+      type: System.Int32
+      description: The starting index of the substring to replace.
+    - id: length
+      type: System.Int32
+      description: The length of the substring to replace.
+    return:
+      type: System.Text.StringBuilder
+    content.vb: Public Shared Function Replace(builder As StringBuilder, replacedString As String, startIndex As Integer, length As Integer) As StringBuilder
+  overload: Garyon.Extensions.StringBuilderExtensions.Replace*
+  nameWithType.vb: StringBuilderExtensions.Replace(StringBuilder, String, Integer, Integer)
+  fullName.vb: Garyon.Extensions.StringBuilderExtensions.Replace(System.Text.StringBuilder, String, Integer, Integer)
+  name.vb: Replace(StringBuilder, String, Integer, Integer)
+references:
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLine*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.AppendLine
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_AppendLine_System_Text_StringBuilder_System_Char___
+  name: AppendLine
+  nameWithType: StringBuilderExtensions.AppendLine
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLine
+- uid: System.Char[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char[]
+  nameWithType: char[]
+  fullName: char[]
+  nameWithType.vb: Char()
+  fullName.vb: Char()
+  name.vb: Char()
+  spec.csharp:
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: (
+  - name: )
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ReadOnlyMemory{System.Char}
+  commentId: T:System.ReadOnlyMemory{System.Char}
+  parent: System
+  definition: System.ReadOnlyMemory`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<char>
+  nameWithType: ReadOnlyMemory<char>
+  fullName: System.ReadOnlyMemory<char>
+  nameWithType.vb: ReadOnlyMemory(Of Char)
+  fullName.vb: System.ReadOnlyMemory(Of Char)
+  name.vb: ReadOnlyMemory(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Char*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char*
+  nameWithType: char*
+  fullName: char*
+  nameWithType.vb: Char*
+  fullName.vb: Char*
+  name.vb: Char*
+  spec.csharp:
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '*'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLines*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.AppendLines
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_AppendLines_System_Text_StringBuilder_System_Collections_IEnumerable_
+  name: AppendLines
+  nameWithType: StringBuilderExtensions.AppendLines
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLines
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: System.Collections.Generic.IEnumerable{System.Object}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<object>
+  nameWithType: IEnumerable<object>
+  fullName: System.Collections.Generic.IEnumerable<object>
+  nameWithType.vb: IEnumerable(Of Object)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Object)
+  name.vb: IEnumerable(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendUpper*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.AppendUpper
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_AppendUpper_System_Text_StringBuilder_System_String_
+  name: AppendUpper
+  nameWithType: StringBuilderExtensions.AppendUpper
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendUpper
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLower*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.AppendLower
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_AppendLower_System_Text_StringBuilder_System_String_
+  name: AppendLower
+  nameWithType: StringBuilderExtensions.AppendLower
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLower
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Extensions.StringBuilderExtensions.AppendLineCount*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.AppendLineCount
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_AppendLineCount_System_Text_StringBuilder_System_Int32_
+  name: AppendLineCount
+  nameWithType: StringBuilderExtensions.AppendLineCount
+  fullName: Garyon.Extensions.StringBuilderExtensions.AppendLineCount
+- uid: Garyon.Extensions.StringBuilderExtensions.Copy*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.Copy
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_Copy_System_Text_StringBuilder_
+  name: Copy
+  nameWithType: StringBuilderExtensions.Copy
+  fullName: Garyon.Extensions.StringBuilderExtensions.Copy
+- uid: Garyon.Extensions.StringBuilderExtensions.Remove*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.Remove
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_Remove_System_Text_StringBuilder_System_Int32_
+  name: Remove
+  nameWithType: StringBuilderExtensions.Remove
+  fullName: Garyon.Extensions.StringBuilderExtensions.Remove
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLast*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.RemoveLast
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_RemoveLast_System_Text_StringBuilder_System_Int32_
+  name: RemoveLast
+  nameWithType: StringBuilderExtensions.RemoveLast
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLast
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_RemoveLastOrNone_System_Text_StringBuilder_
+  name: RemoveLastOrNone
+  nameWithType: StringBuilderExtensions.RemoveLastOrNone
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLastOrNone
+- uid: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_RemoveLastIfEndsWith_System_Text_StringBuilder_System_Char_
+  name: RemoveLastIfEndsWith
+  nameWithType: StringBuilderExtensions.RemoveLastIfEndsWith
+  fullName: Garyon.Extensions.StringBuilderExtensions.RemoveLastIfEndsWith
+- uid: Garyon.Extensions.StringBuilderExtensions.Last*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.Last
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_Last_System_Text_StringBuilder_
+  name: Last
+  nameWithType: StringBuilderExtensions.Last
+  fullName: Garyon.Extensions.StringBuilderExtensions.Last
+- uid: Garyon.Extensions.StringBuilderExtensions.LastOrNull*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.LastOrNull
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_LastOrNull_System_Text_StringBuilder_
+  name: LastOrNull
+  nameWithType: StringBuilderExtensions.LastOrNull
+  fullName: Garyon.Extensions.StringBuilderExtensions.LastOrNull
+- uid: System.Nullable{System.Char}
+  commentId: T:System.Nullable{System.Char}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char?
+  nameWithType: char?
+  fullName: char?
+  nameWithType.vb: Char?
+  fullName.vb: Char?
+  name.vb: Char?
+  spec.csharp:
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '?'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.StringBuilderExtensions.EndsWith*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.EndsWith
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_EndsWith_System_Text_StringBuilder_System_Char_
+  name: EndsWith
+  nameWithType: StringBuilderExtensions.EndsWith
+  fullName: Garyon.Extensions.StringBuilderExtensions.EndsWith
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Extensions.StringBuilderExtensions.Substring*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.Substring
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_Substring_System_Text_StringBuilder_System_Int32_System_Int32_
+  name: Substring
+  nameWithType: StringBuilderExtensions.Substring
+  fullName: Garyon.Extensions.StringBuilderExtensions.Substring
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringBuilder*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.SubstringBuilder
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_SubstringBuilder_System_Text_StringBuilder_System_Int32_System_Int32_
+  name: SubstringBuilder
+  nameWithType: StringBuilderExtensions.SubstringBuilder
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringBuilder
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringStart*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.SubstringStart
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_SubstringStart_System_Text_StringBuilder_System_Int32_
+  name: SubstringStart
+  nameWithType: StringBuilderExtensions.SubstringStart
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringStart
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_SubstringStartBuilder_System_Text_StringBuilder_System_Int32_
+  name: SubstringStartBuilder
+  nameWithType: StringBuilderExtensions.SubstringStartBuilder
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringStartBuilder
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringLast*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.SubstringLast
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_SubstringLast_System_Text_StringBuilder_System_Int32_
+  name: SubstringLast
+  nameWithType: StringBuilderExtensions.SubstringLast
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringLast
+- uid: Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_SubstringLastBuilder_System_Text_StringBuilder_System_Int32_
+  name: SubstringLastBuilder
+  nameWithType: StringBuilderExtensions.SubstringLastBuilder
+  fullName: Garyon.Extensions.StringBuilderExtensions.SubstringLastBuilder
+- uid: Garyon.Extensions.StringBuilderExtensions.TrimStart*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.TrimStart
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_TrimStart_System_Text_StringBuilder_
+  name: TrimStart
+  nameWithType: StringBuilderExtensions.TrimStart
+  fullName: Garyon.Extensions.StringBuilderExtensions.TrimStart
+- uid: Garyon.Extensions.StringBuilderExtensions.TrimEnd*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.TrimEnd
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_TrimEnd_System_Text_StringBuilder_
+  name: TrimEnd
+  nameWithType: StringBuilderExtensions.TrimEnd
+  fullName: Garyon.Extensions.StringBuilderExtensions.TrimEnd
+- uid: Garyon.Extensions.StringBuilderExtensions.Append*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.Append
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_Append_System_Text_StringBuilder_System_String_System_Int32_
+  name: Append
+  nameWithType: StringBuilderExtensions.Append
+  fullName: Garyon.Extensions.StringBuilderExtensions.Append
+- uid: Garyon.Extensions.StringBuilderExtensions.Replace*
+  commentId: Overload:Garyon.Extensions.StringBuilderExtensions.Replace
+  href: Garyon.Extensions.StringBuilderExtensions.html#Garyon_Extensions_StringBuilderExtensions_Replace_System_Text_StringBuilder_System_String_System_Int32_System_Int32_
+  name: Replace
+  nameWithType: StringBuilderExtensions.Replace
+  fullName: Garyon.Extensions.StringBuilderExtensions.Replace

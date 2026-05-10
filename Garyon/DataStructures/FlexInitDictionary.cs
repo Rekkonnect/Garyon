@@ -52,12 +52,10 @@ public class FlexInitDictionary<TKey, TValue>
             AddWithInitializationValue(key);
     }
 
-#if HAS_DICTIONARY_KVPS_CTOR
     /// <summary>Initializes a new instance of the <seealso cref="FlexInitDictionary{TKey, TValue}"/> class.</summary>
     /// <param name="kvps">The collection of <seealso cref="KeyValuePair{TKey, TValue}"/> objects to initialize the dictionary from.</param>
     public FlexInitDictionary(IEnumerable<KeyValuePair<TKey, TValue>> kvps)
         : base(kvps) { }
-#endif
     /// <summary>
     /// Initializes a new instance of the
     /// <seealso cref="FlexInitDictionary{TKey, TValue}"/> class out of another

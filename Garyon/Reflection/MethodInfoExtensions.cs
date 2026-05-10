@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Functions;
+using System;
 using System.Reflection;
 
 namespace Garyon.Reflection;
@@ -37,6 +38,17 @@ public static class MethodInfoExtensions
         public T? Invoke<T>(object? target, object?[]? arguments)
         {
             return (T?)method.Invoke(target, arguments);
+        }
+
+        public AccessibilityModifiers GetAccessibilityModifiers()
+        {
+            return Misc.ValueIf(AccessibilityModifiers.Public, method.IsPublic)
+                | Misc.ValueIf(AccessibilityModifiers.Internal, method.IsAssembly)
+                | Misc.ValueIf(AccessibilityModifiers.ProtectedInternal, method.IsFamilyOrAssembly)
+                | Misc.ValueIf(AccessibilityModifiers.Protected, method.IsFamily)
+                | Misc.ValueIf(AccessibilityModifiers.PrivateProtected, method.IsFamilyAndAssembly)
+                | Misc.ValueIf(AccessibilityModifiers.Private, method.IsPrivate)
+                ;
         }
     }
 }

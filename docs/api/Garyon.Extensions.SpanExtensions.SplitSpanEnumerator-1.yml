@@ -1,0 +1,883 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  commentId: T:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  id: SpanExtensions.SplitSpanEnumerator`1
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor(System.ReadOnlySpan{`0},`0)
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Current
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.GetEnumerator
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.MoveNext
+  - Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Reset
+  langs:
+  - csharp
+  - vb
+  name: SpanExtensions.SplitSpanEnumerator<TSource>
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>
+  type: Struct
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SplitSpanEnumerator
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 764
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: 'public ref struct SpanExtensions.SplitSpanEnumerator<TSource> : IEnumerator<ReadOnlySpan<TSource>>, IEnumerator, IDisposable where TSource : IEquatable<TSource>'
+    typeParameters:
+    - id: TSource
+    content.vb: Public Structure SpanExtensions.SplitSpanEnumerator(Of TSource As IEquatable(Of TSource)) Implements IEnumerator(Of ReadOnlySpan(Of TSource)), IEnumerator, IDisposable
+  implements:
+  - System.Collections.Generic.IEnumerator{System.ReadOnlySpan{{TSource}}}
+  - System.Collections.IEnumerator
+  - System.IDisposable
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource)
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource)
+  name.vb: SpanExtensions.SplitSpanEnumerator(Of TSource)
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Current
+  commentId: P:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Current
+  id: Current
+  parent: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.Current
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.Current
+  type: Property
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Current
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 776
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the element in the collection at the current position of the enumerator.
+  example: []
+  syntax:
+    content: public readonly ReadOnlySpan<TSource> Current { get; }
+    parameters: []
+    return:
+      type: System.ReadOnlySpan{{TSource}}
+      description: The element in the collection at the current position of the enumerator.
+    content.vb: Public ReadOnly Property Current As ReadOnlySpan(Of TSource)
+  overload: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Current*
+  implements:
+  - System.Collections.Generic.IEnumerator{System.ReadOnlySpan{{TSource}}}.Current
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).Current
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).Current
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor(System.ReadOnlySpan{`0},`0)
+  commentId: M:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor(System.ReadOnlySpan{`0},`0)
+  id: '#ctor(System.ReadOnlySpan{`0},`0)'
+  parent: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: SplitSpanEnumerator(ReadOnlySpan<TSource>, TSource)
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.SplitSpanEnumerator(ReadOnlySpan<TSource>, TSource)
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.SplitSpanEnumerator(System.ReadOnlySpan<TSource>, TSource)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 790
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public SplitSpanEnumerator(ReadOnlySpan<TSource> source, TSource delimiter)
+    parameters:
+    - id: source
+      type: System.ReadOnlySpan{{TSource}}
+    - id: delimiter
+      type: '{TSource}'
+    content.vb: Public Sub New(source As ReadOnlySpan(Of TSource), delimiter As TSource)
+  overload: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor*
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).New(ReadOnlySpan(Of TSource), TSource)
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).New(System.ReadOnlySpan(Of TSource), TSource)
+  name.vb: New(ReadOnlySpan(Of TSource), TSource)
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})
+  commentId: M:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})
+  id: '#ctor(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})'
+  parent: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: SplitSpanEnumerator(ReadOnlySpan<TSource>, ReadOnlySpan<TSource>)
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.SplitSpanEnumerator(ReadOnlySpan<TSource>, ReadOnlySpan<TSource>)
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.SplitSpanEnumerator(System.ReadOnlySpan<TSource>, System.ReadOnlySpan<TSource>)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 793
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public SplitSpanEnumerator(ReadOnlySpan<TSource> source, ReadOnlySpan<TSource> delimiter)
+    parameters:
+    - id: source
+      type: System.ReadOnlySpan{{TSource}}
+    - id: delimiter
+      type: System.ReadOnlySpan{{TSource}}
+    content.vb: Public Sub New(source As ReadOnlySpan(Of TSource), delimiter As ReadOnlySpan(Of TSource))
+  overload: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor*
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).New(ReadOnlySpan(Of TSource), ReadOnlySpan(Of TSource))
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).New(System.ReadOnlySpan(Of TSource), System.ReadOnlySpan(Of TSource))
+  name.vb: New(ReadOnlySpan(Of TSource), ReadOnlySpan(Of TSource))
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.MoveNext
+  commentId: M:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.MoveNext
+  id: MoveNext
+  parent: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: MoveNext()
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.MoveNext()
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.MoveNext()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MoveNext
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 796
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Advances the enumerator to the next element of the collection.
+  example: []
+  syntax:
+    content: public bool MoveNext()
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the enumerator was successfully advanced to the next element; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the enumerator has passed the end of the collection.
+    content.vb: Public Function MoveNext() As Boolean
+  overload: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.MoveNext*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The collection was modified after the enumerator was created.
+  implements:
+  - System.Collections.IEnumerator.MoveNext
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).MoveNext()
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).MoveNext()
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Reset
+  commentId: M:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Reset
+  id: Reset
+  parent: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.Reset()
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.Reset()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Reset
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 817
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Sets the enumerator to its initial position, which is before the first element in the collection.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Reset*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The collection was modified after the enumerator was created.
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: The enumerator does not support being reset.
+  implements:
+  - System.Collections.IEnumerator.Reset
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).Reset()
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).Reset()
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.GetEnumerator
+  commentId: M:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.GetEnumerator
+  id: GetEnumerator
+  parent: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.GetEnumerator()
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/SpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetEnumerator
+    path: ../Garyon/Extensions/SpanExtensions.cs
+    startLine: 823
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public readonly SpanExtensions.SplitSpanEnumerator<TSource> GetEnumerator()
+    return:
+      type: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+    content.vb: Public Function GetEnumerator() As SpanExtensions.SplitSpanEnumerator(Of TSource)
+  overload: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.GetEnumerator*
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).GetEnumerator()
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).GetEnumerator()
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Collections.Generic.IEnumerator{System.ReadOnlySpan{{TSource}}}
+  commentId: T:System.Collections.Generic.IEnumerator{System.ReadOnlySpan{`0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<ReadOnlySpan<TSource>>
+  nameWithType: IEnumerator<ReadOnlySpan<TSource>>
+  fullName: System.Collections.Generic.IEnumerator<System.ReadOnlySpan<TSource>>
+  nameWithType.vb: IEnumerator(Of ReadOnlySpan(Of TSource))
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.ReadOnlySpan(Of TSource))
+  name.vb: IEnumerator(Of ReadOnlySpan(Of TSource))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Current*
+  commentId: Overload:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Current
+  href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html#Garyon_Extensions_SpanExtensions_SplitSpanEnumerator_1_Current
+  name: Current
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.Current
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.Current
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).Current
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).Current
+- uid: System.Collections.Generic.IEnumerator{System.ReadOnlySpan{{TSource}}}.Current
+  commentId: P:System.Collections.Generic.IEnumerator{System.ReadOnlySpan{`0}}.Current
+  parent: System.Collections.Generic.IEnumerator{System.ReadOnlySpan{{TSource}}}
+  definition: System.Collections.Generic.IEnumerator`1.Current
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1.current
+  name: Current
+  nameWithType: IEnumerator<ReadOnlySpan<TSource>>.Current
+  fullName: System.Collections.Generic.IEnumerator<System.ReadOnlySpan<TSource>>.Current
+  nameWithType.vb: IEnumerator(Of ReadOnlySpan(Of TSource)).Current
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.ReadOnlySpan(Of TSource)).Current
+- uid: System.ReadOnlySpan{{TSource}}
+  commentId: T:System.ReadOnlySpan{``0}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<TSource>
+  nameWithType: ReadOnlySpan<TSource>
+  fullName: System.ReadOnlySpan<TSource>
+  nameWithType.vb: ReadOnlySpan(Of TSource)
+  fullName.vb: System.ReadOnlySpan(Of TSource)
+  name.vb: ReadOnlySpan(Of TSource)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1.Current
+  commentId: P:System.Collections.Generic.IEnumerator`1.Current
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1.current
+  name: Current
+  nameWithType: IEnumerator<T>.Current
+  fullName: System.Collections.Generic.IEnumerator<T>.Current
+  nameWithType.vb: IEnumerator(Of T).Current
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T).Current
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor*
+  commentId: Overload:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.#ctor
+  href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html#Garyon_Extensions_SpanExtensions_SplitSpanEnumerator_1__ctor_System_ReadOnlySpan__0___0_
+  name: SplitSpanEnumerator
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.SplitSpanEnumerator
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.SplitSpanEnumerator
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).New
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).New
+  name.vb: New
+- uid: '{TSource}'
+  commentId: '!:TSource'
+  definition: TSource
+  name: TSource
+  nameWithType: TSource
+  fullName: TSource
+- uid: TSource
+  name: TSource
+  nameWithType: TSource
+  fullName: TSource
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.MoveNext*
+  commentId: Overload:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.MoveNext
+  href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html#Garyon_Extensions_SpanExtensions_SplitSpanEnumerator_1_MoveNext
+  name: MoveNext
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.MoveNext
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.MoveNext
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).MoveNext
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).MoveNext
+- uid: System.Collections.IEnumerator.MoveNext
+  commentId: M:System.Collections.IEnumerator.MoveNext
+  parent: System.Collections.IEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.movenext
+  name: MoveNext()
+  nameWithType: IEnumerator.MoveNext()
+  fullName: System.Collections.IEnumerator.MoveNext()
+  spec.csharp:
+  - uid: System.Collections.IEnumerator.MoveNext
+    name: MoveNext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.movenext
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.IEnumerator.MoveNext
+    name: MoveNext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.movenext
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notsupportedexception
+  name: NotSupportedException
+  nameWithType: NotSupportedException
+  fullName: System.NotSupportedException
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Reset*
+  commentId: Overload:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.Reset
+  href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html#Garyon_Extensions_SpanExtensions_SplitSpanEnumerator_1_Reset
+  name: Reset
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.Reset
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.Reset
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).Reset
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).Reset
+- uid: System.Collections.IEnumerator.Reset
+  commentId: M:System.Collections.IEnumerator.Reset
+  parent: System.Collections.IEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.reset
+  name: Reset()
+  nameWithType: IEnumerator.Reset()
+  fullName: System.Collections.IEnumerator.Reset()
+  spec.csharp:
+  - uid: System.Collections.IEnumerator.Reset
+    name: Reset
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.IEnumerator.Reset
+    name: Reset
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.reset
+  - name: (
+  - name: )
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.GetEnumerator*
+  commentId: Overload:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1.GetEnumerator
+  href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html#Garyon_Extensions_SpanExtensions_SplitSpanEnumerator_1_GetEnumerator
+  name: GetEnumerator
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>.GetEnumerator
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>.GetEnumerator
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource).GetEnumerator
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource).GetEnumerator
+- uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  commentId: T:Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.SpanExtensions.html
+  name: SpanExtensions.SplitSpanEnumerator<TSource>
+  nameWithType: SpanExtensions.SplitSpanEnumerator<TSource>
+  fullName: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator<TSource>
+  nameWithType.vb: SpanExtensions.SplitSpanEnumerator(Of TSource)
+  fullName.vb: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator(Of TSource)
+  name.vb: SpanExtensions.SplitSpanEnumerator(Of TSource)
+  spec.csharp:
+  - uid: Garyon.Extensions.SpanExtensions
+    name: SpanExtensions
+    href: Garyon.Extensions.SpanExtensions.html
+  - name: .
+  - uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+    name: SplitSpanEnumerator
+    href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.SpanExtensions
+    name: SpanExtensions
+    href: Garyon.Extensions.SpanExtensions.html
+  - name: .
+  - uid: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator`1
+    name: SplitSpanEnumerator
+    href: Garyon.Extensions.SpanExtensions.SplitSpanEnumerator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )

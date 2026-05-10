@@ -1,0 +1,678 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.QueueExtensions
+  commentId: T:Garyon.Extensions.QueueExtensions
+  id: QueueExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.QueueExtensions.DequeueAll``1(System.Collections.Generic.Queue{``0})
+  - Garyon.Extensions.QueueExtensions.DequeueRange``1(System.Collections.Generic.Queue{``0},System.Int32)
+  - Garyon.Extensions.QueueExtensions.EnqueueRange``1(System.Collections.Generic.Queue{``0},System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.QueueExtensions.Insert``1(System.Collections.Generic.Queue{``0},``0,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: QueueExtensions
+  nameWithType: QueueExtensions
+  fullName: Garyon.Extensions.QueueExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/QueueExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: QueueExtensions
+    path: ../Garyon/Extensions/QueueExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for the <xref href="System.Collections.Generic.Queue%601" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class QueueExtensions
+    content.vb: Public Module QueueExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.QueueExtensions.EnqueueRange``1(System.Collections.Generic.Queue{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.QueueExtensions.EnqueueRange``1(System.Collections.Generic.Queue{``0},System.Collections.Generic.IEnumerable{``0})
+  id: EnqueueRange``1(System.Collections.Generic.Queue{``0},System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.QueueExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnqueueRange<T>(Queue<T>, IEnumerable<T>)
+  nameWithType: QueueExtensions.EnqueueRange<T>(Queue<T>, IEnumerable<T>)
+  fullName: Garyon.Extensions.QueueExtensions.EnqueueRange<T>(System.Collections.Generic.Queue<T>, System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/QueueExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnqueueRange
+    path: ../Garyon/Extensions/QueueExtensions.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Enqueues a range of elements to the queue.
+  example: []
+  syntax:
+    content: public static void EnqueueRange<T>(this Queue<T> queue, IEnumerable<T> range)
+    parameters:
+    - id: queue
+      type: System.Collections.Generic.Queue{{T}}
+      description: The queue.
+    - id: range
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The elements to enqueue.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the queue.
+    content.vb: Public Shared Sub EnqueueRange(Of T)(queue As Queue(Of T), range As IEnumerable(Of T))
+  overload: Garyon.Extensions.QueueExtensions.EnqueueRange*
+  nameWithType.vb: QueueExtensions.EnqueueRange(Of T)(Queue(Of T), IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.QueueExtensions.EnqueueRange(Of T)(System.Collections.Generic.Queue(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: EnqueueRange(Of T)(Queue(Of T), IEnumerable(Of T))
+- uid: Garyon.Extensions.QueueExtensions.DequeueRange``1(System.Collections.Generic.Queue{``0},System.Int32)
+  commentId: M:Garyon.Extensions.QueueExtensions.DequeueRange``1(System.Collections.Generic.Queue{``0},System.Int32)
+  id: DequeueRange``1(System.Collections.Generic.Queue{``0},System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.QueueExtensions
+  langs:
+  - csharp
+  - vb
+  name: DequeueRange<T>(Queue<T>, int)
+  nameWithType: QueueExtensions.DequeueRange<T>(Queue<T>, int)
+  fullName: Garyon.Extensions.QueueExtensions.DequeueRange<T>(System.Collections.Generic.Queue<T>, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/QueueExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DequeueRange
+    path: ../Garyon/Extensions/QueueExtensions.cs
+    startLine: 42
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Dequeues a range of elements from the queue.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> DequeueRange<T>(this Queue<T> queue, int count)
+    parameters:
+    - id: queue
+      type: System.Collections.Generic.Queue{{T}}
+      description: The queue.
+    - id: count
+      type: System.Int32
+      description: The number of elements to dequeue.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the queue.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The dequeued elements in the order they were dequeued.
+    content.vb: Public Shared Function DequeueRange(Of T)(queue As Queue(Of T), count As Integer) As IEnumerable(Of T)
+  overload: Garyon.Extensions.QueueExtensions.DequeueRange*
+  nameWithType.vb: QueueExtensions.DequeueRange(Of T)(Queue(Of T), Integer)
+  fullName.vb: Garyon.Extensions.QueueExtensions.DequeueRange(Of T)(System.Collections.Generic.Queue(Of T), Integer)
+  name.vb: DequeueRange(Of T)(Queue(Of T), Integer)
+- uid: Garyon.Extensions.QueueExtensions.DequeueAll``1(System.Collections.Generic.Queue{``0})
+  commentId: M:Garyon.Extensions.QueueExtensions.DequeueAll``1(System.Collections.Generic.Queue{``0})
+  id: DequeueAll``1(System.Collections.Generic.Queue{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.QueueExtensions
+  langs:
+  - csharp
+  - vb
+  name: DequeueAll<T>(Queue<T>)
+  nameWithType: QueueExtensions.DequeueAll<T>(Queue<T>)
+  fullName: Garyon.Extensions.QueueExtensions.DequeueAll<T>(System.Collections.Generic.Queue<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/QueueExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DequeueAll
+    path: ../Garyon/Extensions/QueueExtensions.cs
+    startLine: 59
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Dequeues all elements from the queue.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> DequeueAll<T>(this Queue<T> queue)
+    parameters:
+    - id: queue
+      type: System.Collections.Generic.Queue{{T}}
+      description: The queue.
+    typeParameters:
+    - id: T
+      description: The type of the elements contained in the queue.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The dequeued elements in the order they were dequeued.
+    content.vb: Public Shared Function DequeueAll(Of T)(queue As Queue(Of T)) As IEnumerable(Of T)
+  overload: Garyon.Extensions.QueueExtensions.DequeueAll*
+  nameWithType.vb: QueueExtensions.DequeueAll(Of T)(Queue(Of T))
+  fullName.vb: Garyon.Extensions.QueueExtensions.DequeueAll(Of T)(System.Collections.Generic.Queue(Of T))
+  name.vb: DequeueAll(Of T)(Queue(Of T))
+- uid: Garyon.Extensions.QueueExtensions.Insert``1(System.Collections.Generic.Queue{``0},``0,System.Int32)
+  commentId: M:Garyon.Extensions.QueueExtensions.Insert``1(System.Collections.Generic.Queue{``0},``0,System.Int32)
+  id: Insert``1(System.Collections.Generic.Queue{``0},``0,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.QueueExtensions
+  langs:
+  - csharp
+  - vb
+  name: Insert<T>(Queue<T>, T, int)
+  nameWithType: QueueExtensions.Insert<T>(Queue<T>, T, int)
+  fullName: Garyon.Extensions.QueueExtensions.Insert<T>(System.Collections.Generic.Queue<T>, T, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/QueueExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Insert
+    path: ../Garyon/Extensions/QueueExtensions.cs
+    startLine: 80
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Inserts an element in the queue at the specified index.
+  remarks: >-
+    This is an expensive operation, due to the lack of the necessary public
+
+    APIs for speeding up the insertion.
+  example: []
+  syntax:
+    content: public static void Insert<T>(this Queue<T> queue, T item, int index)
+    parameters:
+    - id: queue
+      type: System.Collections.Generic.Queue{{T}}
+      description: The queue.
+    - id: item
+      type: '{T}'
+      description: The item to insert into the queue.
+    - id: index
+      type: System.Int32
+      description: The index at which the item will be inserted.
+    typeParameters:
+    - id: T
+      description: The type of the values stored in the queue.
+    content.vb: Public Shared Sub Insert(Of T)(queue As Queue(Of T), item As T, index As Integer)
+  overload: Garyon.Extensions.QueueExtensions.Insert*
+  nameWithType.vb: QueueExtensions.Insert(Of T)(Queue(Of T), T, Integer)
+  fullName.vb: Garyon.Extensions.QueueExtensions.Insert(Of T)(System.Collections.Generic.Queue(Of T), T, Integer)
+  name.vb: Insert(Of T)(Queue(Of T), T, Integer)
+references:
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.QueueExtensions.EnqueueRange*
+  commentId: Overload:Garyon.Extensions.QueueExtensions.EnqueueRange
+  href: Garyon.Extensions.QueueExtensions.html#Garyon_Extensions_QueueExtensions_EnqueueRange__1_System_Collections_Generic_Queue___0__System_Collections_Generic_IEnumerable___0__
+  name: EnqueueRange
+  nameWithType: QueueExtensions.EnqueueRange
+  fullName: Garyon.Extensions.QueueExtensions.EnqueueRange
+- uid: System.Collections.Generic.Queue{{T}}
+  commentId: T:System.Collections.Generic.Queue{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.QueueExtensions.DequeueRange*
+  commentId: Overload:Garyon.Extensions.QueueExtensions.DequeueRange
+  href: Garyon.Extensions.QueueExtensions.html#Garyon_Extensions_QueueExtensions_DequeueRange__1_System_Collections_Generic_Queue___0__System_Int32_
+  name: DequeueRange
+  nameWithType: QueueExtensions.DequeueRange
+  fullName: Garyon.Extensions.QueueExtensions.DequeueRange
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.QueueExtensions.DequeueAll*
+  commentId: Overload:Garyon.Extensions.QueueExtensions.DequeueAll
+  href: Garyon.Extensions.QueueExtensions.html#Garyon_Extensions_QueueExtensions_DequeueAll__1_System_Collections_Generic_Queue___0__
+  name: DequeueAll
+  nameWithType: QueueExtensions.DequeueAll
+  fullName: Garyon.Extensions.QueueExtensions.DequeueAll
+- uid: Garyon.Extensions.QueueExtensions.Insert*
+  commentId: Overload:Garyon.Extensions.QueueExtensions.Insert
+  href: Garyon.Extensions.QueueExtensions.html#Garyon_Extensions_QueueExtensions_Insert__1_System_Collections_Generic_Queue___0____0_System_Int32_
+  name: Insert
+  nameWithType: QueueExtensions.Insert
+  fullName: Garyon.Extensions.QueueExtensions.Insert
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

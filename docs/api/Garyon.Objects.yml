@@ -1,0 +1,914 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  id: Garyon.Objects
+  children:
+  - Garyon.Objects.AppVersionInfo
+  - Garyon.Objects.AsyncMemoizationDictionary`2
+  - Garyon.Objects.BaseEquatable`1
+  - Garyon.Objects.CacheableBigInteger
+  - Garyon.Objects.CancellationTokenFactory
+  - Garyon.Objects.ComparisonKinds
+  - Garyon.Objects.ComparisonKindsExtensions
+  - Garyon.Objects.ComparisonResult
+  - Garyon.Objects.EntryKeyComparer`2
+  - Garyon.Objects.EntryKeyOverValueComparer`2
+  - Garyon.Objects.EntryValueComparer`2
+  - Garyon.Objects.EntryValueOverKeyComparer`2
+  - Garyon.Objects.Extremum
+  - Garyon.Objects.ExtremumExtensions
+  - Garyon.Objects.HourMinute
+  - Garyon.Objects.ICloneable`1
+  - Garyon.Objects.ICopyable`1
+  - Garyon.Objects.IFullKeyValuePairComparer`2
+  - Garyon.Objects.IHasHour
+  - Garyon.Objects.IHasMinute
+  - Garyon.Objects.IHasSecond
+  - Garyon.Objects.IKeyValuePairComparer`2
+  - Garyon.Objects.ISharedInstance
+  - Garyon.Objects.ITimeObject
+  - Garyon.Objects.IndexedEnumeratedElementAction`1
+  - Garyon.Objects.KeySelector`2
+  - Garyon.Objects.LabelledObject`1
+  - Garyon.Objects.LineStringBuilder
+  - Garyon.Objects.MemoizationDictionary`2
+  - Garyon.Objects.MessageRequestChannel
+  - Garyon.Objects.MinuteSecond
+  - Garyon.Objects.OpenInterval`1
+  - Garyon.Objects.RepeatedValueCollection`1
+  - Garyon.Objects.RepeatedValueCollection`1.Enumerator
+  - Garyon.Objects.SharedInstanceExtensions
+  - Garyon.Objects.Singleton`1
+  - Garyon.Objects.SpanYielder`1
+  - Garyon.Objects.SpanYielding
+  - Garyon.Objects.StructRefHelperExtensions
+  - Garyon.Objects.StructRef`1
+  - Garyon.Objects.TypeValueCounterDictionary
+  - Garyon.Objects.ValueBoundsExtensions
+  - Garyon.Objects.ValueBounds`1
+  - Garyon.Objects.ValueSelector`2
+  - Garyon.Objects.VariablyLabelledObject`1
+  - Garyon.Objects.Yielder`1
+  - Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Objects.AppVersionInfo
+  commentId: T:Garyon.Objects.AppVersionInfo
+  parent: Garyon.Objects
+  href: Garyon.Objects.AppVersionInfo.html
+  name: AppVersionInfo
+  nameWithType: AppVersionInfo
+  fullName: Garyon.Objects.AppVersionInfo
+- uid: Garyon.Objects.AsyncMemoizationDictionary`2
+  commentId: T:Garyon.Objects.AsyncMemoizationDictionary`2
+  href: Garyon.Objects.AsyncMemoizationDictionary-2.html
+  name: AsyncMemoizationDictionary<TInput, TOutput>
+  nameWithType: AsyncMemoizationDictionary<TInput, TOutput>
+  fullName: Garyon.Objects.AsyncMemoizationDictionary<TInput, TOutput>
+  nameWithType.vb: AsyncMemoizationDictionary(Of TInput, TOutput)
+  fullName.vb: Garyon.Objects.AsyncMemoizationDictionary(Of TInput, TOutput)
+  name.vb: AsyncMemoizationDictionary(Of TInput, TOutput)
+  spec.csharp:
+  - uid: Garyon.Objects.AsyncMemoizationDictionary`2
+    name: AsyncMemoizationDictionary
+    href: Garyon.Objects.AsyncMemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.AsyncMemoizationDictionary`2
+    name: AsyncMemoizationDictionary
+    href: Garyon.Objects.AsyncMemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: Garyon.Objects.BaseEquatable`1
+  commentId: T:Garyon.Objects.BaseEquatable`1
+  href: Garyon.Objects.BaseEquatable-1.html
+  name: BaseEquatable<T>
+  nameWithType: BaseEquatable<T>
+  fullName: Garyon.Objects.BaseEquatable<T>
+  nameWithType.vb: BaseEquatable(Of T)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of T)
+  name.vb: BaseEquatable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable`1
+    name: BaseEquatable
+    href: Garyon.Objects.BaseEquatable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable`1
+    name: BaseEquatable
+    href: Garyon.Objects.BaseEquatable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.CacheableBigInteger
+  commentId: T:Garyon.Objects.CacheableBigInteger
+  parent: Garyon.Objects
+  href: Garyon.Objects.CacheableBigInteger.html
+  name: CacheableBigInteger
+  nameWithType: CacheableBigInteger
+  fullName: Garyon.Objects.CacheableBigInteger
+- uid: Garyon.Objects.CancellationTokenFactory
+  commentId: T:Garyon.Objects.CancellationTokenFactory
+  href: Garyon.Objects.CancellationTokenFactory.html
+  name: CancellationTokenFactory
+  nameWithType: CancellationTokenFactory
+  fullName: Garyon.Objects.CancellationTokenFactory
+- uid: Garyon.Objects.ComparisonKinds
+  commentId: T:Garyon.Objects.ComparisonKinds
+  parent: Garyon.Objects
+  href: Garyon.Objects.ComparisonKinds.html
+  name: ComparisonKinds
+  nameWithType: ComparisonKinds
+  fullName: Garyon.Objects.ComparisonKinds
+- uid: Garyon.Objects.ComparisonKindsExtensions
+  commentId: T:Garyon.Objects.ComparisonKindsExtensions
+  parent: Garyon.Objects
+  href: Garyon.Objects.ComparisonKindsExtensions.html
+  name: ComparisonKindsExtensions
+  nameWithType: ComparisonKindsExtensions
+  fullName: Garyon.Objects.ComparisonKindsExtensions
+- uid: Garyon.Objects.ComparisonResult
+  commentId: T:Garyon.Objects.ComparisonResult
+  parent: Garyon.Objects
+  href: Garyon.Objects.ComparisonResult.html
+  name: ComparisonResult
+  nameWithType: ComparisonResult
+  fullName: Garyon.Objects.ComparisonResult
+- uid: Garyon.Objects.IKeyValuePairComparer`2
+  commentId: T:Garyon.Objects.IKeyValuePairComparer`2
+  href: Garyon.Objects.IKeyValuePairComparer-2.html
+  name: IKeyValuePairComparer<TKey, TValue>
+  nameWithType: IKeyValuePairComparer<TKey, TValue>
+  fullName: Garyon.Objects.IKeyValuePairComparer<TKey, TValue>
+  nameWithType.vb: IKeyValuePairComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.IKeyValuePairComparer(Of TKey, TValue)
+  name.vb: IKeyValuePairComparer(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.IKeyValuePairComparer`2
+    name: IKeyValuePairComparer
+    href: Garyon.Objects.IKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.IFullKeyValuePairComparer`2
+  commentId: T:Garyon.Objects.IFullKeyValuePairComparer`2
+  href: Garyon.Objects.IFullKeyValuePairComparer-2.html
+  name: IFullKeyValuePairComparer<TKey, TValue>
+  nameWithType: IFullKeyValuePairComparer<TKey, TValue>
+  fullName: Garyon.Objects.IFullKeyValuePairComparer<TKey, TValue>
+  nameWithType.vb: IFullKeyValuePairComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.IFullKeyValuePairComparer(Of TKey, TValue)
+  name.vb: IFullKeyValuePairComparer(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.IFullKeyValuePairComparer`2
+    name: IFullKeyValuePairComparer
+    href: Garyon.Objects.IFullKeyValuePairComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.IFullKeyValuePairComparer`2
+    name: IFullKeyValuePairComparer
+    href: Garyon.Objects.IFullKeyValuePairComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.EntryKeyOverValueComparer`2
+  commentId: T:Garyon.Objects.EntryKeyOverValueComparer`2
+  parent: Garyon.Objects
+  href: Garyon.Objects.EntryKeyOverValueComparer-2.html
+  name: EntryKeyOverValueComparer<TKey, TValue>
+  nameWithType: EntryKeyOverValueComparer<TKey, TValue>
+  fullName: Garyon.Objects.EntryKeyOverValueComparer<TKey, TValue>
+  nameWithType.vb: EntryKeyOverValueComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.EntryKeyOverValueComparer(Of TKey, TValue)
+  name.vb: EntryKeyOverValueComparer(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.EntryKeyOverValueComparer`2
+    name: EntryKeyOverValueComparer
+    href: Garyon.Objects.EntryKeyOverValueComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.EntryKeyOverValueComparer`2
+    name: EntryKeyOverValueComparer
+    href: Garyon.Objects.EntryKeyOverValueComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.EntryValueOverKeyComparer`2
+  commentId: T:Garyon.Objects.EntryValueOverKeyComparer`2
+  parent: Garyon.Objects
+  href: Garyon.Objects.EntryValueOverKeyComparer-2.html
+  name: EntryValueOverKeyComparer<TKey, TValue>
+  nameWithType: EntryValueOverKeyComparer<TKey, TValue>
+  fullName: Garyon.Objects.EntryValueOverKeyComparer<TKey, TValue>
+  nameWithType.vb: EntryValueOverKeyComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.EntryValueOverKeyComparer(Of TKey, TValue)
+  name.vb: EntryValueOverKeyComparer(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.EntryValueOverKeyComparer`2
+    name: EntryValueOverKeyComparer
+    href: Garyon.Objects.EntryValueOverKeyComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.EntryValueOverKeyComparer`2
+    name: EntryValueOverKeyComparer
+    href: Garyon.Objects.EntryValueOverKeyComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.EntryKeyComparer`2
+  commentId: T:Garyon.Objects.EntryKeyComparer`2
+  parent: Garyon.Objects
+  href: Garyon.Objects.EntryKeyComparer-2.html
+  name: EntryKeyComparer<TKey, TValue>
+  nameWithType: EntryKeyComparer<TKey, TValue>
+  fullName: Garyon.Objects.EntryKeyComparer<TKey, TValue>
+  nameWithType.vb: EntryKeyComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.EntryKeyComparer(Of TKey, TValue)
+  name.vb: EntryKeyComparer(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.EntryKeyComparer`2
+    name: EntryKeyComparer
+    href: Garyon.Objects.EntryKeyComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.EntryKeyComparer`2
+    name: EntryKeyComparer
+    href: Garyon.Objects.EntryKeyComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.EntryValueComparer`2
+  commentId: T:Garyon.Objects.EntryValueComparer`2
+  parent: Garyon.Objects
+  href: Garyon.Objects.EntryValueComparer-2.html
+  name: EntryValueComparer<TKey, TValue>
+  nameWithType: EntryValueComparer<TKey, TValue>
+  fullName: Garyon.Objects.EntryValueComparer<TKey, TValue>
+  nameWithType.vb: EntryValueComparer(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.EntryValueComparer(Of TKey, TValue)
+  name.vb: EntryValueComparer(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.EntryValueComparer`2
+    name: EntryValueComparer
+    href: Garyon.Objects.EntryValueComparer-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.EntryValueComparer`2
+    name: EntryValueComparer
+    href: Garyon.Objects.EntryValueComparer-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.Extremum
+  commentId: T:Garyon.Objects.Extremum
+  parent: Garyon.Objects
+  href: Garyon.Objects.Extremum.html
+  name: Extremum
+  nameWithType: Extremum
+  fullName: Garyon.Objects.Extremum
+- uid: Garyon.Objects.ExtremumExtensions
+  commentId: T:Garyon.Objects.ExtremumExtensions
+  parent: Garyon.Objects
+  href: Garyon.Objects.ExtremumExtensions.html
+  name: ExtremumExtensions
+  nameWithType: ExtremumExtensions
+  fullName: Garyon.Objects.ExtremumExtensions
+- uid: Garyon.Objects.HourMinute
+  commentId: T:Garyon.Objects.HourMinute
+  parent: Garyon.Objects
+  href: Garyon.Objects.HourMinute.html
+  name: HourMinute
+  nameWithType: HourMinute
+  fullName: Garyon.Objects.HourMinute
+- uid: Garyon.Objects.ICloneable`1
+  commentId: T:Garyon.Objects.ICloneable`1
+  href: Garyon.Objects.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Garyon.Objects.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Garyon.Objects.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.ICloneable`1
+    name: ICloneable
+    href: Garyon.Objects.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.ICloneable`1
+    name: ICloneable
+    href: Garyon.Objects.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.ICopyable`1
+  commentId: T:Garyon.Objects.ICopyable`1
+  href: Garyon.Objects.ICopyable-1.html
+  name: ICopyable<TTarget>
+  nameWithType: ICopyable<TTarget>
+  fullName: Garyon.Objects.ICopyable<TTarget>
+  nameWithType.vb: ICopyable(Of TTarget)
+  fullName.vb: Garyon.Objects.ICopyable(Of TTarget)
+  name.vb: ICopyable(Of TTarget)
+  spec.csharp:
+  - uid: Garyon.Objects.ICopyable`1
+    name: ICopyable
+    href: Garyon.Objects.ICopyable-1.html
+  - name: <
+  - name: TTarget
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.ICopyable`1
+    name: ICopyable
+    href: Garyon.Objects.ICopyable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TTarget
+  - name: )
+- uid: Garyon.Objects.IHasHour
+  commentId: T:Garyon.Objects.IHasHour
+  parent: Garyon.Objects
+  href: Garyon.Objects.IHasHour.html
+  name: IHasHour
+  nameWithType: IHasHour
+  fullName: Garyon.Objects.IHasHour
+- uid: Garyon.Objects.IHasMinute
+  commentId: T:Garyon.Objects.IHasMinute
+  parent: Garyon.Objects
+  href: Garyon.Objects.IHasMinute.html
+  name: IHasMinute
+  nameWithType: IHasMinute
+  fullName: Garyon.Objects.IHasMinute
+- uid: Garyon.Objects.IHasSecond
+  commentId: T:Garyon.Objects.IHasSecond
+  parent: Garyon.Objects
+  href: Garyon.Objects.IHasSecond.html
+  name: IHasSecond
+  nameWithType: IHasSecond
+  fullName: Garyon.Objects.IHasSecond
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+  commentId: T:Garyon.Objects.IndexedEnumeratedElementAction`1
+  href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  name: IndexedEnumeratedElementAction<T>
+  nameWithType: IndexedEnumeratedElementAction<T>
+  fullName: Garyon.Objects.IndexedEnumeratedElementAction<T>
+  nameWithType.vb: IndexedEnumeratedElementAction(Of T)
+  fullName.vb: Garyon.Objects.IndexedEnumeratedElementAction(Of T)
+  name.vb: IndexedEnumeratedElementAction(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.ISharedInstance
+  commentId: T:Garyon.Objects.ISharedInstance
+  href: Garyon.Objects.ISharedInstance.html
+  name: ISharedInstance
+  nameWithType: ISharedInstance
+  fullName: Garyon.Objects.ISharedInstance
+- uid: Garyon.Objects.ITimeObject
+  commentId: T:Garyon.Objects.ITimeObject
+  parent: Garyon.Objects
+  href: Garyon.Objects.ITimeObject.html
+  name: ITimeObject
+  nameWithType: ITimeObject
+  fullName: Garyon.Objects.ITimeObject
+- uid: Garyon.Objects.ValueSelector`2
+  commentId: T:Garyon.Objects.ValueSelector`2
+  href: Garyon.Objects.ValueSelector-2.html
+  name: ValueSelector<TKey, TValue>
+  nameWithType: ValueSelector<TKey, TValue>
+  fullName: Garyon.Objects.ValueSelector<TKey, TValue>
+  nameWithType.vb: ValueSelector(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.ValueSelector(Of TKey, TValue)
+  name.vb: ValueSelector(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.ValueSelector`2
+    name: ValueSelector
+    href: Garyon.Objects.ValueSelector-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.ValueSelector`2
+    name: ValueSelector
+    href: Garyon.Objects.ValueSelector-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.KeySelector`2
+  commentId: T:Garyon.Objects.KeySelector`2
+  href: Garyon.Objects.KeySelector-2.html
+  name: KeySelector<TKey, TValue>
+  nameWithType: KeySelector<TKey, TValue>
+  fullName: Garyon.Objects.KeySelector<TKey, TValue>
+  nameWithType.vb: KeySelector(Of TKey, TValue)
+  fullName.vb: Garyon.Objects.KeySelector(Of TKey, TValue)
+  name.vb: KeySelector(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.Objects.KeySelector`2
+    name: KeySelector
+    href: Garyon.Objects.KeySelector-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.KeySelector`2
+    name: KeySelector
+    href: Garyon.Objects.KeySelector-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Objects.LabelledObject`1
+  commentId: T:Garyon.Objects.LabelledObject`1
+  href: Garyon.Objects.LabelledObject-1.html
+  name: LabelledObject<T>
+  nameWithType: LabelledObject<T>
+  fullName: Garyon.Objects.LabelledObject<T>
+  nameWithType.vb: LabelledObject(Of T)
+  fullName.vb: Garyon.Objects.LabelledObject(Of T)
+  name.vb: LabelledObject(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.LabelledObject`1
+    name: LabelledObject
+    href: Garyon.Objects.LabelledObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.LabelledObject`1
+    name: LabelledObject
+    href: Garyon.Objects.LabelledObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder
+  commentId: T:Garyon.Objects.LineStringBuilder
+  href: Garyon.Objects.LineStringBuilder.html
+  name: LineStringBuilder
+  nameWithType: LineStringBuilder
+  fullName: Garyon.Objects.LineStringBuilder
+- uid: Garyon.Objects.MemoizationDictionary`2
+  commentId: T:Garyon.Objects.MemoizationDictionary`2
+  href: Garyon.Objects.MemoizationDictionary-2.html
+  name: MemoizationDictionary<TInput, TOutput>
+  nameWithType: MemoizationDictionary<TInput, TOutput>
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput)
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput)
+  name.vb: MemoizationDictionary(Of TInput, TOutput)
+  spec.csharp:
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: Garyon.Objects.MessageRequestChannel
+  commentId: T:Garyon.Objects.MessageRequestChannel
+  parent: Garyon.Objects
+  href: Garyon.Objects.MessageRequestChannel.html
+  name: MessageRequestChannel
+  nameWithType: MessageRequestChannel
+  fullName: Garyon.Objects.MessageRequestChannel
+- uid: Garyon.Objects.MinuteSecond
+  commentId: T:Garyon.Objects.MinuteSecond
+  parent: Garyon.Objects
+  href: Garyon.Objects.MinuteSecond.html
+  name: MinuteSecond
+  nameWithType: MinuteSecond
+  fullName: Garyon.Objects.MinuteSecond
+- uid: Garyon.Objects.OpenInterval`1
+  commentId: T:Garyon.Objects.OpenInterval`1
+  parent: Garyon.Objects
+  href: Garyon.Objects.OpenInterval-1.html
+  name: OpenInterval<T>
+  nameWithType: OpenInterval<T>
+  fullName: Garyon.Objects.OpenInterval<T>
+  nameWithType.vb: OpenInterval(Of T)
+  fullName.vb: Garyon.Objects.OpenInterval(Of T)
+  name.vb: OpenInterval(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.OpenInterval`1
+    name: OpenInterval
+    href: Garyon.Objects.OpenInterval-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.OpenInterval`1
+    name: OpenInterval
+    href: Garyon.Objects.OpenInterval-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.RepeatedValueCollection`1
+  commentId: T:Garyon.Objects.RepeatedValueCollection`1
+  parent: Garyon.Objects
+  href: Garyon.Objects.RepeatedValueCollection-1.html
+  name: RepeatedValueCollection<T>
+  nameWithType: RepeatedValueCollection<T>
+  fullName: Garyon.Objects.RepeatedValueCollection<T>
+  nameWithType.vb: RepeatedValueCollection(Of T)
+  fullName.vb: Garyon.Objects.RepeatedValueCollection(Of T)
+  name.vb: RepeatedValueCollection(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.RepeatedValueCollection`1
+    name: RepeatedValueCollection
+    href: Garyon.Objects.RepeatedValueCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.RepeatedValueCollection`1
+    name: RepeatedValueCollection
+    href: Garyon.Objects.RepeatedValueCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.RepeatedValueCollection`1.Enumerator
+  commentId: T:Garyon.Objects.RepeatedValueCollection`1.Enumerator
+  href: Garyon.Objects.RepeatedValueCollection-1.html
+  name: RepeatedValueCollection<T>.Enumerator
+  nameWithType: RepeatedValueCollection<T>.Enumerator
+  fullName: Garyon.Objects.RepeatedValueCollection<T>.Enumerator
+  nameWithType.vb: RepeatedValueCollection(Of T).Enumerator
+  fullName.vb: Garyon.Objects.RepeatedValueCollection(Of T).Enumerator
+  name.vb: RepeatedValueCollection(Of T).Enumerator
+  spec.csharp:
+  - uid: Garyon.Objects.RepeatedValueCollection`1
+    name: RepeatedValueCollection
+    href: Garyon.Objects.RepeatedValueCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: .
+  - uid: Garyon.Objects.RepeatedValueCollection`1.Enumerator
+    name: Enumerator
+    href: Garyon.Objects.RepeatedValueCollection-1.Enumerator.html
+  spec.vb:
+  - uid: Garyon.Objects.RepeatedValueCollection`1
+    name: RepeatedValueCollection
+    href: Garyon.Objects.RepeatedValueCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: .
+  - uid: Garyon.Objects.RepeatedValueCollection`1.Enumerator
+    name: Enumerator
+    href: Garyon.Objects.RepeatedValueCollection-1.Enumerator.html
+- uid: Garyon.Objects.SharedInstanceExtensions
+  commentId: T:Garyon.Objects.SharedInstanceExtensions
+  href: Garyon.Objects.SharedInstanceExtensions.html
+  name: SharedInstanceExtensions
+  nameWithType: SharedInstanceExtensions
+  fullName: Garyon.Objects.SharedInstanceExtensions
+- uid: Garyon.Objects.Singleton`1
+  commentId: T:Garyon.Objects.Singleton`1
+  href: Garyon.Objects.Singleton-1.html
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: Garyon.Objects.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: Garyon.Objects.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Singleton`1
+    name: Singleton
+    href: Garyon.Objects.Singleton-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Singleton`1
+    name: Singleton
+    href: Garyon.Objects.Singleton-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.SpanYielder`1
+  commentId: T:Garyon.Objects.SpanYielder`1
+  href: Garyon.Objects.SpanYielder-1.html
+  name: SpanYielder<T>
+  nameWithType: SpanYielder<T>
+  fullName: Garyon.Objects.SpanYielder<T>
+  nameWithType.vb: SpanYielder(Of T)
+  fullName.vb: Garyon.Objects.SpanYielder(Of T)
+  name.vb: SpanYielder(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.SpanYielder`1
+    name: SpanYielder
+    href: Garyon.Objects.SpanYielder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.SpanYielder`1
+    name: SpanYielder
+    href: Garyon.Objects.SpanYielder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.SpanYielding
+  commentId: T:Garyon.Objects.SpanYielding
+  parent: Garyon.Objects
+  href: Garyon.Objects.SpanYielding.html
+  name: SpanYielding
+  nameWithType: SpanYielding
+  fullName: Garyon.Objects.SpanYielding
+- uid: Garyon.Objects.StructRef`1
+  commentId: T:Garyon.Objects.StructRef`1
+  href: Garyon.Objects.StructRef-1.html
+  name: StructRef<T>
+  nameWithType: StructRef<T>
+  fullName: Garyon.Objects.StructRef<T>
+  nameWithType.vb: StructRef(Of T)
+  fullName.vb: Garyon.Objects.StructRef(Of T)
+  name.vb: StructRef(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.StructRef`1
+    name: StructRef
+    href: Garyon.Objects.StructRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.StructRef`1
+    name: StructRef
+    href: Garyon.Objects.StructRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.StructRefHelperExtensions
+  commentId: T:Garyon.Objects.StructRefHelperExtensions
+  parent: Garyon.Objects
+  href: Garyon.Objects.StructRefHelperExtensions.html
+  name: StructRefHelperExtensions
+  nameWithType: StructRefHelperExtensions
+  fullName: Garyon.Objects.StructRefHelperExtensions
+- uid: Garyon.Objects.TypeValueCounterDictionary
+  commentId: T:Garyon.Objects.TypeValueCounterDictionary
+  href: Garyon.Objects.TypeValueCounterDictionary.html
+  name: TypeValueCounterDictionary
+  nameWithType: TypeValueCounterDictionary
+  fullName: Garyon.Objects.TypeValueCounterDictionary
+- uid: Garyon.Objects.ValueBounds`1
+  commentId: T:Garyon.Objects.ValueBounds`1
+  parent: Garyon.Objects
+  href: Garyon.Objects.ValueBounds-1.html
+  name: ValueBounds<T>
+  nameWithType: ValueBounds<T>
+  fullName: Garyon.Objects.ValueBounds<T>
+  nameWithType.vb: ValueBounds(Of T)
+  fullName.vb: Garyon.Objects.ValueBounds(Of T)
+  name.vb: ValueBounds(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.ValueBounds`1
+    name: ValueBounds
+    href: Garyon.Objects.ValueBounds-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.ValueBounds`1
+    name: ValueBounds
+    href: Garyon.Objects.ValueBounds-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.ValueBoundsExtensions
+  commentId: T:Garyon.Objects.ValueBoundsExtensions
+  href: Garyon.Objects.ValueBoundsExtensions.html
+  name: ValueBoundsExtensions
+  nameWithType: ValueBoundsExtensions
+  fullName: Garyon.Objects.ValueBoundsExtensions
+- uid: Garyon.Objects.VariablyLabelledObject`1
+  commentId: T:Garyon.Objects.VariablyLabelledObject`1
+  href: Garyon.Objects.VariablyLabelledObject-1.html
+  name: VariablyLabelledObject<T>
+  nameWithType: VariablyLabelledObject<T>
+  fullName: Garyon.Objects.VariablyLabelledObject<T>
+  nameWithType.vb: VariablyLabelledObject(Of T)
+  fullName.vb: Garyon.Objects.VariablyLabelledObject(Of T)
+  name.vb: VariablyLabelledObject(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.VariablyLabelledObject`1
+    name: VariablyLabelledObject
+    href: Garyon.Objects.VariablyLabelledObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.VariablyLabelledObject`1
+    name: VariablyLabelledObject
+    href: Garyon.Objects.VariablyLabelledObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielder`1
+  commentId: T:Garyon.Objects.Yielder`1
+  href: Garyon.Objects.Yielder-1.html
+  name: Yielder<T>
+  nameWithType: Yielder<T>
+  fullName: Garyon.Objects.Yielder<T>
+  nameWithType.vb: Yielder(Of T)
+  fullName.vb: Garyon.Objects.Yielder(Of T)
+  name.vb: Yielder(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Yielder`1
+    name: Yielder
+    href: Garyon.Objects.Yielder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Yielder`1
+    name: Yielder
+    href: Garyon.Objects.Yielder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielding
+  commentId: T:Garyon.Objects.Yielding
+  href: Garyon.Objects.Yielding.html
+  name: Yielding
+  nameWithType: Yielding
+  fullName: Garyon.Objects.Yielding
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garyon.Functions;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,7 @@ public static class DirectoryInfoExtensions
     public static IEnumerable<DirectoryInfo> EnumerateParents(
         this DirectoryInfo directory)
     {
-        return directory.EnumerateRecursiveProperty(s => s.Parent);
+        return directory.EnumerateRecursively(s => s.Parent);
     }
 
     /// <summary>
@@ -334,5 +335,54 @@ public static class DirectoryInfoExtensions
         string fileName)
     {
         return new(directory.CombinePath(fileName));
+    }
+
+    extension(DirectoryInfo directory)
+    {
+        /// <summary>
+        /// Creates the directory, catching any exception thrown from the operation.
+        /// </summary>
+        /// <returns>
+        /// <see langword="true"/> whether the operation succeeded, otherwise <see langword="false"/>.
+        /// </returns>
+        public bool CreateSafe()
+        {
+            return DelegateHelpers.Try(directory.Create);
+        }
+
+        public static DirectoryInfo GetCurrentDirectory()
+        {
+            return new(Directory.GetCurrentDirectory());
+        }
+
+        public DirectoryInfo? GetAncestorOrSelfDirectoryWithFiles(
+            string searchPattern)
+        {
+            var currentDirectory = directory;
+            while (currentDirectory is not null)
+            {
+                var hasFiles = currentDirectory.EnumerateFiles(searchPattern).Any();
+                if (hasFiles)
+                    return currentDirectory;
+                currentDirectory = currentDirectory.Parent;
+            }
+
+            return null;
+        }
+
+        public DirectoryInfo? GetAncestorOrSelfDirectoryWithDirectories(
+            string searchPattern)
+        {
+            var currentDirectory = directory;
+            while (currentDirectory is not null)
+            {
+                var hasDirectories = currentDirectory.EnumerateDirectories(searchPattern).Any();
+                if (hasDirectories)
+                    return currentDirectory;
+                currentDirectory = currentDirectory.Parent;
+            }
+
+            return null;
+        }
     }
 }

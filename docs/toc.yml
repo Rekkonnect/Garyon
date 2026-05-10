@@ -1,0 +1,54 @@
+- name: Documentation Home
+  href: index.md
+- name: Quick Reference
+  href: QUICK_REFERENCE.md
+- name: User Guides
+  href: guides/index.md
+  items:
+    - name: Getting Started
+      href: guides/getting-started.md
+      items:
+        - name: Installation
+          href: guides/installation.md
+        - name: Quick Start
+          href: guides/quick-start.md
+    - name: Extensions & Utilities
+      href: guides/extensions-utilities.md
+      items:
+        - name: Task Handling & .NoContext
+          href: guides/task-handling.md
+        - name: CancellationTokenFactory
+          href: guides/cancellation-token-factory.md
+        - name: Typed Paths (FilePath & DirectoryPath)
+          href: guides/paths.md
+        - name: Process Extensions
+          href: guides/process-extensions.md
+        - name: Enumerable & Enumerator Extensions
+          href: guides/enumerable-extensions.md
+        - name: Dictionary & Collection Helpers
+          href: guides/collection-helpers.md
+        - name: Upcasting
+          href: guides/upcasting.md
+        - name: DelegateHelpers
+          href: guides/delegate-helpers.md
+        - name: NullGuards
+          href: guides/null-guards.md
+    - name: Advanced Features
+      href: guides/advanced-features.md
+      items:
+        - name: AppDomainCache
+          href: guides/appdomain-cache.md
+        - name: Math Utilities
+          href: guides/math.md
+        - name: Comparison Patterns
+          href: guides/comparison-patterns.md
+        - name: Message Channels & Yielding
+          href: guides/messaging-yielding.md
+        - name: Singleton & SharedInstance
+          href: guides/singleton-pattern.md
+        - name: AdvancedLazy
+          href: guides/advanced-lazy.md
+        - name: AsyncLazy
+          href: guides/async-lazy.md
+- name: API Reference
+  href: api/index.md

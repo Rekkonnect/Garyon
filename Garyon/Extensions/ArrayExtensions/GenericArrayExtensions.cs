@@ -1,7 +1,6 @@
 ﻿using Garyon.Exceptions;
 using Garyon.Functions.Arrays;
 using System;
-using System.Collections.Generic;
 
 namespace Garyon.Extensions.ArrayExtensions;
 
@@ -103,21 +102,6 @@ public static class GenericArrayExtensions
         return array;
     }
     /// <summary>
-    /// Sorts the array, affecting the original array. Returns the instance of
-    /// the original array.
-    /// </summary>
-    /// <typeparam name="T">
-    /// The type of the array elements.
-    /// </typeparam>
-    /// <param name="array">
-    /// The original array to sort.
-    /// </param>
-    public static T[] Sort<T>(this T[] array)
-    {
-        Array.Sort(array);
-        return array;
-    }
-    /// <summary>
     /// Swaps two elements in the array. Returns the instance of the original
     /// array.
     /// </summary>
@@ -142,36 +126,6 @@ public static class GenericArrayExtensions
         array[a] = array[b];
         array[b] = t;
         return array;
-    }
-
-    /// <summary>
-    /// Gets the indices of the elements in the array that match the specified
-    /// values, using the <seealso cref="object.Equals(object?)"/> method to
-    /// compare the values.
-    /// </summary>
-    /// <typeparam name="T">
-    /// The type of the elements contained in the array.
-    /// </typeparam>
-    /// <param name="array">
-    /// The array whose element indices that match the <paramref name="value"/>
-    /// to get.
-    /// </param>
-    /// <param name="value">
-    /// The value to match.
-    /// </param>
-    /// <returns>
-    /// An array with the indices of the matching elements, ascendingly sorted.
-    /// </returns>
-    public static int[] GetIndicesOfMatchingValues<T>(this T[] array, T value)
-    {
-        var indices = new List<int>(array.Length);
-        foreach (var (i, e) in array.WithIndex())
-        {
-            if (e!.Equals(value))
-                indices.Add(i);
-        }
-
-        return indices.ToArray();
     }
 
     /// <summary>
@@ -227,20 +181,6 @@ public static class GenericArrayExtensions
     }
 
     #region Array Identification Extensions
-    public static bool IsArrayOfByte(this Array array) => ArrayIdentification.IsArrayOfType<byte>(array.GetType());
-    public static bool IsArrayOfInt16(this Array array) => ArrayIdentification.IsArrayOfType<short>(array.GetType());
-    public static bool IsArrayOfInt32(this Array array) => ArrayIdentification.IsArrayOfType<int>(array.GetType());
-    public static bool IsArrayOfInt64(this Array array) => ArrayIdentification.IsArrayOfType<long>(array.GetType());
-    public static bool IsArrayOfSByte(this Array array) => ArrayIdentification.IsArrayOfType<sbyte>(array.GetType());
-    public static bool IsArrayOfUInt16(this Array array) => ArrayIdentification.IsArrayOfType<ushort>(array.GetType());
-    public static bool IsArrayOfUInt32(this Array array) => ArrayIdentification.IsArrayOfType<uint>(array.GetType());
-    public static bool IsArrayOfUInt64(this Array array) => ArrayIdentification.IsArrayOfType<ulong>(array.GetType());
-    public static bool IsArrayOfSingle(this Array array) => ArrayIdentification.IsArrayOfType<float>(array.GetType());
-    public static bool IsArrayOfDouble(this Array array) => ArrayIdentification.IsArrayOfType<double>(array.GetType());
-    public static bool IsArrayOfDecimal(this Array array) => ArrayIdentification.IsArrayOfType<decimal>(array.GetType());
-    public static bool IsArrayOfChar(this Array array) => ArrayIdentification.IsArrayOfType<char>(array.GetType());
-    public static bool IsArrayOfBoolean(this Array array) => ArrayIdentification.IsArrayOfType<bool>(array.GetType());
-    public static bool IsArrayOfString(this Array array) => ArrayIdentification.IsArrayOfType<string>(array.GetType());
 
     /// <summary>
     /// Determines whether an array type contains elements of the provided type.

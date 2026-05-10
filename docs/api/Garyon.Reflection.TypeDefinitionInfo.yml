@@ -1,0 +1,3171 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.TypeDefinitionInfo
+  commentId: T:Garyon.Reflection.TypeDefinitionInfo
+  id: TypeDefinitionInfo
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.TypeDefinitionInfo.#ctor
+  - Garyon.Reflection.TypeDefinitionInfo.#ctor(Garyon.Reflection.TypeKind,Garyon.Reflection.TypeModifiers)
+  - Garyon.Reflection.TypeDefinitionInfo.#ctor(System.Type)
+  - Garyon.Reflection.TypeDefinitionInfo.CanBeInherited
+  - Garyon.Reflection.TypeDefinitionInfo.CanInherit
+  - Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses
+  - Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses
+  - Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes
+  - Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces
+  - Garyon.Reflection.TypeDefinitionInfo.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  - Garyon.Reflection.TypeDefinitionInfo.GetHashCode
+  - Garyon.Reflection.TypeDefinitionInfo.GetTypeKind(System.Type)
+  - Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers(System.Type)
+  - Garyon.Reflection.TypeDefinitionInfo.IsAbstract
+  - Garyon.Reflection.TypeDefinitionInfo.IsArray
+  - Garyon.Reflection.TypeDefinitionInfo.IsAttribute
+  - Garyon.Reflection.TypeDefinitionInfo.IsByRef
+  - Garyon.Reflection.TypeDefinitionInfo.IsClass
+  - Garyon.Reflection.TypeDefinitionInfo.IsDelegate
+  - Garyon.Reflection.TypeDefinitionInfo.IsEnum
+  - Garyon.Reflection.TypeDefinitionInfo.IsException
+  - Garyon.Reflection.TypeDefinitionInfo.IsFile
+  - Garyon.Reflection.TypeDefinitionInfo.IsInterface
+  - Garyon.Reflection.TypeDefinitionInfo.IsInternal
+  - Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct
+  - Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple
+  - Garyon.Reflection.TypeDefinitionInfo.IsNullableType
+  - Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType
+  - Garyon.Reflection.TypeDefinitionInfo.IsPointer
+  - Garyon.Reflection.TypeDefinitionInfo.IsPrivate
+  - Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected
+  - Garyon.Reflection.TypeDefinitionInfo.IsProtected
+  - Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal
+  - Garyon.Reflection.TypeDefinitionInfo.IsPublic
+  - Garyon.Reflection.TypeDefinitionInfo.IsReadonly
+  - Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef
+  - Garyon.Reflection.TypeDefinitionInfo.IsRef
+  - Garyon.Reflection.TypeDefinitionInfo.IsReferenceType
+  - Garyon.Reflection.TypeDefinitionInfo.IsSealed
+  - Garyon.Reflection.TypeDefinitionInfo.IsStatic
+  - Garyon.Reflection.TypeDefinitionInfo.IsStruct
+  - Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  - Garyon.Reflection.TypeDefinitionInfo.IsTuple
+  - Garyon.Reflection.TypeDefinitionInfo.IsValueType
+  - Garyon.Reflection.TypeDefinitionInfo.IsVoid
+  - Garyon.Reflection.TypeDefinitionInfo.Kind
+  - Garyon.Reflection.TypeDefinitionInfo.Modifiers
+  - Garyon.Reflection.TypeDefinitionInfo.ToString
+  langs:
+  - csharp
+  - vb
+  name: TypeDefinitionInfo
+  nameWithType: TypeDefinitionInfo
+  fullName: Garyon.Reflection.TypeDefinitionInfo
+  type: Class
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TypeDefinitionInfo
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Contains information about the definition of a <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public class TypeDefinitionInfo : BaseEquatable<TypeDefinitionInfo>, IEquatable<TypeDefinitionInfo>'
+    content.vb: Public Class TypeDefinitionInfo Inherits BaseEquatable(Of TypeDefinitionInfo) Implements IEquatable(Of TypeDefinitionInfo)
+  inheritance:
+  - System.Object
+  - Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  implements:
+  - System.IEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  inheritedMembers:
+  - Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(Garyon.Reflection.TypeDefinitionInfo)
+  - Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeDefinitionInfo)
+  - Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Reflection.TypeDefinitionInfo})
+  - Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Reflection.TypeDefinitionInfo,{TResult}})
+  - Garyon.Reflection.TypeDefinitionInfo.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+- uid: Garyon.Reflection.TypeDefinitionInfo.Kind
+  commentId: F:Garyon.Reflection.TypeDefinitionInfo.Kind
+  id: Kind
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: TypeDefinitionInfo.Kind
+  fullName: Garyon.Reflection.TypeDefinitionInfo.Kind
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Kind
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 15
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The kind of the type.
+  example: []
+  syntax:
+    content: public TypeKind Kind
+    return:
+      type: Garyon.Reflection.TypeKind
+    content.vb: Public Kind As TypeKind
+- uid: Garyon.Reflection.TypeDefinitionInfo.Modifiers
+  commentId: F:Garyon.Reflection.TypeDefinitionInfo.Modifiers
+  id: Modifiers
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: Modifiers
+  nameWithType: TypeDefinitionInfo.Modifiers
+  fullName: Garyon.Reflection.TypeDefinitionInfo.Modifiers
+  type: Field
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Modifiers
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: The modifiers of the type.
+  example: []
+  syntax:
+    content: public TypeModifiers Modifiers
+    return:
+      type: Garyon.Reflection.TypeModifiers
+    content.vb: Public Modifiers As TypeModifiers
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsClass
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsClass
+  id: IsClass
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsClass
+  nameWithType: TypeDefinitionInfo.IsClass
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsClass
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsClass
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is either a class or an array. For the
+
+    non-array variant, use <xref href="Garyon.Reflection.TypeDefinitionInfo.IsTrueClass" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsClass { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsClass As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsClass*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  id: IsTrueClass
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsTrueClass
+  nameWithType: TypeDefinitionInfo.IsTrueClass
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsTrueClass
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 29
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a class.
+  example: []
+  syntax:
+    content: public bool IsTrueClass { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTrueClass As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsStruct
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsStruct
+  id: IsStruct
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsStruct
+  nameWithType: TypeDefinitionInfo.IsStruct
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsStruct
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsStruct
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 33
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a struct.
+  example: []
+  syntax:
+    content: public bool IsStruct { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsStruct As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsStruct*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsInterface
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsInterface
+  id: IsInterface
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsInterface
+  nameWithType: TypeDefinitionInfo.IsInterface
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsInterface
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsInterface
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 37
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an interface.
+  example: []
+  syntax:
+    content: public bool IsInterface { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInterface As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsInterface*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsDelegate
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsDelegate
+  id: IsDelegate
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsDelegate
+  nameWithType: TypeDefinitionInfo.IsDelegate
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsDelegate
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsDelegate
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 41
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a delegate.
+  example: []
+  syntax:
+    content: public bool IsDelegate { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDelegate As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsDelegate*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsException
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsException
+  id: IsException
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsException
+  nameWithType: TypeDefinitionInfo.IsException
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsException
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsException
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 45
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an exception.
+  example: []
+  syntax:
+    content: public bool IsException { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsException As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsException*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsAttribute
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsAttribute
+  id: IsAttribute
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsAttribute
+  nameWithType: TypeDefinitionInfo.IsAttribute
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsAttribute
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsAttribute
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 49
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an attribute.
+  example: []
+  syntax:
+    content: public bool IsAttribute { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAttribute As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsAttribute*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsEnum
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsEnum
+  id: IsEnum
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsEnum
+  nameWithType: TypeDefinitionInfo.IsEnum
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsEnum
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsEnum
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an enum.
+  example: []
+  syntax:
+    content: public bool IsEnum { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnum As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsEnum*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsByRef
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsByRef
+  id: IsByRef
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsByRef
+  nameWithType: TypeDefinitionInfo.IsByRef
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsByRef
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsByRef
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 57
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is by ref.
+  example: []
+  syntax:
+    content: public bool IsByRef { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsByRef As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsByRef*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsArray
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsArray
+  id: IsArray
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsArray
+  nameWithType: TypeDefinitionInfo.IsArray
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsArray
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArray
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 61
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an array.
+  example: []
+  syntax:
+    content: public bool IsArray { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsArray As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsArray*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPointer
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsPointer
+  id: IsPointer
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsPointer
+  nameWithType: TypeDefinitionInfo.IsPointer
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPointer
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPointer
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 65
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a pointer.
+  example: []
+  syntax:
+    content: public bool IsPointer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPointer As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsPointer*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsVoid
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsVoid
+  id: IsVoid
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsVoid
+  nameWithType: TypeDefinitionInfo.IsVoid
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsVoid
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsVoid
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 69
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>.
+  example: []
+  syntax:
+    content: public bool IsVoid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsVoid As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsVoid*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsTuple
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsTuple
+  id: IsTuple
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsTuple
+  nameWithType: TypeDefinitionInfo.IsTuple
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsTuple
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsTuple
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 73
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a tuple.
+  example: []
+  syntax:
+    content: public bool IsTuple { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTuple As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsTuple*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct
+  id: IsNullableStruct
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNullableStruct
+  nameWithType: TypeDefinitionInfo.IsNullableStruct
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNullableStruct
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 77
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a nullable struct.
+  example: []
+  syntax:
+    content: public bool IsNullableStruct { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNullableStruct As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple
+  id: IsNullableTuple
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNullableTuple
+  nameWithType: TypeDefinitionInfo.IsNullableTuple
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNullableTuple
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 81
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a nullable tuple.
+  example: []
+  syntax:
+    content: public bool IsNullableTuple { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNullableTuple As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsReferenceType
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsReferenceType
+  id: IsReferenceType
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsReferenceType
+  nameWithType: TypeDefinitionInfo.IsReferenceType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsReferenceType
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsReferenceType
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 88
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a reference type; that is, any class,
+
+    interface, delegate or by reference type. Pointers do not count as
+
+    reference types.
+  example: []
+  syntax:
+    content: public bool IsReferenceType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReferenceType As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsReferenceType*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsValueType
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsValueType
+  id: IsValueType
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsValueType
+  nameWithType: TypeDefinitionInfo.IsValueType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsValueType
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsValueType
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 93
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a reference type; that is, any struct,
+
+    enum, tuple or pointer type.
+  example: []
+  syntax:
+    content: public bool IsValueType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsValueType As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsValueType*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType
+  id: IsNullableValueType
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNullableValueType
+  nameWithType: TypeDefinitionInfo.IsNullableValueType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNullableValueType
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 98
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a nullable value type; that is, any
+
+    nullable struct or pointer type.
+  example: []
+  syntax:
+    content: public bool IsNullableValueType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNullableValueType As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableType
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsNullableType
+  id: IsNullableType
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNullableType
+  nameWithType: TypeDefinitionInfo.IsNullableType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableType
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNullableType
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 103
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a nullable type; that is, any reference,
+
+    nullable struct or pointer type.
+  example: []
+  syntax:
+    content: public bool IsNullableType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNullableType As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsNullableType*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPublic
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsPublic
+  id: IsPublic
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsPublic
+  nameWithType: TypeDefinitionInfo.IsPublic
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPublic
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPublic
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 108
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/public">public</a>.
+  example: []
+  syntax:
+    content: public bool IsPublic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPublic As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsPublic*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsInternal
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsInternal
+  id: IsInternal
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsInternal
+  nameWithType: TypeDefinitionInfo.IsInternal
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsInternal
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsInternal
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 112
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/internal">internal</a>.
+  example: []
+  syntax:
+    content: public bool IsInternal { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInternal As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsInternal*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal
+  id: IsProtectedInternal
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsProtectedInternal
+  nameWithType: TypeDefinitionInfo.IsProtectedInternal
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsProtectedInternal
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 116
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <code>protected internal</code>.
+  example: []
+  syntax:
+    content: public bool IsProtectedInternal { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsProtectedInternal As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsProtected
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsProtected
+  id: IsProtected
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsProtected
+  nameWithType: TypeDefinitionInfo.IsProtected
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsProtected
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsProtected
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 120
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/protected">protected</a>.
+  example: []
+  syntax:
+    content: public bool IsProtected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsProtected As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsProtected*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected
+  id: IsPrivateProtected
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsPrivateProtected
+  nameWithType: TypeDefinitionInfo.IsPrivateProtected
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPrivateProtected
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 124
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <code>private protected</code>.
+  example: []
+  syntax:
+    content: public bool IsPrivateProtected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPrivateProtected As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPrivate
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsPrivate
+  id: IsPrivate
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsPrivate
+  nameWithType: TypeDefinitionInfo.IsPrivate
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPrivate
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPrivate
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 128
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/private">private</a>.
+  example: []
+  syntax:
+    content: public bool IsPrivate { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPrivate As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsPrivate*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsFile
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsFile
+  id: IsFile
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsFile
+  nameWithType: TypeDefinitionInfo.IsFile
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsFile
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsFile
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 132
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/file">file</a>.
+  example: []
+  syntax:
+    content: public bool IsFile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFile As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsFile*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsStatic
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsStatic
+  id: IsStatic
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsStatic
+  nameWithType: TypeDefinitionInfo.IsStatic
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsStatic
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsStatic
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 137
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/static">static</a>.
+  example: []
+  syntax:
+    content: public bool IsStatic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsStatic As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsStatic*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsAbstract
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsAbstract
+  id: IsAbstract
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsAbstract
+  nameWithType: TypeDefinitionInfo.IsAbstract
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsAbstract
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsAbstract
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 141
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/abstract">abstract</a>.
+  example: []
+  syntax:
+    content: public bool IsAbstract { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAbstract As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsAbstract*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsSealed
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsSealed
+  id: IsSealed
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsSealed
+  nameWithType: TypeDefinitionInfo.IsSealed
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsSealed
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsSealed
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 145
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/sealed">sealed</a>.
+  example: []
+  syntax:
+    content: public bool IsSealed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSealed As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsSealed*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsRef
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsRef
+  id: IsRef
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsRef
+  nameWithType: TypeDefinitionInfo.IsRef
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsRef
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsRef
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 153
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/ref">ref</a>. NOTE: This
+
+    property will always return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for ref struct type
+
+    definitions, since the reflection API does not have any mechanism to
+
+    determine that. However, by ref types (types with the ref modifier in
+
+    argument type declarations) will be detected as such.
+  example: []
+  syntax:
+    content: public bool IsRef { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRef As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsRef*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsReadonly
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsReadonly
+  id: IsReadonly
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsReadonly
+  nameWithType: TypeDefinitionInfo.IsReadonly
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsReadonly
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsReadonly
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 159
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/readonly">readonly</a>. NOTE: This
+
+    property will always return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> since the reflection
+
+    API does not have any mechanism to determine that.
+  example: []
+  syntax:
+    content: public bool IsReadonly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadonly As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsReadonly*
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef
+  id: IsReadonlyRef
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: IsReadonlyRef
+  nameWithType: TypeDefinitionInfo.IsReadonlyRef
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsReadonlyRef
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 165
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is <code>readonly ref</code>. NOTE:
+
+    This property will always return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> since the
+
+    reflection API does not have any mechanism to determine that.
+  example: []
+  syntax:
+    content: public bool IsReadonlyRef { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadonlyRef As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef*
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInherit
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.CanInherit
+  id: CanInherit
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: CanInherit
+  nameWithType: TypeDefinitionInfo.CanInherit
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInherit
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInherit
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 176
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether this type can inherit any type, either a class or an
+
+    interface.
+  example: []
+  syntax:
+    content: public bool CanInherit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any type; that is, it is
+
+        not a pointer or a by reference type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property CanInherit As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.CanInherit*
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes
+  id: CanInheritCustomTypes
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: CanInheritCustomTypes
+  nameWithType: TypeDefinitionInfo.CanInheritCustomTypes
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritCustomTypes
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 186
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether this type can inherit any type, either a class or an
+
+    interface.
+  example: []
+  syntax:
+    content: public bool CanInheritCustomTypes { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any type; that is, it is
+
+        not a pointer, a by reference, a static class, a delegate, an enum or an
+
+        array type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property CanInheritCustomTypes As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes*
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces
+  id: CanInheritInterfaces
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: CanInheritInterfaces
+  nameWithType: TypeDefinitionInfo.CanInheritInterfaces
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritInterfaces
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 195
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether this type can inherit any interface.
+  example: []
+  syntax:
+    content: public bool CanInheritInterfaces { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any interface; that is,
+
+        it is not a pointer, a by reference, a static class, a delegate, an enum
+
+        or an array type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property CanInheritInterfaces As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces*
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses
+  id: CanInheritClasses
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: CanInheritClasses
+  nameWithType: TypeDefinitionInfo.CanInheritClasses
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritClasses
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 204
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether this type can inherit any class.
+  example: []
+  syntax:
+    content: public bool CanInheritClasses { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any interface; that is,
+
+        it is not a pointer, a by reference, or a delegate type, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property CanInheritClasses As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses*
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses
+  id: CanInheritCustomClasses
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: CanInheritCustomClasses
+  nameWithType: TypeDefinitionInfo.CanInheritCustomClasses
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritCustomClasses
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 213
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether this type can inherit any custom class.
+  example: []
+  syntax:
+    content: public bool CanInheritCustomClasses { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any interface; that is,
+
+        it is not a pointer, a by reference, a static class, or a delegate type,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property CanInheritCustomClasses As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses*
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanBeInherited
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.CanBeInherited
+  id: CanBeInherited
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: CanBeInherited
+  nameWithType: TypeDefinitionInfo.CanBeInherited
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanBeInherited
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanBeInherited
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 222
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether this type can be inherited by any type.
+  example: []
+  syntax:
+    content: public bool CanBeInherited { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can be inherited by any type; that is
+
+        it is not sealed, is a true class or an interface, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property CanBeInherited As Boolean
+  overload: Garyon.Reflection.TypeDefinitionInfo.CanBeInherited*
+- uid: Garyon.Reflection.TypeDefinitionInfo.#ctor
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.#ctor
+  id: '#ctor'
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: TypeDefinitionInfo()
+  nameWithType: TypeDefinitionInfo.TypeDefinitionInfo()
+  fullName: Garyon.Reflection.TypeDefinitionInfo.TypeDefinitionInfo()
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 229
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Reflection.TypeDefinitionInfo" data-throw-if-not-resolved="false"></xref>
+
+    class.
+  example: []
+  syntax:
+    content: public TypeDefinitionInfo()
+    content.vb: Public Sub New()
+  overload: Garyon.Reflection.TypeDefinitionInfo.#ctor*
+  nameWithType.vb: TypeDefinitionInfo.New()
+  fullName.vb: Garyon.Reflection.TypeDefinitionInfo.New()
+  name.vb: New()
+- uid: Garyon.Reflection.TypeDefinitionInfo.#ctor(System.Type)
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.#ctor(System.Type)
+  id: '#ctor(System.Type)'
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: TypeDefinitionInfo(Type)
+  nameWithType: TypeDefinitionInfo.TypeDefinitionInfo(Type)
+  fullName: Garyon.Reflection.TypeDefinitionInfo.TypeDefinitionInfo(System.Type)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 237
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Reflection.TypeDefinitionInfo" data-throw-if-not-resolved="false"></xref>
+
+    class from a type.
+  example: []
+  syntax:
+    content: public TypeDefinitionInfo(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose type definition info to get.
+    content.vb: Public Sub New(type As Type)
+  overload: Garyon.Reflection.TypeDefinitionInfo.#ctor*
+  nameWithType.vb: TypeDefinitionInfo.New(Type)
+  fullName.vb: Garyon.Reflection.TypeDefinitionInfo.New(System.Type)
+  name.vb: New(Type)
+- uid: Garyon.Reflection.TypeDefinitionInfo.#ctor(Garyon.Reflection.TypeKind,Garyon.Reflection.TypeModifiers)
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.#ctor(Garyon.Reflection.TypeKind,Garyon.Reflection.TypeModifiers)
+  id: '#ctor(Garyon.Reflection.TypeKind,Garyon.Reflection.TypeModifiers)'
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: TypeDefinitionInfo(TypeKind, TypeModifiers)
+  nameWithType: TypeDefinitionInfo.TypeDefinitionInfo(TypeKind, TypeModifiers)
+  fullName: Garyon.Reflection.TypeDefinitionInfo.TypeDefinitionInfo(Garyon.Reflection.TypeKind, Garyon.Reflection.TypeModifiers)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 251
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of the <xref href="Garyon.Reflection.TypeDefinitionInfo" data-throw-if-not-resolved="false"></xref>
+
+    class from a type kind and the type modifiers.
+  example: []
+  syntax:
+    content: public TypeDefinitionInfo(TypeKind kind, TypeModifiers modifiers)
+    parameters:
+    - id: kind
+      type: Garyon.Reflection.TypeKind
+      description: The kind of the type.
+    - id: modifiers
+      type: Garyon.Reflection.TypeModifiers
+      description: The modifiers of the type.
+    content.vb: Public Sub New(kind As TypeKind, modifiers As TypeModifiers)
+  overload: Garyon.Reflection.TypeDefinitionInfo.#ctor*
+  nameWithType.vb: TypeDefinitionInfo.New(TypeKind, TypeModifiers)
+  fullName.vb: Garyon.Reflection.TypeDefinitionInfo.New(Garyon.Reflection.TypeKind, Garyon.Reflection.TypeModifiers)
+  name.vb: New(TypeKind, TypeModifiers)
+- uid: Garyon.Reflection.TypeDefinitionInfo.GetTypeKind(System.Type)
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.GetTypeKind(System.Type)
+  id: GetTypeKind(System.Type)
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: GetTypeKind(Type?)
+  nameWithType: TypeDefinitionInfo.GetTypeKind(Type?)
+  fullName: Garyon.Reflection.TypeDefinitionInfo.GetTypeKind(System.Type?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetTypeKind
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 273
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the type kind of the type.
+  example: []
+  syntax:
+    content: public static TypeKind GetTypeKind(Type? type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose type kind to get.
+    return:
+      type: Garyon.Reflection.TypeKind
+      description: A <xref href="Garyon.Reflection.TypeKind" data-throw-if-not-resolved="false"></xref> which determines the type's type kind.
+    content.vb: Public Shared Function GetTypeKind(type As Type) As TypeKind
+  overload: Garyon.Reflection.TypeDefinitionInfo.GetTypeKind*
+  nameWithType.vb: TypeDefinitionInfo.GetTypeKind(Type)
+  fullName.vb: Garyon.Reflection.TypeDefinitionInfo.GetTypeKind(System.Type)
+  name.vb: GetTypeKind(Type)
+- uid: Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers(System.Type)
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers(System.Type)
+  id: GetTypeModifiers(System.Type)
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: GetTypeModifiers(Type?)
+  nameWithType: TypeDefinitionInfo.GetTypeModifiers(Type?)
+  fullName: Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers(System.Type?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetTypeModifiers
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 321
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the type modifiers of the type.
+  example: []
+  syntax:
+    content: public static TypeModifiers GetTypeModifiers(Type? type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose type modifiers to get.
+    return:
+      type: Garyon.Reflection.TypeModifiers
+      description: >-
+        A <xref href="Garyon.Reflection.TypeModifiers" data-throw-if-not-resolved="false"></xref> value that contains the type
+
+        modifiers.
+    content.vb: Public Shared Function GetTypeModifiers(type As Type) As TypeModifiers
+  overload: Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers*
+  nameWithType.vb: TypeDefinitionInfo.GetTypeModifiers(Type)
+  fullName.vb: Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers(System.Type)
+  name.vb: GetTypeModifiers(Type)
+- uid: Garyon.Reflection.TypeDefinitionInfo.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  id: EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: EqualsCore(TypeDefinitionInfo)
+  nameWithType: TypeDefinitionInfo.EqualsCore(TypeDefinitionInfo)
+  fullName: Garyon.Reflection.TypeDefinitionInfo.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EqualsCore
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 356
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  example: []
+  syntax:
+    content: protected override bool EqualsCore(TypeDefinitionInfo other)
+    parameters:
+    - id: other
+      type: Garyon.Reflection.TypeDefinitionInfo
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function EqualsCore(other As TypeDefinitionInfo) As Boolean
+  overridden: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  overload: Garyon.Reflection.TypeDefinitionInfo.EqualsCore*
+- uid: Garyon.Reflection.TypeDefinitionInfo.ToString
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.ToString
+  id: ToString
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TypeDefinitionInfo.ToString()
+  fullName: Garyon.Reflection.TypeDefinitionInfo.ToString()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToString
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 359
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Garyon.Reflection.TypeDefinitionInfo.ToString*
+- uid: Garyon.Reflection.TypeDefinitionInfo.GetHashCode
+  commentId: M:Garyon.Reflection.TypeDefinitionInfo.GetHashCode
+  id: GetHashCode
+  parent: Garyon.Reflection.TypeDefinitionInfo
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TypeDefinitionInfo.GetHashCode()
+  fullName: Garyon.Reflection.TypeDefinitionInfo.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeDefinitionInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetHashCode
+    path: ../Garyon/Reflection/TypeDefinitionInfo.cs
+    startLine: 360
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Serves as the default hash function.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for the current object.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Garyon.Reflection.TypeDefinitionInfo.GetHashCode*
+references:
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  commentId: T:Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  parent: Garyon.Objects
+  definition: Garyon.Objects.BaseEquatable`1
+  href: Garyon.Objects.BaseEquatable-1.html
+  name: BaseEquatable<TypeDefinitionInfo>
+  nameWithType: BaseEquatable<TypeDefinitionInfo>
+  fullName: Garyon.Objects.BaseEquatable<Garyon.Reflection.TypeDefinitionInfo>
+  nameWithType.vb: BaseEquatable(Of TypeDefinitionInfo)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of Garyon.Reflection.TypeDefinitionInfo)
+  name.vb: BaseEquatable(Of TypeDefinitionInfo)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable`1
+    name: BaseEquatable
+    href: Garyon.Objects.BaseEquatable-1.html
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable`1
+    name: BaseEquatable
+    href: Garyon.Objects.BaseEquatable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: System.IEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  commentId: T:System.IEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TypeDefinitionInfo>
+  nameWithType: IEquatable<TypeDefinitionInfo>
+  fullName: System.IEquatable<Garyon.Reflection.TypeDefinitionInfo>
+  nameWithType.vb: IEquatable(Of TypeDefinitionInfo)
+  fullName.vb: System.IEquatable(Of Garyon.Reflection.TypeDefinitionInfo)
+  name.vb: IEquatable(Of TypeDefinitionInfo)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(Garyon.Reflection.TypeDefinitionInfo)
+  commentId: M:Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(Garyon.Reflection.TypeDefinitionInfo)
+  parent: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  definition: Garyon.Objects.BaseEquatable`1.Equals(`0)
+  href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals__0_
+  name: Equals(TypeDefinitionInfo)
+  nameWithType: BaseEquatable<TypeDefinitionInfo>.Equals(TypeDefinitionInfo)
+  fullName: Garyon.Objects.BaseEquatable<Garyon.Reflection.TypeDefinitionInfo>.Equals(Garyon.Reflection.TypeDefinitionInfo)
+  nameWithType.vb: BaseEquatable(Of TypeDefinitionInfo).Equals(TypeDefinitionInfo)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of Garyon.Reflection.TypeDefinitionInfo).Equals(Garyon.Reflection.TypeDefinitionInfo)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(Garyon.Reflection.TypeDefinitionInfo)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals__0_
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(Garyon.Reflection.TypeDefinitionInfo)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals__0_
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(System.Object)
+  commentId: M:Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(System.Object)
+  parent: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  definition: Garyon.Objects.BaseEquatable`1.Equals(System.Object)
+  href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: BaseEquatable<TypeDefinitionInfo>.Equals(object)
+  fullName: Garyon.Objects.BaseEquatable<Garyon.Reflection.TypeDefinitionInfo>.Equals(object)
+  nameWithType.vb: BaseEquatable(Of TypeDefinitionInfo).Equals(Object)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of Garyon.Reflection.TypeDefinitionInfo).Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(System.Object)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.Equals(System.Object)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeDefinitionInfo)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<TypeDefinitionInfo>(TypeDefinitionInfo, TypeDefinitionInfo)
+  nameWithType: ComparisonExtensions.BeginCompare<TypeDefinitionInfo>(TypeDefinitionInfo, TypeDefinitionInfo)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Reflection.TypeDefinitionInfo>(Garyon.Reflection.TypeDefinitionInfo, Garyon.Reflection.TypeDefinitionInfo)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of TypeDefinitionInfo)(TypeDefinitionInfo, TypeDefinitionInfo)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Reflection.TypeDefinitionInfo)(Garyon.Reflection.TypeDefinitionInfo, Garyon.Reflection.TypeDefinitionInfo)
+  name.vb: BeginCompare(Of TypeDefinitionInfo)(TypeDefinitionInfo, TypeDefinitionInfo)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeDefinitionInfo,Garyon.Reflection.TypeDefinitionInfo)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.TypeDefinitionInfo,Garyon.Reflection.TypeDefinitionInfo)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TypeDefinitionInfo, TValue>(TypeDefinitionInfo)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TypeDefinitionInfo, TValue>(TypeDefinitionInfo)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Reflection.TypeDefinitionInfo, TValue>(Garyon.Reflection.TypeDefinitionInfo)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TypeDefinitionInfo, TValue)(TypeDefinitionInfo)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Reflection.TypeDefinitionInfo, TValue)(Garyon.Reflection.TypeDefinitionInfo)
+  name.vb: GetEnumerator(Of TypeDefinitionInfo, TValue)(TypeDefinitionInfo)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Reflection.TypeDefinitionInfo)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Reflection.TypeDefinitionInfo)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Reflection.TypeDefinitionInfo})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TypeDefinitionInfo>(TypeDefinitionInfo, Action<TypeDefinitionInfo>)
+  nameWithType: MoreLinqExtensions.Apply<TypeDefinitionInfo>(TypeDefinitionInfo, Action<TypeDefinitionInfo>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Reflection.TypeDefinitionInfo>(Garyon.Reflection.TypeDefinitionInfo, System.Action<Garyon.Reflection.TypeDefinitionInfo>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TypeDefinitionInfo)(TypeDefinitionInfo, Action(Of TypeDefinitionInfo))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Reflection.TypeDefinitionInfo)(Garyon.Reflection.TypeDefinitionInfo, System.Action(Of Garyon.Reflection.TypeDefinitionInfo))
+  name.vb: Apply(Of TypeDefinitionInfo)(TypeDefinitionInfo, Action(Of TypeDefinitionInfo))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Reflection.TypeDefinitionInfo,System.Action{Garyon.Reflection.TypeDefinitionInfo})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Reflection.TypeDefinitionInfo,System.Action{Garyon.Reflection.TypeDefinitionInfo})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Reflection.TypeDefinitionInfo,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TypeDefinitionInfo, TResult>(TypeDefinitionInfo, Func<TypeDefinitionInfo, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TypeDefinitionInfo, TResult>(TypeDefinitionInfo, Func<TypeDefinitionInfo, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Reflection.TypeDefinitionInfo, TResult>(Garyon.Reflection.TypeDefinitionInfo, System.Func<Garyon.Reflection.TypeDefinitionInfo, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TypeDefinitionInfo, TResult)(TypeDefinitionInfo, Func(Of TypeDefinitionInfo, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Reflection.TypeDefinitionInfo, TResult)(Garyon.Reflection.TypeDefinitionInfo, System.Func(Of Garyon.Reflection.TypeDefinitionInfo, TResult))
+  name.vb: Apply(Of TypeDefinitionInfo, TResult)(TypeDefinitionInfo, Func(Of TypeDefinitionInfo, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Reflection.TypeDefinitionInfo,System.Func{Garyon.Reflection.TypeDefinitionInfo,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Reflection.TypeDefinitionInfo,System.Func{Garyon.Reflection.TypeDefinitionInfo,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<TypeDefinitionInfo>(TypeDefinitionInfo)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<TypeDefinitionInfo>(TypeDefinitionInfo)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Reflection.TypeDefinitionInfo>(Garyon.Reflection.TypeDefinitionInfo)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of TypeDefinitionInfo)(TypeDefinitionInfo)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Reflection.TypeDefinitionInfo)(Garyon.Reflection.TypeDefinitionInfo)
+  name.vb: EnumerateSingle(Of TypeDefinitionInfo)(TypeDefinitionInfo)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Reflection.TypeDefinitionInfo)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Reflection.TypeDefinitionInfo)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Objects.BaseEquatable`1
+  commentId: T:Garyon.Objects.BaseEquatable`1
+  href: Garyon.Objects.BaseEquatable-1.html
+  name: BaseEquatable<T>
+  nameWithType: BaseEquatable<T>
+  fullName: Garyon.Objects.BaseEquatable<T>
+  nameWithType.vb: BaseEquatable(Of T)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of T)
+  name.vb: BaseEquatable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable`1
+    name: BaseEquatable
+    href: Garyon.Objects.BaseEquatable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable`1
+    name: BaseEquatable
+    href: Garyon.Objects.BaseEquatable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.BaseEquatable`1.Equals(`0)
+  commentId: M:Garyon.Objects.BaseEquatable`1.Equals(`0)
+  href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals__0_
+  name: Equals(T)
+  nameWithType: BaseEquatable<T>.Equals(T)
+  fullName: Garyon.Objects.BaseEquatable<T>.Equals(T)
+  nameWithType.vb: BaseEquatable(Of T).Equals(T)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable`1.Equals(`0)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable`1.Equals(`0)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.BaseEquatable`1.Equals(System.Object)
+  commentId: M:Garyon.Objects.BaseEquatable`1.Equals(System.Object)
+  isExternal: true
+  href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: BaseEquatable<T>.Equals(object)
+  fullName: Garyon.Objects.BaseEquatable<T>.Equals(object)
+  nameWithType.vb: BaseEquatable(Of T).Equals(Object)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of T).Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable`1.Equals(System.Object)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable`1.Equals(System.Object)
+    name: Equals
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Reflection.TypeKind
+  commentId: T:Garyon.Reflection.TypeKind
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeKind.html
+  name: TypeKind
+  nameWithType: TypeKind
+  fullName: Garyon.Reflection.TypeKind
+- uid: Garyon.Reflection.TypeModifiers
+  commentId: T:Garyon.Reflection.TypeModifiers
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeModifiers.html
+  name: TypeModifiers
+  nameWithType: TypeModifiers
+  fullName: Garyon.Reflection.TypeModifiers
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  commentId: P:Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsTrueClass
+  name: IsTrueClass
+  nameWithType: TypeDefinitionInfo.IsTrueClass
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsClass*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsClass
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsClass
+  name: IsClass
+  nameWithType: TypeDefinitionInfo.IsClass
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsClass
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsTrueClass
+  name: IsTrueClass
+  nameWithType: TypeDefinitionInfo.IsTrueClass
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsTrueClass
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsStruct*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsStruct
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsStruct
+  name: IsStruct
+  nameWithType: TypeDefinitionInfo.IsStruct
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsStruct
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsInterface*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsInterface
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsInterface
+  name: IsInterface
+  nameWithType: TypeDefinitionInfo.IsInterface
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsInterface
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsDelegate*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsDelegate
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsDelegate
+  name: IsDelegate
+  nameWithType: TypeDefinitionInfo.IsDelegate
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsDelegate
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsException*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsException
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsException
+  name: IsException
+  nameWithType: TypeDefinitionInfo.IsException
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsException
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsAttribute*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsAttribute
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsAttribute
+  name: IsAttribute
+  nameWithType: TypeDefinitionInfo.IsAttribute
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsAttribute
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsEnum*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsEnum
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsEnum
+  name: IsEnum
+  nameWithType: TypeDefinitionInfo.IsEnum
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsEnum
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsByRef*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsByRef
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsByRef
+  name: IsByRef
+  nameWithType: TypeDefinitionInfo.IsByRef
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsByRef
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsArray*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsArray
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsArray
+  name: IsArray
+  nameWithType: TypeDefinitionInfo.IsArray
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsArray
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPointer*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsPointer
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsPointer
+  name: IsPointer
+  nameWithType: TypeDefinitionInfo.IsPointer
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPointer
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsVoid*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsVoid
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsVoid
+  name: IsVoid
+  nameWithType: TypeDefinitionInfo.IsVoid
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsVoid
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsTuple*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsTuple
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsTuple
+  name: IsTuple
+  nameWithType: TypeDefinitionInfo.IsTuple
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsTuple
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsNullableStruct
+  name: IsNullableStruct
+  nameWithType: TypeDefinitionInfo.IsNullableStruct
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableStruct
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsNullableTuple
+  name: IsNullableTuple
+  nameWithType: TypeDefinitionInfo.IsNullableTuple
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableTuple
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsReferenceType*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsReferenceType
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsReferenceType
+  name: IsReferenceType
+  nameWithType: TypeDefinitionInfo.IsReferenceType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsReferenceType
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsValueType*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsValueType
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsValueType
+  name: IsValueType
+  nameWithType: TypeDefinitionInfo.IsValueType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsValueType
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsNullableValueType
+  name: IsNullableValueType
+  nameWithType: TypeDefinitionInfo.IsNullableValueType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableValueType
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsNullableType*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsNullableType
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsNullableType
+  name: IsNullableType
+  nameWithType: TypeDefinitionInfo.IsNullableType
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsNullableType
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPublic*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsPublic
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsPublic
+  name: IsPublic
+  nameWithType: TypeDefinitionInfo.IsPublic
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPublic
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsInternal*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsInternal
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsInternal
+  name: IsInternal
+  nameWithType: TypeDefinitionInfo.IsInternal
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsInternal
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsProtectedInternal
+  name: IsProtectedInternal
+  nameWithType: TypeDefinitionInfo.IsProtectedInternal
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsProtectedInternal
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsProtected*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsProtected
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsProtected
+  name: IsProtected
+  nameWithType: TypeDefinitionInfo.IsProtected
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsProtected
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsPrivateProtected
+  name: IsPrivateProtected
+  nameWithType: TypeDefinitionInfo.IsPrivateProtected
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPrivateProtected
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsPrivate*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsPrivate
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsPrivate
+  name: IsPrivate
+  nameWithType: TypeDefinitionInfo.IsPrivate
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsPrivate
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsFile*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsFile
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsFile
+  name: IsFile
+  nameWithType: TypeDefinitionInfo.IsFile
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsFile
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsStatic*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsStatic
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsStatic
+  name: IsStatic
+  nameWithType: TypeDefinitionInfo.IsStatic
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsStatic
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsAbstract*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsAbstract
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsAbstract
+  name: IsAbstract
+  nameWithType: TypeDefinitionInfo.IsAbstract
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsAbstract
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsSealed*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsSealed
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsSealed
+  name: IsSealed
+  nameWithType: TypeDefinitionInfo.IsSealed
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsSealed
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsRef*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsRef
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsRef
+  name: IsRef
+  nameWithType: TypeDefinitionInfo.IsRef
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsRef
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsReadonly*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsReadonly
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsReadonly
+  name: IsReadonly
+  nameWithType: TypeDefinitionInfo.IsReadonly
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsReadonly
+- uid: Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_IsReadonlyRef
+  name: IsReadonlyRef
+  nameWithType: TypeDefinitionInfo.IsReadonlyRef
+  fullName: Garyon.Reflection.TypeDefinitionInfo.IsReadonlyRef
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInherit*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.CanInherit
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_CanInherit
+  name: CanInherit
+  nameWithType: TypeDefinitionInfo.CanInherit
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInherit
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_CanInheritCustomTypes
+  name: CanInheritCustomTypes
+  nameWithType: TypeDefinitionInfo.CanInheritCustomTypes
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomTypes
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_CanInheritInterfaces
+  name: CanInheritInterfaces
+  nameWithType: TypeDefinitionInfo.CanInheritInterfaces
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritInterfaces
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_CanInheritClasses
+  name: CanInheritClasses
+  nameWithType: TypeDefinitionInfo.CanInheritClasses
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritClasses
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_CanInheritCustomClasses
+  name: CanInheritCustomClasses
+  nameWithType: TypeDefinitionInfo.CanInheritCustomClasses
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanInheritCustomClasses
+- uid: Garyon.Reflection.TypeDefinitionInfo.CanBeInherited*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.CanBeInherited
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_CanBeInherited
+  name: CanBeInherited
+  nameWithType: TypeDefinitionInfo.CanBeInherited
+  fullName: Garyon.Reflection.TypeDefinitionInfo.CanBeInherited
+- uid: Garyon.Reflection.TypeDefinitionInfo
+  commentId: T:Garyon.Reflection.TypeDefinitionInfo
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.TypeDefinitionInfo.html
+  name: TypeDefinitionInfo
+  nameWithType: TypeDefinitionInfo
+  fullName: Garyon.Reflection.TypeDefinitionInfo
+- uid: Garyon.Reflection.TypeDefinitionInfo.#ctor*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.#ctor
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo__ctor
+  name: TypeDefinitionInfo
+  nameWithType: TypeDefinitionInfo.TypeDefinitionInfo
+  fullName: Garyon.Reflection.TypeDefinitionInfo.TypeDefinitionInfo
+  nameWithType.vb: TypeDefinitionInfo.New
+  fullName.vb: Garyon.Reflection.TypeDefinitionInfo.New
+  name.vb: New
+- uid: Garyon.Reflection.TypeDefinitionInfo.GetTypeKind*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.GetTypeKind
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_GetTypeKind_System_Type_
+  name: GetTypeKind
+  nameWithType: TypeDefinitionInfo.GetTypeKind
+  fullName: Garyon.Reflection.TypeDefinitionInfo.GetTypeKind
+- uid: Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_GetTypeModifiers_System_Type_
+  name: GetTypeModifiers
+  nameWithType: TypeDefinitionInfo.GetTypeModifiers
+  fullName: Garyon.Reflection.TypeDefinitionInfo.GetTypeModifiers
+- uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  commentId: M:Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  parent: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}
+  definition: Garyon.Objects.BaseEquatable`1.EqualsCore(`0)
+  href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_EqualsCore__0_
+  name: EqualsCore(TypeDefinitionInfo)
+  nameWithType: BaseEquatable<TypeDefinitionInfo>.EqualsCore(TypeDefinitionInfo)
+  fullName: Garyon.Objects.BaseEquatable<Garyon.Reflection.TypeDefinitionInfo>.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  nameWithType.vb: BaseEquatable(Of TypeDefinitionInfo).EqualsCore(TypeDefinitionInfo)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of Garyon.Reflection.TypeDefinitionInfo).EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+    name: EqualsCore
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_EqualsCore__0_
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable{Garyon.Reflection.TypeDefinitionInfo}.EqualsCore(Garyon.Reflection.TypeDefinitionInfo)
+    name: EqualsCore
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_EqualsCore__0_
+  - name: (
+  - uid: Garyon.Reflection.TypeDefinitionInfo
+    name: TypeDefinitionInfo
+    href: Garyon.Reflection.TypeDefinitionInfo.html
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.EqualsCore*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.EqualsCore
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_EqualsCore_Garyon_Reflection_TypeDefinitionInfo_
+  name: EqualsCore
+  nameWithType: TypeDefinitionInfo.EqualsCore
+  fullName: Garyon.Reflection.TypeDefinitionInfo.EqualsCore
+- uid: Garyon.Objects.BaseEquatable`1.EqualsCore(`0)
+  commentId: M:Garyon.Objects.BaseEquatable`1.EqualsCore(`0)
+  href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_EqualsCore__0_
+  name: EqualsCore(T)
+  nameWithType: BaseEquatable<T>.EqualsCore(T)
+  fullName: Garyon.Objects.BaseEquatable<T>.EqualsCore(T)
+  nameWithType.vb: BaseEquatable(Of T).EqualsCore(T)
+  fullName.vb: Garyon.Objects.BaseEquatable(Of T).EqualsCore(T)
+  spec.csharp:
+  - uid: Garyon.Objects.BaseEquatable`1.EqualsCore(`0)
+    name: EqualsCore
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_EqualsCore__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.BaseEquatable`1.EqualsCore(`0)
+    name: EqualsCore
+    href: Garyon.Objects.BaseEquatable-1.html#Garyon_Objects_BaseEquatable_1_EqualsCore__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.ToString*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.ToString
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_ToString
+  name: ToString
+  nameWithType: TypeDefinitionInfo.ToString
+  fullName: Garyon.Reflection.TypeDefinitionInfo.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeDefinitionInfo.GetHashCode*
+  commentId: Overload:Garyon.Reflection.TypeDefinitionInfo.GetHashCode
+  href: Garyon.Reflection.TypeDefinitionInfo.html#Garyon_Reflection_TypeDefinitionInfo_GetHashCode
+  name: GetHashCode
+  nameWithType: TypeDefinitionInfo.GetHashCode
+  fullName: Garyon.Reflection.TypeDefinitionInfo.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

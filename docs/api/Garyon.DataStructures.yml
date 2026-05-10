@@ -1,0 +1,354 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.DataStructures
+  commentId: N:Garyon.DataStructures
+  id: Garyon.DataStructures
+  children:
+  - Garyon.DataStructures.BaseFlexDictionary`2
+  - Garyon.DataStructures.BaseSetLinearCollection`1
+  - Garyon.DataStructures.ConcurrentSet`1
+  - Garyon.DataStructures.FlexDictionary`2
+  - Garyon.DataStructures.FlexInitDictionary`2
+  - Garyon.DataStructures.InterlinkedDictionary`1
+  - Garyon.DataStructures.InterlinkedDictionary`2
+  - Garyon.DataStructures.LifoBuffer`1
+  - Garyon.DataStructures.QueueSet`1
+  - Garyon.DataStructures.StackSet`1
+  - Garyon.DataStructures.ValueCounterDictionary`1
+  langs:
+  - csharp
+  - vb
+  name: Garyon.DataStructures
+  nameWithType: Garyon.DataStructures
+  fullName: Garyon.DataStructures
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.DataStructures.BaseFlexDictionary`2
+  commentId: T:Garyon.DataStructures.BaseFlexDictionary`2
+  parent: Garyon.DataStructures
+  href: Garyon.DataStructures.BaseFlexDictionary-2.html
+  name: BaseFlexDictionary<TKey, TValue>
+  nameWithType: BaseFlexDictionary<TKey, TValue>
+  fullName: Garyon.DataStructures.BaseFlexDictionary<TKey, TValue>
+  nameWithType.vb: BaseFlexDictionary(Of TKey, TValue)
+  fullName.vb: Garyon.DataStructures.BaseFlexDictionary(Of TKey, TValue)
+  name.vb: BaseFlexDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.DataStructures.BaseFlexDictionary`2
+    name: BaseFlexDictionary
+    href: Garyon.DataStructures.BaseFlexDictionary-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.BaseFlexDictionary`2
+    name: BaseFlexDictionary
+    href: Garyon.DataStructures.BaseFlexDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.DataStructures.BaseSetLinearCollection`1
+  commentId: T:Garyon.DataStructures.BaseSetLinearCollection`1
+  href: Garyon.DataStructures.BaseSetLinearCollection-1.html
+  name: BaseSetLinearCollection<T>
+  nameWithType: BaseSetLinearCollection<T>
+  fullName: Garyon.DataStructures.BaseSetLinearCollection<T>
+  nameWithType.vb: BaseSetLinearCollection(Of T)
+  fullName.vb: Garyon.DataStructures.BaseSetLinearCollection(Of T)
+  name.vb: BaseSetLinearCollection(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.BaseSetLinearCollection`1
+    name: BaseSetLinearCollection
+    href: Garyon.DataStructures.BaseSetLinearCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.BaseSetLinearCollection`1
+    name: BaseSetLinearCollection
+    href: Garyon.DataStructures.BaseSetLinearCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.ConcurrentSet`1
+  commentId: T:Garyon.DataStructures.ConcurrentSet`1
+  href: Garyon.DataStructures.ConcurrentSet-1.html
+  name: ConcurrentSet<T>
+  nameWithType: ConcurrentSet<T>
+  fullName: Garyon.DataStructures.ConcurrentSet<T>
+  nameWithType.vb: ConcurrentSet(Of T)
+  fullName.vb: Garyon.DataStructures.ConcurrentSet(Of T)
+  name.vb: ConcurrentSet(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.ConcurrentSet`1
+    name: ConcurrentSet
+    href: Garyon.DataStructures.ConcurrentSet-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.ConcurrentSet`1
+    name: ConcurrentSet
+    href: Garyon.DataStructures.ConcurrentSet-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.FlexDictionary`2
+  commentId: T:Garyon.DataStructures.FlexDictionary`2
+  parent: Garyon.DataStructures
+  href: Garyon.DataStructures.FlexDictionary-2.html
+  name: FlexDictionary<TKey, TValue>
+  nameWithType: FlexDictionary<TKey, TValue>
+  fullName: Garyon.DataStructures.FlexDictionary<TKey, TValue>
+  nameWithType.vb: FlexDictionary(Of TKey, TValue)
+  fullName.vb: Garyon.DataStructures.FlexDictionary(Of TKey, TValue)
+  name.vb: FlexDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.DataStructures.FlexDictionary`2
+    name: FlexDictionary
+    href: Garyon.DataStructures.FlexDictionary-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.FlexDictionary`2
+    name: FlexDictionary
+    href: Garyon.DataStructures.FlexDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.DataStructures.FlexInitDictionary`2
+  commentId: T:Garyon.DataStructures.FlexInitDictionary`2
+  parent: Garyon.DataStructures
+  href: Garyon.DataStructures.FlexInitDictionary-2.html
+  name: FlexInitDictionary<TKey, TValue>
+  nameWithType: FlexInitDictionary<TKey, TValue>
+  fullName: Garyon.DataStructures.FlexInitDictionary<TKey, TValue>
+  nameWithType.vb: FlexInitDictionary(Of TKey, TValue)
+  fullName.vb: Garyon.DataStructures.FlexInitDictionary(Of TKey, TValue)
+  name.vb: FlexInitDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: Garyon.DataStructures.FlexInitDictionary`2
+    name: FlexInitDictionary
+    href: Garyon.DataStructures.FlexInitDictionary-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.FlexInitDictionary`2
+    name: FlexInitDictionary
+    href: Garyon.DataStructures.FlexInitDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.DataStructures.InterlinkedDictionary`1
+  commentId: T:Garyon.DataStructures.InterlinkedDictionary`1
+  parent: Garyon.DataStructures
+  href: Garyon.DataStructures.InterlinkedDictionary-1.html
+  name: InterlinkedDictionary<T>
+  nameWithType: InterlinkedDictionary<T>
+  fullName: Garyon.DataStructures.InterlinkedDictionary<T>
+  nameWithType.vb: InterlinkedDictionary(Of T)
+  fullName.vb: Garyon.DataStructures.InterlinkedDictionary(Of T)
+  name.vb: InterlinkedDictionary(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.InterlinkedDictionary`1
+    name: InterlinkedDictionary
+    href: Garyon.DataStructures.InterlinkedDictionary-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.InterlinkedDictionary`1
+    name: InterlinkedDictionary
+    href: Garyon.DataStructures.InterlinkedDictionary-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.InterlinkedDictionary`2
+  commentId: T:Garyon.DataStructures.InterlinkedDictionary`2
+  parent: Garyon.DataStructures
+  href: Garyon.DataStructures.InterlinkedDictionary-2.html
+  name: InterlinkedDictionary<T1, T2>
+  nameWithType: InterlinkedDictionary<T1, T2>
+  fullName: Garyon.DataStructures.InterlinkedDictionary<T1, T2>
+  nameWithType.vb: InterlinkedDictionary(Of T1, T2)
+  fullName.vb: Garyon.DataStructures.InterlinkedDictionary(Of T1, T2)
+  name.vb: InterlinkedDictionary(Of T1, T2)
+  spec.csharp:
+  - uid: Garyon.DataStructures.InterlinkedDictionary`2
+    name: InterlinkedDictionary
+    href: Garyon.DataStructures.InterlinkedDictionary-2.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.InterlinkedDictionary`2
+    name: InterlinkedDictionary
+    href: Garyon.DataStructures.InterlinkedDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Garyon.DataStructures.LifoBuffer`1
+  commentId: T:Garyon.DataStructures.LifoBuffer`1
+  href: Garyon.DataStructures.LifoBuffer-1.html
+  name: LifoBuffer<T>
+  nameWithType: LifoBuffer<T>
+  fullName: Garyon.DataStructures.LifoBuffer<T>
+  nameWithType.vb: LifoBuffer(Of T)
+  fullName.vb: Garyon.DataStructures.LifoBuffer(Of T)
+  name.vb: LifoBuffer(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.LifoBuffer`1
+    name: LifoBuffer
+    href: Garyon.DataStructures.LifoBuffer-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.LifoBuffer`1
+    name: LifoBuffer
+    href: Garyon.DataStructures.LifoBuffer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.QueueSet`1
+  commentId: T:Garyon.DataStructures.QueueSet`1
+  href: Garyon.DataStructures.QueueSet-1.html
+  name: QueueSet<T>
+  nameWithType: QueueSet<T>
+  fullName: Garyon.DataStructures.QueueSet<T>
+  nameWithType.vb: QueueSet(Of T)
+  fullName.vb: Garyon.DataStructures.QueueSet(Of T)
+  name.vb: QueueSet(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.QueueSet`1
+    name: QueueSet
+    href: Garyon.DataStructures.QueueSet-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.QueueSet`1
+    name: QueueSet
+    href: Garyon.DataStructures.QueueSet-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.StackSet`1
+  commentId: T:Garyon.DataStructures.StackSet`1
+  href: Garyon.DataStructures.StackSet-1.html
+  name: StackSet<T>
+  nameWithType: StackSet<T>
+  fullName: Garyon.DataStructures.StackSet<T>
+  nameWithType.vb: StackSet(Of T)
+  fullName.vb: Garyon.DataStructures.StackSet(Of T)
+  name.vb: StackSet(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.StackSet`1
+    name: StackSet
+    href: Garyon.DataStructures.StackSet-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.StackSet`1
+    name: StackSet
+    href: Garyon.DataStructures.StackSet-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.ValueCounterDictionary`1
+  commentId: T:Garyon.DataStructures.ValueCounterDictionary`1
+  parent: Garyon.DataStructures
+  href: Garyon.DataStructures.ValueCounterDictionary-1.html
+  name: ValueCounterDictionary<TKey>
+  nameWithType: ValueCounterDictionary<TKey>
+  fullName: Garyon.DataStructures.ValueCounterDictionary<TKey>
+  nameWithType.vb: ValueCounterDictionary(Of TKey)
+  fullName.vb: Garyon.DataStructures.ValueCounterDictionary(Of TKey)
+  name.vb: ValueCounterDictionary(Of TKey)
+  spec.csharp:
+  - uid: Garyon.DataStructures.ValueCounterDictionary`1
+    name: ValueCounterDictionary
+    href: Garyon.DataStructures.ValueCounterDictionary-1.html
+  - name: <
+  - name: TKey
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.ValueCounterDictionary`1
+    name: ValueCounterDictionary
+    href: Garyon.DataStructures.ValueCounterDictionary-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: )
+- uid: Garyon.DataStructures
+  commentId: N:Garyon.DataStructures
+  href: Garyon.html
+  name: Garyon.DataStructures
+  nameWithType: Garyon.DataStructures
+  fullName: Garyon.DataStructures
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.DataStructures
+    name: DataStructures
+    href: Garyon.DataStructures.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.DataStructures
+    name: DataStructures
+    href: Garyon.DataStructures.html

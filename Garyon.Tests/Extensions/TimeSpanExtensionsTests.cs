@@ -152,5 +152,36 @@ public class TimeSpanExtensionsTests
         var actual = sample.WithDaysHoursMinutes(43, 23, 15);
         await Assert.That(actual).IsEqualTo(expected);
     }
+
+    [Test]
+    public async Task SignAbsoluteAndComponentHelpersTest()
+    {
+        var negative = -sample;
+
+        await Assert.That(sample.Sign()).IsEqualTo(1);
+        await Assert.That(TimeSpan.Zero.Sign()).IsEqualTo(0);
+        await Assert.That(negative.Sign()).IsEqualTo(-1);
+        await Assert.That(negative.Absolute()).IsEqualTo(sample);
+        await Assert.That(sample.GetComponentInt64(TimeSpanComponent.Ticks)).IsEqualTo(sample.Ticks);
+
+        var withTicks = sample.WithComponent(sample.Ticks + 10, TimeSpanComponent.Ticks);
+        var withMinutes = sample.WithComponent(12, TimeSpanComponent.Minutes);
+
+        await Assert.That(withTicks.Ticks).IsEqualTo(sample.Ticks + 10);
+        await Assert.That(withMinutes.Minutes).IsEqualTo(12);
+    }
+
+    [Test]
+    public async Task AdditionalComponentCombinationsAndExceptionalCasesTest()
+    {
+        var expected = sample.WithDays(43).WithHours(23).WithMinutes(15);
+        var actual = sample.WithDaysHoursMinutes(43, 23, 15);
+
+        await Assert.That(actual).IsEqualTo(expected);
+
+        Assert.Throws<System.ComponentModel.InvalidEnumArgumentException>(() => sample.GetComponent((TimeSpanComponent)99));
+        Assert.Throws<System.ComponentModel.InvalidEnumArgumentException>(() => sample.WithComponent(0, (TimeSpanComponent)99));
+    }
+
     #endregion
 }

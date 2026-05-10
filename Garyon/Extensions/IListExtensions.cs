@@ -11,7 +11,6 @@ namespace Garyon.Extensions;
 /// </summary>
 public static class IListExtensions
 {
-#if HAS_SLICES
     /// <summary>Inserts an element to the list at the specified index.</summary>
     /// <typeparam name="T">The type of the elements contained in the <seealso cref="IList{T}"/>.</typeparam>
     /// <param name="list">The list to add an element to.</param>
@@ -21,6 +20,7 @@ public static class IListExtensions
     {
         list.Insert(index.GetOffset(list.Count), element);
     }
+
     /// <summary>Removes an element from the list at the specified index.</summary>
     /// <typeparam name="T">The type of the elements contained in the <seealso cref="IList{T}"/>.</typeparam>
     /// <param name="list">The list to remove an element from.</param>
@@ -29,7 +29,7 @@ public static class IListExtensions
     {
         list.RemoveAt(index.GetOffset(list.Count));
     }
-#endif
+
     /// <summary>
     /// Removes the last element from the provided list.
     /// </summary>
@@ -65,7 +65,7 @@ public static class IListExtensions
         (list[b], list[a]) = (list[a], list[b]);
         return list;
     }
-#if HAS_SLICES
+
     /// <summary>Swaps two elements in the <seealso cref="IList{T}"/>.</summary>
     /// <typeparam name="T">The type of the elements contained in the <seealso cref="IList{T}"/>.</typeparam>
     /// <param name="list">The <seealso cref="IList{T}"/> within which to swap two elements.</param>
@@ -77,7 +77,6 @@ public static class IListExtensions
         int count = list.Count;
         return list.Swap(a.GetOffset(count), b.GetOffset(count));
     }
-#endif
 
 #if HAS_ASYNC_ENUMERABLE
     /// <summary>Adds a range of elements from an <seealso cref="IAsyncEnumerable{T}"/> into the <seealso cref="IList{T}"/>.</summary>

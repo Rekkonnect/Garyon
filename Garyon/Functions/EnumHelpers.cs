@@ -143,7 +143,7 @@ public static class EnumHelpers
     /// </remarks>
     public static void RegisterEntryCountsGlobally()
     {
-        RegisterEntryCounts(AppDomainCache.Current.AllTypes);
+        RegisterEntryCounts(AppDomainCache.Current.GetAllTypes());
     }
     /// <summary>
     /// Discovers all enum types from the specified assembly, and statically

@@ -5,9 +5,6 @@
       netstandard2.0;
       netstandard2.1;
       netcoreapp3.1;
-      net5.0;
-      net6.0;
-      net7.0;
       net8.0;
       net9.0;
       net10.0
@@ -24,10 +21,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>common, extensions, utilities, library, reflection</PackageTags>
     <Description>A multi-purpose expansion library providing commonly used utilities and implementations.</Description>
-    <Copyright>© 2020-2025, Alex Kalfakakos</Copyright>
+    <Copyright>© 2020-2026, Rekkonnect</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/Rekkonnect/Garyon</RepositoryUrl>
-    <Authors>Alex Kalfakakos</Authors>
+    <Authors>Rekkonnect</Authors>
     <Version>0.4.3</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
@@ -43,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PolyfillLib" Version="9.5.0" />
+    <PackageReference Include="PolyfillLib" Version="10.5.0" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

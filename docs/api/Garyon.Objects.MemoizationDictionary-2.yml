@@ -1,0 +1,1329 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.MemoizationDictionary`2
+  commentId: T:Garyon.Objects.MemoizationDictionary`2
+  id: MemoizationDictionary`2
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.MemoizationDictionary`2.#ctor(System.Func{`0,`1},System.Int32)
+  - Garyon.Objects.MemoizationDictionary`2.Clear
+  - Garyon.Objects.MemoizationDictionary`2.Get(`0)
+  langs:
+  - csharp
+  - vb
+  name: MemoizationDictionary<TInput, TOutput>
+  nameWithType: MemoizationDictionary<TInput, TOutput>
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/MemoizationDictionary.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MemoizationDictionary
+    path: ../Garyon/Objects/MemoizationDictionary.cs
+    startLine: 16
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Encapsulates a memoization dictionary for caching outputs of a function that
+
+    could be expensive to compute.
+  example: []
+  syntax:
+    content: 'public sealed class MemoizationDictionary<TInput, TOutput> where TInput : notnull'
+    typeParameters:
+    - id: TInput
+    - id: TOutput
+    content.vb: Public NotInheritable Class MemoizationDictionary(Of TInput, TOutput)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.MemoizationDictionary{{TInput},{TOutput}})
+  - Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.MemoizationDictionary{{TInput},{TOutput}}})
+  - Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.MemoizationDictionary{{TInput},{TOutput}},{TResult}})
+  - Garyon.Objects.MemoizationDictionary`2.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput)
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput)
+  name.vb: MemoizationDictionary(Of TInput, TOutput)
+- uid: Garyon.Objects.MemoizationDictionary`2.#ctor(System.Func{`0,`1},System.Int32)
+  commentId: M:Garyon.Objects.MemoizationDictionary`2.#ctor(System.Func{`0,`1},System.Int32)
+  id: '#ctor(System.Func{`0,`1},System.Int32)'
+  parent: Garyon.Objects.MemoizationDictionary`2
+  langs:
+  - csharp
+  - vb
+  name: MemoizationDictionary(Func<TInput, TOutput>, int)
+  nameWithType: MemoizationDictionary<TInput, TOutput>.MemoizationDictionary(Func<TInput, TOutput>, int)
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>.MemoizationDictionary(System.Func<TInput, TOutput>, int)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/MemoizationDictionary.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/MemoizationDictionary.cs
+    startLine: 16
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Encapsulates a memoization dictionary for caching outputs of a function that
+
+    could be expensive to compute.
+  example: []
+  syntax:
+    content: public MemoizationDictionary(Func<TInput, TOutput> func, int capacity = 64)
+    parameters:
+    - id: func
+      type: System.Func{{TInput},{TOutput}}
+      description: The function that computes the outputs.
+    - id: capacity
+      type: System.Int32
+      description: The initial capacity of the dictionary.
+    content.vb: Public Sub New(func As Func(Of TInput, TOutput), capacity As Integer = 64)
+  overload: Garyon.Objects.MemoizationDictionary`2.#ctor*
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput).New(Func(Of TInput, TOutput), Integer)
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput).New(System.Func(Of TInput, TOutput), Integer)
+  name.vb: New(Func(Of TInput, TOutput), Integer)
+- uid: Garyon.Objects.MemoizationDictionary`2.Get(`0)
+  commentId: M:Garyon.Objects.MemoizationDictionary`2.Get(`0)
+  id: Get(`0)
+  parent: Garyon.Objects.MemoizationDictionary`2
+  langs:
+  - csharp
+  - vb
+  name: Get(TInput)
+  nameWithType: MemoizationDictionary<TInput, TOutput>.Get(TInput)
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>.Get(TInput)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/MemoizationDictionary.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Get
+    path: ../Garyon/Objects/MemoizationDictionary.cs
+    startLine: 36
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Gets the value of the given input. If the value has not been computed
+
+    before, it is computed and stored into the dictionary for future
+
+    retrievals. Otherwise, it's fetched directly from the dictionary.
+  example: []
+  syntax:
+    content: public TOutput Get(TInput input)
+    parameters:
+    - id: input
+      type: '{TInput}'
+      description: The input to the function.
+    return:
+      type: '{TOutput}'
+      description: >-
+        The output of the function that was initialized, either cached or
+
+        computed.
+    content.vb: Public Function [Get](input As TInput) As TOutput
+  overload: Garyon.Objects.MemoizationDictionary`2.Get*
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput).Get(TInput)
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput).Get(TInput)
+- uid: Garyon.Objects.MemoizationDictionary`2.Clear
+  commentId: M:Garyon.Objects.MemoizationDictionary`2.Clear
+  id: Clear
+  parent: Garyon.Objects.MemoizationDictionary`2
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: MemoizationDictionary<TInput, TOutput>.Clear()
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>.Clear()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/MemoizationDictionary.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Clear
+    path: ../Garyon/Objects/MemoizationDictionary.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Clears the cache.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Garyon.Objects.MemoizationDictionary`2.Clear*
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput).Clear()
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput).Clear()
+references:
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.MemoizationDictionary{{TInput},{TOutput}})
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<MemoizationDictionary<TInput, TOutput>>(MemoizationDictionary<TInput, TOutput>, MemoizationDictionary<TInput, TOutput>)
+  nameWithType: ComparisonExtensions.BeginCompare<MemoizationDictionary<TInput, TOutput>>(MemoizationDictionary<TInput, TOutput>, MemoizationDictionary<TInput, TOutput>)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.MemoizationDictionary<TInput, TOutput>>(Garyon.Objects.MemoizationDictionary<TInput, TOutput>, Garyon.Objects.MemoizationDictionary<TInput, TOutput>)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of MemoizationDictionary(Of TInput, TOutput))(MemoizationDictionary(Of TInput, TOutput), MemoizationDictionary(Of TInput, TOutput))
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput))(Garyon.Objects.MemoizationDictionary(Of TInput, TOutput), Garyon.Objects.MemoizationDictionary(Of TInput, TOutput))
+  name.vb: BeginCompare(Of MemoizationDictionary(Of TInput, TOutput))(MemoizationDictionary(Of TInput, TOutput), MemoizationDictionary(Of TInput, TOutput))
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.MemoizationDictionary{`0,`1},Garyon.Objects.MemoizationDictionary{`0,`1})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.MemoizationDictionary{`0,`1},Garyon.Objects.MemoizationDictionary{`0,`1})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+- uid: Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<MemoizationDictionary<TInput, TOutput>, TValue>(MemoizationDictionary<TInput, TOutput>)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<MemoizationDictionary<TInput, TOutput>, TValue>(MemoizationDictionary<TInput, TOutput>)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.MemoizationDictionary<TInput, TOutput>, TValue>(Garyon.Objects.MemoizationDictionary<TInput, TOutput>)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of MemoizationDictionary(Of TInput, TOutput), TValue)(MemoizationDictionary(Of TInput, TOutput))
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput), TValue)(Garyon.Objects.MemoizationDictionary(Of TInput, TOutput))
+  name.vb: GetEnumerator(Of MemoizationDictionary(Of TInput, TOutput), TValue)(MemoizationDictionary(Of TInput, TOutput))
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.MemoizationDictionary{`0,`1})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.MemoizationDictionary{`0,`1})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+- uid: Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.MemoizationDictionary{{TInput},{TOutput}}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<MemoizationDictionary<TInput, TOutput>>(MemoizationDictionary<TInput, TOutput>, Action<MemoizationDictionary<TInput, TOutput>>)
+  nameWithType: MoreLinqExtensions.Apply<MemoizationDictionary<TInput, TOutput>>(MemoizationDictionary<TInput, TOutput>, Action<MemoizationDictionary<TInput, TOutput>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.MemoizationDictionary<TInput, TOutput>>(Garyon.Objects.MemoizationDictionary<TInput, TOutput>, System.Action<Garyon.Objects.MemoizationDictionary<TInput, TOutput>>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of MemoizationDictionary(Of TInput, TOutput))(MemoizationDictionary(Of TInput, TOutput), Action(Of MemoizationDictionary(Of TInput, TOutput)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput))(Garyon.Objects.MemoizationDictionary(Of TInput, TOutput), System.Action(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput)))
+  name.vb: Apply(Of MemoizationDictionary(Of TInput, TOutput))(MemoizationDictionary(Of TInput, TOutput), Action(Of MemoizationDictionary(Of TInput, TOutput)))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.MemoizationDictionary{`0,`1},System.Action{Garyon.Objects.MemoizationDictionary{`0,`1}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.MemoizationDictionary{`0,`1},System.Action{Garyon.Objects.MemoizationDictionary{`0,`1}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+  - name: )
+- uid: Garyon.Objects.MemoizationDictionary`2.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.MemoizationDictionary{{TInput},{TOutput}},{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<MemoizationDictionary<TInput, TOutput>, TResult>(MemoizationDictionary<TInput, TOutput>, Func<MemoizationDictionary<TInput, TOutput>, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<MemoizationDictionary<TInput, TOutput>, TResult>(MemoizationDictionary<TInput, TOutput>, Func<MemoizationDictionary<TInput, TOutput>, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.MemoizationDictionary<TInput, TOutput>, TResult>(Garyon.Objects.MemoizationDictionary<TInput, TOutput>, System.Func<Garyon.Objects.MemoizationDictionary<TInput, TOutput>, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of MemoizationDictionary(Of TInput, TOutput), TResult)(MemoizationDictionary(Of TInput, TOutput), Func(Of MemoizationDictionary(Of TInput, TOutput), TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput), TResult)(Garyon.Objects.MemoizationDictionary(Of TInput, TOutput), System.Func(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput), TResult))
+  name.vb: Apply(Of MemoizationDictionary(Of TInput, TOutput), TResult)(MemoizationDictionary(Of TInput, TOutput), Func(Of MemoizationDictionary(Of TInput, TOutput), TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.MemoizationDictionary{`0,`1},System.Func{Garyon.Objects.MemoizationDictionary{`0,`1},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.MemoizationDictionary{`0,`1},System.Func{Garyon.Objects.MemoizationDictionary{`0,`1},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.MemoizationDictionary`2.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<MemoizationDictionary<TInput, TOutput>>(MemoizationDictionary<TInput, TOutput>)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<MemoizationDictionary<TInput, TOutput>>(MemoizationDictionary<TInput, TOutput>)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.MemoizationDictionary<TInput, TOutput>>(Garyon.Objects.MemoizationDictionary<TInput, TOutput>)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of MemoizationDictionary(Of TInput, TOutput))(MemoizationDictionary(Of TInput, TOutput))
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.MemoizationDictionary(Of TInput, TOutput))(Garyon.Objects.MemoizationDictionary(Of TInput, TOutput))
+  name.vb: EnumerateSingle(Of MemoizationDictionary(Of TInput, TOutput))(MemoizationDictionary(Of TInput, TOutput))
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.MemoizationDictionary{`0,`1})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.MemoizationDictionary{`0,`1})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.MemoizationDictionary`2
+    name: MemoizationDictionary
+    href: Garyon.Objects.MemoizationDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects.MemoizationDictionary`2.#ctor*
+  commentId: Overload:Garyon.Objects.MemoizationDictionary`2.#ctor
+  href: Garyon.Objects.MemoizationDictionary-2.html#Garyon_Objects_MemoizationDictionary_2__ctor_System_Func__0__1__System_Int32_
+  name: MemoizationDictionary
+  nameWithType: MemoizationDictionary<TInput, TOutput>.MemoizationDictionary
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>.MemoizationDictionary
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput).New
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput).New
+  name.vb: New
+- uid: System.Func{{TInput},{TOutput}}
+  commentId: T:System.Func{`0,`1}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TInput, TOutput>
+  nameWithType: Func<TInput, TOutput>
+  fullName: System.Func<TInput, TOutput>
+  nameWithType.vb: Func(Of TInput, TOutput)
+  fullName.vb: System.Func(Of TInput, TOutput)
+  name.vb: Func(Of TInput, TOutput)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Objects.MemoizationDictionary`2.Get*
+  commentId: Overload:Garyon.Objects.MemoizationDictionary`2.Get
+  href: Garyon.Objects.MemoizationDictionary-2.html#Garyon_Objects_MemoizationDictionary_2_Get__0_
+  name: Get
+  nameWithType: MemoizationDictionary<TInput, TOutput>.Get
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>.Get
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput).Get
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput).Get
+- uid: '{TInput}'
+  commentId: '!:TInput'
+  definition: TInput
+  name: TInput
+  nameWithType: TInput
+  fullName: TInput
+- uid: '{TOutput}'
+  commentId: '!:TOutput'
+  definition: TOutput
+  name: TOutput
+  nameWithType: TOutput
+  fullName: TOutput
+- uid: TInput
+  name: TInput
+  nameWithType: TInput
+  fullName: TInput
+- uid: TOutput
+  commentId: '!:TOutput'
+  name: TOutput
+  nameWithType: TOutput
+  fullName: TOutput
+- uid: Garyon.Objects.MemoizationDictionary`2.Clear*
+  commentId: Overload:Garyon.Objects.MemoizationDictionary`2.Clear
+  href: Garyon.Objects.MemoizationDictionary-2.html#Garyon_Objects_MemoizationDictionary_2_Clear
+  name: Clear
+  nameWithType: MemoizationDictionary<TInput, TOutput>.Clear
+  fullName: Garyon.Objects.MemoizationDictionary<TInput, TOutput>.Clear
+  nameWithType.vb: MemoizationDictionary(Of TInput, TOutput).Clear
+  fullName.vb: Garyon.Objects.MemoizationDictionary(Of TInput, TOutput).Clear

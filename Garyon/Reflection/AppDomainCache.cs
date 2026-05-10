@@ -1,8 +1,6 @@
-﻿using Garyon.Extensions;
-using Garyon.Objects.Advanced;
+﻿using Garyon.Objects.Advanced;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Garyon.Reflection;
 
@@ -16,16 +14,7 @@ public class AppDomainCache
     /// </summary>
     public static AppDomainCache Current { get; } = new(AppDomain.CurrentDomain);
 
-    private readonly AdvancedLazy<Type[]>
-        allTypes,
-        allClasses,
-        allAbstractClasses,
-        allNonAbstractClasses,
-        allStructs,
-        allInterfaces,
-        allStaticClasses;
-
-    // TODO: Convert all the APIs below into methods to convey the expensiveness of the operations
+    private readonly AdvancedLazy<TypeListCache> allTypes;
 
     /// <summary>
     /// Gets all the types that are defined in this
@@ -36,67 +25,61 @@ public class AppDomainCache
     /// WARNING: This is a highly expensive operation, costing both
     /// computationally and space-wise.
     /// </remarks>
-    public IEnumerable<Type> AllTypes => allTypes.Value;
+    public TypeListCache GetAllTypes() => allTypes.GetValue();
     /// <summary>
     /// Gets all the classes that are defined in this
     /// <seealso cref="AppDomain"/>'s containing assemblies. If the types are
     /// not cached; a full scan will be performed.
     /// </summary>
     /// <remarks>
-    /// If <seealso cref="AllTypes"/> has been cached, this only filters the
-    /// cached types.
+    /// This filters the cached types from <seealso cref="GetAllTypes"/>.
     /// </remarks>
-    public IEnumerable<Type> AllClasses => allClasses.Value;
+    public IEnumerable<Type> GetAllClasses() => GetAllTypes().GetClasses();
     /// <summary>
     /// Gets all abstract classes that are defined in this
     /// <seealso cref="AppDomain"/>'s containing assemblies. If the types are
     /// not cached; a full scan will be performed.
     /// </summary>
     /// <remarks>
-    /// If <seealso cref="AllTypes"/> has been cached, this only filters the
-    /// cached types.
+    /// This filters the cached types from <seealso cref="GetAllTypes"/>.
     /// </remarks>
-    public IEnumerable<Type> AllAbstractClasses => allAbstractClasses.Value;
+    public IEnumerable<Type> GetAllAbstractClasses() => GetAllTypes().GetAbstractClasses();
     /// <summary>
     /// Gets all non-abstract classes that are defined in this
     /// <seealso cref="AppDomain"/>'s containing assemblies. If the types are
     /// not cached; a full scan will be performed.
     /// </summary>
     /// <remarks>
-    /// If <seealso cref="AllTypes"/> has been cached, this only filters the
-    /// cached types.
+    /// This filters the cached types from <seealso cref="GetAllTypes"/>.
     /// </remarks>
-    public IEnumerable<Type> AllNonAbstractClasses => allNonAbstractClasses.Value;
+    public IEnumerable<Type> GetAllNonAbstractClasses() => GetAllTypes().GetNonAbstractClasses();
     /// <summary>
     /// Gets all the structs that are defined in this
     /// <seealso cref="AppDomain"/>'s containing assemblies. If the types are
     /// not cached; a full scan will be performed.
     /// </summary>
     /// <remarks>
-    /// If <seealso cref="AllTypes"/> has been cached, this only filters the
-    /// cached types.
+    /// This filters the cached types from <seealso cref="GetAllTypes"/>.
     /// </remarks>
-    public IEnumerable<Type> AllStructs => allStructs.Value;
+    public IEnumerable<Type> GetAllStructs() => GetAllTypes().GetStructs();
     /// <summary>
     /// Gets all the interfaces that are defined in this
     /// <seealso cref="AppDomain"/>'s containing assemblies. If the types are
     /// not cached; a full scan will be performed.
     /// </summary>
     /// <remarks>
-    /// If <seealso cref="AllTypes"/> has been cached, this only filters the
-    /// cached types.
+    /// This filters the cached types from <seealso cref="GetAllTypes"/>.
     /// </remarks>
-    public IEnumerable<Type> AllInterfaces => allInterfaces.Value;
+    public IEnumerable<Type> GetAllInterfaces() => GetAllTypes().GetInterfaces();
     /// <summary>
     /// Gets all the static classes that are defined in this
     /// <seealso cref="AppDomain"/>'s containing assemblies. If the types are
     /// not cached; a full scan will be performed.
     /// </summary>
     /// <remarks>
-    /// If <seealso cref="AllTypes"/> has been cached, this only filters the
-    /// cached types.
+    /// This filters the cached types from <seealso cref="GetAllTypes"/>.
     /// </remarks>
-    public IEnumerable<Type> AllStaticClasses => allStaticClasses.Value;
+    public IEnumerable<Type> GetAllStaticClasses() => GetAllTypes().GetStaticClasses();
 
     /// <summary>
     /// Gets the <seealso cref="AppDomain"/> instance for which this instance
@@ -116,55 +99,11 @@ public class AppDomainCache
     {
         Domain = domain;
 
-        allTypes = new(Domain.GetAllTypes().ToArray);
-        allClasses = NewLazyAllTypeRetriever(TypePredicates.IsClass);
-        allAbstractClasses = NewLazyAllTypeRetriever(TypePredicates.IsAbstractClass);
-        allNonAbstractClasses = NewLazyAllTypeRetriever(TypePredicates.IsNonAbstractClass);
-        allStructs = NewLazyAllTypeRetriever(TypePredicates.IsValueType);
-        allInterfaces = NewLazyAllTypeRetriever(TypePredicates.IsInterface);
-        allStaticClasses = NewLazyAllTypeRetriever(TypePredicates.IsStatic);
+        allTypes = new(() => new(Domain.GetAllTypes()));
     }
 
     /// <summary>
-    /// Empties the cached types in <seealso cref="AllTypes"/>.
+    /// Empties the cached types in <seealso cref="GetAllTypes"/>.
     /// </summary>
     public void EmptyAllTypesCache() => allTypes.ClearValue();
-    /// <summary>
-    /// Empties the cached types in <seealso cref="AllClasses"/>.
-    /// </summary>
-    public void EmptyAllClassesCache() => allClasses.ClearValue();
-    /// <summary>
-    /// Empties the cached types in <seealso cref="AllAbstractClasses"/>.
-    /// </summary>
-    public void EmptyAllAbstractClassesCache() => allAbstractClasses.ClearValue();
-    /// <summary>
-    /// Empties the cached types in <seealso cref="AllNonAbstractClasses"/>.
-    /// </summary>
-    public void EmptyAllNonAbstractClassesCache() => allNonAbstractClasses.ClearValue();
-    /// <summary>
-    /// Empties the cached types in <seealso cref="AllStructs"/>.
-    /// </summary>
-    public void EmptyAllStructsCache() => allStructs.ClearValue();
-    /// <summary>
-    /// Empties the cached types in <seealso cref="AllInterfaces"/>.
-    /// </summary>
-    public void EmptyAllInterfacesCache() => allInterfaces.ClearValue();
-    /// <summary>
-    /// Empties the cached types in <seealso cref="AllStaticClasses"/>.
-    /// </summary>
-    public void EmptyAllStaticClassesCache() => allStaticClasses.ClearValue();
-
-    private AdvancedLazy<Type[]> NewLazyAllTypeRetriever(Predicate<Type> predicate)
-    {
-        return new(AllTypeRetriever(predicate));
-    }
-
-    // TODO: Make this depend on the allTypes lazy value always, despite whether the value has been created
-    private Func<Type[]> AllTypeRetriever(Predicate<Type> predicate)
-    {
-        if (allTypes.IsValueCreated)
-            return allTypes.Value.WherePredicate(predicate).ToArray;
-
-        return Domain.GetAllTypes(predicate).ToArray;
-    }
 }

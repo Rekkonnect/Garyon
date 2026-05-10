@@ -15,7 +15,7 @@ public class IndexedEnumerableTests
         var ar = new[] { 1, 2, 3 };
 
         int index = 0;
-        foreach (var i in ar.WithIndex())
+        foreach (var i in ar.Indexed())
         {
             await Assert.That(i).IsEqualTo(new IndexedEnumeratorResult<int>(index, ar[index]));
             index++;

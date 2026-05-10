@@ -1,0 +1,1116 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.UnaryOperatorExtensions
+  commentId: T:Garyon.Extensions.UnaryOperatorExtensions
+  id: UnaryOperatorExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.UnaryOperatorExtensions.Invert(System.Boolean@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Byte@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int16@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int32@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int64@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.SByte@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt16@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt32@)
+  - Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt64@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Decimal@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Double@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int16@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int32@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int64@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.SByte@)
+  - Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Single@)
+  langs:
+  - csharp
+  - vb
+  name: UnaryOperatorExtensions
+  nameWithType: UnaryOperatorExtensions
+  fullName: Garyon.Extensions.UnaryOperatorExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UnaryOperatorExtensions
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 7
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides inline extensions for applying unary operators.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static class UnaryOperatorExtensions
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Module UnaryOperatorExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.SByte@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.SByte@)
+  id: Negate(System.SByte@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref sbyte)
+  nameWithType: UnaryOperatorExtensions.Negate(ref sbyte)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref sbyte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 20
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As SByte)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(SByte)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(SByte)
+  name.vb: Negate(SByte)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int16@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int16@)
+  id: Negate(System.Int16@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref short)
+  nameWithType: UnaryOperatorExtensions.Negate(ref short)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref short)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref short value)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As Short)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(Short)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(Short)
+  name.vb: Negate(Short)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int32@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int32@)
+  id: Negate(System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref int)
+  nameWithType: UnaryOperatorExtensions.Negate(ref int)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 24
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As Integer)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(Integer)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(Integer)
+  name.vb: Negate(Integer)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int64@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Int64@)
+  id: Negate(System.Int64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref long)
+  nameWithType: UnaryOperatorExtensions.Negate(ref long)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 26
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As Long)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(Long)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(Long)
+  name.vb: Negate(Long)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Single@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Single@)
+  id: Negate(System.Single@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref float)
+  nameWithType: UnaryOperatorExtensions.Negate(ref float)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 28
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref float value)
+    parameters:
+    - id: value
+      type: System.Single
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As Single)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(Single)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(Single)
+  name.vb: Negate(Single)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Double@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Double@)
+  id: Negate(System.Double@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref double)
+  nameWithType: UnaryOperatorExtensions.Negate(ref double)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref double value)
+    parameters:
+    - id: value
+      type: System.Double
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As Double)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(Double)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(Double)
+  name.vb: Negate(Double)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Decimal@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Negate(System.Decimal@)
+  id: Negate(System.Decimal@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Negate(ref decimal)
+  nameWithType: UnaryOperatorExtensions.Negate(ref decimal)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate(ref decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Negate
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 32
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Negates the given value (the "-" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Negate(this ref decimal value)
+    parameters:
+    - id: value
+      type: System.Decimal
+      description: The reference to the value whose negation will be stored.
+    content.vb: Public Shared Sub Negate(value As Decimal)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  nameWithType.vb: UnaryOperatorExtensions.Negate(Decimal)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Negate(Decimal)
+  name.vb: Negate(Decimal)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Byte@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Byte@)
+  id: InvertBitwise(System.Byte@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref byte)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref byte)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref byte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 44
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref byte value)
+    parameters:
+    - id: value
+      type: System.Byte
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As Byte)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(Byte)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(Byte)
+  name.vb: InvertBitwise(Byte)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.SByte@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.SByte@)
+  id: InvertBitwise(System.SByte@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref sbyte)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref sbyte)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref sbyte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 46
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As SByte)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(SByte)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(SByte)
+  name.vb: InvertBitwise(SByte)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int16@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int16@)
+  id: InvertBitwise(System.Int16@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref short)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref short)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref short)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 48
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref short value)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As Short)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(Short)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(Short)
+  name.vb: InvertBitwise(Short)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt16@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt16@)
+  id: InvertBitwise(System.UInt16@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref ushort)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref ushort)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref ushort)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref ushort value)
+    parameters:
+    - id: value
+      type: System.UInt16
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As UShort)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(UShort)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(UShort)
+  name.vb: InvertBitwise(UShort)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int32@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int32@)
+  id: InvertBitwise(System.Int32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref int)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref int)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 52
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As Integer)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(Integer)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(Integer)
+  name.vb: InvertBitwise(Integer)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt32@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt32@)
+  id: InvertBitwise(System.UInt32@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref uint)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref uint)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 54
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As UInteger)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(UInteger)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(UInteger)
+  name.vb: InvertBitwise(UInteger)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int64@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.Int64@)
+  id: InvertBitwise(System.Int64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref long)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref long)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 56
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As Long)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(Long)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(Long)
+  name.vb: InvertBitwise(Long)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt64@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(System.UInt64@)
+  id: InvertBitwise(System.UInt64@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: InvertBitwise(ref ulong)
+  nameWithType: UnaryOperatorExtensions.InvertBitwise(ref ulong)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ref ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InvertBitwise
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 58
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value bitwise (the "~" operator), and stores the
+
+    result to the provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void InvertBitwise(this ref ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The reference to the value whose bitwise inversion will be stored.
+    content.vb: Public Shared Sub InvertBitwise(value As ULong)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  nameWithType.vb: UnaryOperatorExtensions.InvertBitwise(ULong)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise(ULong)
+  name.vb: InvertBitwise(ULong)
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Invert(System.Boolean@)
+  commentId: M:Garyon.Extensions.UnaryOperatorExtensions.Invert(System.Boolean@)
+  id: Invert(System.Boolean@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.UnaryOperatorExtensions
+  langs:
+  - csharp
+  - vb
+  name: Invert(ref bool)
+  nameWithType: UnaryOperatorExtensions.Invert(ref bool)
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Invert(ref bool)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/UnaryOperatorExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Invert
+    path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
+    startLine: 70
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Inverts the given value (the "!" operator), and stores the result to the
+
+    provided reference.
+  remarks: This is a reference extension; the value of the reference is adjusted.
+  example: []
+  syntax:
+    content: public static void Invert(this ref bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: The reference to the value whose inversion will be stored.
+    content.vb: Public Shared Sub Invert(value As Boolean)
+  overload: Garyon.Extensions.UnaryOperatorExtensions.Invert*
+  nameWithType.vb: UnaryOperatorExtensions.Invert(Boolean)
+  fullName.vb: Garyon.Extensions.UnaryOperatorExtensions.Invert(Boolean)
+  name.vb: Invert(Boolean)
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Negate*
+  commentId: Overload:Garyon.Extensions.UnaryOperatorExtensions.Negate
+  href: Garyon.Extensions.UnaryOperatorExtensions.html#Garyon_Extensions_UnaryOperatorExtensions_Negate_System_SByte__
+  name: Negate
+  nameWithType: UnaryOperatorExtensions.Negate
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Negate
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise*
+  commentId: Overload:Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise
+  href: Garyon.Extensions.UnaryOperatorExtensions.html#Garyon_Extensions_UnaryOperatorExtensions_InvertBitwise_System_Byte__
+  name: InvertBitwise
+  nameWithType: UnaryOperatorExtensions.InvertBitwise
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.InvertBitwise
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Extensions.UnaryOperatorExtensions.Invert*
+  commentId: Overload:Garyon.Extensions.UnaryOperatorExtensions.Invert
+  href: Garyon.Extensions.UnaryOperatorExtensions.html#Garyon_Extensions_UnaryOperatorExtensions_Invert_System_Boolean__
+  name: Invert
+  nameWithType: UnaryOperatorExtensions.Invert
+  fullName: Garyon.Extensions.UnaryOperatorExtensions.Invert
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

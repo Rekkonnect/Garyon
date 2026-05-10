@@ -1,0 +1,819 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+  commentId: T:Garyon.Objects.IndexedEnumeratedElementAction`1
+  id: IndexedEnumeratedElementAction`1
+  parent: Garyon.Objects
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IndexedEnumeratedElementAction<T>
+  nameWithType: IndexedEnumeratedElementAction<T>
+  fullName: Garyon.Objects.IndexedEnumeratedElementAction<T>
+  type: Delegate
+  source:
+    remote:
+      path: Garyon/Objects/IndexedEnumeratedElementAction.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IndexedEnumeratedElementAction
+    path: ../Garyon/Objects/IndexedEnumeratedElementAction.cs
+    startLine: 15
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Represents a function that performs an action on an enumerated element, also
+
+    provided its index in the enumeration order.
+  example: []
+  syntax:
+    content: public delegate void IndexedEnumeratedElementAction<T>(int index, T element)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index of the element, provided the enumeration order.
+    - id: element
+      type: '{T}'
+      description: The element.
+    typeParameters:
+    - id: T
+      description: The type of the element.
+    content.vb: Public Delegate Sub IndexedEnumeratedElementAction(Of T)(index As Integer, element As T)
+  extensionMethods:
+  - Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IndexedEnumeratedElementAction{{T}})
+  - Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.IndexedEnumeratedElementAction{{T}}})
+  - Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.IndexedEnumeratedElementAction{{T}},{TResult}})
+  - Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  nameWithType.vb: IndexedEnumeratedElementAction(Of T)
+  fullName.vb: Garyon.Objects.IndexedEnumeratedElementAction(Of T)
+  name.vb: IndexedEnumeratedElementAction(Of T)
+references:
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IndexedEnumeratedElementAction{{T}})
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<IndexedEnumeratedElementAction<T>>(IndexedEnumeratedElementAction<T>, IndexedEnumeratedElementAction<T>)
+  nameWithType: ComparisonExtensions.BeginCompare<IndexedEnumeratedElementAction<T>>(IndexedEnumeratedElementAction<T>, IndexedEnumeratedElementAction<T>)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.IndexedEnumeratedElementAction<T>>(Garyon.Objects.IndexedEnumeratedElementAction<T>, Garyon.Objects.IndexedEnumeratedElementAction<T>)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of IndexedEnumeratedElementAction(Of T))(IndexedEnumeratedElementAction(Of T), IndexedEnumeratedElementAction(Of T))
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T))(Garyon.Objects.IndexedEnumeratedElementAction(Of T), Garyon.Objects.IndexedEnumeratedElementAction(Of T))
+  name.vb: BeginCompare(Of IndexedEnumeratedElementAction(Of T))(IndexedEnumeratedElementAction(Of T), IndexedEnumeratedElementAction(Of T))
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IndexedEnumeratedElementAction{`0},Garyon.Objects.IndexedEnumeratedElementAction{`0})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IndexedEnumeratedElementAction{`0},Garyon.Objects.IndexedEnumeratedElementAction{`0})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<IndexedEnumeratedElementAction<T>, TValue>(IndexedEnumeratedElementAction<T>)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<IndexedEnumeratedElementAction<T>, TValue>(IndexedEnumeratedElementAction<T>)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.IndexedEnumeratedElementAction<T>, TValue>(Garyon.Objects.IndexedEnumeratedElementAction<T>)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of IndexedEnumeratedElementAction(Of T), TValue)(IndexedEnumeratedElementAction(Of T))
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T), TValue)(Garyon.Objects.IndexedEnumeratedElementAction(Of T))
+  name.vb: GetEnumerator(Of IndexedEnumeratedElementAction(Of T), TValue)(IndexedEnumeratedElementAction(Of T))
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.IndexedEnumeratedElementAction{`0})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.IndexedEnumeratedElementAction{`0})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.IndexedEnumeratedElementAction{{T}}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<IndexedEnumeratedElementAction<T>>(IndexedEnumeratedElementAction<T>, Action<IndexedEnumeratedElementAction<T>>)
+  nameWithType: MoreLinqExtensions.Apply<IndexedEnumeratedElementAction<T>>(IndexedEnumeratedElementAction<T>, Action<IndexedEnumeratedElementAction<T>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.IndexedEnumeratedElementAction<T>>(Garyon.Objects.IndexedEnumeratedElementAction<T>, System.Action<Garyon.Objects.IndexedEnumeratedElementAction<T>>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of IndexedEnumeratedElementAction(Of T))(IndexedEnumeratedElementAction(Of T), Action(Of IndexedEnumeratedElementAction(Of T)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T))(Garyon.Objects.IndexedEnumeratedElementAction(Of T), System.Action(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T)))
+  name.vb: Apply(Of IndexedEnumeratedElementAction(Of T))(IndexedEnumeratedElementAction(Of T), Action(Of IndexedEnumeratedElementAction(Of T)))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.IndexedEnumeratedElementAction{`0},System.Action{Garyon.Objects.IndexedEnumeratedElementAction{`0}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.IndexedEnumeratedElementAction{`0},System.Action{Garyon.Objects.IndexedEnumeratedElementAction{`0}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.IndexedEnumeratedElementAction{{T}},{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<IndexedEnumeratedElementAction<T>, TResult>(IndexedEnumeratedElementAction<T>, Func<IndexedEnumeratedElementAction<T>, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<IndexedEnumeratedElementAction<T>, TResult>(IndexedEnumeratedElementAction<T>, Func<IndexedEnumeratedElementAction<T>, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.IndexedEnumeratedElementAction<T>, TResult>(Garyon.Objects.IndexedEnumeratedElementAction<T>, System.Func<Garyon.Objects.IndexedEnumeratedElementAction<T>, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of IndexedEnumeratedElementAction(Of T), TResult)(IndexedEnumeratedElementAction(Of T), Func(Of IndexedEnumeratedElementAction(Of T), TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T), TResult)(Garyon.Objects.IndexedEnumeratedElementAction(Of T), System.Func(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T), TResult))
+  name.vb: Apply(Of IndexedEnumeratedElementAction(Of T), TResult)(IndexedEnumeratedElementAction(Of T), Func(Of IndexedEnumeratedElementAction(Of T), TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.IndexedEnumeratedElementAction{`0},System.Func{Garyon.Objects.IndexedEnumeratedElementAction{`0},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.IndexedEnumeratedElementAction{`0},System.Func{Garyon.Objects.IndexedEnumeratedElementAction{`0},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IndexedEnumeratedElementAction`1.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<IndexedEnumeratedElementAction<T>>(IndexedEnumeratedElementAction<T>)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<IndexedEnumeratedElementAction<T>>(IndexedEnumeratedElementAction<T>)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.IndexedEnumeratedElementAction<T>>(Garyon.Objects.IndexedEnumeratedElementAction<T>)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of IndexedEnumeratedElementAction(Of T))(IndexedEnumeratedElementAction(Of T))
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.IndexedEnumeratedElementAction(Of T))(Garyon.Objects.IndexedEnumeratedElementAction(Of T))
+  name.vb: EnumerateSingle(Of IndexedEnumeratedElementAction(Of T))(IndexedEnumeratedElementAction(Of T))
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.IndexedEnumeratedElementAction{`0})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.IndexedEnumeratedElementAction{`0})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IndexedEnumeratedElementAction`1
+    name: IndexedEnumeratedElementAction
+    href: Garyon.Objects.IndexedEnumeratedElementAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html

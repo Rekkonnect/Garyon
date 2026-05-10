@@ -24,11 +24,7 @@ public static class EnumHelpersGenericExtensions
         /// </summary>
         public static T[] GetValues()
         {
-#if HAS_GENERIC_ENUM_GETVALUES
             return Enum.GetValues<T>();
-#else
-            return EnumHelpers.GetValues<T>();
-#endif
         }
 
         /// <summary>

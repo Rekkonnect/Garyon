@@ -1,5 +1,7 @@
-﻿using Garyon.Objects;
+﻿using Garyon.Functions;
+using Garyon.Objects;
 using System;
+using static Garyon.Mechanisms.SimpleProfiler;
 
 namespace Garyon.Reflection;
 
@@ -326,12 +328,12 @@ public class TypeDefinitionInfo : BaseEquatable<TypeDefinitionInfo>
 
         var isStatic = type.IsStaticClass();
         result
-            |= FlagIf(TypeModifiers.Static, isStatic)
-            | FlagIf(TypeModifiers.Sealed, !isStatic && type.IsSealed)
-            | FlagIf(TypeModifiers.Abstract, !isStatic && type.IsAbstract)
-            | FlagIf(TypeModifiers.Ref, type.IsByRef)
+            |= Misc.ValueIf(TypeModifiers.Static, isStatic)
+            | Misc.ValueIf(TypeModifiers.Sealed, !isStatic && type.IsSealed)
+            | Misc.ValueIf(TypeModifiers.Abstract, !isStatic && type.IsAbstract)
+            | Misc.ValueIf(TypeModifiers.Ref, type.IsByRef)
 #if HAS_BYREF_LIKE
-            | FlagIf(TypeModifiers.Ref, type.IsByRefLike)
+            | Misc.ValueIf(TypeModifiers.Ref, type.IsByRefLike)
 #endif
             ;
 
@@ -347,34 +349,9 @@ public class TypeDefinitionInfo : BaseEquatable<TypeDefinitionInfo>
         // There is no way to determine anything else
         // TODO: Consider removing the type modifiers that are undetectable (readonly, readonly ref)
 
-        // TODO: Move accessibility identification logic into a more generalized environment to support other member types
-        // Top-level types can only be public or internal
-        if (!type.IsNested)
-        {
-            result
-                |= FlagIf(TypeModifiers.Public, type.IsPublic)
-                | FlagIf(TypeModifiers.Internal, type.IsNotPublic)
-                ;
-        }
-        // Nested types require looking through the specific properties for nested types
-        else
-        {
-            result
-                |= FlagIf(TypeModifiers.Public, type.IsNestedPublic)
-                | FlagIf(TypeModifiers.Internal, type.IsNestedAssembly)
-                | FlagIf(TypeModifiers.ProtectedInternal, type.IsNestedFamORAssem)
-                | FlagIf(TypeModifiers.Protected, type.IsNestedFamily)
-                | FlagIf(TypeModifiers.PrivateProtected, type.IsNestedFamANDAssem)
-                | FlagIf(TypeModifiers.Private, type.IsNestedPrivate)
-                ;
-        }
-
+        var accessibility = type.GetAccessibilityModifiers();
+        result |= (TypeModifiers)accessibility;
         return result;
-    }
-
-    private static TypeModifiers FlagIf(TypeModifiers flag, bool toggle)
-    {
-        return toggle ? flag : default;
     }
 
     protected override bool EqualsCore(TypeDefinitionInfo other)

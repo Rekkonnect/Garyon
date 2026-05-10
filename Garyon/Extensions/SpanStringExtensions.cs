@@ -220,7 +220,6 @@ public static class SpanStringExtensions
     }
 
 #if HAS_IMMUTABLE
-    // TODO: Bring a custom EnumerateLines implementation for pre-.NET 6
     public static ImmutableArray<string> GetLines(this SpanString spanString)
     {
         return spanString.SelectLines(SpanStringSelectors.ToString);

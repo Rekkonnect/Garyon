@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.Strings
+  commentId: N:Garyon.Objects.Strings
+  id: Garyon.Objects.Strings
+  children:
+  - Garyon.Objects.Strings.Indentation
+  - Garyon.Objects.Strings.WhitespaceFacts
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Objects.Strings
+  nameWithType: Garyon.Objects.Strings
+  fullName: Garyon.Objects.Strings
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Objects.Strings.Indentation
+  commentId: T:Garyon.Objects.Strings.Indentation
+  parent: Garyon.Objects.Strings
+  href: Garyon.Objects.Strings.Indentation.html
+  name: Indentation
+  nameWithType: Indentation
+  fullName: Garyon.Objects.Strings.Indentation
+- uid: Garyon.Objects.Strings.WhitespaceFacts
+  commentId: T:Garyon.Objects.Strings.WhitespaceFacts
+  href: Garyon.Objects.Strings.WhitespaceFacts.html
+  name: WhitespaceFacts
+  nameWithType: WhitespaceFacts
+  fullName: Garyon.Objects.Strings.WhitespaceFacts
+- uid: Garyon.Objects.Strings
+  commentId: N:Garyon.Objects.Strings
+  href: Garyon.html
+  name: Garyon.Objects.Strings
+  nameWithType: Garyon.Objects.Strings
+  fullName: Garyon.Objects.Strings
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Strings
+    name: Strings
+    href: Garyon.Objects.Strings.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Strings
+    name: Strings
+    href: Garyon.Objects.Strings.html

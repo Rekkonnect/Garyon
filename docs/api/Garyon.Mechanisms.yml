@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Mechanisms
+  commentId: N:Garyon.Mechanisms
+  id: Garyon.Mechanisms
+  children:
+  - Garyon.Mechanisms.ActionTimer
+  - Garyon.Mechanisms.AsyncUsableLock
+  - Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  - Garyon.Mechanisms.Delayer
+  - Garyon.Mechanisms.LazyTimer
+  - Garyon.Mechanisms.SimpleProfiler
+  - Garyon.Mechanisms.SimpleProfiler.ProfilingProcess
+  - Garyon.Mechanisms.SimpleProfiler.Results
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Mechanisms
+  nameWithType: Garyon.Mechanisms
+  fullName: Garyon.Mechanisms
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Mechanisms.ActionTimer
+  commentId: T:Garyon.Mechanisms.ActionTimer
+  href: Garyon.Mechanisms.ActionTimer.html
+  name: ActionTimer
+  nameWithType: ActionTimer
+  fullName: Garyon.Mechanisms.ActionTimer
+- uid: Garyon.Mechanisms.AsyncUsableLock
+  commentId: T:Garyon.Mechanisms.AsyncUsableLock
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.AsyncUsableLock.html
+  name: AsyncUsableLock
+  nameWithType: AsyncUsableLock
+  fullName: Garyon.Mechanisms.AsyncUsableLock
+- uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  commentId: T:Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.AsyncUsableLock.html
+  name: AsyncUsableLock.LockReleaser
+  nameWithType: AsyncUsableLock.LockReleaser
+  fullName: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+  spec.csharp:
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: .
+  - uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+    name: LockReleaser
+    href: Garyon.Mechanisms.AsyncUsableLock.LockReleaser.html
+  spec.vb:
+  - uid: Garyon.Mechanisms.AsyncUsableLock
+    name: AsyncUsableLock
+    href: Garyon.Mechanisms.AsyncUsableLock.html
+  - name: .
+  - uid: Garyon.Mechanisms.AsyncUsableLock.LockReleaser
+    name: LockReleaser
+    href: Garyon.Mechanisms.AsyncUsableLock.LockReleaser.html
+- uid: Garyon.Mechanisms.Delayer
+  commentId: T:Garyon.Mechanisms.Delayer
+  href: Garyon.Mechanisms.Delayer.html
+  name: Delayer
+  nameWithType: Delayer
+  fullName: Garyon.Mechanisms.Delayer
+- uid: Garyon.Mechanisms.LazyTimer
+  commentId: T:Garyon.Mechanisms.LazyTimer
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.LazyTimer.html
+  name: LazyTimer
+  nameWithType: LazyTimer
+  fullName: Garyon.Mechanisms.LazyTimer
+- uid: Garyon.Mechanisms.SimpleProfiler
+  commentId: T:Garyon.Mechanisms.SimpleProfiler
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.SimpleProfiler.html
+  name: SimpleProfiler
+  nameWithType: SimpleProfiler
+  fullName: Garyon.Mechanisms.SimpleProfiler
+- uid: Garyon.Mechanisms.SimpleProfiler.ProfilingProcess
+  commentId: T:Garyon.Mechanisms.SimpleProfiler.ProfilingProcess
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.SimpleProfiler.html
+  name: SimpleProfiler.ProfilingProcess
+  nameWithType: SimpleProfiler.ProfilingProcess
+  fullName: Garyon.Mechanisms.SimpleProfiler.ProfilingProcess
+  spec.csharp:
+  - uid: Garyon.Mechanisms.SimpleProfiler
+    name: SimpleProfiler
+    href: Garyon.Mechanisms.SimpleProfiler.html
+  - name: .
+  - uid: Garyon.Mechanisms.SimpleProfiler.ProfilingProcess
+    name: ProfilingProcess
+    href: Garyon.Mechanisms.SimpleProfiler.ProfilingProcess.html
+  spec.vb:
+  - uid: Garyon.Mechanisms.SimpleProfiler
+    name: SimpleProfiler
+    href: Garyon.Mechanisms.SimpleProfiler.html
+  - name: .
+  - uid: Garyon.Mechanisms.SimpleProfiler.ProfilingProcess
+    name: ProfilingProcess
+    href: Garyon.Mechanisms.SimpleProfiler.ProfilingProcess.html
+- uid: Garyon.Mechanisms.SimpleProfiler.Results
+  commentId: T:Garyon.Mechanisms.SimpleProfiler.Results
+  parent: Garyon.Mechanisms
+  href: Garyon.Mechanisms.SimpleProfiler.html
+  name: SimpleProfiler.Results
+  nameWithType: SimpleProfiler.Results
+  fullName: Garyon.Mechanisms.SimpleProfiler.Results
+  spec.csharp:
+  - uid: Garyon.Mechanisms.SimpleProfiler
+    name: SimpleProfiler
+    href: Garyon.Mechanisms.SimpleProfiler.html
+  - name: .
+  - uid: Garyon.Mechanisms.SimpleProfiler.Results
+    name: Results
+    href: Garyon.Mechanisms.SimpleProfiler.Results.html
+  spec.vb:
+  - uid: Garyon.Mechanisms.SimpleProfiler
+    name: SimpleProfiler
+    href: Garyon.Mechanisms.SimpleProfiler.html
+  - name: .
+  - uid: Garyon.Mechanisms.SimpleProfiler.Results
+    name: Results
+    href: Garyon.Mechanisms.SimpleProfiler.Results.html
+- uid: Garyon.Mechanisms
+  commentId: N:Garyon.Mechanisms
+  href: Garyon.html
+  name: Garyon.Mechanisms
+  nameWithType: Garyon.Mechanisms
+  fullName: Garyon.Mechanisms
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mechanisms
+    name: Mechanisms
+    href: Garyon.Mechanisms.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mechanisms
+    name: Mechanisms
+    href: Garyon.Mechanisms.html

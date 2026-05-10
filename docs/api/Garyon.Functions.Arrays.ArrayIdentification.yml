@@ -1,0 +1,552 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.Arrays.ArrayIdentification
+  commentId: T:Garyon.Functions.Arrays.ArrayIdentification
+  id: ArrayIdentification
+  parent: Garyon.Functions.Arrays
+  children:
+  - Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``1(System.Type)
+  - Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``1(System.Type,System.Int32)
+  - Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``2
+  - Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``2(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: ArrayIdentification
+  nameWithType: ArrayIdentification
+  fullName: Garyon.Functions.Arrays.ArrayIdentification
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/Arrays/ArrayIdentification.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ArrayIdentification
+    path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Arrays
+  summary: >-
+    Provides functions useful for array identification, specifically regarding
+
+    the element type.
+  example: []
+  syntax:
+    content: public static class ArrayIdentification
+    content.vb: Public Module ArrayIdentification
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``2
+  commentId: M:Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``2
+  id: IsArrayOfType``2
+  parent: Garyon.Functions.Arrays.ArrayIdentification
+  langs:
+  - csharp
+  - vb
+  name: IsArrayOfType<TArray, TElement>()
+  nameWithType: ArrayIdentification.IsArrayOfType<TArray, TElement>()
+  fullName: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType<TArray, TElement>()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Arrays/ArrayIdentification.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArrayOfType
+    path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
+    startLine: 27
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Arrays
+  summary: >-
+    Determines whether an array type contains elements of the provided type.
+
+    It only checks for multidimensional arrays (of the form [(,)*]). Jagged
+
+    arrays are not taken into consideration in this implementation.
+  example: []
+  syntax:
+    content: public static bool IsArrayOfType<TArray, TElement>()
+    typeParameters:
+    - id: TArray
+      description: The type of the array.
+    - id: TElement
+      description: The type of the element the array stores.
+    return:
+      type: System.Boolean
+      description: >-
+        Whether the given array type stores elements of the
+
+        <code class="typeparamref">TElement</code> type.
+    content.vb: Public Shared Function IsArrayOfType(Of TArray, TElement)() As Boolean
+  overload: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType*
+  nameWithType.vb: ArrayIdentification.IsArrayOfType(Of TArray, TElement)()
+  fullName.vb: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType(Of TArray, TElement)()
+  name.vb: IsArrayOfType(Of TArray, TElement)()
+- uid: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``1(System.Type)
+  commentId: M:Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``1(System.Type)
+  id: IsArrayOfType``1(System.Type)
+  parent: Garyon.Functions.Arrays.ArrayIdentification
+  langs:
+  - csharp
+  - vb
+  name: IsArrayOfType<TElement>(Type)
+  nameWithType: ArrayIdentification.IsArrayOfType<TElement>(Type)
+  fullName: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType<TElement>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Arrays/ArrayIdentification.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArrayOfType
+    path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
+    startLine: 46
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Arrays
+  summary: >-
+    Determines whether an array type contains elements of the provided type.
+
+    It only checks for multidimensional arrays (of the form [(,)*]). Jagged
+
+    arrays are not taken into consideration in this implementation.
+  example: []
+  syntax:
+    content: public static bool IsArrayOfType<TElement>(Type arrayType)
+    parameters:
+    - id: arrayType
+      type: System.Type
+      description: The type of the array.
+    typeParameters:
+    - id: TElement
+      description: The type of the element the array stores.
+    return:
+      type: System.Boolean
+      description: >-
+        Whether the given array type stores elements of the
+
+        <code class="typeparamref">TElement</code> type.
+    content.vb: Public Shared Function IsArrayOfType(Of TElement)(arrayType As Type) As Boolean
+  overload: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType*
+  nameWithType.vb: ArrayIdentification.IsArrayOfType(Of TElement)(Type)
+  fullName.vb: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType(Of TElement)(System.Type)
+  name.vb: IsArrayOfType(Of TElement)(Type)
+- uid: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``2(System.Int32)
+  commentId: M:Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``2(System.Int32)
+  id: IsArrayOfType``2(System.Int32)
+  parent: Garyon.Functions.Arrays.ArrayIdentification
+  langs:
+  - csharp
+  - vb
+  name: IsArrayOfType<TArray, TElement>(int)
+  nameWithType: ArrayIdentification.IsArrayOfType<TArray, TElement>(int)
+  fullName: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType<TArray, TElement>(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Arrays/ArrayIdentification.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArrayOfType
+    path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
+    startLine: 71
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Arrays
+  summary: >-
+    Determines whether an array type contains elements of the provided type.
+
+    It also checks for jagged arrays up to a maximum jagging level.
+  example: []
+  syntax:
+    content: public static bool IsArrayOfType<TArray, TElement>(int maxJaggingLevel)
+    parameters:
+    - id: maxJaggingLevel
+      type: System.Int32
+      description: >-
+        The maximum jagging level of the array (1 means up to [], 2 means up to
+
+        [][], etc.).
+    typeParameters:
+    - id: TArray
+      description: The type of the array.
+    - id: TElement
+      description: The type of the element the array stores.
+    return:
+      type: System.Boolean
+      description: >-
+        Whether the given array type stores elements of the
+
+        <code class="typeparamref">TElement</code> type.
+    content.vb: Public Shared Function IsArrayOfType(Of TArray, TElement)(maxJaggingLevel As Integer) As Boolean
+  overload: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType*
+  nameWithType.vb: ArrayIdentification.IsArrayOfType(Of TArray, TElement)(Integer)
+  fullName.vb: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType(Of TArray, TElement)(Integer)
+  name.vb: IsArrayOfType(Of TArray, TElement)(Integer)
+- uid: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``1(System.Type,System.Int32)
+  commentId: M:Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType``1(System.Type,System.Int32)
+  id: IsArrayOfType``1(System.Type,System.Int32)
+  parent: Garyon.Functions.Arrays.ArrayIdentification
+  langs:
+  - csharp
+  - vb
+  name: IsArrayOfType<TElement>(Type, int)
+  nameWithType: ArrayIdentification.IsArrayOfType<TElement>(Type, int)
+  fullName: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType<TElement>(System.Type, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Arrays/ArrayIdentification.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsArrayOfType
+    path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
+    startLine: 94
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Arrays
+  summary: >-
+    Determines whether an array type contains elements of the provided type.
+
+    It also checks for jagged arrays up to a maximum jagging level.
+  example: []
+  syntax:
+    content: public static bool IsArrayOfType<TElement>(Type arrayType, int maxJaggingLevel)
+    parameters:
+    - id: arrayType
+      type: System.Type
+      description: The type of the array.
+    - id: maxJaggingLevel
+      type: System.Int32
+      description: >-
+        The maximum jagging level of the array (1 means up to [], 2 means up to
+
+        [][], etc.).
+    typeParameters:
+    - id: TElement
+      description: The type of the element the array stores.
+    return:
+      type: System.Boolean
+      description: >-
+        Whether the given array type stores elements of the
+
+        <code class="typeparamref">TElement</code> type.
+    content.vb: Public Shared Function IsArrayOfType(Of TElement)(arrayType As Type, maxJaggingLevel As Integer) As Boolean
+  overload: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType*
+  nameWithType.vb: ArrayIdentification.IsArrayOfType(Of TElement)(Type, Integer)
+  fullName.vb: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType(Of TElement)(System.Type, Integer)
+  name.vb: IsArrayOfType(Of TElement)(Type, Integer)
+references:
+- uid: Garyon.Functions.Arrays
+  commentId: N:Garyon.Functions.Arrays
+  href: Garyon.html
+  name: Garyon.Functions.Arrays
+  nameWithType: Garyon.Functions.Arrays
+  fullName: Garyon.Functions.Arrays
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  - name: .
+  - uid: Garyon.Functions.Arrays
+    name: Arrays
+    href: Garyon.Functions.Arrays.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  - name: .
+  - uid: Garyon.Functions.Arrays
+    name: Arrays
+    href: Garyon.Functions.Arrays.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType*
+  commentId: Overload:Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType
+  href: Garyon.Functions.Arrays.ArrayIdentification.html#Garyon_Functions_Arrays_ArrayIdentification_IsArrayOfType__2
+  name: IsArrayOfType
+  nameWithType: ArrayIdentification.IsArrayOfType
+  fullName: Garyon.Functions.Arrays.ArrayIdentification.IsArrayOfType
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

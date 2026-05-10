@@ -1,0 +1,1708 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.DefaultInstanceContainer`1
+  commentId: T:Garyon.Reflection.DefaultInstanceContainer`1
+  id: DefaultInstanceContainer`1
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.DefaultInstanceContainer`1.#ctor
+  - Garyon.Reflection.DefaultInstanceContainer`1.DefaultInstanceTypes
+  - Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance(System.String)
+  - Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance(System.Type)
+  - Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+  - Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+  - Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance``1
+  - Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+  langs:
+  - csharp
+  - vb
+  name: DefaultInstanceContainer<TBase>
+  nameWithType: DefaultInstanceContainer<TBase>
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>
+  type: Class
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DefaultInstanceContainer
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Provides a mechanism to initialize default instances of a type, including
+
+    deriving types.
+  example: []
+  syntax:
+    content: 'public abstract class DefaultInstanceContainer<TBase> where TBase : class'
+    typeParameters:
+    - id: TBase
+      description: The base type whose default instances to initialize.
+    content.vb: Public MustInherit Class DefaultInstanceContainer(Of TBase As Class)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.DefaultInstanceContainer{{TBase}})
+  - Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Reflection.DefaultInstanceContainer{{TBase}}})
+  - Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Reflection.DefaultInstanceContainer{{TBase}},{TResult}})
+  - Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  nameWithType.vb: DefaultInstanceContainer(Of TBase)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase)
+  name.vb: DefaultInstanceContainer(Of TBase)
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.DefaultInstanceTypes
+  commentId: P:Garyon.Reflection.DefaultInstanceContainer`1.DefaultInstanceTypes
+  id: DefaultInstanceTypes
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: DefaultInstanceTypes
+  nameWithType: DefaultInstanceContainer<TBase>.DefaultInstanceTypes
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.DefaultInstanceTypes
+  type: Property
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DefaultInstanceTypes
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 34
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets all the default instance types that were found in all the
+
+    assemblies this program can refer to.
+  example: []
+  syntax:
+    content: public ImmutableArray<Type> DefaultInstanceTypes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Immutable.ImmutableArray{System.Type}
+    content.vb: Public ReadOnly Property DefaultInstanceTypes As ImmutableArray(Of Type)
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.DefaultInstanceTypes*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).DefaultInstanceTypes
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).DefaultInstanceTypes
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+  id: GetDefaultInstanceArguments
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultInstanceArguments()
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstanceArguments()
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstanceArguments()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDefaultInstanceArguments
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the arguments to be used in the constructor.
+  example: []
+  syntax:
+    content: protected abstract object?[] GetDefaultInstanceArguments()
+    return:
+      type: System.Object[]
+    content.vb: Protected MustOverride Function GetDefaultInstanceArguments() As Object()
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstanceArguments()
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstanceArguments()
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+  id: GetDefaultInstanceArgumentTypes
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultInstanceArgumentTypes()
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstanceArgumentTypes()
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstanceArgumentTypes()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDefaultInstanceArgumentTypes
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 50
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the argument types to be used in the constructor for each of the
+
+    valid types to initialize the default instance from.
+  remarks: >-
+    Defaults to returning the types of the arguments as provided from
+
+    <xref href="Garyon.Reflection.DefaultInstanceContainer%601.GetDefaultInstanceArguments" data-throw-if-not-resolved="false"></xref>. For
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> objects, the <xref href="System.Object" data-throw-if-not-resolved="false"></xref> type is
+
+    used.
+  example: []
+  syntax:
+    content: protected virtual Type[] GetDefaultInstanceArgumentTypes()
+    return:
+      type: System.Type[]
+    content.vb: Protected Overridable Function GetDefaultInstanceArgumentTypes() As Type()
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstanceArgumentTypes()
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstanceArgumentTypes()
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.#ctor
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.#ctor
+  id: '#ctor'
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: DefaultInstanceContainer()
+  nameWithType: DefaultInstanceContainer<TBase>.DefaultInstanceContainer()
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.DefaultInstanceContainer()
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 66
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new <xref href="Garyon.Reflection.DefaultInstanceContainer%601" data-throw-if-not-resolved="false"></xref>
+
+    instance with all the types available from
+
+    <xref href="Garyon.Reflection.AppDomainCache.Current" data-throw-if-not-resolved="false"></xref>, filtered through
+
+    <xref href="Garyon.Reflection.DefaultInstanceContainer%601.IsValidInstanceType(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    All types that are considered valid must contain a constructor matching
+
+    the argument types as returned from
+
+    <xref href="Garyon.Reflection.DefaultInstanceContainer%601.GetDefaultInstanceArgumentTypes" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected DefaultInstanceContainer()
+    content.vb: Protected Sub New()
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.#ctor*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).New()
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).New()
+  name.vb: New()
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+  id: IsValidInstanceType(System.Type)
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: IsValidInstanceType(Type)
+  nameWithType: DefaultInstanceContainer<TBase>.IsValidInstanceType(Type)
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.IsValidInstanceType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsValidInstanceType
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 114
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the given type can be considered a valid instance
+
+    type.
+  remarks: >-
+    Defaults to always returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. This can be a
+
+    common implementation for unconstrained types whose default instances to
+
+    initialize.
+  example: []
+  syntax:
+    content: protected virtual bool IsValidInstanceType(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The instance type to determine whether it is considered valid. The type
+
+        will never be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/abstract">abstract</a>, and will always be assignable
+
+        to <code class="typeparamref">TBase</code> instances.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type's default instance should be stored,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Protected Overridable Function IsValidInstanceType(type As Type) As Boolean
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).IsValidInstanceType(Type)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).IsValidInstanceType(System.Type)
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance``1
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance``1
+  id: GetDefaultInstance``1
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultInstance<TInstance>()
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstance<TInstance>()
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstance<TInstance>()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDefaultInstance
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 133
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the default initialized instance of the given type.
+  example: []
+  syntax:
+    content: 'public TBase? GetDefaultInstance<TInstance>() where TInstance : TBase'
+    typeParameters:
+    - id: TInstance
+      description: The type whose default initialized instance to get.
+    return:
+      type: '{TBase}'
+      description: >-
+        The default initialized instance of the type, if it is initialized,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Function GetDefaultInstance(Of TInstance As TBase)() As TBase
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstance(Of TInstance)()
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstance(Of TInstance)()
+  name.vb: GetDefaultInstance(Of TInstance)()
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance(System.Type)
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance(System.Type)
+  id: GetDefaultInstance(System.Type)
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultInstance(Type?)
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstance(Type?)
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstance(System.Type?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDefaultInstance
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 148
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the default initialized instance of the given type.
+  example: []
+  syntax:
+    content: public TBase? GetDefaultInstance(Type? type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose default initialized instance to get.
+    return:
+      type: '{TBase}'
+      description: >-
+        The default initialized instance of the type, if it is initialized,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Function GetDefaultInstance(type As Type) As TBase
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstance(Type)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstance(System.Type)
+  name.vb: GetDefaultInstance(Type)
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance(System.String)
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance(System.String)
+  id: GetDefaultInstance(System.String)
+  parent: Garyon.Reflection.DefaultInstanceContainer`1
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultInstance(string)
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstance(string)
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstance(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/DefaultInstanceContainer.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDefaultInstance
+    path: ../Garyon/Reflection/DefaultInstanceContainer.cs
+    startLine: 163
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the default initialized instance of the type bearing the given type
+
+    name.
+  example: []
+  syntax:
+    content: public TBase? GetDefaultInstance(string typeName)
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The name of the type whose default initialized instance to get.
+    return:
+      type: '{TBase}'
+      description: >-
+        The default initialized instance of the type, if it is initialized,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Function GetDefaultInstance(typeName As String) As TBase
+  overload: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance*
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstance(String)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstance(String)
+  name.vb: GetDefaultInstance(String)
+references:
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.DefaultInstanceContainer{{TBase}})
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<DefaultInstanceContainer<TBase>>(DefaultInstanceContainer<TBase>, DefaultInstanceContainer<TBase>)
+  nameWithType: ComparisonExtensions.BeginCompare<DefaultInstanceContainer<TBase>>(DefaultInstanceContainer<TBase>, DefaultInstanceContainer<TBase>)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Reflection.DefaultInstanceContainer<TBase>>(Garyon.Reflection.DefaultInstanceContainer<TBase>, Garyon.Reflection.DefaultInstanceContainer<TBase>)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of DefaultInstanceContainer(Of TBase))(DefaultInstanceContainer(Of TBase), DefaultInstanceContainer(Of TBase))
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase))(Garyon.Reflection.DefaultInstanceContainer(Of TBase), Garyon.Reflection.DefaultInstanceContainer(Of TBase))
+  name.vb: BeginCompare(Of DefaultInstanceContainer(Of TBase))(DefaultInstanceContainer(Of TBase), DefaultInstanceContainer(Of TBase))
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.DefaultInstanceContainer{`0},Garyon.Reflection.DefaultInstanceContainer{`0})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Reflection.DefaultInstanceContainer{`0},Garyon.Reflection.DefaultInstanceContainer{`0})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<DefaultInstanceContainer<TBase>, TValue>(DefaultInstanceContainer<TBase>)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<DefaultInstanceContainer<TBase>, TValue>(DefaultInstanceContainer<TBase>)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Reflection.DefaultInstanceContainer<TBase>, TValue>(Garyon.Reflection.DefaultInstanceContainer<TBase>)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of DefaultInstanceContainer(Of TBase), TValue)(DefaultInstanceContainer(Of TBase))
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase), TValue)(Garyon.Reflection.DefaultInstanceContainer(Of TBase))
+  name.vb: GetEnumerator(Of DefaultInstanceContainer(Of TBase), TValue)(DefaultInstanceContainer(Of TBase))
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Reflection.DefaultInstanceContainer{`0})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Reflection.DefaultInstanceContainer{`0})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Reflection.DefaultInstanceContainer{{TBase}}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<DefaultInstanceContainer<TBase>>(DefaultInstanceContainer<TBase>, Action<DefaultInstanceContainer<TBase>>)
+  nameWithType: MoreLinqExtensions.Apply<DefaultInstanceContainer<TBase>>(DefaultInstanceContainer<TBase>, Action<DefaultInstanceContainer<TBase>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Reflection.DefaultInstanceContainer<TBase>>(Garyon.Reflection.DefaultInstanceContainer<TBase>, System.Action<Garyon.Reflection.DefaultInstanceContainer<TBase>>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of DefaultInstanceContainer(Of TBase))(DefaultInstanceContainer(Of TBase), Action(Of DefaultInstanceContainer(Of TBase)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase))(Garyon.Reflection.DefaultInstanceContainer(Of TBase), System.Action(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase)))
+  name.vb: Apply(Of DefaultInstanceContainer(Of TBase))(DefaultInstanceContainer(Of TBase), Action(Of DefaultInstanceContainer(Of TBase)))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Reflection.DefaultInstanceContainer{`0},System.Action{Garyon.Reflection.DefaultInstanceContainer{`0}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Reflection.DefaultInstanceContainer{`0},System.Action{Garyon.Reflection.DefaultInstanceContainer{`0}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Reflection.DefaultInstanceContainer{{TBase}},{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<DefaultInstanceContainer<TBase>, TResult>(DefaultInstanceContainer<TBase>, Func<DefaultInstanceContainer<TBase>, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<DefaultInstanceContainer<TBase>, TResult>(DefaultInstanceContainer<TBase>, Func<DefaultInstanceContainer<TBase>, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Reflection.DefaultInstanceContainer<TBase>, TResult>(Garyon.Reflection.DefaultInstanceContainer<TBase>, System.Func<Garyon.Reflection.DefaultInstanceContainer<TBase>, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of DefaultInstanceContainer(Of TBase), TResult)(DefaultInstanceContainer(Of TBase), Func(Of DefaultInstanceContainer(Of TBase), TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase), TResult)(Garyon.Reflection.DefaultInstanceContainer(Of TBase), System.Func(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase), TResult))
+  name.vb: Apply(Of DefaultInstanceContainer(Of TBase), TResult)(DefaultInstanceContainer(Of TBase), Func(Of DefaultInstanceContainer(Of TBase), TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Reflection.DefaultInstanceContainer{`0},System.Func{Garyon.Reflection.DefaultInstanceContainer{`0},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Reflection.DefaultInstanceContainer{`0},System.Func{Garyon.Reflection.DefaultInstanceContainer{`0},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<DefaultInstanceContainer<TBase>>(DefaultInstanceContainer<TBase>)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<DefaultInstanceContainer<TBase>>(DefaultInstanceContainer<TBase>)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Reflection.DefaultInstanceContainer<TBase>>(Garyon.Reflection.DefaultInstanceContainer<TBase>)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of DefaultInstanceContainer(Of TBase))(DefaultInstanceContainer(Of TBase))
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Reflection.DefaultInstanceContainer(Of TBase))(Garyon.Reflection.DefaultInstanceContainer(Of TBase))
+  name.vb: EnumerateSingle(Of DefaultInstanceContainer(Of TBase))(DefaultInstanceContainer(Of TBase))
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Reflection.DefaultInstanceContainer{`0})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Reflection.DefaultInstanceContainer{`0})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.DefaultInstanceTypes*
+  commentId: Overload:Garyon.Reflection.DefaultInstanceContainer`1.DefaultInstanceTypes
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_DefaultInstanceTypes
+  name: DefaultInstanceTypes
+  nameWithType: DefaultInstanceContainer<TBase>.DefaultInstanceTypes
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.DefaultInstanceTypes
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).DefaultInstanceTypes
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).DefaultInstanceTypes
+- uid: System.Collections.Immutable.ImmutableArray{System.Type}
+  commentId: T:System.Collections.Immutable.ImmutableArray{System.Type}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<Type>
+  nameWithType: ImmutableArray<Type>
+  fullName: System.Collections.Immutable.ImmutableArray<System.Type>
+  nameWithType.vb: ImmutableArray(Of Type)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of System.Type)
+  name.vb: ImmutableArray(Of Type)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments*
+  commentId: Overload:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArguments
+  name: GetDefaultInstanceArguments
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstanceArguments
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstanceArguments
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstanceArguments
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstanceArguments
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArguments
+  name: GetDefaultInstanceArguments()
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstanceArguments()
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstanceArguments()
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstanceArguments()
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstanceArguments()
+  spec.csharp:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+    name: GetDefaultInstanceArguments
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArguments
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArguments
+    name: GetDefaultInstanceArguments
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArguments
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes*
+  commentId: Overload:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArgumentTypes
+  name: GetDefaultInstanceArgumentTypes
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstanceArgumentTypes
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstanceArgumentTypes
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstanceArgumentTypes
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstanceArgumentTypes
+- uid: System.Type[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type[]
+  nameWithType: Type[]
+  fullName: System.Type[]
+  nameWithType.vb: Type()
+  fullName.vb: System.Type()
+  name.vb: Type()
+  spec.csharp:
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1
+  commentId: T:Garyon.Reflection.DefaultInstanceContainer`1
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  name: DefaultInstanceContainer<TBase>
+  nameWithType: DefaultInstanceContainer<TBase>
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>
+  nameWithType.vb: DefaultInstanceContainer(Of TBase)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase)
+  name.vb: DefaultInstanceContainer(Of TBase)
+  spec.csharp:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1
+    name: DefaultInstanceContainer
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: Garyon.Reflection.AppDomainCache.Current
+  commentId: P:Garyon.Reflection.AppDomainCache.Current
+  href: Garyon.Reflection.AppDomainCache.html#Garyon_Reflection_AppDomainCache_Current
+  name: Current
+  nameWithType: AppDomainCache.Current
+  fullName: Garyon.Reflection.AppDomainCache.Current
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+  isExternal: true
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_IsValidInstanceType_System_Type_
+  name: IsValidInstanceType(Type)
+  nameWithType: DefaultInstanceContainer<TBase>.IsValidInstanceType(Type)
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.IsValidInstanceType(System.Type)
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).IsValidInstanceType(Type)
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).IsValidInstanceType(System.Type)
+  spec.csharp:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+    name: IsValidInstanceType
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_IsValidInstanceType_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType(System.Type)
+    name: IsValidInstanceType
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_IsValidInstanceType_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+  commentId: M:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArgumentTypes
+  name: GetDefaultInstanceArgumentTypes()
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstanceArgumentTypes()
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstanceArgumentTypes()
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstanceArgumentTypes()
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstanceArgumentTypes()
+  spec.csharp:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+    name: GetDefaultInstanceArgumentTypes
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArgumentTypes
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstanceArgumentTypes
+    name: GetDefaultInstanceArgumentTypes
+    href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstanceArgumentTypes
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.#ctor*
+  commentId: Overload:Garyon.Reflection.DefaultInstanceContainer`1.#ctor
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1__ctor
+  name: DefaultInstanceContainer
+  nameWithType: DefaultInstanceContainer<TBase>.DefaultInstanceContainer
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.DefaultInstanceContainer
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).New
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).New
+  name.vb: New
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType*
+  commentId: Overload:Garyon.Reflection.DefaultInstanceContainer`1.IsValidInstanceType
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_IsValidInstanceType_System_Type_
+  name: IsValidInstanceType
+  nameWithType: DefaultInstanceContainer<TBase>.IsValidInstanceType
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.IsValidInstanceType
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).IsValidInstanceType
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).IsValidInstanceType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance*
+  commentId: Overload:Garyon.Reflection.DefaultInstanceContainer`1.GetDefaultInstance
+  href: Garyon.Reflection.DefaultInstanceContainer-1.html#Garyon_Reflection_DefaultInstanceContainer_1_GetDefaultInstance__1
+  name: GetDefaultInstance
+  nameWithType: DefaultInstanceContainer<TBase>.GetDefaultInstance
+  fullName: Garyon.Reflection.DefaultInstanceContainer<TBase>.GetDefaultInstance
+  nameWithType.vb: DefaultInstanceContainer(Of TBase).GetDefaultInstance
+  fullName.vb: Garyon.Reflection.DefaultInstanceContainer(Of TBase).GetDefaultInstance
+- uid: '{TBase}'
+  commentId: '!:TBase'
+  definition: TBase
+  name: TBase
+  nameWithType: TBase
+  fullName: TBase
+- uid: TBase
+  name: TBase
+  nameWithType: TBase
+  fullName: TBase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

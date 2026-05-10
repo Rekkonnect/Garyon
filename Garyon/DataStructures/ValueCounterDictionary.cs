@@ -52,12 +52,10 @@ public class ValueCounterDictionary<TKey> : FlexDictionary<TKey, int>
     /// </param>
     public ValueCounterDictionary(IEnumerable<TKey> collection, int initialValue)
         : base(collection, initialValue) { }
-#if HAS_DICTIONARY_KVPS_CTOR
     /// <summary>Initializes a new instance of the <seealso cref="ValueCounterDictionary{TKey}"/> class.</summary>
     /// <param name="kvps">The collection of value counters, represented as <seealso cref="KeyValuePair{TKey, TValue}"/> objects, to initialize the dictionary from.</param>
     public ValueCounterDictionary(IEnumerable<KeyValuePair<TKey, int>> kvps)
         : base(kvps, 0) { }
-#endif
     /// <summary>
     /// Initializes a new instance of the
     /// <seealso cref="ValueCounterDictionary{TKey}"/> class out of another

@@ -164,20 +164,17 @@ public static partial class IEnumerableExtensions
 
             int? GetGenericEnumerableCount()
             {
-                // Require that the source implements exactly one IEnumerable<T> interface
-                // so that we can dynamically invoke GetNonEnumeratedCount
-                var singleEnumerableType = source.GetSingleEnumerableTypeOrDefault();
-                if (singleEnumerableType is null)
+                var countInterface = source.GetType().GetInterfaces()
+                    .FirstOrDefault(static s => s.IsGenericType &&
+                        (s.GetGenericTypeDefinition() == typeof(ICollection<>)
+                        || s.GetGenericTypeDefinition() == typeof(IReadOnlyCollection<>)));
+                if (countInterface is null)
                 {
                     return null;
                 }
 
-#if HAS_DYNAMIC_INVOCATION
-                // Use dynamic binding to avoid further reflection usage
-                return GetNonEnumeratedCount<dynamic>((dynamic)source);
-#else
-                return null;
-#endif
+                var countProperty = countInterface.GetProperty(nameof(ICollection.Count));
+                return countProperty?.GetValue(source) as int?;
             }
         }
 

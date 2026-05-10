@@ -1,4 +1,5 @@
 ﻿using Garyon.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -84,7 +85,7 @@ public class LineStringBuilder
     /// </returns>
     public override string ToString()
     {
-        return new StringBuilder().AppendLines(lines).RemoveLast().ToString();
+        return string.Join(Environment.NewLine, lines);
     }
 
     /// <summary>

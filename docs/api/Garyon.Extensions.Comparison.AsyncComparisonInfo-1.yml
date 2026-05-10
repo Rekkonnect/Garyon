@@ -1,0 +1,1837 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  commentId: T:Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  id: AsyncComparisonInfo`1
+  parent: Garyon.Extensions.Comparison
+  children:
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.AsComparisonInfoAsync
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.GetAwaiter
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ResultAsync
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDesc``1(System.Func{`0,``0})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenBy``1(System.Func{`0,``0})
+  langs:
+  - csharp
+  - vb
+  name: AsyncComparisonInfo<T>
+  nameWithType: AsyncComparisonInfo<T>
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>
+  type: Struct
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AsyncComparisonInfo
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: >-
+    Represents an asynchronously composed comparison chain that can continue
+
+    mixing synchronous and asynchronous steps without breaking the fluent API.
+  example: []
+  syntax:
+    content: public readonly struct AsyncComparisonInfo<T>
+    typeParameters:
+    - id: T
+      description: The type of values being compared.
+    content.vb: Public Structure AsyncComparisonInfo(Of T)
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{{T}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Extensions.Comparison.AsyncComparisonInfo{{T}}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Extensions.Comparison.AsyncComparisonInfo{{T}},{TResult}})
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  nameWithType.vb: AsyncComparisonInfo(Of T)
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T)
+  name.vb: AsyncComparisonInfo(Of T)
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.AsComparisonInfoAsync
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.AsComparisonInfoAsync
+  id: AsComparisonInfoAsync
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: AsComparisonInfoAsync()
+  nameWithType: AsyncComparisonInfo<T>.AsComparisonInfoAsync()
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.AsComparisonInfoAsync()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AsComparisonInfoAsync
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Returns the underlying task-like object producing the composed comparison info.
+  example: []
+  syntax:
+    content: public Task<ComparisonInfo<T>> AsComparisonInfoAsync()
+    return:
+      type: System.Threading.Tasks.Task{Garyon.Extensions.Comparison.ComparisonInfo{{T}}}
+    content.vb: Public Function AsComparisonInfoAsync() As Task(Of ComparisonInfo(Of T))
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.AsComparisonInfoAsync*
+  nameWithType.vb: AsyncComparisonInfo(Of T).AsComparisonInfoAsync()
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).AsComparisonInfoAsync()
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenBy``1(System.Func{`0,``0})
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenBy``1(System.Func{`0,``0})
+  id: ThenBy``1(System.Func{`0,``0})
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ThenBy<TResult>(Func<T, TResult>)
+  nameWithType: AsyncComparisonInfo<T>.ThenBy<TResult>(Func<T, TResult>)
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenBy<TResult>(System.Func<T, TResult>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThenBy
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 38
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Continues the chain with a synchronous selector.
+  example: []
+  syntax:
+    content: 'public AsyncComparisonInfo<T> ThenBy<TResult>(Func<T, TResult> selector) where TResult : IComparable<TResult>'
+    parameters:
+    - id: selector
+      type: System.Func{{T},{TResult}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    content.vb: Public Function ThenBy(Of TResult As IComparable(Of TResult))(selector As Func(Of T, TResult)) As AsyncComparisonInfo(Of T)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenBy*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenBy(Of TResult)(Func(Of T, TResult))
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenBy(Of TResult)(System.Func(Of T, TResult))
+  name.vb: ThenBy(Of TResult)(Func(Of T, TResult))
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  id: ThenByAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByAsync<TResult>(Func<T, Task<TResult>>)
+  nameWithType: AsyncComparisonInfo<T>.ThenByAsync<TResult>(Func<T, Task<TResult>>)
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByAsync<TResult>(System.Func<T, System.Threading.Tasks.Task<TResult>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThenByAsync
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 47
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Continues the chain with an asynchronous selector returning a <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public AsyncComparisonInfo<T> ThenByAsync<TResult>(Func<T, Task<TResult>> selector) where TResult : IComparable<TResult>'
+    parameters:
+    - id: selector
+      type: System.Func{{T},System.Threading.Tasks.Task{{TResult}}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    content.vb: Public Function ThenByAsync(Of TResult As IComparable(Of TResult))(selector As Func(Of T, Task(Of TResult))) As AsyncComparisonInfo(Of T)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByAsync(Of TResult)(Func(Of T, Task(Of TResult)))
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByAsync(Of TResult)(System.Func(Of T, System.Threading.Tasks.Task(Of TResult)))
+  name.vb: ThenByAsync(Of TResult)(Func(Of T, Task(Of TResult)))
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  id: ThenByAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByAsync<TResult>(Func<T, ValueTask<TResult>>)
+  nameWithType: AsyncComparisonInfo<T>.ThenByAsync<TResult>(Func<T, ValueTask<TResult>>)
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByAsync<TResult>(System.Func<T, System.Threading.Tasks.ValueTask<TResult>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThenByAsync
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 56
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Continues the chain with an asynchronous selector returning a <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public AsyncComparisonInfo<T> ThenByAsync<TResult>(Func<T, ValueTask<TResult>> selector) where TResult : IComparable<TResult>'
+    parameters:
+    - id: selector
+      type: System.Func{{T},System.Threading.Tasks.ValueTask{{TResult}}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    content.vb: Public Function ThenByAsync(Of TResult As IComparable(Of TResult))(selector As Func(Of T, ValueTask(Of TResult))) As AsyncComparisonInfo(Of T)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByAsync(Of TResult)(Func(Of T, ValueTask(Of TResult)))
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByAsync(Of TResult)(System.Func(Of T, System.Threading.Tasks.ValueTask(Of TResult)))
+  name.vb: ThenByAsync(Of TResult)(Func(Of T, ValueTask(Of TResult)))
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDesc``1(System.Func{`0,``0})
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDesc``1(System.Func{`0,``0})
+  id: ThenByDesc``1(System.Func{`0,``0})
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByDesc<TResult>(Func<T, TResult>)
+  nameWithType: AsyncComparisonInfo<T>.ThenByDesc<TResult>(Func<T, TResult>)
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByDesc<TResult>(System.Func<T, TResult>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThenByDesc
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 65
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Continues the chain with a synchronous selector in descending order.
+  example: []
+  syntax:
+    content: 'public AsyncComparisonInfo<T> ThenByDesc<TResult>(Func<T, TResult> selector) where TResult : IComparable<TResult>'
+    parameters:
+    - id: selector
+      type: System.Func{{T},{TResult}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    content.vb: Public Function ThenByDesc(Of TResult As IComparable(Of TResult))(selector As Func(Of T, TResult)) As AsyncComparisonInfo(Of T)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDesc*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByDesc(Of TResult)(Func(Of T, TResult))
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByDesc(Of TResult)(System.Func(Of T, TResult))
+  name.vb: ThenByDesc(Of TResult)(Func(Of T, TResult))
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  id: ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByDescAsync<TResult>(Func<T, Task<TResult>>)
+  nameWithType: AsyncComparisonInfo<T>.ThenByDescAsync<TResult>(Func<T, Task<TResult>>)
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByDescAsync<TResult>(System.Func<T, System.Threading.Tasks.Task<TResult>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThenByDescAsync
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 74
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Continues the chain with an asynchronous selector in descending order returning a <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public AsyncComparisonInfo<T> ThenByDescAsync<TResult>(Func<T, Task<TResult>> selector) where TResult : IComparable<TResult>'
+    parameters:
+    - id: selector
+      type: System.Func{{T},System.Threading.Tasks.Task{{TResult}}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    content.vb: Public Function ThenByDescAsync(Of TResult As IComparable(Of TResult))(selector As Func(Of T, Task(Of TResult))) As AsyncComparisonInfo(Of T)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByDescAsync(Of TResult)(Func(Of T, Task(Of TResult)))
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByDescAsync(Of TResult)(System.Func(Of T, System.Threading.Tasks.Task(Of TResult)))
+  name.vb: ThenByDescAsync(Of TResult)(Func(Of T, Task(Of TResult)))
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  id: ThenByDescAsync``1(System.Func{`0,System.Threading.Tasks.ValueTask{``0}})
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByDescAsync<TResult>(Func<T, ValueTask<TResult>>)
+  nameWithType: AsyncComparisonInfo<T>.ThenByDescAsync<TResult>(Func<T, ValueTask<TResult>>)
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByDescAsync<TResult>(System.Func<T, System.Threading.Tasks.ValueTask<TResult>>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThenByDescAsync
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 83
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Continues the chain with an asynchronous selector in descending order returning a <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public AsyncComparisonInfo<T> ThenByDescAsync<TResult>(Func<T, ValueTask<TResult>> selector) where TResult : IComparable<TResult>'
+    parameters:
+    - id: selector
+      type: System.Func{{T},System.Threading.Tasks.ValueTask{{TResult}}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    content.vb: Public Function ThenByDescAsync(Of TResult As IComparable(Of TResult))(selector As Func(Of T, ValueTask(Of TResult))) As AsyncComparisonInfo(Of T)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByDescAsync(Of TResult)(Func(Of T, ValueTask(Of TResult)))
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByDescAsync(Of TResult)(System.Func(Of T, System.Threading.Tasks.ValueTask(Of TResult)))
+  name.vb: ThenByDescAsync(Of TResult)(Func(Of T, ValueTask(Of TResult)))
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ResultAsync
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ResultAsync
+  id: ResultAsync
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: ResultAsync()
+  nameWithType: AsyncComparisonInfo<T>.ResultAsync()
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ResultAsync()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ResultAsync
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 92
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Awaits the chain and returns the comparison result.
+  example: []
+  syntax:
+    content: public Task<int> ResultAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Public Function ResultAsync() As Task(Of Integer)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ResultAsync*
+  nameWithType.vb: AsyncComparisonInfo(Of T).ResultAsync()
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ResultAsync()
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.GetAwaiter
+  commentId: M:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.GetAwaiter
+  id: GetAwaiter
+  parent: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  langs:
+  - csharp
+  - vb
+  name: GetAwaiter()
+  nameWithType: AsyncComparisonInfo<T>.GetAwaiter()
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.GetAwaiter()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAwaiter
+    path: ../Garyon/Extensions/Comparison/AsyncComparisonInfo.cs
+    startLine: 100
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Comparison
+  summary: Makes the chain awaitable, yielding the comparison result.
+  example: []
+  syntax:
+    content: public TaskAwaiter<int> GetAwaiter()
+    return:
+      type: System.Runtime.CompilerServices.TaskAwaiter{System.Int32}
+    content.vb: Public Function GetAwaiter() As TaskAwaiter(Of Integer)
+  overload: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.GetAwaiter*
+  nameWithType.vb: AsyncComparisonInfo(Of T).GetAwaiter()
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).GetAwaiter()
+references:
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{{T}})
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<AsyncComparisonInfo<T>>(AsyncComparisonInfo<T>, AsyncComparisonInfo<T>)
+  nameWithType: ComparisonExtensions.BeginCompare<AsyncComparisonInfo<T>>(AsyncComparisonInfo<T>, AsyncComparisonInfo<T>)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>>(Garyon.Extensions.Comparison.AsyncComparisonInfo<T>, Garyon.Extensions.Comparison.AsyncComparisonInfo<T>)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of AsyncComparisonInfo(Of T))(AsyncComparisonInfo(Of T), AsyncComparisonInfo(Of T))
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T))(Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T), Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T))
+  name.vb: BeginCompare(Of AsyncComparisonInfo(Of T))(AsyncComparisonInfo(Of T), AsyncComparisonInfo(Of T))
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},Garyon.Extensions.Comparison.AsyncComparisonInfo{`0})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},Garyon.Extensions.Comparison.AsyncComparisonInfo{`0})
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<AsyncComparisonInfo<T>, TValue>(AsyncComparisonInfo<T>)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<AsyncComparisonInfo<T>, TValue>(AsyncComparisonInfo<T>)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>, TValue>(Garyon.Extensions.Comparison.AsyncComparisonInfo<T>)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of AsyncComparisonInfo(Of T), TValue)(AsyncComparisonInfo(Of T))
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T), TValue)(Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T))
+  name.vb: GetEnumerator(Of AsyncComparisonInfo(Of T), TValue)(AsyncComparisonInfo(Of T))
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0})
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Extensions.Comparison.AsyncComparisonInfo{{T}}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<AsyncComparisonInfo<T>>(AsyncComparisonInfo<T>, Action<AsyncComparisonInfo<T>>)
+  nameWithType: MoreLinqExtensions.Apply<AsyncComparisonInfo<T>>(AsyncComparisonInfo<T>, Action<AsyncComparisonInfo<T>>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>>(Garyon.Extensions.Comparison.AsyncComparisonInfo<T>, System.Action<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of AsyncComparisonInfo(Of T))(AsyncComparisonInfo(Of T), Action(Of AsyncComparisonInfo(Of T)))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T))(Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T), System.Action(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T)))
+  name.vb: Apply(Of AsyncComparisonInfo(Of T))(AsyncComparisonInfo(Of T), Action(Of AsyncComparisonInfo(Of T)))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},System.Action{Garyon.Extensions.Comparison.AsyncComparisonInfo{`0}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},System.Action{Garyon.Extensions.Comparison.AsyncComparisonInfo{`0}})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Extensions.Comparison.AsyncComparisonInfo{{T}},{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<AsyncComparisonInfo<T>, TResult>(AsyncComparisonInfo<T>, Func<AsyncComparisonInfo<T>, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<AsyncComparisonInfo<T>, TResult>(AsyncComparisonInfo<T>, Func<AsyncComparisonInfo<T>, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>, TResult>(Garyon.Extensions.Comparison.AsyncComparisonInfo<T>, System.Func<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of AsyncComparisonInfo(Of T), TResult)(AsyncComparisonInfo(Of T), Func(Of AsyncComparisonInfo(Of T), TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T), TResult)(Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T), System.Func(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T), TResult))
+  name.vb: Apply(Of AsyncComparisonInfo(Of T), TResult)(AsyncComparisonInfo(Of T), Func(Of AsyncComparisonInfo(Of T), TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},System.Func{Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},System.Func{Garyon.Extensions.Comparison.AsyncComparisonInfo{`0},``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<AsyncComparisonInfo<T>>(AsyncComparisonInfo<T>)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<AsyncComparisonInfo<T>>(AsyncComparisonInfo<T>)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Extensions.Comparison.AsyncComparisonInfo<T>>(Garyon.Extensions.Comparison.AsyncComparisonInfo<T>)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of AsyncComparisonInfo(Of T))(AsyncComparisonInfo(Of T))
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T))(Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T))
+  name.vb: EnumerateSingle(Of AsyncComparisonInfo(Of T))(AsyncComparisonInfo(Of T))
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Extensions.Comparison.AsyncComparisonInfo{`0})
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.AsComparisonInfoAsync*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.AsComparisonInfoAsync
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_AsComparisonInfoAsync
+  name: AsComparisonInfoAsync
+  nameWithType: AsyncComparisonInfo<T>.AsComparisonInfoAsync
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.AsComparisonInfoAsync
+  nameWithType.vb: AsyncComparisonInfo(Of T).AsComparisonInfoAsync
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).AsComparisonInfoAsync
+- uid: System.Threading.Tasks.Task{Garyon.Extensions.Comparison.ComparisonInfo{{T}}}
+  commentId: T:System.Threading.Tasks.Task{Garyon.Extensions.Comparison.ComparisonInfo{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ComparisonInfo<T>>
+  nameWithType: Task<ComparisonInfo<T>>
+  fullName: System.Threading.Tasks.Task<Garyon.Extensions.Comparison.ComparisonInfo<T>>
+  nameWithType.vb: Task(Of ComparisonInfo(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of Garyon.Extensions.Comparison.ComparisonInfo(Of T))
+  name.vb: Task(Of ComparisonInfo(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Garyon.Extensions.Comparison.ComparisonInfo`1
+    name: ComparisonInfo
+    href: Garyon.Extensions.Comparison.ComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Extensions.Comparison.ComparisonInfo`1
+    name: ComparisonInfo
+    href: Garyon.Extensions.Comparison.ComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenBy*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenBy
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_ThenBy__1_System_Func__0___0__
+  name: ThenBy
+  nameWithType: AsyncComparisonInfo<T>.ThenBy
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenBy
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenBy
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenBy
+- uid: System.Func{{T},{TResult}}
+  commentId: T:System.Func{`0,``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  commentId: T:Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  name: AsyncComparisonInfo<T>
+  nameWithType: AsyncComparisonInfo<T>
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>
+  nameWithType.vb: AsyncComparisonInfo(Of T)
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T)
+  name.vb: AsyncComparisonInfo(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByAsync
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_ThenByAsync__1_System_Func__0_System_Threading_Tasks_Task___0___
+  name: ThenByAsync
+  nameWithType: AsyncComparisonInfo<T>.ThenByAsync
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByAsync
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByAsync
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByAsync
+- uid: System.Func{{T},System.Threading.Tasks.Task{{TResult}}}
+  commentId: T:System.Func{`0,System.Threading.Tasks.Task{``0}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, Task<TResult>>
+  nameWithType: Func<T, Task<TResult>>
+  fullName: System.Func<T, System.Threading.Tasks.Task<TResult>>
+  nameWithType.vb: Func(Of T, Task(Of TResult))
+  fullName.vb: System.Func(Of T, System.Threading.Tasks.Task(Of TResult))
+  name.vb: Func(Of T, Task(Of TResult))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Func{{T},System.Threading.Tasks.ValueTask{{TResult}}}
+  commentId: T:System.Func{`0,System.Threading.Tasks.ValueTask{``0}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, ValueTask<TResult>>
+  nameWithType: Func<T, ValueTask<TResult>>
+  fullName: System.Func<T, System.Threading.Tasks.ValueTask<TResult>>
+  nameWithType.vb: Func(Of T, ValueTask(Of TResult))
+  fullName.vb: System.Func(Of T, System.Threading.Tasks.ValueTask(Of TResult))
+  name.vb: Func(Of T, ValueTask(Of TResult))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDesc*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDesc
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_ThenByDesc__1_System_Func__0___0__
+  name: ThenByDesc
+  nameWithType: AsyncComparisonInfo<T>.ThenByDesc
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByDesc
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByDesc
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByDesc
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ThenByDescAsync
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_ThenByDescAsync__1_System_Func__0_System_Threading_Tasks_Task___0___
+  name: ThenByDescAsync
+  nameWithType: AsyncComparisonInfo<T>.ThenByDescAsync
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ThenByDescAsync
+  nameWithType.vb: AsyncComparisonInfo(Of T).ThenByDescAsync
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ThenByDescAsync
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ResultAsync*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.ResultAsync
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_ResultAsync
+  name: ResultAsync
+  nameWithType: AsyncComparisonInfo<T>.ResultAsync
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.ResultAsync
+  nameWithType.vb: AsyncComparisonInfo(Of T).ResultAsync
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).ResultAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1.GetAwaiter*
+  commentId: Overload:Garyon.Extensions.Comparison.AsyncComparisonInfo`1.GetAwaiter
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html#Garyon_Extensions_Comparison_AsyncComparisonInfo_1_GetAwaiter
+  name: GetAwaiter
+  nameWithType: AsyncComparisonInfo<T>.GetAwaiter
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>.GetAwaiter
+  nameWithType.vb: AsyncComparisonInfo(Of T).GetAwaiter
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T).GetAwaiter
+- uid: System.Runtime.CompilerServices.TaskAwaiter{System.Int32}
+  commentId: T:System.Runtime.CompilerServices.TaskAwaiter{System.Int32}
+  parent: System.Runtime.CompilerServices
+  definition: System.Runtime.CompilerServices.TaskAwaiter`1
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  name: TaskAwaiter<int>
+  nameWithType: TaskAwaiter<int>
+  fullName: System.Runtime.CompilerServices.TaskAwaiter<int>
+  nameWithType.vb: TaskAwaiter(Of Integer)
+  fullName.vb: System.Runtime.CompilerServices.TaskAwaiter(Of Integer)
+  name.vb: TaskAwaiter(Of Integer)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Runtime.CompilerServices.TaskAwaiter`1
+  commentId: T:System.Runtime.CompilerServices.TaskAwaiter`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  name: TaskAwaiter<TResult>
+  nameWithType: TaskAwaiter<TResult>
+  fullName: System.Runtime.CompilerServices.TaskAwaiter<TResult>
+  nameWithType.vb: TaskAwaiter(Of TResult)
+  fullName.vb: System.Runtime.CompilerServices.TaskAwaiter(Of TResult)
+  name.vb: TaskAwaiter(Of TResult)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
+  fullName: System.Runtime.CompilerServices
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.CompilerServices
+    name: CompilerServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.CompilerServices
+    name: CompilerServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices

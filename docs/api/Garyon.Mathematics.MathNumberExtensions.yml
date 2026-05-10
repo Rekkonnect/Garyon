@@ -1,0 +1,1497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Mathematics.MathNumberExtensions
+  commentId: T:Garyon.Mathematics.MathNumberExtensions
+  id: MathNumberExtensions
+  parent: Garyon.Mathematics
+  children:
+  - Garyon.Mathematics.MathNumberExtensions.Halve``1(``0)
+  - Garyon.Mathematics.MathNumberExtensions.ILogB(System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Log(System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Log(System.Double,System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Log10(System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Log2(System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Pow(System.Double,System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Sqrt(System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Sqrt(System.Single)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.Decimal)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.Double)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.Int32)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.Int64)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.Single)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.UInt32)
+  - Garyon.Mathematics.MathNumberExtensions.Square(System.UInt64)
+  - Garyon.Mathematics.MathNumberExtensions.Square``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: MathNumberExtensions
+  nameWithType: MathNumberExtensions
+  fullName: Garyon.Mathematics.MathNumberExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MathNumberExtensions
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Provides math-related extensions on number types.
+  example: []
+  syntax:
+    content: public static class MathNumberExtensions
+    content.vb: Public Module MathNumberExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Mathematics.MathNumberExtensions.Square``1(``0)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square``1(``0)
+  id: Square``1(``0)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square<T>(T)
+  nameWithType: MathNumberExtensions.Square<T>(T)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 17
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: 'public static INumber<T> Square<T>(this T x) where T : INumber<T>, IMultiplyOperators<T, T, T>'
+    parameters:
+    - id: x
+      type: '{T}'
+      description: The number to square.
+    typeParameters:
+    - id: T
+      description: The type of the number to square.
+    return:
+      type: System.Numerics.INumber{{T}}
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(Of T As {INumber(Of T), IMultiplyOperators(Of T, T, T)})(x As T) As INumber(Of T)
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(Of T)(T)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(Of T)(T)
+  name.vb: Square(Of T)(T)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.Int32)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.Int32)
+  id: Square(System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(int)
+  nameWithType: MathNumberExtensions.Square(int)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 33
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static int Square(this int x)
+    parameters:
+    - id: x
+      type: System.Int32
+      description: The number to square.
+    return:
+      type: System.Int32
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As Integer) As Integer
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(Integer)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(Integer)
+  name.vb: Square(Integer)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.UInt32)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.UInt32)
+  id: Square(System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(uint)
+  nameWithType: MathNumberExtensions.Square(uint)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 43
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static uint Square(this uint x)
+    parameters:
+    - id: x
+      type: System.UInt32
+      description: The number to square.
+    return:
+      type: System.UInt32
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As UInteger) As UInteger
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(UInteger)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(UInteger)
+  name.vb: Square(UInteger)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.Int64)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.Int64)
+  id: Square(System.Int64)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(long)
+  nameWithType: MathNumberExtensions.Square(long)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static long Square(this long x)
+    parameters:
+    - id: x
+      type: System.Int64
+      description: The number to square.
+    return:
+      type: System.Int64
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As Long) As Long
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(Long)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(Long)
+  name.vb: Square(Long)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.UInt64)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.UInt64)
+  id: Square(System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(ulong)
+  nameWithType: MathNumberExtensions.Square(ulong)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 63
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static ulong Square(this ulong x)
+    parameters:
+    - id: x
+      type: System.UInt64
+      description: The number to square.
+    return:
+      type: System.UInt64
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As ULong) As ULong
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(ULong)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(ULong)
+  name.vb: Square(ULong)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.Single)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.Single)
+  id: Square(System.Single)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(float)
+  nameWithType: MathNumberExtensions.Square(float)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 73
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static float Square(this float x)
+    parameters:
+    - id: x
+      type: System.Single
+      description: The number to square.
+    return:
+      type: System.Single
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As Single) As Single
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(Single)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(Single)
+  name.vb: Square(Single)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.Double)
+  id: Square(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(double)
+  nameWithType: MathNumberExtensions.Square(double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 83
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static double Square(this double x)
+    parameters:
+    - id: x
+      type: System.Double
+      description: The number to square.
+    return:
+      type: System.Double
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(Double)
+  name.vb: Square(Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Square(System.Decimal)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Square(System.Decimal)
+  id: Square(System.Decimal)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Square(decimal)
+  nameWithType: MathNumberExtensions.Square(decimal)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square(decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Square
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 93
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the square of the given number.
+  example: []
+  syntax:
+    content: public static decimal Square(this decimal x)
+    parameters:
+    - id: x
+      type: System.Decimal
+      description: The number to square.
+    return:
+      type: System.Decimal
+      description: The square of the number, equal to x * x.
+    content.vb: Public Shared Function Square(x As Decimal) As Decimal
+  overload: Garyon.Mathematics.MathNumberExtensions.Square*
+  nameWithType.vb: MathNumberExtensions.Square(Decimal)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Square(Decimal)
+  name.vb: Square(Decimal)
+- uid: Garyon.Mathematics.MathNumberExtensions.Pow(System.Double,System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Pow(System.Double,System.Double)
+  id: Pow(System.Double,System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Pow(double, double)
+  nameWithType: MathNumberExtensions.Pow(double, double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Pow(double, double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Pow
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 107
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Shorthand for <xref href="System.Math.Pow(System.Double%2cSystem.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double Pow(this double x, double exponent)
+    parameters:
+    - id: x
+      type: System.Double
+      description: The base number.
+    - id: exponent
+      type: System.Double
+      description: The exponent to raise the base to.
+    return:
+      type: System.Double
+      description: The result of the power operation.
+    content.vb: Public Shared Function Pow(x As Double, exponent As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Pow*
+  nameWithType.vb: MathNumberExtensions.Pow(Double, Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Pow(Double, Double)
+  name.vb: Pow(Double, Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Sqrt(System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Sqrt(System.Double)
+  id: Sqrt(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Sqrt(double)
+  nameWithType: MathNumberExtensions.Sqrt(double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Sqrt(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Sqrt
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 113
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the square root of the value using
+
+    <xref href="System.Math.Sqrt(System.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double Sqrt(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Sqrt(value As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Sqrt*
+  nameWithType.vb: MathNumberExtensions.Sqrt(Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Sqrt(Double)
+  name.vb: Sqrt(Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Sqrt(System.Single)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Sqrt(System.Single)
+  id: Sqrt(System.Single)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Sqrt(float)
+  nameWithType: MathNumberExtensions.Sqrt(float)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Sqrt(float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Sqrt
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 123
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the square root of the value using
+
+    <xref href="System.MathF.Sqrt(System.Single)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static float Sqrt(this float value)
+    parameters:
+    - id: value
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Sqrt(value As Single) As Single
+  overload: Garyon.Mathematics.MathNumberExtensions.Sqrt*
+  nameWithType.vb: MathNumberExtensions.Sqrt(Single)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Sqrt(Single)
+  name.vb: Sqrt(Single)
+- uid: Garyon.Mathematics.MathNumberExtensions.Log(System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Log(System.Double)
+  id: Log(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Log(double)
+  nameWithType: MathNumberExtensions.Log(double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Log
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 133
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the base-e log of the value using
+
+    <xref href="System.Math.Log(System.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double Log(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Log(value As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Log*
+  nameWithType.vb: MathNumberExtensions.Log(Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Log(Double)
+  name.vb: Log(Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Log(System.Double,System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Log(System.Double,System.Double)
+  id: Log(System.Double,System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Log(double, double)
+  nameWithType: MathNumberExtensions.Log(double, double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log(double, double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Log
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 142
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the log of the value using
+
+    <xref href="System.Math.Log(System.Double%2cSystem.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double Log(this double value, double @base)
+    parameters:
+    - id: value
+      type: System.Double
+    - id: base
+      type: System.Double
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Log(value As Double, base As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Log*
+  nameWithType.vb: MathNumberExtensions.Log(Double, Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Log(Double, Double)
+  name.vb: Log(Double, Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Log10(System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Log10(System.Double)
+  id: Log10(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Log10(double)
+  nameWithType: MathNumberExtensions.Log10(double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log10(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Log10
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 151
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the base-10 log of the value using
+
+    <xref href="System.Math.Log10(System.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double Log10(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Log10(value As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Log10*
+  nameWithType.vb: MathNumberExtensions.Log10(Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Log10(Double)
+  name.vb: Log10(Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Log2(System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Log2(System.Double)
+  id: Log2(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Log2(double)
+  nameWithType: MathNumberExtensions.Log2(double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log2(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Log2
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 161
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the base-2 log of the value using
+
+    <xref href="System.Math.Log2(System.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double Log2(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Log2(value As Double) As Double
+  overload: Garyon.Mathematics.MathNumberExtensions.Log2*
+  nameWithType.vb: MathNumberExtensions.Log2(Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Log2(Double)
+  name.vb: Log2(Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.ILogB(System.Double)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.ILogB(System.Double)
+  id: ILogB(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: ILogB(double)
+  nameWithType: MathNumberExtensions.ILogB(double)
+  fullName: Garyon.Mathematics.MathNumberExtensions.ILogB(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ILogB
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 172
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Calculates the base-2 integer log of the value using
+
+    <xref href="System.Math.ILogB(System.Double)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static int ILogB(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ILogB(value As Double) As Integer
+  overload: Garyon.Mathematics.MathNumberExtensions.ILogB*
+  nameWithType.vb: MathNumberExtensions.ILogB(Double)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.ILogB(Double)
+  name.vb: ILogB(Double)
+- uid: Garyon.Mathematics.MathNumberExtensions.Halve``1(``0)
+  commentId: M:Garyon.Mathematics.MathNumberExtensions.Halve``1(``0)
+  id: Halve``1(``0)
+  isExtensionMethod: true
+  parent: Garyon.Mathematics.MathNumberExtensions
+  langs:
+  - csharp
+  - vb
+  name: Halve<T>(T)
+  nameWithType: MathNumberExtensions.Halve<T>(T)
+  fullName: Garyon.Mathematics.MathNumberExtensions.Halve<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/MathNumberExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Halve
+    path: ../Garyon/Mathematics/MathNumberExtensions.cs
+    startLine: 183
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Divides the specified integer value by two, rounding towards zero, using
+
+    the defined shift operators.
+  example: []
+  syntax:
+    content: 'public static T Halve<T>(this T value) where T : IBinaryInteger<T>, IShiftOperators<T, int, T>'
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Halve(Of T As {IBinaryInteger(Of T), IShiftOperators(Of T, Integer, T)})(value As T) As T
+  overload: Garyon.Mathematics.MathNumberExtensions.Halve*
+  nameWithType.vb: MathNumberExtensions.Halve(Of T)(T)
+  fullName.vb: Garyon.Mathematics.MathNumberExtensions.Halve(Of T)(T)
+  name.vb: Halve(Of T)(T)
+references:
+- uid: Garyon.Mathematics
+  commentId: N:Garyon.Mathematics
+  href: Garyon.html
+  name: Garyon.Mathematics
+  nameWithType: Garyon.Mathematics
+  fullName: Garyon.Mathematics
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mathematics
+    name: Mathematics
+    href: Garyon.Mathematics.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mathematics
+    name: Mathematics
+    href: Garyon.Mathematics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Mathematics.MathNumberExtensions.Square*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Square
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Square__1___0_
+  name: Square
+  nameWithType: MathNumberExtensions.Square
+  fullName: Garyon.Mathematics.MathNumberExtensions.Square
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Numerics.INumber{{T}}
+  commentId: T:System.Numerics.INumber{``0}
+  parent: System.Numerics
+  definition: System.Numerics.INumber`1
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<T>
+  nameWithType: INumber<T>
+  fullName: System.Numerics.INumber<T>
+  nameWithType.vb: INumber(Of T)
+  fullName.vb: System.Numerics.INumber(Of T)
+  name.vb: INumber(Of T)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Numerics.INumber`1
+  commentId: T:System.Numerics.INumber`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<TSelf>
+  nameWithType: INumber<TSelf>
+  fullName: System.Numerics.INumber<TSelf>
+  nameWithType.vb: INumber(Of TSelf)
+  fullName.vb: System.Numerics.INumber(Of TSelf)
+  name.vb: INumber(Of TSelf)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: System.Math.Pow(System.Double,System.Double)
+  commentId: M:System.Math.Pow(System.Double,System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.pow
+  name: Pow(double, double)
+  nameWithType: Math.Pow(double, double)
+  fullName: System.Math.Pow(double, double)
+  nameWithType.vb: Math.Pow(Double, Double)
+  fullName.vb: System.Math.Pow(Double, Double)
+  name.vb: Pow(Double, Double)
+  spec.csharp:
+  - uid: System.Math.Pow(System.Double,System.Double)
+    name: Pow
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.pow
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Pow(System.Double,System.Double)
+    name: Pow
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.pow
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: Garyon.Mathematics.MathNumberExtensions.Pow*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Pow
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Pow_System_Double_System_Double_
+  name: Pow
+  nameWithType: MathNumberExtensions.Pow
+  fullName: Garyon.Mathematics.MathNumberExtensions.Pow
+- uid: System.Math.Sqrt(System.Double)
+  commentId: M:System.Math.Sqrt(System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.sqrt
+  name: Sqrt(double)
+  nameWithType: Math.Sqrt(double)
+  fullName: System.Math.Sqrt(double)
+  nameWithType.vb: Math.Sqrt(Double)
+  fullName.vb: System.Math.Sqrt(Double)
+  name.vb: Sqrt(Double)
+  spec.csharp:
+  - uid: System.Math.Sqrt(System.Double)
+    name: Sqrt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.sqrt
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Sqrt(System.Double)
+    name: Sqrt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.sqrt
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: Garyon.Mathematics.MathNumberExtensions.Sqrt*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Sqrt
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Sqrt_System_Double_
+  name: Sqrt
+  nameWithType: MathNumberExtensions.Sqrt
+  fullName: Garyon.Mathematics.MathNumberExtensions.Sqrt
+- uid: System.MathF.Sqrt(System.Single)
+  commentId: M:System.MathF.Sqrt(System.Single)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.mathf.sqrt
+  name: Sqrt(float)
+  nameWithType: MathF.Sqrt(float)
+  fullName: System.MathF.Sqrt(float)
+  nameWithType.vb: MathF.Sqrt(Single)
+  fullName.vb: System.MathF.Sqrt(Single)
+  name.vb: Sqrt(Single)
+  spec.csharp:
+  - uid: System.MathF.Sqrt(System.Single)
+    name: Sqrt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.mathf.sqrt
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: System.MathF.Sqrt(System.Single)
+    name: Sqrt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.mathf.sqrt
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Math.Log(System.Double)
+  commentId: M:System.Math.Log(System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.log#system-math-log(system-double)
+  name: Log(double)
+  nameWithType: Math.Log(double)
+  fullName: System.Math.Log(double)
+  nameWithType.vb: Math.Log(Double)
+  fullName.vb: System.Math.Log(Double)
+  name.vb: Log(Double)
+  spec.csharp:
+  - uid: System.Math.Log(System.Double)
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log#system-math-log(system-double)
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Log(System.Double)
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log#system-math-log(system-double)
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: Garyon.Mathematics.MathNumberExtensions.Log*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Log
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Log_System_Double_
+  name: Log
+  nameWithType: MathNumberExtensions.Log
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log
+- uid: System.Math.Log(System.Double,System.Double)
+  commentId: M:System.Math.Log(System.Double,System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.log#system-math-log(system-double-system-double)
+  name: Log(double, double)
+  nameWithType: Math.Log(double, double)
+  fullName: System.Math.Log(double, double)
+  nameWithType.vb: Math.Log(Double, Double)
+  fullName.vb: System.Math.Log(Double, Double)
+  name.vb: Log(Double, Double)
+  spec.csharp:
+  - uid: System.Math.Log(System.Double,System.Double)
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log#system-math-log(system-double-system-double)
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Log(System.Double,System.Double)
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log#system-math-log(system-double-system-double)
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Math.Log10(System.Double)
+  commentId: M:System.Math.Log10(System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.log10
+  name: Log10(double)
+  nameWithType: Math.Log10(double)
+  fullName: System.Math.Log10(double)
+  nameWithType.vb: Math.Log10(Double)
+  fullName.vb: System.Math.Log10(Double)
+  name.vb: Log10(Double)
+  spec.csharp:
+  - uid: System.Math.Log10(System.Double)
+    name: Log10
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log10
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Log10(System.Double)
+    name: Log10
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log10
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: Garyon.Mathematics.MathNumberExtensions.Log10*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Log10
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Log10_System_Double_
+  name: Log10
+  nameWithType: MathNumberExtensions.Log10
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log10
+- uid: System.Math.Log2(System.Double)
+  commentId: M:System.Math.Log2(System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.log2
+  name: Log2(double)
+  nameWithType: Math.Log2(double)
+  fullName: System.Math.Log2(double)
+  nameWithType.vb: Math.Log2(Double)
+  fullName.vb: System.Math.Log2(Double)
+  name.vb: Log2(Double)
+  spec.csharp:
+  - uid: System.Math.Log2(System.Double)
+    name: Log2
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log2
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Log2(System.Double)
+    name: Log2
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.log2
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: Garyon.Mathematics.MathNumberExtensions.Log2*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Log2
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Log2_System_Double_
+  name: Log2
+  nameWithType: MathNumberExtensions.Log2
+  fullName: Garyon.Mathematics.MathNumberExtensions.Log2
+- uid: System.Math.ILogB(System.Double)
+  commentId: M:System.Math.ILogB(System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.ilogb
+  name: ILogB(double)
+  nameWithType: Math.ILogB(double)
+  fullName: System.Math.ILogB(double)
+  nameWithType.vb: Math.ILogB(Double)
+  fullName.vb: System.Math.ILogB(Double)
+  name.vb: ILogB(Double)
+  spec.csharp:
+  - uid: System.Math.ILogB(System.Double)
+    name: ILogB
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.ilogb
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.ILogB(System.Double)
+    name: ILogB
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.ilogb
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: Garyon.Mathematics.MathNumberExtensions.ILogB*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.ILogB
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_ILogB_System_Double_
+  name: ILogB
+  nameWithType: MathNumberExtensions.ILogB
+  fullName: Garyon.Mathematics.MathNumberExtensions.ILogB
+- uid: Garyon.Mathematics.MathNumberExtensions.Halve*
+  commentId: Overload:Garyon.Mathematics.MathNumberExtensions.Halve
+  href: Garyon.Mathematics.MathNumberExtensions.html#Garyon_Mathematics_MathNumberExtensions_Halve__1___0_
+  name: Halve
+  nameWithType: MathNumberExtensions.Halve
+  fullName: Garyon.Mathematics.MathNumberExtensions.Halve

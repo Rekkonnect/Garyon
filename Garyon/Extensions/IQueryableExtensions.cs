@@ -1,5 +1,6 @@
 ﻿using Garyon.Functions;
 using Garyon.Objects;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Garyon.Extensions;
@@ -9,7 +10,6 @@ namespace Garyon.Extensions;
 /// </summary>
 public static partial class IQueryableExtensions
 {
-    // TODO: Provide those as extensions over IEnumerable too
     extension<T>(IQueryable<T> queryable)
     {
         /// <summary>
@@ -42,3 +42,4 @@ public static partial class IQueryableExtensions
         }
     }
 }
+

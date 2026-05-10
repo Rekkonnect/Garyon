@@ -1,0 +1,565 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.AppDomainExtensions
+  commentId: T:Garyon.Reflection.AppDomainExtensions
+  id: AppDomainExtensions
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain)
+  - Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain,System.Predicate{System.Type})
+  langs:
+  - csharp
+  - vb
+  name: AppDomainExtensions
+  nameWithType: AppDomainExtensions
+  fullName: Garyon.Reflection.AppDomainExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Reflection/AppDomainExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AppDomainExtensions
+    path: ../Garyon/Reflection/AppDomainExtensions.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Contains extensions for the <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> type.
+  example: []
+  syntax:
+    content: public static class AppDomainExtensions
+    content.vb: Public Module AppDomainExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain)
+  commentId: M:Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain)
+  id: GetAllTypes(System.AppDomain)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.AppDomainExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllTypes(AppDomain)
+  nameWithType: AppDomainExtensions.GetAllTypes(AppDomain)
+  fullName: Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/AppDomainExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAllTypes
+    path: ../Garyon/Reflection/AppDomainExtensions.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets all the types defined in all assemblies for the given
+
+    <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IEnumerable<Type> GetAllTypes(this AppDomain domain)
+    parameters:
+    - id: domain
+      type: System.AppDomain
+      description: The <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> whose types to get.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Type}
+    content.vb: Public Shared Function GetAllTypes(domain As AppDomain) As IEnumerable(Of Type)
+  overload: Garyon.Reflection.AppDomainExtensions.GetAllTypes*
+- uid: Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain,System.Predicate{System.Type})
+  commentId: M:Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain,System.Predicate{System.Type})
+  id: GetAllTypes(System.AppDomain,System.Predicate{System.Type})
+  isExtensionMethod: true
+  parent: Garyon.Reflection.AppDomainExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllTypes(AppDomain, Predicate<Type>)
+  nameWithType: AppDomainExtensions.GetAllTypes(AppDomain, Predicate<Type>)
+  fullName: Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain, System.Predicate<System.Type>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/AppDomainExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAllTypes
+    path: ../Garyon/Reflection/AppDomainExtensions.cs
+    startLine: 35
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets and filters all the types defined in all assemblies for the given
+
+    <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IEnumerable<Type> GetAllTypes(this AppDomain domain, Predicate<Type> predicate)
+    parameters:
+    - id: domain
+      type: System.AppDomain
+      description: The <xref href="System.AppDomain" data-throw-if-not-resolved="false"></xref> whose types to get.
+    - id: predicate
+      type: System.Predicate{System.Type}
+      description: The filter to determine which types are included in the result.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Type}
+      description: >-
+        The filtered types contained in all assemblies in
+
+        <code class="paramref">domain</code>.
+    content.vb: Public Shared Function GetAllTypes(domain As AppDomain, predicate As Predicate(Of Type)) As IEnumerable(Of Type)
+  overload: Garyon.Reflection.AppDomainExtensions.GetAllTypes*
+  nameWithType.vb: AppDomainExtensions.GetAllTypes(AppDomain, Predicate(Of Type))
+  fullName.vb: Garyon.Reflection.AppDomainExtensions.GetAllTypes(System.AppDomain, System.Predicate(Of System.Type))
+  name.vb: GetAllTypes(AppDomain, Predicate(Of Type))
+references:
+- uid: System.AppDomain
+  commentId: T:System.AppDomain
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.appdomain
+  name: AppDomain
+  nameWithType: AppDomain
+  fullName: System.AppDomain
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Reflection.AppDomainExtensions.GetAllTypes*
+  commentId: Overload:Garyon.Reflection.AppDomainExtensions.GetAllTypes
+  href: Garyon.Reflection.AppDomainExtensions.html#Garyon_Reflection_AppDomainExtensions_GetAllTypes_System_AppDomain_
+  name: GetAllTypes
+  nameWithType: AppDomainExtensions.GetAllTypes
+  fullName: Garyon.Reflection.AppDomainExtensions.GetAllTypes
+- uid: System.Collections.Generic.IEnumerable{System.Type}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Type}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Type>
+  nameWithType: IEnumerable<Type>
+  fullName: System.Collections.Generic.IEnumerable<System.Type>
+  nameWithType.vb: IEnumerable(Of Type)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Type)
+  name.vb: IEnumerable(Of Type)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Predicate{System.Type}
+  commentId: T:System.Predicate{System.Type}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<Type>
+  nameWithType: Predicate<Type>
+  fullName: System.Predicate<System.Type>
+  nameWithType.vb: Predicate(Of Type)
+  fullName.vb: System.Predicate(Of System.Type)
+  name.vb: Predicate(Of Type)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

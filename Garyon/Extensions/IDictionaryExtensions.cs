@@ -40,38 +40,6 @@ public static partial class IDictionaryExtensions
             d.Add(key, 1);
         }
     }
-    /// <summary>
-    /// Calculates the sum of all the values in the dictionary, excluding
-    /// specific keys.
-    /// </summary>
-    /// <typeparam name="TKey">
-    /// The type of the keys in the dictionary.
-    /// </typeparam>
-    /// <param name="d">
-    /// The dictionary whose value sum to calculate.
-    /// </param>
-    /// <param name="exclusions">
-    /// The keys that will be excluded from the sum.
-    /// </param>
-    public static int Sum<TKey>(this IDictionary<TKey, int> d, params TKey[] exclusions)
-        where TKey : notnull
-    {
-        int sum = 0;
-        foreach (var v in d.Values)
-        {
-            sum += v;
-        }
-
-        foreach (var e in exclusions)
-        {
-            if (d.TryGetValue(e, out var value))
-            {
-                sum -= value;
-            }
-        }
-
-        return sum;
-    }
 
     /// <summary>
     /// Gets the value mapped to the given key within the dictionary, if the key
@@ -379,7 +347,7 @@ public static partial class IDictionaryExtensions
     public static void Add<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp)
         where TKey : notnull
     {
-        source.Add(kvp);
+        ((ICollection<KeyValuePair<TKey, TValue>>)source).Add(kvp);
     }
 #if !HAS_DICTIONARY_TRYADD
     /// <summary>

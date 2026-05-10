@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Exceptions
+  commentId: N:Garyon.Exceptions
+  id: Garyon.Exceptions
+  children:
+  - Garyon.Exceptions.AssertionException
+  - Garyon.Exceptions.BadServiceResponseException
+  - Garyon.Exceptions.ContractException
+  - Garyon.Exceptions.InvalidStateException
+  - Garyon.Exceptions.ThrowHelper
+  - Garyon.Exceptions.ThrowHelper`1
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Exceptions
+  nameWithType: Garyon.Exceptions
+  fullName: Garyon.Exceptions
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Exceptions.AssertionException
+  commentId: T:Garyon.Exceptions.AssertionException
+  href: Garyon.Exceptions.AssertionException.html
+  name: AssertionException
+  nameWithType: AssertionException
+  fullName: Garyon.Exceptions.AssertionException
+- uid: Garyon.Exceptions.BadServiceResponseException
+  commentId: T:Garyon.Exceptions.BadServiceResponseException
+  href: Garyon.Exceptions.BadServiceResponseException.html
+  name: BadServiceResponseException
+  nameWithType: BadServiceResponseException
+  fullName: Garyon.Exceptions.BadServiceResponseException
+- uid: Garyon.Exceptions.ContractException
+  commentId: T:Garyon.Exceptions.ContractException
+  href: Garyon.Exceptions.ContractException.html
+  name: ContractException
+  nameWithType: ContractException
+  fullName: Garyon.Exceptions.ContractException
+- uid: Garyon.Exceptions.InvalidStateException
+  commentId: T:Garyon.Exceptions.InvalidStateException
+  href: Garyon.Exceptions.InvalidStateException.html
+  name: InvalidStateException
+  nameWithType: InvalidStateException
+  fullName: Garyon.Exceptions.InvalidStateException
+- uid: Garyon.Exceptions.ThrowHelper
+  commentId: T:Garyon.Exceptions.ThrowHelper
+  href: Garyon.Exceptions.ThrowHelper.html
+  name: ThrowHelper
+  nameWithType: ThrowHelper
+  fullName: Garyon.Exceptions.ThrowHelper
+- uid: Garyon.Exceptions.ThrowHelper`1
+  commentId: T:Garyon.Exceptions.ThrowHelper`1
+  href: Garyon.Exceptions.ThrowHelper-1.html
+  name: ThrowHelper<TException>
+  nameWithType: ThrowHelper<TException>
+  fullName: Garyon.Exceptions.ThrowHelper<TException>
+  nameWithType.vb: ThrowHelper(Of TException)
+  fullName.vb: Garyon.Exceptions.ThrowHelper(Of TException)
+  name.vb: ThrowHelper(Of TException)
+  spec.csharp:
+  - uid: Garyon.Exceptions.ThrowHelper`1
+    name: ThrowHelper
+    href: Garyon.Exceptions.ThrowHelper-1.html
+  - name: <
+  - name: TException
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Exceptions.ThrowHelper`1
+    name: ThrowHelper
+    href: Garyon.Exceptions.ThrowHelper-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TException
+  - name: )

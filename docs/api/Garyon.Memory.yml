@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Memory
+  commentId: N:Garyon.Memory
+  id: Garyon.Memory
+  children:
+  - Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Memory
+  nameWithType: Garyon.Memory
+  fullName: Garyon.Memory
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Memory.Allocation
+  commentId: T:Garyon.Memory.Allocation
+  href: Garyon.Memory.Allocation.html
+  name: Allocation
+  nameWithType: Allocation
+  fullName: Garyon.Memory.Allocation

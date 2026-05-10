@@ -1,0 +1,4135 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Reflection.TypeExtensions
+  commentId: T:Garyon.Reflection.TypeExtensions
+  id: TypeExtensions
+  parent: Garyon.Reflection
+  children:
+  - Garyon.Reflection.TypeExtensions.CanBeInherited(System.Type)
+  - Garyon.Reflection.TypeExtensions.CanConstruct(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.CanConstruct``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.CanInherit(System.Type)
+  - Garyon.Reflection.TypeExtensions.CanInheritClasses(System.Type)
+  - Garyon.Reflection.TypeExtensions.CanInheritCustomClasses(System.Type)
+  - Garyon.Reflection.TypeExtensions.CanInheritCustomTypes(System.Type)
+  - Garyon.Reflection.TypeExtensions.CanInheritInterfaces(System.Type)
+  - Garyon.Reflection.TypeExtensions.ContainsElementsOfType(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.ContainsElementsOfType``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.EnumerateBaseTypes(System.Type)
+  - Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(System.Type,System.Type[])
+  - Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``2(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``3(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``4(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetConstructor(System.Type,System.Type[])
+  - Garyon.Reflection.TypeExtensions.GetConstructor``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetConstructor``2(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetConstructor``3(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetConstructor``4(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetDeepestElementType(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetDefaultValue(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetInheritanceLevel(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetInheritanceTree(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetParameterlessConstructor(System.Type)
+  - Garyon.Reflection.TypeExtensions.GetTypeCode(System.Type)
+  - Garyon.Reflection.TypeExtensions.Implements(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.Implements``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.Inherits(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(System.Type,System.Type,System.Type@)
+  - Garyon.Reflection.TypeExtensions.InheritsOrEquals(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.InheritsOrEquals``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.Inherits``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type)
+  - Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type,System.Object[])
+  - Garyon.Reflection.TypeExtensions.InitializeInstance``1(System.Type)
+  - Garyon.Reflection.TypeExtensions.InitializeInstance``1(System.Type,System.Object[])
+  - Garyon.Reflection.TypeExtensions.IsAttribute(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsDelegate(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsException(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsGenericVariantOf(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.IsNullableType(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsNullableValueType(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsOrImplements(System.Type,System.Type)
+  - Garyon.Reflection.TypeExtensions.IsReferenceType(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsStaticClass(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsTrueClass(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsTuple(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsValidTypeArgument(System.Type)
+  - Garyon.Reflection.TypeExtensions.IsVoid(System.Type)
+  - Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type,System.Int32)
+  - Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type,System.Int32[])
+  - Garyon.Reflection.TypeExtensions.MakeMultiplePointerType(System.Type,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: Garyon.Reflection.TypeExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TypeExtensions
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 18
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Provides extension methods for the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class TypeExtensions
+    content.vb: Public Module TypeExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Reflection.TypeExtensions.GetTypeCode(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetTypeCode(System.Type)
+  id: GetTypeCode(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTypeCode(Type)
+  nameWithType: TypeExtensions.GetTypeCode(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetTypeCode(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetTypeCode
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the underlying type code of the specified <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static TypeCode GetTypeCode(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose underlying type code to get.
+    return:
+      type: System.TypeCode
+      description: The code of the underlying type, or <xref href="System.TypeCode.Empty" data-throw-if-not-resolved="false"></xref> if <code class="paramref">type</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Shared Function GetTypeCode(type As Type) As TypeCode
+  overload: Garyon.Reflection.TypeExtensions.GetTypeCode*
+- uid: Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame(System.Type)
+  id: GenericFullNamePrefixOrSame(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GenericFullNamePrefixOrSame(Type)
+  nameWithType: TypeExtensions.GenericFullNamePrefixOrSame(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GenericFullNamePrefixOrSame
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 33
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the full name prefix of a generic type ignoring its arity, or the
+
+    same full name if the type is not a generic type.
+  example: []
+  syntax:
+    content: public static string? GenericFullNamePrefixOrSame(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose full name prefix to get.
+    return:
+      type: System.String
+    content.vb: Public Shared Function GenericFullNamePrefixOrSame(type As Type) As String
+  overload: Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame*
+- uid: Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers(System.Type)
+  id: GetAccessibilityModifiers(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAccessibilityModifiers(Type?)
+  nameWithType: TypeExtensions.GetAccessibilityModifiers(Type?)
+  fullName: Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers(System.Type?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAccessibilityModifiers
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 41
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  syntax:
+    content: public static AccessibilityModifiers GetAccessibilityModifiers(this Type? type)
+    parameters:
+    - id: type
+      type: System.Type
+    return:
+      type: Garyon.Reflection.AccessibilityModifiers
+    content.vb: Public Shared Function GetAccessibilityModifiers(type As Type) As AccessibilityModifiers
+  overload: Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers*
+  nameWithType.vb: TypeExtensions.GetAccessibilityModifiers(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers(System.Type)
+  name.vb: GetAccessibilityModifiers(Type)
+- uid: Garyon.Reflection.TypeExtensions.CanInherit(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanInherit(System.Type)
+  id: CanInherit(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanInherit(Type)
+  nameWithType: TypeExtensions.CanInherit(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanInherit(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInherit
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 84
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the provided type can inherit any type, either a
+
+    class or an interface.
+  example: []
+  syntax:
+    content: public static bool CanInherit(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it can inherit any type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any type; that is, it is
+
+        not a pointer or a by reference type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanInherit(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanInherit*
+- uid: Garyon.Reflection.TypeExtensions.CanInheritCustomTypes(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanInheritCustomTypes(System.Type)
+  id: CanInheritCustomTypes(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanInheritCustomTypes(Type)
+  nameWithType: TypeExtensions.CanInheritCustomTypes(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritCustomTypes(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritCustomTypes
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 97
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the provided type can inherit any type, either a
+
+    class or an interface.
+  example: []
+  syntax:
+    content: public static bool CanInheritCustomTypes(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it can inherit any type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any type; that is, it is
+
+        not a pointer, a by reference, a static class, a delegate, an enum or an
+
+        array type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanInheritCustomTypes(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanInheritCustomTypes*
+- uid: Garyon.Reflection.TypeExtensions.CanInheritInterfaces(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanInheritInterfaces(System.Type)
+  id: CanInheritInterfaces(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanInheritInterfaces(Type)
+  nameWithType: TypeExtensions.CanInheritInterfaces(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritInterfaces(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritInterfaces
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 109
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the provided type can inherit any interface.
+  example: []
+  syntax:
+    content: public static bool CanInheritInterfaces(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it can inherit any interface.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any interface; that is,
+
+        it is not a pointer, a by reference, a static class, a delegate, an enum
+
+        or an array type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanInheritInterfaces(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanInheritInterfaces*
+- uid: Garyon.Reflection.TypeExtensions.CanInheritClasses(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanInheritClasses(System.Type)
+  id: CanInheritClasses(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanInheritClasses(Type)
+  nameWithType: TypeExtensions.CanInheritClasses(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritClasses(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritClasses
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 121
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the provided type can inherit any class.
+  example: []
+  syntax:
+    content: public static bool CanInheritClasses(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it can inherit any class.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any interface; that is,
+
+        it is not a pointer, a by reference, or a delegate type, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanInheritClasses(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanInheritClasses*
+- uid: Garyon.Reflection.TypeExtensions.CanInheritCustomClasses(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanInheritCustomClasses(System.Type)
+  id: CanInheritCustomClasses(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanInheritCustomClasses(Type)
+  nameWithType: TypeExtensions.CanInheritCustomClasses(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritCustomClasses(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanInheritCustomClasses
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 133
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the provided type can inherit any custom class.
+  example: []
+  syntax:
+    content: public static bool CanInheritCustomClasses(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it can inherit any custom class.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type can inherit any interface; that is,
+
+        it is not a pointer, a by reference, a static class, or a delegate type,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanInheritCustomClasses(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanInheritCustomClasses*
+- uid: Garyon.Reflection.TypeExtensions.CanBeInherited(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanBeInherited(System.Type)
+  id: CanBeInherited(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanBeInherited(Type)
+  nameWithType: TypeExtensions.CanBeInherited(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanBeInherited(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanBeInherited
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 145
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the provided type can be inherited.
+  example: []
+  syntax:
+    content: public static bool CanBeInherited(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it can be inherited.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether <code class="paramref">type</code> can be inherited;
+
+        that is, a non-sealed, thus non-static, class or an interface type.
+    content.vb: Public Shared Function CanBeInherited(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanBeInherited*
+- uid: Garyon.Reflection.TypeExtensions.InheritsOrEquals``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.InheritsOrEquals``1(System.Type)
+  id: InheritsOrEquals``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InheritsOrEquals<T>(Type)
+  nameWithType: TypeExtensions.InheritsOrEquals<T>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.InheritsOrEquals<T>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InheritsOrEquals
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 162
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether a type inherits another type, or is equal to it.
+  example: []
+  syntax:
+    content: public static bool InheritsOrEquals<T>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type to determine whether it inherits or is equal to the type
+
+        <code class="typeparamref">T</code>.
+    typeParameters:
+    - id: T
+      description: >-
+        The type to check whether it is being inherited by or equal to the
+
+        provided <code class="paramref">type</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether <code class="paramref">type</code> inherits or equals
+
+        <code class="typeparamref">T</code>.
+    content.vb: Public Shared Function InheritsOrEquals(Of T)(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.InheritsOrEquals*
+  nameWithType.vb: TypeExtensions.InheritsOrEquals(Of T)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.InheritsOrEquals(Of T)(System.Type)
+  name.vb: InheritsOrEquals(Of T)(Type)
+- uid: Garyon.Reflection.TypeExtensions.InheritsOrEquals(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.InheritsOrEquals(System.Type,System.Type)
+  id: InheritsOrEquals(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InheritsOrEquals(Type, Type)
+  nameWithType: TypeExtensions.InheritsOrEquals(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.InheritsOrEquals(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InheritsOrEquals
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 178
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether a type inherits or equals another type.
+  example: []
+  syntax:
+    content: public static bool InheritsOrEquals(this Type type, Type inherited)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type to determine whether it inherits or equals the type
+
+        <code class="paramref">inherited</code>.
+    - id: inherited
+      type: System.Type
+      description: >-
+        The type to check whether it is being inherited by or equal to the
+
+        provided <code class="paramref">type</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether <code class="paramref">type</code> inherits or equals
+
+        <code class="paramref">inherited</code>.
+    content.vb: Public Shared Function InheritsOrEquals(type As Type, inherited As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.InheritsOrEquals*
+- uid: Garyon.Reflection.TypeExtensions.Inherits``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.Inherits``1(System.Type)
+  id: Inherits``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Inherits<T>(Type)
+  nameWithType: TypeExtensions.Inherits<T>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.Inherits<T>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Inherits
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 194
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether a type inherits another type.
+  example: []
+  syntax:
+    content: public static bool Inherits<T>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type to determine whether it inherits the type
+
+        <code class="typeparamref">T</code>.
+    typeParameters:
+    - id: T
+      description: >-
+        The type to check whether it is being inherited by the provided
+
+        <code class="paramref">type</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether <code class="paramref">type</code> inherits
+
+        <code class="typeparamref">T</code>.
+    content.vb: Public Shared Function [Inherits](Of T)(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.Inherits*
+  nameWithType.vb: TypeExtensions.Inherits(Of T)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.Inherits(Of T)(System.Type)
+  name.vb: Inherits(Of T)(Type)
+- uid: Garyon.Reflection.TypeExtensions.Inherits(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.Inherits(System.Type,System.Type)
+  id: Inherits(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Inherits(Type, Type)
+  nameWithType: TypeExtensions.Inherits(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.Inherits(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Inherits
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 210
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether a type inherits another type.
+  example: []
+  syntax:
+    content: public static bool Inherits(this Type type, Type inherited)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type to determine whether it inherits the type
+
+        <code class="paramref">inherited</code>.
+    - id: inherited
+      type: System.Type
+      description: >-
+        The type to check whether it is being inherited by the provided
+
+        <code class="paramref">type</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether <code class="paramref">type</code> inherits
+
+        <code class="paramref">inherited</code>.
+    content.vb: Public Shared Function [Inherits](type As Type, inherited As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.Inherits*
+- uid: Garyon.Reflection.TypeExtensions.Implements``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.Implements``1(System.Type)
+  id: Implements``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Implements<T>(Type)
+  nameWithType: TypeExtensions.Implements<T>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.Implements<T>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Implements
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 246
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether a type implements an interface type.
+  example: []
+  syntax:
+    content: 'public static bool Implements<T>(this Type type) where T : class'
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type to check if it implements the provided interface type. Must not
+
+        be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    typeParameters:
+    - id: T
+      description: The type of the interface.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type implements the provided interface
+
+        type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function [Implements](Of T As Class)(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.Implements*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      <code class="paramref">type</code> is a type that cannot implement interfaces, or
+
+      <code class="typeparamref">T</code> is not an interface.
+  nameWithType.vb: TypeExtensions.Implements(Of T)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.Implements(Of T)(System.Type)
+  name.vb: Implements(Of T)(Type)
+- uid: Garyon.Reflection.TypeExtensions.Implements(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.Implements(System.Type,System.Type)
+  id: Implements(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Implements(Type, Type)
+  nameWithType: TypeExtensions.Implements(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.Implements(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Implements
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 269
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether a type implements an interface type.
+  example: []
+  syntax:
+    content: public static bool Implements(this Type type, Type interfaceType)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type to check if it implements the provided interface type. Must not
+
+        be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    - id: interfaceType
+      type: System.Type
+      description: The type of the interface. Must not be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type implements the provided interface
+
+        type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function [Implements](type As Type, interfaceType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.Implements*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      <code class="paramref">type</code> is a type that cannot implement interfaces, or
+
+      <code class="paramref">interfaceType</code> is not an interface.
+- uid: Garyon.Reflection.TypeExtensions.IsOrImplements(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsOrImplements(System.Type,System.Type)
+  id: IsOrImplements(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsOrImplements(Type, Type)
+  nameWithType: TypeExtensions.IsOrImplements(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsOrImplements(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsOrImplements
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 288
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the given type is a specific target interface type,
+
+    or if it implements it
+  example: []
+  syntax:
+    content: public static bool IsOrImplements(this Type source, Type target)
+    parameters:
+    - id: source
+      type: System.Type
+    - id: target
+      type: System.Type
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsOrImplements(source As Type, target As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsOrImplements*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      <code class="paramref">source</code> or <code class="paramref">target</code> is not an
+
+      interface type, or <code class="paramref">source</code> cannot implement
+
+      interfaces.
+- uid: Garyon.Reflection.TypeExtensions.GetInheritanceLevel(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetInheritanceLevel(System.Type)
+  id: GetInheritanceLevel(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetInheritanceLevel(Type)
+  nameWithType: TypeExtensions.GetInheritanceLevel(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetInheritanceLevel(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetInheritanceLevel
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 315
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines the number of base types that the provided type directly
+
+    inherits, excluding the special classes <xref href="System.ValueType" data-throw-if-not-resolved="false"></xref>,
+
+    <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, <xref href="System.Delegate" data-throw-if-not-resolved="false"></xref>,
+
+    <xref href="System.Enum" data-throw-if-not-resolved="false"></xref> and <xref href="System.Object" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static int GetInheritanceLevel(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose inheritance level to determine.
+    return:
+      type: System.Int32
+      description: >-
+        The number of base types that the provided type inherits. For value
+
+        types, pointers, arrays, and delegates this is equal to 0, and for
+
+        reference types it is equal to the number of classes that are
+
+        recursively directly inherited, excluding the <xref href="System.Object" data-throw-if-not-resolved="false"></xref>
+
+        class.
+    content.vb: Public Shared Function GetInheritanceLevel(type As Type) As Integer
+  overload: Garyon.Reflection.TypeExtensions.GetInheritanceLevel*
+- uid: Garyon.Reflection.TypeExtensions.GetInheritanceTree(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetInheritanceTree(System.Type)
+  id: GetInheritanceTree(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetInheritanceTree(Type)
+  nameWithType: TypeExtensions.GetInheritanceTree(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetInheritanceTree(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetInheritanceTree
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 339
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets a <xref href="Garyon.DataStructures.Trees.Tree%601" data-throw-if-not-resolved="false"></xref> representing the provided type's
+
+    inheritance tree.
+  remarks: >-
+    The inheritance tree's root is the provided type, and the base classes
+
+    are ancestors, which is the opposite than the proposed inheritance tree
+
+    views, that have the deepest base object as the root, with each child
+
+    being the inheritor.
+  example: []
+  syntax:
+    content: public static Tree<Type> GetInheritanceTree(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose inheritance tree to get.
+    return:
+      type: Garyon.DataStructures.Trees.Tree{System.Type}
+      description: >-
+        A <xref href="Garyon.DataStructures.Trees.Tree%601" data-throw-if-not-resolved="false"></xref> representing the provided type's inheritance
+
+        tree.
+    content.vb: Public Shared Function GetInheritanceTree(type As Type) As Tree(Of Type)
+  overload: Garyon.Reflection.TypeExtensions.GetInheritanceTree*
+- uid: Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree(System.Type)
+  id: GetInterfaceInheritanceTree(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetInterfaceInheritanceTree(Type)
+  nameWithType: TypeExtensions.GetInterfaceInheritanceTree(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetInterfaceInheritanceTree
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 395
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets a <xref href="Garyon.DataStructures.Trees.Tree%601" data-throw-if-not-resolved="false"></xref> representing the provided type's
+
+    interface inheritance tree.
+  example: []
+  syntax:
+    content: public static Tree<Type> GetInterfaceInheritanceTree(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose interface inheritance tree to get.
+    return:
+      type: Garyon.DataStructures.Trees.Tree{System.Type}
+      description: >-
+        A <xref href="Garyon.DataStructures.Trees.Tree%601" data-throw-if-not-resolved="false"></xref> representing the provided type's interface
+
+        inheritance tree. Each level only contains direct interface
+
+        implementations, meaning that no node has nodes of indirectly inherited
+
+        interfaces as direct children, they are indirect descendants though.
+    content.vb: Public Shared Function GetInterfaceInheritanceTree(type As Type) As Tree(Of Type)
+  overload: Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree*
+- uid: Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel(System.Type)
+  id: GetDeepestInterfaceInheritanceLevel(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDeepestInterfaceInheritanceLevel(Type)
+  nameWithType: TypeExtensions.GetDeepestInterfaceInheritanceLevel(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDeepestInterfaceInheritanceLevel
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 439
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets a the deepest interface inheritance level from the interface
+
+    inheritance tree of the specified type.
+  example: []
+  syntax:
+    content: public static int GetDeepestInterfaceInheritanceLevel(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose deepest interface inheritance level to get.
+    return:
+      type: System.Int32
+      description: >-
+        The deepest interface inheritance level. For pointers, by reference,
+
+        delegate and enum types, this is equal to 0. For all the other types it
+
+        is equal to the height of the interface inheritance tree.
+    content.vb: Public Shared Function GetDeepestInterfaceInheritanceLevel(type As Type) As Integer
+  overload: Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel*
+- uid: Garyon.Reflection.TypeExtensions.EnumerateBaseTypes(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.EnumerateBaseTypes(System.Type)
+  id: EnumerateBaseTypes(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnumerateBaseTypes(Type)
+  nameWithType: TypeExtensions.EnumerateBaseTypes(Type)
+  fullName: Garyon.Reflection.TypeExtensions.EnumerateBaseTypes(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnumerateBaseTypes
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 459
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Enumerates all base types of a type.
+  remarks: >-
+    This only includes all types returned from <xref href="System.Type.BaseType" data-throw-if-not-resolved="false"></xref>
+
+    recursively. It does not include implemented interfaces.
+  example: []
+  syntax:
+    content: public static IEnumerable<Type> EnumerateBaseTypes(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Type}
+      description: >-
+        A lazily evaluated collection of types, with the first being the
+
+        directly inherited base type, and the last being the furthest in the
+
+        inheritance tree.
+    content.vb: Public Shared Function EnumerateBaseTypes(type As Type) As IEnumerable(Of Type)
+  overload: Garyon.Reflection.TypeExtensions.EnumerateBaseTypes*
+- uid: Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition(System.Type,System.Type)
+  id: IsGenericVariantOrDefinition(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsGenericVariantOrDefinition(Type, Type)
+  nameWithType: TypeExtensions.IsGenericVariantOrDefinition(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsGenericVariantOrDefinition
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 486
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the provided type is a variant of the specified base
+
+    generic type, or a definition that is equal to the provided generic type
+
+    definition.
+  example: []
+  syntax:
+    content: public static bool IsGenericVariantOrDefinition(this Type type, Type genericType)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a generic variant.
+    - id: genericType
+      type: System.Type
+      description: The base generic type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">type</code> is a generic variant
+
+        of or equal to <code class="paramref">genericType</code>, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsGenericVariantOrDefinition(type As Type, genericType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: >-
+      The <code class="paramref">genericType</code> argument is not an unbound generic
+
+      type.
+- uid: Garyon.Reflection.TypeExtensions.IsGenericVariantOf(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsGenericVariantOf(System.Type,System.Type)
+  id: IsGenericVariantOf(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsGenericVariantOf(Type, Type)
+  nameWithType: TypeExtensions.IsGenericVariantOf(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsGenericVariantOf(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsGenericVariantOf
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 513
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the provided type is a variant of the specified base
+
+    generic type.
+  example: []
+  syntax:
+    content: public static bool IsGenericVariantOf(this Type type, Type genericType)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a generic variant.
+    - id: genericType
+      type: System.Type
+      description: The base generic type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">type</code> is a generic variant
+
+        of <code class="paramref">genericType</code>, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsGenericVariantOf(type As Type, genericType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsGenericVariantOf*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: >-
+      The <code class="paramref">genericType</code> argument is not an unbound generic
+
+      type.
+- uid: Garyon.Reflection.TypeExtensions.CanConstruct``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanConstruct``1(System.Type)
+  id: CanConstruct``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanConstruct<T>(Type)
+  nameWithType: TypeExtensions.CanConstruct<T>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanConstruct<T>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanConstruct
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 544
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the specified base generic type can be constructed
+
+    into a type.
+  example: []
+  syntax:
+    content: public static bool CanConstruct<T>(this Type genericType)
+    parameters:
+    - id: genericType
+      type: System.Type
+      description: The base generic type.
+    typeParameters:
+    - id: T
+      description: >-
+        The type to determine whether it can be a construction of the base
+
+        generic type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">genericType</code> can be
+
+        constructed into <code class="typeparamref">T</code>, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanConstruct(Of T)(genericType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanConstruct*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: >-
+      The <code class="paramref">genericType</code> argument is not an unbound generic
+
+      type or the <code class="typeparamref">T</code> argument is not a bound generic
+
+      type.
+  nameWithType.vb: TypeExtensions.CanConstruct(Of T)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.CanConstruct(Of T)(System.Type)
+  name.vb: CanConstruct(Of T)(Type)
+- uid: Garyon.Reflection.TypeExtensions.CanConstruct(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.CanConstruct(System.Type,System.Type)
+  id: CanConstruct(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: CanConstruct(Type, Type)
+  nameWithType: TypeExtensions.CanConstruct(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.CanConstruct(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CanConstruct
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 566
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the specified base generic type can be constructed
+
+    into a type.
+  example: []
+  syntax:
+    content: public static bool CanConstruct(this Type genericType, Type constructedType)
+    parameters:
+    - id: genericType
+      type: System.Type
+      description: The base generic type.
+    - id: constructedType
+      type: System.Type
+      description: >-
+        The constructed type to determine whether it is constructed from the
+
+        provided generic type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">genericType</code> can be
+
+        constructed into <code class="paramref">constructedType</code>, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function CanConstruct(genericType As Type, constructedType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.CanConstruct*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: >-
+      The <code class="paramref">genericType</code> argument is not an unbound generic
+
+      type or the <code class="paramref">constructedType</code> argument is not a bound
+
+      generic type.
+- uid: Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame(System.Type)
+  id: GetGenericTypeDefinitionOrSame(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGenericTypeDefinitionOrSame(Type)
+  nameWithType: TypeExtensions.GetGenericTypeDefinitionOrSame(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGenericTypeDefinitionOrSame
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 578
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the generic type definition of a generic type.
+  example: []
+  syntax:
+    content: public static Type GetGenericTypeDefinitionOrSame(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose generic type definition to get.
+    return:
+      type: System.Type
+      description: >-
+        The generic type definition of the generic type, or the provided type
+
+        itself if the type is not generic.
+    content.vb: Public Shared Function GetGenericTypeDefinitionOrSame(type As Type) As Type
+  overload: Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame*
+- uid: Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe(System.Type)
+  id: GetDeclaringMethodSafe(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDeclaringMethodSafe(Type)
+  nameWithType: TypeExtensions.GetDeclaringMethodSafe(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDeclaringMethodSafe
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 599
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the declaring method of the given type. Only generic method type
+
+    parameters support a declaring method.
+  example: []
+  syntax:
+    content: public static MethodBase? GetDeclaringMethodSafe(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: >-
+        The type whose declaring method to get. It must be a generic method type
+
+        parameter, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> will be returned.
+    return:
+      type: System.Reflection.MethodBase
+      description: >-
+        The declaring method for the given generic method type parameter, or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type is not a generic method type
+
+        parameter.
+    content.vb: Public Shared Function GetDeclaringMethodSafe(type As Type) As MethodBase
+  overload: Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe*
+- uid: Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember(System.Type)
+  id: GetOriginalDeclaringGenericMember(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOriginalDeclaringGenericMember(Type)
+  nameWithType: TypeExtensions.GetOriginalDeclaringGenericMember(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetOriginalDeclaringGenericMember
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 628
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the member that originally declares the given generic parameter
+
+    type.
+  remarks: This method does not work for local generic methods.
+  example: []
+  syntax:
+    content: public static MemberInfo GetOriginalDeclaringGenericMember(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The generic type parameter whose original declaring member to get.
+    return:
+      type: System.Reflection.MemberInfo
+      description: >-
+        The <xref href="System.Reflection.MemberInfo" data-throw-if-not-resolved="false"></xref> instance representing the member that
+
+        originally declares the given generic parameter.
+    content.vb: Public Shared Function GetOriginalDeclaringGenericMember(type As Type) As MemberInfo
+  overload: Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when <code class="paramref">type</code> is not a generic type parameter.
+- uid: Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(System.Type,System.Type,System.Type@)
+  commentId: M:Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(System.Type,System.Type,System.Type@)
+  id: InheritsGenericVariantOf(System.Type,System.Type,System.Type@)
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InheritsGenericVariantOf(Type, Type, out Type?)
+  nameWithType: TypeExtensions.InheritsGenericVariantOf(Type, Type, out Type?)
+  fullName: Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(System.Type, System.Type, out System.Type?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InheritsGenericVariantOf
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 675
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether a type inherits a generic variant of another type.
+
+    Supports both classes and interfaces.
+  example: []
+  syntax:
+    content: public static bool InheritsGenericVariantOf(Type type, Type genericDefinition, out Type? genericVariantType)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type that must inherit the target generic type.
+    - id: genericDefinition
+      type: System.Type
+      description: The generic definition that must be inherited.
+    - id: genericVariantType
+      type: System.Type
+      description: >-
+        The constructed variant that is inherited. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if it
+
+        doesn't exist.
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">type</code> inherits
+
+        <code class="paramref">genericVariantType</code>, which is a construction of
+
+        <code class="paramref">genericDefinition</code>, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function InheritsGenericVariantOf(type As Type, genericDefinition As Type, genericVariantType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      Thrown if the <code class="paramref">genericDefinition</code> argument is not a
+
+      generic type definition, that is it must not be a constructed generic
+
+      type.
+  nameWithType.vb: TypeExtensions.InheritsGenericVariantOf(Type, Type, Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(System.Type, System.Type, System.Type)
+  name.vb: InheritsGenericVariantOf(Type, Type, Type)
+- uid: Garyon.Reflection.TypeExtensions.IsVoid(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsVoid(System.Type)
+  id: IsVoid(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsVoid(Type)
+  nameWithType: TypeExtensions.IsVoid(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsVoid(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsVoid
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 760
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>.
+  example: []
+  syntax:
+    content: public static bool IsVoid(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>.
+    content.vb: Public Shared Function IsVoid(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsVoid*
+- uid: Garyon.Reflection.TypeExtensions.IsTrueClass(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsTrueClass(System.Type)
+  id: IsTrueClass(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsTrueClass(Type)
+  nameWithType: TypeExtensions.IsTrueClass(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsTrueClass(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsTrueClass
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 771
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is an actual class, and not an array, a
+
+    delegate, a by reference, or a pointer type.
+  example: []
+  syntax:
+    content: public static bool IsTrueClass(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a class.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is a class.
+    content.vb: Public Shared Function IsTrueClass(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsTrueClass*
+- uid: Garyon.Reflection.TypeExtensions.IsStaticClass(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsStaticClass(System.Type)
+  id: IsStaticClass(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsStaticClass(Type)
+  nameWithType: TypeExtensions.IsStaticClass(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsStaticClass(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsStaticClass
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 782
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a static class.
+  example: []
+  syntax:
+    content: public static bool IsStaticClass(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a static class.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is a static class.
+    content.vb: Public Shared Function IsStaticClass(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsStaticClass*
+- uid: Garyon.Reflection.TypeExtensions.IsDelegate(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsDelegate(System.Type)
+  id: IsDelegate(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDelegate(Type)
+  nameWithType: TypeExtensions.IsDelegate(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsDelegate(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsDelegate
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 793
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is a delegate.
+  example: []
+  syntax:
+    content: public static bool IsDelegate(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a delegate.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is a delegate.
+    content.vb: Public Shared Function IsDelegate(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsDelegate*
+- uid: Garyon.Reflection.TypeExtensions.IsException(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsException(System.Type)
+  id: IsException(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsException(Type)
+  nameWithType: TypeExtensions.IsException(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsException(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsException
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 803
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an exception.
+  example: []
+  syntax:
+    content: public static bool IsException(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is an exception.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is an exception.
+    content.vb: Public Shared Function IsException(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsException*
+- uid: Garyon.Reflection.TypeExtensions.IsAttribute(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsAttribute(System.Type)
+  id: IsAttribute(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsAttribute(Type)
+  nameWithType: TypeExtensions.IsAttribute(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsAttribute(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsAttribute
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 813
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the type is an attribute.
+  example: []
+  syntax:
+    content: public static bool IsAttribute(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is an attribute.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is an attribute.
+    content.vb: Public Shared Function IsAttribute(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsAttribute*
+- uid: Garyon.Reflection.TypeExtensions.IsTuple(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsTuple(System.Type)
+  id: IsTuple(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsTuple(Type)
+  nameWithType: TypeExtensions.IsTuple(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsTuple(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsTuple
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 824
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a tuple; that is, any generic variant of
+
+    the <xref href="System.ValueTuple" data-throw-if-not-resolved="false"></xref> struct, nullable or not.
+  example: []
+  syntax:
+    content: public static bool IsTuple(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a tuple.
+    return:
+      type: System.Boolean
+      description: A value determining whether the type is a tuple.
+    content.vb: Public Shared Function IsTuple(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsTuple*
+- uid: Garyon.Reflection.TypeExtensions.IsNullableValueType(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsNullableValueType(System.Type)
+  id: IsNullableValueType(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsNullableValueType(Type)
+  nameWithType: TypeExtensions.IsNullableValueType(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsNullableValueType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNullableValueType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 848
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a nullable value type; that is, it is a
+
+    <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> or a pointer type.
+  example: []
+  syntax:
+    content: public static bool IsNullableValueType(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a nullable value type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type is a nullable value type, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsNullableValueType(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsNullableValueType*
+- uid: Garyon.Reflection.TypeExtensions.IsNullableType(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsNullableType(System.Type)
+  id: IsNullableType(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsNullableType(Type)
+  nameWithType: TypeExtensions.IsNullableType(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsNullableType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsNullableType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 860
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a nullable type; that is, it is a
+
+    <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref>, a pointer type or a reference type.
+  example: []
+  syntax:
+    content: public static bool IsNullableType(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a nullable type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type is a nullable type, either reference
+
+        or value type, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsNullableType(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsNullableType*
+- uid: Garyon.Reflection.TypeExtensions.IsReferenceType(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsReferenceType(System.Type)
+  id: IsReferenceType(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsReferenceType(Type)
+  nameWithType: TypeExtensions.IsReferenceType(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsReferenceType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsReferenceType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 872
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the type is a reference type; that is, not a value
+
+    type, or a pointer type.
+  example: []
+  syntax:
+    content: public static bool IsReferenceType(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a reference type.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type is a class or an interface, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsReferenceType(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsReferenceType*
+- uid: Garyon.Reflection.TypeExtensions.IsValidTypeArgument(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.IsValidTypeArgument(System.Type)
+  id: IsValidTypeArgument(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsValidTypeArgument(Type)
+  nameWithType: TypeExtensions.IsValidTypeArgument(Type)
+  fullName: Garyon.Reflection.TypeExtensions.IsValidTypeArgument(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsValidTypeArgument
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 885
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Determines whether the given type is a valid type argument.
+  example: []
+  syntax:
+    content: public static bool IsValidTypeArgument(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to determine whether it is a valid type argument.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type is a valid type argument, that is, it
+
+        is not a by ref, a by ref-like, a pointer, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>,
+
+        otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function IsValidTypeArgument(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.IsValidTypeArgument*
+- uid: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type,System.Int32)
+  commentId: M:Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type,System.Int32)
+  id: MakeJaggedArrayType(System.Type,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: MakeJaggedArrayType(Type, int)
+  nameWithType: TypeExtensions.MakeJaggedArrayType(Type, int)
+  fullName: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MakeJaggedArrayType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 910
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Creates a jagged array type object with the specified jagging level.
+  example: []
+  syntax:
+    content: public static Type MakeJaggedArrayType(this Type type, int jaggingLevel)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the elements within the array.
+    - id: jaggingLevel
+      type: System.Int32
+      description: The jagging level of the resulting jagged array type.
+    return:
+      type: System.Type
+      description: >-
+        The resulting <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing a jagged array
+
+        type.
+    content.vb: Public Shared Function MakeJaggedArrayType(type As Type, jaggingLevel As Integer) As Type
+  overload: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType*
+  nameWithType.vb: TypeExtensions.MakeJaggedArrayType(Type, Integer)
+  fullName.vb: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type, Integer)
+  name.vb: MakeJaggedArrayType(Type, Integer)
+- uid: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type,System.Int32[])
+  commentId: M:Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type,System.Int32[])
+  id: MakeJaggedArrayType(System.Type,System.Int32[])
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: MakeJaggedArrayType(Type, params int[])
+  nameWithType: TypeExtensions.MakeJaggedArrayType(Type, params int[])
+  fullName: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type, params int[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MakeJaggedArrayType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 932
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Creates a jagged array type object with the specified ranks for each
+
+    jag.
+  example: []
+  syntax:
+    content: public static Type MakeJaggedArrayType(this Type type, params int[] ranks)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the elements within the array.
+    - id: ranks
+      type: System.Int32[]
+      description: >-
+        The ranks for each jagging level of the array type. The order is
+
+        preserved like this: { 1, 2, 3 } =&gt; T[][,][,,].
+    return:
+      type: System.Type
+      description: >-
+        The resulting <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing a jagged array
+
+        type.
+    content.vb: Public Shared Function MakeJaggedArrayType(type As Type, ParamArray ranks As Integer()) As Type
+  overload: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType*
+  nameWithType.vb: TypeExtensions.MakeJaggedArrayType(Type, ParamArray Integer())
+  fullName.vb: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType(System.Type, ParamArray Integer())
+  name.vb: MakeJaggedArrayType(Type, ParamArray Integer())
+- uid: Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel(System.Type)
+  id: GetArrayJaggingLevel(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetArrayJaggingLevel(Type)
+  nameWithType: TypeExtensions.GetArrayJaggingLevel(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetArrayJaggingLevel
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 949
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the array jagging level of the provided array type.
+  example: []
+  syntax:
+    content: public static int GetArrayJaggingLevel(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The jagged array type.
+    return:
+      type: System.Int32
+      description: >-
+        The jagging level of the jagged array, if the provided type is an array,
+
+        otherwise 0.
+    content.vb: Public Shared Function GetArrayJaggingLevel(type As Type) As Integer
+  overload: Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel*
+- uid: Garyon.Reflection.TypeExtensions.MakeMultiplePointerType(System.Type,System.Int32)
+  commentId: M:Garyon.Reflection.TypeExtensions.MakeMultiplePointerType(System.Type,System.Int32)
+  id: MakeMultiplePointerType(System.Type,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: MakeMultiplePointerType(Type, int)
+  nameWithType: TypeExtensions.MakeMultiplePointerType(Type, int)
+  fullName: Garyon.Reflection.TypeExtensions.MakeMultiplePointerType(System.Type, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MakeMultiplePointerType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 974
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Creates a multiple pointer type object with the specified pointer depth
+
+    level.
+  example: []
+  syntax:
+    content: public static Type MakeMultiplePointerType(this Type type, int pointerDepthLevel)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the elements within the pointer.
+    - id: pointerDepthLevel
+      type: System.Int32
+      description: The depth level of the resulting pointer type.
+    return:
+      type: System.Type
+      description: The resulting <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing a pointer type.
+    content.vb: Public Shared Function MakeMultiplePointerType(type As Type, pointerDepthLevel As Integer) As Type
+  overload: Garyon.Reflection.TypeExtensions.MakeMultiplePointerType*
+  nameWithType.vb: TypeExtensions.MakeMultiplePointerType(Type, Integer)
+  fullName.vb: Garyon.Reflection.TypeExtensions.MakeMultiplePointerType(System.Type, Integer)
+  name.vb: MakeMultiplePointerType(Type, Integer)
+- uid: Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel(System.Type)
+  id: GetMultiplePointerLevel(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetMultiplePointerLevel(Type)
+  nameWithType: TypeExtensions.GetMultiplePointerLevel(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetMultiplePointerLevel
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 991
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the multiple pointer depth level of the provided pointer type.
+  example: []
+  syntax:
+    content: public static int GetMultiplePointerLevel(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The pointer type.
+    return:
+      type: System.Int32
+      description: >-
+        The depth level of the multiple pointer, if the provided type is a
+
+        pointer, otherwise 0.
+    content.vb: Public Shared Function GetMultiplePointerLevel(type As Type) As Integer
+  overload: Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel*
+- uid: Garyon.Reflection.TypeExtensions.GetDeepestElementType(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetDeepestElementType(System.Type)
+  id: GetDeepestElementType(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDeepestElementType(Type)
+  nameWithType: TypeExtensions.GetDeepestElementType(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetDeepestElementType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDeepestElementType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1013
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the deepest element type of the provided type.
+  example: []
+  syntax:
+    content: public static Type GetDeepestElementType(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    return:
+      type: System.Type
+      description: >-
+        The deepest element type according to
+
+        <xref href="System.Type.GetElementType" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetDeepestElementType(type As Type) As Type
+  overload: Garyon.Reflection.TypeExtensions.GetDeepestElementType*
+- uid: Garyon.Reflection.TypeExtensions.ContainsElementsOfType(System.Type,System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.ContainsElementsOfType(System.Type,System.Type)
+  id: ContainsElementsOfType(System.Type,System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ContainsElementsOfType(Type, Type)
+  nameWithType: TypeExtensions.ContainsElementsOfType(Type, Type)
+  fullName: Garyon.Reflection.TypeExtensions.ContainsElementsOfType(System.Type, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ContainsElementsOfType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1031
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the provided type contains elements of type
+
+    <code class="paramref">elementType</code>.
+  example: []
+  syntax:
+    content: public static bool ContainsElementsOfType(this Type type, Type elementType)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    - id: elementType
+      type: System.Type
+      description: The type of the elements that the provided type should contain.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether the provided type contains elements of type
+
+        <code class="paramref">elementType</code>.
+    content.vb: Public Shared Function ContainsElementsOfType(type As Type, elementType As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.ContainsElementsOfType*
+- uid: Garyon.Reflection.TypeExtensions.ContainsElementsOfType``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.ContainsElementsOfType``1(System.Type)
+  id: ContainsElementsOfType``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ContainsElementsOfType<T>(Type)
+  nameWithType: TypeExtensions.ContainsElementsOfType<T>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.ContainsElementsOfType<T>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ContainsElementsOfType
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1049
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Determines whether the provided type contains elements of type
+
+    <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: public static bool ContainsElementsOfType<T>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type.
+    typeParameters:
+    - id: T
+      description: The type of the elements that the provided type should contain.
+    return:
+      type: System.Boolean
+      description: >-
+        A value determining whether the provided type contains elements of type
+
+        <code class="typeparamref">T</code>.
+    content.vb: Public Shared Function ContainsElementsOfType(Of T)(type As Type) As Boolean
+  overload: Garyon.Reflection.TypeExtensions.ContainsElementsOfType*
+  nameWithType.vb: TypeExtensions.ContainsElementsOfType(Of T)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.ContainsElementsOfType(Of T)(System.Type)
+  name.vb: ContainsElementsOfType(Of T)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetParameterlessConstructor(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetParameterlessConstructor(System.Type)
+  id: GetParameterlessConstructor(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetParameterlessConstructor(Type)
+  nameWithType: TypeExtensions.GetParameterlessConstructor(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetParameterlessConstructor(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetParameterlessConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1067
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the public parameterless constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetParameterlessConstructor(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose public parameterless constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The public parameterless constructor of the type, or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does not have one, or if the
+
+        parameterless constructor is not public.
+    content.vb: Public Shared Function GetParameterlessConstructor(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetParameterlessConstructor*
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor(System.Type)
+  id: GetAnyAccessibilityParameterlessConstructor(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAnyAccessibilityParameterlessConstructor(Type)
+  nameWithType: TypeExtensions.GetAnyAccessibilityParameterlessConstructor(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAnyAccessibilityParameterlessConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1082
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the parameterless constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref>. The
+
+    constructor may have any accessibility.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetAnyAccessibilityParameterlessConstructor(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose parameterless constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The parameterless constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if
+
+        the type does not have one.
+    content.vb: Public Shared Function GetAnyAccessibilityParameterlessConstructor(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor*
+- uid: Garyon.Reflection.TypeExtensions.GetConstructor(System.Type,System.Type[])
+  commentId: M:Garyon.Reflection.TypeExtensions.GetConstructor(System.Type,System.Type[])
+  id: GetConstructor(System.Type,System.Type[])
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConstructor(Type, params Type[])
+  nameWithType: TypeExtensions.GetConstructor(Type, params Type[])
+  fullName: Garyon.Reflection.TypeExtensions.GetConstructor(System.Type, params System.Type[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1101
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor with the specified argument types of the
+
+    <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetConstructor(this Type type, params Type[] argumentTypes)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    - id: argumentTypes
+      type: System.Type[]
+      description: The argument types of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetConstructor(type As Type, ParamArray argumentTypes As Type()) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetConstructor*
+  nameWithType.vb: TypeExtensions.GetConstructor(Type, ParamArray Type())
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetConstructor(System.Type, ParamArray System.Type())
+  name.vb: GetConstructor(Type, ParamArray Type())
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(System.Type,System.Type[])
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(System.Type,System.Type[])
+  id: GetAnyAccessibilityConstructor(System.Type,System.Type[])
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAnyAccessibilityConstructor(Type, params Type[])
+  nameWithType: TypeExtensions.GetAnyAccessibilityConstructor(Type, params Type[])
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(System.Type, params System.Type[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAnyAccessibilityConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1119
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor with the specified argument types of the
+
+    <xref href="System.Type" data-throw-if-not-resolved="false"></xref>. The constructor may have any accessibility.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetAnyAccessibilityConstructor(this Type type, params Type[] argumentTypes)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    - id: argumentTypes
+      type: System.Type[]
+      description: The argument types of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetAnyAccessibilityConstructor(type As Type, ParamArray argumentTypes As Type()) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor*
+  nameWithType.vb: TypeExtensions.GetAnyAccessibilityConstructor(Type, ParamArray Type())
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(System.Type, ParamArray System.Type())
+  name.vb: GetAnyAccessibilityConstructor(Type, ParamArray Type())
+- uid: Garyon.Reflection.TypeExtensions.GetConstructor``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetConstructor``1(System.Type)
+  id: GetConstructor``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConstructor<T1>(Type)
+  nameWithType: TypeExtensions.GetConstructor<T1>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetConstructor<T1>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1145
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 1 argument and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetConstructor<T1>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetConstructor(Of T1)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetConstructor*
+  nameWithType.vb: TypeExtensions.GetConstructor(Of T1)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetConstructor(Of T1)(System.Type)
+  name.vb: GetConstructor(Of T1)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetConstructor``2(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetConstructor``2(System.Type)
+  id: GetConstructor``2(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConstructor<T1, T2>(Type)
+  nameWithType: TypeExtensions.GetConstructor<T1, T2>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetConstructor<T1, T2>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1158
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 2 arguments and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetConstructor<T1, T2>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    - id: T2
+      description: The type of the 2nd argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetConstructor(Of T1, T2)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetConstructor*
+  nameWithType.vb: TypeExtensions.GetConstructor(Of T1, T2)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetConstructor(Of T1, T2)(System.Type)
+  name.vb: GetConstructor(Of T1, T2)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetConstructor``3(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetConstructor``3(System.Type)
+  id: GetConstructor``3(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConstructor<T1, T2, T3>(Type)
+  nameWithType: TypeExtensions.GetConstructor<T1, T2, T3>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetConstructor<T1, T2, T3>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1172
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 3 arguments and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetConstructor<T1, T2, T3>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    - id: T2
+      description: The type of the 2nd argument of the constructor to get.
+    - id: T3
+      description: The type of the 3rd argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetConstructor(Of T1, T2, T3)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetConstructor*
+  nameWithType.vb: TypeExtensions.GetConstructor(Of T1, T2, T3)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetConstructor(Of T1, T2, T3)(System.Type)
+  name.vb: GetConstructor(Of T1, T2, T3)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetConstructor``4(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetConstructor``4(System.Type)
+  id: GetConstructor``4(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConstructor<T1, T2, T3, T4>(Type)
+  nameWithType: TypeExtensions.GetConstructor<T1, T2, T3, T4>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetConstructor<T1, T2, T3, T4>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1186
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 4 arguments and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetConstructor<T1, T2, T3, T4>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    - id: T2
+      description: The type of the 2nd argument of the constructor to get.
+    - id: T3
+      description: The type of the 3rd argument of the constructor to get.
+    - id: T4
+      description: The type of the 4th argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetConstructor(Of T1, T2, T3, T4)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetConstructor*
+  nameWithType.vb: TypeExtensions.GetConstructor(Of T1, T2, T3, T4)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetConstructor(Of T1, T2, T3, T4)(System.Type)
+  name.vb: GetConstructor(Of T1, T2, T3, T4)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``1(System.Type)
+  id: GetAnyAccessibilityConstructor``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAnyAccessibilityConstructor<T1>(Type)
+  nameWithType: TypeExtensions.GetAnyAccessibilityConstructor<T1>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor<T1>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAnyAccessibilityConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1207
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 1 argument and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments. The constructor may have any accessibility.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetAnyAccessibilityConstructor<T1>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetAnyAccessibilityConstructor(Of T1)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor*
+  nameWithType.vb: TypeExtensions.GetAnyAccessibilityConstructor(Of T1)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(Of T1)(System.Type)
+  name.vb: GetAnyAccessibilityConstructor(Of T1)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``2(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``2(System.Type)
+  id: GetAnyAccessibilityConstructor``2(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAnyAccessibilityConstructor<T1, T2>(Type)
+  nameWithType: TypeExtensions.GetAnyAccessibilityConstructor<T1, T2>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor<T1, T2>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAnyAccessibilityConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1220
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 2 arguments and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments. The constructor may have any accessibility.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    - id: T2
+      description: The type of the 2nd argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetAnyAccessibilityConstructor(Of T1, T2)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor*
+  nameWithType.vb: TypeExtensions.GetAnyAccessibilityConstructor(Of T1, T2)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(Of T1, T2)(System.Type)
+  name.vb: GetAnyAccessibilityConstructor(Of T1, T2)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``3(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``3(System.Type)
+  id: GetAnyAccessibilityConstructor``3(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAnyAccessibilityConstructor<T1, T2, T3>(Type)
+  nameWithType: TypeExtensions.GetAnyAccessibilityConstructor<T1, T2, T3>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor<T1, T2, T3>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAnyAccessibilityConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1234
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 3 arguments and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments. The constructor may have any accessibility.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    - id: T2
+      description: The type of the 2nd argument of the constructor to get.
+    - id: T3
+      description: The type of the 3rd argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetAnyAccessibilityConstructor(Of T1, T2, T3)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor*
+  nameWithType.vb: TypeExtensions.GetAnyAccessibilityConstructor(Of T1, T2, T3)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(Of T1, T2, T3)(System.Type)
+  name.vb: GetAnyAccessibilityConstructor(Of T1, T2, T3)(Type)
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``4(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor``4(System.Type)
+  id: GetAnyAccessibilityConstructor``4(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAnyAccessibilityConstructor<T1, T2, T3, T4>(Type)
+  nameWithType: TypeExtensions.GetAnyAccessibilityConstructor<T1, T2, T3, T4>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor<T1, T2, T3, T4>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetAnyAccessibilityConstructor
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1248
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Gets the constructor of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has 4 arguments and
+
+    whose argument types are in the order they are provided in the type
+
+    arguments. The constructor may have any accessibility.
+  example: []
+  syntax:
+    content: public static ConstructorInfo? GetAnyAccessibilityConstructor<T1, T2, T3, T4>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose constructor to get.
+    typeParameters:
+    - id: T1
+      description: The type of the 1st argument of the constructor to get.
+    - id: T2
+      description: The type of the 2nd argument of the constructor to get.
+    - id: T3
+      description: The type of the 3rd argument of the constructor to get.
+    - id: T4
+      description: The type of the 4th argument of the constructor to get.
+    return:
+      type: System.Reflection.ConstructorInfo
+      description: >-
+        The constructor of the type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the type does
+
+        not have one.
+    content.vb: Public Shared Function GetAnyAccessibilityConstructor(Of T1, T2, T3, T4)(type As Type) As ConstructorInfo
+  overload: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor*
+  nameWithType.vb: TypeExtensions.GetAnyAccessibilityConstructor(Of T1, T2, T3, T4)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor(Of T1, T2, T3, T4)(System.Type)
+  name.vb: GetAnyAccessibilityConstructor(Of T1, T2, T3, T4)(Type)
+- uid: Garyon.Reflection.TypeExtensions.InitializeInstance``1(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.InitializeInstance``1(System.Type)
+  id: InitializeInstance``1(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InitializeInstance<T>(Type)
+  nameWithType: TypeExtensions.InitializeInstance<T>(Type)
+  fullName: Garyon.Reflection.TypeExtensions.InitializeInstance<T>(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InitializeInstance
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1270
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> by calling its
+
+    public parameterless constructor.
+  example: []
+  syntax:
+    content: public static T? InitializeInstance<T>(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the resulting instance.
+    typeParameters:
+    - id: T
+      description: The type of the resulting instance.
+    return:
+      type: '{T}'
+      description: >-
+        The initialized instance, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if no public
+
+        parameterless constructor was not found.
+    content.vb: Public Shared Function InitializeInstance(Of T)(type As Type) As T
+  overload: Garyon.Reflection.TypeExtensions.InitializeInstance*
+  nameWithType.vb: TypeExtensions.InitializeInstance(Of T)(Type)
+  fullName.vb: Garyon.Reflection.TypeExtensions.InitializeInstance(Of T)(System.Type)
+  name.vb: InitializeInstance(Of T)(Type)
+- uid: Garyon.Reflection.TypeExtensions.InitializeInstance``1(System.Type,System.Object[])
+  commentId: M:Garyon.Reflection.TypeExtensions.InitializeInstance``1(System.Type,System.Object[])
+  id: InitializeInstance``1(System.Type,System.Object[])
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InitializeInstance<T>(Type, params object?[]?)
+  nameWithType: TypeExtensions.InitializeInstance<T>(Type, params object?[]?)
+  fullName: Garyon.Reflection.TypeExtensions.InitializeInstance<T>(System.Type, params object?[]?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InitializeInstance
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1291
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with the given
+
+    parameters in the constructor.
+  example: []
+  syntax:
+    content: public static T? InitializeInstance<T>(this Type type, params object?[]? parameters)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the resulting instance.
+    - id: parameters
+      type: System.Object[]
+      description: The parameters of the constructor.
+    typeParameters:
+    - id: T
+      description: The type of the resulting instance.
+    return:
+      type: '{T}'
+      description: >-
+        The initialized instance, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if such a
+
+        constructor was not found.
+    content.vb: Public Shared Function InitializeInstance(Of T)(type As Type, ParamArray parameters As Object()) As T
+  overload: Garyon.Reflection.TypeExtensions.InitializeInstance*
+  nameWithType.vb: TypeExtensions.InitializeInstance(Of T)(Type, ParamArray Object())
+  fullName.vb: Garyon.Reflection.TypeExtensions.InitializeInstance(Of T)(System.Type, ParamArray Object())
+  name.vb: InitializeInstance(Of T)(Type, ParamArray Object())
+- uid: Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type)
+  id: InitializeInstance(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InitializeInstance(Type)
+  nameWithType: TypeExtensions.InitializeInstance(Type)
+  fullName: Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InitializeInstance
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1307
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> by calling its
+
+    public parameterless constructor.
+  example: []
+  syntax:
+    content: public static object? InitializeInstance(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the resulting instance.
+    return:
+      type: System.Object
+      description: >-
+        The initialized instance, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if no public
+
+        parameterless constructor was not found.
+    content.vb: Public Shared Function InitializeInstance(type As Type) As Object
+  overload: Garyon.Reflection.TypeExtensions.InitializeInstance*
+- uid: Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type,System.Object[])
+  commentId: M:Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type,System.Object[])
+  id: InitializeInstance(System.Type,System.Object[])
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: InitializeInstance(Type, params object?[]?)
+  nameWithType: TypeExtensions.InitializeInstance(Type, params object?[]?)
+  fullName: Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type, params object?[]?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: InitializeInstance
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1325
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: >-
+    Initializes a new instance of a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with the given
+
+    parameters in the constructor.
+  example: []
+  syntax:
+    content: public static object? InitializeInstance(this Type type, params object?[]? parameters)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type of the resulting instance.
+    - id: parameters
+      type: System.Object[]
+      description: The parameters of the constructor.
+    return:
+      type: System.Object
+      description: >-
+        The initialized instance, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if such a
+
+        constructor was not found.
+    content.vb: Public Shared Function InitializeInstance(type As Type, ParamArray parameters As Object()) As Object
+  overload: Garyon.Reflection.TypeExtensions.InitializeInstance*
+  nameWithType.vb: TypeExtensions.InitializeInstance(Type, ParamArray Object())
+  fullName.vb: Garyon.Reflection.TypeExtensions.InitializeInstance(System.Type, ParamArray Object())
+  name.vb: InitializeInstance(Type, ParamArray Object())
+- uid: Garyon.Reflection.TypeExtensions.GetDefaultValue(System.Type)
+  commentId: M:Garyon.Reflection.TypeExtensions.GetDefaultValue(System.Type)
+  id: GetDefaultValue(System.Type)
+  isExtensionMethod: true
+  parent: Garyon.Reflection.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultValue(Type)
+  nameWithType: TypeExtensions.GetDefaultValue(Type)
+  fullName: Garyon.Reflection.TypeExtensions.GetDefaultValue(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Reflection/TypeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetDefaultValue
+    path: ../Garyon/Reflection/TypeExtensions.cs
+    startLine: 1345
+  assemblies:
+  - Garyon
+  namespace: Garyon.Reflection
+  summary: Gets the default value of the given type.
+  example: []
+  syntax:
+    content: public static object? GetDefaultValue(this Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type whose default value to get.
+    return:
+      type: System.Object
+      description: >-
+        Returns the default value of the type, if it is a value type, by calling
+
+        its parameterless constructor is called, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Shared Function GetDefaultValue(type As Type) As Object
+  overload: Garyon.Reflection.TypeExtensions.GetDefaultValue*
+references:
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Garyon.Reflection
+  commentId: N:Garyon.Reflection
+  href: Garyon.html
+  name: Garyon.Reflection
+  nameWithType: Garyon.Reflection
+  fullName: Garyon.Reflection
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Reflection
+    name: Reflection
+    href: Garyon.Reflection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.TypeCode.Empty
+  commentId: F:System.TypeCode.Empty
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.typecode#system-typecode-empty
+  name: Empty
+  nameWithType: TypeCode.Empty
+  fullName: System.TypeCode.Empty
+- uid: Garyon.Reflection.TypeExtensions.GetTypeCode*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetTypeCode
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetTypeCode_System_Type_
+  name: GetTypeCode
+  nameWithType: TypeExtensions.GetTypeCode
+  fullName: Garyon.Reflection.TypeExtensions.GetTypeCode
+- uid: System.TypeCode
+  commentId: T:System.TypeCode
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.typecode
+  name: TypeCode
+  nameWithType: TypeCode
+  fullName: System.TypeCode
+- uid: Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GenericFullNamePrefixOrSame_System_Type_
+  name: GenericFullNamePrefixOrSame
+  nameWithType: TypeExtensions.GenericFullNamePrefixOrSame
+  fullName: Garyon.Reflection.TypeExtensions.GenericFullNamePrefixOrSame
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetAccessibilityModifiers_System_Type_
+  name: GetAccessibilityModifiers
+  nameWithType: TypeExtensions.GetAccessibilityModifiers
+  fullName: Garyon.Reflection.TypeExtensions.GetAccessibilityModifiers
+- uid: Garyon.Reflection.AccessibilityModifiers
+  commentId: T:Garyon.Reflection.AccessibilityModifiers
+  parent: Garyon.Reflection
+  href: Garyon.Reflection.AccessibilityModifiers.html
+  name: AccessibilityModifiers
+  nameWithType: AccessibilityModifiers
+  fullName: Garyon.Reflection.AccessibilityModifiers
+- uid: Garyon.Reflection.TypeExtensions.CanInherit*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanInherit
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanInherit_System_Type_
+  name: CanInherit
+  nameWithType: TypeExtensions.CanInherit
+  fullName: Garyon.Reflection.TypeExtensions.CanInherit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Garyon.Reflection.TypeExtensions.CanInheritCustomTypes*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanInheritCustomTypes
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanInheritCustomTypes_System_Type_
+  name: CanInheritCustomTypes
+  nameWithType: TypeExtensions.CanInheritCustomTypes
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritCustomTypes
+- uid: Garyon.Reflection.TypeExtensions.CanInheritInterfaces*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanInheritInterfaces
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanInheritInterfaces_System_Type_
+  name: CanInheritInterfaces
+  nameWithType: TypeExtensions.CanInheritInterfaces
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritInterfaces
+- uid: Garyon.Reflection.TypeExtensions.CanInheritClasses*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanInheritClasses
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanInheritClasses_System_Type_
+  name: CanInheritClasses
+  nameWithType: TypeExtensions.CanInheritClasses
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritClasses
+- uid: Garyon.Reflection.TypeExtensions.CanInheritCustomClasses*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanInheritCustomClasses
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanInheritCustomClasses_System_Type_
+  name: CanInheritCustomClasses
+  nameWithType: TypeExtensions.CanInheritCustomClasses
+  fullName: Garyon.Reflection.TypeExtensions.CanInheritCustomClasses
+- uid: Garyon.Reflection.TypeExtensions.CanBeInherited*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanBeInherited
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanBeInherited_System_Type_
+  name: CanBeInherited
+  nameWithType: TypeExtensions.CanBeInherited
+  fullName: Garyon.Reflection.TypeExtensions.CanBeInherited
+- uid: Garyon.Reflection.TypeExtensions.InheritsOrEquals*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.InheritsOrEquals
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_InheritsOrEquals__1_System_Type_
+  name: InheritsOrEquals
+  nameWithType: TypeExtensions.InheritsOrEquals
+  fullName: Garyon.Reflection.TypeExtensions.InheritsOrEquals
+- uid: Garyon.Reflection.TypeExtensions.Inherits*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.Inherits
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_Inherits__1_System_Type_
+  name: Inherits
+  nameWithType: TypeExtensions.Inherits
+  fullName: Garyon.Reflection.TypeExtensions.Inherits
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Garyon.Reflection.TypeExtensions.Implements*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.Implements
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_Implements__1_System_Type_
+  name: Implements
+  nameWithType: TypeExtensions.Implements
+  fullName: Garyon.Reflection.TypeExtensions.Implements
+- uid: Garyon.Reflection.TypeExtensions.IsOrImplements*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsOrImplements
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsOrImplements_System_Type_System_Type_
+  name: IsOrImplements
+  nameWithType: TypeExtensions.IsOrImplements
+  fullName: Garyon.Reflection.TypeExtensions.IsOrImplements
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: System.Delegate
+  commentId: T:System.Delegate
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.delegate
+  name: Delegate
+  nameWithType: Delegate
+  fullName: System.Delegate
+- uid: System.Enum
+  commentId: T:System.Enum
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.enum
+  name: Enum
+  nameWithType: Enum
+  fullName: System.Enum
+- uid: Garyon.Reflection.TypeExtensions.GetInheritanceLevel*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetInheritanceLevel
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetInheritanceLevel_System_Type_
+  name: GetInheritanceLevel
+  nameWithType: TypeExtensions.GetInheritanceLevel
+  fullName: Garyon.Reflection.TypeExtensions.GetInheritanceLevel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.DataStructures.Trees.Tree`1
+  commentId: T:Garyon.DataStructures.Trees.Tree`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.Tree-1.html
+  name: Tree<T>
+  nameWithType: Tree<T>
+  fullName: Garyon.DataStructures.Trees.Tree<T>
+  nameWithType.vb: Tree(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.Tree(Of T)
+  name.vb: Tree(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.Tree`1
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.Tree`1
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.GetInheritanceTree*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetInheritanceTree
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetInheritanceTree_System_Type_
+  name: GetInheritanceTree
+  nameWithType: TypeExtensions.GetInheritanceTree
+  fullName: Garyon.Reflection.TypeExtensions.GetInheritanceTree
+- uid: Garyon.DataStructures.Trees.Tree{System.Type}
+  commentId: T:Garyon.DataStructures.Trees.Tree{System.Type}
+  parent: Garyon.DataStructures.Trees
+  definition: Garyon.DataStructures.Trees.Tree`1
+  href: Garyon.DataStructures.Trees.Tree-1.html
+  name: Tree<Type>
+  nameWithType: Tree<Type>
+  fullName: Garyon.DataStructures.Trees.Tree<System.Type>
+  nameWithType.vb: Tree(Of Type)
+  fullName.vb: Garyon.DataStructures.Trees.Tree(Of System.Type)
+  name.vb: Tree(Of Type)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.Tree`1
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-1.html
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.Tree`1
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Garyon.DataStructures.Trees
+  commentId: N:Garyon.DataStructures.Trees
+  href: Garyon.html
+  name: Garyon.DataStructures.Trees
+  nameWithType: Garyon.DataStructures.Trees
+  fullName: Garyon.DataStructures.Trees
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.DataStructures
+    name: DataStructures
+    href: Garyon.DataStructures.html
+  - name: .
+  - uid: Garyon.DataStructures.Trees
+    name: Trees
+    href: Garyon.DataStructures.Trees.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.DataStructures
+    name: DataStructures
+    href: Garyon.DataStructures.html
+  - name: .
+  - uid: Garyon.DataStructures.Trees
+    name: Trees
+    href: Garyon.DataStructures.Trees.html
+- uid: Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetInterfaceInheritanceTree_System_Type_
+  name: GetInterfaceInheritanceTree
+  nameWithType: TypeExtensions.GetInterfaceInheritanceTree
+  fullName: Garyon.Reflection.TypeExtensions.GetInterfaceInheritanceTree
+- uid: Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetDeepestInterfaceInheritanceLevel_System_Type_
+  name: GetDeepestInterfaceInheritanceLevel
+  nameWithType: TypeExtensions.GetDeepestInterfaceInheritanceLevel
+  fullName: Garyon.Reflection.TypeExtensions.GetDeepestInterfaceInheritanceLevel
+- uid: System.Type.BaseType
+  commentId: P:System.Type.BaseType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type.basetype
+  name: BaseType
+  nameWithType: Type.BaseType
+  fullName: System.Type.BaseType
+- uid: Garyon.Reflection.TypeExtensions.EnumerateBaseTypes*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.EnumerateBaseTypes
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_EnumerateBaseTypes_System_Type_
+  name: EnumerateBaseTypes
+  nameWithType: TypeExtensions.EnumerateBaseTypes
+  fullName: Garyon.Reflection.TypeExtensions.EnumerateBaseTypes
+- uid: System.Collections.Generic.IEnumerable{System.Type}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Type}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Type>
+  nameWithType: IEnumerable<Type>
+  fullName: System.Collections.Generic.IEnumerable<System.Type>
+  nameWithType.vb: IEnumerable(Of Type)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Type)
+  name.vb: IEnumerable(Of Type)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsGenericVariantOrDefinition_System_Type_System_Type_
+  name: IsGenericVariantOrDefinition
+  nameWithType: TypeExtensions.IsGenericVariantOrDefinition
+  fullName: Garyon.Reflection.TypeExtensions.IsGenericVariantOrDefinition
+- uid: Garyon.Reflection.TypeExtensions.IsGenericVariantOf*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsGenericVariantOf
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsGenericVariantOf_System_Type_System_Type_
+  name: IsGenericVariantOf
+  nameWithType: TypeExtensions.IsGenericVariantOf
+  fullName: Garyon.Reflection.TypeExtensions.IsGenericVariantOf
+- uid: Garyon.Reflection.TypeExtensions.CanConstruct*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.CanConstruct
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_CanConstruct__1_System_Type_
+  name: CanConstruct
+  nameWithType: TypeExtensions.CanConstruct
+  fullName: Garyon.Reflection.TypeExtensions.CanConstruct
+- uid: Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetGenericTypeDefinitionOrSame_System_Type_
+  name: GetGenericTypeDefinitionOrSame
+  nameWithType: TypeExtensions.GetGenericTypeDefinitionOrSame
+  fullName: Garyon.Reflection.TypeExtensions.GetGenericTypeDefinitionOrSame
+- uid: Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetDeclaringMethodSafe_System_Type_
+  name: GetDeclaringMethodSafe
+  nameWithType: TypeExtensions.GetDeclaringMethodSafe
+  fullName: Garyon.Reflection.TypeExtensions.GetDeclaringMethodSafe
+- uid: System.Reflection.MethodBase
+  commentId: T:System.Reflection.MethodBase
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.methodbase
+  name: MethodBase
+  nameWithType: MethodBase
+  fullName: System.Reflection.MethodBase
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetOriginalDeclaringGenericMember_System_Type_
+  name: GetOriginalDeclaringGenericMember
+  nameWithType: TypeExtensions.GetOriginalDeclaringGenericMember
+  fullName: Garyon.Reflection.TypeExtensions.GetOriginalDeclaringGenericMember
+- uid: Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_InheritsGenericVariantOf_System_Type_System_Type_System_Type__
+  name: InheritsGenericVariantOf
+  nameWithType: TypeExtensions.InheritsGenericVariantOf
+  fullName: Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf
+- uid: Garyon.Reflection.TypeExtensions.IsVoid*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsVoid
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsVoid_System_Type_
+  name: IsVoid
+  nameWithType: TypeExtensions.IsVoid
+  fullName: Garyon.Reflection.TypeExtensions.IsVoid
+- uid: Garyon.Reflection.TypeExtensions.IsTrueClass*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsTrueClass
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsTrueClass_System_Type_
+  name: IsTrueClass
+  nameWithType: TypeExtensions.IsTrueClass
+  fullName: Garyon.Reflection.TypeExtensions.IsTrueClass
+- uid: Garyon.Reflection.TypeExtensions.IsStaticClass*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsStaticClass
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsStaticClass_System_Type_
+  name: IsStaticClass
+  nameWithType: TypeExtensions.IsStaticClass
+  fullName: Garyon.Reflection.TypeExtensions.IsStaticClass
+- uid: Garyon.Reflection.TypeExtensions.IsDelegate*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsDelegate
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsDelegate_System_Type_
+  name: IsDelegate
+  nameWithType: TypeExtensions.IsDelegate
+  fullName: Garyon.Reflection.TypeExtensions.IsDelegate
+- uid: Garyon.Reflection.TypeExtensions.IsException*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsException
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsException_System_Type_
+  name: IsException
+  nameWithType: TypeExtensions.IsException
+  fullName: Garyon.Reflection.TypeExtensions.IsException
+- uid: Garyon.Reflection.TypeExtensions.IsAttribute*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsAttribute
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsAttribute_System_Type_
+  name: IsAttribute
+  nameWithType: TypeExtensions.IsAttribute
+  fullName: Garyon.Reflection.TypeExtensions.IsAttribute
+- uid: System.ValueTuple
+  commentId: T:System.ValueTuple
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetuple
+  name: ValueTuple
+  nameWithType: ValueTuple
+  fullName: System.ValueTuple
+  nameWithType.vb: ()
+  fullName.vb: ()
+  name.vb: ()
+  spec.vb:
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.IsTuple*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsTuple
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsTuple_System_Type_
+  name: IsTuple
+  nameWithType: TypeExtensions.IsTuple
+  fullName: Garyon.Reflection.TypeExtensions.IsTuple
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.IsNullableValueType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsNullableValueType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsNullableValueType_System_Type_
+  name: IsNullableValueType
+  nameWithType: TypeExtensions.IsNullableValueType
+  fullName: Garyon.Reflection.TypeExtensions.IsNullableValueType
+- uid: Garyon.Reflection.TypeExtensions.IsNullableType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsNullableType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsNullableType_System_Type_
+  name: IsNullableType
+  nameWithType: TypeExtensions.IsNullableType
+  fullName: Garyon.Reflection.TypeExtensions.IsNullableType
+- uid: Garyon.Reflection.TypeExtensions.IsReferenceType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsReferenceType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsReferenceType_System_Type_
+  name: IsReferenceType
+  nameWithType: TypeExtensions.IsReferenceType
+  fullName: Garyon.Reflection.TypeExtensions.IsReferenceType
+- uid: Garyon.Reflection.TypeExtensions.IsValidTypeArgument*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.IsValidTypeArgument
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_IsValidTypeArgument_System_Type_
+  name: IsValidTypeArgument
+  nameWithType: TypeExtensions.IsValidTypeArgument
+  fullName: Garyon.Reflection.TypeExtensions.IsValidTypeArgument
+- uid: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.MakeJaggedArrayType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_MakeJaggedArrayType_System_Type_System_Int32_
+  name: MakeJaggedArrayType
+  nameWithType: TypeExtensions.MakeJaggedArrayType
+  fullName: Garyon.Reflection.TypeExtensions.MakeJaggedArrayType
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetArrayJaggingLevel_System_Type_
+  name: GetArrayJaggingLevel
+  nameWithType: TypeExtensions.GetArrayJaggingLevel
+  fullName: Garyon.Reflection.TypeExtensions.GetArrayJaggingLevel
+- uid: Garyon.Reflection.TypeExtensions.MakeMultiplePointerType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.MakeMultiplePointerType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_MakeMultiplePointerType_System_Type_System_Int32_
+  name: MakeMultiplePointerType
+  nameWithType: TypeExtensions.MakeMultiplePointerType
+  fullName: Garyon.Reflection.TypeExtensions.MakeMultiplePointerType
+- uid: Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetMultiplePointerLevel_System_Type_
+  name: GetMultiplePointerLevel
+  nameWithType: TypeExtensions.GetMultiplePointerLevel
+  fullName: Garyon.Reflection.TypeExtensions.GetMultiplePointerLevel
+- uid: System.Type.GetElementType
+  commentId: M:System.Type.GetElementType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type.getelementtype
+  name: GetElementType()
+  nameWithType: Type.GetElementType()
+  fullName: System.Type.GetElementType()
+  spec.csharp:
+  - uid: System.Type.GetElementType
+    name: GetElementType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type.getelementtype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Type.GetElementType
+    name: GetElementType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type.getelementtype
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.GetDeepestElementType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetDeepestElementType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetDeepestElementType_System_Type_
+  name: GetDeepestElementType
+  nameWithType: TypeExtensions.GetDeepestElementType
+  fullName: Garyon.Reflection.TypeExtensions.GetDeepestElementType
+- uid: Garyon.Reflection.TypeExtensions.ContainsElementsOfType*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.ContainsElementsOfType
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_ContainsElementsOfType_System_Type_System_Type_
+  name: ContainsElementsOfType
+  nameWithType: TypeExtensions.ContainsElementsOfType
+  fullName: Garyon.Reflection.TypeExtensions.ContainsElementsOfType
+- uid: Garyon.Reflection.TypeExtensions.GetParameterlessConstructor*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetParameterlessConstructor
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetParameterlessConstructor_System_Type_
+  name: GetParameterlessConstructor
+  nameWithType: TypeExtensions.GetParameterlessConstructor
+  fullName: Garyon.Reflection.TypeExtensions.GetParameterlessConstructor
+- uid: System.Reflection.ConstructorInfo
+  commentId: T:System.Reflection.ConstructorInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo
+  name: ConstructorInfo
+  nameWithType: ConstructorInfo
+  fullName: System.Reflection.ConstructorInfo
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetAnyAccessibilityParameterlessConstructor_System_Type_
+  name: GetAnyAccessibilityParameterlessConstructor
+  nameWithType: TypeExtensions.GetAnyAccessibilityParameterlessConstructor
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityParameterlessConstructor
+- uid: Garyon.Reflection.TypeExtensions.GetConstructor*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetConstructor
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetConstructor_System_Type_System_Type___
+  name: GetConstructor
+  nameWithType: TypeExtensions.GetConstructor
+  fullName: Garyon.Reflection.TypeExtensions.GetConstructor
+- uid: System.Type[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type[]
+  nameWithType: Type[]
+  fullName: System.Type[]
+  nameWithType.vb: Type()
+  fullName.vb: System.Type()
+  name.vb: Type()
+  spec.csharp:
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetAnyAccessibilityConstructor_System_Type_System_Type___
+  name: GetAnyAccessibilityConstructor
+  nameWithType: TypeExtensions.GetAnyAccessibilityConstructor
+  fullName: Garyon.Reflection.TypeExtensions.GetAnyAccessibilityConstructor
+- uid: Garyon.Reflection.TypeExtensions.InitializeInstance*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.InitializeInstance
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_InitializeInstance__1_System_Type_
+  name: InitializeInstance
+  nameWithType: TypeExtensions.InitializeInstance
+  fullName: Garyon.Reflection.TypeExtensions.InitializeInstance
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: Garyon.Reflection.TypeExtensions.GetDefaultValue*
+  commentId: Overload:Garyon.Reflection.TypeExtensions.GetDefaultValue
+  href: Garyon.Reflection.TypeExtensions.html#Garyon_Reflection_TypeExtensions_GetDefaultValue_System_Type_
+  name: GetDefaultValue
+  nameWithType: TypeExtensions.GetDefaultValue
+  fullName: Garyon.Reflection.TypeExtensions.GetDefaultValue

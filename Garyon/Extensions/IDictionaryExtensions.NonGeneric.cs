@@ -63,7 +63,22 @@ public static partial class IDictionaryExtensions
             return new DictionaryEntryEnumerator(dictionary);
         }
 
-        // TODO: Add EnumerateEntries<TKey, TValue> extension
+        /// <summary>
+        /// Enumerates the dictionary's entries as a collection of
+        /// <seealso cref="KeyValuePair{TKey, TValue}"/> elements of the specified
+        /// key and value types.
+        /// </summary>
+        /// <typeparam name="TKey">
+        /// The type of the keys of the dictionary.
+        /// </typeparam>
+        /// <typeparam name="TValue">
+        /// The type of the values of the dictionary.
+        /// </typeparam>
+        public IEnumerable<KeyValuePair<TKey, TValue>> EnumerateEntries<TKey, TValue>()
+        {
+            foreach (var entry in dictionary.EnumerateDictionaryEntries())
+                yield return new((TKey)entry.Key, (TValue)entry.Value!);
+        }
     }
 
     private sealed class DictionaryEntryEnumerator(IDictionary dictionary)

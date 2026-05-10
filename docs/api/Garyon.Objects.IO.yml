@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.IO
+  commentId: N:Garyon.Objects.IO
+  id: Garyon.Objects.IO
+  children:
+  - Garyon.Objects.IO.DirectoryPath
+  - Garyon.Objects.IO.FilePath
+  - Garyon.Objects.IO.IFileSystemPath
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Objects.IO
+  nameWithType: Garyon.Objects.IO
+  fullName: Garyon.Objects.IO
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Objects.IO.DirectoryPath
+  commentId: T:Garyon.Objects.IO.DirectoryPath
+  parent: Garyon.Objects.IO
+  href: Garyon.Objects.IO.DirectoryPath.html
+  name: DirectoryPath
+  nameWithType: DirectoryPath
+  fullName: Garyon.Objects.IO.DirectoryPath
+- uid: Garyon.Objects.IO.FilePath
+  commentId: T:Garyon.Objects.IO.FilePath
+  parent: Garyon.Objects.IO
+  href: Garyon.Objects.IO.FilePath.html
+  name: FilePath
+  nameWithType: FilePath
+  fullName: Garyon.Objects.IO.FilePath
+- uid: Garyon.Objects.IO.IFileSystemPath
+  commentId: T:Garyon.Objects.IO.IFileSystemPath
+  parent: Garyon.Objects.IO
+  href: Garyon.Objects.IO.IFileSystemPath.html
+  name: IFileSystemPath
+  nameWithType: IFileSystemPath
+  fullName: Garyon.Objects.IO.IFileSystemPath
+- uid: Garyon.Objects.IO
+  commentId: N:Garyon.Objects.IO
+  href: Garyon.html
+  name: Garyon.Objects.IO
+  nameWithType: Garyon.Objects.IO
+  fullName: Garyon.Objects.IO
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.IO
+    name: IO
+    href: Garyon.Objects.IO.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.IO
+    name: IO
+    href: Garyon.Objects.IO.html

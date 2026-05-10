@@ -1,0 +1,1219 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.BinaryRepresentationExtensions
+  commentId: T:Garyon.Extensions.BinaryRepresentationExtensions
+  id: BinaryRepresentationExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Byte,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int16,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int64,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.SByte,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt16,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt64,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Byte,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int16,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int64,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.SByte,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt16,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt32,System.Int32,System.Int32)
+  - Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt64,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: BinaryRepresentationExtensions
+  nameWithType: BinaryRepresentationExtensions
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: BinaryRepresentationExtensions
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for the binary representation of values.
+  example: []
+  syntax:
+    content: public static class BinaryRepresentationExtensions
+    content.vb: Public Module BinaryRepresentationExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Byte,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Byte,System.Int32)
+  id: GetBinaryRepresentation(System.Byte,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(byte, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(byte, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(byte, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 26
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this byte value, int totalBits = 8)
+    parameters:
+    - id: value
+      type: System.Byte
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As Byte, totalBits As Integer = 8) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(Byte, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(Byte, Integer)
+  name.vb: GetBinaryRepresentation(Byte, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.SByte,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.SByte,System.Int32)
+  id: GetBinaryRepresentation(System.SByte,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(sbyte, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(sbyte, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(sbyte, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 44
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this sbyte value, int totalBits = 8)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As SByte, totalBits As Integer = 8) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(SByte, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(SByte, Integer)
+  name.vb: GetBinaryRepresentation(SByte, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int16,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int16,System.Int32)
+  id: GetBinaryRepresentation(System.Int16,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(short, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(short, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(short, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 61
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this short value, int totalBits = 16)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As Short, totalBits As Integer = 16) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(Short, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(Short, Integer)
+  name.vb: GetBinaryRepresentation(Short, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt16,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt16,System.Int32)
+  id: GetBinaryRepresentation(System.UInt16,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(ushort, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(ushort, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(ushort, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 78
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this ushort value, int totalBits = 16)
+    parameters:
+    - id: value
+      type: System.UInt16
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As UShort, totalBits As Integer = 16) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(UShort, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(UShort, Integer)
+  name.vb: GetBinaryRepresentation(UShort, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int32,System.Int32)
+  id: GetBinaryRepresentation(System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(int, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 96
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this int value, int totalBits = 32)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits an
+
+        <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As Integer, totalBits As Integer = 32) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(Integer, Integer)
+  name.vb: GetBinaryRepresentation(Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt32,System.Int32)
+  id: GetBinaryRepresentation(System.UInt32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(uint, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(uint, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(uint, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 113
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this uint value, int totalBits = 32)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As UInteger, totalBits As Integer = 32) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(UInteger, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(UInteger, Integer)
+  name.vb: GetBinaryRepresentation(UInteger, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int64,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.Int64,System.Int32)
+  id: GetBinaryRepresentation(System.Int64,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(long, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(long, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(long, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 131
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this long value, int totalBits = 64)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As Long, totalBits As Integer = 64) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(Long, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(Long, Integer)
+  name.vb: GetBinaryRepresentation(Long, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt64,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(System.UInt64,System.Int32)
+  id: GetBinaryRepresentation(System.UInt64,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryRepresentation(ulong, int)
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation(ulong, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(ulong, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 148
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the binary representation of the <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static string GetBinaryRepresentation(this ulong value, int totalBits = 64)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetBinaryRepresentation(value As ULong, totalBits As Integer = 64) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetBinaryRepresentation(ULong, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation(ULong, Integer)
+  name.vb: GetBinaryRepresentation(ULong, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Byte,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Byte,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.Byte,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(byte, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(byte, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(byte, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 179
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this byte value, int groupLength, int totalBits = 8)
+    parameters:
+    - id: value
+      type: System.Byte
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As Byte, groupLength As Integer, totalBits As Integer = 8) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Byte, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Byte, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(Byte, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.SByte,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.SByte,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.SByte,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(sbyte, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(sbyte, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(sbyte, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 202
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this sbyte value, int groupLength, int totalBits = 8)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As SByte, groupLength As Integer, totalBits As Integer = 8) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(SByte, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(SByte, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(SByte, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int16,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int16,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.Int16,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(short, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(short, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(short, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 224
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this short value, int groupLength, int totalBits = 16)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As Short, groupLength As Integer, totalBits As Integer = 16) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Short, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Short, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(Short, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt16,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt16,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.UInt16,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(ushort, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(ushort, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(ushort, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 246
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this ushort value, int groupLength, int totalBits = 16)
+    parameters:
+    - id: value
+      type: System.UInt16
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As UShort, groupLength As Integer, totalBits As Integer = 16) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(UShort, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(UShort, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(UShort, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int32,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(int, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(int, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 269
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value, while
+
+    also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this int value, int groupLength, int totalBits = 32)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As Integer, groupLength As Integer, totalBits As Integer = 32) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Integer, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(Integer, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt32,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.UInt32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(uint, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(uint, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(uint, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 291
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this uint value, int groupLength, int totalBits = 32)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As UInteger, groupLength As Integer, totalBits As Integer = 32) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(UInteger, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(UInteger, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(UInteger, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int64,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.Int64,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.Int64,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(long, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(long, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(long, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 314
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this long value, int groupLength, int totalBits = 64)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As Long, groupLength As Integer, totalBits As Integer = 64) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Long, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(Long, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(Long, Integer, Integer)
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt64,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(System.UInt64,System.Int32,System.Int32)
+  id: GetGroupedBinaryRepresentation(System.UInt64,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.BinaryRepresentationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGroupedBinaryRepresentation(ulong, int, int)
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(ulong, int, int)
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(ulong, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/BinaryRepresentationExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetGroupedBinaryRepresentation
+    path: ../Garyon/Extensions/BinaryRepresentationExtensions.cs
+    startLine: 336
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the binary representation of the <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value,
+
+    while also grouping the digits.
+  example: []
+  syntax:
+    content: public static string GetGroupedBinaryRepresentation(this ulong value, int groupLength, int totalBits = 64)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value.
+    - id: groupLength
+      type: System.Int32
+      description: >-
+        The length of each digit group in the resulting binary representation.
+
+        Must be non-negative. If 0, no grouping is performed.
+    - id: totalBits
+      type: System.Int32
+      description: >-
+        The total bits to display. Defaults to the number of bits a
+
+        <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> value contains.
+    return:
+      type: System.String
+      description: The binary representation of the value.
+    content.vb: Public Shared Function GetGroupedBinaryRepresentation(value As ULong, groupLength As Integer, totalBits As Integer = 64) As String
+  overload: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  nameWithType.vb: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(ULong, Integer, Integer)
+  fullName.vb: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation(ULong, Integer, Integer)
+  name.vb: GetGroupedBinaryRepresentation(ULong, Integer, Integer)
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation*
+  commentId: Overload:Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation
+  href: Garyon.Extensions.BinaryRepresentationExtensions.html#Garyon_Extensions_BinaryRepresentationExtensions_GetBinaryRepresentation_System_Byte_System_Int32_
+  name: GetBinaryRepresentation
+  nameWithType: BinaryRepresentationExtensions.GetBinaryRepresentation
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetBinaryRepresentation
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation*
+  commentId: Overload:Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation
+  href: Garyon.Extensions.BinaryRepresentationExtensions.html#Garyon_Extensions_BinaryRepresentationExtensions_GetGroupedBinaryRepresentation_System_Byte_System_Int32_System_Int32_
+  name: GetGroupedBinaryRepresentation
+  nameWithType: BinaryRepresentationExtensions.GetGroupedBinaryRepresentation
+  fullName: Garyon.Extensions.BinaryRepresentationExtensions.GetGroupedBinaryRepresentation

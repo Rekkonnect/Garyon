@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  id: Garyon.Extensions.Comparison
+  children:
+  - Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  - Garyon.Extensions.Comparison.ComparisonExtensions
+  - Garyon.Extensions.Comparison.ComparisonInfo`1
+  - Garyon.Extensions.Comparison.ComparisonSource`1
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  commentId: T:Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  name: AsyncComparisonInfo<T>
+  nameWithType: AsyncComparisonInfo<T>
+  fullName: Garyon.Extensions.Comparison.AsyncComparisonInfo<T>
+  nameWithType.vb: AsyncComparisonInfo(Of T)
+  fullName.vb: Garyon.Extensions.Comparison.AsyncComparisonInfo(Of T)
+  name.vb: AsyncComparisonInfo(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.AsyncComparisonInfo`1
+    name: AsyncComparisonInfo
+    href: Garyon.Extensions.Comparison.AsyncComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.Comparison.ComparisonInfo`1
+  commentId: T:Garyon.Extensions.Comparison.ComparisonInfo`1
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonInfo-1.html
+  name: ComparisonInfo<T>
+  nameWithType: ComparisonInfo<T>
+  fullName: Garyon.Extensions.Comparison.ComparisonInfo<T>
+  nameWithType.vb: ComparisonInfo(Of T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonInfo(Of T)
+  name.vb: ComparisonInfo(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonInfo`1
+    name: ComparisonInfo
+    href: Garyon.Extensions.Comparison.ComparisonInfo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonInfo`1
+    name: ComparisonInfo
+    href: Garyon.Extensions.Comparison.ComparisonInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonSource`1
+  commentId: T:Garyon.Extensions.Comparison.ComparisonSource`1
+  href: Garyon.Extensions.Comparison.ComparisonSource-1.html
+  name: ComparisonSource<T>
+  nameWithType: ComparisonSource<T>
+  fullName: Garyon.Extensions.Comparison.ComparisonSource<T>
+  nameWithType.vb: ComparisonSource(Of T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonSource(Of T)
+  name.vb: ComparisonSource(Of T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonSource`1
+    name: ComparisonSource
+    href: Garyon.Extensions.Comparison.ComparisonSource-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonSource`1
+    name: ComparisonSource
+    href: Garyon.Extensions.Comparison.ComparisonSource-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html

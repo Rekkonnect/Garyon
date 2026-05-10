@@ -1,0 +1,855 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Exceptions.ThrowHelper
+  commentId: T:Garyon.Exceptions.ThrowHelper
+  id: ThrowHelper
+  parent: Garyon.Exceptions
+  children:
+  - Garyon.Exceptions.ThrowHelper.Throw(System.Exception)
+  - Garyon.Exceptions.ThrowHelper.ThrowAggregate(System.String,System.Exception[])
+  - Garyon.Exceptions.ThrowHelper.ThrowAggregate``1(System.String,System.Collections.Generic.IEnumerable{System.Exception})
+  - Garyon.Exceptions.ThrowHelper.ThrowAggregate``1(System.String,System.Exception[])
+  - Garyon.Exceptions.ThrowHelper.Throw``1
+  - Garyon.Exceptions.ThrowHelper.Throw``1(System.String)
+  - Garyon.Exceptions.ThrowHelper.Throw``1(System.String,System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: ThrowHelper
+  nameWithType: ThrowHelper
+  fullName: Garyon.Exceptions.ThrowHelper
+  type: Class
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThrowHelper
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: >-
+    A helper class providing tools for throwing exceptions. It should be
+
+    preferred to use in code that demands optimization.
+  example: []
+  syntax:
+    content: public static class ThrowHelper
+    content.vb: Public Module ThrowHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Exceptions.ThrowHelper.Throw``1
+  commentId: M:Garyon.Exceptions.ThrowHelper.Throw``1
+  id: Throw``1
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: Throw<T>()
+  nameWithType: ThrowHelper.Throw<T>()
+  fullName: Garyon.Exceptions.ThrowHelper.Throw<T>()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Throw
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 27
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws a new exception of the type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: >-
+      [DoesNotReturn]
+
+      public static T Throw<T>() where T : Exception, new()
+    typeParameters:
+    - id: T
+      description: The exception type to throw.
+    return:
+      type: '{T}'
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: >-
+      <DoesNotReturn>
+
+      Public Shared Function [Throw](Of T As {Exception, New})() As T
+  overload: Garyon.Exceptions.ThrowHelper.Throw*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ThrowHelper.Throw(Of T)()
+  fullName.vb: Garyon.Exceptions.ThrowHelper.Throw(Of T)()
+  name.vb: Throw(Of T)()
+- uid: Garyon.Exceptions.ThrowHelper.Throw``1(System.String)
+  commentId: M:Garyon.Exceptions.ThrowHelper.Throw``1(System.String)
+  id: Throw``1(System.String)
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: Throw<T>(string)
+  nameWithType: ThrowHelper.Throw<T>(string)
+  fullName: Garyon.Exceptions.ThrowHelper.Throw<T>(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Throw
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 48
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws a new exception of the type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: >-
+      [DoesNotReturn]
+
+      public static T Throw<T>(string message) where T : Exception
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    typeParameters:
+    - id: T
+      description: The exception type to throw.
+    return:
+      type: '{T}'
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: >-
+      <DoesNotReturn>
+
+      Public Shared Function [Throw](Of T As Exception)(message As String) As T
+  overload: Garyon.Exceptions.ThrowHelper.Throw*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ThrowHelper.Throw(Of T)(String)
+  fullName.vb: Garyon.Exceptions.ThrowHelper.Throw(Of T)(String)
+  name.vb: Throw(Of T)(String)
+- uid: Garyon.Exceptions.ThrowHelper.Throw``1(System.String,System.Exception)
+  commentId: M:Garyon.Exceptions.ThrowHelper.Throw``1(System.String,System.Exception)
+  id: Throw``1(System.String,System.Exception)
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: Throw<T>(string, Exception)
+  nameWithType: ThrowHelper.Throw<T>(string, Exception)
+  fullName: Garyon.Exceptions.ThrowHelper.Throw<T>(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Throw
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 79
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws a new exception of the type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: >-
+      [DoesNotReturn]
+
+      public static T Throw<T>(string message, Exception innerException) where T : Exception
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: innerException
+      type: System.Exception
+      description: >-
+        The exception that is the cause of the current exception, or a null
+
+        reference if no inner exception is specified.
+    typeParameters:
+    - id: T
+      description: The exception type to throw.
+    return:
+      type: '{T}'
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: >-
+      <DoesNotReturn>
+
+      Public Shared Function [Throw](Of T As Exception)(message As String, innerException As Exception) As T
+  overload: Garyon.Exceptions.ThrowHelper.Throw*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ThrowHelper.Throw(Of T)(String, Exception)
+  fullName.vb: Garyon.Exceptions.ThrowHelper.Throw(Of T)(String, System.Exception)
+  name.vb: Throw(Of T)(String, Exception)
+- uid: Garyon.Exceptions.ThrowHelper.ThrowAggregate``1(System.String,System.Exception[])
+  commentId: M:Garyon.Exceptions.ThrowHelper.ThrowAggregate``1(System.String,System.Exception[])
+  id: ThrowAggregate``1(System.String,System.Exception[])
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: ThrowAggregate<T>(string, params Exception[])
+  nameWithType: ThrowHelper.ThrowAggregate<T>(string, params Exception[])
+  fullName: Garyon.Exceptions.ThrowHelper.ThrowAggregate<T>(string, params System.Exception[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThrowAggregate
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 104
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws a new aggregate exception of the type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: >-
+      [DoesNotReturn]
+
+      public static T ThrowAggregate<T>(string message, params Exception[] innerExceptions) where T : AggregateException
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: innerExceptions
+      type: System.Exception[]
+      description: The exceptions that are the cause of the current exception.
+    typeParameters:
+    - id: T
+      description: The exception type to throw.
+    return:
+      type: '{T}'
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: >-
+      <DoesNotReturn>
+
+      Public Shared Function ThrowAggregate(Of T As AggregateException)(message As String, ParamArray innerExceptions As Exception()) As T
+  overload: Garyon.Exceptions.ThrowHelper.ThrowAggregate*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ThrowHelper.ThrowAggregate(Of T)(String, ParamArray Exception())
+  fullName.vb: Garyon.Exceptions.ThrowHelper.ThrowAggregate(Of T)(String, ParamArray System.Exception())
+  name.vb: ThrowAggregate(Of T)(String, ParamArray Exception())
+- uid: Garyon.Exceptions.ThrowHelper.ThrowAggregate``1(System.String,System.Collections.Generic.IEnumerable{System.Exception})
+  commentId: M:Garyon.Exceptions.ThrowHelper.ThrowAggregate``1(System.String,System.Collections.Generic.IEnumerable{System.Exception})
+  id: ThrowAggregate``1(System.String,System.Collections.Generic.IEnumerable{System.Exception})
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: ThrowAggregate<T>(string, IEnumerable<Exception>)
+  nameWithType: ThrowHelper.ThrowAggregate<T>(string, IEnumerable<Exception>)
+  fullName: Garyon.Exceptions.ThrowHelper.ThrowAggregate<T>(string, System.Collections.Generic.IEnumerable<System.Exception>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThrowAggregate
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 129
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws a new aggregate exception of the type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: >-
+      [DoesNotReturn]
+
+      public static T ThrowAggregate<T>(string message, IEnumerable<Exception> innerExceptions) where T : AggregateException
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: innerExceptions
+      type: System.Collections.Generic.IEnumerable{System.Exception}
+      description: The exceptions that are the cause of the current exception.
+    typeParameters:
+    - id: T
+      description: The exception type to throw.
+    return:
+      type: '{T}'
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: >-
+      <DoesNotReturn>
+
+      Public Shared Function ThrowAggregate(Of T As AggregateException)(message As String, innerExceptions As IEnumerable(Of Exception)) As T
+  overload: Garyon.Exceptions.ThrowHelper.ThrowAggregate*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ThrowHelper.ThrowAggregate(Of T)(String, IEnumerable(Of Exception))
+  fullName.vb: Garyon.Exceptions.ThrowHelper.ThrowAggregate(Of T)(String, System.Collections.Generic.IEnumerable(Of System.Exception))
+  name.vb: ThrowAggregate(Of T)(String, IEnumerable(Of Exception))
+- uid: Garyon.Exceptions.ThrowHelper.Throw(System.Exception)
+  commentId: M:Garyon.Exceptions.ThrowHelper.Throw(System.Exception)
+  id: Throw(System.Exception)
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: Throw(Exception)
+  nameWithType: ThrowHelper.Throw(Exception)
+  fullName: Garyon.Exceptions.ThrowHelper.Throw(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Throw
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 180
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws an exception whose instance is already created.
+  example: []
+  syntax:
+    content: public static Exception Throw(Exception e)
+    parameters:
+    - id: e
+      type: System.Exception
+      description: The exception instance to throw.
+    return:
+      type: System.Exception
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: Public Shared Function [Throw](e As Exception) As Exception
+  overload: Garyon.Exceptions.ThrowHelper.Throw*
+- uid: Garyon.Exceptions.ThrowHelper.ThrowAggregate(System.String,System.Exception[])
+  commentId: M:Garyon.Exceptions.ThrowHelper.ThrowAggregate(System.String,System.Exception[])
+  id: ThrowAggregate(System.String,System.Exception[])
+  parent: Garyon.Exceptions.ThrowHelper
+  langs:
+  - csharp
+  - vb
+  name: ThrowAggregate(string, params Exception[])
+  nameWithType: ThrowHelper.ThrowAggregate(string, params Exception[])
+  fullName: Garyon.Exceptions.ThrowHelper.ThrowAggregate(string, params System.Exception[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Exceptions/ThrowHelper.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ThrowAggregate
+    path: ../Garyon/Exceptions/ThrowHelper.cs
+    startLine: 199
+  assemblies:
+  - Garyon
+  namespace: Garyon.Exceptions
+  summary: Throws a new <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Exception ThrowAggregate(string message, params Exception[] innerExceptions)
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: innerExceptions
+      type: System.Exception[]
+      description: The exceptions that are the cause of the current exception.
+    return:
+      type: System.Exception
+      description: >-
+        Never reaches the point of returning; the return type is so that an
+
+        object can be used in <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement">return</a> or
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/throw">throw</a> statements (latter is not recommended).
+    content.vb: Public Shared Function ThrowAggregate(message As String, ParamArray innerExceptions As Exception()) As Exception
+  overload: Garyon.Exceptions.ThrowHelper.ThrowAggregate*
+  nameWithType.vb: ThrowHelper.ThrowAggregate(String, ParamArray Exception())
+  fullName.vb: Garyon.Exceptions.ThrowHelper.ThrowAggregate(String, ParamArray System.Exception())
+  name.vb: ThrowAggregate(String, ParamArray Exception())
+references:
+- uid: Garyon.Exceptions
+  commentId: N:Garyon.Exceptions
+  href: Garyon.html
+  name: Garyon.Exceptions
+  nameWithType: Garyon.Exceptions
+  fullName: Garyon.Exceptions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Exceptions
+    name: Exceptions
+    href: Garyon.Exceptions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Exceptions
+    name: Exceptions
+    href: Garyon.Exceptions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Exceptions.ThrowHelper.Throw*
+  commentId: Overload:Garyon.Exceptions.ThrowHelper.Throw
+  href: Garyon.Exceptions.ThrowHelper.html#Garyon_Exceptions_ThrowHelper_Throw__1
+  name: Throw
+  nameWithType: ThrowHelper.Throw
+  fullName: Garyon.Exceptions.ThrowHelper.Throw
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Garyon.Exceptions.ThrowHelper.ThrowAggregate*
+  commentId: Overload:Garyon.Exceptions.ThrowHelper.ThrowAggregate
+  href: Garyon.Exceptions.ThrowHelper.html#Garyon_Exceptions_ThrowHelper_ThrowAggregate__1_System_String_System_Exception___
+  name: ThrowAggregate
+  nameWithType: ThrowHelper.ThrowAggregate
+  fullName: Garyon.Exceptions.ThrowHelper.ThrowAggregate
+- uid: System.Exception[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception[]
+  nameWithType: Exception[]
+  fullName: System.Exception[]
+  nameWithType.vb: Exception()
+  fullName.vb: System.Exception()
+  name.vb: Exception()
+  spec.csharp:
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Exception}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Exception}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Exception>
+  nameWithType: IEnumerable<Exception>
+  fullName: System.Collections.Generic.IEnumerable<System.Exception>
+  nameWithType.vb: IEnumerable(Of Exception)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Exception)
+  name.vb: IEnumerable(Of Exception)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.AggregateException
+  commentId: T:System.AggregateException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.aggregateexception
+  name: AggregateException
+  nameWithType: AggregateException
+  fullName: System.AggregateException

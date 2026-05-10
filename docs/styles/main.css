@@ -1,0 +1,63 @@
+/* DocFX custom styling overrides.
+   Focus: improve Highlight.js contrast for C# snippets in dark mode. */
+
+/* Base code block styling */
+pre code.hljs,
+code.hljs {
+  color: #d4d4d4;
+}
+
+/* VS-like token colors (works across Highlight.js languages) */
+.hljs-comment,
+.hljs-quote {
+  color: #6a9955;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #569cd6;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #ce9178;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #b5cea8;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-function .hljs-title {
+  color: #dcdcaa;
+}
+
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-built_in {
+  color: #4ec9b0;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-property {
+  color: #9cdcfe;
+}
+
+.hljs-meta,
+.hljs-meta-keyword {
+  color: #c586c0;
+}
+
+.hljs-params {
+  color: #d4d4d4;
+}
+
+/* Make emphasized tokens stand out more against the (modern template) dark background. */
+pre code.hljs {
+  text-shadow: none;
+}
+

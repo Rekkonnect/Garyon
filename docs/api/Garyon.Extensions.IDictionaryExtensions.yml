@@ -1,0 +1,1784 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.IDictionaryExtensions
+  commentId: T:Garyon.Extensions.IDictionaryExtensions
+  id: IDictionaryExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.IDictionaryExtensions.AddOrSetRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.IDictionaryExtensions.AddOrSet``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  - Garyon.Extensions.IDictionaryExtensions.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.IDictionaryExtensions.Add``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  - Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  - Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue``1(System.Collections.Generic.IDictionary{``0,System.Int32},``0)
+  - Garyon.Extensions.IDictionaryExtensions.TransformKeys``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``0,``2})
+  - Garyon.Extensions.IDictionaryExtensions.TransformValues``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``1,``2})
+  - Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  - Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1},``1@)
+  - Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  - Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1,``1@)
+  - Garyon.Extensions.IDictionaryExtensions.TryAdd``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  - Garyon.Extensions.IDictionaryExtensions.ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  - Garyon.Extensions.IDictionaryExtensions.ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  langs:
+  - csharp
+  - vb
+  name: IDictionaryExtensions
+  nameWithType: IDictionaryExtensions
+  fullName: Garyon.Extensions.IDictionaryExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.NonGeneric.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IDictionaryExtensions
+    path: ../Garyon/Extensions/IDictionaryExtensions.NonGeneric.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Provides useful extensions for the
+
+    <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> and
+
+    <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="false"></xref> types.
+  example: []
+  syntax:
+    content: public static class IDictionaryExtensions
+    content.vb: Public Module IDictionaryExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue``1(System.Collections.Generic.IDictionary{``0,System.Int32},``0)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue``1(System.Collections.Generic.IDictionary{``0,System.Int32},``0)
+  id: IncrementOrAddKeyValue``1(System.Collections.Generic.IDictionary{``0,System.Int32},``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: IncrementOrAddKeyValue<TKey>(IDictionary<TKey, int>, TKey)
+  nameWithType: IDictionaryExtensions.IncrementOrAddKeyValue<TKey>(IDictionary<TKey, int>, TKey)
+  fullName: Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue<TKey>(System.Collections.Generic.IDictionary<TKey, int>, TKey)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IncrementOrAddKeyValue
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Increments the value of a key if it exists, otherwise creates a new key
+
+    with the default value 1.
+  example: []
+  syntax:
+    content: 'public static void IncrementOrAddKeyValue<TKey>(this IDictionary<TKey, int> d, TKey key) where TKey : notnull'
+    parameters:
+    - id: d
+      type: System.Collections.Generic.IDictionary{{TKey},System.Int32}
+      description: The dictionary whose value to increment for the specified key.
+    - id: key
+      type: '{TKey}'
+      description: The key in the dictionary whose value to increment.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys in the dictionary.
+    content.vb: Public Shared Sub IncrementOrAddKeyValue(Of TKey)(d As IDictionary(Of TKey, Integer), key As TKey)
+  overload: Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue*
+  nameWithType.vb: IDictionaryExtensions.IncrementOrAddKeyValue(Of TKey)(IDictionary(Of TKey, Integer), TKey)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue(Of TKey)(System.Collections.Generic.IDictionary(Of TKey, Integer), TKey)
+  name.vb: IncrementOrAddKeyValue(Of TKey)(IDictionary(Of TKey, Integer), TKey)
+- uid: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  id: ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey?)
+  nameWithType: IDictionaryExtensions.ValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey?)
+  fullName: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ValueOrDefault
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 63
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the value mapped to the given key within the dictionary, if the key
+
+    is present.
+  example: []
+  syntax:
+    content: 'public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key) where TKey : notnull'
+    parameters:
+    - id: dictionary
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The dictionary whose mapped value to get.
+    - id: key
+      type: '{TKey}'
+      description: The key whose mapped value to get.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: '{TValue}'
+      description: >-
+        The associated value to <code class="paramref">key</code>, if it exists, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>.
+    content.vb: Public Shared Function ValueOrDefault(Of TKey, TValue)(dictionary As IDictionary(Of TKey, TValue), key As TKey) As TValue
+  overload: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault*
+  nameWithType.vb: IDictionaryExtensions.ValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey)
+  name.vb: ValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+- uid: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  id: ValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey?, TValue?)
+  nameWithType: IDictionaryExtensions.ValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey?, TValue?)
+  fullName: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey?, TValue?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ValueOrDefault
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 93
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the value mapped to the given key within the dictionary, if the key
+
+    is present.
+  example: []
+  syntax:
+    content: 'public static TValue? ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey? key, TValue? defaultValue) where TKey : notnull'
+    parameters:
+    - id: dictionary
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The dictionary whose mapped value to get.
+    - id: key
+      type: '{TKey}'
+      description: The key whose mapped value to get.
+    - id: defaultValue
+      type: '{TValue}'
+      description: >-
+        The default value to return if the key is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or is
+
+        not found in the dictionary.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: '{TValue}'
+      description: >-
+        The associated value to <code class="paramref">key</code>, if it exists, otherwise
+
+        the specified default value.
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: defaultValue
+    content.vb: Public Shared Function ValueOrDefault(Of TKey, TValue)(dictionary As IDictionary(Of TKey, TValue), key As TKey, defaultValue As TValue) As TValue
+  overload: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault*
+  nameWithType.vb: IDictionaryExtensions.ValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+  name.vb: ValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+- uid: Garyon.Extensions.IDictionaryExtensions.AddOrSet``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.AddOrSet``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  id: AddOrSet``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddOrSet<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  nameWithType: IDictionaryExtensions.AddOrSet<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  fullName: Garyon.Extensions.IDictionaryExtensions.AddOrSet<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddOrSet
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 129
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a new entry to the dictionary. If the given key already exists, its
+
+    value is overwritten in the source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool AddOrSet<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: key
+      type: '{TKey}'
+      description: The key of the entry to add or overwrite.
+    - id: value
+      type: '{TValue}'
+      description: The value of the entry to set.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the entry already existed with a different
+
+        value and was overwritten, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function AddOrSet(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), key As TKey, value As TValue) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.AddOrSet*
+  nameWithType.vb: IDictionaryExtensions.AddOrSet(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.AddOrSet(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+  name.vb: AddOrSet(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  id: TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  nameWithType: IDictionaryExtensions.TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryAddPreserve
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 149
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a new entry to the dictionary. If the given key already exists, its
+
+    value is preserved in the source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: >-
+        The <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> to add to the
+
+        dictionary.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the entry did not exist, or existed with the
+
+        same value, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryAddPreserve(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), kvp As KeyValuePair(Of TKey, TValue)) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve*
+  nameWithType.vb: IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1},``1@)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1},``1@)
+  id: TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1},``1@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>, out TValue?)
+  nameWithType: IDictionaryExtensions.TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>, out TValue?)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>, out TValue?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryAddPreserve
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 159
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a new entry to the dictionary. If the given key already exists, its
+
+    value is preserved in the source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp, out TValue? existingValue) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: >-
+        The <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> to add to the
+
+        dictionary.
+    - id: existingValue
+      type: '{TValue}'
+      description: >-
+        The value that existed in the dictionary, if the key was already
+
+        present, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the entry did not exist, or existed with the
+
+        same value, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryAddPreserve(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), kvp As KeyValuePair(Of TKey, TValue), existingValue As TValue) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve*
+  nameWithType.vb: IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue), TValue)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue), TValue)
+  name.vb: TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue), TValue)
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  id: TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  nameWithType: IDictionaryExtensions.TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryAddPreserve
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 165
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a new entry to the dictionary. If the given key already exists, its
+
+    value is preserved in the source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: key
+      type: '{TKey}'
+      description: The key of the entry to add or overwrite.
+    - id: value
+      type: '{TValue}'
+      description: The value of the entry to set.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the entry did not exist, or existed with the
+
+        same value, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryAddPreserve(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), key As TKey, value As TValue) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve*
+  nameWithType.vb: IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+  name.vb: TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1,``1@)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1,``1@)
+  id: TryAddPreserve``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1,``1@)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue, out TValue?)
+  nameWithType: IDictionaryExtensions.TryAddPreserve<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue, out TValue?)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue, out TValue?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryAddPreserve
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 197
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a new entry to the dictionary. If the given key already exists, its
+
+    value is preserved in the source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool TryAddPreserve<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TValue value, out TValue? existingValue) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: key
+      type: '{TKey}'
+      description: The key of the entry to add or overwrite.
+    - id: value
+      type: '{TValue}'
+      description: The value of the entry to set.
+    - id: existingValue
+      type: '{TValue}'
+      description: >-
+        The value that existed in the dictionary, if the key was already
+
+        present, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the entry did not exist, or existed with the
+
+        same value, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryAddPreserve(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), key As TKey, value As TValue, existingValue As TValue) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve*
+  nameWithType.vb: IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue, TValue)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue, TValue)
+  name.vb: TryAddPreserve(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue, TValue)
+- uid: Garyon.Extensions.IDictionaryExtensions.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  id: AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRange<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  nameWithType: IDictionaryExtensions.AddRange<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.AddRange<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddRange
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 230
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Adds a range of entries to a source dictionary.
+  example: []
+  syntax:
+    content: 'public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: entries
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The entries to add to the <code class="paramref">source</code> dictionary.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    content.vb: Public Shared Sub AddRange(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), entries As IDictionary(Of TKey, TValue))
+  overload: Garyon.Extensions.IDictionaryExtensions.AddRange*
+  nameWithType.vb: IDictionaryExtensions.AddRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.AddRange(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: AddRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.IDictionaryExtensions.AddOrSetRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.AddOrSetRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  id: AddOrSetRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddOrSetRange<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  nameWithType: IDictionaryExtensions.AddOrSetRange<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.AddOrSetRange<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddOrSetRange
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 260
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a collection of new entries to the dictionary. For each of the
+
+    given entries, if its key already exists, its value is overwritten in
+
+    the source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool AddOrSetRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: entries
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The entries to add or overwrite.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if at least one of the given entries already
+
+        existed with a different value and was overwritten, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function AddOrSetRange(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), entries As IDictionary(Of TKey, TValue)) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.AddOrSetRange*
+  nameWithType.vb: IDictionaryExtensions.AddOrSetRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.AddOrSetRange(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: AddOrSetRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  id: TryAddPreserveRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryAddPreserveRange<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  nameWithType: IDictionaryExtensions.TryAddPreserveRange<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryAddPreserveRange
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 292
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Adds a collection of new entries to the dictionary. For each of the
+
+    given entries, if its key already exists, its value is preserved in the
+
+    source dictionary.
+  example: []
+  syntax:
+    content: 'public static bool TryAddPreserveRange<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> entries) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: entries
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The entries to add or overwrite.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if none of the given entries already existed with
+
+        a different value, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryAddPreserveRange(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), entries As IDictionary(Of TKey, TValue)) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange*
+  nameWithType.vb: IDictionaryExtensions.TryAddPreserveRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: TryAddPreserveRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+- uid: Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  id: GetKeyValuePair``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetKeyValuePair<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
+  nameWithType: IDictionaryExtensions.GetKeyValuePair<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
+  fullName: Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetKeyValuePair
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 325
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets a <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> instance containing
+
+    the specified key and its associated value.
+  example: []
+  syntax:
+    content: 'public static KeyValuePair<TKey, TValue> GetKeyValuePair<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: key
+      type: '{TKey}'
+      description: >-
+        The key of the entry whose <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref>
+
+        to get.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: >-
+        The resulting <xref href="System.Collections.Generic.KeyValuePair%602" data-throw-if-not-resolved="false"></xref> containing
+
+        the entry that was requested.
+    content.vb: Public Shared Function GetKeyValuePair(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), key As TKey) As KeyValuePair(Of TKey, TValue)
+  overload: Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair*
+  nameWithType.vb: IDictionaryExtensions.GetKeyValuePair(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey)
+  name.vb: GetKeyValuePair(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+- uid: Garyon.Extensions.IDictionaryExtensions.Add``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.Add``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  id: Add``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: Add<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  nameWithType: IDictionaryExtensions.Add<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.Add<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Add
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 346
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Adds an entry to the provided dictionary, if the key does not exist.
+  example: []
+  syntax:
+    content: 'public static void Add<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: The entry to add to the dictionary.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    content.vb: Public Shared Sub Add(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), kvp As KeyValuePair(Of TKey, TValue))
+  overload: Garyon.Extensions.IDictionaryExtensions.Add*
+  nameWithType.vb: IDictionaryExtensions.Add(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.Add(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: Add(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAdd``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TryAdd``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  id: TryAdd``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryAdd<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  nameWithType: IDictionaryExtensions.TryAdd<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAdd<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TryAdd
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 401
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Attempts to add an entry to the provided dictionary, if the key does not
+
+    already exist.
+  example: []
+  syntax:
+    content: 'public static bool TryAdd<TKey, TValue>(this IDictionary<TKey, TValue> source, KeyValuePair<TKey, TValue> kvp) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: The source dictionary.
+    - id: kvp
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+      description: The entry to add to the dictionary.
+    typeParameters:
+    - id: TKey
+      description: The type of the keys stored in the dictionary.
+    - id: TValue
+      description: The type of the values stored in the dictionary.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the entry was successfully added, otherwise
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function TryAdd(Of TKey, TValue)(source As IDictionary(Of TKey, TValue), kvp As KeyValuePair(Of TKey, TValue)) As Boolean
+  overload: Garyon.Extensions.IDictionaryExtensions.TryAdd*
+  nameWithType.vb: IDictionaryExtensions.TryAdd(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TryAdd(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: TryAdd(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+- uid: Garyon.Extensions.IDictionaryExtensions.TransformKeys``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``0,``2})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TransformKeys``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``0,``2})
+  id: TransformKeys``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``0,``2})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TransformKeys<TKey, TValue, TNewKey>(IReadOnlyDictionary<TKey, TValue>, Func<TKey, TNewKey>)
+  nameWithType: IDictionaryExtensions.TransformKeys<TKey, TValue, TNewKey>(IReadOnlyDictionary<TKey, TValue>, Func<TKey, TNewKey>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TransformKeys<TKey, TValue, TNewKey>(System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>, System.Func<TKey, TNewKey>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TransformKeys
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 414
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Transforms the keys of the source dictionary into new keys using the
+
+    provided key selector function, and constructs a new dictionary with the
+
+    transformed keys and the original values.
+  example: []
+  syntax:
+    content: 'public static Dictionary<TNewKey, TValue> TransformKeys<TKey, TValue, TNewKey>(this IReadOnlyDictionary<TKey, TValue> source, Func<TKey, TNewKey> keySelector) where TKey : notnull where TNewKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TValue}}
+    - id: keySelector
+      type: System.Func{{TKey},{TNewKey}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    - id: TNewKey
+    return:
+      type: System.Collections.Generic.Dictionary{{TNewKey},{TValue}}
+    content.vb: Public Shared Function TransformKeys(Of TKey, TValue, TNewKey)(source As IReadOnlyDictionary(Of TKey, TValue), keySelector As Func(Of TKey, TNewKey)) As Dictionary(Of TNewKey, TValue)
+  overload: Garyon.Extensions.IDictionaryExtensions.TransformKeys*
+  nameWithType.vb: IDictionaryExtensions.TransformKeys(Of TKey, TValue, TNewKey)(IReadOnlyDictionary(Of TKey, TValue), Func(Of TKey, TNewKey))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TransformKeys(Of TKey, TValue, TNewKey)(System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue), System.Func(Of TKey, TNewKey))
+  name.vb: TransformKeys(Of TKey, TValue, TNewKey)(IReadOnlyDictionary(Of TKey, TValue), Func(Of TKey, TNewKey))
+- uid: Garyon.Extensions.IDictionaryExtensions.TransformValues``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``1,``2})
+  commentId: M:Garyon.Extensions.IDictionaryExtensions.TransformValues``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``1,``2})
+  id: TransformValues``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1},System.Func{``1,``2})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TransformValues<TKey, TValue, TNewValue>(IReadOnlyDictionary<TKey, TValue>, Func<TValue, TNewValue>)
+  nameWithType: IDictionaryExtensions.TransformValues<TKey, TValue, TNewValue>(IReadOnlyDictionary<TKey, TValue>, Func<TValue, TNewValue>)
+  fullName: Garyon.Extensions.IDictionaryExtensions.TransformValues<TKey, TValue, TNewValue>(System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>, System.Func<TValue, TNewValue>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/IDictionaryExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TransformValues
+    path: ../Garyon/Extensions/IDictionaryExtensions.cs
+    startLine: 436
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Transforms the values of the source dictionary into new values using the
+
+    provided key selector function, and constructs a new dictionary with the
+
+    transformed values and the original keys.
+  example: []
+  syntax:
+    content: 'public static Dictionary<TKey, TNewValue> TransformValues<TKey, TValue, TNewValue>(this IReadOnlyDictionary<TKey, TValue> source, Func<TValue, TNewValue> valueSelector) where TKey : notnull'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TValue}}
+    - id: valueSelector
+      type: System.Func{{TValue},{TNewValue}}
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    - id: TNewValue
+    return:
+      type: System.Collections.Generic.Dictionary{{TKey},{TNewValue}}
+    content.vb: Public Shared Function TransformValues(Of TKey, TValue, TNewValue)(source As IReadOnlyDictionary(Of TKey, TValue), valueSelector As Func(Of TValue, TNewValue)) As Dictionary(Of TKey, TNewValue)
+  overload: Garyon.Extensions.IDictionaryExtensions.TransformValues*
+  nameWithType.vb: IDictionaryExtensions.TransformValues(Of TKey, TValue, TNewValue)(IReadOnlyDictionary(Of TKey, TValue), Func(Of TValue, TNewValue))
+  fullName.vb: Garyon.Extensions.IDictionaryExtensions.TransformValues(Of TKey, TValue, TNewValue)(System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue), System.Func(Of TValue, TNewValue))
+  name.vb: TransformValues(Of TKey, TValue, TNewValue)(IReadOnlyDictionary(Of TKey, TValue), Func(Of TValue, TNewValue))
+references:
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.IDictionary
+  commentId: T:System.Collections.IDictionary
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary
+  nameWithType: IDictionary
+  fullName: System.Collections.IDictionary
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_IncrementOrAddKeyValue__1_System_Collections_Generic_IDictionary___0_System_Int32____0_
+  name: IncrementOrAddKeyValue
+  nameWithType: IDictionaryExtensions.IncrementOrAddKeyValue
+  fullName: Garyon.Extensions.IDictionaryExtensions.IncrementOrAddKeyValue
+- uid: System.Collections.Generic.IDictionary{{TKey},System.Int32}
+  commentId: T:System.Collections.Generic.IDictionary{`0,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, int>
+  nameWithType: IDictionary<TKey, int>
+  fullName: System.Collections.Generic.IDictionary<TKey, int>
+  nameWithType.vb: IDictionary(Of TKey, Integer)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, Integer)
+  name.vb: IDictionary(Of TKey, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.ValueOrDefault
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_ValueOrDefault__2_System_Collections_Generic_IDictionary___0___1____0_
+  name: ValueOrDefault
+  nameWithType: IDictionaryExtensions.ValueOrDefault
+  fullName: Garyon.Extensions.IDictionaryExtensions.ValueOrDefault
+- uid: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.IDictionary{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: Garyon.Extensions.IDictionaryExtensions.AddOrSet*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.AddOrSet
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_AddOrSet__2_System_Collections_Generic_IDictionary___0___1____0___1_
+  name: AddOrSet
+  nameWithType: IDictionaryExtensions.AddOrSet
+  fullName: Garyon.Extensions.IDictionaryExtensions.AddOrSet
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.TryAddPreserve
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_TryAddPreserve__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1__
+  name: TryAddPreserve
+  nameWithType: IDictionaryExtensions.TryAddPreserve
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserve
+- uid: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.KeyValuePair{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.IDictionaryExtensions.AddRange*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.AddRange
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_AddRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IDictionary___0___1__
+  name: AddRange
+  nameWithType: IDictionaryExtensions.AddRange
+  fullName: Garyon.Extensions.IDictionaryExtensions.AddRange
+- uid: Garyon.Extensions.IDictionaryExtensions.AddOrSetRange*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.AddOrSetRange
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_AddOrSetRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IDictionary___0___1__
+  name: AddOrSetRange
+  nameWithType: IDictionaryExtensions.AddOrSetRange
+  fullName: Garyon.Extensions.IDictionaryExtensions.AddOrSetRange
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_TryAddPreserveRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IDictionary___0___1__
+  name: TryAddPreserveRange
+  nameWithType: IDictionaryExtensions.TryAddPreserveRange
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAddPreserveRange
+- uid: Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_GetKeyValuePair__2_System_Collections_Generic_IDictionary___0___1____0_
+  name: GetKeyValuePair
+  nameWithType: IDictionaryExtensions.GetKeyValuePair
+  fullName: Garyon.Extensions.IDictionaryExtensions.GetKeyValuePair
+- uid: Garyon.Extensions.IDictionaryExtensions.Add*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.Add
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_Add__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1__
+  name: Add
+  nameWithType: IDictionaryExtensions.Add
+  fullName: Garyon.Extensions.IDictionaryExtensions.Add
+- uid: Garyon.Extensions.IDictionaryExtensions.TryAdd*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.TryAdd
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_TryAdd__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1__
+  name: TryAdd
+  nameWithType: IDictionaryExtensions.TryAdd
+  fullName: Garyon.Extensions.IDictionaryExtensions.TryAdd
+- uid: Garyon.Extensions.IDictionaryExtensions.TransformKeys*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.TransformKeys
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_TransformKeys__3_System_Collections_Generic_IReadOnlyDictionary___0___1__System_Func___0___2__
+  name: TransformKeys
+  nameWithType: IDictionaryExtensions.TransformKeys
+  fullName: Garyon.Extensions.IDictionaryExtensions.TransformKeys
+- uid: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Func{{TKey},{TNewKey}}
+  commentId: T:System.Func{``0,``2}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TKey, TNewKey>
+  nameWithType: Func<TKey, TNewKey>
+  fullName: System.Func<TKey, TNewKey>
+  nameWithType.vb: Func(Of TKey, TNewKey)
+  fullName.vb: System.Func(Of TKey, TNewKey)
+  name.vb: Func(Of TKey, TNewKey)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewKey
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewKey
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TNewKey},{TValue}}
+  commentId: T:System.Collections.Generic.Dictionary{``2,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TNewKey, TValue>
+  nameWithType: Dictionary<TNewKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TNewKey, TValue>
+  nameWithType.vb: Dictionary(Of TNewKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TNewKey, TValue)
+  name.vb: Dictionary(Of TNewKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TNewKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNewKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.IDictionaryExtensions.TransformValues*
+  commentId: Overload:Garyon.Extensions.IDictionaryExtensions.TransformValues
+  href: Garyon.Extensions.IDictionaryExtensions.html#Garyon_Extensions_IDictionaryExtensions_TransformValues__3_System_Collections_Generic_IReadOnlyDictionary___0___1__System_Func___1___2__
+  name: TransformValues
+  nameWithType: IDictionaryExtensions.TransformValues
+  fullName: Garyon.Extensions.IDictionaryExtensions.TransformValues
+- uid: System.Func{{TValue},{TNewValue}}
+  commentId: T:System.Func{``1,``2}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TValue, TNewValue>
+  nameWithType: Func<TValue, TNewValue>
+  fullName: System.Func<TValue, TNewValue>
+  nameWithType.vb: Func(Of TValue, TNewValue)
+  fullName.vb: System.Func(Of TValue, TNewValue)
+  name.vb: Func(Of TValue, TNewValue)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TNewValue}}
+  commentId: T:System.Collections.Generic.Dictionary{``0,``2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TNewValue>
+  nameWithType: Dictionary<TKey, TNewValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TNewValue>
+  nameWithType.vb: Dictionary(Of TKey, TNewValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TNewValue)
+  name.vb: Dictionary(Of TKey, TNewValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: )

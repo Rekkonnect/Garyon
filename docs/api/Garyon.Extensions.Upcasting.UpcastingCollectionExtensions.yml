@@ -1,0 +1,1544 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  commentId: T:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  id: UpcastingCollectionExtensions
+  parent: Garyon.Extensions.Upcasting
+  children:
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection``2(System.Collections.Generic.ICollection{``0})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary``3(System.Collections.Generic.IDictionary{``0,``1})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList``2(System.Collections.Generic.IList{``0})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection``2(System.Collections.Generic.IReadOnlyCollection{``0})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList``2(System.Collections.Generic.IReadOnlyList{``0})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet``2(System.Collections.Generic.IReadOnlySet{``0})
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet``2(System.Collections.Generic.ISet{``0})
+  langs:
+  - csharp
+  - vb
+  name: UpcastingCollectionExtensions
+  nameWithType: UpcastingCollectionExtensions
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastingCollectionExtensions
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Provides extensions for upcasting known collection types like
+
+    <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>, <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref>, etc.
+  example: []
+  syntax:
+    content: public static class UpcastingCollectionExtensions
+    content.vb: Public Module UpcastingCollectionExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList``2(System.Collections.Generic.IList{``0})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList``2(System.Collections.Generic.IList{``0})
+  id: UpcastList``2(System.Collections.Generic.IList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastList<TBase, TUp>(IList<TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastList<TBase, TUp>(IList<TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList<TBase, TUp>(System.Collections.Generic.IList<TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastList
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 34
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> into a list of
+
+    <code class="typeparamref">TUp</code> instances.
+  remarks: >-
+    No validation is performed on whether all the elements of the list are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    lists where it is known. If an element is not actually
+
+    <code class="typeparamref">TUp</code>, accessing it (for example by indexing or
+
+    enumeration) will throw an exception at runtime.
+  example: []
+  syntax:
+    content: 'public static IList<TUp> UpcastList<TBase, TUp>(this IList<TBase> source) where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IList{{TBase}}
+      description: The source list to upcast.
+    typeParameters:
+    - id: TBase
+      description: The base type of the list's elements.
+    - id: TUp
+      description: The type to upcast all of the list's elements.
+    return:
+      type: System.Collections.Generic.IList{{TUp}}
+      description: >-
+        An instance that returns the source list's elements cast into
+
+        <code class="typeparamref">TUp</code>.
+    content.vb: Public Shared Function UpcastList(Of TBase, TUp As {Class, TBase})(source As IList(Of TBase)) As IList(Of TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastList(Of TBase, TUp)(IList(Of TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList(Of TBase, TUp)(System.Collections.Generic.IList(Of TBase))
+  name.vb: UpcastList(Of TBase, TUp)(IList(Of TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList``2(System.Collections.Generic.IReadOnlyList{``0})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList``2(System.Collections.Generic.IReadOnlyList{``0})
+  id: UpcastReadOnlyList``2(System.Collections.Generic.IReadOnlyList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastReadOnlyList<TBase, TUp>(IReadOnlyList<TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlyList<TBase, TUp>(IReadOnlyList<TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList<TBase, TUp>(System.Collections.Generic.IReadOnlyList<TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastReadOnlyList
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 63
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref> into a list of
+
+    <code class="typeparamref">TUp</code> instances.
+  remarks: >-
+    No validation is performed on whether all the elements of the list are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    lists where it is known. If an element is not actually
+
+    <code class="typeparamref">TUp</code>, accessing it (for example by indexing or
+
+    enumeration) will throw an exception at runtime.
+  example: []
+  syntax:
+    content: 'public static IReadOnlyList<TUp> UpcastReadOnlyList<TBase, TUp>(this IReadOnlyList<TBase> source) where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{TBase}}
+      description: The source list to upcast.
+    typeParameters:
+    - id: TBase
+      description: The base type of the list's elements.
+    - id: TUp
+      description: The type to upcast all of the list's elements.
+    return:
+      type: System.Collections.Generic.IReadOnlyList{{TUp}}
+      description: >-
+        An instance that returns the source list's elements cast into
+
+        <code class="typeparamref">TUp</code>.
+    content.vb: Public Shared Function UpcastReadOnlyList(Of TBase, TUp As {Class, TBase})(source As IReadOnlyList(Of TBase)) As IReadOnlyList(Of TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastReadOnlyList(Of TBase, TUp)(IReadOnlyList(Of TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList(Of TBase, TUp)(System.Collections.Generic.IReadOnlyList(Of TBase))
+  name.vb: UpcastReadOnlyList(Of TBase, TUp)(IReadOnlyList(Of TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection``2(System.Collections.Generic.ICollection{``0})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection``2(System.Collections.Generic.ICollection{``0})
+  id: UpcastCollection``2(System.Collections.Generic.ICollection{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastCollection<TBase, TUp>(ICollection<TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastCollection<TBase, TUp>(ICollection<TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection<TBase, TUp>(System.Collections.Generic.ICollection<TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastCollection
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 79
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref> into a collection of
+
+    <code class="typeparamref">TUp</code> instances.
+  remarks: >-
+    No validation is performed on whether all the elements are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    collections where it is known.
+  example: []
+  syntax:
+    content: 'public static ICollection<TUp> UpcastCollection<TBase, TUp>(this ICollection<TBase> source) where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.ICollection{{TBase}}
+    typeParameters:
+    - id: TBase
+    - id: TUp
+    return:
+      type: System.Collections.Generic.ICollection{{TUp}}
+    content.vb: Public Shared Function UpcastCollection(Of TBase, TUp As {Class, TBase})(source As ICollection(Of TBase)) As ICollection(Of TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastCollection(Of TBase, TUp)(ICollection(Of TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection(Of TBase, TUp)(System.Collections.Generic.ICollection(Of TBase))
+  name.vb: UpcastCollection(Of TBase, TUp)(ICollection(Of TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection``2(System.Collections.Generic.IReadOnlyCollection{``0})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection``2(System.Collections.Generic.IReadOnlyCollection{``0})
+  id: UpcastReadOnlyCollection``2(System.Collections.Generic.IReadOnlyCollection{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastReadOnlyCollection<TBase, TUp>(IReadOnlyCollection<TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlyCollection<TBase, TUp>(IReadOnlyCollection<TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection<TBase, TUp>(System.Collections.Generic.IReadOnlyCollection<TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastReadOnlyCollection
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 94
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> into a read-only
+
+    collection of <code class="typeparamref">TUp</code> instances.
+  remarks: >-
+    No validation is performed on whether all the elements are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    collections where it is known.
+  example: []
+  syntax:
+    content: 'public static IReadOnlyCollection<TUp> UpcastReadOnlyCollection<TBase, TUp>(this IReadOnlyCollection<TBase> source) where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyCollection{{TBase}}
+    typeParameters:
+    - id: TBase
+    - id: TUp
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{{TUp}}
+    content.vb: Public Shared Function UpcastReadOnlyCollection(Of TBase, TUp As {Class, TBase})(source As IReadOnlyCollection(Of TBase)) As IReadOnlyCollection(Of TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastReadOnlyCollection(Of TBase, TUp)(IReadOnlyCollection(Of TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection(Of TBase, TUp)(System.Collections.Generic.IReadOnlyCollection(Of TBase))
+  name.vb: UpcastReadOnlyCollection(Of TBase, TUp)(IReadOnlyCollection(Of TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary``3(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary``3(System.Collections.Generic.IDictionary{``0,``1})
+  id: UpcastDictionary``3(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastDictionary<TKey, TBase, TUp>(IDictionary<TKey, TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastDictionary<TKey, TBase, TUp>(IDictionary<TKey, TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary<TKey, TBase, TUp>(System.Collections.Generic.IDictionary<TKey, TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastDictionary
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 112
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> into a
+
+    dictionary whose values are <code class="typeparamref">TUp</code>.
+  remarks: >-
+    No validation is performed on whether all values are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    dictionaries where it is known.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TUp> UpcastDictionary<TKey, TBase, TUp>(this IDictionary<TKey, TBase> source) where TKey : notnull where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TBase}}
+    typeParameters:
+    - id: TKey
+    - id: TBase
+    - id: TUp
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TUp}}
+    content.vb: Public Shared Function UpcastDictionary(Of TKey, TBase, TUp As {Class, TBase})(source As IDictionary(Of TKey, TBase)) As IDictionary(Of TKey, TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastDictionary(Of TKey, TBase, TUp)(IDictionary(Of TKey, TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary(Of TKey, TBase, TUp)(System.Collections.Generic.IDictionary(Of TKey, TBase))
+  name.vb: UpcastDictionary(Of TKey, TBase, TUp)(IDictionary(Of TKey, TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1})
+  id: UpcastReadOnlyDictionary``3(System.Collections.Generic.IReadOnlyDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastReadOnlyDictionary<TKey, TBase, TUp>(IReadOnlyDictionary<TKey, TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlyDictionary<TKey, TBase, TUp>(IReadOnlyDictionary<TKey, TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary<TKey, TBase, TUp>(System.Collections.Generic.IReadOnlyDictionary<TKey, TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastReadOnlyDictionary
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 129
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref> into a
+
+    read-only dictionary whose values are <code class="typeparamref">TUp</code>.
+  remarks: >-
+    No validation is performed on whether all values are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    dictionaries where it is known.
+  example: []
+  syntax:
+    content: 'public static IReadOnlyDictionary<TKey, TUp> UpcastReadOnlyDictionary<TKey, TBase, TUp>(this IReadOnlyDictionary<TKey, TBase> source) where TKey : notnull where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TBase}}
+    typeParameters:
+    - id: TKey
+    - id: TBase
+    - id: TUp
+    return:
+      type: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TUp}}
+    content.vb: Public Shared Function UpcastReadOnlyDictionary(Of TKey, TBase, TUp As {Class, TBase})(source As IReadOnlyDictionary(Of TKey, TBase)) As IReadOnlyDictionary(Of TKey, TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastReadOnlyDictionary(Of TKey, TBase, TUp)(IReadOnlyDictionary(Of TKey, TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary(Of TKey, TBase, TUp)(System.Collections.Generic.IReadOnlyDictionary(Of TKey, TBase))
+  name.vb: UpcastReadOnlyDictionary(Of TKey, TBase, TUp)(IReadOnlyDictionary(Of TKey, TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet``2(System.Collections.Generic.ISet{``0})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet``2(System.Collections.Generic.ISet{``0})
+  id: UpcastSet``2(System.Collections.Generic.ISet{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastSet<TBase, TUp>(ISet<TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastSet<TBase, TUp>(ISet<TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet<TBase, TUp>(System.Collections.Generic.ISet<TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastSet
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 146
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref> into a set of
+
+    <code class="typeparamref">TUp</code> instances.
+  remarks: >-
+    No validation is performed on whether all elements are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    sets where it is known.
+  example: []
+  syntax:
+    content: 'public static ISet<TUp> UpcastSet<TBase, TUp>(this ISet<TBase> source) where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.ISet{{TBase}}
+    typeParameters:
+    - id: TBase
+    - id: TUp
+    return:
+      type: System.Collections.Generic.ISet{{TUp}}
+    content.vb: Public Shared Function UpcastSet(Of TBase, TUp As {Class, TBase})(source As ISet(Of TBase)) As ISet(Of TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastSet(Of TBase, TUp)(ISet(Of TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet(Of TBase, TUp)(System.Collections.Generic.ISet(Of TBase))
+  name.vb: UpcastSet(Of TBase, TUp)(ISet(Of TBase))
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet``2(System.Collections.Generic.IReadOnlySet{``0})
+  commentId: M:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet``2(System.Collections.Generic.IReadOnlySet{``0})
+  id: UpcastReadOnlySet``2(System.Collections.Generic.IReadOnlySet{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpcastReadOnlySet<TBase, TUp>(IReadOnlySet<TBase>)
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlySet<TBase, TUp>(IReadOnlySet<TBase>)
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet<TBase, TUp>(System.Collections.Generic.IReadOnlySet<TBase>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: UpcastReadOnlySet
+    path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
+    startLine: 162
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.Upcasting
+  summary: >-
+    Upcasts the given <xref href="System.Collections.Generic.IReadOnlySet%601" data-throw-if-not-resolved="false"></xref> into a read-only set of
+
+    <code class="typeparamref">TUp</code> instances.
+  remarks: >-
+    No validation is performed on whether all elements are
+
+    <code class="typeparamref">TUp</code>. This method is unsafe and should be used on
+
+    sets where it is known.
+  example: []
+  syntax:
+    content: 'public static IReadOnlySet<TUp> UpcastReadOnlySet<TBase, TUp>(this IReadOnlySet<TBase> source) where TUp : class, TBase'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlySet{{TBase}}
+    typeParameters:
+    - id: TBase
+    - id: TUp
+    return:
+      type: System.Collections.Generic.IReadOnlySet{{TUp}}
+    content.vb: Public Shared Function UpcastReadOnlySet(Of TBase, TUp As {Class, TBase})(source As IReadOnlySet(Of TBase)) As IReadOnlySet(Of TUp)
+  overload: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet*
+  nameWithType.vb: UpcastingCollectionExtensions.UpcastReadOnlySet(Of TBase, TUp)(IReadOnlySet(Of TBase))
+  fullName.vb: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet(Of TBase, TUp)(System.Collections.Generic.IReadOnlySet(Of TBase))
+  name.vb: UpcastReadOnlySet(Of TBase, TUp)(IReadOnlySet(Of TBase))
+references:
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Upcasting
+  commentId: N:Garyon.Extensions.Upcasting
+  href: Garyon.html
+  name: Garyon.Extensions.Upcasting
+  nameWithType: Garyon.Extensions.Upcasting
+  fullName: Garyon.Extensions.Upcasting
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Upcasting
+    name: Upcasting
+    href: Garyon.Extensions.Upcasting.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Upcasting
+    name: Upcasting
+    href: Garyon.Extensions.Upcasting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastList__2_System_Collections_Generic_IList___0__
+  name: UpcastList
+  nameWithType: UpcastingCollectionExtensions.UpcastList
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastList
+- uid: System.Collections.Generic.IList{{TBase}}
+  commentId: T:System.Collections.Generic.IList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<TBase>
+  nameWithType: IList<TBase>
+  fullName: System.Collections.Generic.IList<TBase>
+  nameWithType.vb: IList(Of TBase)
+  fullName.vb: System.Collections.Generic.IList(Of TBase)
+  name.vb: IList(Of TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.IList{{TUp}}
+  commentId: T:System.Collections.Generic.IList{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<TUp>
+  nameWithType: IList<TUp>
+  fullName: System.Collections.Generic.IList<TUp>
+  nameWithType.vb: IList(Of TUp)
+  fullName.vb: System.Collections.Generic.IList(Of TUp)
+  name.vb: IList(Of TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastReadOnlyList__2_System_Collections_Generic_IReadOnlyList___0__
+  name: UpcastReadOnlyList
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlyList
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyList
+- uid: System.Collections.Generic.IReadOnlyList{{TBase}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<TBase>
+  nameWithType: IReadOnlyList<TBase>
+  fullName: System.Collections.Generic.IReadOnlyList<TBase>
+  nameWithType.vb: IReadOnlyList(Of TBase)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TBase)
+  name.vb: IReadOnlyList(Of TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList{{TUp}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<TUp>
+  nameWithType: IReadOnlyList<TUp>
+  fullName: System.Collections.Generic.IReadOnlyList<TUp>
+  nameWithType.vb: IReadOnlyList(Of TUp)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of TUp)
+  name.vb: IReadOnlyList(Of TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastCollection__2_System_Collections_Generic_ICollection___0__
+  name: UpcastCollection
+  nameWithType: UpcastingCollectionExtensions.UpcastCollection
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastCollection
+- uid: System.Collections.Generic.ICollection{{TBase}}
+  commentId: T:System.Collections.Generic.ICollection{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<TBase>
+  nameWithType: ICollection<TBase>
+  fullName: System.Collections.Generic.ICollection<TBase>
+  nameWithType.vb: ICollection(Of TBase)
+  fullName.vb: System.Collections.Generic.ICollection(Of TBase)
+  name.vb: ICollection(Of TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.ICollection{{TUp}}
+  commentId: T:System.Collections.Generic.ICollection{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<TUp>
+  nameWithType: ICollection<TUp>
+  fullName: System.Collections.Generic.ICollection<TUp>
+  nameWithType.vb: ICollection(Of TUp)
+  fullName.vb: System.Collections.Generic.ICollection(Of TUp)
+  name.vb: ICollection(Of TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastReadOnlyCollection__2_System_Collections_Generic_IReadOnlyCollection___0__
+  name: UpcastReadOnlyCollection
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlyCollection
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyCollection
+- uid: System.Collections.Generic.IReadOnlyCollection{{TBase}}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<TBase>
+  nameWithType: IReadOnlyCollection<TBase>
+  fullName: System.Collections.Generic.IReadOnlyCollection<TBase>
+  nameWithType.vb: IReadOnlyCollection(Of TBase)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of TBase)
+  name.vb: IReadOnlyCollection(Of TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection{{TUp}}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<TUp>
+  nameWithType: IReadOnlyCollection<TUp>
+  fullName: System.Collections.Generic.IReadOnlyCollection<TUp>
+  nameWithType.vb: IReadOnlyCollection(Of TUp)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of TUp)
+  name.vb: IReadOnlyCollection(Of TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastDictionary__3_System_Collections_Generic_IDictionary___0___1__
+  name: UpcastDictionary
+  nameWithType: UpcastingCollectionExtensions.UpcastDictionary
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastDictionary
+- uid: System.Collections.Generic.IDictionary{{TKey},{TBase}}
+  commentId: T:System.Collections.Generic.IDictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TBase>
+  nameWithType: IDictionary<TKey, TBase>
+  fullName: System.Collections.Generic.IDictionary<TKey, TBase>
+  nameWithType.vb: IDictionary(Of TKey, TBase)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TBase)
+  name.vb: IDictionary(Of TKey, TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.IDictionary{{TKey},{TUp}}
+  commentId: T:System.Collections.Generic.IDictionary{``0,``2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TUp>
+  nameWithType: IDictionary<TKey, TUp>
+  fullName: System.Collections.Generic.IDictionary<TKey, TUp>
+  nameWithType.vb: IDictionary(Of TKey, TUp)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TUp)
+  name.vb: IDictionary(Of TKey, TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastReadOnlyDictionary__3_System_Collections_Generic_IReadOnlyDictionary___0___1__
+  name: UpcastReadOnlyDictionary
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlyDictionary
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlyDictionary
+- uid: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TBase}}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TBase>
+  nameWithType: IReadOnlyDictionary<TKey, TBase>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TBase>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TBase)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TBase)
+  name.vb: IReadOnlyDictionary(Of TKey, TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TUp}}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{``0,``2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TUp>
+  nameWithType: IReadOnlyDictionary<TKey, TUp>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TUp>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TUp)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TUp)
+  name.vb: IReadOnlyDictionary(Of TKey, TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic.ISet`1
+  commentId: T:System.Collections.Generic.ISet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<T>
+  nameWithType: ISet<T>
+  fullName: System.Collections.Generic.ISet<T>
+  nameWithType.vb: ISet(Of T)
+  fullName.vb: System.Collections.Generic.ISet(Of T)
+  name.vb: ISet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastSet__2_System_Collections_Generic_ISet___0__
+  name: UpcastSet
+  nameWithType: UpcastingCollectionExtensions.UpcastSet
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastSet
+- uid: System.Collections.Generic.ISet{{TBase}}
+  commentId: T:System.Collections.Generic.ISet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ISet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<TBase>
+  nameWithType: ISet<TBase>
+  fullName: System.Collections.Generic.ISet<TBase>
+  nameWithType.vb: ISet(Of TBase)
+  fullName.vb: System.Collections.Generic.ISet(Of TBase)
+  name.vb: ISet(Of TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.ISet{{TUp}}
+  commentId: T:System.Collections.Generic.ISet{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ISet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<TUp>
+  nameWithType: ISet<TUp>
+  fullName: System.Collections.Generic.ISet<TUp>
+  nameWithType.vb: ISet(Of TUp)
+  fullName.vb: System.Collections.Generic.ISet(Of TUp)
+  name.vb: ISet(Of TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUp
+  - name: )
+- uid: System.Collections.Generic.IReadOnlySet`1
+  commentId: T:System.Collections.Generic.IReadOnlySet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<T>
+  nameWithType: IReadOnlySet<T>
+  fullName: System.Collections.Generic.IReadOnlySet<T>
+  nameWithType.vb: IReadOnlySet(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of T)
+  name.vb: IReadOnlySet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet*
+  commentId: Overload:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html#Garyon_Extensions_Upcasting_UpcastingCollectionExtensions_UpcastReadOnlySet__2_System_Collections_Generic_IReadOnlySet___0__
+  name: UpcastReadOnlySet
+  nameWithType: UpcastingCollectionExtensions.UpcastReadOnlySet
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.UpcastReadOnlySet
+- uid: System.Collections.Generic.IReadOnlySet{{TBase}}
+  commentId: T:System.Collections.Generic.IReadOnlySet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlySet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<TBase>
+  nameWithType: IReadOnlySet<TBase>
+  fullName: System.Collections.Generic.IReadOnlySet<TBase>
+  nameWithType.vb: IReadOnlySet(Of TBase)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of TBase)
+  name.vb: IReadOnlySet(Of TBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - name: TBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TBase
+  - name: )
+- uid: System.Collections.Generic.IReadOnlySet{{TUp}}
+  commentId: T:System.Collections.Generic.IReadOnlySet{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlySet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<TUp>
+  nameWithType: IReadOnlySet<TUp>
+  fullName: System.Collections.Generic.IReadOnlySet<TUp>
+  nameWithType.vb: IReadOnlySet(Of TUp)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of TUp)
+  name.vb: IReadOnlySet(Of TUp)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - name: TUp
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUp
+  - name: )

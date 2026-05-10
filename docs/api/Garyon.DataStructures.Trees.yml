@@ -1,0 +1,640 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.DataStructures.Trees
+  commentId: N:Garyon.DataStructures.Trees
+  id: Garyon.DataStructures.Trees
+  children:
+  - Garyon.DataStructures.Trees.BaseTreeNode`3
+  - Garyon.DataStructures.Trees.BaseTree`3
+  - Garyon.DataStructures.Trees.BinarySearchTreeNode`1
+  - Garyon.DataStructures.Trees.BinarySearchTreeNode`3
+  - Garyon.DataStructures.Trees.BinarySearchTree`1
+  - Garyon.DataStructures.Trees.BinarySearchTree`3
+  - Garyon.DataStructures.Trees.BinaryTreeNode`1
+  - Garyon.DataStructures.Trees.BinaryTreeNode`3
+  - Garyon.DataStructures.Trees.BinaryTree`1
+  - Garyon.DataStructures.Trees.BinaryTree`3
+  - Garyon.DataStructures.Trees.ITreeNode`1
+  - Garyon.DataStructures.Trees.ITreeNode`3
+  - Garyon.DataStructures.Trees.ITree`1
+  - Garyon.DataStructures.Trees.ITree`3
+  - Garyon.DataStructures.Trees.TreeNode`1
+  - Garyon.DataStructures.Trees.TreeNode`3
+  - Garyon.DataStructures.Trees.Tree`1
+  - Garyon.DataStructures.Trees.Tree`3
+  langs:
+  - csharp
+  - vb
+  name: Garyon.DataStructures.Trees
+  nameWithType: Garyon.DataStructures.Trees
+  fullName: Garyon.DataStructures.Trees
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.DataStructures.Trees.BaseTree`3
+  commentId: T:Garyon.DataStructures.Trees.BaseTree`3
+  href: Garyon.DataStructures.Trees.BaseTree-3.html
+  name: BaseTree<TValue, TTree, TTreeNode>
+  nameWithType: BaseTree<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.BaseTree<TValue, TTree, TTreeNode>
+  nameWithType.vb: BaseTree(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.BaseTree(Of TValue, TTree, TTreeNode)
+  name.vb: BaseTree(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BaseTree`3
+    name: BaseTree
+    href: Garyon.DataStructures.Trees.BaseTree-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BaseTree`3
+    name: BaseTree
+    href: Garyon.DataStructures.Trees.BaseTree-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.BaseTreeNode`3
+  commentId: T:Garyon.DataStructures.Trees.BaseTreeNode`3
+  href: Garyon.DataStructures.Trees.BaseTreeNode-3.html
+  name: BaseTreeNode<TValue, TTree, TTreeNode>
+  nameWithType: BaseTreeNode<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.BaseTreeNode<TValue, TTree, TTreeNode>
+  nameWithType.vb: BaseTreeNode(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.BaseTreeNode(Of TValue, TTree, TTreeNode)
+  name.vb: BaseTreeNode(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BaseTreeNode`3
+    name: BaseTreeNode
+    href: Garyon.DataStructures.Trees.BaseTreeNode-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BaseTreeNode`3
+    name: BaseTreeNode
+    href: Garyon.DataStructures.Trees.BaseTreeNode-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinarySearchTree`1
+  commentId: T:Garyon.DataStructures.Trees.BinarySearchTree`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.BinarySearchTree-1.html
+  name: BinarySearchTree<T>
+  nameWithType: BinarySearchTree<T>
+  fullName: Garyon.DataStructures.Trees.BinarySearchTree<T>
+  nameWithType.vb: BinarySearchTree(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.BinarySearchTree(Of T)
+  name.vb: BinarySearchTree(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTree`1
+    name: BinarySearchTree
+    href: Garyon.DataStructures.Trees.BinarySearchTree-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTree`1
+    name: BinarySearchTree
+    href: Garyon.DataStructures.Trees.BinarySearchTree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinarySearchTree`3
+  commentId: T:Garyon.DataStructures.Trees.BinarySearchTree`3
+  href: Garyon.DataStructures.Trees.BinarySearchTree-3.html
+  name: BinarySearchTree<TValue, TTree, TTreeNode>
+  nameWithType: BinarySearchTree<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.BinarySearchTree<TValue, TTree, TTreeNode>
+  nameWithType.vb: BinarySearchTree(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.BinarySearchTree(Of TValue, TTree, TTreeNode)
+  name.vb: BinarySearchTree(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTree`3
+    name: BinarySearchTree
+    href: Garyon.DataStructures.Trees.BinarySearchTree-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTree`3
+    name: BinarySearchTree
+    href: Garyon.DataStructures.Trees.BinarySearchTree-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinarySearchTreeNode`1
+  commentId: T:Garyon.DataStructures.Trees.BinarySearchTreeNode`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.BinarySearchTreeNode-1.html
+  name: BinarySearchTreeNode<T>
+  nameWithType: BinarySearchTreeNode<T>
+  fullName: Garyon.DataStructures.Trees.BinarySearchTreeNode<T>
+  nameWithType.vb: BinarySearchTreeNode(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.BinarySearchTreeNode(Of T)
+  name.vb: BinarySearchTreeNode(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTreeNode`1
+    name: BinarySearchTreeNode
+    href: Garyon.DataStructures.Trees.BinarySearchTreeNode-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTreeNode`1
+    name: BinarySearchTreeNode
+    href: Garyon.DataStructures.Trees.BinarySearchTreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinarySearchTreeNode`3
+  commentId: T:Garyon.DataStructures.Trees.BinarySearchTreeNode`3
+  href: Garyon.DataStructures.Trees.BinarySearchTreeNode-3.html
+  name: BinarySearchTreeNode<TValue, TTree, TTreeNode>
+  nameWithType: BinarySearchTreeNode<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.BinarySearchTreeNode<TValue, TTree, TTreeNode>
+  nameWithType.vb: BinarySearchTreeNode(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.BinarySearchTreeNode(Of TValue, TTree, TTreeNode)
+  name.vb: BinarySearchTreeNode(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTreeNode`3
+    name: BinarySearchTreeNode
+    href: Garyon.DataStructures.Trees.BinarySearchTreeNode-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinarySearchTreeNode`3
+    name: BinarySearchTreeNode
+    href: Garyon.DataStructures.Trees.BinarySearchTreeNode-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinaryTree`1
+  commentId: T:Garyon.DataStructures.Trees.BinaryTree`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.BinaryTree-1.html
+  name: BinaryTree<T>
+  nameWithType: BinaryTree<T>
+  fullName: Garyon.DataStructures.Trees.BinaryTree<T>
+  nameWithType.vb: BinaryTree(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.BinaryTree(Of T)
+  name.vb: BinaryTree(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinaryTree`1
+    name: BinaryTree
+    href: Garyon.DataStructures.Trees.BinaryTree-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinaryTree`1
+    name: BinaryTree
+    href: Garyon.DataStructures.Trees.BinaryTree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinaryTree`3
+  commentId: T:Garyon.DataStructures.Trees.BinaryTree`3
+  href: Garyon.DataStructures.Trees.BinaryTree-3.html
+  name: BinaryTree<TValue, TTree, TTreeNode>
+  nameWithType: BinaryTree<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.BinaryTree<TValue, TTree, TTreeNode>
+  nameWithType.vb: BinaryTree(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.BinaryTree(Of TValue, TTree, TTreeNode)
+  name.vb: BinaryTree(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinaryTree`3
+    name: BinaryTree
+    href: Garyon.DataStructures.Trees.BinaryTree-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinaryTree`3
+    name: BinaryTree
+    href: Garyon.DataStructures.Trees.BinaryTree-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinaryTreeNode`1
+  commentId: T:Garyon.DataStructures.Trees.BinaryTreeNode`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.BinaryTreeNode-1.html
+  name: BinaryTreeNode<T>
+  nameWithType: BinaryTreeNode<T>
+  fullName: Garyon.DataStructures.Trees.BinaryTreeNode<T>
+  nameWithType.vb: BinaryTreeNode(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.BinaryTreeNode(Of T)
+  name.vb: BinaryTreeNode(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinaryTreeNode`1
+    name: BinaryTreeNode
+    href: Garyon.DataStructures.Trees.BinaryTreeNode-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinaryTreeNode`1
+    name: BinaryTreeNode
+    href: Garyon.DataStructures.Trees.BinaryTreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.Trees.BinaryTreeNode`3
+  commentId: T:Garyon.DataStructures.Trees.BinaryTreeNode`3
+  href: Garyon.DataStructures.Trees.BinaryTreeNode-3.html
+  name: BinaryTreeNode<TValue, TTree, TTreeNode>
+  nameWithType: BinaryTreeNode<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.BinaryTreeNode<TValue, TTree, TTreeNode>
+  nameWithType.vb: BinaryTreeNode(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.BinaryTreeNode(Of TValue, TTree, TTreeNode)
+  name.vb: BinaryTreeNode(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.BinaryTreeNode`3
+    name: BinaryTreeNode
+    href: Garyon.DataStructures.Trees.BinaryTreeNode-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.BinaryTreeNode`3
+    name: BinaryTreeNode
+    href: Garyon.DataStructures.Trees.BinaryTreeNode-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.ITree`1
+  commentId: T:Garyon.DataStructures.Trees.ITree`1
+  href: Garyon.DataStructures.Trees.ITree-1.html
+  name: ITree<TValue>
+  nameWithType: ITree<TValue>
+  fullName: Garyon.DataStructures.Trees.ITree<TValue>
+  nameWithType.vb: ITree(Of TValue)
+  fullName.vb: Garyon.DataStructures.Trees.ITree(Of TValue)
+  name.vb: ITree(Of TValue)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.ITree`1
+    name: ITree
+    href: Garyon.DataStructures.Trees.ITree-1.html
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.ITree`1
+    name: ITree
+    href: Garyon.DataStructures.Trees.ITree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.DataStructures.Trees.ITree`3
+  commentId: T:Garyon.DataStructures.Trees.ITree`3
+  href: Garyon.DataStructures.Trees.ITree-3.html
+  name: ITree<TValue, TTree, TTreeNode>
+  nameWithType: ITree<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.ITree<TValue, TTree, TTreeNode>
+  nameWithType.vb: ITree(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.ITree(Of TValue, TTree, TTreeNode)
+  name.vb: ITree(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.ITree`3
+    name: ITree
+    href: Garyon.DataStructures.Trees.ITree-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.ITree`3
+    name: ITree
+    href: Garyon.DataStructures.Trees.ITree-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.ITreeNode`1
+  commentId: T:Garyon.DataStructures.Trees.ITreeNode`1
+  href: Garyon.DataStructures.Trees.ITreeNode-1.html
+  name: ITreeNode<TValue>
+  nameWithType: ITreeNode<TValue>
+  fullName: Garyon.DataStructures.Trees.ITreeNode<TValue>
+  nameWithType.vb: ITreeNode(Of TValue)
+  fullName.vb: Garyon.DataStructures.Trees.ITreeNode(Of TValue)
+  name.vb: ITreeNode(Of TValue)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.ITreeNode`1
+    name: ITreeNode
+    href: Garyon.DataStructures.Trees.ITreeNode-1.html
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.ITreeNode`1
+    name: ITreeNode
+    href: Garyon.DataStructures.Trees.ITreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Garyon.DataStructures.Trees.ITreeNode`3
+  commentId: T:Garyon.DataStructures.Trees.ITreeNode`3
+  href: Garyon.DataStructures.Trees.ITreeNode-3.html
+  name: ITreeNode<TValue, TTree, TTreeNode>
+  nameWithType: ITreeNode<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.ITreeNode<TValue, TTree, TTreeNode>
+  nameWithType.vb: ITreeNode(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.ITreeNode(Of TValue, TTree, TTreeNode)
+  name.vb: ITreeNode(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.ITreeNode`3
+    name: ITreeNode
+    href: Garyon.DataStructures.Trees.ITreeNode-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.ITreeNode`3
+    name: ITreeNode
+    href: Garyon.DataStructures.Trees.ITreeNode-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.Tree`1
+  commentId: T:Garyon.DataStructures.Trees.Tree`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.Tree-1.html
+  name: Tree<T>
+  nameWithType: Tree<T>
+  fullName: Garyon.DataStructures.Trees.Tree<T>
+  nameWithType.vb: Tree(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.Tree(Of T)
+  name.vb: Tree(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.Tree`1
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.Tree`1
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.Trees.Tree`3
+  commentId: T:Garyon.DataStructures.Trees.Tree`3
+  href: Garyon.DataStructures.Trees.Tree-3.html
+  name: Tree<TValue, TTree, TTreeNode>
+  nameWithType: Tree<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.Tree<TValue, TTree, TTreeNode>
+  nameWithType.vb: Tree(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.Tree(Of TValue, TTree, TTreeNode)
+  name.vb: Tree(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.Tree`3
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.Tree`3
+    name: Tree
+    href: Garyon.DataStructures.Trees.Tree-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees.TreeNode`1
+  commentId: T:Garyon.DataStructures.Trees.TreeNode`1
+  parent: Garyon.DataStructures.Trees
+  href: Garyon.DataStructures.Trees.TreeNode-1.html
+  name: TreeNode<T>
+  nameWithType: TreeNode<T>
+  fullName: Garyon.DataStructures.Trees.TreeNode<T>
+  nameWithType.vb: TreeNode(Of T)
+  fullName.vb: Garyon.DataStructures.Trees.TreeNode(Of T)
+  name.vb: TreeNode(Of T)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.TreeNode`1
+    name: TreeNode
+    href: Garyon.DataStructures.Trees.TreeNode-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.TreeNode`1
+    name: TreeNode
+    href: Garyon.DataStructures.Trees.TreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.DataStructures.Trees.TreeNode`3
+  commentId: T:Garyon.DataStructures.Trees.TreeNode`3
+  href: Garyon.DataStructures.Trees.TreeNode-3.html
+  name: TreeNode<TValue, TTree, TTreeNode>
+  nameWithType: TreeNode<TValue, TTree, TTreeNode>
+  fullName: Garyon.DataStructures.Trees.TreeNode<TValue, TTree, TTreeNode>
+  nameWithType.vb: TreeNode(Of TValue, TTree, TTreeNode)
+  fullName.vb: Garyon.DataStructures.Trees.TreeNode(Of TValue, TTree, TTreeNode)
+  name.vb: TreeNode(Of TValue, TTree, TTreeNode)
+  spec.csharp:
+  - uid: Garyon.DataStructures.Trees.TreeNode`3
+    name: TreeNode
+    href: Garyon.DataStructures.Trees.TreeNode-3.html
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.DataStructures.Trees.TreeNode`3
+    name: TreeNode
+    href: Garyon.DataStructures.Trees.TreeNode-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TTree
+  - name: ','
+  - name: " "
+  - name: TTreeNode
+  - name: )
+- uid: Garyon.DataStructures.Trees
+  commentId: N:Garyon.DataStructures.Trees
+  href: Garyon.html
+  name: Garyon.DataStructures.Trees
+  nameWithType: Garyon.DataStructures.Trees
+  fullName: Garyon.DataStructures.Trees
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.DataStructures
+    name: DataStructures
+    href: Garyon.DataStructures.html
+  - name: .
+  - uid: Garyon.DataStructures.Trees
+    name: Trees
+    href: Garyon.DataStructures.Trees.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.DataStructures
+    name: DataStructures
+    href: Garyon.DataStructures.html
+  - name: .
+  - uid: Garyon.DataStructures.Trees
+    name: Trees
+    href: Garyon.DataStructures.Trees.html

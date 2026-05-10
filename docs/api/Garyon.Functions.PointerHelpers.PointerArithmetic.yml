@@ -1,0 +1,3934 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic
+  commentId: T:Garyon.Functions.PointerHelpers.PointerArithmetic
+  id: PointerArithmetic
+  parent: Garyon.Functions.PointerHelpers
+  children:
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  - Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  langs:
+  - csharp
+  - vb
+  name: PointerArithmetic
+  nameWithType: PointerArithmetic
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: PointerArithmetic
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Provides functions that aid pointer arithmetic.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static class PointerArithmetic
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Module PointerArithmetic
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.Int32)
+  id: Increment``2(``0*@,``1*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2>(ref T1*, ref T2*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 31
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, int increment = 1) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, Integer)
+  name.vb: Increment(Of T1, T2)(T1*, T2*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.Int32)
+  id: Increment``3(``0*@,``1*@,``2*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 62
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, int increment = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, Integer)
+  name.vb: Increment(Of T1, T2, T3)(T1*, T2*, T3*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  id: Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 101
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, int increment = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Integer)
+  name.vb: Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  id: Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 148
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, int increment = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Integer)
+  name.vb: Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  id: Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 203
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, int increment = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Integer)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  id: Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 266
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, int increment = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Integer)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  id: Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, int)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 337
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, int increment = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to increment.
+    - id: increment
+      type: System.Int32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, increment As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Integer)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.UInt32)
+  id: Increment``2(``0*@,``1*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2>(ref T1*, ref T2*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 375
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, uint increment) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, UInteger)
+  name.vb: Increment(Of T1, T2)(T1*, T2*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.UInt32)
+  id: Increment``3(``0*@,``1*@,``2*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 406
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, uint increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, UInteger)
+  name.vb: Increment(Of T1, T2, T3)(T1*, T2*, T3*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  id: Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 445
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, uint increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, UInteger)
+  name.vb: Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  id: Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 492
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, uint increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, UInteger)
+  name.vb: Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  id: Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 547
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, uint increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, UInteger)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  id: Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 610
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, uint increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, UInteger)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  id: Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, uint)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 681
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, uint increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to increment.
+    - id: increment
+      type: System.UInt32
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, increment As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, UInteger)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.Int64)
+  id: Increment``2(``0*@,``1*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2>(ref T1*, ref T2*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 719
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, long increment) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, Long)
+  name.vb: Increment(Of T1, T2)(T1*, T2*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.Int64)
+  id: Increment``3(``0*@,``1*@,``2*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 750
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, long increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, Long)
+  name.vb: Increment(Of T1, T2, T3)(T1*, T2*, T3*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  id: Increment``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 789
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, long increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Long)
+  name.vb: Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  id: Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 836
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, long increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Long)
+  name.vb: Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  id: Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 891
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, long increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Long)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  id: Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 954
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, long increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Long)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  id: Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, long)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1025
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, long increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to increment.
+    - id: increment
+      type: System.Int64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, increment As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Long)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``2(``0*@,``1*@,System.UInt64)
+  id: Increment``2(``0*@,``1*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2>(ref T1*, ref T2*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2>(ref T1*, ref T2*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1063
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2>(ref T1* p1, ref T2* p2, ulong increment) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2)(T1*, T2*, ULong)
+  name.vb: Increment(Of T1, T2)(T1*, T2*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``3(``0*@,``1*@,``2*@,System.UInt64)
+  id: Increment``3(``0*@,``1*@,``2*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3>(ref T1*, ref T2*, ref T3*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1094
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, ulong increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3)(T1*, T2*, T3*, ULong)
+  name.vb: Increment(Of T1, T2, T3)(T1*, T2*, T3*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  id: Increment``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1133
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ulong increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, ULong)
+  name.vb: Increment(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  id: Increment``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1180
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ulong increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, ULong)
+  name.vb: Increment(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  id: Increment``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1235
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ulong increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, ULong)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  id: Increment``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1298
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ulong increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, ULong)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  id: Increment``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, ulong)
+  nameWithType: PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Increment
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1369
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Increments 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Increment<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, ulong increment) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to increment.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to increment.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to increment.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to increment.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to increment.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to increment.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to increment.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to increment.
+    - id: increment
+      type: System.UInt64
+      description: The amount to increment the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Increment(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, increment As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  nameWithType.vb: PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, ULong)
+  name.vb: Increment(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.Int32)
+  id: Decrement``2(``0*@,``1*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2>(ref T1*, ref T2*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1409
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, int decrement = 1) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, Integer)
+  name.vb: Decrement(Of T1, T2)(T1*, T2*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.Int32)
+  id: Decrement``3(``0*@,``1*@,``2*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1440
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, int decrement = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, Integer)
+  name.vb: Decrement(Of T1, T2, T3)(T1*, T2*, T3*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  id: Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1479
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, int decrement = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Integer)
+  name.vb: Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  id: Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1526
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, int decrement = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Integer)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  id: Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1581
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, int decrement = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Integer)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  id: Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1644
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, int decrement = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Integer)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  id: Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, int)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, int)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1715
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, int decrement = 1) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to decrement.
+    - id: decrement
+      type: System.Int32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, decrement As Integer = 1)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Integer)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Integer)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Integer)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.UInt32)
+  id: Decrement``2(``0*@,``1*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2>(ref T1*, ref T2*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1753
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, uint decrement) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, UInteger)
+  name.vb: Decrement(Of T1, T2)(T1*, T2*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.UInt32)
+  id: Decrement``3(``0*@,``1*@,``2*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1784
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, uint decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, UInteger)
+  name.vb: Decrement(Of T1, T2, T3)(T1*, T2*, T3*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  id: Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1823
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, uint decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, UInteger)
+  name.vb: Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  id: Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1870
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, uint decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, UInteger)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  id: Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1925
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, uint decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, UInteger)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  id: Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 1988
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, uint decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, UInteger)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  id: Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt32)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, uint)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, uint)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2059
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, uint decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to decrement.
+    - id: decrement
+      type: System.UInt32
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, decrement As UInteger)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, UInteger)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, UInteger)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, UInteger)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.Int64)
+  id: Decrement``2(``0*@,``1*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2>(ref T1*, ref T2*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2097
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, long decrement) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, Long)
+  name.vb: Decrement(Of T1, T2)(T1*, T2*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.Int64)
+  id: Decrement``3(``0*@,``1*@,``2*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2128
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, long decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, Long)
+  name.vb: Decrement(Of T1, T2, T3)(T1*, T2*, T3*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  id: Decrement``4(``0*@,``1*@,``2*@,``3*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2167
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, long decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Long)
+  name.vb: Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  id: Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2214
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, long decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Long)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  id: Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2269
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, long decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Long)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  id: Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2332
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, long decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Long)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  id: Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.Int64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, long)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, long)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2403
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, long decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to decrement.
+    - id: decrement
+      type: System.Int64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, decrement As Long)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Long)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Long)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, Long)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``2(``0*@,``1*@,System.UInt64)
+  id: Decrement``2(``0*@,``1*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2>(ref T1*, ref T2*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2>(ref T1*, ref T2*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2441
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 2 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2>(ref T1* p1, ref T2* p2, ulong decrement) where T1 : unmanaged where T2 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure)(p1 As T1*, p2 As T2*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2)(T1*, T2*, ULong)
+  name.vb: Decrement(Of T1, T2)(T1*, T2*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``3(``0*@,``1*@,``2*@,System.UInt64)
+  id: Decrement``3(``0*@,``1*@,``2*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3>(ref T1*, ref T2*, ref T3*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2472
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 3 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3>(ref T1* p1, ref T2* p2, ref T3* p3, ulong decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3)(T1*, T2*, T3*, ULong)
+  name.vb: Decrement(Of T1, T2, T3)(T1*, T2*, T3*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  id: Decrement``4(``0*@,``1*@,``2*@,``3*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4>(ref T1*, ref T2*, ref T3*, ref T4*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2511
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 4 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ulong decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, ULong)
+  name.vb: Decrement(Of T1, T2, T3, T4)(T1*, T2*, T3*, T4*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  id: Decrement``5(``0*@,``1*@,``2*@,``3*@,``4*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2558
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 5 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ulong decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, ULong)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5)(T1*, T2*, T3*, T4*, T5*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  id: Decrement``6(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2613
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 6 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ulong decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, ULong)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6)(T1*, T2*, T3*, T4*, T5*, T6*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  id: Decrement``7(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2676
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 7 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ulong decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, ULong)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, ULong)
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  commentId: M:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  id: Decrement``8(``0*@,``1*@,``2*@,``3*@,``4*@,``5*@,``6*@,``7*@,System.UInt64)
+  parent: Garyon.Functions.PointerHelpers.PointerArithmetic
+  langs:
+  - csharp
+  - vb
+  name: Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, ulong)
+  nameWithType: PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, ulong)
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1*, ref T2*, ref T3*, ref T4*, ref T5*, ref T6*, ref T7*, ref T8*, ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Decrement
+    path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
+    startLine: 2747
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.PointerHelpers
+  summary: Decrements 8 pointers by an amount.
+  example: []
+  syntax:
+    content: 'public static void Decrement<T1, T2, T3, T4, T5, T6, T7, T8>(ref T1* p1, ref T2* p2, ref T3* p3, ref T4* p4, ref T5* p5, ref T6* p6, ref T7* p7, ref T8* p8, ulong decrement) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged where T4 : unmanaged where T5 : unmanaged where T6 : unmanaged where T7 : unmanaged where T8 : unmanaged'
+    parameters:
+    - id: p1
+      type: '{T1}*'
+      description: The 1st pointer to decrement.
+    - id: p2
+      type: '{T2}*'
+      description: The 2nd pointer to decrement.
+    - id: p3
+      type: '{T3}*'
+      description: The 3rd pointer to decrement.
+    - id: p4
+      type: '{T4}*'
+      description: The 4th pointer to decrement.
+    - id: p5
+      type: '{T5}*'
+      description: The 5th pointer to decrement.
+    - id: p6
+      type: '{T6}*'
+      description: The 6th pointer to decrement.
+    - id: p7
+      type: '{T7}*'
+      description: The 7th pointer to decrement.
+    - id: p8
+      type: '{T8}*'
+      description: The 8th pointer to decrement.
+    - id: decrement
+      type: System.UInt64
+      description: The amount to decrement the pointers by.
+    typeParameters:
+    - id: T1
+      description: The 1st type of the pointer.
+    - id: T2
+      description: The 2nd type of the pointer.
+    - id: T3
+      description: The 3rd type of the pointer.
+    - id: T4
+      description: The 4th type of the pointer.
+    - id: T5
+      description: The 5th type of the pointer.
+    - id: T6
+      description: The 6th type of the pointer.
+    - id: T7
+      description: The 7th type of the pointer.
+    - id: T8
+      description: The 8th type of the pointer.
+    content.vb: Public Shared Sub Decrement(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure, T5 As Structure, T6 As Structure, T7 As Structure, T8 As Structure)(p1 As T1*, p2 As T2*, p3 As T3*, p4 As T4*, p5 As T5*, p6 As T6*, p7 As T7*, p8 As T8*, decrement As ULong)
+  overload: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  nameWithType.vb: PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, ULong)
+  fullName.vb: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, ULong)
+  name.vb: Decrement(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1*, T2*, T3*, T4*, T5*, T6*, T7*, T8*, ULong)
+references:
+- uid: Garyon.Functions.PointerHelpers
+  commentId: N:Garyon.Functions.PointerHelpers
+  href: Garyon.html
+  name: Garyon.Functions.PointerHelpers
+  nameWithType: Garyon.Functions.PointerHelpers
+  fullName: Garyon.Functions.PointerHelpers
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  - name: .
+  - uid: Garyon.Functions.PointerHelpers
+    name: PointerHelpers
+    href: Garyon.Functions.PointerHelpers.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  - name: .
+  - uid: Garyon.Functions.PointerHelpers
+    name: PointerHelpers
+    href: Garyon.Functions.PointerHelpers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment*
+  commentId: Overload:Garyon.Functions.PointerHelpers.PointerArithmetic.Increment
+  href: Garyon.Functions.PointerHelpers.PointerArithmetic.html#Garyon_Functions_PointerHelpers_PointerArithmetic_Increment__2___0_____1___System_Int32_
+  name: Increment
+  nameWithType: PointerArithmetic.Increment
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Increment
+- uid: '{T1}*'
+  isExternal: true
+  name: T1*
+  nameWithType: T1*
+  fullName: T1*
+  spec.csharp:
+  - name: T1
+  - name: '*'
+  spec.vb:
+  - name: T1
+  - name: '*'
+- uid: '{T2}*'
+  isExternal: true
+  name: T2*
+  nameWithType: T2*
+  fullName: T2*
+  spec.csharp:
+  - name: T2
+  - name: '*'
+  spec.vb:
+  - name: T2
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: '{T3}*'
+  isExternal: true
+  name: T3*
+  nameWithType: T3*
+  fullName: T3*
+  spec.csharp:
+  - name: T3
+  - name: '*'
+  spec.vb:
+  - name: T3
+  - name: '*'
+- uid: '{T4}*'
+  isExternal: true
+  name: T4*
+  nameWithType: T4*
+  fullName: T4*
+  spec.csharp:
+  - name: T4
+  - name: '*'
+  spec.vb:
+  - name: T4
+  - name: '*'
+- uid: '{T5}*'
+  isExternal: true
+  name: T5*
+  nameWithType: T5*
+  fullName: T5*
+  spec.csharp:
+  - name: T5
+  - name: '*'
+  spec.vb:
+  - name: T5
+  - name: '*'
+- uid: '{T6}*'
+  isExternal: true
+  name: T6*
+  nameWithType: T6*
+  fullName: T6*
+  spec.csharp:
+  - name: T6
+  - name: '*'
+  spec.vb:
+  - name: T6
+  - name: '*'
+- uid: '{T7}*'
+  isExternal: true
+  name: T7*
+  nameWithType: T7*
+  fullName: T7*
+  spec.csharp:
+  - name: T7
+  - name: '*'
+  spec.vb:
+  - name: T7
+  - name: '*'
+- uid: '{T8}*'
+  isExternal: true
+  name: T8*
+  nameWithType: T8*
+  fullName: T8*
+  spec.csharp:
+  - name: T8
+  - name: '*'
+  spec.vb:
+  - name: T8
+  - name: '*'
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement*
+  commentId: Overload:Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement
+  href: Garyon.Functions.PointerHelpers.PointerArithmetic.html#Garyon_Functions_PointerHelpers_PointerArithmetic_Decrement__2___0_____1___System_Int32_
+  name: Decrement
+  nameWithType: PointerArithmetic.Decrement
+  fullName: Garyon.Functions.PointerHelpers.PointerArithmetic.Decrement

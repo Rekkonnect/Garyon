@@ -1,0 +1,532 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.Windows.FileExplorerUtilities
+  commentId: T:Garyon.Functions.Windows.FileExplorerUtilities
+  id: FileExplorerUtilities
+  parent: Garyon.Functions.Windows
+  children:
+  - Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess
+  - Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer(System.String)
+  - Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot(System.String)
+  - Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot(System.String)
+  langs:
+  - csharp
+  - vb
+  name: FileExplorerUtilities
+  nameWithType: FileExplorerUtilities
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/Windows/FileExplorerUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FileExplorerUtilities
+    path: ../Garyon/Functions/Windows/FileExplorerUtilities.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Windows
+  summary: Provides utility functions regarding the Windows file explorer.
+  example: []
+  syntax:
+    content: public static class FileExplorerUtilities
+    content.vb: Public Module FileExplorerUtilities
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer(System.String)
+  commentId: M:Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer(System.String)
+  id: SelectFileInExplorer(System.String)
+  parent: Garyon.Functions.Windows.FileExplorerUtilities
+  langs:
+  - csharp
+  - vb
+  name: SelectFileInExplorer(string)
+  nameWithType: FileExplorerUtilities.SelectFileInExplorer(string)
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Windows/FileExplorerUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SelectFileInExplorer
+    path: ../Garyon/Functions/Windows/FileExplorerUtilities.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Windows
+  summary: >-
+    Opens the file explorer at the directory at which a specified file is
+
+    contained, while also selecting it.
+  example: []
+  syntax:
+    content: public static Process SelectFileInExplorer(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the file to open in the file explorer.
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function SelectFileInExplorer(path As String) As Process
+  overload: Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer*
+  nameWithType.vb: FileExplorerUtilities.SelectFileInExplorer(String)
+  fullName.vb: Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer(String)
+  name.vb: SelectFileInExplorer(String)
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot(System.String)
+  commentId: M:Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot(System.String)
+  id: StartExplorerAtRoot(System.String)
+  parent: Garyon.Functions.Windows.FileExplorerUtilities
+  langs:
+  - csharp
+  - vb
+  name: StartExplorerAtRoot(string)
+  nameWithType: FileExplorerUtilities.StartExplorerAtRoot(string)
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Windows/FileExplorerUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: StartExplorerAtRoot
+    path: ../Garyon/Functions/Windows/FileExplorerUtilities.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Windows
+  summary: Opens the file explorer at the directory that is specified.
+  example: []
+  syntax:
+    content: public static Process StartExplorerAtRoot(string root)
+    parameters:
+    - id: root
+      type: System.String
+      description: The root folder to open the file explorer at.
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function StartExplorerAtRoot(root As String) As Process
+  overload: Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot*
+  nameWithType.vb: FileExplorerUtilities.StartExplorerAtRoot(String)
+  fullName.vb: Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot(String)
+  name.vb: StartExplorerAtRoot(String)
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess
+  commentId: M:Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess
+  id: OpenNewDefaultExplorerProcess
+  parent: Garyon.Functions.Windows.FileExplorerUtilities
+  langs:
+  - csharp
+  - vb
+  name: OpenNewDefaultExplorerProcess()
+  nameWithType: FileExplorerUtilities.OpenNewDefaultExplorerProcess()
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Windows/FileExplorerUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OpenNewDefaultExplorerProcess
+    path: ../Garyon/Functions/Windows/FileExplorerUtilities.cs
+    startLine: 38
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Windows
+  summary: Opens the file explorer at the default directory.
+  example: []
+  syntax:
+    content: public static Process OpenNewDefaultExplorerProcess()
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function OpenNewDefaultExplorerProcess() As Process
+  overload: Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess*
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot(System.String)
+  commentId: M:Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot(System.String)
+  id: StartCustomExplorerAtRoot(System.String)
+  parent: Garyon.Functions.Windows.FileExplorerUtilities
+  langs:
+  - csharp
+  - vb
+  name: StartCustomExplorerAtRoot(string)
+  nameWithType: FileExplorerUtilities.StartCustomExplorerAtRoot(string)
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/Windows/FileExplorerUtilities.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: StartCustomExplorerAtRoot
+    path: ../Garyon/Functions/Windows/FileExplorerUtilities.cs
+    startLine: 54
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions.Windows
+  summary: Opens the default set file explorer at the directory that is specified.
+  remarks: >-
+    This method uses the start command to open the file explorer. This is
+
+    used by some third-party file explorers to open their custom explorer
+
+    instead of the Windows one, for example File Pilot.
+  example: []
+  syntax:
+    content: public static Process StartCustomExplorerAtRoot(string root)
+    parameters:
+    - id: root
+      type: System.String
+      description: The root folder to open the file explorer at.
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared Function StartCustomExplorerAtRoot(root As String) As Process
+  overload: Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot*
+  nameWithType.vb: FileExplorerUtilities.StartCustomExplorerAtRoot(String)
+  fullName.vb: Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot(String)
+  name.vb: StartCustomExplorerAtRoot(String)
+references:
+- uid: Garyon.Functions.Windows
+  commentId: N:Garyon.Functions.Windows
+  href: Garyon.html
+  name: Garyon.Functions.Windows
+  nameWithType: Garyon.Functions.Windows
+  fullName: Garyon.Functions.Windows
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  - name: .
+  - uid: Garyon.Functions.Windows
+    name: Windows
+    href: Garyon.Functions.Windows.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  - name: .
+  - uid: Garyon.Functions.Windows
+    name: Windows
+    href: Garyon.Functions.Windows.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer*
+  commentId: Overload:Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer
+  href: Garyon.Functions.Windows.FileExplorerUtilities.html#Garyon_Functions_Windows_FileExplorerUtilities_SelectFileInExplorer_System_String_
+  name: SelectFileInExplorer
+  nameWithType: FileExplorerUtilities.SelectFileInExplorer
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.SelectFileInExplorer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Diagnostics.Process
+  commentId: T:System.Diagnostics.Process
+  parent: System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.process
+  name: Process
+  nameWithType: Process
+  fullName: System.Diagnostics.Process
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot*
+  commentId: Overload:Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot
+  href: Garyon.Functions.Windows.FileExplorerUtilities.html#Garyon_Functions_Windows_FileExplorerUtilities_StartExplorerAtRoot_System_String_
+  name: StartExplorerAtRoot
+  nameWithType: FileExplorerUtilities.StartExplorerAtRoot
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.StartExplorerAtRoot
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess*
+  commentId: Overload:Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess
+  href: Garyon.Functions.Windows.FileExplorerUtilities.html#Garyon_Functions_Windows_FileExplorerUtilities_OpenNewDefaultExplorerProcess
+  name: OpenNewDefaultExplorerProcess
+  nameWithType: FileExplorerUtilities.OpenNewDefaultExplorerProcess
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.OpenNewDefaultExplorerProcess
+- uid: Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot*
+  commentId: Overload:Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot
+  href: Garyon.Functions.Windows.FileExplorerUtilities.html#Garyon_Functions_Windows_FileExplorerUtilities_StartCustomExplorerAtRoot_System_String_
+  name: StartCustomExplorerAtRoot
+  nameWithType: FileExplorerUtilities.StartCustomExplorerAtRoot
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities.StartCustomExplorerAtRoot

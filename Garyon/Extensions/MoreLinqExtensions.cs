@@ -1,4 +1,5 @@
 ﻿using Garyon.Functions;
+using Polyfills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -227,6 +228,130 @@ public static class MoreLinqExtensions
     public static bool CountAtMost<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
     {
         return source.Where(predicate).CountAtMost(occurrences);
+    }
+
+    /// <summary>
+    /// Determines whether there are exactly a specified number of occurrences
+    /// of elements in an enumerable.
+    /// </summary>
+    /// <param name="count">
+    /// The exact number of elements that must exist in the enumerable.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the provided collection contains exactly
+    /// <paramref name="count"/> elements, otherwise <see langword="false"/>.
+    /// </returns>
+    public static bool CountExactly<T>(this IEnumerable<T> source, int count)
+    {
+        if (count < 0)
+            return false;
+
+        if (source.TryGetNonEnumeratedCount(out var quickCount))
+        {
+            return quickCount == count;
+        }
+
+        using var enumerator = source.GetEnumerator();
+
+        for (int i = 0; i < count; i++)
+            if (!enumerator.MoveNext())
+                return false;
+
+        return !enumerator.MoveNext();
+    }
+
+    /// <summary>
+    /// Determines whether there are exactly a specified number of occurrences
+    /// of elements meeting a condition in a collection.
+    /// </summary>
+    /// <typeparam name="T">
+    /// The type of the elements in the collection.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source collection whose elements to compare against the condition.
+    /// </param>
+    /// <param name="predicate">
+    /// The condition that the elements must meet.
+    /// </param>
+    /// <param name="occurrences">
+    /// The exact number of elements that must meet the given condition.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the provided collection contains exactly
+    /// <paramref name="occurrences"/> elements that meet the given condition,
+    /// otherwise <see langword="false"/>.
+    /// </returns>
+    public static bool CountExactly<T>(this IEnumerable<T> source, Func<T, bool> predicate, int occurrences)
+    {
+        return source.Where(predicate).CountExactly(occurrences);
+    }
+
+    /// <summary>
+    /// Determines whether there are between a specified range (inclusive) of
+    /// occurrences of elements in an enumerable.
+    /// </summary>
+    /// <param name="minCount">
+    /// The minimum number of elements that must exist in the enumerable.
+    /// </param>
+    /// <param name="maxCount">
+    /// The maximum number of elements that may exist in the enumerable.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the provided collection contains between
+    /// <paramref name="minCount"/> and <paramref name="maxCount"/> (inclusive)
+    /// elements, otherwise <see langword="false"/>.
+    /// </returns>
+    public static bool CountBetween<T>(this IEnumerable<T> source, int minCount, int maxCount)
+    {
+        if (minCount > maxCount)
+            return false;
+        if (maxCount < 0)
+            return false;
+        if (minCount < 0)
+            minCount = 0;
+
+        if (source.TryGetNonEnumeratedCount(out var quickCount))
+        {
+            return quickCount >= minCount && quickCount <= maxCount;
+        }
+
+        using var enumerator = source.GetEnumerator();
+
+        int count = 0;
+        while (count <= maxCount && enumerator.MoveNext())
+            count++;
+
+        return count >= minCount && count <= maxCount;
+    }
+
+    /// <summary>
+    /// Determines whether there are between a specified range (inclusive) of
+    /// occurrences of elements meeting a condition in a collection.
+    /// </summary>
+    /// <typeparam name="T">
+    /// The type of the elements in the collection.
+    /// </typeparam>
+    /// <param name="source">
+    /// The source collection whose elements to compare against the condition.
+    /// </param>
+    /// <param name="predicate">
+    /// The condition that the elements must meet.
+    /// </param>
+    /// <param name="minOccurrences">
+    /// The minimum number of elements that must meet the given condition.
+    /// </param>
+    /// <param name="maxOccurrences">
+    /// The maximum number of elements that may meet the given condition.
+    /// </param>
+    /// <returns>
+    /// <see langword="true"/> if the provided collection contains between
+    /// <paramref name="minOccurrences"/> and <paramref name="maxOccurrences"/>
+    /// (inclusive) elements that meet the given condition, otherwise
+    /// <see langword="false"/>.
+    /// </returns>
+    public static bool CountBetween<T>(this IEnumerable<T> source, Func<T, bool> predicate, int minOccurrences, int maxOccurrences)
+    {
+        return source.Where(predicate).CountBetween(minOccurrences, maxOccurrences);
     }
 
     /// <summary>

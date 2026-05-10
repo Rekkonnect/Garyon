@@ -718,9 +718,7 @@ public static class SpanExtensions
         ReadOnlySpan<T> left,
         ReadOnlySpan<T> right,
         out ReadOnlySpan<T> inner)
-#if REQUIRES_IEQUATABLE_FOR_SPAN_SEQUENCE_EQUALS
         where T : IEquatable<T>
-#endif
     {
         var leftLength = left.Length;
         var rightLength = right.Length;

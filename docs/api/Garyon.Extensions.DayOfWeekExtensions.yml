@@ -1,0 +1,583 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.DayOfWeekExtensions
+  commentId: T:Garyon.Extensions.DayOfWeekExtensions
+  id: DayOfWeekExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart(System.DayOfWeek,System.DayOfWeek)
+  - Garyon.Extensions.DayOfWeekExtensions.IsWeekday(System.DayOfWeek)
+  - Garyon.Extensions.DayOfWeekExtensions.IsWeekend(System.DayOfWeek)
+  - Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay(System.DayOfWeek,System.DayOfWeek)
+  langs:
+  - csharp
+  - vb
+  name: DayOfWeekExtensions
+  nameWithType: DayOfWeekExtensions
+  fullName: Garyon.Extensions.DayOfWeekExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/DayOfWeekExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DayOfWeekExtensions
+    path: ../Garyon/Extensions/DayOfWeekExtensions.cs
+    startLine: 8
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for the <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> enum.
+  example: []
+  syntax:
+    content: public static class DayOfWeekExtensions
+    content.vb: Public Module DayOfWeekExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay(System.DayOfWeek,System.DayOfWeek)
+  commentId: M:Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay(System.DayOfWeek,System.DayOfWeek)
+  id: ShiftRegardingStartingWeekDay(System.DayOfWeek,System.DayOfWeek)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DayOfWeekExtensions
+  langs:
+  - csharp
+  - vb
+  name: ShiftRegardingStartingWeekDay(DayOfWeek, DayOfWeek)
+  nameWithType: DayOfWeekExtensions.ShiftRegardingStartingWeekDay(DayOfWeek, DayOfWeek)
+  fullName: Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay(System.DayOfWeek, System.DayOfWeek)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DayOfWeekExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ShiftRegardingStartingWeekDay
+    path: ../Garyon/Extensions/DayOfWeekExtensions.cs
+    startLine: 25
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Shifts the given <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> to another, regarding the
+
+    new starting day of week.
+  example: []
+  syntax:
+    content: public static DayOfWeek ShiftRegardingStartingWeekDay(this DayOfWeek value, DayOfWeek starting)
+    parameters:
+    - id: value
+      type: System.DayOfWeek
+      description: The <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> to shift.
+    - id: starting
+      type: System.DayOfWeek
+      description: The new starting <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.DayOfWeek
+      description: >-
+        The <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> whose offset from
+
+        <code class="paramref">starting</code> is the same offset from
+
+        <xref href="System.DayOfWeek.Sunday" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function ShiftRegardingStartingWeekDay(value As DayOfWeek, starting As DayOfWeek) As DayOfWeek
+  overload: Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay*
+- uid: Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart(System.DayOfWeek,System.DayOfWeek)
+  commentId: M:Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart(System.DayOfWeek,System.DayOfWeek)
+  id: DaysSinceWeekStart(System.DayOfWeek,System.DayOfWeek)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DayOfWeekExtensions
+  langs:
+  - csharp
+  - vb
+  name: DaysSinceWeekStart(DayOfWeek, DayOfWeek)
+  nameWithType: DayOfWeekExtensions.DaysSinceWeekStart(DayOfWeek, DayOfWeek)
+  fullName: Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart(System.DayOfWeek, System.DayOfWeek)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DayOfWeekExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DaysSinceWeekStart
+    path: ../Garyon/Extensions/DayOfWeekExtensions.cs
+    startLine: 43
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the number of days since the week start.
+  example: []
+  syntax:
+    content: public static int DaysSinceWeekStart(this DayOfWeek currentDay, DayOfWeek weekStart)
+    parameters:
+    - id: currentDay
+      type: System.DayOfWeek
+      description: The current day in the week.
+    - id: weekStart
+      type: System.DayOfWeek
+      description: The starting day of the week.
+    return:
+      type: System.Int32
+      description: >-
+        The number of days since the first day in the week, according to
+
+        <code class="paramref">weekStart</code>.
+    content.vb: Public Shared Function DaysSinceWeekStart(currentDay As DayOfWeek, weekStart As DayOfWeek) As Integer
+  overload: Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart*
+- uid: Garyon.Extensions.DayOfWeekExtensions.IsWeekday(System.DayOfWeek)
+  commentId: M:Garyon.Extensions.DayOfWeekExtensions.IsWeekday(System.DayOfWeek)
+  id: IsWeekday(System.DayOfWeek)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DayOfWeekExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsWeekday(DayOfWeek)
+  nameWithType: DayOfWeekExtensions.IsWeekday(DayOfWeek)
+  fullName: Garyon.Extensions.DayOfWeekExtensions.IsWeekday(System.DayOfWeek)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DayOfWeekExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsWeekday
+    path: ../Garyon/Extensions/DayOfWeekExtensions.cs
+    startLine: 60
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the given <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> represents a
+
+    weekday, between Monday and Friday.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsWeekday(this DayOfWeek day)
+    parameters:
+    - id: day
+      type: System.DayOfWeek
+      description: The <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> to determine if it's a weekday.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the value is between
+
+        <xref href="System.DayOfWeek.Monday" data-throw-if-not-resolved="false"></xref> and
+
+        <xref href="System.DayOfWeek.Friday" data-throw-if-not-resolved="false"></xref>, inclusive, otherwise false.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsWeekday(day As DayOfWeek) As Boolean
+  overload: Garyon.Extensions.DayOfWeekExtensions.IsWeekday*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Extensions.DayOfWeekExtensions.IsWeekend(System.DayOfWeek)
+  commentId: M:Garyon.Extensions.DayOfWeekExtensions.IsWeekend(System.DayOfWeek)
+  id: IsWeekend(System.DayOfWeek)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.DayOfWeekExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsWeekend(DayOfWeek)
+  nameWithType: DayOfWeekExtensions.IsWeekend(DayOfWeek)
+  fullName: Garyon.Extensions.DayOfWeekExtensions.IsWeekend(System.DayOfWeek)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/DayOfWeekExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsWeekend
+    path: ../Garyon/Extensions/DayOfWeekExtensions.cs
+    startLine: 77
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the given <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> represents a
+
+    weekend day, which is Saturday or Sunday.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static bool IsWeekend(this DayOfWeek day)
+    parameters:
+    - id: day
+      type: System.DayOfWeek
+      description: The <xref href="System.DayOfWeek" data-throw-if-not-resolved="false"></xref> to determine if it's a weekend day.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the value is either
+
+        <xref href="System.DayOfWeek.Saturday" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="System.DayOfWeek.Sunday" data-throw-if-not-resolved="false"></xref>, otherwise false.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function IsWeekend(day As DayOfWeek) As Boolean
+  overload: Garyon.Extensions.DayOfWeekExtensions.IsWeekend*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+references:
+- uid: System.DayOfWeek
+  commentId: T:System.DayOfWeek
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dayofweek
+  name: DayOfWeek
+  nameWithType: DayOfWeek
+  fullName: System.DayOfWeek
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.DayOfWeek.Sunday
+  commentId: F:System.DayOfWeek.Sunday
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dayofweek#system-dayofweek-sunday
+  name: Sunday
+  nameWithType: DayOfWeek.Sunday
+  fullName: System.DayOfWeek.Sunday
+- uid: Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay*
+  commentId: Overload:Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay
+  href: Garyon.Extensions.DayOfWeekExtensions.html#Garyon_Extensions_DayOfWeekExtensions_ShiftRegardingStartingWeekDay_System_DayOfWeek_System_DayOfWeek_
+  name: ShiftRegardingStartingWeekDay
+  nameWithType: DayOfWeekExtensions.ShiftRegardingStartingWeekDay
+  fullName: Garyon.Extensions.DayOfWeekExtensions.ShiftRegardingStartingWeekDay
+- uid: Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart*
+  commentId: Overload:Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart
+  href: Garyon.Extensions.DayOfWeekExtensions.html#Garyon_Extensions_DayOfWeekExtensions_DaysSinceWeekStart_System_DayOfWeek_System_DayOfWeek_
+  name: DaysSinceWeekStart
+  nameWithType: DayOfWeekExtensions.DaysSinceWeekStart
+  fullName: Garyon.Extensions.DayOfWeekExtensions.DaysSinceWeekStart
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.DayOfWeek.Monday
+  commentId: F:System.DayOfWeek.Monday
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dayofweek#system-dayofweek-monday
+  name: Monday
+  nameWithType: DayOfWeek.Monday
+  fullName: System.DayOfWeek.Monday
+- uid: System.DayOfWeek.Friday
+  commentId: F:System.DayOfWeek.Friday
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dayofweek#system-dayofweek-friday
+  name: Friday
+  nameWithType: DayOfWeek.Friday
+  fullName: System.DayOfWeek.Friday
+- uid: Garyon.Extensions.DayOfWeekExtensions.IsWeekday*
+  commentId: Overload:Garyon.Extensions.DayOfWeekExtensions.IsWeekday
+  href: Garyon.Extensions.DayOfWeekExtensions.html#Garyon_Extensions_DayOfWeekExtensions_IsWeekday_System_DayOfWeek_
+  name: IsWeekday
+  nameWithType: DayOfWeekExtensions.IsWeekday
+  fullName: Garyon.Extensions.DayOfWeekExtensions.IsWeekday
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.DayOfWeek.Saturday
+  commentId: F:System.DayOfWeek.Saturday
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dayofweek#system-dayofweek-saturday
+  name: Saturday
+  nameWithType: DayOfWeek.Saturday
+  fullName: System.DayOfWeek.Saturday
+- uid: Garyon.Extensions.DayOfWeekExtensions.IsWeekend*
+  commentId: Overload:Garyon.Extensions.DayOfWeekExtensions.IsWeekend
+  href: Garyon.Extensions.DayOfWeekExtensions.html#Garyon_Extensions_DayOfWeekExtensions_IsWeekend_System_DayOfWeek_
+  name: IsWeekend
+  nameWithType: DayOfWeekExtensions.IsWeekend
+  fullName: Garyon.Extensions.DayOfWeekExtensions.IsWeekend

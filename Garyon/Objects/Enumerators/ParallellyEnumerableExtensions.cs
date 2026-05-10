@@ -28,6 +28,7 @@ public static class ParallellyEnumerableExtensions
     {
         return new(enumerables.Item1, enumerables.Item2);
     }
+
     /// <summary>
     /// Creates an instance of
     /// <seealso cref="ParallellyEnumerable{T1, T2, T3}"/> out of a tuple of 3
@@ -53,6 +54,7 @@ public static class ParallellyEnumerableExtensions
     {
         return new(enumerables.Item1, enumerables.Item2, enumerables.Item3);
     }
+
     /// <summary>
     /// Creates an instance of
     /// <seealso cref="ParallellyEnumerable{T1, T2, T3, T4}"/> out of a tuple of

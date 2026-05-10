@@ -1,0 +1,777 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  id: Garyon.Objects.Enumerators
+  children:
+  - Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  - Garyon.Objects.Enumerators.AffixedEnumerable`1
+  - Garyon.Objects.Enumerators.BaseParallelEnumerator
+  - Garyon.Objects.Enumerators.BaseParallelEnumerator`2
+  - Garyon.Objects.Enumerators.BaseParallelEnumerator`3
+  - Garyon.Objects.Enumerators.BaseParallelEnumerator`4
+  - Garyon.Objects.Enumerators.BaseParallellyEnumerable`1
+  - Garyon.Objects.Enumerators.EmptyEnumerator`1
+  - Garyon.Objects.Enumerators.FlattenedEnumerables2D`1
+  - Garyon.Objects.Enumerators.FlattenedEnumerables3D`1
+  - Garyon.Objects.Enumerators.IndexedAsyncEnumerable`1
+  - Garyon.Objects.Enumerators.IndexedAsyncEnumerator`1
+  - Garyon.Objects.Enumerators.IndexedEnumerable`1
+  - Garyon.Objects.Enumerators.IndexedEnumeratorResult`1
+  - Garyon.Objects.Enumerators.IndexedEnumerator`1
+  - Garyon.Objects.Enumerators.ParallelEnumerator`2
+  - Garyon.Objects.Enumerators.ParallelEnumerator`3
+  - Garyon.Objects.Enumerators.ParallelEnumerator`4
+  - Garyon.Objects.Enumerators.ParallellyEnumerableExtensions
+  - Garyon.Objects.Enumerators.ParallellyEnumerable`2
+  - Garyon.Objects.Enumerators.ParallellyEnumerable`3
+  - Garyon.Objects.Enumerators.ParallellyEnumerable`4
+  - Garyon.Objects.Enumerators.SingleElementCollection`1
+  - Garyon.Objects.Enumerators.SingleOrEnumerableKind
+  - Garyon.Objects.Enumerators.SingleOrEnumerable`1
+  - Garyon.Objects.Enumerators.SingleValueEnumerationState
+  - Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  - Garyon.Objects.Enumerators.SingleValueEnumerator`1
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+  commentId: T:Garyon.Objects.Enumerators.AffixedEnumerable`1
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  name: AffixedEnumerable<T>
+  nameWithType: AffixedEnumerable<T>
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerable<T>
+  nameWithType.vb: AffixedEnumerable(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.AffixedEnumerable(Of T)
+  name.vb: AffixedEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+    name: AffixedEnumerable
+    href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.AffixedEnumerable`1
+    name: AffixedEnumerable
+    href: Garyon.Objects.Enumerators.AffixedEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  commentId: T:Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.AffixedEnumerableExtensions.html
+  name: AffixedEnumerableExtensions
+  nameWithType: AffixedEnumerableExtensions
+  fullName: Garyon.Objects.Enumerators.AffixedEnumerableExtensions
+- uid: Garyon.Objects.Enumerators.BaseParallelEnumerator
+  commentId: T:Garyon.Objects.Enumerators.BaseParallelEnumerator
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.BaseParallelEnumerator.html
+  name: BaseParallelEnumerator
+  nameWithType: BaseParallelEnumerator
+  fullName: Garyon.Objects.Enumerators.BaseParallelEnumerator
+- uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`2
+  commentId: T:Garyon.Objects.Enumerators.BaseParallelEnumerator`2
+  href: Garyon.Objects.Enumerators.BaseParallelEnumerator-2.html
+  name: BaseParallelEnumerator<T1, T2>
+  nameWithType: BaseParallelEnumerator<T1, T2>
+  fullName: Garyon.Objects.Enumerators.BaseParallelEnumerator<T1, T2>
+  nameWithType.vb: BaseParallelEnumerator(Of T1, T2)
+  fullName.vb: Garyon.Objects.Enumerators.BaseParallelEnumerator(Of T1, T2)
+  name.vb: BaseParallelEnumerator(Of T1, T2)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`2
+    name: BaseParallelEnumerator
+    href: Garyon.Objects.Enumerators.BaseParallelEnumerator-2.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`2
+    name: BaseParallelEnumerator
+    href: Garyon.Objects.Enumerators.BaseParallelEnumerator-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`3
+  commentId: T:Garyon.Objects.Enumerators.BaseParallelEnumerator`3
+  href: Garyon.Objects.Enumerators.BaseParallelEnumerator-3.html
+  name: BaseParallelEnumerator<T1, T2, T3>
+  nameWithType: BaseParallelEnumerator<T1, T2, T3>
+  fullName: Garyon.Objects.Enumerators.BaseParallelEnumerator<T1, T2, T3>
+  nameWithType.vb: BaseParallelEnumerator(Of T1, T2, T3)
+  fullName.vb: Garyon.Objects.Enumerators.BaseParallelEnumerator(Of T1, T2, T3)
+  name.vb: BaseParallelEnumerator(Of T1, T2, T3)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`3
+    name: BaseParallelEnumerator
+    href: Garyon.Objects.Enumerators.BaseParallelEnumerator-3.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`3
+    name: BaseParallelEnumerator
+    href: Garyon.Objects.Enumerators.BaseParallelEnumerator-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`4
+  commentId: T:Garyon.Objects.Enumerators.BaseParallelEnumerator`4
+  href: Garyon.Objects.Enumerators.BaseParallelEnumerator-4.html
+  name: BaseParallelEnumerator<T1, T2, T3, T4>
+  nameWithType: BaseParallelEnumerator<T1, T2, T3, T4>
+  fullName: Garyon.Objects.Enumerators.BaseParallelEnumerator<T1, T2, T3, T4>
+  nameWithType.vb: BaseParallelEnumerator(Of T1, T2, T3, T4)
+  fullName.vb: Garyon.Objects.Enumerators.BaseParallelEnumerator(Of T1, T2, T3, T4)
+  name.vb: BaseParallelEnumerator(Of T1, T2, T3, T4)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`4
+    name: BaseParallelEnumerator
+    href: Garyon.Objects.Enumerators.BaseParallelEnumerator-4.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.BaseParallelEnumerator`4
+    name: BaseParallelEnumerator
+    href: Garyon.Objects.Enumerators.BaseParallelEnumerator-4.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+- uid: Garyon.Objects.Enumerators.BaseParallellyEnumerable`1
+  commentId: T:Garyon.Objects.Enumerators.BaseParallellyEnumerable`1
+  href: Garyon.Objects.Enumerators.BaseParallellyEnumerable-1.html
+  name: BaseParallellyEnumerable<TEnumeratorTuple>
+  nameWithType: BaseParallellyEnumerable<TEnumeratorTuple>
+  fullName: Garyon.Objects.Enumerators.BaseParallellyEnumerable<TEnumeratorTuple>
+  nameWithType.vb: BaseParallellyEnumerable(Of TEnumeratorTuple)
+  fullName.vb: Garyon.Objects.Enumerators.BaseParallellyEnumerable(Of TEnumeratorTuple)
+  name.vb: BaseParallellyEnumerable(Of TEnumeratorTuple)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.BaseParallellyEnumerable`1
+    name: BaseParallellyEnumerable
+    href: Garyon.Objects.Enumerators.BaseParallellyEnumerable-1.html
+  - name: <
+  - name: TEnumeratorTuple
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.BaseParallellyEnumerable`1
+    name: BaseParallellyEnumerable
+    href: Garyon.Objects.Enumerators.BaseParallellyEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumeratorTuple
+  - name: )
+- uid: Garyon.Objects.Enumerators.EmptyEnumerator`1
+  commentId: T:Garyon.Objects.Enumerators.EmptyEnumerator`1
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.EmptyEnumerator-1.html
+  name: EmptyEnumerator<T>
+  nameWithType: EmptyEnumerator<T>
+  fullName: Garyon.Objects.Enumerators.EmptyEnumerator<T>
+  nameWithType.vb: EmptyEnumerator(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.EmptyEnumerator(Of T)
+  name.vb: EmptyEnumerator(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.EmptyEnumerator`1
+    name: EmptyEnumerator
+    href: Garyon.Objects.Enumerators.EmptyEnumerator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.EmptyEnumerator`1
+    name: EmptyEnumerator
+    href: Garyon.Objects.Enumerators.EmptyEnumerator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.FlattenedEnumerables2D`1
+  commentId: T:Garyon.Objects.Enumerators.FlattenedEnumerables2D`1
+  href: Garyon.Objects.Enumerators.FlattenedEnumerables2D-1.html
+  name: FlattenedEnumerables2D<T>
+  nameWithType: FlattenedEnumerables2D<T>
+  fullName: Garyon.Objects.Enumerators.FlattenedEnumerables2D<T>
+  nameWithType.vb: FlattenedEnumerables2D(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.FlattenedEnumerables2D(Of T)
+  name.vb: FlattenedEnumerables2D(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.FlattenedEnumerables2D`1
+    name: FlattenedEnumerables2D
+    href: Garyon.Objects.Enumerators.FlattenedEnumerables2D-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.FlattenedEnumerables2D`1
+    name: FlattenedEnumerables2D
+    href: Garyon.Objects.Enumerators.FlattenedEnumerables2D-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.FlattenedEnumerables3D`1
+  commentId: T:Garyon.Objects.Enumerators.FlattenedEnumerables3D`1
+  href: Garyon.Objects.Enumerators.FlattenedEnumerables3D-1.html
+  name: FlattenedEnumerables3D<T>
+  nameWithType: FlattenedEnumerables3D<T>
+  fullName: Garyon.Objects.Enumerators.FlattenedEnumerables3D<T>
+  nameWithType.vb: FlattenedEnumerables3D(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.FlattenedEnumerables3D(Of T)
+  name.vb: FlattenedEnumerables3D(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.FlattenedEnumerables3D`1
+    name: FlattenedEnumerables3D
+    href: Garyon.Objects.Enumerators.FlattenedEnumerables3D-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.FlattenedEnumerables3D`1
+    name: FlattenedEnumerables3D
+    href: Garyon.Objects.Enumerators.FlattenedEnumerables3D-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.IndexedAsyncEnumerable`1
+  commentId: T:Garyon.Objects.Enumerators.IndexedAsyncEnumerable`1
+  href: Garyon.Objects.Enumerators.IndexedAsyncEnumerable-1.html
+  name: IndexedAsyncEnumerable<T>
+  nameWithType: IndexedAsyncEnumerable<T>
+  fullName: Garyon.Objects.Enumerators.IndexedAsyncEnumerable<T>
+  nameWithType.vb: IndexedAsyncEnumerable(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.IndexedAsyncEnumerable(Of T)
+  name.vb: IndexedAsyncEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.IndexedAsyncEnumerable`1
+    name: IndexedAsyncEnumerable
+    href: Garyon.Objects.Enumerators.IndexedAsyncEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.IndexedAsyncEnumerable`1
+    name: IndexedAsyncEnumerable
+    href: Garyon.Objects.Enumerators.IndexedAsyncEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.IndexedAsyncEnumerator`1
+  commentId: T:Garyon.Objects.Enumerators.IndexedAsyncEnumerator`1
+  href: Garyon.Objects.Enumerators.IndexedAsyncEnumerator-1.html
+  name: IndexedAsyncEnumerator<T>
+  nameWithType: IndexedAsyncEnumerator<T>
+  fullName: Garyon.Objects.Enumerators.IndexedAsyncEnumerator<T>
+  nameWithType.vb: IndexedAsyncEnumerator(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.IndexedAsyncEnumerator(Of T)
+  name.vb: IndexedAsyncEnumerator(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.IndexedAsyncEnumerator`1
+    name: IndexedAsyncEnumerator
+    href: Garyon.Objects.Enumerators.IndexedAsyncEnumerator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.IndexedAsyncEnumerator`1
+    name: IndexedAsyncEnumerator
+    href: Garyon.Objects.Enumerators.IndexedAsyncEnumerator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.IndexedEnumerable`1
+  commentId: T:Garyon.Objects.Enumerators.IndexedEnumerable`1
+  href: Garyon.Objects.Enumerators.IndexedEnumerable-1.html
+  name: IndexedEnumerable<T>
+  nameWithType: IndexedEnumerable<T>
+  fullName: Garyon.Objects.Enumerators.IndexedEnumerable<T>
+  nameWithType.vb: IndexedEnumerable(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.IndexedEnumerable(Of T)
+  name.vb: IndexedEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.IndexedEnumerable`1
+    name: IndexedEnumerable
+    href: Garyon.Objects.Enumerators.IndexedEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.IndexedEnumerable`1
+    name: IndexedEnumerable
+    href: Garyon.Objects.Enumerators.IndexedEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.IndexedEnumerator`1
+  commentId: T:Garyon.Objects.Enumerators.IndexedEnumerator`1
+  href: Garyon.Objects.Enumerators.IndexedEnumerator-1.html
+  name: IndexedEnumerator<T>
+  nameWithType: IndexedEnumerator<T>
+  fullName: Garyon.Objects.Enumerators.IndexedEnumerator<T>
+  nameWithType.vb: IndexedEnumerator(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.IndexedEnumerator(Of T)
+  name.vb: IndexedEnumerator(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.IndexedEnumerator`1
+    name: IndexedEnumerator
+    href: Garyon.Objects.Enumerators.IndexedEnumerator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.IndexedEnumerator`1
+    name: IndexedEnumerator
+    href: Garyon.Objects.Enumerators.IndexedEnumerator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.IndexedEnumeratorResult`1
+  commentId: T:Garyon.Objects.Enumerators.IndexedEnumeratorResult`1
+  href: Garyon.Objects.Enumerators.IndexedEnumeratorResult-1.html
+  name: IndexedEnumeratorResult<T>
+  nameWithType: IndexedEnumeratorResult<T>
+  fullName: Garyon.Objects.Enumerators.IndexedEnumeratorResult<T>
+  nameWithType.vb: IndexedEnumeratorResult(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.IndexedEnumeratorResult(Of T)
+  name.vb: IndexedEnumeratorResult(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.IndexedEnumeratorResult`1
+    name: IndexedEnumeratorResult
+    href: Garyon.Objects.Enumerators.IndexedEnumeratorResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.IndexedEnumeratorResult`1
+    name: IndexedEnumeratorResult
+    href: Garyon.Objects.Enumerators.IndexedEnumeratorResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallelEnumerator`2
+  commentId: T:Garyon.Objects.Enumerators.ParallelEnumerator`2
+  href: Garyon.Objects.Enumerators.ParallelEnumerator-2.html
+  name: ParallelEnumerator<T1, T2>
+  nameWithType: ParallelEnumerator<T1, T2>
+  fullName: Garyon.Objects.Enumerators.ParallelEnumerator<T1, T2>
+  nameWithType.vb: ParallelEnumerator(Of T1, T2)
+  fullName.vb: Garyon.Objects.Enumerators.ParallelEnumerator(Of T1, T2)
+  name.vb: ParallelEnumerator(Of T1, T2)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.ParallelEnumerator`2
+    name: ParallelEnumerator
+    href: Garyon.Objects.Enumerators.ParallelEnumerator-2.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.ParallelEnumerator`2
+    name: ParallelEnumerator
+    href: Garyon.Objects.Enumerators.ParallelEnumerator-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallelEnumerator`3
+  commentId: T:Garyon.Objects.Enumerators.ParallelEnumerator`3
+  href: Garyon.Objects.Enumerators.ParallelEnumerator-3.html
+  name: ParallelEnumerator<T1, T2, T3>
+  nameWithType: ParallelEnumerator<T1, T2, T3>
+  fullName: Garyon.Objects.Enumerators.ParallelEnumerator<T1, T2, T3>
+  nameWithType.vb: ParallelEnumerator(Of T1, T2, T3)
+  fullName.vb: Garyon.Objects.Enumerators.ParallelEnumerator(Of T1, T2, T3)
+  name.vb: ParallelEnumerator(Of T1, T2, T3)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.ParallelEnumerator`3
+    name: ParallelEnumerator
+    href: Garyon.Objects.Enumerators.ParallelEnumerator-3.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.ParallelEnumerator`3
+    name: ParallelEnumerator
+    href: Garyon.Objects.Enumerators.ParallelEnumerator-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallelEnumerator`4
+  commentId: T:Garyon.Objects.Enumerators.ParallelEnumerator`4
+  href: Garyon.Objects.Enumerators.ParallelEnumerator-4.html
+  name: ParallelEnumerator<T1, T2, T3, T4>
+  nameWithType: ParallelEnumerator<T1, T2, T3, T4>
+  fullName: Garyon.Objects.Enumerators.ParallelEnumerator<T1, T2, T3, T4>
+  nameWithType.vb: ParallelEnumerator(Of T1, T2, T3, T4)
+  fullName.vb: Garyon.Objects.Enumerators.ParallelEnumerator(Of T1, T2, T3, T4)
+  name.vb: ParallelEnumerator(Of T1, T2, T3, T4)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.ParallelEnumerator`4
+    name: ParallelEnumerator
+    href: Garyon.Objects.Enumerators.ParallelEnumerator-4.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.ParallelEnumerator`4
+    name: ParallelEnumerator
+    href: Garyon.Objects.Enumerators.ParallelEnumerator-4.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallellyEnumerable`2
+  commentId: T:Garyon.Objects.Enumerators.ParallellyEnumerable`2
+  href: Garyon.Objects.Enumerators.ParallellyEnumerable-2.html
+  name: ParallellyEnumerable<T1, T2>
+  nameWithType: ParallellyEnumerable<T1, T2>
+  fullName: Garyon.Objects.Enumerators.ParallellyEnumerable<T1, T2>
+  nameWithType.vb: ParallellyEnumerable(Of T1, T2)
+  fullName.vb: Garyon.Objects.Enumerators.ParallellyEnumerable(Of T1, T2)
+  name.vb: ParallellyEnumerable(Of T1, T2)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.ParallellyEnumerable`2
+    name: ParallellyEnumerable
+    href: Garyon.Objects.Enumerators.ParallellyEnumerable-2.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.ParallellyEnumerable`2
+    name: ParallellyEnumerable
+    href: Garyon.Objects.Enumerators.ParallellyEnumerable-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallellyEnumerable`3
+  commentId: T:Garyon.Objects.Enumerators.ParallellyEnumerable`3
+  href: Garyon.Objects.Enumerators.ParallellyEnumerable-3.html
+  name: ParallellyEnumerable<T1, T2, T3>
+  nameWithType: ParallellyEnumerable<T1, T2, T3>
+  fullName: Garyon.Objects.Enumerators.ParallellyEnumerable<T1, T2, T3>
+  nameWithType.vb: ParallellyEnumerable(Of T1, T2, T3)
+  fullName.vb: Garyon.Objects.Enumerators.ParallellyEnumerable(Of T1, T2, T3)
+  name.vb: ParallellyEnumerable(Of T1, T2, T3)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.ParallellyEnumerable`3
+    name: ParallellyEnumerable
+    href: Garyon.Objects.Enumerators.ParallellyEnumerable-3.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.ParallellyEnumerable`3
+    name: ParallellyEnumerable
+    href: Garyon.Objects.Enumerators.ParallellyEnumerable-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallellyEnumerable`4
+  commentId: T:Garyon.Objects.Enumerators.ParallellyEnumerable`4
+  href: Garyon.Objects.Enumerators.ParallellyEnumerable-4.html
+  name: ParallellyEnumerable<T1, T2, T3, T4>
+  nameWithType: ParallellyEnumerable<T1, T2, T3, T4>
+  fullName: Garyon.Objects.Enumerators.ParallellyEnumerable<T1, T2, T3, T4>
+  nameWithType.vb: ParallellyEnumerable(Of T1, T2, T3, T4)
+  fullName.vb: Garyon.Objects.Enumerators.ParallellyEnumerable(Of T1, T2, T3, T4)
+  name.vb: ParallellyEnumerable(Of T1, T2, T3, T4)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.ParallellyEnumerable`4
+    name: ParallellyEnumerable
+    href: Garyon.Objects.Enumerators.ParallellyEnumerable-4.html
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.ParallellyEnumerable`4
+    name: ParallellyEnumerable
+    href: Garyon.Objects.Enumerators.ParallellyEnumerable-4.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+- uid: Garyon.Objects.Enumerators.ParallellyEnumerableExtensions
+  commentId: T:Garyon.Objects.Enumerators.ParallellyEnumerableExtensions
+  href: Garyon.Objects.Enumerators.ParallellyEnumerableExtensions.html
+  name: ParallellyEnumerableExtensions
+  nameWithType: ParallellyEnumerableExtensions
+  fullName: Garyon.Objects.Enumerators.ParallellyEnumerableExtensions
+- uid: Garyon.Objects.Enumerators.SingleElementCollection`1
+  commentId: T:Garyon.Objects.Enumerators.SingleElementCollection`1
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleElementCollection-1.html
+  name: SingleElementCollection<T>
+  nameWithType: SingleElementCollection<T>
+  fullName: Garyon.Objects.Enumerators.SingleElementCollection<T>
+  nameWithType.vb: SingleElementCollection(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleElementCollection(Of T)
+  name.vb: SingleElementCollection(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleElementCollection`1
+    name: SingleElementCollection
+    href: Garyon.Objects.Enumerators.SingleElementCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleElementCollection`1
+    name: SingleElementCollection
+    href: Garyon.Objects.Enumerators.SingleElementCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleOrEnumerable`1
+  commentId: T:Garyon.Objects.Enumerators.SingleOrEnumerable`1
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleOrEnumerable-1.html
+  name: SingleOrEnumerable<T>
+  nameWithType: SingleOrEnumerable<T>
+  fullName: Garyon.Objects.Enumerators.SingleOrEnumerable<T>
+  nameWithType.vb: SingleOrEnumerable(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleOrEnumerable(Of T)
+  name.vb: SingleOrEnumerable(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleOrEnumerable`1
+    name: SingleOrEnumerable
+    href: Garyon.Objects.Enumerators.SingleOrEnumerable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleOrEnumerable`1
+    name: SingleOrEnumerable
+    href: Garyon.Objects.Enumerators.SingleOrEnumerable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleOrEnumerableKind
+  commentId: T:Garyon.Objects.Enumerators.SingleOrEnumerableKind
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleOrEnumerableKind.html
+  name: SingleOrEnumerableKind
+  nameWithType: SingleOrEnumerableKind
+  fullName: Garyon.Objects.Enumerators.SingleOrEnumerableKind
+- uid: Garyon.Objects.Enumerators.SingleValueEnumerationState
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumerationState
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumerationState.html
+  name: SingleValueEnumerationState
+  nameWithType: SingleValueEnumerationState
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumerationState
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Objects.Enumerators.SingleValueEnumerator`1
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumerator`1
+  href: Garyon.Objects.Enumerators.SingleValueEnumerator-1.html
+  name: SingleValueEnumerator<T>
+  nameWithType: SingleValueEnumerator<T>
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumerator<T>
+  nameWithType.vb: SingleValueEnumerator(Of T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumerator(Of T)
+  name.vb: SingleValueEnumerator(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumerator`1
+    name: SingleValueEnumerator
+    href: Garyon.Objects.Enumerators.SingleValueEnumerator-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumerator`1
+    name: SingleValueEnumerator
+    href: Garyon.Objects.Enumerators.SingleValueEnumerator-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html

@@ -1,0 +1,1412 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.IO.DirectoryPath
+  commentId: T:Garyon.Objects.IO.DirectoryPath
+  id: DirectoryPath
+  parent: Garyon.Objects.IO
+  children:
+  - Garyon.Objects.IO.DirectoryPath.#ctor(System.IO.DirectoryInfo)
+  - Garyon.Objects.IO.DirectoryPath.#ctor(System.String)
+  - Garyon.Objects.IO.DirectoryPath.DirectoryInfo
+  - Garyon.Objects.IO.DirectoryPath.File(System.String)
+  - Garyon.Objects.IO.DirectoryPath.Parent
+  - Garyon.Objects.IO.DirectoryPath.Path
+  - Garyon.Objects.IO.DirectoryPath.op_Implicit(System.IO.DirectoryInfo)~Garyon.Objects.IO.DirectoryPath
+  - Garyon.Objects.IO.DirectoryPath.op_Implicit(System.String)~Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPath
+  nameWithType: DirectoryPath
+  fullName: Garyon.Objects.IO.DirectoryPath
+  type: Struct
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DirectoryPath
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    Represents a directory path wrapper that provides lightweight, non-I/O path
+
+    manipulation helpers.
+  example: []
+  syntax:
+    content: 'public readonly record struct DirectoryPath : IFileSystemPath, IEquatable<DirectoryPath>'
+    content.vb: Public Structure DirectoryPath Implements IFileSystemPath, IEquatable(Of DirectoryPath)
+  implements:
+  - Garyon.Objects.IO.IFileSystemPath
+  - System.IEquatable{Garyon.Objects.IO.DirectoryPath}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IO.DirectoryPath)
+  - Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.IO.DirectoryPath})
+  - Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.IO.DirectoryPath,{TResult}})
+  - Garyon.Objects.IO.DirectoryPath.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+- uid: Garyon.Objects.IO.DirectoryPath.#ctor(System.String)
+  commentId: M:Garyon.Objects.IO.DirectoryPath.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPath(string)
+  nameWithType: DirectoryPath.DirectoryPath(string)
+  fullName: Garyon.Objects.IO.DirectoryPath.DirectoryPath(string)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    Represents a directory path wrapper that provides lightweight, non-I/O path
+
+    manipulation helpers.
+  example: []
+  syntax:
+    content: public DirectoryPath(string Path)
+    parameters:
+    - id: Path
+      type: System.String
+      description: >-
+        The directory path. This type does not validate existence or interact with the
+
+        file system; it only stores and manipulates the path string.
+    content.vb: Public Sub New(Path As String)
+  overload: Garyon.Objects.IO.DirectoryPath.#ctor*
+  nameWithType.vb: DirectoryPath.New(String)
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.New(String)
+  name.vb: New(String)
+- uid: Garyon.Objects.IO.DirectoryPath.Path
+  commentId: P:Garyon.Objects.IO.DirectoryPath.Path
+  id: Path
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: DirectoryPath.Path
+  fullName: Garyon.Objects.IO.DirectoryPath.Path
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Path
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    The directory path. This type does not validate existence or interact with the
+
+    file system; it only stores and manipulates the path string.
+  example: []
+  syntax:
+    content: public string Path { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Garyon.Objects.IO.DirectoryPath.Path*
+  implements:
+  - Garyon.Objects.IO.IFileSystemPath.Path
+- uid: Garyon.Objects.IO.DirectoryPath.DirectoryInfo
+  commentId: P:Garyon.Objects.IO.DirectoryPath.DirectoryInfo
+  id: DirectoryInfo
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: DirectoryInfo
+  nameWithType: DirectoryPath.DirectoryInfo
+  fullName: Garyon.Objects.IO.DirectoryPath.DirectoryInfo
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: DirectoryInfo
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: Gets a <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> wrapper for this path.
+  remarks: >-
+    Creating a <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> does not access the file
+
+    system. Accessing certain members of the returned instance may.
+  example: []
+  syntax:
+    content: public DirectoryInfo DirectoryInfo { get; }
+    parameters: []
+    return:
+      type: System.IO.DirectoryInfo
+    content.vb: Public ReadOnly Property DirectoryInfo As DirectoryInfo
+  overload: Garyon.Objects.IO.DirectoryPath.DirectoryInfo*
+- uid: Garyon.Objects.IO.DirectoryPath.Parent
+  commentId: P:Garyon.Objects.IO.DirectoryPath.Parent
+  id: Parent
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: DirectoryPath.Parent
+  fullName: Garyon.Objects.IO.DirectoryPath.Parent
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Parent
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 29
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    Gets the parent directory of this directory path, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a>
+
+    if the path has no parent.
+  example: []
+  syntax:
+    content: public DirectoryPath Parent { get; }
+    parameters: []
+    return:
+      type: Garyon.Objects.IO.DirectoryPath
+    content.vb: Public ReadOnly Property Parent As DirectoryPath
+  overload: Garyon.Objects.IO.DirectoryPath.Parent*
+- uid: Garyon.Objects.IO.DirectoryPath.#ctor(System.IO.DirectoryInfo)
+  commentId: M:Garyon.Objects.IO.DirectoryPath.#ctor(System.IO.DirectoryInfo)
+  id: '#ctor(System.IO.DirectoryInfo)'
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPath(DirectoryInfo)
+  nameWithType: DirectoryPath.DirectoryPath(DirectoryInfo)
+  fullName: Garyon.Objects.IO.DirectoryPath.DirectoryPath(System.IO.DirectoryInfo)
+  type: Constructor
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: .ctor
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 41
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    Initializes a new instance of <xref href="Garyon.Objects.IO.DirectoryPath" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public DirectoryPath(DirectoryInfo directoryInfo)
+    parameters:
+    - id: directoryInfo
+      type: System.IO.DirectoryInfo
+      description: >-
+        The <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> whose <xref href="System.IO.FileSystemInfo.FullName" data-throw-if-not-resolved="false"></xref>
+
+        will be stored.
+    content.vb: Public Sub New(directoryInfo As DirectoryInfo)
+  overload: Garyon.Objects.IO.DirectoryPath.#ctor*
+  nameWithType.vb: DirectoryPath.New(DirectoryInfo)
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.New(System.IO.DirectoryInfo)
+  name.vb: New(DirectoryInfo)
+- uid: Garyon.Objects.IO.DirectoryPath.File(System.String)
+  commentId: M:Garyon.Objects.IO.DirectoryPath.File(System.String)
+  id: File(System.String)
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: File(string)
+  nameWithType: DirectoryPath.File(string)
+  fullName: Garyon.Objects.IO.DirectoryPath.File(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: File
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 51
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    Returns a <xref href="Garyon.Objects.IO.FilePath" data-throw-if-not-resolved="false"></xref> by combining this directory path with a
+
+    file name.
+  example: []
+  syntax:
+    content: public FilePath File(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The file name to combine with <xref href="Garyon.Objects.IO.DirectoryPath.Path" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Garyon.Objects.IO.FilePath
+    content.vb: Public Function File(fileName As String) As FilePath
+  overload: Garyon.Objects.IO.DirectoryPath.File*
+  nameWithType.vb: DirectoryPath.File(String)
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.File(String)
+  name.vb: File(String)
+- uid: Garyon.Objects.IO.DirectoryPath.op_Implicit(System.String)~Garyon.Objects.IO.DirectoryPath
+  commentId: M:Garyon.Objects.IO.DirectoryPath.op_Implicit(System.String)~Garyon.Objects.IO.DirectoryPath
+  id: op_Implicit(System.String)~Garyon.Objects.IO.DirectoryPath
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: implicit operator DirectoryPath(string)
+  nameWithType: DirectoryPath.implicit operator DirectoryPath(string)
+  fullName: Garyon.Objects.IO.DirectoryPath.implicit operator Garyon.Objects.IO.DirectoryPath(string)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 59
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: Converts a path string to a <xref href="Garyon.Objects.IO.DirectoryPath" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public static implicit operator DirectoryPath(string path)
+    parameters:
+    - id: path
+      type: System.String
+    return:
+      type: Garyon.Objects.IO.DirectoryPath
+    content.vb: Public Shared Widening Operator CType(path As String) As DirectoryPath
+  overload: Garyon.Objects.IO.DirectoryPath.op_Implicit*
+  nameWithType.vb: DirectoryPath.CType(String)
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.CType(String)
+  name.vb: CType(String)
+- uid: Garyon.Objects.IO.DirectoryPath.op_Implicit(System.IO.DirectoryInfo)~Garyon.Objects.IO.DirectoryPath
+  commentId: M:Garyon.Objects.IO.DirectoryPath.op_Implicit(System.IO.DirectoryInfo)~Garyon.Objects.IO.DirectoryPath
+  id: op_Implicit(System.IO.DirectoryInfo)~Garyon.Objects.IO.DirectoryPath
+  parent: Garyon.Objects.IO.DirectoryPath
+  langs:
+  - csharp
+  - vb
+  name: implicit operator DirectoryPath(DirectoryInfo)
+  nameWithType: DirectoryPath.implicit operator DirectoryPath(DirectoryInfo)
+  fullName: Garyon.Objects.IO.DirectoryPath.implicit operator Garyon.Objects.IO.DirectoryPath(System.IO.DirectoryInfo)
+  type: Operator
+  source:
+    remote:
+      path: Garyon/Objects/IO/DirectoryPath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: op_Implicit
+    path: ../Garyon/Objects/IO/DirectoryPath.cs
+    startLine: 64
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects.IO
+  summary: >-
+    Converts a <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> instance to a
+
+    <xref href="Garyon.Objects.IO.DirectoryPath" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public static implicit operator DirectoryPath(DirectoryInfo path)
+    parameters:
+    - id: path
+      type: System.IO.DirectoryInfo
+    return:
+      type: Garyon.Objects.IO.DirectoryPath
+    content.vb: Public Shared Widening Operator CType(path As DirectoryInfo) As DirectoryPath
+  overload: Garyon.Objects.IO.DirectoryPath.op_Implicit*
+  nameWithType.vb: DirectoryPath.CType(DirectoryInfo)
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.CType(System.IO.DirectoryInfo)
+  name.vb: CType(DirectoryInfo)
+references:
+- uid: Garyon.Objects.IO
+  commentId: N:Garyon.Objects.IO
+  href: Garyon.html
+  name: Garyon.Objects.IO
+  nameWithType: Garyon.Objects.IO
+  fullName: Garyon.Objects.IO
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.IO
+    name: IO
+    href: Garyon.Objects.IO.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.IO
+    name: IO
+    href: Garyon.Objects.IO.html
+- uid: Garyon.Objects.IO.IFileSystemPath
+  commentId: T:Garyon.Objects.IO.IFileSystemPath
+  parent: Garyon.Objects.IO
+  href: Garyon.Objects.IO.IFileSystemPath.html
+  name: IFileSystemPath
+  nameWithType: IFileSystemPath
+  fullName: Garyon.Objects.IO.IFileSystemPath
+- uid: System.IEquatable{Garyon.Objects.IO.DirectoryPath}
+  commentId: T:System.IEquatable{Garyon.Objects.IO.DirectoryPath}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<DirectoryPath>
+  nameWithType: IEquatable<DirectoryPath>
+  fullName: System.IEquatable<Garyon.Objects.IO.DirectoryPath>
+  nameWithType.vb: IEquatable(Of DirectoryPath)
+  fullName.vb: System.IEquatable(Of Garyon.Objects.IO.DirectoryPath)
+  name.vb: IEquatable(Of DirectoryPath)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IO.DirectoryPath)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<DirectoryPath>(DirectoryPath, DirectoryPath)
+  nameWithType: ComparisonExtensions.BeginCompare<DirectoryPath>(DirectoryPath, DirectoryPath)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.IO.DirectoryPath>(Garyon.Objects.IO.DirectoryPath, Garyon.Objects.IO.DirectoryPath)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of DirectoryPath)(DirectoryPath, DirectoryPath)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.IO.DirectoryPath)(Garyon.Objects.IO.DirectoryPath, Garyon.Objects.IO.DirectoryPath)
+  name.vb: BeginCompare(Of DirectoryPath)(DirectoryPath, DirectoryPath)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IO.DirectoryPath,Garyon.Objects.IO.DirectoryPath)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.IO.DirectoryPath,Garyon.Objects.IO.DirectoryPath)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+- uid: Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<DirectoryPath, TValue>(DirectoryPath)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<DirectoryPath, TValue>(DirectoryPath)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.IO.DirectoryPath, TValue>(Garyon.Objects.IO.DirectoryPath)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of DirectoryPath, TValue)(DirectoryPath)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.IO.DirectoryPath, TValue)(Garyon.Objects.IO.DirectoryPath)
+  name.vb: GetEnumerator(Of DirectoryPath, TValue)(DirectoryPath)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.IO.DirectoryPath)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.IO.DirectoryPath)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+- uid: Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.IO.DirectoryPath})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<DirectoryPath>(DirectoryPath, Action<DirectoryPath>)
+  nameWithType: MoreLinqExtensions.Apply<DirectoryPath>(DirectoryPath, Action<DirectoryPath>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.IO.DirectoryPath>(Garyon.Objects.IO.DirectoryPath, System.Action<Garyon.Objects.IO.DirectoryPath>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of DirectoryPath)(DirectoryPath, Action(Of DirectoryPath))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.IO.DirectoryPath)(Garyon.Objects.IO.DirectoryPath, System.Action(Of Garyon.Objects.IO.DirectoryPath))
+  name.vb: Apply(Of DirectoryPath)(DirectoryPath, Action(Of DirectoryPath))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.IO.DirectoryPath,System.Action{Garyon.Objects.IO.DirectoryPath})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.IO.DirectoryPath,System.Action{Garyon.Objects.IO.DirectoryPath})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IO.DirectoryPath.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.IO.DirectoryPath,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<DirectoryPath, TResult>(DirectoryPath, Func<DirectoryPath, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<DirectoryPath, TResult>(DirectoryPath, Func<DirectoryPath, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.IO.DirectoryPath, TResult>(Garyon.Objects.IO.DirectoryPath, System.Func<Garyon.Objects.IO.DirectoryPath, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of DirectoryPath, TResult)(DirectoryPath, Func(Of DirectoryPath, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.IO.DirectoryPath, TResult)(Garyon.Objects.IO.DirectoryPath, System.Func(Of Garyon.Objects.IO.DirectoryPath, TResult))
+  name.vb: Apply(Of DirectoryPath, TResult)(DirectoryPath, Func(Of DirectoryPath, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.IO.DirectoryPath,System.Func{Garyon.Objects.IO.DirectoryPath,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.IO.DirectoryPath,System.Func{Garyon.Objects.IO.DirectoryPath,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.IO.DirectoryPath.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<DirectoryPath>(DirectoryPath)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<DirectoryPath>(DirectoryPath)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.IO.DirectoryPath>(Garyon.Objects.IO.DirectoryPath)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of DirectoryPath)(DirectoryPath)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.IO.DirectoryPath)(Garyon.Objects.IO.DirectoryPath)
+  name.vb: EnumerateSingle(Of DirectoryPath)(DirectoryPath)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.IO.DirectoryPath)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.IO.DirectoryPath)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.IO.DirectoryPath
+    name: DirectoryPath
+    href: Garyon.Objects.IO.DirectoryPath.html
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects.IO.DirectoryPath.#ctor*
+  commentId: Overload:Garyon.Objects.IO.DirectoryPath.#ctor
+  href: Garyon.Objects.IO.DirectoryPath.html#Garyon_Objects_IO_DirectoryPath__ctor_System_String_
+  name: DirectoryPath
+  nameWithType: DirectoryPath.DirectoryPath
+  fullName: Garyon.Objects.IO.DirectoryPath.DirectoryPath
+  nameWithType.vb: DirectoryPath.New
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Objects.IO.DirectoryPath.Path*
+  commentId: Overload:Garyon.Objects.IO.DirectoryPath.Path
+  href: Garyon.Objects.IO.DirectoryPath.html#Garyon_Objects_IO_DirectoryPath_Path
+  name: Path
+  nameWithType: DirectoryPath.Path
+  fullName: Garyon.Objects.IO.DirectoryPath.Path
+- uid: Garyon.Objects.IO.IFileSystemPath.Path
+  commentId: P:Garyon.Objects.IO.IFileSystemPath.Path
+  parent: Garyon.Objects.IO.IFileSystemPath
+  href: Garyon.Objects.IO.IFileSystemPath.html#Garyon_Objects_IO_IFileSystemPath_Path
+  name: Path
+  nameWithType: IFileSystemPath.Path
+  fullName: Garyon.Objects.IO.IFileSystemPath.Path
+- uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: DirectoryInfo
+  nameWithType: DirectoryInfo
+  fullName: System.IO.DirectoryInfo
+- uid: Garyon.Objects.IO.DirectoryPath.DirectoryInfo*
+  commentId: Overload:Garyon.Objects.IO.DirectoryPath.DirectoryInfo
+  href: Garyon.Objects.IO.DirectoryPath.html#Garyon_Objects_IO_DirectoryPath_DirectoryInfo
+  name: DirectoryInfo
+  nameWithType: DirectoryPath.DirectoryInfo
+  fullName: Garyon.Objects.IO.DirectoryPath.DirectoryInfo
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Garyon.Objects.IO.DirectoryPath.Parent*
+  commentId: Overload:Garyon.Objects.IO.DirectoryPath.Parent
+  href: Garyon.Objects.IO.DirectoryPath.html#Garyon_Objects_IO_DirectoryPath_Parent
+  name: Parent
+  nameWithType: DirectoryPath.Parent
+  fullName: Garyon.Objects.IO.DirectoryPath.Parent
+- uid: Garyon.Objects.IO.DirectoryPath
+  commentId: T:Garyon.Objects.IO.DirectoryPath
+  parent: Garyon.Objects.IO
+  href: Garyon.Objects.IO.DirectoryPath.html
+  name: DirectoryPath
+  nameWithType: DirectoryPath
+  fullName: Garyon.Objects.IO.DirectoryPath
+- uid: System.IO.FileSystemInfo.FullName
+  commentId: P:System.IO.FileSystemInfo.FullName
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo.fullname
+  name: FullName
+  nameWithType: FileSystemInfo.FullName
+  fullName: System.IO.FileSystemInfo.FullName
+- uid: Garyon.Objects.IO.FilePath
+  commentId: T:Garyon.Objects.IO.FilePath
+  parent: Garyon.Objects.IO
+  href: Garyon.Objects.IO.FilePath.html
+  name: FilePath
+  nameWithType: FilePath
+  fullName: Garyon.Objects.IO.FilePath
+- uid: Garyon.Objects.IO.DirectoryPath.Path
+  commentId: P:Garyon.Objects.IO.DirectoryPath.Path
+  href: Garyon.Objects.IO.DirectoryPath.html#Garyon_Objects_IO_DirectoryPath_Path
+  name: Path
+  nameWithType: DirectoryPath.Path
+  fullName: Garyon.Objects.IO.DirectoryPath.Path
+- uid: Garyon.Objects.IO.DirectoryPath.File*
+  commentId: Overload:Garyon.Objects.IO.DirectoryPath.File
+  href: Garyon.Objects.IO.DirectoryPath.html#Garyon_Objects_IO_DirectoryPath_File_System_String_
+  name: File
+  nameWithType: DirectoryPath.File
+  fullName: Garyon.Objects.IO.DirectoryPath.File
+- uid: Garyon.Objects.IO.DirectoryPath.op_Implicit*
+  commentId: Overload:Garyon.Objects.IO.DirectoryPath.op_Implicit
+  name: implicit operator
+  nameWithType: DirectoryPath.implicit operator
+  fullName: Garyon.Objects.IO.DirectoryPath.implicit operator
+  nameWithType.vb: DirectoryPath.CType
+  fullName.vb: Garyon.Objects.IO.DirectoryPath.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator

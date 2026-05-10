@@ -1,0 +1,1408 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.LineStringBuilder
+  commentId: T:Garyon.Objects.LineStringBuilder
+  id: LineStringBuilder
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.LineStringBuilder.AddLine(System.String)
+  - Garyon.Objects.LineStringBuilder.AddLines(System.Collections.Generic.IEnumerable{System.String})
+  - Garyon.Objects.LineStringBuilder.AddLines(System.String[])
+  - Garyon.Objects.LineStringBuilder.AddRepeatedLine(System.String,System.Int32)
+  - Garyon.Objects.LineStringBuilder.Clear
+  - Garyon.Objects.LineStringBuilder.Item(System.Int32,System.Int32)
+  - Garyon.Objects.LineStringBuilder.LineCount
+  - Garyon.Objects.LineStringBuilder.ToString
+  langs:
+  - csharp
+  - vb
+  name: LineStringBuilder
+  nameWithType: LineStringBuilder
+  fullName: Garyon.Objects.LineStringBuilder
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LineStringBuilder
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 14
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Provides mechanisms and functions to building a multiline string.
+  remarks: >-
+    Added strings are not checked for whether they're multiline or not, and are
+
+    treated as a single line.
+  example: []
+  syntax:
+    content: public class LineStringBuilder
+    content.vb: Public Class LineStringBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Garyon.Objects.LineStringBuilder.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.LineStringBuilder)
+  - Garyon.Objects.LineStringBuilder.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  - Garyon.Objects.LineStringBuilder.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.LineStringBuilder})
+  - Garyon.Objects.LineStringBuilder.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.LineStringBuilder,{TResult}})
+  - Garyon.Objects.LineStringBuilder.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+- uid: Garyon.Objects.LineStringBuilder.LineCount
+  commentId: P:Garyon.Objects.LineStringBuilder.LineCount
+  id: LineCount
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: LineCount
+  nameWithType: LineStringBuilder.LineCount
+  fullName: Garyon.Objects.LineStringBuilder.LineCount
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: LineCount
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 21
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Returns the line count of the string.
+  example: []
+  syntax:
+    content: public int LineCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LineCount As Integer
+  overload: Garyon.Objects.LineStringBuilder.LineCount*
+- uid: Garyon.Objects.LineStringBuilder.AddLine(System.String)
+  commentId: M:Garyon.Objects.LineStringBuilder.AddLine(System.String)
+  id: AddLine(System.String)
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddLine(string)
+  nameWithType: LineStringBuilder.AddLine(string)
+  fullName: Garyon.Objects.LineStringBuilder.AddLine(string)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddLine
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 29
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a line to the string.
+  example: []
+  syntax:
+    content: public void AddLine(string line)
+    parameters:
+    - id: line
+      type: System.String
+      description: The line to add to the string.
+    content.vb: Public Sub AddLine(line As String)
+  overload: Garyon.Objects.LineStringBuilder.AddLine*
+  nameWithType.vb: LineStringBuilder.AddLine(String)
+  fullName.vb: Garyon.Objects.LineStringBuilder.AddLine(String)
+  name.vb: AddLine(String)
+- uid: Garyon.Objects.LineStringBuilder.AddRepeatedLine(System.String,System.Int32)
+  commentId: M:Garyon.Objects.LineStringBuilder.AddRepeatedLine(System.String,System.Int32)
+  id: AddRepeatedLine(System.String,System.Int32)
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddRepeatedLine(string, int)
+  nameWithType: LineStringBuilder.AddRepeatedLine(string, int)
+  fullName: Garyon.Objects.LineStringBuilder.AddRepeatedLine(string, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddRepeatedLine
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 42
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds the same line to the builder a specified number of times.
+  example: []
+  syntax:
+    content: public void AddRepeatedLine(string line, int times)
+    parameters:
+    - id: line
+      type: System.String
+      description: The line to add to the builder.
+    - id: times
+      type: System.Int32
+      description: The numer of times to add the line to the builder.
+    content.vb: Public Sub AddRepeatedLine(line As String, times As Integer)
+  overload: Garyon.Objects.LineStringBuilder.AddRepeatedLine*
+  nameWithType.vb: LineStringBuilder.AddRepeatedLine(String, Integer)
+  fullName.vb: Garyon.Objects.LineStringBuilder.AddRepeatedLine(String, Integer)
+  name.vb: AddRepeatedLine(String, Integer)
+- uid: Garyon.Objects.LineStringBuilder.AddLines(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Garyon.Objects.LineStringBuilder.AddLines(System.Collections.Generic.IEnumerable{System.String})
+  id: AddLines(System.Collections.Generic.IEnumerable{System.String})
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddLines(IEnumerable<string>)
+  nameWithType: LineStringBuilder.AddLines(IEnumerable<string>)
+  fullName: Garyon.Objects.LineStringBuilder.AddLines(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddLines
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 53
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a number of lines to the builder.
+  example: []
+  syntax:
+    content: public void AddLines(IEnumerable<string> lines)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The lines to add to the builder.
+    content.vb: Public Sub AddLines(lines As IEnumerable(Of String))
+  overload: Garyon.Objects.LineStringBuilder.AddLines*
+  nameWithType.vb: LineStringBuilder.AddLines(IEnumerable(Of String))
+  fullName.vb: Garyon.Objects.LineStringBuilder.AddLines(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: AddLines(IEnumerable(Of String))
+- uid: Garyon.Objects.LineStringBuilder.AddLines(System.String[])
+  commentId: M:Garyon.Objects.LineStringBuilder.AddLines(System.String[])
+  id: AddLines(System.String[])
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddLines(params string[])
+  nameWithType: LineStringBuilder.AddLines(params string[])
+  fullName: Garyon.Objects.LineStringBuilder.AddLines(params string[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AddLines
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 64
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Adds a number of lines to the builder.
+  example: []
+  syntax:
+    content: public void AddLines(params string[] lines)
+    parameters:
+    - id: lines
+      type: System.String[]
+      description: The lines to add to the builder.
+    content.vb: Public Sub AddLines(ParamArray lines As String())
+  overload: Garyon.Objects.LineStringBuilder.AddLines*
+  nameWithType.vb: LineStringBuilder.AddLines(ParamArray String())
+  fullName.vb: Garyon.Objects.LineStringBuilder.AddLines(ParamArray String())
+  name.vb: AddLines(ParamArray String())
+- uid: Garyon.Objects.LineStringBuilder.Clear
+  commentId: M:Garyon.Objects.LineStringBuilder.Clear
+  id: Clear
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: LineStringBuilder.Clear()
+  fullName: Garyon.Objects.LineStringBuilder.Clear()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Clear
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 73
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Clears all the lines.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Garyon.Objects.LineStringBuilder.Clear*
+- uid: Garyon.Objects.LineStringBuilder.ToString
+  commentId: M:Garyon.Objects.LineStringBuilder.ToString
+  id: ToString
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: LineStringBuilder.ToString()
+  fullName: Garyon.Objects.LineStringBuilder.ToString()
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToString
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 85
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Builds the resulting string by concatenating all the lines and
+
+    delimiting them with newline characters.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The resulting string.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Garyon.Objects.LineStringBuilder.ToString*
+- uid: Garyon.Objects.LineStringBuilder.Item(System.Int32,System.Int32)
+  commentId: P:Garyon.Objects.LineStringBuilder.Item(System.Int32,System.Int32)
+  id: Item(System.Int32,System.Int32)
+  parent: Garyon.Objects.LineStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: this[int, int]
+  nameWithType: LineStringBuilder.this[int, int]
+  fullName: Garyon.Objects.LineStringBuilder.this[int, int]
+  type: Property
+  source:
+    remote:
+      path: Garyon/Objects/LineStringBuilder.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: this[]
+    path: ../Garyon/Objects/LineStringBuilder.cs
+    startLine: 102
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Gets or sets the character at the specified line and column.
+  example: []
+  syntax:
+    content: public char this[int line, int column] { get; set; }
+    parameters:
+    - id: line
+      type: System.Int32
+      description: The index of the line.
+    - id: column
+      type: System.Int32
+      description: The index of the column.
+    return:
+      type: System.Char
+      description: The character at the respective position.
+    content.vb: Public Default Property this[](line As Integer, column As Integer) As Char
+  overload: Garyon.Objects.LineStringBuilder.Item*
+  nameWithType.vb: LineStringBuilder.this[](Integer, Integer)
+  fullName.vb: Garyon.Objects.LineStringBuilder.this[](Integer, Integer)
+  name.vb: this[](Integer, Integer)
+references:
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.LineStringBuilder)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  parent: Garyon.Extensions.Comparison.ComparisonExtensions
+  definition: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<LineStringBuilder>(LineStringBuilder, LineStringBuilder)
+  nameWithType: ComparisonExtensions.BeginCompare<LineStringBuilder>(LineStringBuilder, LineStringBuilder)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<Garyon.Objects.LineStringBuilder>(Garyon.Objects.LineStringBuilder, Garyon.Objects.LineStringBuilder)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of LineStringBuilder)(LineStringBuilder, LineStringBuilder)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of Garyon.Objects.LineStringBuilder)(Garyon.Objects.LineStringBuilder, Garyon.Objects.LineStringBuilder)
+  name.vb: BeginCompare(Of LineStringBuilder)(LineStringBuilder, LineStringBuilder)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.LineStringBuilder,Garyon.Objects.LineStringBuilder)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(Garyon.Objects.LineStringBuilder,Garyon.Objects.LineStringBuilder)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  parent: Garyon.Extensions.IEnumeratorExtensions
+  definition: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<LineStringBuilder, TValue>(LineStringBuilder)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<LineStringBuilder, TValue>(LineStringBuilder)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<Garyon.Objects.LineStringBuilder, TValue>(Garyon.Objects.LineStringBuilder)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of LineStringBuilder, TValue)(LineStringBuilder)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of Garyon.Objects.LineStringBuilder, TValue)(Garyon.Objects.LineStringBuilder)
+  name.vb: GetEnumerator(Of LineStringBuilder, TValue)(LineStringBuilder)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.LineStringBuilder)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(Garyon.Objects.LineStringBuilder)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.Garyon.Extensions.MoreLinqExtensions.Apply``1(System.Action{Garyon.Objects.LineStringBuilder})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<LineStringBuilder>(LineStringBuilder, Action<LineStringBuilder>)
+  nameWithType: MoreLinqExtensions.Apply<LineStringBuilder>(LineStringBuilder, Action<LineStringBuilder>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.LineStringBuilder>(Garyon.Objects.LineStringBuilder, System.Action<Garyon.Objects.LineStringBuilder>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of LineStringBuilder)(LineStringBuilder, Action(Of LineStringBuilder))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.LineStringBuilder)(Garyon.Objects.LineStringBuilder, System.Action(Of Garyon.Objects.LineStringBuilder))
+  name.vb: Apply(Of LineStringBuilder)(LineStringBuilder, Action(Of LineStringBuilder))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.LineStringBuilder,System.Action{Garyon.Objects.LineStringBuilder})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(Garyon.Objects.LineStringBuilder,System.Action{Garyon.Objects.LineStringBuilder})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.Garyon.Extensions.MoreLinqExtensions.Apply``2(System.Func{Garyon.Objects.LineStringBuilder,{TResult}})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  parent: Garyon.Extensions.MoreLinqExtensions
+  definition: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<LineStringBuilder, TResult>(LineStringBuilder, Func<LineStringBuilder, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<LineStringBuilder, TResult>(LineStringBuilder, Func<LineStringBuilder, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<Garyon.Objects.LineStringBuilder, TResult>(Garyon.Objects.LineStringBuilder, System.Func<Garyon.Objects.LineStringBuilder, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of LineStringBuilder, TResult)(LineStringBuilder, Func(Of LineStringBuilder, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of Garyon.Objects.LineStringBuilder, TResult)(Garyon.Objects.LineStringBuilder, System.Func(Of Garyon.Objects.LineStringBuilder, TResult))
+  name.vb: Apply(Of LineStringBuilder, TResult)(LineStringBuilder, Func(Of LineStringBuilder, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.LineStringBuilder,System.Func{Garyon.Objects.LineStringBuilder,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(Garyon.Objects.LineStringBuilder,System.Func{Garyon.Objects.LineStringBuilder,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  parent: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  definition: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<LineStringBuilder>(LineStringBuilder)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<LineStringBuilder>(LineStringBuilder)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<Garyon.Objects.LineStringBuilder>(Garyon.Objects.LineStringBuilder)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of LineStringBuilder)(LineStringBuilder)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of Garyon.Objects.LineStringBuilder)(Garyon.Objects.LineStringBuilder)
+  name.vb: EnumerateSingle(Of LineStringBuilder)(LineStringBuilder)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.LineStringBuilder)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: '>'
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(Garyon.Objects.LineStringBuilder)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+  - name: (
+  - uid: Garyon.Objects.LineStringBuilder
+    name: LineStringBuilder
+    href: Garyon.Objects.LineStringBuilder.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  commentId: M:Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  name: BeginCompare<T>(T, T)
+  nameWithType: ComparisonExtensions.BeginCompare<T>(T, T)
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare<T>(T, T)
+  nameWithType.vb: ComparisonExtensions.BeginCompare(Of T)(T, T)
+  fullName.vb: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare(Of T)(T, T)
+  name.vb: BeginCompare(Of T)(T, T)
+  spec.csharp:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.Comparison.ComparisonExtensions.BeginCompare``1(``0,``0)
+    name: BeginCompare
+    href: Garyon.Extensions.Comparison.ComparisonExtensions.html#Garyon_Extensions_Comparison_ComparisonExtensions_BeginCompare__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.Comparison.ComparisonExtensions
+  commentId: T:Garyon.Extensions.Comparison.ComparisonExtensions
+  parent: Garyon.Extensions.Comparison
+  href: Garyon.Extensions.Comparison.ComparisonExtensions.html
+  name: ComparisonExtensions
+  nameWithType: ComparisonExtensions
+  fullName: Garyon.Extensions.Comparison.ComparisonExtensions
+- uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  commentId: M:Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+  href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  name: GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType: IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  fullName: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator<TEnumerator, TValue>(TEnumerator)
+  nameWithType.vb: IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  fullName.vb: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  name.vb: GetEnumerator(Of TEnumerator, TValue)(TEnumerator)
+  spec.csharp:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: <
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: (
+  - name: TEnumerator
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.IEnumeratorExtensions.GetEnumerator``2(``0)
+    name: GetEnumerator
+    href: Garyon.Extensions.IEnumeratorExtensions.html#Garyon_Extensions_IEnumeratorExtensions_GetEnumerator__2___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEnumerator
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - name: TEnumerator
+  - name: )
+- uid: Garyon.Extensions.IEnumeratorExtensions
+  commentId: T:Garyon.Extensions.IEnumeratorExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.IEnumeratorExtensions.html
+  name: IEnumeratorExtensions
+  nameWithType: IEnumeratorExtensions
+  fullName: Garyon.Extensions.IEnumeratorExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  name: Apply<TSource>(TSource, Action<TSource>)
+  nameWithType: MoreLinqExtensions.Apply<TSource>(TSource, Action<TSource>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource>(TSource, System.Action<TSource>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource)(TSource, Action(Of TSource))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource)(TSource, System.Action(Of TSource))
+  name.vb: Apply(Of TSource)(TSource, Action(Of TSource))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``1(``0,System.Action{``0})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__1___0_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Garyon.Extensions.MoreLinqExtensions
+  commentId: T:Garyon.Extensions.MoreLinqExtensions
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.MoreLinqExtensions.html
+  name: MoreLinqExtensions
+  nameWithType: MoreLinqExtensions
+  fullName: Garyon.Extensions.MoreLinqExtensions
+- uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  commentId: M:Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  name: Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType: MoreLinqExtensions.Apply<TSource, TResult>(TSource, Func<TSource, TResult>)
+  fullName: Garyon.Extensions.MoreLinqExtensions.Apply<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  nameWithType.vb: MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName.vb: Garyon.Extensions.MoreLinqExtensions.Apply(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  name.vb: Apply(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  spec.csharp:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.MoreLinqExtensions.Apply``2(``0,System.Func{``0,``1})
+    name: Apply
+    href: Garyon.Extensions.MoreLinqExtensions.html#Garyon_Extensions_MoreLinqExtensions_Apply__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: TSource
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  commentId: M:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  name: EnumerateSingle<T>(T)
+  nameWithType: SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle<T>(T)
+  nameWithType.vb: SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  fullName.vb: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle(Of T)(T)
+  name.vb: EnumerateSingle(Of T)(T)
+  spec.csharp:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.EnumerateSingle``1(``0)
+    name: EnumerateSingle
+    href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html#Garyon_Objects_Enumerators_SingleValueEnumeratorExtensions_EnumerateSingle__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  commentId: T:Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+  parent: Garyon.Objects.Enumerators
+  href: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions.html
+  name: SingleValueEnumeratorExtensions
+  nameWithType: SingleValueEnumeratorExtensions
+  fullName: Garyon.Objects.Enumerators.SingleValueEnumeratorExtensions
+- uid: Garyon.Extensions.Comparison
+  commentId: N:Garyon.Extensions.Comparison
+  href: Garyon.html
+  name: Garyon.Extensions.Comparison
+  nameWithType: Garyon.Extensions.Comparison
+  fullName: Garyon.Extensions.Comparison
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Comparison
+    name: Comparison
+    href: Garyon.Extensions.Comparison.html
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: Garyon.Objects.Enumerators
+  commentId: N:Garyon.Objects.Enumerators
+  href: Garyon.html
+  name: Garyon.Objects.Enumerators
+  nameWithType: Garyon.Objects.Enumerators
+  fullName: Garyon.Objects.Enumerators
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  - name: .
+  - uid: Garyon.Objects.Enumerators
+    name: Enumerators
+    href: Garyon.Objects.Enumerators.html
+- uid: Garyon.Objects.LineStringBuilder.LineCount*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.LineCount
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_LineCount
+  name: LineCount
+  nameWithType: LineStringBuilder.LineCount
+  fullName: Garyon.Objects.LineStringBuilder.LineCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Objects.LineStringBuilder.AddLine*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.AddLine
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_AddLine_System_String_
+  name: AddLine
+  nameWithType: LineStringBuilder.AddLine
+  fullName: Garyon.Objects.LineStringBuilder.AddLine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Garyon.Objects.LineStringBuilder.AddRepeatedLine*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.AddRepeatedLine
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_AddRepeatedLine_System_String_System_Int32_
+  name: AddRepeatedLine
+  nameWithType: LineStringBuilder.AddRepeatedLine
+  fullName: Garyon.Objects.LineStringBuilder.AddRepeatedLine
+- uid: Garyon.Objects.LineStringBuilder.AddLines*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.AddLines
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_AddLines_System_Collections_Generic_IEnumerable_System_String__
+  name: AddLines
+  nameWithType: LineStringBuilder.AddLines
+  fullName: Garyon.Objects.LineStringBuilder.AddLines
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.Clear*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.Clear
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_Clear
+  name: Clear
+  nameWithType: LineStringBuilder.Clear
+  fullName: Garyon.Objects.LineStringBuilder.Clear
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Garyon.Objects.LineStringBuilder.ToString*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.ToString
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_ToString
+  name: ToString
+  nameWithType: LineStringBuilder.ToString
+  fullName: Garyon.Objects.LineStringBuilder.ToString
+- uid: Garyon.Objects.LineStringBuilder.Item*
+  commentId: Overload:Garyon.Objects.LineStringBuilder.Item
+  href: Garyon.Objects.LineStringBuilder.html#Garyon_Objects_LineStringBuilder_Item_System_Int32_System_Int32_
+  name: this
+  nameWithType: LineStringBuilder.this
+  fullName: Garyon.Objects.LineStringBuilder.this
+  nameWithType.vb: LineStringBuilder.this[]
+  fullName.vb: Garyon.Objects.LineStringBuilder.this[]
+  name.vb: this[]
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char

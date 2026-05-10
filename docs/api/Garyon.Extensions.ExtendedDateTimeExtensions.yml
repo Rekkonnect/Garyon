@@ -1,0 +1,471 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions
+  commentId: T:Garyon.Extensions.ExtendedDateTimeExtensions
+  id: ExtendedDateTimeExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.ExtendedDateTimeExtensions.Subtract(System.DateOnly,System.DateOnly)
+  - Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly(System.DateTime)
+  - Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime(System.DateOnly)
+  langs:
+  - csharp
+  - vb
+  name: ExtendedDateTimeExtensions
+  nameWithType: ExtendedDateTimeExtensions
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/ExtendedDateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ExtendedDateTimeExtensions
+    path: ../Garyon/Extensions/ExtendedDateTimeExtensions.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Contains extensions focused on interoperability between
+
+    <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>, <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref>,
+
+    <xref href="System.DateOnly" data-throw-if-not-resolved="false"></xref> and <xref href="System.TimeOnly" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static class ExtendedDateTimeExtensions
+    content.vb: Public Module ExtendedDateTimeExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly(System.DateTime)
+  commentId: M:Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly(System.DateTime)
+  id: ToDateOnly(System.DateTime)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ExtendedDateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDateOnly(DateTime)
+  nameWithType: ExtendedDateTimeExtensions.ToDateOnly(DateTime)
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ExtendedDateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToDateOnly
+    path: ../Garyon/Extensions/ExtendedDateTimeExtensions.cs
+    startLine: 16
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Converts a <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> into a <xref href="System.DateOnly" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static DateOnly ToDateOnly(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+    return:
+      type: System.DateOnly
+    content.vb: Public Shared Function ToDateOnly(dateTime As Date) As DateOnly
+  overload: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly*
+  nameWithType.vb: ExtendedDateTimeExtensions.ToDateOnly(Date)
+  fullName.vb: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly(Date)
+  name.vb: ToDateOnly(Date)
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime(System.DateOnly)
+  commentId: M:Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime(System.DateOnly)
+  id: ToDateTime(System.DateOnly)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ExtendedDateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDateTime(DateOnly)
+  nameWithType: ExtendedDateTimeExtensions.ToDateTime(DateOnly)
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime(System.DateOnly)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ExtendedDateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ToDateTime
+    path: ../Garyon/Extensions/ExtendedDateTimeExtensions.cs
+    startLine: 21
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static DateTime ToDateTime(this DateOnly dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateOnly
+    return:
+      type: System.DateTime
+    content.vb: Public Shared Function ToDateTime(dateTime As DateOnly) As Date
+  overload: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime*
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions.Subtract(System.DateOnly,System.DateOnly)
+  commentId: M:Garyon.Extensions.ExtendedDateTimeExtensions.Subtract(System.DateOnly,System.DateOnly)
+  id: Subtract(System.DateOnly,System.DateOnly)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ExtendedDateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Subtract(DateOnly, DateOnly)
+  nameWithType: ExtendedDateTimeExtensions.Subtract(DateOnly, DateOnly)
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions.Subtract(System.DateOnly, System.DateOnly)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ExtendedDateTimeExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Subtract
+    path: ../Garyon/Extensions/ExtendedDateTimeExtensions.cs
+    startLine: 26
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static TimeSpan Subtract(this DateOnly date, DateOnly other)
+    parameters:
+    - id: date
+      type: System.DateOnly
+    - id: other
+      type: System.DateOnly
+    return:
+      type: System.TimeSpan
+    content.vb: Public Shared Function Subtract([date] As DateOnly, other As DateOnly) As TimeSpan
+  overload: Garyon.Extensions.ExtendedDateTimeExtensions.Subtract*
+references:
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: System.DateOnly
+  commentId: T:System.DateOnly
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dateonly
+  name: DateOnly
+  nameWithType: DateOnly
+  fullName: System.DateOnly
+- uid: System.TimeOnly
+  commentId: T:System.TimeOnly
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timeonly
+  name: TimeOnly
+  nameWithType: TimeOnly
+  fullName: System.TimeOnly
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly*
+  commentId: Overload:Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly
+  href: Garyon.Extensions.ExtendedDateTimeExtensions.html#Garyon_Extensions_ExtendedDateTimeExtensions_ToDateOnly_System_DateTime_
+  name: ToDateOnly
+  nameWithType: ExtendedDateTimeExtensions.ToDateOnly
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateOnly
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime*
+  commentId: Overload:Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime
+  href: Garyon.Extensions.ExtendedDateTimeExtensions.html#Garyon_Extensions_ExtendedDateTimeExtensions_ToDateTime_System_DateOnly_
+  name: ToDateTime
+  nameWithType: ExtendedDateTimeExtensions.ToDateTime
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions.ToDateTime
+- uid: Garyon.Extensions.ExtendedDateTimeExtensions.Subtract*
+  commentId: Overload:Garyon.Extensions.ExtendedDateTimeExtensions.Subtract
+  href: Garyon.Extensions.ExtendedDateTimeExtensions.html#Garyon_Extensions_ExtendedDateTimeExtensions_Subtract_System_DateOnly_System_DateOnly_
+  name: Subtract
+  nameWithType: ExtendedDateTimeExtensions.Subtract
+  fullName: Garyon.Extensions.ExtendedDateTimeExtensions.Subtract
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan

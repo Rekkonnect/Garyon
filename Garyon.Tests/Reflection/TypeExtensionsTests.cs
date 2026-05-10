@@ -28,6 +28,7 @@ public class TypeExtensionsTests : ExampleTypes
     }
 
     private static unsafe void DummyByRefFunction(ref int _0, ref int* _1) { }
+    private static void GenericMethod<T>() { }
 
     private static async Task AssertTypeDefinitionInfo<T>(
         TypeDefinitionInfoMapping mapping,
@@ -36,6 +37,25 @@ public class TypeExtensionsTests : ExampleTypes
     {
         await Assert.That(actual(mapping.Type))
             .IsEqualTo(expected(mapping.Info));
+    }
+
+    private sealed class HasConstructors
+    {
+        public HasConstructors() { }
+        public HasConstructors(int _, string __) { }
+    }
+
+    private sealed class HasPrivateParameterlessConstructor
+    {
+        private HasPrivateParameterlessConstructor() { }
+    }
+
+    private sealed class GenericContainer<T>
+    {
+        public void Transform<TValue>(TValue value)
+        {
+            _ = value;
+        }
     }
 
     #region Inheritance
@@ -125,6 +145,64 @@ public class TypeExtensionsTests : ExampleTypes
         int level = typeof(CD).GetInheritanceLevel();
         await Assert.That(level).IsEqualTo(3);
     }
+
+    [Test]
+    public async Task GeneralTypeHelpersCoverageTest()
+    {
+        var genericPrefix = typeof(Dictionary<int, string>).GenericFullNamePrefixOrSame();
+        var typeCode = typeof(int).GetTypeCode();
+        var implements = typeof(List<int>).Implements(typeof(IEnumerable<int>));
+        var isOrImplements = typeof(IEnumerable<int>).IsOrImplements(typeof(IEnumerable<int>));
+        var baseTypes = typeof(CD).EnumerateBaseTypes().ToArray();
+        var interfaceTree = typeof(IK).GetInterfaceInheritanceTree();
+        var genericVariantInherited = Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(typeof(List<int>), typeof(IEnumerable<>), out var genericVariantType);
+        var classGenericVariantInherited = Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(typeof(List<int>), typeof(List<>), out var classGenericVariantType);
+        var genericDefinitionOrSame = typeof(List<int>).GetGenericTypeDefinitionOrSame();
+        var nonGenericDefinitionOrSame = typeof(string).GetGenericTypeDefinitionOrSame();
+        var parameterlessConstructor = typeof(HasConstructors).GetParameterlessConstructor();
+        var anyAccessibilityParameterlessConstructor = typeof(HasPrivateParameterlessConstructor).GetAnyAccessibilityParameterlessConstructor();
+        var intStringConstructor = typeof(HasConstructors).GetConstructor<int, string>();
+        var anyAccessibilityConstructor = typeof(HasPrivateParameterlessConstructor).GetAnyAccessibilityConstructor();
+
+        await Assert.That(genericPrefix).IsEqualTo("System.Collections.Generic.Dictionary");
+        await Assert.That(typeCode).IsEqualTo(TypeCode.Int32);
+        await Assert.That(implements).IsTrue();
+        await Assert.That(isOrImplements).IsTrue();
+        await Assert.That(baseTypes.SequenceEqual([typeof(CC), typeof(CB), typeof(CA), typeof(object)])).IsTrue();
+        await Assert.That(interfaceTree.Root.Children.Select(static node => node.Value).SequenceEqual([typeof(ID), typeof(IJ), typeof(II)])).IsTrue();
+        await Assert.That(genericVariantInherited).IsTrue();
+        await Assert.That(genericVariantType).IsEqualTo(typeof(IEnumerable<int>));
+        await Assert.That(classGenericVariantInherited).IsFalse();
+        await Assert.That(classGenericVariantType).IsNull();
+        await Assert.That(genericDefinitionOrSame).IsEqualTo(typeof(List<>));
+        await Assert.That(nonGenericDefinitionOrSame).IsEqualTo(typeof(string));
+        await Assert.That(parameterlessConstructor).IsNotNull();
+        await Assert.That(anyAccessibilityParameterlessConstructor).IsNotNull();
+        await Assert.That(intStringConstructor).IsNotNull();
+        await Assert.That(anyAccessibilityConstructor).IsNotNull();
+    }
+
+    [Test]
+    public async Task TypeHelperExceptionalCasesAndGenericMethodMetadataTest()
+    {
+        var declaringMethodSafe = typeof(TypeExtensionsTests)
+            .GetMethod(nameof(GenericMethod), BindingFlags.NonPublic | BindingFlags.Static)!
+            .GetGenericArguments()[0]
+            .GetDeclaringMethodSafe();
+
+        var originalDeclaringMember = typeof(GenericContainer<>).GetGenericArguments()[0]
+            .GetOriginalDeclaringGenericMember();
+
+        var invalidImplements = Assert.Throws<ArgumentException>(() => typeof(int).Implements(typeof(int)));
+        var invalidIsOrImplements = Assert.Throws<ArgumentException>(() => typeof(List<int>).IsOrImplements(typeof(IEnumerable<int>)));
+        var invalidGenericDefinition = Assert.Throws<ArgumentException>(() => Garyon.Reflection.TypeExtensions.InheritsGenericVariantOf(typeof(List<int>), typeof(List<int>), out _));
+
+        await Assert.That(declaringMethodSafe!.Name).IsEqualTo(nameof(GenericMethod));
+        await Assert.That(originalDeclaringMember.Name).IsEqualTo("GenericContainer`1");
+        await Assert.That(invalidImplements.Message.Contains("not an interface type")).IsTrue();
+        await Assert.That(invalidIsOrImplements.Message.Contains("source interface type is not an interface type")).IsTrue();
+        await Assert.That(invalidGenericDefinition.ParamName).IsEqualTo("genericDefinition");
+    }
     [Test]
     public async Task GetInheritanceTreeTest()
     {
@@ -186,6 +264,7 @@ public class TypeExtensionsTests : ExampleTypes
         await Assert.That(expectedTree.GetTreeView()).IsEqualTo(expectedTreeView.Trim());
         await Assert.That(tree).IsEqualTo(expectedTree);
     }
+
     #endregion
 
     #region Generic
@@ -484,8 +563,22 @@ public class TypeExtensionsTests : ExampleTypes
         await AssertDeclaringTypes(outer, typeof(GenericWithNestedGeneric<,>));
         await AssertDeclaringTypes(inner1, typeof(GenericWithNestedGeneric<,>.Nested<,,>));
         await AssertDeclaringTypes(inner2, typeof(GenericWithNestedGeneric<,>.Nested<,,>.Nested2<,,>));
-        // TODO: Also test cases where any of the types is non-generic,
-        // and where the outer type has more generic parameters
+
+        var nonGenericNestedType = GenericWithNonGenericNested<int, int>.Nested.Nested2<int>.Type;
+        var nonGenericNestedParameters = nonGenericNestedType.GetGenericArguments();
+        var nonGenericOuter = nonGenericNestedParameters[0..2];
+        var nonGenericInner = nonGenericNestedParameters[2..3];
+        await AssertDeclaringTypes(nonGenericOuter, typeof(GenericWithNonGenericNested<,>));
+        await AssertDeclaringTypes(nonGenericInner, typeof(GenericWithNonGenericNested<,>.Nested.Nested2<>));
+
+        var manyOuterType = GenericWithManyOuterParameters<int, int, int, int>.Nested<int>.Nested2<int>.Type;
+        var manyOuterParameters = manyOuterType.GetGenericArguments();
+        var manyOuter = manyOuterParameters[0..4];
+        var manyInner1 = manyOuterParameters[4..5];
+        var manyInner2 = manyOuterParameters[5..6];
+        await AssertDeclaringTypes(manyOuter, typeof(GenericWithManyOuterParameters<,,,>));
+        await AssertDeclaringTypes(manyInner1, typeof(GenericWithManyOuterParameters<,,,>.Nested<>));
+        await AssertDeclaringTypes(manyInner2, typeof(GenericWithManyOuterParameters<,,,>.Nested<>.Nested2<>));
 
         async Task AssertDeclaringTypes(IEnumerable<Type> genericParameters, MemberInfo expectedDeclaringMember)
         {

@@ -1,0 +1,75 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "Garyon/Garyon.csproj" ],
+          "src": ".."
+        }
+      ],
+      "dest": "api",
+      "includePrivateMembers": false,
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "noRestore": false,
+      "namespaceLayout": "flattened",
+      "memberLayout": "samePage",
+      "allowCompilationErrors": false,
+      "properties": {
+        "TargetFramework": "net10.0"
+      }
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "api/**.yml", "api/index.md" ]
+      },
+      {
+        "files": [ "guides/**.md", "guides/**/toc.yml", "*.md", "toc.yml" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "images/**" ]
+      },
+      {
+        "files": [ "styles/**" ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [ "apidoc/**.md" ],
+        "exclude": [ "obj/**", "_site/**" ]
+      }
+    ],
+    "dest": "_site",
+    "sitemap": {
+      "baseUrl": "https://rekkonnect.github.io/Garyon/"
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [ "default", "modern", "templates/garyon" ],
+    "postProcessors": [],
+    "markdownEngineProperties": {
+      "alerts": {
+        "VERSION": "alert alert-warning alert-version"
+      }
+    },
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+    "globalMetadata": {
+      "_appTitle": "Garyon Documentation",
+      "_appName": "Garyon",
+      "_appFooter": "© 2020-2026 Rekkonnect. Garyon is licensed under the MIT License.",
+      "_enableSearch": true,
+      "_gitContribute": {
+        "repo": "https://github.com/Rekkonnect/Garyon",
+        "branch": "dev/import-utils/a"
+      }
+    }
+  }
+}

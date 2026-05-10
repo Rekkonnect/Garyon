@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Memory.Allocation
+  commentId: T:Garyon.Memory.Allocation
+  id: Allocation
+  parent: Garyon.Memory
+  children:
+  - Garyon.Memory.Allocation.Allocate(System.Int32)
+  - Garyon.Memory.Allocation.AllocateClear(System.Int32)
+  - Garyon.Memory.Allocation.AllocateClear``1(System.Int32)
+  - Garyon.Memory.Allocation.Allocate``1(System.Int32)
+  - Garyon.Memory.Allocation.Free(System.Void*)
+  - Garyon.Memory.Allocation.Reallocate(System.Void*,System.Int32)
+  - Garyon.Memory.Allocation.Reallocate``1(``0*,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Allocation
+  nameWithType: Allocation
+  fullName: Garyon.Memory.Allocation
+  type: Class
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Allocation
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: Provides functions for memory allocation on the unmanaged heap.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static class Allocation
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Module Allocation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Memory.Allocation.Allocate(System.Int32)
+  commentId: M:Garyon.Memory.Allocation.Allocate(System.Int32)
+  id: Allocate(System.Int32)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: Allocate(int)
+  nameWithType: Allocation.Allocate(int)
+  fullName: Garyon.Memory.Allocation.Allocate(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Allocate
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: Allocates a block of bytes from the unmanaged heap.
+  example: []
+  syntax:
+    content: public static void* Allocate(int bytes)
+    parameters:
+    - id: bytes
+      type: System.Int32
+      description: The number of bytes to allocate.
+    return:
+      type: System.Void*
+      description: A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>* pointing to the start of the allocated block.
+    content.vb: Public Shared Function Allocate(bytes As Integer) As Void*
+  overload: Garyon.Memory.Allocation.Allocate*
+  nameWithType.vb: Allocation.Allocate(Integer)
+  fullName.vb: Garyon.Memory.Allocation.Allocate(Integer)
+  name.vb: Allocate(Integer)
+- uid: Garyon.Memory.Allocation.Allocate``1(System.Int32)
+  commentId: M:Garyon.Memory.Allocation.Allocate``1(System.Int32)
+  id: Allocate``1(System.Int32)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: Allocate<T>(int)
+  nameWithType: Allocation.Allocate<T>(int)
+  fullName: Garyon.Memory.Allocation.Allocate<T>(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Allocate
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 39
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: >-
+    Allocates a block of elements of a specified type
+
+    <code class="typeparamref">T</code> from the unmanaged heap.
+  example: []
+  syntax:
+    content: 'public static T* Allocate<T>(int elements) where T : unmanaged'
+    parameters:
+    - id: elements
+      type: System.Int32
+      description: The number of elements the allocated block will store.
+    typeParameters:
+    - id: T
+      description: The type of elements the allocated block will store.
+    return:
+      type: '{T}*'
+      description: >-
+        A <code class="typeparamref">T</code>* pointing to the start of the allocated
+
+        block. The block's size is equal to the number of elements multiplied by
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/sizeof">sizeof</a>(<code class="typeparamref">T</code>).
+    content.vb: Public Shared Function Allocate(Of T As Structure)(elements As Integer) As T*
+  overload: Garyon.Memory.Allocation.Allocate*
+  nameWithType.vb: Allocation.Allocate(Of T)(Integer)
+  fullName.vb: Garyon.Memory.Allocation.Allocate(Of T)(Integer)
+  name.vb: Allocate(Of T)(Integer)
+- uid: Garyon.Memory.Allocation.AllocateClear(System.Int32)
+  commentId: M:Garyon.Memory.Allocation.AllocateClear(System.Int32)
+  id: AllocateClear(System.Int32)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: AllocateClear(int)
+  nameWithType: Allocation.AllocateClear(int)
+  fullName: Garyon.Memory.Allocation.AllocateClear(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AllocateClear
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 54
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: Allocates a block of bytes from the unmanaged heap, and zeroes it.
+  example: []
+  syntax:
+    content: public static void* AllocateClear(int bytes)
+    parameters:
+    - id: bytes
+      type: System.Int32
+      description: The number of bytes to allocate.
+    return:
+      type: System.Void*
+      description: A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>* pointing to the start of the allocated block.
+    content.vb: Public Shared Function AllocateClear(bytes As Integer) As Void*
+  overload: Garyon.Memory.Allocation.AllocateClear*
+  nameWithType.vb: Allocation.AllocateClear(Integer)
+  fullName.vb: Garyon.Memory.Allocation.AllocateClear(Integer)
+  name.vb: AllocateClear(Integer)
+- uid: Garyon.Memory.Allocation.AllocateClear``1(System.Int32)
+  commentId: M:Garyon.Memory.Allocation.AllocateClear``1(System.Int32)
+  id: AllocateClear``1(System.Int32)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: AllocateClear<T>(int)
+  nameWithType: Allocation.AllocateClear<T>(int)
+  fullName: Garyon.Memory.Allocation.AllocateClear<T>(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AllocateClear
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 76
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: >-
+    Allocates a block of elements of a specified type
+
+    <code class="typeparamref">T</code> from the unmanaged heap, and zeroes it.
+  example: []
+  syntax:
+    content: 'public static T* AllocateClear<T>(int elements) where T : unmanaged'
+    parameters:
+    - id: elements
+      type: System.Int32
+      description: The number of elements the allocated block will store.
+    typeParameters:
+    - id: T
+      description: The type of elements the allocated block will store.
+    return:
+      type: '{T}*'
+      description: >-
+        A <code class="typeparamref">T</code>* pointing to the start of the allocated
+
+        block. The block's size is equal to the number of elements multiplied by
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/sizeof">sizeof</a>(<code class="typeparamref">T</code>).
+    content.vb: Public Shared Function AllocateClear(Of T As Structure)(elements As Integer) As T*
+  overload: Garyon.Memory.Allocation.AllocateClear*
+  nameWithType.vb: Allocation.AllocateClear(Of T)(Integer)
+  fullName.vb: Garyon.Memory.Allocation.AllocateClear(Of T)(Integer)
+  name.vb: AllocateClear(Of T)(Integer)
+- uid: Garyon.Memory.Allocation.Reallocate(System.Void*,System.Int32)
+  commentId: M:Garyon.Memory.Allocation.Reallocate(System.Void*,System.Int32)
+  id: Reallocate(System.Void*,System.Int32)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: Reallocate(void*, int)
+  nameWithType: Allocation.Reallocate(void*, int)
+  fullName: Garyon.Memory.Allocation.Reallocate(void*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Reallocate
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 95
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: Reallocates a block of bytes from the unmanaged heap.
+  example: []
+  syntax:
+    content: public static void* Reallocate(void* pointer, int bytes)
+    parameters:
+    - id: pointer
+      type: System.Void*
+      description: The pointer to the original block that will be reallocated.
+    - id: bytes
+      type: System.Int32
+      description: The number of bytes of the newly allocated block.
+    return:
+      type: System.Void*
+      description: >-
+        A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>* pointing to the start of the reallocated
+
+        block.
+    content.vb: Public Shared Function Reallocate(pointer As Void*, bytes As Integer) As Void*
+  overload: Garyon.Memory.Allocation.Reallocate*
+  nameWithType.vb: Allocation.Reallocate(Void*, Integer)
+  fullName.vb: Garyon.Memory.Allocation.Reallocate(Void*, Integer)
+  name.vb: Reallocate(Void*, Integer)
+- uid: Garyon.Memory.Allocation.Reallocate``1(``0*,System.Int32)
+  commentId: M:Garyon.Memory.Allocation.Reallocate``1(``0*,System.Int32)
+  id: Reallocate``1(``0*,System.Int32)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: Reallocate<T>(T*, int)
+  nameWithType: Allocation.Reallocate<T>(T*, int)
+  fullName: Garyon.Memory.Allocation.Reallocate<T>(T*, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Reallocate
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 114
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: Reallocates a block of elements from the unmanaged heap.
+  example: []
+  syntax:
+    content: 'public static T* Reallocate<T>(T* pointer, int elements) where T : unmanaged'
+    parameters:
+    - id: pointer
+      type: '{T}*'
+      description: The pointer to the original block that will be reallocated.
+    - id: elements
+      type: System.Int32
+      description: The number of elements of the newly allocated block.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}*'
+      description: >-
+        A <code class="typeparamref">T</code>* pointing to the start of the reallocated
+
+        block. The block's size is equal to the number of elements multiplied by
+
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/operators/sizeof">sizeof</a>(<code class="typeparamref">T</code>).
+    content.vb: Public Shared Function Reallocate(Of T As Structure)(pointer As T*, elements As Integer) As T*
+  overload: Garyon.Memory.Allocation.Reallocate*
+  nameWithType.vb: Allocation.Reallocate(Of T)(T*, Integer)
+  fullName.vb: Garyon.Memory.Allocation.Reallocate(Of T)(T*, Integer)
+  name.vb: Reallocate(Of T)(T*, Integer)
+- uid: Garyon.Memory.Allocation.Free(System.Void*)
+  commentId: M:Garyon.Memory.Allocation.Free(System.Void*)
+  id: Free(System.Void*)
+  parent: Garyon.Memory.Allocation
+  langs:
+  - csharp
+  - vb
+  name: Free(void*)
+  nameWithType: Allocation.Free(void*)
+  fullName: Garyon.Memory.Allocation.Free(void*)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Memory/Allocation.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Free
+    path: ../Garyon/Memory/Allocation.cs
+    startLine: 126
+  assemblies:
+  - Garyon
+  namespace: Garyon.Memory
+  summary: Frees a previously allocated block of bytes from the unmanaged heap.
+  example: []
+  syntax:
+    content: public static void Free(void* pointer)
+    parameters:
+    - id: pointer
+      type: System.Void*
+      description: The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/void">void</a>* pointing at the block that was allocated.
+    content.vb: Public Shared Sub Free(pointer As Void*)
+  overload: Garyon.Memory.Allocation.Free*
+  nameWithType.vb: Allocation.Free(Void*)
+  fullName.vb: Garyon.Memory.Allocation.Free(Void*)
+  name.vb: Free(Void*)
+references:
+- uid: Garyon.Memory
+  commentId: N:Garyon.Memory
+  href: Garyon.html
+  name: Garyon.Memory
+  nameWithType: Garyon.Memory
+  fullName: Garyon.Memory
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Memory
+    name: Memory
+    href: Garyon.Memory.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Memory
+    name: Memory
+    href: Garyon.Memory.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Memory.Allocation.Allocate*
+  commentId: Overload:Garyon.Memory.Allocation.Allocate
+  href: Garyon.Memory.Allocation.html#Garyon_Memory_Allocation_Allocate_System_Int32_
+  name: Allocate
+  nameWithType: Allocation.Allocate
+  fullName: Garyon.Memory.Allocation.Allocate
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: '{T}*'
+  isExternal: true
+  name: T*
+  nameWithType: T*
+  fullName: T*
+  spec.csharp:
+  - name: T
+  - name: '*'
+  spec.vb:
+  - name: T
+  - name: '*'
+- uid: Garyon.Memory.Allocation.AllocateClear*
+  commentId: Overload:Garyon.Memory.Allocation.AllocateClear
+  href: Garyon.Memory.Allocation.html#Garyon_Memory_Allocation_AllocateClear_System_Int32_
+  name: AllocateClear
+  nameWithType: Allocation.AllocateClear
+  fullName: Garyon.Memory.Allocation.AllocateClear
+- uid: Garyon.Memory.Allocation.Reallocate*
+  commentId: Overload:Garyon.Memory.Allocation.Reallocate
+  href: Garyon.Memory.Allocation.html#Garyon_Memory_Allocation_Reallocate_System_Void__System_Int32_
+  name: Reallocate
+  nameWithType: Allocation.Reallocate
+  fullName: Garyon.Memory.Allocation.Reallocate
+- uid: Garyon.Memory.Allocation.Free*
+  commentId: Overload:Garyon.Memory.Allocation.Free
+  href: Garyon.Memory.Allocation.html#Garyon_Memory_Allocation_Free_System_Void__
+  name: Free
+  nameWithType: Allocation.Free
+  fullName: Garyon.Memory.Allocation.Free

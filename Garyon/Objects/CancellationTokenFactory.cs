@@ -1,12 +1,15 @@
 ﻿using System.Threading;
 
+using System;
+using Garyon.Extensions;
+
 namespace Garyon.Objects;
 
 /// <summary>
 /// Provides a <see cref="CancellationTokenSource"/> that will be
 /// re-instantiated after every cancellation.
 /// </summary>
-public sealed class CancellationTokenFactory
+public sealed class CancellationTokenFactory : IDisposable
 {
     private CancellationTokenSource? _currentSource;
 
@@ -20,12 +23,7 @@ public sealed class CancellationTokenFactory
     {
         get
         {
-            if (_currentSource is null)
-            {
-                return CreateSource();
-            }
-
-            if (_currentSource.IsCancellationRequested)
+            if (_currentSource is null or { IsCancellationRequested: true })
             {
                 return CreateSource();
             }
@@ -42,11 +40,16 @@ public sealed class CancellationTokenFactory
     /// <summary>
     /// Forces the creation of a new <see cref="CancellationTokenSource"/>.
     /// </summary>
+    /// <remarks>
+    /// This disposes the currently stored <see cref="CancellationTokenSource"/>
+    /// (without cancelling it) and replaces it with a new instance.
+    /// </remarks>
     /// <returns>
     /// The newly created <see cref="CancellationTokenSource"/>.
     /// </returns>
     public CancellationTokenSource CreateSource()
     {
+        _currentSource?.Dispose();
         _currentSource = new CancellationTokenSource();
         return _currentSource;
     }
@@ -56,8 +59,24 @@ public sealed class CancellationTokenFactory
     /// automatically trigger the instantiation of the new
     /// <see cref="CancellationTokenSource"/>.
     /// </summary>
+    /// <remarks>
+    /// This cancels and disposes the currently stored
+    /// <see cref="CancellationTokenSource"/>.
+    /// </remarks>
     public void Cancel()
     {
-        _currentSource?.Cancel();
+        _currentSource?.CancelDispose();
+        _currentSource = null;
+    }
+
+    /// <summary>
+    /// Disposes the currently stored <see cref="CancellationTokenSource"/> without
+    /// cancelling it.
+    /// </summary>
+    public void Dispose()
+    {
+        _currentSource?.Dispose();
+        _currentSource = null;
+        GC.SuppressFinalize(this);
     }
 }

@@ -1,0 +1,643 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting
+  commentId: T:Garyon.Extensions.ArrayExtensions.ArraySorting
+  id: ArraySorting
+  parent: Garyon.Extensions.ArrayExtensions
+  children:
+  - Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy``1(``0[],System.Collections.Generic.IComparer{``0})
+  - Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy``1(``0[],System.Comparison{``0})
+  - Garyon.Extensions.ArrayExtensions.ArraySorting.Sort``1(``0[])
+  langs:
+  - csharp
+  - vb
+  name: ArraySorting
+  nameWithType: ArraySorting
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ArraySorting
+    path: ../Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: Contains functions about sorting arrays.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static class ArraySorting
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Module ArraySorting
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting.Sort``1(``0[])
+  commentId: M:Garyon.Extensions.ArrayExtensions.ArraySorting.Sort``1(``0[])
+  id: Sort``1(``0[])
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.ArraySorting
+  langs:
+  - csharp
+  - vb
+  name: Sort<T>(T[])
+  nameWithType: ArraySorting.Sort<T>(T[])
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting.Sort<T>(T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Sort
+    path: ../Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+    startLine: 22
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Sorts the array, affecting the original array. Returns the instance of
+
+    the original array.
+  example: []
+  syntax:
+    content: public static T[] Sort<T>(this T[] array)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The original array to sort.
+    typeParameters:
+    - id: T
+      description: The type of the array elements.
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function Sort(Of T)(array As T()) As T()
+  overload: Garyon.Extensions.ArrayExtensions.ArraySorting.Sort*
+  nameWithType.vb: ArraySorting.Sort(Of T)(T())
+  fullName.vb: Garyon.Extensions.ArrayExtensions.ArraySorting.Sort(Of T)(T())
+  name.vb: Sort(Of T)(T())
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy``1(``0[],System.Collections.Generic.IComparer{``0})
+  commentId: M:Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy``1(``0[],System.Collections.Generic.IComparer{``0})
+  id: SortBy``1(``0[],System.Collections.Generic.IComparer{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.ArraySorting
+  langs:
+  - csharp
+  - vb
+  name: SortBy<T>(T[], IComparer<T>)
+  nameWithType: ArraySorting.SortBy<T>(T[], IComparer<T>)
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy<T>(T[], System.Collections.Generic.IComparer<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SortBy
+    path: ../Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+    startLine: 44
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Sorts the array by a custom <xref href="System.Collections.Generic.IComparer%601" data-throw-if-not-resolved="false"></xref>. The original
+
+    instance is affected.
+  example: []
+  syntax:
+    content: public static T[] SortBy<T>(this T[] array, IComparer<T> comparer)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The array that will be sorted.
+    - id: comparer
+      type: System.Collections.Generic.IComparer{{T}}
+      description: The comparer that will be used when comparing the values during sorting.
+    typeParameters:
+    - id: T
+      description: The type of the values stored in the array.
+    return:
+      type: '{T}[]'
+      description: The original array instance.
+    content.vb: Public Shared Function SortBy(Of T)(array As T(), comparer As IComparer(Of T)) As T()
+  overload: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy*
+  nameWithType.vb: ArraySorting.SortBy(Of T)(T(), IComparer(Of T))
+  fullName.vb: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy(Of T)(T(), System.Collections.Generic.IComparer(Of T))
+  name.vb: SortBy(Of T)(T(), IComparer(Of T))
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy``1(``0[],System.Comparison{``0})
+  commentId: M:Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy``1(``0[],System.Comparison{``0})
+  id: SortBy``1(``0[],System.Comparison{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.ArrayExtensions.ArraySorting
+  langs:
+  - csharp
+  - vb
+  name: SortBy<T>(T[], Comparison<T>)
+  nameWithType: ArraySorting.SortBy<T>(T[], Comparison<T>)
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy<T>(T[], System.Comparison<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SortBy
+    path: ../Garyon/Extensions/ArrayExtensions/ArraySorting.cs
+    startLine: 67
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions.ArrayExtensions
+  summary: >-
+    Sorts the array by a custom <xref href="System.Comparison%601" data-throw-if-not-resolved="false"></xref>. The
+
+    original instance is affected.
+  example: []
+  syntax:
+    content: public static T[] SortBy<T>(this T[] array, Comparison<T> comparison)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: The array that will be sorted.
+    - id: comparison
+      type: System.Comparison{{T}}
+      description: >-
+        The comparison function that will be used when comparing the values
+
+        during sorting.
+    typeParameters:
+    - id: T
+      description: The type of the values stored in the array.
+    return:
+      type: '{T}[]'
+      description: The original array instance.
+    content.vb: Public Shared Function SortBy(Of T)(array As T(), comparison As Comparison(Of T)) As T()
+  overload: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy*
+  nameWithType.vb: ArraySorting.SortBy(Of T)(T(), Comparison(Of T))
+  fullName.vb: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy(Of T)(T(), System.Comparison(Of T))
+  name.vb: SortBy(Of T)(T(), Comparison(Of T))
+references:
+- uid: Garyon.Extensions.ArrayExtensions
+  commentId: N:Garyon.Extensions.ArrayExtensions
+  href: Garyon.html
+  name: Garyon.Extensions.ArrayExtensions
+  nameWithType: Garyon.Extensions.ArrayExtensions
+  fullName: Garyon.Extensions.ArrayExtensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.ArrayExtensions
+    name: ArrayExtensions
+    href: Garyon.Extensions.ArrayExtensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.ArrayExtensions
+    name: ArrayExtensions
+    href: Garyon.Extensions.ArrayExtensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting.Sort*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.ArraySorting.Sort
+  href: Garyon.Extensions.ArrayExtensions.ArraySorting.html#Garyon_Extensions_ArrayExtensions_ArraySorting_Sort__1___0___
+  name: Sort
+  nameWithType: ArraySorting.Sort
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting.Sort
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IComparer`1
+  commentId: T:System.Collections.Generic.IComparer`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<T>
+  nameWithType: IComparer<T>
+  fullName: System.Collections.Generic.IComparer<T>
+  nameWithType.vb: IComparer(Of T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T)
+  name.vb: IComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy*
+  commentId: Overload:Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy
+  href: Garyon.Extensions.ArrayExtensions.ArraySorting.html#Garyon_Extensions_ArrayExtensions_ArraySorting_SortBy__1___0___System_Collections_Generic_IComparer___0__
+  name: SortBy
+  nameWithType: ArraySorting.SortBy
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting.SortBy
+- uid: System.Collections.Generic.IComparer{{T}}
+  commentId: T:System.Collections.Generic.IComparer{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<T>
+  nameWithType: IComparer<T>
+  fullName: System.Collections.Generic.IComparer<T>
+  nameWithType.vb: IComparer(Of T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T)
+  name.vb: IComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Comparison`1
+  commentId: T:System.Comparison`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  name: Comparison<T>
+  nameWithType: Comparison<T>
+  fullName: System.Comparison<T>
+  nameWithType.vb: Comparison(Of T)
+  fullName.vb: System.Comparison(Of T)
+  name.vb: Comparison(Of T)
+  spec.csharp:
+  - uid: System.Comparison`1
+    name: Comparison
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Comparison`1
+    name: Comparison
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Comparison{{T}}
+  commentId: T:System.Comparison{``0}
+  parent: System
+  definition: System.Comparison`1
+  href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  name: Comparison<T>
+  nameWithType: Comparison<T>
+  fullName: System.Comparison<T>
+  nameWithType.vb: Comparison(Of T)
+  fullName.vb: System.Comparison(Of T)
+  name.vb: Comparison(Of T)
+  spec.csharp:
+  - uid: System.Comparison`1
+    name: Comparison
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Comparison`1
+    name: Comparison
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

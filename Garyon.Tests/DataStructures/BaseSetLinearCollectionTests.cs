@@ -12,7 +12,7 @@ namespace Garyon.Tests.DataStructures;
 
 public abstract class BaseSetLinearCollectionTests
 {
-    protected static readonly int[] SampleNumbers = { 1, 2, 4, 5, 7 };
+    protected static readonly int[] SampleNumbers = [1, 2, 4, 5, 7];
 
     [Test]
     public async Task ContainsTest()
@@ -29,7 +29,7 @@ public abstract class BaseSetLinearCollectionTests
         await Assert.That(instance.Add(2)).IsFalse();
         await Assert.That(instance.Count).IsEqualTo(1);
 
-        instance.AddRange(new[] { 1, 2, 2, 2, 4 });
+        instance.AddRange([1, 2, 2, 2, 4]);
         await Assert.That(instance.Count).IsEqualTo(3);
         await Assert.That(instance.Contains(1)).IsTrue();
         await Assert.That(instance.Contains(4)).IsTrue();

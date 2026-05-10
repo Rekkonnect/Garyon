@@ -407,7 +407,7 @@ public static class IComparableExtensions
     public static void AssignMin<T>(this ref T min, T other)
         where T : struct, IComparable<T>
     {
-        min.AssignExtremum(other, ComparisonResult.Less);
+        min.AssignExtremum(other, Extremum.Minimum);
     }
     /// <summary>
     /// Assigns a variable storing a maximum value to <paramref name="other"/>,
@@ -427,7 +427,7 @@ public static class IComparableExtensions
     public static void AssignMax<T>(this ref T max, T other)
         where T : struct, IComparable<T>
     {
-        max.AssignExtremum(other, ComparisonResult.Greater);
+        max.AssignExtremum(other, Extremum.Maximum);
     }
     /// <summary>
     /// Assigns a variable storing a extremum value to <paramref name="other"/>,
@@ -439,23 +439,19 @@ public static class IComparableExtensions
     /// <param name="extremum">
     /// A reference to the variable storing the extremum. It may be overwritten
     /// if the comparison of <paramref name="other"/> against
-    /// <paramref name="extremum"/> matches <paramref name="targetComparison"/>.
+    /// <paramref name="extremum"/> matches that of <paramref name="targetExtremum"/>.
     /// </param>
     /// <param name="other">
     /// The other value to overwrite <paramref name="extremum"/> with, if deemed
     /// as the new extremum.
     /// </param>
-    /// <param name="targetComparison">
-    /// The target comparison that must be matched in a value against the
-    /// extremum to overwrite it. In other words, comparing
-    /// <paramref name="other"/> against <paramref name="extremum"/> should
-    /// match this <seealso cref="ComparisonResult"/>, in order to overwrite
-    /// <paramref name="extremum"/>.
+    /// <param name="targetExtremum">
+    /// The target extremum to match.
     /// </param>
-    public static void AssignExtremum<T>(this ref T extremum, T other, ComparisonResult targetComparison)
+    public static void AssignExtremum<T>(this ref T extremum, T other, Extremum targetExtremum)
         where T : struct, IComparable<T>
     {
-        if (other.MatchesComparisonResult(extremum, targetComparison))
+        if (other.MatchesComparisonResult(extremum, targetExtremum.TargetComparisonResult()))
             extremum = other;
     }
 }

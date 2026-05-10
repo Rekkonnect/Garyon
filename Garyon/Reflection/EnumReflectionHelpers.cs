@@ -26,7 +26,10 @@ public static class EnumReflectionHelpers
     public static Dictionary<T, string> GetEnumFieldDescriptionDictionary<T>()
         where T : struct, Enum
     {
-        return GetEnumFieldDictionary<T, DescriptionAttribute, string>(d => d?.Description);
+        return AttributeMapping
+            .ForEnum<T>()
+            .WithAttributeKey<DescriptionAttribute, string>(static d => d.Description)
+            .Build();
     }
 
     /// <summary>
@@ -47,7 +50,10 @@ public static class EnumReflectionHelpers
         where TEnum : struct, Enum
         where TAttribute : Attribute
     {
-        return GetEnumFieldDictionary<TEnum, TAttribute, TAttribute>(Selectors.SelfObjectReturner);
+        return AttributeMapping
+            .ForEnum<TEnum>()
+            .WithAttribute<TAttribute>()
+            .Build();
     }
 
     /// <summary>
@@ -75,20 +81,10 @@ public static class EnumReflectionHelpers
         where TEnum : struct, Enum
         where TAttribute : Attribute
     {
-        var dictionary = new Dictionary<TEnum, TMappedValue>();
-        var fields = GetEnumFields<TEnum>();
-        foreach (var field in fields)
-        {
-            var value = (TEnum)field.GetRawConstantValue()!;
-            var mapped = selector(field.GetCustomAttribute<TAttribute>());
-            if (mapped is null)
-            {
-                continue;
-            }
-
-            dictionary.Add(value, mapped);
-        }
-        return dictionary;
+        return AttributeMapping
+            .ForEnum<TEnum>()
+            .WithAttributeKey<TAttribute, TMappedValue>(attribute => selector(attribute))
+            .Build();
     }
 
     /// <summary>

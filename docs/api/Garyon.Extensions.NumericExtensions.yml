@@ -1,0 +1,1894 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.NumericExtensions
+  commentId: T:Garyon.Extensions.NumericExtensions
+  id: NumericExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Byte)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int16)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int32)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int64)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.SByte)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt16)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt32)
+  - Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt64)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Byte)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Decimal)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Double)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int16)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int32)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int64)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.SByte)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.Single)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt16)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt32)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt64)
+  - Garyon.Extensions.NumericExtensions.OneOrGreater``1(``0)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Byte)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Decimal)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Double)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int16)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int32)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int64)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.SByte)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Single)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt16)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt32)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt64)
+  - Garyon.Extensions.NumericExtensions.ZeroOrGreater``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: NumericExtensions
+  nameWithType: NumericExtensions
+  fullName: Garyon.Extensions.NumericExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NumericExtensions
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 10
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Contains extension methods for numeric structures.
+  example: []
+  syntax:
+    content: public static class NumericExtensions
+    content.vb: Public Module NumericExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Byte)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Byte)
+  id: IsPowerOfTwo(System.Byte)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(byte)
+  nameWithType: NumericExtensions.IsPowerOfTwo(byte)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(byte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 20
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this byte value)
+    parameters:
+    - id: value
+      type: System.Byte
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As Byte) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(Byte)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(Byte)
+  name.vb: IsPowerOfTwo(Byte)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int16)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int16)
+  id: IsPowerOfTwo(System.Int16)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(short)
+  nameWithType: NumericExtensions.IsPowerOfTwo(short)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(short)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 37
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1. Negative
+
+    values are ignored.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this short value)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As Short) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(Short)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(Short)
+  name.vb: IsPowerOfTwo(Short)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int32)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int32)
+  id: IsPowerOfTwo(System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(int)
+  nameWithType: NumericExtensions.IsPowerOfTwo(int)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 54
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1. Negative
+
+    values are ignored.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As Integer) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(Integer)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(Integer)
+  name.vb: IsPowerOfTwo(Integer)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int64)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.Int64)
+  id: IsPowerOfTwo(System.Int64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(long)
+  nameWithType: NumericExtensions.IsPowerOfTwo(long)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 71
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1. Negative
+
+    values are ignored.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As Long) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(Long)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(Long)
+  name.vb: IsPowerOfTwo(Long)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.SByte)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.SByte)
+  id: IsPowerOfTwo(System.SByte)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(sbyte)
+  nameWithType: NumericExtensions.IsPowerOfTwo(sbyte)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(sbyte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 88
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1. Negative
+
+    values are ignored.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As SByte) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(SByte)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(SByte)
+  name.vb: IsPowerOfTwo(SByte)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt16)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt16)
+  id: IsPowerOfTwo(System.UInt16)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(ushort)
+  nameWithType: NumericExtensions.IsPowerOfTwo(ushort)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(ushort)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 104
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this ushort value)
+    parameters:
+    - id: value
+      type: System.UInt16
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As UShort) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(UShort)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(UShort)
+  name.vb: IsPowerOfTwo(UShort)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt32)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt32)
+  id: IsPowerOfTwo(System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(uint)
+  nameWithType: NumericExtensions.IsPowerOfTwo(uint)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 120
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As UInteger) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(UInteger)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(UInteger)
+  name.vb: IsPowerOfTwo(UInteger)
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt64)
+  commentId: M:Garyon.Extensions.NumericExtensions.IsPowerOfTwo(System.UInt64)
+  id: IsPowerOfTwo(System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPowerOfTwo(ulong)
+  nameWithType: NumericExtensions.IsPowerOfTwo(ulong)
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: IsPowerOfTwo
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 136
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is a power of 2, using popcnt if supported,
+
+    otherwise counting whether there only is 1 bit equal to 1.
+  example: []
+  syntax:
+    content: public static bool IsPowerOfTwo(this ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value to determine whether it is a power of 2.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPowerOfTwo(value As ULong) As Boolean
+  overload: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  nameWithType.vb: NumericExtensions.IsPowerOfTwo(ULong)
+  fullName.vb: Garyon.Extensions.NumericExtensions.IsPowerOfTwo(ULong)
+  name.vb: IsPowerOfTwo(ULong)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Byte)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Byte)
+  id: OneOrGreater(System.Byte)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(byte)
+  nameWithType: NumericExtensions.OneOrGreater(byte)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(byte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 155
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static byte OneOrGreater(this byte value)
+    parameters:
+    - id: value
+      type: System.Byte
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Byte
+    content.vb: Public Shared Function OneOrGreater(value As Byte) As Byte
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Byte)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Byte)
+  name.vb: OneOrGreater(Byte)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int16)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int16)
+  id: OneOrGreater(System.Int16)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(short)
+  nameWithType: NumericExtensions.OneOrGreater(short)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(short)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 163
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static short OneOrGreater(this short value)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Int16
+    content.vb: Public Shared Function OneOrGreater(value As Short) As Short
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Short)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Short)
+  name.vb: OneOrGreater(Short)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int32)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int32)
+  id: OneOrGreater(System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(int)
+  nameWithType: NumericExtensions.OneOrGreater(int)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 171
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static int OneOrGreater(this int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function OneOrGreater(value As Integer) As Integer
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Integer)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Integer)
+  name.vb: OneOrGreater(Integer)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int64)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Int64)
+  id: OneOrGreater(System.Int64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(long)
+  nameWithType: NumericExtensions.OneOrGreater(long)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 179
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static long OneOrGreater(this long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function OneOrGreater(value As Long) As Long
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Long)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Long)
+  name.vb: OneOrGreater(Long)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.SByte)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.SByte)
+  id: OneOrGreater(System.SByte)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(sbyte)
+  nameWithType: NumericExtensions.OneOrGreater(sbyte)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(sbyte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 187
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static sbyte OneOrGreater(this sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.SByte
+    content.vb: Public Shared Function OneOrGreater(value As SByte) As SByte
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(SByte)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(SByte)
+  name.vb: OneOrGreater(SByte)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt16)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt16)
+  id: OneOrGreater(System.UInt16)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(ushort)
+  nameWithType: NumericExtensions.OneOrGreater(ushort)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(ushort)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 195
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static ushort OneOrGreater(this ushort value)
+    parameters:
+    - id: value
+      type: System.UInt16
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.UInt16
+    content.vb: Public Shared Function OneOrGreater(value As UShort) As UShort
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(UShort)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(UShort)
+  name.vb: OneOrGreater(UShort)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt32)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt32)
+  id: OneOrGreater(System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(uint)
+  nameWithType: NumericExtensions.OneOrGreater(uint)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 203
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static uint OneOrGreater(this uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function OneOrGreater(value As UInteger) As UInteger
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(UInteger)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(UInteger)
+  name.vb: OneOrGreater(UInteger)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt64)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.UInt64)
+  id: OneOrGreater(System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(ulong)
+  nameWithType: NumericExtensions.OneOrGreater(ulong)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 211
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static ulong OneOrGreater(this ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Function OneOrGreater(value As ULong) As ULong
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(ULong)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(ULong)
+  name.vb: OneOrGreater(ULong)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Single)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Single)
+  id: OneOrGreater(System.Single)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(float)
+  nameWithType: NumericExtensions.OneOrGreater(float)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 219
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static float OneOrGreater(this float value)
+    parameters:
+    - id: value
+      type: System.Single
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Single
+    content.vb: Public Shared Function OneOrGreater(value As Single) As Single
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Single)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Single)
+  name.vb: OneOrGreater(Single)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Double)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Double)
+  id: OneOrGreater(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(double)
+  nameWithType: NumericExtensions.OneOrGreater(double)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 227
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static double OneOrGreater(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Double
+    content.vb: Public Shared Function OneOrGreater(value As Double) As Double
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Double)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Double)
+  name.vb: OneOrGreater(Double)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater(System.Decimal)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater(System.Decimal)
+  id: OneOrGreater(System.Decimal)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater(decimal)
+  nameWithType: NumericExtensions.OneOrGreater(decimal)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater(decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 235
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥1 and returns the value if ≥1,
+
+    otherwise returns 1.
+  example: []
+  syntax:
+    content: public static decimal OneOrGreater(this decimal value)
+    parameters:
+    - id: value
+      type: System.Decimal
+      description: The value to determine whether it is ≥1.
+    return:
+      type: System.Decimal
+    content.vb: Public Shared Function OneOrGreater(value As Decimal) As Decimal
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Decimal)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Decimal)
+  name.vb: OneOrGreater(Decimal)
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater``1(``0)
+  commentId: M:Garyon.Extensions.NumericExtensions.OneOrGreater``1(``0)
+  id: OneOrGreater``1(``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: OneOrGreater<T>(T)
+  nameWithType: NumericExtensions.OneOrGreater<T>(T)
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: OneOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 240
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Determines whether the value is ≥1 and returns the value if ≥1, otherwise returns 1.
+  example: []
+  syntax:
+    content: 'public static INumber<T> OneOrGreater<T>(this T value) where T : INumber<T>'
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value to determine whether it is ≥1.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Numerics.INumber{{T}}
+    content.vb: Public Shared Function OneOrGreater(Of T As INumber(Of T))(value As T) As INumber(Of T)
+  overload: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  nameWithType.vb: NumericExtensions.OneOrGreater(Of T)(T)
+  fullName.vb: Garyon.Extensions.NumericExtensions.OneOrGreater(Of T)(T)
+  name.vb: OneOrGreater(Of T)(T)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Byte)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Byte)
+  id: ZeroOrGreater(System.Byte)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(byte)
+  nameWithType: NumericExtensions.ZeroOrGreater(byte)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(byte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 259
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static byte ZeroOrGreater(this byte value)
+    parameters:
+    - id: value
+      type: System.Byte
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Byte
+    content.vb: Public Shared Function ZeroOrGreater(value As Byte) As Byte
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Byte)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Byte)
+  name.vb: ZeroOrGreater(Byte)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int16)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int16)
+  id: ZeroOrGreater(System.Int16)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(short)
+  nameWithType: NumericExtensions.ZeroOrGreater(short)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(short)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 267
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static short ZeroOrGreater(this short value)
+    parameters:
+    - id: value
+      type: System.Int16
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Int16
+    content.vb: Public Shared Function ZeroOrGreater(value As Short) As Short
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Short)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Short)
+  name.vb: ZeroOrGreater(Short)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int32)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int32)
+  id: ZeroOrGreater(System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(int)
+  nameWithType: NumericExtensions.ZeroOrGreater(int)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 275
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static int ZeroOrGreater(this int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ZeroOrGreater(value As Integer) As Integer
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Integer)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Integer)
+  name.vb: ZeroOrGreater(Integer)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int64)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Int64)
+  id: ZeroOrGreater(System.Int64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(long)
+  nameWithType: NumericExtensions.ZeroOrGreater(long)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 283
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static long ZeroOrGreater(this long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function ZeroOrGreater(value As Long) As Long
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Long)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Long)
+  name.vb: ZeroOrGreater(Long)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.SByte)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.SByte)
+  id: ZeroOrGreater(System.SByte)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(sbyte)
+  nameWithType: NumericExtensions.ZeroOrGreater(sbyte)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(sbyte)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 291
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static sbyte ZeroOrGreater(this sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.SByte
+    content.vb: Public Shared Function ZeroOrGreater(value As SByte) As SByte
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(SByte)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(SByte)
+  name.vb: ZeroOrGreater(SByte)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt16)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt16)
+  id: ZeroOrGreater(System.UInt16)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(ushort)
+  nameWithType: NumericExtensions.ZeroOrGreater(ushort)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(ushort)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 299
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static ushort ZeroOrGreater(this ushort value)
+    parameters:
+    - id: value
+      type: System.UInt16
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.UInt16
+    content.vb: Public Shared Function ZeroOrGreater(value As UShort) As UShort
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(UShort)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(UShort)
+  name.vb: ZeroOrGreater(UShort)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt32)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt32)
+  id: ZeroOrGreater(System.UInt32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(uint)
+  nameWithType: NumericExtensions.ZeroOrGreater(uint)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(uint)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 307
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static uint ZeroOrGreater(this uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function ZeroOrGreater(value As UInteger) As UInteger
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(UInteger)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(UInteger)
+  name.vb: ZeroOrGreater(UInteger)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt64)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.UInt64)
+  id: ZeroOrGreater(System.UInt64)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(ulong)
+  nameWithType: NumericExtensions.ZeroOrGreater(ulong)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(ulong)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 315
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static ulong ZeroOrGreater(this ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Function ZeroOrGreater(value As ULong) As ULong
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(ULong)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(ULong)
+  name.vb: ZeroOrGreater(ULong)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Single)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Single)
+  id: ZeroOrGreater(System.Single)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(float)
+  nameWithType: NumericExtensions.ZeroOrGreater(float)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(float)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 323
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static float ZeroOrGreater(this float value)
+    parameters:
+    - id: value
+      type: System.Single
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ZeroOrGreater(value As Single) As Single
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Single)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Single)
+  name.vb: ZeroOrGreater(Single)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Double)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Double)
+  id: ZeroOrGreater(System.Double)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(double)
+  nameWithType: NumericExtensions.ZeroOrGreater(double)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 331
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static double ZeroOrGreater(this double value)
+    parameters:
+    - id: value
+      type: System.Double
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Double
+    content.vb: Public Shared Function ZeroOrGreater(value As Double) As Double
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Double)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Double)
+  name.vb: ZeroOrGreater(Double)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Decimal)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater(System.Decimal)
+  id: ZeroOrGreater(System.Decimal)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater(decimal)
+  nameWithType: NumericExtensions.ZeroOrGreater(decimal)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater(decimal)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 339
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Determines whether the value is ≥0 and returns the value if ≥0,
+
+    otherwise returns 0.
+  example: []
+  syntax:
+    content: public static decimal ZeroOrGreater(this decimal value)
+    parameters:
+    - id: value
+      type: System.Decimal
+      description: The value to determine whether it is ≥0.
+    return:
+      type: System.Decimal
+    content.vb: Public Shared Function ZeroOrGreater(value As Decimal) As Decimal
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Decimal)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Decimal)
+  name.vb: ZeroOrGreater(Decimal)
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater``1(``0)
+  commentId: M:Garyon.Extensions.NumericExtensions.ZeroOrGreater``1(``0)
+  id: ZeroOrGreater``1(``0)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.NumericExtensions
+  langs:
+  - csharp
+  - vb
+  name: ZeroOrGreater<T>(T)
+  nameWithType: NumericExtensions.ZeroOrGreater<T>(T)
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/NumericExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: ZeroOrGreater
+    path: ../Garyon/Extensions/NumericExtensions.cs
+    startLine: 344
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Determines whether the value is ≥0 and returns the value if ≥0, otherwise returns 0.
+  example: []
+  syntax:
+    content: 'public static INumber<T> ZeroOrGreater<T>(this T value) where T : INumber<T>'
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value to determine whether it is ≥0.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Numerics.INumber{{T}}
+    content.vb: Public Shared Function ZeroOrGreater(Of T As INumber(Of T))(value As T) As INumber(Of T)
+  overload: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  nameWithType.vb: NumericExtensions.ZeroOrGreater(Of T)(T)
+  fullName.vb: Garyon.Extensions.NumericExtensions.ZeroOrGreater(Of T)(T)
+  name.vb: ZeroOrGreater(Of T)(T)
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.NumericExtensions.IsPowerOfTwo*
+  commentId: Overload:Garyon.Extensions.NumericExtensions.IsPowerOfTwo
+  href: Garyon.Extensions.NumericExtensions.html#Garyon_Extensions_NumericExtensions_IsPowerOfTwo_System_Byte_
+  name: IsPowerOfTwo
+  nameWithType: NumericExtensions.IsPowerOfTwo
+  fullName: Garyon.Extensions.NumericExtensions.IsPowerOfTwo
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Garyon.Extensions.NumericExtensions.OneOrGreater*
+  commentId: Overload:Garyon.Extensions.NumericExtensions.OneOrGreater
+  href: Garyon.Extensions.NumericExtensions.html#Garyon_Extensions_NumericExtensions_OneOrGreater_System_Byte_
+  name: OneOrGreater
+  nameWithType: NumericExtensions.OneOrGreater
+  fullName: Garyon.Extensions.NumericExtensions.OneOrGreater
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Numerics.INumber{{T}}
+  commentId: T:System.Numerics.INumber{``0}
+  parent: System.Numerics
+  definition: System.Numerics.INumber`1
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<T>
+  nameWithType: INumber<T>
+  fullName: System.Numerics.INumber<T>
+  nameWithType.vb: INumber(Of T)
+  fullName.vb: System.Numerics.INumber(Of T)
+  name.vb: INumber(Of T)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Numerics.INumber`1
+  commentId: T:System.Numerics.INumber`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<TSelf>
+  nameWithType: INumber<TSelf>
+  fullName: System.Numerics.INumber<TSelf>
+  nameWithType.vb: INumber(Of TSelf)
+  fullName.vb: System.Numerics.INumber(Of TSelf)
+  name.vb: INumber(Of TSelf)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: Garyon.Extensions.NumericExtensions.ZeroOrGreater*
+  commentId: Overload:Garyon.Extensions.NumericExtensions.ZeroOrGreater
+  href: Garyon.Extensions.NumericExtensions.html#Garyon_Extensions_NumericExtensions_ZeroOrGreater_System_Byte_
+  name: ZeroOrGreater
+  nameWithType: NumericExtensions.ZeroOrGreater
+  fullName: Garyon.Extensions.NumericExtensions.ZeroOrGreater

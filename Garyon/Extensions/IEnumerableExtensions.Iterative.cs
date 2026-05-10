@@ -30,7 +30,7 @@ public static partial class IEnumerableExtensions
         /// </param>
         public void ForEach(IndexedEnumeratedElementAction<T> action)
         {
-            foreach (var (index, e) in source.WithIndex())
+            foreach (var (index, e) in source.Indexed())
                 action(index, e);
         }
     }

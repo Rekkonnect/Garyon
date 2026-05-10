@@ -1,0 +1,2938 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Mathematics.GeneralMath
+  commentId: T:Garyon.Mathematics.GeneralMath
+  id: GeneralMath
+  parent: Garyon.Mathematics
+  children:
+  - Garyon.Mathematics.GeneralMath.Factorial(System.Double)
+  - Garyon.Mathematics.GeneralMath.Factorial(System.Int64)
+  - Garyon.Mathematics.GeneralMath.FactorialBigInteger(System.Int64)
+  - Garyon.Mathematics.GeneralMath.Max(System.Byte[])
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Byte})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int16})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int32})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int64})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.SByte})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt16})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt32})
+  - Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt64})
+  - Garyon.Mathematics.GeneralMath.Max(System.Int16[])
+  - Garyon.Mathematics.GeneralMath.Max(System.Int32[])
+  - Garyon.Mathematics.GeneralMath.Max(System.Int64[])
+  - Garyon.Mathematics.GeneralMath.Max(System.SByte[])
+  - Garyon.Mathematics.GeneralMath.Max(System.UInt16[])
+  - Garyon.Mathematics.GeneralMath.Max(System.UInt32[])
+  - Garyon.Mathematics.GeneralMath.Max(System.UInt64[])
+  - Garyon.Mathematics.GeneralMath.Max``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Mathematics.GeneralMath.Max``1(``0[])
+  - Garyon.Mathematics.GeneralMath.Min(System.Byte[])
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Byte})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int16})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int32})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int64})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.SByte})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt16})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt32})
+  - Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt64})
+  - Garyon.Mathematics.GeneralMath.Min(System.Int16[])
+  - Garyon.Mathematics.GeneralMath.Min(System.Int32[])
+  - Garyon.Mathematics.GeneralMath.Min(System.Int64[])
+  - Garyon.Mathematics.GeneralMath.Min(System.SByte[])
+  - Garyon.Mathematics.GeneralMath.Min(System.UInt16[])
+  - Garyon.Mathematics.GeneralMath.Min(System.UInt32[])
+  - Garyon.Mathematics.GeneralMath.Min(System.UInt64[])
+  - Garyon.Mathematics.GeneralMath.Min``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Mathematics.GeneralMath.Min``1(``0[])
+  - Garyon.Mathematics.GeneralMath.Power(System.Int32,System.Int32)
+  - Garyon.Mathematics.GeneralMath.Power(System.Int64,System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: GeneralMath
+  nameWithType: GeneralMath
+  fullName: Garyon.Mathematics.GeneralMath
+  type: Class
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GeneralMath
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Provides general mathematical functions that are not provided in the
+
+    <xref href="System.Math" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class GeneralMath
+    content.vb: Public Module GeneralMath
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Mathematics.GeneralMath.Power(System.Int32,System.Int32)
+  commentId: M:Garyon.Mathematics.GeneralMath.Power(System.Int32,System.Int32)
+  id: Power(System.Int32,System.Int32)
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Power(int, int)
+  nameWithType: GeneralMath.Power(int, int)
+  fullName: Garyon.Mathematics.GeneralMath.Power(int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Power
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 31
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Calculates the power of a number raised to another number.
+  example: []
+  syntax:
+    content: public static int Power(int @base, int exponent)
+    parameters:
+    - id: base
+      type: System.Int32
+      description: The base.
+    - id: exponent
+      type: System.Int32
+      description: The exponent.
+    return:
+      type: System.Int32
+      description: The result of the power.
+    content.vb: Public Shared Function Power(base As Integer, exponent As Integer) As Integer
+  overload: Garyon.Mathematics.GeneralMath.Power*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when both the base and the exponent are 0.
+  nameWithType.vb: GeneralMath.Power(Integer, Integer)
+  fullName.vb: Garyon.Mathematics.GeneralMath.Power(Integer, Integer)
+  name.vb: Power(Integer, Integer)
+- uid: Garyon.Mathematics.GeneralMath.Power(System.Int64,System.Int64)
+  commentId: M:Garyon.Mathematics.GeneralMath.Power(System.Int64,System.Int64)
+  id: Power(System.Int64,System.Int64)
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Power(long, long)
+  nameWithType: GeneralMath.Power(long, long)
+  fullName: Garyon.Mathematics.GeneralMath.Power(long, long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Power
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 79
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Calculates the power of a number raised to another number.
+  example: []
+  syntax:
+    content: public static long Power(long @base, long exponent)
+    parameters:
+    - id: base
+      type: System.Int64
+      description: The base.
+    - id: exponent
+      type: System.Int64
+      description: The exponent.
+    return:
+      type: System.Int64
+      description: The result of the power.
+    content.vb: Public Shared Function Power(base As Long, exponent As Long) As Long
+  overload: Garyon.Mathematics.GeneralMath.Power*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when both the base and the exponent are 0.
+  nameWithType.vb: GeneralMath.Power(Long, Long)
+  fullName.vb: Garyon.Mathematics.GeneralMath.Power(Long, Long)
+  name.vb: Power(Long, Long)
+- uid: Garyon.Mathematics.GeneralMath.Factorial(System.Int64)
+  commentId: M:Garyon.Mathematics.GeneralMath.Factorial(System.Int64)
+  id: Factorial(System.Int64)
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Factorial(long)
+  nameWithType: GeneralMath.Factorial(long)
+  fullName: Garyon.Mathematics.GeneralMath.Factorial(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Factorial
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 127
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Calculates the factorial of a number.
+  example: []
+  syntax:
+    content: public static long Factorial(long n)
+    parameters:
+    - id: n
+      type: System.Int64
+      description: The number whose factorial to get.
+    return:
+      type: System.Int64
+      description: The result of the factorial.
+    content.vb: Public Shared Function Factorial(n As Long) As Long
+  overload: Garyon.Mathematics.GeneralMath.Factorial*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the provided number is negative.
+  nameWithType.vb: GeneralMath.Factorial(Long)
+  fullName.vb: Garyon.Mathematics.GeneralMath.Factorial(Long)
+  name.vb: Factorial(Long)
+- uid: Garyon.Mathematics.GeneralMath.Factorial(System.Double)
+  commentId: M:Garyon.Mathematics.GeneralMath.Factorial(System.Double)
+  id: Factorial(System.Double)
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Factorial(double)
+  nameWithType: GeneralMath.Factorial(double)
+  fullName: Garyon.Mathematics.GeneralMath.Factorial(double)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Factorial
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 176
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Calculates the factorial of a number.
+  example: []
+  syntax:
+    content: public static double Factorial(double n)
+    parameters:
+    - id: n
+      type: System.Double
+      description: >-
+        The number whose factorial to get. If it is not a round number, it will
+
+        be rounded according to the <xref href="System.Math.Round(System.Double)" data-throw-if-not-resolved="false"></xref>
+
+        function.
+    return:
+      type: System.Double
+      description: The result of the factorial.
+    content.vb: Public Shared Function Factorial(n As Double) As Double
+  overload: Garyon.Mathematics.GeneralMath.Factorial*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the provided number is negative.
+  nameWithType.vb: GeneralMath.Factorial(Double)
+  fullName.vb: Garyon.Mathematics.GeneralMath.Factorial(Double)
+  name.vb: Factorial(Double)
+- uid: Garyon.Mathematics.GeneralMath.FactorialBigInteger(System.Int64)
+  commentId: M:Garyon.Mathematics.GeneralMath.FactorialBigInteger(System.Int64)
+  id: FactorialBigInteger(System.Int64)
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: FactorialBigInteger(long)
+  nameWithType: GeneralMath.FactorialBigInteger(long)
+  fullName: Garyon.Mathematics.GeneralMath.FactorialBigInteger(long)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: FactorialBigInteger
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 231
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Calculates the factorial of a number.
+  example: []
+  syntax:
+    content: public static BigInteger FactorialBigInteger(long n)
+    parameters:
+    - id: n
+      type: System.Int64
+      description: The number whose factorial to get.
+    return:
+      type: System.Numerics.BigInteger
+      description: The result of the factorial.
+    content.vb: Public Shared Function FactorialBigInteger(n As Long) As BigInteger
+  overload: Garyon.Mathematics.GeneralMath.FactorialBigInteger*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the provided number is negative.
+  nameWithType.vb: GeneralMath.FactorialBigInteger(Long)
+  fullName.vb: Garyon.Mathematics.GeneralMath.FactorialBigInteger(Long)
+  name.vb: FactorialBigInteger(Long)
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Byte[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Byte[])
+  id: Min(System.Byte[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params byte[])
+  nameWithType: GeneralMath.Min(params byte[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params byte[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 283
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static byte Min(params byte[] values)
+    parameters:
+    - id: values
+      type: System.Byte[]
+      description: The values to compare.
+    return:
+      type: System.Byte
+      description: >-
+        The smallest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As Byte()) As Byte
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray Byte())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray Byte())
+  name.vb: Min(ParamArray Byte())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Byte})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Byte})
+  id: Min(System.Collections.Generic.IEnumerable{System.Byte})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<byte>)
+  nameWithType: GeneralMath.Min(IEnumerable<byte>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<byte>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 295
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static byte Min(IEnumerable<byte> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Byte}
+      description: The values to compare.
+    return:
+      type: System.Byte
+      description: >-
+        The smallest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of Byte)) As Byte
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of Byte))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of Byte))
+  name.vb: Min(IEnumerable(Of Byte))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.SByte[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.SByte[])
+  id: Min(System.SByte[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params sbyte[])
+  nameWithType: GeneralMath.Min(params sbyte[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params sbyte[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 318
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static sbyte Min(params sbyte[] values)
+    parameters:
+    - id: values
+      type: System.SByte[]
+      description: The values to compare.
+    return:
+      type: System.SByte
+      description: >-
+        The smallest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As SByte()) As SByte
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray SByte())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray SByte())
+  name.vb: Min(ParamArray SByte())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.SByte})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.SByte})
+  id: Min(System.Collections.Generic.IEnumerable{System.SByte})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<sbyte>)
+  nameWithType: GeneralMath.Min(IEnumerable<sbyte>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<sbyte>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 330
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static sbyte Min(IEnumerable<sbyte> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.SByte}
+      description: The values to compare.
+    return:
+      type: System.SByte
+      description: >-
+        The smallest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of SByte)) As SByte
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of SByte))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of SByte))
+  name.vb: Min(IEnumerable(Of SByte))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Int16[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Int16[])
+  id: Min(System.Int16[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params short[])
+  nameWithType: GeneralMath.Min(params short[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params short[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 353
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static short Min(params short[] values)
+    parameters:
+    - id: values
+      type: System.Int16[]
+      description: The values to compare.
+    return:
+      type: System.Int16
+      description: >-
+        The smallest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As Short()) As Short
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray Short())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray Short())
+  name.vb: Min(ParamArray Short())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int16})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int16})
+  id: Min(System.Collections.Generic.IEnumerable{System.Int16})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<short>)
+  nameWithType: GeneralMath.Min(IEnumerable<short>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<short>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 365
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static short Min(IEnumerable<short> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int16}
+      description: The values to compare.
+    return:
+      type: System.Int16
+      description: >-
+        The smallest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of Short)) As Short
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of Short))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of Short))
+  name.vb: Min(IEnumerable(Of Short))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.UInt16[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.UInt16[])
+  id: Min(System.UInt16[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params ushort[])
+  nameWithType: GeneralMath.Min(params ushort[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params ushort[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 388
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static ushort Min(params ushort[] values)
+    parameters:
+    - id: values
+      type: System.UInt16[]
+      description: The values to compare.
+    return:
+      type: System.UInt16
+      description: >-
+        The smallest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As UShort()) As UShort
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray UShort())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray UShort())
+  name.vb: Min(ParamArray UShort())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt16})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt16})
+  id: Min(System.Collections.Generic.IEnumerable{System.UInt16})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<ushort>)
+  nameWithType: GeneralMath.Min(IEnumerable<ushort>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<ushort>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 400
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static ushort Min(IEnumerable<ushort> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt16}
+      description: The values to compare.
+    return:
+      type: System.UInt16
+      description: >-
+        The smallest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> that was found in the collection
+
+        of <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of UShort)) As UShort
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of UShort))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of UShort))
+  name.vb: Min(IEnumerable(Of UShort))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Int32[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Int32[])
+  id: Min(System.Int32[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params int[])
+  nameWithType: GeneralMath.Min(params int[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params int[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 423
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static int Min(params int[] values)
+    parameters:
+    - id: values
+      type: System.Int32[]
+      description: The values to compare.
+    return:
+      type: System.Int32
+      description: >-
+        The smallest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As Integer()) As Integer
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray Integer())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray Integer())
+  name.vb: Min(ParamArray Integer())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int32})
+  id: Min(System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<int>)
+  nameWithType: GeneralMath.Min(IEnumerable<int>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 435
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static int Min(IEnumerable<int> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+      description: The values to compare.
+    return:
+      type: System.Int32
+      description: >-
+        The smallest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of Integer)) As Integer
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of Integer))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: Min(IEnumerable(Of Integer))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.UInt32[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.UInt32[])
+  id: Min(System.UInt32[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params uint[])
+  nameWithType: GeneralMath.Min(params uint[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params uint[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 458
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static uint Min(params uint[] values)
+    parameters:
+    - id: values
+      type: System.UInt32[]
+      description: The values to compare.
+    return:
+      type: System.UInt32
+      description: >-
+        The smallest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As UInteger()) As UInteger
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray UInteger())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray UInteger())
+  name.vb: Min(ParamArray UInteger())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt32})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt32})
+  id: Min(System.Collections.Generic.IEnumerable{System.UInt32})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<uint>)
+  nameWithType: GeneralMath.Min(IEnumerable<uint>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<uint>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 470
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static uint Min(IEnumerable<uint> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The values to compare.
+    return:
+      type: System.UInt32
+      description: >-
+        The smallest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of UInteger)) As UInteger
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of UInteger))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of UInteger))
+  name.vb: Min(IEnumerable(Of UInteger))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Int64[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Int64[])
+  id: Min(System.Int64[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params long[])
+  nameWithType: GeneralMath.Min(params long[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params long[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 493
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static long Min(params long[] values)
+    parameters:
+    - id: values
+      type: System.Int64[]
+      description: The values to compare.
+    return:
+      type: System.Int64
+      description: >-
+        The smallest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As Long()) As Long
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray Long())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray Long())
+  name.vb: Min(ParamArray Long())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int64})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.Int64})
+  id: Min(System.Collections.Generic.IEnumerable{System.Int64})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<long>)
+  nameWithType: GeneralMath.Min(IEnumerable<long>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<long>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 505
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static long Min(IEnumerable<long> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int64}
+      description: The values to compare.
+    return:
+      type: System.Int64
+      description: >-
+        The smallest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of Long)) As Long
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of Long))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of Long))
+  name.vb: Min(IEnumerable(Of Long))
+- uid: Garyon.Mathematics.GeneralMath.Min(System.UInt64[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.UInt64[])
+  id: Min(System.UInt64[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(params ulong[])
+  nameWithType: GeneralMath.Min(params ulong[])
+  fullName: Garyon.Mathematics.GeneralMath.Min(params ulong[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 528
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static ulong Min(params ulong[] values)
+    parameters:
+    - id: values
+      type: System.UInt64[]
+      description: The values to compare.
+    return:
+      type: System.UInt64
+      description: >-
+        The smallest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Min(ParamArray values As ULong()) As ULong
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(ParamArray ULong())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(ParamArray ULong())
+  name.vb: Min(ParamArray ULong())
+- uid: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt64})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable{System.UInt64})
+  id: Min(System.Collections.Generic.IEnumerable{System.UInt64})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min(IEnumerable<ulong>)
+  nameWithType: GeneralMath.Min(IEnumerable<ulong>)
+  fullName: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable<ulong>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 540
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the smallest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static ulong Min(IEnumerable<ulong> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The values to compare.
+    return:
+      type: System.UInt64
+      description: >-
+        The smallest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Min(values As IEnumerable(Of ULong)) As ULong
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(IEnumerable(Of ULong))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(System.Collections.Generic.IEnumerable(Of ULong))
+  name.vb: Min(IEnumerable(Of ULong))
+- uid: Garyon.Mathematics.GeneralMath.Min``1(``0[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Min``1(``0[])
+  id: Min``1(``0[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min<T>(params T[])
+  nameWithType: GeneralMath.Min<T>(params T[])
+  fullName: Garyon.Mathematics.GeneralMath.Min<T>(params T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 555
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the smallest value from a collection of values.
+  example: []
+  syntax:
+    content: 'public static T Min<T>(params T[] values) where T : INumber<T>, IMinMaxValue<T>'
+    parameters:
+    - id: values
+      type: '{T}[]'
+      description: The values to compare.
+    typeParameters:
+    - id: T
+      description: The type of the number values to compare.
+    return:
+      type: '{T}'
+      description: The smallest value that was found in the collection of values.
+    content.vb: Public Shared Function Min(Of T As {INumber(Of T), IMinMaxValue(Of T)})(ParamArray values As T()) As T
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(Of T)(ParamArray T())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(Of T)(ParamArray T())
+  name.vb: Min(Of T)(ParamArray T())
+- uid: Garyon.Mathematics.GeneralMath.Min``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Mathematics.GeneralMath.Min``1(System.Collections.Generic.IEnumerable{``0})
+  id: Min``1(System.Collections.Generic.IEnumerable{``0})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Min<T>(IEnumerable<T>)
+  nameWithType: GeneralMath.Min<T>(IEnumerable<T>)
+  fullName: Garyon.Mathematics.GeneralMath.Min<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Min
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 564
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the smallest value from a collection of values.
+  example: []
+  syntax:
+    content: 'public static T Min<T>(IEnumerable<T> values) where T : INumber<T>, IMinMaxValue<T>'
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The values to compare.
+    typeParameters:
+    - id: T
+      description: The type of the number values to compare.
+    return:
+      type: '{T}'
+      description: The smallest value that was found in the collection of values.
+    content.vb: Public Shared Function Min(Of T As {INumber(Of T), IMinMaxValue(Of T)})(values As IEnumerable(Of T)) As T
+  overload: Garyon.Mathematics.GeneralMath.Min*
+  nameWithType.vb: GeneralMath.Min(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Min(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: Min(Of T)(IEnumerable(Of T))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Byte[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Byte[])
+  id: Max(System.Byte[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params byte[])
+  nameWithType: GeneralMath.Max(params byte[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params byte[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 592
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static byte Max(params byte[] values)
+    parameters:
+    - id: values
+      type: System.Byte[]
+      description: The values to compare.
+    return:
+      type: System.Byte
+      description: >-
+        The largest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As Byte()) As Byte
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray Byte())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray Byte())
+  name.vb: Max(ParamArray Byte())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Byte})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Byte})
+  id: Max(System.Collections.Generic.IEnumerable{System.Byte})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<byte>)
+  nameWithType: GeneralMath.Max(IEnumerable<byte>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<byte>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 604
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static byte Max(IEnumerable<byte> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Byte}
+      description: The values to compare.
+    return:
+      type: System.Byte
+      description: >-
+        The largest <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of Byte)) As Byte
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of Byte))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of Byte))
+  name.vb: Max(IEnumerable(Of Byte))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.SByte[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.SByte[])
+  id: Max(System.SByte[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params sbyte[])
+  nameWithType: GeneralMath.Max(params sbyte[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params sbyte[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 627
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static sbyte Max(params sbyte[] values)
+    parameters:
+    - id: values
+      type: System.SByte[]
+      description: The values to compare.
+    return:
+      type: System.SByte
+      description: >-
+        The largest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As SByte()) As SByte
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray SByte())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray SByte())
+  name.vb: Max(ParamArray SByte())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.SByte})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.SByte})
+  id: Max(System.Collections.Generic.IEnumerable{System.SByte})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<sbyte>)
+  nameWithType: GeneralMath.Max(IEnumerable<sbyte>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<sbyte>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 639
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static sbyte Max(IEnumerable<sbyte> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.SByte}
+      description: The values to compare.
+    return:
+      type: System.SByte
+      description: >-
+        The largest <xref href="System.SByte" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of SByte)) As SByte
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of SByte))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of SByte))
+  name.vb: Max(IEnumerable(Of SByte))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Int16[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Int16[])
+  id: Max(System.Int16[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params short[])
+  nameWithType: GeneralMath.Max(params short[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params short[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 662
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static short Max(params short[] values)
+    parameters:
+    - id: values
+      type: System.Int16[]
+      description: The values to compare.
+    return:
+      type: System.Int16
+      description: >-
+        The largest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As Short()) As Short
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray Short())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray Short())
+  name.vb: Max(ParamArray Short())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int16})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int16})
+  id: Max(System.Collections.Generic.IEnumerable{System.Int16})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<short>)
+  nameWithType: GeneralMath.Max(IEnumerable<short>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<short>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 674
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static short Max(IEnumerable<short> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int16}
+      description: The values to compare.
+    return:
+      type: System.Int16
+      description: >-
+        The largest <xref href="System.Int16" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of Short)) As Short
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of Short))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of Short))
+  name.vb: Max(IEnumerable(Of Short))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.UInt16[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.UInt16[])
+  id: Max(System.UInt16[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params ushort[])
+  nameWithType: GeneralMath.Max(params ushort[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params ushort[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 697
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static ushort Max(params ushort[] values)
+    parameters:
+    - id: values
+      type: System.UInt16[]
+      description: The values to compare.
+    return:
+      type: System.UInt16
+      description: >-
+        The largest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As UShort()) As UShort
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray UShort())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray UShort())
+  name.vb: Max(ParamArray UShort())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt16})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt16})
+  id: Max(System.Collections.Generic.IEnumerable{System.UInt16})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<ushort>)
+  nameWithType: GeneralMath.Max(IEnumerable<ushort>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<ushort>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 709
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static ushort Max(IEnumerable<ushort> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt16}
+      description: The values to compare.
+    return:
+      type: System.UInt16
+      description: >-
+        The largest <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of UShort)) As UShort
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of UShort))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of UShort))
+  name.vb: Max(IEnumerable(Of UShort))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Int32[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Int32[])
+  id: Max(System.Int32[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params int[])
+  nameWithType: GeneralMath.Max(params int[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params int[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 732
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static int Max(params int[] values)
+    parameters:
+    - id: values
+      type: System.Int32[]
+      description: The values to compare.
+    return:
+      type: System.Int32
+      description: >-
+        The largest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As Integer()) As Integer
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray Integer())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray Integer())
+  name.vb: Max(ParamArray Integer())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int32})
+  id: Max(System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<int>)
+  nameWithType: GeneralMath.Max(IEnumerable<int>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 744
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static int Max(IEnumerable<int> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+      description: The values to compare.
+    return:
+      type: System.Int32
+      description: >-
+        The largest <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of Integer)) As Integer
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of Integer))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: Max(IEnumerable(Of Integer))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.UInt32[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.UInt32[])
+  id: Max(System.UInt32[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params uint[])
+  nameWithType: GeneralMath.Max(params uint[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params uint[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 767
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static uint Max(params uint[] values)
+    parameters:
+    - id: values
+      type: System.UInt32[]
+      description: The values to compare.
+    return:
+      type: System.UInt32
+      description: >-
+        The largest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As UInteger()) As UInteger
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray UInteger())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray UInteger())
+  name.vb: Max(ParamArray UInteger())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt32})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt32})
+  id: Max(System.Collections.Generic.IEnumerable{System.UInt32})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<uint>)
+  nameWithType: GeneralMath.Max(IEnumerable<uint>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<uint>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 779
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static uint Max(IEnumerable<uint> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt32}
+      description: The values to compare.
+    return:
+      type: System.UInt32
+      description: >-
+        The largest <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of UInteger)) As UInteger
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of UInteger))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of UInteger))
+  name.vb: Max(IEnumerable(Of UInteger))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Int64[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Int64[])
+  id: Max(System.Int64[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params long[])
+  nameWithType: GeneralMath.Max(params long[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params long[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 802
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static long Max(params long[] values)
+    parameters:
+    - id: values
+      type: System.Int64[]
+      description: The values to compare.
+    return:
+      type: System.Int64
+      description: >-
+        The largest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As Long()) As Long
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray Long())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray Long())
+  name.vb: Max(ParamArray Long())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int64})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.Int64})
+  id: Max(System.Collections.Generic.IEnumerable{System.Int64})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<long>)
+  nameWithType: GeneralMath.Max(IEnumerable<long>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<long>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 814
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static long Max(IEnumerable<long> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int64}
+      description: The values to compare.
+    return:
+      type: System.Int64
+      description: >-
+        The largest <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of Long)) As Long
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of Long))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of Long))
+  name.vb: Max(IEnumerable(Of Long))
+- uid: Garyon.Mathematics.GeneralMath.Max(System.UInt64[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.UInt64[])
+  id: Max(System.UInt64[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(params ulong[])
+  nameWithType: GeneralMath.Max(params ulong[])
+  fullName: Garyon.Mathematics.GeneralMath.Max(params ulong[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 837
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> from a
+
+    <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>[].
+  example: []
+  syntax:
+    content: public static ulong Max(params ulong[] values)
+    parameters:
+    - id: values
+      type: System.UInt64[]
+      description: The values to compare.
+    return:
+      type: System.UInt64
+      description: >-
+        The largest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> that was found in the
+
+        <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>[].
+    content.vb: Public Shared Function Max(ParamArray values As ULong()) As ULong
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(ParamArray ULong())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(ParamArray ULong())
+  name.vb: Max(ParamArray ULong())
+- uid: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt64})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable{System.UInt64})
+  id: Max(System.Collections.Generic.IEnumerable{System.UInt64})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max(IEnumerable<ulong>)
+  nameWithType: GeneralMath.Max(IEnumerable<ulong>)
+  fullName: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable<ulong>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 849
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: >-
+    Returns the largest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> from a collection of
+
+    <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: public static ulong Max(IEnumerable<ulong> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: The values to compare.
+    return:
+      type: System.UInt64
+      description: >-
+        The largest <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref> that was found in the collection of
+
+        <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>s.
+    content.vb: Public Shared Function Max(values As IEnumerable(Of ULong)) As ULong
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(IEnumerable(Of ULong))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(System.Collections.Generic.IEnumerable(Of ULong))
+  name.vb: Max(IEnumerable(Of ULong))
+- uid: Garyon.Mathematics.GeneralMath.Max``1(``0[])
+  commentId: M:Garyon.Mathematics.GeneralMath.Max``1(``0[])
+  id: Max``1(``0[])
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max<T>(params T[])
+  nameWithType: GeneralMath.Max<T>(params T[])
+  fullName: Garyon.Mathematics.GeneralMath.Max<T>(params T[])
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 864
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the largest value from a collection of values.
+  example: []
+  syntax:
+    content: 'public static T Max<T>(params T[] values) where T : INumber<T>, IMinMaxValue<T>'
+    parameters:
+    - id: values
+      type: '{T}[]'
+      description: The values to compare.
+    typeParameters:
+    - id: T
+      description: The type of the number values to compare.
+    return:
+      type: '{T}'
+      description: The largest value that was found in the collection of values.
+    content.vb: Public Shared Function Max(Of T As {INumber(Of T), IMinMaxValue(Of T)})(ParamArray values As T()) As T
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(Of T)(ParamArray T())
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(Of T)(ParamArray T())
+  name.vb: Max(Of T)(ParamArray T())
+- uid: Garyon.Mathematics.GeneralMath.Max``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Mathematics.GeneralMath.Max``1(System.Collections.Generic.IEnumerable{``0})
+  id: Max``1(System.Collections.Generic.IEnumerable{``0})
+  parent: Garyon.Mathematics.GeneralMath
+  langs:
+  - csharp
+  - vb
+  name: Max<T>(IEnumerable<T>)
+  nameWithType: GeneralMath.Max<T>(IEnumerable<T>)
+  fullName: Garyon.Mathematics.GeneralMath.Max<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Mathematics/GeneralMath.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Max
+    path: ../Garyon/Mathematics/GeneralMath.cs
+    startLine: 873
+  assemblies:
+  - Garyon
+  namespace: Garyon.Mathematics
+  summary: Returns the largest value from a collection of values.
+  example: []
+  syntax:
+    content: 'public static T Max<T>(IEnumerable<T> values) where T : INumber<T>, IMinMaxValue<T>'
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The values to compare.
+    typeParameters:
+    - id: T
+      description: The type of the number values to compare.
+    return:
+      type: '{T}'
+      description: The largest value that was found in the collection of values.
+    content.vb: Public Shared Function Max(Of T As {INumber(Of T), IMinMaxValue(Of T)})(values As IEnumerable(Of T)) As T
+  overload: Garyon.Mathematics.GeneralMath.Max*
+  nameWithType.vb: GeneralMath.Max(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Mathematics.GeneralMath.Max(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: Max(Of T)(IEnumerable(Of T))
+references:
+- uid: System.Math
+  commentId: T:System.Math
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math
+  name: Math
+  nameWithType: Math
+  fullName: System.Math
+- uid: Garyon.Mathematics
+  commentId: N:Garyon.Mathematics
+  href: Garyon.html
+  name: Garyon.Mathematics
+  nameWithType: Garyon.Mathematics
+  fullName: Garyon.Mathematics
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mathematics
+    name: Mathematics
+    href: Garyon.Mathematics.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Mathematics
+    name: Mathematics
+    href: Garyon.Mathematics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Garyon.Mathematics.GeneralMath.Power*
+  commentId: Overload:Garyon.Mathematics.GeneralMath.Power
+  href: Garyon.Mathematics.GeneralMath.html#Garyon_Mathematics_GeneralMath_Power_System_Int32_System_Int32_
+  name: Power
+  nameWithType: GeneralMath.Power
+  fullName: Garyon.Mathematics.GeneralMath.Power
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Garyon.Mathematics.GeneralMath.Factorial*
+  commentId: Overload:Garyon.Mathematics.GeneralMath.Factorial
+  href: Garyon.Mathematics.GeneralMath.html#Garyon_Mathematics_GeneralMath_Factorial_System_Int64_
+  name: Factorial
+  nameWithType: GeneralMath.Factorial
+  fullName: Garyon.Mathematics.GeneralMath.Factorial
+- uid: System.Math.Round(System.Double)
+  commentId: M:System.Math.Round(System.Double)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.round#system-math-round(system-double)
+  name: Round(double)
+  nameWithType: Math.Round(double)
+  fullName: System.Math.Round(double)
+  nameWithType.vb: Math.Round(Double)
+  fullName.vb: System.Math.Round(Double)
+  name.vb: Round(Double)
+  spec.csharp:
+  - uid: System.Math.Round(System.Double)
+    name: Round
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.round#system-math-round(system-double)
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: System.Math.Round(System.Double)
+    name: Round
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.round#system-math-round(system-double)
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Garyon.Mathematics.GeneralMath.FactorialBigInteger*
+  commentId: Overload:Garyon.Mathematics.GeneralMath.FactorialBigInteger
+  href: Garyon.Mathematics.GeneralMath.html#Garyon_Mathematics_GeneralMath_FactorialBigInteger_System_Int64_
+  name: FactorialBigInteger
+  nameWithType: GeneralMath.FactorialBigInteger
+  fullName: Garyon.Mathematics.GeneralMath.FactorialBigInteger
+- uid: System.Numerics.BigInteger
+  commentId: T:System.Numerics.BigInteger
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.biginteger
+  name: BigInteger
+  nameWithType: BigInteger
+  fullName: System.Numerics.BigInteger
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: Garyon.Mathematics.GeneralMath.Min*
+  commentId: Overload:Garyon.Mathematics.GeneralMath.Min
+  href: Garyon.Mathematics.GeneralMath.html#Garyon_Mathematics_GeneralMath_Min_System_Byte___
+  name: Min
+  nameWithType: GeneralMath.Min
+  fullName: Garyon.Mathematics.GeneralMath.Min
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Byte}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Byte}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<byte>
+  nameWithType: IEnumerable<byte>
+  fullName: System.Collections.Generic.IEnumerable<byte>
+  nameWithType.vb: IEnumerable(Of Byte)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Byte)
+  name.vb: IEnumerable(Of Byte)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: System.SByte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte[]
+  nameWithType: sbyte[]
+  fullName: sbyte[]
+  nameWithType.vb: SByte()
+  fullName.vb: SByte()
+  name.vb: SByte()
+  spec.csharp:
+  - uid: System.SByte
+    name: sbyte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.SByte
+    name: SByte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.SByte}
+  commentId: T:System.Collections.Generic.IEnumerable{System.SByte}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<sbyte>
+  nameWithType: IEnumerable<sbyte>
+  fullName: System.Collections.Generic.IEnumerable<sbyte>
+  nameWithType.vb: IEnumerable(Of SByte)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SByte)
+  name.vb: IEnumerable(Of SByte)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.SByte
+    name: sbyte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.SByte
+    name: SByte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  - name: )
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.Int16[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short[]
+  nameWithType: short[]
+  fullName: short[]
+  nameWithType.vb: Short()
+  fullName.vb: Short()
+  name.vb: Short()
+  spec.csharp:
+  - uid: System.Int16
+    name: short
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int16
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int16
+    name: Short
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int16
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Int16}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int16}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<short>
+  nameWithType: IEnumerable<short>
+  fullName: System.Collections.Generic.IEnumerable<short>
+  nameWithType.vb: IEnumerable(Of Short)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Short)
+  name.vb: IEnumerable(Of Short)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Int16
+    name: short
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int16
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int16
+    name: Short
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int16
+  - name: )
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.UInt16[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort[]
+  nameWithType: ushort[]
+  fullName: ushort[]
+  nameWithType.vb: UShort()
+  fullName.vb: UShort()
+  name.vb: UShort()
+  spec.csharp:
+  - uid: System.UInt16
+    name: ushort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt16
+    name: UShort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.UInt16}
+  commentId: T:System.Collections.Generic.IEnumerable{System.UInt16}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ushort>
+  nameWithType: IEnumerable<ushort>
+  fullName: System.Collections.Generic.IEnumerable<ushort>
+  nameWithType.vb: IEnumerable(Of UShort)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UShort)
+  name.vb: IEnumerable(Of UShort)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.UInt16
+    name: ushort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt16
+    name: UShort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: )
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Int32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<int>
+  nameWithType: IEnumerable<int>
+  fullName: System.Collections.Generic.IEnumerable<int>
+  nameWithType.vb: IEnumerable(Of Integer)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Integer)
+  name.vb: IEnumerable(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint[]
+  nameWithType: uint[]
+  fullName: uint[]
+  nameWithType.vb: UInteger()
+  fullName.vb: UInteger()
+  name.vb: UInteger()
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.UInt32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.UInt32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<uint>
+  nameWithType: IEnumerable<uint>
+  fullName: System.Collections.Generic.IEnumerable<uint>
+  nameWithType.vb: IEnumerable(Of UInteger)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UInteger)
+  name.vb: IEnumerable(Of UInteger)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: System.Int64[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long[]
+  nameWithType: long[]
+  fullName: long[]
+  nameWithType.vb: Long()
+  fullName.vb: Long()
+  name.vb: Long()
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Int64}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int64}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<long>
+  nameWithType: IEnumerable<long>
+  fullName: System.Collections.Generic.IEnumerable<long>
+  nameWithType.vb: IEnumerable(Of Long)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Long)
+  name.vb: IEnumerable(Of Long)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.UInt64[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong[]
+  nameWithType: ulong[]
+  fullName: ulong[]
+  nameWithType.vb: ULong()
+  fullName.vb: ULong()
+  name.vb: ULong()
+  spec.csharp:
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.UInt64}
+  commentId: T:System.Collections.Generic.IEnumerable{System.UInt64}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ulong>
+  nameWithType: IEnumerable<ulong>
+  fullName: System.Collections.Generic.IEnumerable<ulong>
+  nameWithType.vb: IEnumerable(Of ULong)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ULong)
+  name.vb: IEnumerable(Of ULong)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: )
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Mathematics.GeneralMath.Max*
+  commentId: Overload:Garyon.Mathematics.GeneralMath.Max
+  href: Garyon.Mathematics.GeneralMath.html#Garyon_Mathematics_GeneralMath_Max_System_Byte___
+  name: Max
+  nameWithType: GeneralMath.Max
+  fullName: Garyon.Mathematics.GeneralMath.Max

@@ -1,0 +1,1538 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.NullGuards
+  commentId: T:Garyon.Functions.NullGuards
+  id: NullGuards
+  parent: Garyon.Functions
+  children:
+  - Garyon.Functions.NullGuards.AnyNonNull``2(System.Nullable{``0},System.Nullable{``1})
+  - Garyon.Functions.NullGuards.AnyNonNull``2(``0,``1)
+  - Garyon.Functions.NullGuards.AnyNonNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  - Garyon.Functions.NullGuards.AnyNonNull``3(``0,``1,``2)
+  - Garyon.Functions.NullGuards.AnyNonNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  - Garyon.Functions.NullGuards.AnyNonNull``4(``0,``1,``2,``3)
+  - Garyon.Functions.NullGuards.AnyNull``2(System.Nullable{``0},System.Nullable{``1})
+  - Garyon.Functions.NullGuards.AnyNull``2(``0,``1)
+  - Garyon.Functions.NullGuards.AnyNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  - Garyon.Functions.NullGuards.AnyNull``3(``0,``1,``2)
+  - Garyon.Functions.NullGuards.AnyNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  - Garyon.Functions.NullGuards.AnyNull``4(``0,``1,``2,``3)
+  - Garyon.Functions.NullGuards.NoneNull``2(System.Nullable{``0},System.Nullable{``1})
+  - Garyon.Functions.NullGuards.NoneNull``2(``0,``1)
+  - Garyon.Functions.NullGuards.NoneNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  - Garyon.Functions.NullGuards.NoneNull``3(``0,``1,``2)
+  - Garyon.Functions.NullGuards.NoneNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  - Garyon.Functions.NullGuards.NoneNull``4(``0,``1,``2,``3)
+  - Garyon.Functions.NullGuards.SingleNull``2(System.Nullable{``0},System.Nullable{``1})
+  - Garyon.Functions.NullGuards.SingleNull``2(``0,``1)
+  langs:
+  - csharp
+  - vb
+  name: NullGuards
+  nameWithType: NullGuards
+  fullName: Garyon.Functions.NullGuards
+  type: Class
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NullGuards
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 9
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  summary: >-
+    Provides methods for quickly checking against nullability for multiple
+
+    objects simultaneously.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static class NullGuards
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Module NullGuards
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Garyon.Functions.NullGuards.AnyNull``2(``0,``1)
+  commentId: M:Garyon.Functions.NullGuards.AnyNull``2(``0,``1)
+  id: AnyNull``2(``0,``1)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.AnyNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.AnyNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 12
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool AnyNull<T1, T2>(T1? value1, T2? value2)
+    parameters:
+    - id: value1
+      type: '{T1}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value2
+      type: '{T2}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNull(Of T1, T2)(value1 As T1, value2 As T2) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNull*
+  nameWithType.vb: NullGuards.AnyNull(Of T1, T2)(T1, T2)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNull(Of T1, T2)(T1, T2)
+  name.vb: AnyNull(Of T1, T2)(T1, T2)
+- uid: Garyon.Functions.NullGuards.AnyNull``3(``0,``1,``2)
+  commentId: M:Garyon.Functions.NullGuards.AnyNull``3(``0,``1,``2)
+  id: AnyNull``3(``0,``1,``2)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNull<T1, T2, T3>(T1?, T2?, T3?)
+  nameWithType: NullGuards.AnyNull<T1, T2, T3>(T1?, T2?, T3?)
+  fullName: Garyon.Functions.NullGuards.AnyNull<T1, T2, T3>(T1?, T2?, T3?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 19
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool AnyNull<T1, T2, T3>(T1? value1, T2? value2, T3? value3)
+    parameters:
+    - id: value1
+      type: '{T1}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value2
+      type: '{T2}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value3
+      type: '{T3}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNull(Of T1, T2, T3)(value1 As T1, value2 As T2, value3 As T3) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNull*
+  nameWithType.vb: NullGuards.AnyNull(Of T1, T2, T3)(T1, T2, T3)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNull(Of T1, T2, T3)(T1, T2, T3)
+  name.vb: AnyNull(Of T1, T2, T3)(T1, T2, T3)
+- uid: Garyon.Functions.NullGuards.AnyNull``4(``0,``1,``2,``3)
+  commentId: M:Garyon.Functions.NullGuards.AnyNull``4(``0,``1,``2,``3)
+  id: AnyNull``4(``0,``1,``2,``3)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  nameWithType: NullGuards.AnyNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  fullName: Garyon.Functions.NullGuards.AnyNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 28
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool AnyNull<T1, T2, T3, T4>(T1? value1, T2? value2, T3? value3, T4? value4)
+    parameters:
+    - id: value1
+      type: '{T1}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value2
+      type: '{T2}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value3
+      type: '{T3}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value4
+      type: '{T4}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNull(Of T1, T2, T3, T4)(value1 As T1, value2 As T2, value3 As T3, value4 As T4) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNull*
+  nameWithType.vb: NullGuards.AnyNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  name.vb: AnyNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+- uid: Garyon.Functions.NullGuards.AnyNull``2(System.Nullable{``0},System.Nullable{``1})
+  commentId: M:Garyon.Functions.NullGuards.AnyNull``2(System.Nullable{``0},System.Nullable{``1})
+  id: AnyNull``2(System.Nullable{``0},System.Nullable{``1})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.AnyNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.AnyNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 40
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool AnyNull<T1, T2>(T1? value1, T2? value2) where T1 : struct where T2 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value2
+      type: System.Nullable{{T2}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNull(Of T1 As Structure, T2 As Structure)(value1 As T1?, value2 As T2?) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNull*
+  nameWithType.vb: NullGuards.AnyNull(Of T1, T2)(T1?, T2?)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNull(Of T1, T2)(T1?, T2?)
+  name.vb: AnyNull(Of T1, T2)(T1?, T2?)
+- uid: Garyon.Functions.NullGuards.AnyNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  commentId: M:Garyon.Functions.NullGuards.AnyNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  id: AnyNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNull<T1, T2, T3>(T1?, T2?, T3?)
+  nameWithType: NullGuards.AnyNull<T1, T2, T3>(T1?, T2?, T3?)
+  fullName: Garyon.Functions.NullGuards.AnyNull<T1, T2, T3>(T1?, T2?, T3?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 49
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool AnyNull<T1, T2, T3>(T1? value1, T2? value2, T3? value3) where T1 : struct where T2 : struct where T3 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value2
+      type: System.Nullable{{T2}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value3
+      type: System.Nullable{{T3}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNull(Of T1 As Structure, T2 As Structure, T3 As Structure)(value1 As T1?, value2 As T2?, value3 As T3?) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNull*
+  nameWithType.vb: NullGuards.AnyNull(Of T1, T2, T3)(T1?, T2?, T3?)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNull(Of T1, T2, T3)(T1?, T2?, T3?)
+  name.vb: AnyNull(Of T1, T2, T3)(T1?, T2?, T3?)
+- uid: Garyon.Functions.NullGuards.AnyNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  commentId: M:Garyon.Functions.NullGuards.AnyNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  id: AnyNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  nameWithType: NullGuards.AnyNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  fullName: Garyon.Functions.NullGuards.AnyNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 61
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool AnyNull<T1, T2, T3, T4>(T1? value1, T2? value2, T3? value3, T4? value4) where T1 : struct where T2 : struct where T3 : struct where T4 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value2
+      type: System.Nullable{{T2}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value3
+      type: System.Nullable{{T3}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    - id: value4
+      type: System.Nullable{{T4}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: false
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNull(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(value1 As T1?, value2 As T2?, value3 As T3?, value4 As T4?) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNull*
+  nameWithType.vb: NullGuards.AnyNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+  name.vb: AnyNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+- uid: Garyon.Functions.NullGuards.AnyNonNull``2(``0,``1)
+  commentId: M:Garyon.Functions.NullGuards.AnyNonNull``2(``0,``1)
+  id: AnyNonNull``2(``0,``1)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNonNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.AnyNonNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.AnyNonNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNonNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 77
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool AnyNonNull<T1, T2>(T1? value1, T2? value2)
+    parameters:
+    - id: value1
+      type: '{T1}'
+    - id: value2
+      type: '{T2}'
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNonNull(Of T1, T2)(value1 As T1, value2 As T2) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNonNull*
+  nameWithType.vb: NullGuards.AnyNonNull(Of T1, T2)(T1, T2)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNonNull(Of T1, T2)(T1, T2)
+  name.vb: AnyNonNull(Of T1, T2)(T1, T2)
+- uid: Garyon.Functions.NullGuards.AnyNonNull``3(``0,``1,``2)
+  commentId: M:Garyon.Functions.NullGuards.AnyNonNull``3(``0,``1,``2)
+  id: AnyNonNull``3(``0,``1,``2)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNonNull<T1, T2, T3>(T1?, T2?, T3?)
+  nameWithType: NullGuards.AnyNonNull<T1, T2, T3>(T1?, T2?, T3?)
+  fullName: Garyon.Functions.NullGuards.AnyNonNull<T1, T2, T3>(T1?, T2?, T3?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNonNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 82
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool AnyNonNull<T1, T2, T3>(T1? value1, T2? value2, T3? value3)
+    parameters:
+    - id: value1
+      type: '{T1}'
+    - id: value2
+      type: '{T2}'
+    - id: value3
+      type: '{T3}'
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNonNull(Of T1, T2, T3)(value1 As T1, value2 As T2, value3 As T3) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNonNull*
+  nameWithType.vb: NullGuards.AnyNonNull(Of T1, T2, T3)(T1, T2, T3)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNonNull(Of T1, T2, T3)(T1, T2, T3)
+  name.vb: AnyNonNull(Of T1, T2, T3)(T1, T2, T3)
+- uid: Garyon.Functions.NullGuards.AnyNonNull``4(``0,``1,``2,``3)
+  commentId: M:Garyon.Functions.NullGuards.AnyNonNull``4(``0,``1,``2,``3)
+  id: AnyNonNull``4(``0,``1,``2,``3)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNonNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  nameWithType: NullGuards.AnyNonNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  fullName: Garyon.Functions.NullGuards.AnyNonNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNonNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 88
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool AnyNonNull<T1, T2, T3, T4>(T1? value1, T2? value2, T3? value3, T4? value4)
+    parameters:
+    - id: value1
+      type: '{T1}'
+    - id: value2
+      type: '{T2}'
+    - id: value3
+      type: '{T3}'
+    - id: value4
+      type: '{T4}'
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNonNull(Of T1, T2, T3, T4)(value1 As T1, value2 As T2, value3 As T3, value4 As T4) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNonNull*
+  nameWithType.vb: NullGuards.AnyNonNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNonNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  name.vb: AnyNonNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+- uid: Garyon.Functions.NullGuards.AnyNonNull``2(System.Nullable{``0},System.Nullable{``1})
+  commentId: M:Garyon.Functions.NullGuards.AnyNonNull``2(System.Nullable{``0},System.Nullable{``1})
+  id: AnyNonNull``2(System.Nullable{``0},System.Nullable{``1})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNonNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.AnyNonNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.AnyNonNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNonNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 96
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool AnyNonNull<T1, T2>(T1? value1, T2? value2) where T1 : struct where T2 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+    - id: value2
+      type: System.Nullable{{T2}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNonNull(Of T1 As Structure, T2 As Structure)(value1 As T1?, value2 As T2?) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNonNull*
+  nameWithType.vb: NullGuards.AnyNonNull(Of T1, T2)(T1?, T2?)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNonNull(Of T1, T2)(T1?, T2?)
+  name.vb: AnyNonNull(Of T1, T2)(T1?, T2?)
+- uid: Garyon.Functions.NullGuards.AnyNonNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  commentId: M:Garyon.Functions.NullGuards.AnyNonNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  id: AnyNonNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNonNull<T1, T2, T3>(T1?, T2?, T3?)
+  nameWithType: NullGuards.AnyNonNull<T1, T2, T3>(T1?, T2?, T3?)
+  fullName: Garyon.Functions.NullGuards.AnyNonNull<T1, T2, T3>(T1?, T2?, T3?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNonNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 103
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool AnyNonNull<T1, T2, T3>(T1? value1, T2? value2, T3? value3) where T1 : struct where T2 : struct where T3 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+    - id: value2
+      type: System.Nullable{{T2}}
+    - id: value3
+      type: System.Nullable{{T3}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNonNull(Of T1 As Structure, T2 As Structure, T3 As Structure)(value1 As T1?, value2 As T2?, value3 As T3?) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNonNull*
+  nameWithType.vb: NullGuards.AnyNonNull(Of T1, T2, T3)(T1?, T2?, T3?)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNonNull(Of T1, T2, T3)(T1?, T2?, T3?)
+  name.vb: AnyNonNull(Of T1, T2, T3)(T1?, T2?, T3?)
+- uid: Garyon.Functions.NullGuards.AnyNonNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  commentId: M:Garyon.Functions.NullGuards.AnyNonNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  id: AnyNonNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: AnyNonNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  nameWithType: NullGuards.AnyNonNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  fullName: Garyon.Functions.NullGuards.AnyNonNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: AnyNonNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 112
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool AnyNonNull<T1, T2, T3, T4>(T1? value1, T2? value2, T3? value3, T4? value4) where T1 : struct where T2 : struct where T3 : struct where T4 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+    - id: value2
+      type: System.Nullable{{T2}}
+    - id: value3
+      type: System.Nullable{{T3}}
+    - id: value4
+      type: System.Nullable{{T4}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AnyNonNull(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(value1 As T1?, value2 As T2?, value3 As T3?, value4 As T4?) As Boolean
+  overload: Garyon.Functions.NullGuards.AnyNonNull*
+  nameWithType.vb: NullGuards.AnyNonNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+  fullName.vb: Garyon.Functions.NullGuards.AnyNonNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+  name.vb: AnyNonNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+- uid: Garyon.Functions.NullGuards.NoneNull``2(``0,``1)
+  commentId: M:Garyon.Functions.NullGuards.NoneNull``2(``0,``1)
+  id: NoneNull``2(``0,``1)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: NoneNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.NoneNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.NoneNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NoneNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 124
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool NoneNull<T1, T2>(T1? value1, T2? value2)
+    parameters:
+    - id: value1
+      type: '{T1}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value2
+      type: '{T2}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NoneNull(Of T1, T2)(value1 As T1, value2 As T2) As Boolean
+  overload: Garyon.Functions.NullGuards.NoneNull*
+  nameWithType.vb: NullGuards.NoneNull(Of T1, T2)(T1, T2)
+  fullName.vb: Garyon.Functions.NullGuards.NoneNull(Of T1, T2)(T1, T2)
+  name.vb: NoneNull(Of T1, T2)(T1, T2)
+- uid: Garyon.Functions.NullGuards.NoneNull``3(``0,``1,``2)
+  commentId: M:Garyon.Functions.NullGuards.NoneNull``3(``0,``1,``2)
+  id: NoneNull``3(``0,``1,``2)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: NoneNull<T1, T2, T3>(T1?, T2?, T3?)
+  nameWithType: NullGuards.NoneNull<T1, T2, T3>(T1?, T2?, T3?)
+  fullName: Garyon.Functions.NullGuards.NoneNull<T1, T2, T3>(T1?, T2?, T3?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NoneNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 130
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool NoneNull<T1, T2, T3>(T1? value1, T2? value2, T3? value3)
+    parameters:
+    - id: value1
+      type: '{T1}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value2
+      type: '{T2}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value3
+      type: '{T3}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NoneNull(Of T1, T2, T3)(value1 As T1, value2 As T2, value3 As T3) As Boolean
+  overload: Garyon.Functions.NullGuards.NoneNull*
+  nameWithType.vb: NullGuards.NoneNull(Of T1, T2, T3)(T1, T2, T3)
+  fullName.vb: Garyon.Functions.NullGuards.NoneNull(Of T1, T2, T3)(T1, T2, T3)
+  name.vb: NoneNull(Of T1, T2, T3)(T1, T2, T3)
+- uid: Garyon.Functions.NullGuards.NoneNull``4(``0,``1,``2,``3)
+  commentId: M:Garyon.Functions.NullGuards.NoneNull``4(``0,``1,``2,``3)
+  id: NoneNull``4(``0,``1,``2,``3)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: NoneNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  nameWithType: NullGuards.NoneNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  fullName: Garyon.Functions.NullGuards.NoneNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NoneNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 137
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool NoneNull<T1, T2, T3, T4>(T1? value1, T2? value2, T3? value3, T4? value4)
+    parameters:
+    - id: value1
+      type: '{T1}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value2
+      type: '{T2}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value3
+      type: '{T3}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value4
+      type: '{T4}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NoneNull(Of T1, T2, T3, T4)(value1 As T1, value2 As T2, value3 As T3, value4 As T4) As Boolean
+  overload: Garyon.Functions.NullGuards.NoneNull*
+  nameWithType.vb: NullGuards.NoneNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  fullName.vb: Garyon.Functions.NullGuards.NoneNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  name.vb: NoneNull(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+- uid: Garyon.Functions.NullGuards.NoneNull``2(System.Nullable{``0},System.Nullable{``1})
+  commentId: M:Garyon.Functions.NullGuards.NoneNull``2(System.Nullable{``0},System.Nullable{``1})
+  id: NoneNull``2(System.Nullable{``0},System.Nullable{``1})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: NoneNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.NoneNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.NoneNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NoneNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 146
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool NoneNull<T1, T2>(T1? value1, T2? value2) where T1 : struct where T2 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value2
+      type: System.Nullable{{T2}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NoneNull(Of T1 As Structure, T2 As Structure)(value1 As T1?, value2 As T2?) As Boolean
+  overload: Garyon.Functions.NullGuards.NoneNull*
+  nameWithType.vb: NullGuards.NoneNull(Of T1, T2)(T1?, T2?)
+  fullName.vb: Garyon.Functions.NullGuards.NoneNull(Of T1, T2)(T1?, T2?)
+  name.vb: NoneNull(Of T1, T2)(T1?, T2?)
+- uid: Garyon.Functions.NullGuards.NoneNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  commentId: M:Garyon.Functions.NullGuards.NoneNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  id: NoneNull``3(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: NoneNull<T1, T2, T3>(T1?, T2?, T3?)
+  nameWithType: NullGuards.NoneNull<T1, T2, T3>(T1?, T2?, T3?)
+  fullName: Garyon.Functions.NullGuards.NoneNull<T1, T2, T3>(T1?, T2?, T3?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NoneNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 154
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool NoneNull<T1, T2, T3>(T1? value1, T2? value2, T3? value3) where T1 : struct where T2 : struct where T3 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value2
+      type: System.Nullable{{T2}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value3
+      type: System.Nullable{{T3}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NoneNull(Of T1 As Structure, T2 As Structure, T3 As Structure)(value1 As T1?, value2 As T2?, value3 As T3?) As Boolean
+  overload: Garyon.Functions.NullGuards.NoneNull*
+  nameWithType.vb: NullGuards.NoneNull(Of T1, T2, T3)(T1?, T2?, T3?)
+  fullName.vb: Garyon.Functions.NullGuards.NoneNull(Of T1, T2, T3)(T1?, T2?, T3?)
+  name.vb: NoneNull(Of T1, T2, T3)(T1?, T2?, T3?)
+- uid: Garyon.Functions.NullGuards.NoneNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  commentId: M:Garyon.Functions.NullGuards.NoneNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  id: NoneNull``4(System.Nullable{``0},System.Nullable{``1},System.Nullable{``2},System.Nullable{``3})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: NoneNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  nameWithType: NullGuards.NoneNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  fullName: Garyon.Functions.NullGuards.NoneNull<T1, T2, T3, T4>(T1?, T2?, T3?, T4?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: NoneNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 164
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool NoneNull<T1, T2, T3, T4>(T1? value1, T2? value2, T3? value3, T4? value4) where T1 : struct where T2 : struct where T3 : struct where T4 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value2
+      type: System.Nullable{{T2}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value3
+      type: System.Nullable{{T3}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: value4
+      type: System.Nullable{{T4}}
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NoneNull(Of T1 As Structure, T2 As Structure, T3 As Structure, T4 As Structure)(value1 As T1?, value2 As T2?, value3 As T3?, value4 As T4?) As Boolean
+  overload: Garyon.Functions.NullGuards.NoneNull*
+  nameWithType.vb: NullGuards.NoneNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+  fullName.vb: Garyon.Functions.NullGuards.NoneNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+  name.vb: NoneNull(Of T1, T2, T3, T4)(T1?, T2?, T3?, T4?)
+- uid: Garyon.Functions.NullGuards.SingleNull``2(``0,``1)
+  commentId: M:Garyon.Functions.NullGuards.SingleNull``2(``0,``1)
+  id: SingleNull``2(``0,``1)
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: SingleNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.SingleNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.SingleNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SingleNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 177
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: public static bool SingleNull<T1, T2>(T1? value1, T2? value2)
+    parameters:
+    - id: value1
+      type: '{T1}'
+    - id: value2
+      type: '{T2}'
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SingleNull(Of T1, T2)(value1 As T1, value2 As T2) As Boolean
+  overload: Garyon.Functions.NullGuards.SingleNull*
+  nameWithType.vb: NullGuards.SingleNull(Of T1, T2)(T1, T2)
+  fullName.vb: Garyon.Functions.NullGuards.SingleNull(Of T1, T2)(T1, T2)
+  name.vb: SingleNull(Of T1, T2)(T1, T2)
+- uid: Garyon.Functions.NullGuards.SingleNull``2(System.Nullable{``0},System.Nullable{``1})
+  commentId: M:Garyon.Functions.NullGuards.SingleNull``2(System.Nullable{``0},System.Nullable{``1})
+  id: SingleNull``2(System.Nullable{``0},System.Nullable{``1})
+  parent: Garyon.Functions.NullGuards
+  langs:
+  - csharp
+  - vb
+  name: SingleNull<T1, T2>(T1?, T2?)
+  nameWithType: NullGuards.SingleNull<T1, T2>(T1?, T2?)
+  fullName: Garyon.Functions.NullGuards.SingleNull<T1, T2>(T1?, T2?)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Functions/NullGuards.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: SingleNull
+    path: ../Garyon/Functions/NullGuards.cs
+    startLine: 182
+  assemblies:
+  - Garyon
+  namespace: Garyon.Functions
+  syntax:
+    content: 'public static bool SingleNull<T1, T2>(T1? value1, T2? value2) where T1 : struct where T2 : struct'
+    parameters:
+    - id: value1
+      type: System.Nullable{{T1}}
+    - id: value2
+      type: System.Nullable{{T2}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SingleNull(Of T1 As Structure, T2 As Structure)(value1 As T1?, value2 As T2?) As Boolean
+  overload: Garyon.Functions.NullGuards.SingleNull*
+  nameWithType.vb: NullGuards.SingleNull(Of T1, T2)(T1?, T2?)
+  fullName.vb: Garyon.Functions.NullGuards.SingleNull(Of T1, T2)(T1?, T2?)
+  name.vb: SingleNull(Of T1, T2)(T1?, T2?)
+references:
+- uid: Garyon.Functions
+  commentId: N:Garyon.Functions
+  href: Garyon.html
+  name: Garyon.Functions
+  nameWithType: Garyon.Functions
+  fullName: Garyon.Functions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Functions
+    name: Functions
+    href: Garyon.Functions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Functions.NullGuards.AnyNull*
+  commentId: Overload:Garyon.Functions.NullGuards.AnyNull
+  href: Garyon.Functions.NullGuards.html#Garyon_Functions_NullGuards_AnyNull__2___0___1_
+  name: AnyNull
+  nameWithType: NullGuards.AnyNull
+  fullName: Garyon.Functions.NullGuards.AnyNull
+- uid: '{T1}'
+  commentId: '!:T1'
+  definition: T1
+  name: T1
+  nameWithType: T1
+  fullName: T1
+- uid: '{T2}'
+  commentId: '!:T2'
+  definition: T2
+  name: T2
+  nameWithType: T2
+  fullName: T2
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: T1
+  name: T1
+  nameWithType: T1
+  fullName: T1
+- uid: T2
+  name: T2
+  nameWithType: T2
+  fullName: T2
+- uid: '{T3}'
+  commentId: '!:T3'
+  definition: T3
+  name: T3
+  nameWithType: T3
+  fullName: T3
+- uid: T3
+  name: T3
+  nameWithType: T3
+  fullName: T3
+- uid: '{T4}'
+  commentId: '!:T4'
+  definition: T4
+  name: T4
+  nameWithType: T4
+  fullName: T4
+- uid: T4
+  name: T4
+  nameWithType: T4
+  fullName: T4
+- uid: System.Nullable{{T1}}
+  commentId: T:System.Nullable{``0}
+  parent: System
+  definition: System.Nullable`1
+  name: T1?
+  nameWithType: T1?
+  fullName: T1?
+  spec.csharp:
+  - name: T1
+  - name: '?'
+  spec.vb:
+  - name: T1
+  - name: '?'
+- uid: System.Nullable{{T2}}
+  commentId: T:System.Nullable{``1}
+  parent: System
+  definition: System.Nullable`1
+  name: T2?
+  nameWithType: T2?
+  fullName: T2?
+  spec.csharp:
+  - name: T2
+  - name: '?'
+  spec.vb:
+  - name: T2
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable{{T3}}
+  commentId: T:System.Nullable{``2}
+  parent: System
+  definition: System.Nullable`1
+  name: T3?
+  nameWithType: T3?
+  fullName: T3?
+  spec.csharp:
+  - name: T3
+  - name: '?'
+  spec.vb:
+  - name: T3
+  - name: '?'
+- uid: System.Nullable{{T4}}
+  commentId: T:System.Nullable{``3}
+  parent: System
+  definition: System.Nullable`1
+  name: T4?
+  nameWithType: T4?
+  fullName: T4?
+  spec.csharp:
+  - name: T4
+  - name: '?'
+  spec.vb:
+  - name: T4
+  - name: '?'
+- uid: Garyon.Functions.NullGuards.AnyNonNull*
+  commentId: Overload:Garyon.Functions.NullGuards.AnyNonNull
+  href: Garyon.Functions.NullGuards.html#Garyon_Functions_NullGuards_AnyNonNull__2___0___1_
+  name: AnyNonNull
+  nameWithType: NullGuards.AnyNonNull
+  fullName: Garyon.Functions.NullGuards.AnyNonNull
+- uid: Garyon.Functions.NullGuards.NoneNull*
+  commentId: Overload:Garyon.Functions.NullGuards.NoneNull
+  href: Garyon.Functions.NullGuards.html#Garyon_Functions_NullGuards_NoneNull__2___0___1_
+  name: NoneNull
+  nameWithType: NullGuards.NoneNull
+  fullName: Garyon.Functions.NullGuards.NoneNull
+- uid: Garyon.Functions.NullGuards.SingleNull*
+  commentId: Overload:Garyon.Functions.NullGuards.SingleNull
+  href: Garyon.Functions.NullGuards.html#Garyon_Functions_NullGuards_SingleNull__2___0___1_
+  name: SingleNull
+  nameWithType: NullGuards.SingleNull
+  fullName: Garyon.Functions.NullGuards.SingleNull

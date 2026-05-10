@@ -1,0 +1,1826 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.Yielding
+  commentId: T:Garyon.Objects.Yielding
+  id: Yielding
+  parent: Garyon.Objects
+  children:
+  - Garyon.Objects.Yielding.Fill``1(System.Memory{``0},System.Func{``0})
+  - Garyon.Objects.Yielding.Fill``1(System.Span{``0},System.Func{``0})
+  - Garyon.Objects.Yielding.Fill``1(``0[],System.Func{``0})
+  - Garyon.Objects.Yielding.For``1(System.Func{``0})
+  - Garyon.Objects.Yielding.YieldArray``1(System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldImmutableArray``1(System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.HashSet{``0})
+  - Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.List{``0})
+  - Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.SortedSet{``0})
+  - Garyon.Objects.Yielding.YieldList``1(System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.HashSet{``0},System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.List{``0},System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.SortedSet{``0},System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldSet``1(System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.YieldSortedSet``1(System.Int32,System.Func{``0})
+  - Garyon.Objects.Yielding.Yield``1(System.Int32,System.Func{``0})
+  langs:
+  - csharp
+  - vb
+  name: Yielding
+  nameWithType: Yielding
+  fullName: Garyon.Objects.Yielding
+  type: Class
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Yielding
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Provides helper methods for handling yielded values from factory methods.
+  example: []
+  syntax:
+    content: public static class Yielding
+    content.vb: Public Module Yielding
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Objects.Yielding.For``1(System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.For``1(System.Func{``0})
+  id: For``1(System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: For<T>(Func<T>)
+  nameWithType: Yielding.For<T>(Func<T>)
+  fullName: Garyon.Objects.Yielding.For<T>(System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: For
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 30
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Creates a new <xref href="Garyon.Objects.Yielder%601" data-throw-if-not-resolved="false"></xref> from a factory method.
+  remarks: >-
+    <xref href="Garyon.Objects.Yielder%601.Factory" data-throw-if-not-resolved="false"></xref> is mutable, and the underlying
+
+    factory method may be changed from another external source.
+  example: []
+  syntax:
+    content: public static Yielder<T> For<T>(Func<T> factory)
+    parameters:
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+      description: The type of the yielded values.
+    return:
+      type: Garyon.Objects.Yielder{{T}}
+      description: >-
+        The new <xref href="Garyon.Objects.Yielder%601" data-throw-if-not-resolved="false"></xref> instance with the provided
+
+        underlying factory method.
+    content.vb: Public Shared Function [For](Of T)(factory As Func(Of T)) As Yielder(Of T)
+  overload: Garyon.Objects.Yielding.For*
+  nameWithType.vb: Yielding.For(Of T)(Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.For(Of T)(System.Func(Of T))
+  name.vb: For(Of T)(Func(Of T))
+- uid: Garyon.Objects.Yielding.Yield``1(System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.Yield``1(System.Int32,System.Func{``0})
+  id: Yield``1(System.Int32,System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: Yield<T>(int, Func<T>)
+  nameWithType: Yielding.Yield<T>(int, Func<T>)
+  fullName: Garyon.Objects.Yielding.Yield<T>(int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Yield
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 45
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Yields values out of the factory without storing them anywhere.
+  remarks: ''
+  example: []
+  syntax:
+    content: public static IEnumerable<T> Yield<T>(int count, Func<T> factory)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield from the factory.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: >-
+        A <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> with the yielded values from the
+
+        provided factory.
+    content.vb: Public Shared Function Yield(Of T)(count As Integer, factory As Func(Of T)) As IEnumerable(Of T)
+  overload: Garyon.Objects.Yielding.Yield*
+  nameWithType.vb: Yielding.Yield(Of T)(Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.Yield(Of T)(Integer, System.Func(Of T))
+  name.vb: Yield(Of T)(Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldImmutableArray``1(System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldImmutableArray``1(System.Int32,System.Func{``0})
+  id: YieldImmutableArray``1(System.Int32,System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldImmutableArray<T>(int, Func<T>)
+  nameWithType: Yielding.YieldImmutableArray<T>(int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldImmutableArray<T>(int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldImmutableArray
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 55
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into a new instance of
+
+    <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ImmutableArray<T> YieldImmutableArray<T>(int count, Func<T> factory)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: >-
+        The created <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref> instance
+
+        containing the yielded values in the order they were yielded.
+    content.vb: Public Shared Function YieldImmutableArray(Of T)(count As Integer, factory As Func(Of T)) As ImmutableArray(Of T)
+  overload: Garyon.Objects.Yielding.YieldImmutableArray*
+  nameWithType.vb: Yielding.YieldImmutableArray(Of T)(Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldImmutableArray(Of T)(Integer, System.Func(Of T))
+  name.vb: YieldImmutableArray(Of T)(Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldArray``1(System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldArray``1(System.Int32,System.Func{``0})
+  id: YieldArray``1(System.Int32,System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldArray<T>(int, Func<T>)
+  nameWithType: Yielding.YieldArray<T>(int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldArray<T>(int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldArray
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 64
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: Yields a number of values into a new array.
+  example: []
+  syntax:
+    content: public static T[] YieldArray<T>(int count, Func<T> factory)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}[]'
+      description: >-
+        The created array containing the yielded values in the order they were
+
+        yielded.
+    content.vb: Public Shared Function YieldArray(Of T)(count As Integer, factory As Func(Of T)) As T()
+  overload: Garyon.Objects.Yielding.YieldArray*
+  nameWithType.vb: Yielding.YieldArray(Of T)(Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldArray(Of T)(Integer, System.Func(Of T))
+  name.vb: YieldArray(Of T)(Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldList``1(System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldList``1(System.Int32,System.Func{``0})
+  id: YieldList``1(System.Int32,System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldList<T>(int, Func<T>)
+  nameWithType: Yielding.YieldList<T>(int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldList<T>(int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldList
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 72
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into a new instance of
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static List<T> YieldList<T>(int count, Func<T> factory)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: >-
+        The created <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> instance containing the yielded
+
+        values in the order they were yielded.
+    content.vb: Public Shared Function YieldList(Of T)(count As Integer, factory As Func(Of T)) As List(Of T)
+  overload: Garyon.Objects.Yielding.YieldList*
+  nameWithType.vb: Yielding.YieldList(Of T)(Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldList(Of T)(Integer, System.Func(Of T))
+  name.vb: YieldList(Of T)(Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldSet``1(System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldSet``1(System.Int32,System.Func{``0})
+  id: YieldSet``1(System.Int32,System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldSet<T>(int, Func<T>)
+  nameWithType: Yielding.YieldSet<T>(int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldSet<T>(int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldSet
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 80
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into a new instance of
+
+    <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    Duplicate yielded values are ignored. If the provided factory method can
+
+    yield duplicate values, the count may be less than the provided.
+  example: []
+  syntax:
+    content: public static HashSet<T> YieldSet<T>(int count, Func<T> factory)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.HashSet{{T}}
+      description: >-
+        The created <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> instance containing the yielded
+
+        values.
+    content.vb: Public Shared Function YieldSet(Of T)(count As Integer, factory As Func(Of T)) As HashSet(Of T)
+  overload: Garyon.Objects.Yielding.YieldSet*
+  nameWithType.vb: Yielding.YieldSet(Of T)(Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldSet(Of T)(Integer, System.Func(Of T))
+  name.vb: YieldSet(Of T)(Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldSortedSet``1(System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldSortedSet``1(System.Int32,System.Func{``0})
+  id: YieldSortedSet``1(System.Int32,System.Func{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldSortedSet<T>(int, Func<T>)
+  nameWithType: Yielding.YieldSortedSet<T>(int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldSortedSet<T>(int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldSortedSet
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 88
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into a new instance of
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    This method first creates a new <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> using
+
+    <xref href="Garyon.Objects.Yielder%601.YieldList(System.Int32)" data-throw-if-not-resolved="false"></xref>, and then constructs the
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> out of the created list. This approach is
+
+    considered to be more optimal.
+  example: []
+  syntax:
+    content: public static SortedSet<T> YieldSortedSet<T>(int count, Func<T> factory)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.SortedSet{{T}}
+      description: >-
+        The created <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> instance containing the
+
+        yielded values.
+    content.vb: Public Shared Function YieldSortedSet(Of T)(count As Integer, factory As Func(Of T)) As SortedSet(Of T)
+  overload: Garyon.Objects.Yielding.YieldSortedSet*
+  nameWithType.vb: Yielding.YieldSortedSet(Of T)(Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldSortedSet(Of T)(Integer, System.Func(Of T))
+  name.vb: YieldSortedSet(Of T)(Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.List{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.List{``0})
+  id: YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.List{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldInto<T>(int, Func<T>, List<T>)
+  nameWithType: Yielding.YieldInto<T>(int, Func<T>, List<T>)
+  fullName: Garyon.Objects.Yielding.YieldInto<T>(int, System.Func<T>, System.Collections.Generic.List<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldInto
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 97
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance of
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static List<T> YieldInto<T>(int count, Func<T> factory, List<T> list)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    - id: list
+      type: System.Collections.Generic.List{{T}}
+      description: The <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: The provided <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function YieldInto(Of T)(count As Integer, factory As Func(Of T), list As List(Of T)) As List(Of T)
+  overload: Garyon.Objects.Yielding.YieldInto*
+  nameWithType.vb: Yielding.YieldInto(Of T)(Integer, Func(Of T), List(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldInto(Of T)(Integer, System.Func(Of T), System.Collections.Generic.List(Of T))
+  name.vb: YieldInto(Of T)(Integer, Func(Of T), List(Of T))
+- uid: Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.HashSet{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.HashSet{``0})
+  id: YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.HashSet{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldInto<T>(int, Func<T>, HashSet<T>)
+  nameWithType: Yielding.YieldInto<T>(int, Func<T>, HashSet<T>)
+  fullName: Garyon.Objects.Yielding.YieldInto<T>(int, System.Func<T>, System.Collections.Generic.HashSet<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldInto
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 105
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance of
+
+    <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static HashSet<T> YieldInto<T>(int count, Func<T> factory, HashSet<T> set)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    - id: set
+      type: System.Collections.Generic.HashSet{{T}}
+      description: The <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.HashSet{{T}}
+      description: The provided <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function YieldInto(Of T)(count As Integer, factory As Func(Of T), [set] As HashSet(Of T)) As HashSet(Of T)
+  overload: Garyon.Objects.Yielding.YieldInto*
+  nameWithType.vb: Yielding.YieldInto(Of T)(Integer, Func(Of T), HashSet(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldInto(Of T)(Integer, System.Func(Of T), System.Collections.Generic.HashSet(Of T))
+  name.vb: YieldInto(Of T)(Integer, Func(Of T), HashSet(Of T))
+- uid: Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.SortedSet{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.SortedSet{``0})
+  id: YieldInto``1(System.Int32,System.Func{``0},System.Collections.Generic.SortedSet{``0})
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldInto<T>(int, Func<T>, SortedSet<T>)
+  nameWithType: Yielding.YieldInto<T>(int, Func<T>, SortedSet<T>)
+  fullName: Garyon.Objects.Yielding.YieldInto<T>(int, System.Func<T>, System.Collections.Generic.SortedSet<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldInto
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 113
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance of
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    This method first creates a new <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> using
+
+    <xref href="Garyon.Objects.Yielder%601.YieldList(System.Int32)" data-throw-if-not-resolved="false"></xref>, and then performs a union on
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> with the created list. This approach is
+
+    considered to be more optimal.
+  example: []
+  syntax:
+    content: public static SortedSet<T> YieldInto<T>(int count, Func<T> factory, SortedSet<T> set)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    - id: set
+      type: System.Collections.Generic.SortedSet{{T}}
+      description: The <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.SortedSet{{T}}
+      description: The provided <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function YieldInto(Of T)(count As Integer, factory As Func(Of T), [set] As SortedSet(Of T)) As SortedSet(Of T)
+  overload: Garyon.Objects.Yielding.YieldInto*
+  nameWithType.vb: Yielding.YieldInto(Of T)(Integer, Func(Of T), SortedSet(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldInto(Of T)(Integer, System.Func(Of T), System.Collections.Generic.SortedSet(Of T))
+  name.vb: YieldInto(Of T)(Integer, Func(Of T), SortedSet(Of T))
+- uid: Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.List{``0},System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.List{``0},System.Int32,System.Func{``0})
+  id: YieldOnto``1(System.Collections.Generic.List{``0},System.Int32,System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldOnto<T>(List<T>, int, Func<T>)
+  nameWithType: Yielding.YieldOnto<T>(List<T>, int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldOnto<T>(System.Collections.Generic.List<T>, int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldOnto
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 122
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance of
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static List<T> YieldOnto<T>(this List<T> list, int count, Func<T> factory)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.List{{T}}
+      description: The <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: The provided <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function YieldOnto(Of T)(list As List(Of T), count As Integer, factory As Func(Of T)) As List(Of T)
+  overload: Garyon.Objects.Yielding.YieldOnto*
+  nameWithType.vb: Yielding.YieldOnto(Of T)(List(Of T), Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldOnto(Of T)(System.Collections.Generic.List(Of T), Integer, System.Func(Of T))
+  name.vb: YieldOnto(Of T)(List(Of T), Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.HashSet{``0},System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.HashSet{``0},System.Int32,System.Func{``0})
+  id: YieldOnto``1(System.Collections.Generic.HashSet{``0},System.Int32,System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldOnto<T>(HashSet<T>, int, Func<T>)
+  nameWithType: Yielding.YieldOnto<T>(HashSet<T>, int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldOnto<T>(System.Collections.Generic.HashSet<T>, int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldOnto
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 130
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance of
+
+    <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static HashSet<T> YieldOnto<T>(this HashSet<T> set, int count, Func<T> factory)
+    parameters:
+    - id: set
+      type: System.Collections.Generic.HashSet{{T}}
+      description: The <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.HashSet{{T}}
+      description: The provided <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function YieldOnto(Of T)([set] As HashSet(Of T), count As Integer, factory As Func(Of T)) As HashSet(Of T)
+  overload: Garyon.Objects.Yielding.YieldOnto*
+  nameWithType.vb: Yielding.YieldOnto(Of T)(HashSet(Of T), Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldOnto(Of T)(System.Collections.Generic.HashSet(Of T), Integer, System.Func(Of T))
+  name.vb: YieldOnto(Of T)(HashSet(Of T), Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.SortedSet{``0},System.Int32,System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.YieldOnto``1(System.Collections.Generic.SortedSet{``0},System.Int32,System.Func{``0})
+  id: YieldOnto``1(System.Collections.Generic.SortedSet{``0},System.Int32,System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: YieldOnto<T>(SortedSet<T>, int, Func<T>)
+  nameWithType: Yielding.YieldOnto<T>(SortedSet<T>, int, Func<T>)
+  fullName: Garyon.Objects.Yielding.YieldOnto<T>(System.Collections.Generic.SortedSet<T>, int, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: YieldOnto
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 138
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Yields a number of values into an existing instance of
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    This method first creates a new <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> using
+
+    <xref href="Garyon.Objects.Yielder%601.YieldList(System.Int32)" data-throw-if-not-resolved="false"></xref>, and then performs a union on
+
+    <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> with the created list. This approach is
+
+    considered to be more optimal.
+  example: []
+  syntax:
+    content: public static SortedSet<T> YieldOnto<T>(this SortedSet<T> set, int count, Func<T> factory)
+    parameters:
+    - id: set
+      type: System.Collections.Generic.SortedSet{{T}}
+      description: The <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    - id: count
+      type: System.Int32
+      description: The number of values to yield.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.SortedSet{{T}}
+      description: The provided <xref href="System.Collections.Generic.SortedSet%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function YieldOnto(Of T)([set] As SortedSet(Of T), count As Integer, factory As Func(Of T)) As SortedSet(Of T)
+  overload: Garyon.Objects.Yielding.YieldOnto*
+  nameWithType.vb: Yielding.YieldOnto(Of T)(SortedSet(Of T), Integer, Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.YieldOnto(Of T)(System.Collections.Generic.SortedSet(Of T), Integer, System.Func(Of T))
+  name.vb: YieldOnto(Of T)(SortedSet(Of T), Integer, Func(Of T))
+- uid: Garyon.Objects.Yielding.Fill``1(``0[],System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.Fill``1(``0[],System.Func{``0})
+  id: Fill``1(``0[],System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: Fill<T>(T[], Func<T>)
+  nameWithType: Yielding.Fill<T>(T[], Func<T>)
+  fullName: Garyon.Objects.Yielding.Fill<T>(T[], System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Fill
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 147
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Fills the contents of an existing array with yielded values from the
+
+    currently provided factory.
+  example: []
+  syntax:
+    content: public static T[] Fill<T>(this T[] span, Func<T> factory)
+    parameters:
+    - id: span
+      type: '{T}[]'
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}[]'
+      description: The provided array.
+    content.vb: Public Shared Function Fill(Of T)(span As T(), factory As Func(Of T)) As T()
+  overload: Garyon.Objects.Yielding.Fill*
+  nameWithType.vb: Yielding.Fill(Of T)(T(), Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.Fill(Of T)(T(), System.Func(Of T))
+  name.vb: Fill(Of T)(T(), Func(Of T))
+- uid: Garyon.Objects.Yielding.Fill``1(System.Span{``0},System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.Fill``1(System.Span{``0},System.Func{``0})
+  id: Fill``1(System.Span{``0},System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: Fill<T>(Span<T>, Func<T>)
+  nameWithType: Yielding.Fill<T>(Span<T>, Func<T>)
+  fullName: Garyon.Objects.Yielding.Fill<T>(System.Span<T>, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Fill
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 156
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Fills the contents of an existing instance of <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref>
+
+    with yielded values from the currently provided factory.
+  example: []
+  syntax:
+    content: public static Span<T> Fill<T>(this Span<T> span, Func<T> factory)
+    parameters:
+    - id: span
+      type: System.Span{{T}}
+      description: The <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> instance to yield the values into.
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Span{{T}}
+      description: The provided <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Fill(Of T)(span As Span(Of T), factory As Func(Of T)) As Span(Of T)
+  overload: Garyon.Objects.Yielding.Fill*
+  nameWithType.vb: Yielding.Fill(Of T)(Span(Of T), Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.Fill(Of T)(System.Span(Of T), System.Func(Of T))
+  name.vb: Fill(Of T)(Span(Of T), Func(Of T))
+- uid: Garyon.Objects.Yielding.Fill``1(System.Memory{``0},System.Func{``0})
+  commentId: M:Garyon.Objects.Yielding.Fill``1(System.Memory{``0},System.Func{``0})
+  id: Fill``1(System.Memory{``0},System.Func{``0})
+  isExtensionMethod: true
+  parent: Garyon.Objects.Yielding
+  langs:
+  - csharp
+  - vb
+  name: Fill<T>(Memory<T>, Func<T>)
+  nameWithType: Yielding.Fill<T>(Memory<T>, Func<T>)
+  fullName: Garyon.Objects.Yielding.Fill<T>(System.Memory<T>, System.Func<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Objects/Yielding.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Fill
+    path: ../Garyon/Objects/Yielding.cs
+    startLine: 164
+  assemblies:
+  - Garyon
+  namespace: Garyon.Objects
+  summary: >-
+    Fills the contents of an existing instance of
+
+    <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> with yielded values from the currently
+
+    provided factory.
+  example: []
+  syntax:
+    content: public static Memory<T> Fill<T>(this Memory<T> span, Func<T> factory)
+    parameters:
+    - id: span
+      type: System.Memory{{T}}
+    - id: factory
+      type: System.Func{{T}}
+      description: The factory method whose values will be yielded.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Memory{{T}}
+      description: The provided <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Fill(Of T)(span As Memory(Of T), factory As Func(Of T)) As Memory(Of T)
+  overload: Garyon.Objects.Yielding.Fill*
+  nameWithType.vb: Yielding.Fill(Of T)(Memory(Of T), Func(Of T))
+  fullName.vb: Garyon.Objects.Yielding.Fill(Of T)(System.Memory(Of T), System.Func(Of T))
+  name.vb: Fill(Of T)(Memory(Of T), Func(Of T))
+references:
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Objects.Yielder`1
+  commentId: T:Garyon.Objects.Yielder`1
+  href: Garyon.Objects.Yielder-1.html
+  name: Yielder<T>
+  nameWithType: Yielder<T>
+  fullName: Garyon.Objects.Yielder<T>
+  nameWithType.vb: Yielder(Of T)
+  fullName.vb: Garyon.Objects.Yielder(Of T)
+  name.vb: Yielder(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Yielder`1
+    name: Yielder
+    href: Garyon.Objects.Yielder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Yielder`1
+    name: Yielder
+    href: Garyon.Objects.Yielder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielder`1.Factory
+  commentId: P:Garyon.Objects.Yielder`1.Factory
+  href: Garyon.Objects.Yielder-1.html#Garyon_Objects_Yielder_1_Factory
+  name: Factory
+  nameWithType: Yielder<T>.Factory
+  fullName: Garyon.Objects.Yielder<T>.Factory
+  nameWithType.vb: Yielder(Of T).Factory
+  fullName.vb: Garyon.Objects.Yielder(Of T).Factory
+- uid: Garyon.Objects.Yielding.For*
+  commentId: Overload:Garyon.Objects.Yielding.For
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_For__1_System_Func___0__
+  name: For
+  nameWithType: Yielding.For
+  fullName: Garyon.Objects.Yielding.For
+- uid: System.Func{{T}}
+  commentId: T:System.Func{``0}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<T>
+  nameWithType: Func<T>
+  fullName: System.Func<T>
+  nameWithType.vb: Func(Of T)
+  fullName.vb: System.Func(Of T)
+  name.vb: Func(Of T)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielder{{T}}
+  commentId: T:Garyon.Objects.Yielder{``0}
+  parent: Garyon.Objects
+  definition: Garyon.Objects.Yielder`1
+  href: Garyon.Objects.Yielder-1.html
+  name: Yielder<T>
+  nameWithType: Yielder<T>
+  fullName: Garyon.Objects.Yielder<T>
+  nameWithType.vb: Yielder(Of T)
+  fullName.vb: Garyon.Objects.Yielder(Of T)
+  name.vb: Yielder(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Yielder`1
+    name: Yielder
+    href: Garyon.Objects.Yielder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Yielder`1
+    name: Yielder
+    href: Garyon.Objects.Yielder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielding.Yield*
+  commentId: Overload:Garyon.Objects.Yielding.Yield
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_Yield__1_System_Int32_System_Func___0__
+  name: Yield
+  nameWithType: Yielding.Yield
+  fullName: Garyon.Objects.Yielding.Yield
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielding.YieldImmutableArray*
+  commentId: Overload:Garyon.Objects.Yielding.YieldImmutableArray
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldImmutableArray__1_System_Int32_System_Func___0__
+  name: YieldImmutableArray
+  nameWithType: Yielding.YieldImmutableArray
+  fullName: Garyon.Objects.Yielding.YieldImmutableArray
+- uid: System.Collections.Immutable.ImmutableArray{{T}}
+  commentId: T:System.Collections.Immutable.ImmutableArray{``0}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: Garyon.Objects.Yielding.YieldArray*
+  commentId: Overload:Garyon.Objects.Yielding.YieldArray
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldArray__1_System_Int32_System_Func___0__
+  name: YieldArray
+  nameWithType: Yielding.YieldArray
+  fullName: Garyon.Objects.Yielding.YieldArray
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielding.YieldList*
+  commentId: Overload:Garyon.Objects.Yielding.YieldList
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldList__1_System_Int32_System_Func___0__
+  name: YieldList
+  nameWithType: Yielding.YieldList
+  fullName: Garyon.Objects.Yielding.YieldList
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielding.YieldSet*
+  commentId: Overload:Garyon.Objects.Yielding.YieldSet
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldSet__1_System_Int32_System_Func___0__
+  name: YieldSet
+  nameWithType: Yielding.YieldSet
+  fullName: Garyon.Objects.Yielding.YieldSet
+- uid: System.Collections.Generic.HashSet{{T}}
+  commentId: T:System.Collections.Generic.HashSet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.SortedSet`1
+  commentId: T:System.Collections.Generic.SortedSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  name: SortedSet<T>
+  nameWithType: SortedSet<T>
+  fullName: System.Collections.Generic.SortedSet<T>
+  nameWithType.vb: SortedSet(Of T)
+  fullName.vb: System.Collections.Generic.SortedSet(Of T)
+  name.vb: SortedSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielder`1.YieldList(System.Int32)
+  commentId: M:Garyon.Objects.Yielder`1.YieldList(System.Int32)
+  isExternal: true
+  href: Garyon.Objects.Yielder-1.html#Garyon_Objects_Yielder_1_YieldList_System_Int32_
+  name: YieldList(int)
+  nameWithType: Yielder<T>.YieldList(int)
+  fullName: Garyon.Objects.Yielder<T>.YieldList(int)
+  nameWithType.vb: Yielder(Of T).YieldList(Integer)
+  fullName.vb: Garyon.Objects.Yielder(Of T).YieldList(Integer)
+  name.vb: YieldList(Integer)
+  spec.csharp:
+  - uid: Garyon.Objects.Yielder`1.YieldList(System.Int32)
+    name: YieldList
+    href: Garyon.Objects.Yielder-1.html#Garyon_Objects_Yielder_1_YieldList_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Garyon.Objects.Yielder`1.YieldList(System.Int32)
+    name: YieldList
+    href: Garyon.Objects.Yielder-1.html#Garyon_Objects_Yielder_1_YieldList_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Garyon.Objects.Yielding.YieldSortedSet*
+  commentId: Overload:Garyon.Objects.Yielding.YieldSortedSet
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldSortedSet__1_System_Int32_System_Func___0__
+  name: YieldSortedSet
+  nameWithType: Yielding.YieldSortedSet
+  fullName: Garyon.Objects.Yielding.YieldSortedSet
+- uid: System.Collections.Generic.SortedSet{{T}}
+  commentId: T:System.Collections.Generic.SortedSet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.SortedSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  name: SortedSet<T>
+  nameWithType: SortedSet<T>
+  fullName: System.Collections.Generic.SortedSet<T>
+  nameWithType.vb: SortedSet(Of T)
+  fullName.vb: System.Collections.Generic.SortedSet(Of T)
+  name.vb: SortedSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedSet`1
+    name: SortedSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Yielding.YieldInto*
+  commentId: Overload:Garyon.Objects.Yielding.YieldInto
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldInto__1_System_Int32_System_Func___0__System_Collections_Generic_List___0__
+  name: YieldInto
+  nameWithType: Yielding.YieldInto
+  fullName: Garyon.Objects.Yielding.YieldInto
+- uid: Garyon.Objects.Yielding.YieldOnto*
+  commentId: Overload:Garyon.Objects.Yielding.YieldOnto
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_YieldOnto__1_System_Collections_Generic_List___0__System_Int32_System_Func___0__
+  name: YieldOnto
+  nameWithType: Yielding.YieldOnto
+  fullName: Garyon.Objects.Yielding.YieldOnto
+- uid: Garyon.Objects.Yielding.Fill*
+  commentId: Overload:Garyon.Objects.Yielding.Fill
+  href: Garyon.Objects.Yielding.html#Garyon_Objects_Yielding_Fill__1___0___System_Func___0__
+  name: Fill
+  nameWithType: Yielding.Fill
+  fullName: Garyon.Objects.Yielding.Fill
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Span{{T}}
+  commentId: T:System.Span{``0}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Memory`1
+  commentId: T:System.Memory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Memory{{T}}
+  commentId: T:System.Memory{`0}
+  parent: System
+  definition: System.Memory`1
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

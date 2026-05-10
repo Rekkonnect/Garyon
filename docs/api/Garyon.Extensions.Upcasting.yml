@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.Upcasting
+  commentId: N:Garyon.Extensions.Upcasting
+  id: Garyon.Extensions.Upcasting
+  children:
+  - Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Extensions.Upcasting
+  nameWithType: Garyon.Extensions.Upcasting
+  fullName: Garyon.Extensions.Upcasting
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  commentId: T:Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+  parent: Garyon.Extensions.Upcasting
+  href: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions.html
+  name: UpcastingCollectionExtensions
+  nameWithType: UpcastingCollectionExtensions
+  fullName: Garyon.Extensions.Upcasting.UpcastingCollectionExtensions
+- uid: Garyon.Extensions.Upcasting
+  commentId: N:Garyon.Extensions.Upcasting
+  href: Garyon.html
+  name: Garyon.Extensions.Upcasting
+  nameWithType: Garyon.Extensions.Upcasting
+  fullName: Garyon.Extensions.Upcasting
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Upcasting
+    name: Upcasting
+    href: Garyon.Extensions.Upcasting.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  - name: .
+  - uid: Garyon.Extensions.Upcasting
+    name: Upcasting
+    href: Garyon.Extensions.Upcasting.html

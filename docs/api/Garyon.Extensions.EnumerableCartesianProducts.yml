@@ -1,0 +1,705 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.EnumerableCartesianProducts
+  commentId: T:Garyon.Extensions.EnumerableCartesianProducts
+  id: EnumerableCartesianProducts
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct``1(System.Collections.Generic.IEnumerable{``0})
+  - Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame``1(System.Collections.Generic.IReadOnlyList{``0})
+  - Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  - Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  langs:
+  - csharp
+  - vb
+  name: EnumerableCartesianProducts
+  nameWithType: EnumerableCartesianProducts
+  fullName: Garyon.Extensions.EnumerableCartesianProducts
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/EnumerableCartesianProducts.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: EnumerableCartesianProducts
+    path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
+    startLine: 11
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for generating Cartesian products from collections.
+  example: []
+  syntax:
+    content: public static class EnumerableCartesianProducts
+    content.vb: Public Module EnumerableCartesianProducts
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct``1(System.Collections.Generic.IEnumerable{``0})
+  id: CartesianProduct``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EnumerableCartesianProducts
+  langs:
+  - csharp
+  - vb
+  name: CartesianProduct<T>(IEnumerable<T>)
+  nameWithType: EnumerableCartesianProducts.CartesianProduct<T>(IEnumerable<T>)
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EnumerableCartesianProducts.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: CartesianProduct
+    path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
+    startLine: 13
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static IEnumerable<(T, T)> CartesianProduct<T>(this IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{{T},{T}}}
+    content.vb: Public Shared Function CartesianProduct(Of T)(source As IEnumerable(Of T)) As IEnumerable(Of (T, T))
+  overload: Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct*
+  nameWithType.vb: EnumerableCartesianProducts.CartesianProduct(Of T)(IEnumerable(Of T))
+  fullName.vb: Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: CartesianProduct(Of T)(IEnumerable(Of T))
+- uid: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  commentId: M:Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  id: MaterializedCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EnumerableCartesianProducts
+  langs:
+  - csharp
+  - vb
+  name: MaterializedCartesianProduct<T>(IReadOnlyList<T>)
+  nameWithType: EnumerableCartesianProducts.MaterializedCartesianProduct<T>(IReadOnlyList<T>)
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct<T>(System.Collections.Generic.IReadOnlyList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EnumerableCartesianProducts.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MaterializedCartesianProduct
+    path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
+    startLine: 20
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static IReadOnlyList<(T, T)> MaterializedCartesianProduct<T>(this IReadOnlyList<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{{T},{T}}}
+    content.vb: Public Shared Function MaterializedCartesianProduct(Of T)(source As IReadOnlyList(Of T)) As IReadOnlyList(Of (T, T))
+  overload: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct*
+  nameWithType.vb: EnumerableCartesianProducts.MaterializedCartesianProduct(Of T)(IReadOnlyList(Of T))
+  fullName.vb: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct(Of T)(System.Collections.Generic.IReadOnlyList(Of T))
+  name.vb: MaterializedCartesianProduct(Of T)(IReadOnlyList(Of T))
+- uid: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame``1(System.Collections.Generic.IReadOnlyList{``0})
+  commentId: M:Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame``1(System.Collections.Generic.IReadOnlyList{``0})
+  id: MaterializedCartesianProductExcludingSame``1(System.Collections.Generic.IReadOnlyList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EnumerableCartesianProducts
+  langs:
+  - csharp
+  - vb
+  name: MaterializedCartesianProductExcludingSame<T>(IReadOnlyList<T>)
+  nameWithType: EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame<T>(IReadOnlyList<T>)
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame<T>(System.Collections.Generic.IReadOnlyList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EnumerableCartesianProducts.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MaterializedCartesianProductExcludingSame
+    path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
+    startLine: 34
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static IReadOnlyList<(T, T)> MaterializedCartesianProductExcludingSame<T>(this IReadOnlyList<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{{T},{T}}}
+    content.vb: Public Shared Function MaterializedCartesianProductExcludingSame(Of T)(source As IReadOnlyList(Of T)) As IReadOnlyList(Of (T, T))
+  overload: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame*
+  nameWithType.vb: EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame(Of T)(IReadOnlyList(Of T))
+  fullName.vb: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame(Of T)(System.Collections.Generic.IReadOnlyList(Of T))
+  name.vb: MaterializedCartesianProductExcludingSame(Of T)(IReadOnlyList(Of T))
+- uid: Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  commentId: M:Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  id: MaterializedHomogenousCartesianProduct``1(System.Collections.Generic.IReadOnlyList{``0})
+  isExtensionMethod: true
+  parent: Garyon.Extensions.EnumerableCartesianProducts
+  langs:
+  - csharp
+  - vb
+  name: MaterializedHomogenousCartesianProduct<T>(IReadOnlyList<T>)
+  nameWithType: EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct<T>(IReadOnlyList<T>)
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct<T>(System.Collections.Generic.IReadOnlyList<T>)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/EnumerableCartesianProducts.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: MaterializedHomogenousCartesianProduct
+    path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
+    startLine: 56
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  syntax:
+    content: public static IReadOnlyList<(T, T)> MaterializedHomogenousCartesianProduct<T>(this IReadOnlyList<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{{T},{T}}}
+    content.vb: Public Shared Function MaterializedHomogenousCartesianProduct(Of T)(source As IReadOnlyList(Of T)) As IReadOnlyList(Of (T, T))
+  overload: Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct*
+  nameWithType.vb: EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct(Of T)(IReadOnlyList(Of T))
+  fullName.vb: Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct(Of T)(System.Collections.Generic.IReadOnlyList(Of T))
+  name.vb: MaterializedHomogenousCartesianProduct(Of T)(IReadOnlyList(Of T))
+references:
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct*
+  commentId: Overload:Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct
+  href: Garyon.Extensions.EnumerableCartesianProducts.html#Garyon_Extensions_EnumerableCartesianProducts_CartesianProduct__1_System_Collections_Generic_IEnumerable___0__
+  name: CartesianProduct
+  nameWithType: EnumerableCartesianProducts.CartesianProduct
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.CartesianProduct
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{{T},{T}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{`0,`0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(T, T)>
+  nameWithType: IEnumerable<(T, T)>
+  fullName: System.Collections.Generic.IEnumerable<(T, T)>
+  nameWithType.vb: IEnumerable(Of (T, T))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (T, T))
+  name.vb: IEnumerable(Of (T, T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct*
+  commentId: Overload:Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct
+  href: Garyon.Extensions.EnumerableCartesianProducts.html#Garyon_Extensions_EnumerableCartesianProducts_MaterializedCartesianProduct__1_System_Collections_Generic_IReadOnlyList___0__
+  name: MaterializedCartesianProduct
+  nameWithType: EnumerableCartesianProducts.MaterializedCartesianProduct
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProduct
+- uid: System.Collections.Generic.IReadOnlyList{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList{System.ValueTuple{{T},{T}}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.ValueTuple{``0,``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<(T, T)>
+  nameWithType: IReadOnlyList<(T, T)>
+  fullName: System.Collections.Generic.IReadOnlyList<(T, T)>
+  nameWithType.vb: IReadOnlyList(Of (T, T))
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of (T, T))
+  name.vb: IReadOnlyList(Of (T, T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame*
+  commentId: Overload:Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame
+  href: Garyon.Extensions.EnumerableCartesianProducts.html#Garyon_Extensions_EnumerableCartesianProducts_MaterializedCartesianProductExcludingSame__1_System_Collections_Generic_IReadOnlyList___0__
+  name: MaterializedCartesianProductExcludingSame
+  nameWithType: EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.MaterializedCartesianProductExcludingSame
+- uid: Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct*
+  commentId: Overload:Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct
+  href: Garyon.Extensions.EnumerableCartesianProducts.html#Garyon_Extensions_EnumerableCartesianProducts_MaterializedHomogenousCartesianProduct__1_System_Collections_Generic_IReadOnlyList___0__
+  name: MaterializedHomogenousCartesianProduct
+  nameWithType: EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct
+  fullName: Garyon.Extensions.EnumerableCartesianProducts.MaterializedHomogenousCartesianProduct

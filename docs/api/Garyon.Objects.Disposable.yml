@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.Disposable
+  commentId: N:Garyon.Objects.Disposable
+  id: Garyon.Objects.Disposable
+  children:
+  - Garyon.Objects.Disposable.NoOpDisposableBlock
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Objects.Disposable
+  nameWithType: Garyon.Objects.Disposable
+  fullName: Garyon.Objects.Disposable
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Objects.Disposable.NoOpDisposableBlock
+  commentId: T:Garyon.Objects.Disposable.NoOpDisposableBlock
+  href: Garyon.Objects.Disposable.NoOpDisposableBlock.html
+  name: NoOpDisposableBlock
+  nameWithType: NoOpDisposableBlock
+  fullName: Garyon.Objects.Disposable.NoOpDisposableBlock

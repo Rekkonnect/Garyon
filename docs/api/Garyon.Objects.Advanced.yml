@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Objects.Advanced
+  commentId: N:Garyon.Objects.Advanced
+  id: Garyon.Objects.Advanced
+  children:
+  - Garyon.Objects.Advanced.AdvancedLazy`1
+  - Garyon.Objects.Advanced.AdvancedRandom
+  - Garyon.Objects.Advanced.AsyncLazy`1
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Objects.Advanced
+  nameWithType: Garyon.Objects.Advanced
+  fullName: Garyon.Objects.Advanced
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Objects.Advanced.AdvancedLazy`1
+  commentId: T:Garyon.Objects.Advanced.AdvancedLazy`1
+  href: Garyon.Objects.Advanced.AdvancedLazy-1.html
+  name: AdvancedLazy<T>
+  nameWithType: AdvancedLazy<T>
+  fullName: Garyon.Objects.Advanced.AdvancedLazy<T>
+  nameWithType.vb: AdvancedLazy(Of T)
+  fullName.vb: Garyon.Objects.Advanced.AdvancedLazy(Of T)
+  name.vb: AdvancedLazy(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Advanced.AdvancedLazy`1
+    name: AdvancedLazy
+    href: Garyon.Objects.Advanced.AdvancedLazy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Advanced.AdvancedLazy`1
+    name: AdvancedLazy
+    href: Garyon.Objects.Advanced.AdvancedLazy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Garyon.Objects.Advanced.AdvancedRandom
+  commentId: T:Garyon.Objects.Advanced.AdvancedRandom
+  href: Garyon.Objects.Advanced.AdvancedRandom.html
+  name: AdvancedRandom
+  nameWithType: AdvancedRandom
+  fullName: Garyon.Objects.Advanced.AdvancedRandom
+- uid: Garyon.Objects.Advanced.AsyncLazy`1
+  commentId: T:Garyon.Objects.Advanced.AsyncLazy`1
+  href: Garyon.Objects.Advanced.AsyncLazy-1.html
+  name: AsyncLazy<T>
+  nameWithType: AsyncLazy<T>
+  fullName: Garyon.Objects.Advanced.AsyncLazy<T>
+  nameWithType.vb: AsyncLazy(Of T)
+  fullName.vb: Garyon.Objects.Advanced.AsyncLazy(Of T)
+  name.vb: AsyncLazy(Of T)
+  spec.csharp:
+  - uid: Garyon.Objects.Advanced.AsyncLazy`1
+    name: AsyncLazy
+    href: Garyon.Objects.Advanced.AsyncLazy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Garyon.Objects.Advanced.AsyncLazy`1
+    name: AsyncLazy
+    href: Garyon.Objects.Advanced.AsyncLazy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

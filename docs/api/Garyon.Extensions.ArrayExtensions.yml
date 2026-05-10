@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.ArrayExtensions
+  commentId: N:Garyon.Extensions.ArrayExtensions
+  id: Garyon.Extensions.ArrayExtensions
+  children:
+  - Garyon.Extensions.ArrayExtensions.ArraySorting
+  - Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Extensions.ArrayExtensions
+  nameWithType: Garyon.Extensions.ArrayExtensions
+  fullName: Garyon.Extensions.ArrayExtensions
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Extensions.ArrayExtensions.ArraySorting
+  commentId: T:Garyon.Extensions.ArrayExtensions.ArraySorting
+  href: Garyon.Extensions.ArrayExtensions.ArraySorting.html
+  name: ArraySorting
+  nameWithType: ArraySorting
+  fullName: Garyon.Extensions.ArrayExtensions.ArraySorting
+- uid: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  commentId: T:Garyon.Extensions.ArrayExtensions.GenericArrayExtensions
+  href: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions.html
+  name: GenericArrayExtensions
+  nameWithType: GenericArrayExtensions
+  fullName: Garyon.Extensions.ArrayExtensions.GenericArrayExtensions

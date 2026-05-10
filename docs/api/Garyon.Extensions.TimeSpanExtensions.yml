@@ -1,0 +1,2421 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Extensions.TimeSpanExtensions
+  commentId: T:Garyon.Extensions.TimeSpanExtensions
+  id: TimeSpanExtensions
+  parent: Garyon.Extensions
+  children:
+  - Garyon.Extensions.TimeSpanExtensions.Absolute(System.TimeSpan)
+  - Garyon.Extensions.TimeSpanExtensions.GetComponent(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  - Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  - Garyon.Extensions.TimeSpanExtensions.Sign(System.TimeSpan)
+  - Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int32,Garyon.Extensions.TimeSpanComponent)
+  - Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+  - Garyon.Extensions.TimeSpanExtensions.WithDays(System.TimeSpan,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithDaysHours(System.TimeSpan,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithHours(System.TimeSpan,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan,Garyon.Objects.HourMinute)
+  - Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithMilliseconds(System.TimeSpan,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithMinutes(System.TimeSpan,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan,Garyon.Objects.MinuteSecond)
+  - Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithSeconds(System.TimeSpan,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32)
+  - Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  - Garyon.Extensions.TimeSpanExtensions.WithinHour(System.TimeSpan)
+  - Garyon.Extensions.TimeSpanExtensions.WithinMillisecond(System.TimeSpan)
+  - Garyon.Extensions.TimeSpanExtensions.WithinMinute(System.TimeSpan)
+  - Garyon.Extensions.TimeSpanExtensions.WithinSecond(System.TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: TimeSpanExtensions
+  nameWithType: TimeSpanExtensions
+  fullName: Garyon.Extensions.TimeSpanExtensions
+  type: Class
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: TimeSpanExtensions
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 44
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Provides extensions for the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
+  syntax:
+    content: public static class TimeSpanExtensions
+    content.vb: Public Module TimeSpanExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Garyon.Extensions.TimeSpanExtensions.Sign(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.Sign(System.TimeSpan)
+  id: Sign(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: Sign(TimeSpan)
+  nameWithType: TimeSpanExtensions.Sign(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.Sign(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Sign
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 56
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Gets the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static int Sign(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose sign to get.
+    return:
+      type: System.Int32
+      description: >-
+        The sign of the <xref href="System.TimeSpan.Ticks" data-throw-if-not-resolved="false"></xref> property, in accordance
+
+        with <xref href="System.Math.Sign(System.Int64)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Sign(timeSpan As TimeSpan) As Integer
+  overload: Garyon.Extensions.TimeSpanExtensions.Sign*
+- uid: Garyon.Extensions.TimeSpanExtensions.Absolute(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.Absolute(System.TimeSpan)
+  id: Absolute(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: Absolute(TimeSpan)
+  nameWithType: TimeSpanExtensions.Absolute(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.Absolute(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: Absolute
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 65
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: Get the absolute value of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static TimeSpan Absolute(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+    return:
+      type: System.TimeSpan
+      description: >-
+        A non-negative <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> representing the same duration as
+
+        the provided instance, but without a negative sign.
+    content.vb: Public Shared Function Absolute(timeSpan As TimeSpan) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.Absolute*
+- uid: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  id: GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComponentInt64(TimeSpan, TimeSpanComponent)
+  nameWithType: TimeSpanExtensions.GetComponentInt64(TimeSpan, TimeSpanComponent)
+  fullName: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan, Garyon.Extensions.TimeSpanComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetComponentInt64
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 84
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the specified component of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>
+
+    instance.
+  example: []
+  syntax:
+    content: public static long GetComponentInt64(this TimeSpan timeSpan, TimeSpanComponent component)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose component to get.
+    - id: component
+      type: Garyon.Extensions.TimeSpanComponent
+      description: The component of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance to get.
+    return:
+      type: System.Int64
+      description: >-
+        The requested component of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance,
+
+        represented by the specified <xref href="Garyon.Extensions.TimeSpanComponent" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetComponentInt64(timeSpan As TimeSpan, component As TimeSpanComponent) As Long
+  overload: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64*
+- uid: Garyon.Extensions.TimeSpanExtensions.GetComponent(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.GetComponent(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  id: GetComponent(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComponent(TimeSpan, TimeSpanComponent)
+  nameWithType: TimeSpanExtensions.GetComponent(TimeSpan, TimeSpanComponent)
+  fullName: Garyon.Extensions.TimeSpanExtensions.GetComponent(System.TimeSpan, Garyon.Extensions.TimeSpanComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: GetComponent
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 105
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Gets the specified component of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>
+
+    instance.
+  example: []
+  syntax:
+    content: public static int GetComponent(this TimeSpan timeSpan, TimeSpanComponent component)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose component to get.
+    - id: component
+      type: Garyon.Extensions.TimeSpanComponent
+      description: >-
+        The component of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance to get. To get
+
+        the <xref href="Garyon.Extensions.TimeSpanComponent.Ticks" data-throw-if-not-resolved="false"></xref> component, use
+
+        <xref href="Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan%2cGaryon.Extensions.TimeSpanComponent)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: >-
+        The requested component of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance,
+
+        represented by the specified <xref href="Garyon.Extensions.TimeSpanComponent" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetComponent(timeSpan As TimeSpan, component As TimeSpanComponent) As Integer
+  overload: Garyon.Extensions.TimeSpanExtensions.GetComponent*
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  id: WithinDay(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithinDay(TimeSpan)
+  nameWithType: TimeSpanExtensions.WithinDay(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinDay(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithinDay
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 138
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance reflecting the
+
+    duration within the final day.
+  example: []
+  syntax:
+    content: public static TimeSpan WithinDay(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose same-day duration to
+
+        calculate.
+    return:
+      type: System.TimeSpan
+      description: >-
+        The duration within the final day. In other words, this reflects the
+
+        same duration, except the <xref href="System.TimeSpan.Days" data-throw-if-not-resolved="false"></xref> property is 0.
+    content.vb: Public Shared Function WithinDay(timeSpan As TimeSpan) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithinDay*
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinHour(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithinHour(System.TimeSpan)
+  id: WithinHour(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithinHour(TimeSpan)
+  nameWithType: TimeSpanExtensions.WithinHour(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinHour(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithinHour
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 155
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance reflecting the
+
+    duration within the final hour.
+  example: []
+  syntax:
+    content: public static TimeSpan WithinHour(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose same-hour duration to
+
+        calculate.
+    return:
+      type: System.TimeSpan
+      description: >-
+        The duration within the final hour. In other words, this reflects the
+
+        same duration, except the <xref href="System.TimeSpan.Days" data-throw-if-not-resolved="false"></xref> and
+
+        <xref href="System.TimeSpan.Hours" data-throw-if-not-resolved="false"></xref> properties are 0.
+    content.vb: Public Shared Function WithinHour(timeSpan As TimeSpan) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithinHour*
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinMinute(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithinMinute(System.TimeSpan)
+  id: WithinMinute(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithinMinute(TimeSpan)
+  nameWithType: TimeSpanExtensions.WithinMinute(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinMinute(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithinMinute
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 173
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance reflecting the
+
+    duration within the final minute.
+  example: []
+  syntax:
+    content: public static TimeSpan WithinMinute(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose same-minute duration to
+
+        calculate.
+    return:
+      type: System.TimeSpan
+      description: >-
+        The duration within the final minute. In other words, this reflects the
+
+        same duration, except the <xref href="System.TimeSpan.Days" data-throw-if-not-resolved="false"></xref>,
+
+        <xref href="System.TimeSpan.Hours" data-throw-if-not-resolved="false"></xref> and <xref href="System.TimeSpan.Minutes" data-throw-if-not-resolved="false"></xref>
+
+        properties are 0.
+    content.vb: Public Shared Function WithinMinute(timeSpan As TimeSpan) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithinMinute*
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinSecond(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithinSecond(System.TimeSpan)
+  id: WithinSecond(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithinSecond(TimeSpan)
+  nameWithType: TimeSpanExtensions.WithinSecond(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinSecond(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithinSecond
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 191
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance reflecting the
+
+    duration within the final second.
+  example: []
+  syntax:
+    content: public static TimeSpan WithinSecond(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose same-second duration to
+
+        calculate.
+    return:
+      type: System.TimeSpan
+      description: >-
+        The duration within the final second. In other words, this reflects the
+
+        same duration, except the <xref href="System.TimeSpan.Days" data-throw-if-not-resolved="false"></xref>,
+
+        <xref href="System.TimeSpan.Hours" data-throw-if-not-resolved="false"></xref>, <xref href="System.TimeSpan.Minutes" data-throw-if-not-resolved="false"></xref> and
+
+        <xref href="System.TimeSpan.Seconds" data-throw-if-not-resolved="false"></xref> properties are 0.
+    content.vb: Public Shared Function WithinSecond(timeSpan As TimeSpan) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithinSecond*
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinMillisecond(System.TimeSpan)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithinMillisecond(System.TimeSpan)
+  id: WithinMillisecond(System.TimeSpan)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithinMillisecond(TimeSpan)
+  nameWithType: TimeSpanExtensions.WithinMillisecond(TimeSpan)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinMillisecond(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithinMillisecond
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 210
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a new <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance reflecting the
+
+    duration within the final millisecond.
+  example: []
+  syntax:
+    content: public static TimeSpan WithinMillisecond(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance whose same-millisecond duration
+
+        to calculate.
+    return:
+      type: System.TimeSpan
+      description: >-
+        The duration within the final millisecond. In other words, this reflects
+
+        the same duration, except the <xref href="System.TimeSpan.Days" data-throw-if-not-resolved="false"></xref>,
+
+        <xref href="System.TimeSpan.Hours" data-throw-if-not-resolved="false"></xref>, <xref href="System.TimeSpan.Minutes" data-throw-if-not-resolved="false"></xref>,
+
+        <xref href="System.TimeSpan.Seconds" data-throw-if-not-resolved="false"></xref> and
+
+        <xref href="System.TimeSpan.Milliseconds" data-throw-if-not-resolved="false"></xref> properties are 0.
+    content.vb: Public Shared Function WithinMillisecond(timeSpan As TimeSpan) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithinMillisecond*
+- uid: Garyon.Extensions.TimeSpanExtensions.WithDays(System.TimeSpan,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithDays(System.TimeSpan,System.Int32)
+  id: WithDays(System.TimeSpan,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithDays(TimeSpan, int)
+  nameWithType: TimeSpanExtensions.WithDays(TimeSpan, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithDays(System.TimeSpan, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithDays
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 243
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the days
+
+    component of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithDays(this TimeSpan timeSpan, int days)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted days component.
+    - id: days
+      type: System.Int32
+      description: >-
+        The value of the days component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must match the sign of the given
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the days
+
+        component set to the specified value.
+    content.vb: Public Shared Function WithDays(timeSpan As TimeSpan, days As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithDays*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">days</code> does not match the sign of
+
+      the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithDays(TimeSpan, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithDays(System.TimeSpan, Integer)
+  name.vb: WithDays(TimeSpan, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHours(System.TimeSpan,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithHours(System.TimeSpan,System.Int32)
+  id: WithHours(System.TimeSpan,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHours(TimeSpan, int)
+  nameWithType: TimeSpanExtensions.WithHours(TimeSpan, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHours(System.TimeSpan, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHours
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 270
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the hours
+
+    component of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithHours(this TimeSpan timeSpan, int hours)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hours component.
+    - id: hours
+      type: System.Int32
+      description: >-
+        The value of the hours component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-23, 23] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the hours
+
+        component set to the specified value.
+    content.vb: Public Shared Function WithHours(timeSpan As TimeSpan, hours As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithHours*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hours</code> is outside the range [-23,
+
+      23] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithHours(TimeSpan, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithHours(System.TimeSpan, Integer)
+  name.vb: WithHours(TimeSpan, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutes(System.TimeSpan,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithMinutes(System.TimeSpan,System.Int32)
+  id: WithMinutes(System.TimeSpan,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinutes(TimeSpan, int)
+  nameWithType: TimeSpanExtensions.WithMinutes(TimeSpan, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutes(System.TimeSpan, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinutes
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 297
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the minutes
+
+    component of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithMinutes(this TimeSpan timeSpan, int minutes)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minutes component.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the minutes
+
+        component set to the specified value.
+    content.vb: Public Shared Function WithMinutes(timeSpan As TimeSpan, minutes As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithMinutes*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">minutes</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithMinutes(TimeSpan, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithMinutes(System.TimeSpan, Integer)
+  name.vb: WithMinutes(TimeSpan, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithSeconds(System.TimeSpan,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithSeconds(System.TimeSpan,System.Int32)
+  id: WithSeconds(System.TimeSpan,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSeconds(TimeSpan, int)
+  nameWithType: TimeSpanExtensions.WithSeconds(TimeSpan, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithSeconds(System.TimeSpan, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSeconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 324
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the seconds
+
+    component of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithSeconds(this TimeSpan timeSpan, int seconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted seconds component.
+    - id: seconds
+      type: System.Int32
+      description: >-
+        The value of the seconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the seconds
+
+        component set to the specified value.
+    content.vb: Public Shared Function WithSeconds(timeSpan As TimeSpan, seconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithSeconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">seconds</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithSeconds(TimeSpan, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithSeconds(System.TimeSpan, Integer)
+  name.vb: WithSeconds(TimeSpan, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMilliseconds(System.TimeSpan,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithMilliseconds(System.TimeSpan,System.Int32)
+  id: WithMilliseconds(System.TimeSpan,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMilliseconds(TimeSpan, int)
+  nameWithType: TimeSpanExtensions.WithMilliseconds(TimeSpan, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMilliseconds(System.TimeSpan, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMilliseconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 351
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the
+
+    milliseconds component of the copied value is set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithMilliseconds(this TimeSpan timeSpan, int milliseconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted milliseconds component.
+    - id: milliseconds
+      type: System.Int32
+      description: >-
+        The value of the milliseconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-999, 999] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the milliseconds
+
+        component set to the specified value.
+    content.vb: Public Shared Function WithMilliseconds(timeSpan As TimeSpan, milliseconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithMilliseconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">milliseconds</code> is outside the range
+
+      [-999, 999] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithMilliseconds(TimeSpan, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithMilliseconds(System.TimeSpan, Integer)
+  name.vb: WithMilliseconds(TimeSpan, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int32,Garyon.Extensions.TimeSpanComponent)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int32,Garyon.Extensions.TimeSpanComponent)
+  id: WithComponent(System.TimeSpan,System.Int32,Garyon.Extensions.TimeSpanComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithComponent(TimeSpan, int, TimeSpanComponent)
+  nameWithType: TimeSpanExtensions.WithComponent(TimeSpan, int, TimeSpanComponent)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan, int, Garyon.Extensions.TimeSpanComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithComponent
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 382
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the
+
+    specified component of the copied value is set to the specified value.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static TimeSpan WithComponent(this TimeSpan timeSpan, int value, TimeSpanComponent component)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted time components.
+    - id: value
+      type: System.Int32
+      description: The value to set the component to.
+    - id: component
+      type: Garyon.Extensions.TimeSpanComponent
+      description: >-
+        The component of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance that will be
+
+        changed. <xref href="Garyon.Extensions.TimeSpanComponent.Ticks" data-throw-if-not-resolved="false"></xref> is not accepted in
+
+        this overload, consider using
+
+        <xref href="Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan%2cSystem.Int64%2cGaryon.Extensions.TimeSpanComponent)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the specified
+
+        component set to the specified value.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function WithComponent(timeSpan As TimeSpan, value As Integer, component As TimeSpanComponent) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithComponent*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">value</code> falls out of the valid
+
+      range for the given component, or an invalid day is represented.
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: TimeSpanExtensions.WithComponent(TimeSpan, Integer, TimeSpanComponent)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan, Integer, Garyon.Extensions.TimeSpanComponent)
+  name.vb: WithComponent(TimeSpan, Integer, TimeSpanComponent)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+  id: WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithComponent(TimeSpan, long, TimeSpanComponent)
+  nameWithType: TimeSpanExtensions.WithComponent(TimeSpan, long, TimeSpanComponent)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan, long, Garyon.Extensions.TimeSpanComponent)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithComponent
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 425
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the
+
+    specified component of the copied value is set to the specified value.
+  example: []
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public static TimeSpan WithComponent(this TimeSpan timeSpan, long value, TimeSpanComponent component)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted time components.
+    - id: value
+      type: System.Int64
+      description: The value to set the component to.
+    - id: component
+      type: Garyon.Extensions.TimeSpanComponent
+      description: >-
+        The component of the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> instance that will be
+
+        changed. <xref href="Garyon.Extensions.TimeSpanComponent.Ticks" data-throw-if-not-resolved="false"></xref> is also accepted.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the specified
+
+        component set to the specified value.
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public Shared Function WithComponent(timeSpan As TimeSpan, value As Long, component As TimeSpanComponent) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithComponent*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">value</code> falls out of the valid
+
+      range for the given component, or an invalid day is represented.
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: TimeSpanExtensions.WithComponent(TimeSpan, Long, TimeSpanComponent)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan, Long, Garyon.Extensions.TimeSpanComponent)
+  name.vb: WithComponent(TimeSpan, Long, TimeSpanComponent)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32)
+  id: WithSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithSecondsMilliseconds(TimeSpan, int, int)
+  nameWithType: TimeSpanExtensions.WithSecondsMilliseconds(TimeSpan, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds(System.TimeSpan, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithSecondsMilliseconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 466
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the seconds
+
+    and milliseconds components of the copied value are set to a specified
+
+    value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithSecondsMilliseconds(this TimeSpan timeSpan, int seconds, int milliseconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted seconds and milliseconds components.
+    - id: seconds
+      type: System.Int32
+      description: >-
+        The value of the seconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: milliseconds
+      type: System.Int32
+      description: >-
+        The value of the milliseconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-999, 999] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the seconds and
+
+        milliseconds components set to the specified value.
+    content.vb: Public Shared Function WithSecondsMilliseconds(timeSpan As TimeSpan, seconds As Integer, milliseconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">milliseconds</code> is outside the range
+
+      [-999, 999] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">seconds</code> is outside the range [-59, 59] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithSecondsMilliseconds(TimeSpan, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds(System.TimeSpan, Integer, Integer)
+  name.vb: WithSecondsMilliseconds(TimeSpan, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  id: WithMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinutesSecondsMilliseconds(TimeSpan, int, int, int)
+  nameWithType: TimeSpanExtensions.WithMinutesSecondsMilliseconds(TimeSpan, int, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds(System.TimeSpan, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinutesSecondsMilliseconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 512
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the minutes,
+
+    seconds and milliseconds components of the copied value are set to a
+
+    specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithMinutesSecondsMilliseconds(this TimeSpan timeSpan, int minutes, int seconds, int milliseconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minutes, seconds and milliseconds components.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: seconds
+      type: System.Int32
+      description: >-
+        The value of the seconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: milliseconds
+      type: System.Int32
+      description: >-
+        The value of the milliseconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-999, 999] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the minutes,
+
+        seconds and milliseconds components set to the specified value.
+    content.vb: Public Shared Function WithMinutesSecondsMilliseconds(timeSpan As TimeSpan, minutes As Integer, seconds As Integer, milliseconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">milliseconds</code> is outside the range
+
+      [-999, 999] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">seconds</code> is outside the range [-59, 59] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or-
+
+      the given value for <code class="paramref">minutes</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithMinutesSecondsMilliseconds(TimeSpan, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds(System.TimeSpan, Integer, Integer, Integer)
+  name.vb: WithMinutesSecondsMilliseconds(TimeSpan, Integer, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan,System.Int32,System.Int32)
+  id: WithMinutesSeconds(System.TimeSpan,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinutesSeconds(TimeSpan, int, int)
+  nameWithType: TimeSpanExtensions.WithMinutesSeconds(TimeSpan, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinutesSeconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 550
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the minutes
+
+    and seconds components of the copied value are set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithMinutesSeconds(this TimeSpan timeSpan, int minutes, int seconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minutes and seconds components.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: seconds
+      type: System.Int32
+      description: >-
+        The value of the seconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the minutes and
+
+        seconds components set to the specified value.
+    content.vb: Public Shared Function WithMinutesSeconds(timeSpan As TimeSpan, minutes As Integer, seconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">seconds</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">minutes</code> is outside the range [-59, 59] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithMinutesSeconds(TimeSpan, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan, Integer, Integer)
+  name.vb: WithMinutesSeconds(TimeSpan, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan,System.Int32,System.Int32)
+  id: WithHoursMinutes(System.TimeSpan,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHoursMinutes(TimeSpan, int, int)
+  nameWithType: TimeSpanExtensions.WithHoursMinutes(TimeSpan, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHoursMinutes
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 587
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the hours
+
+    and minutes components of the copied value are set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithHoursMinutes(this TimeSpan timeSpan, int hours, int minutes)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hours and minutes components.
+    - id: hours
+      type: System.Int32
+      description: >-
+        The value of the hours component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-23, 23] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the hours and
+
+        minutes components set to the specified value.
+    content.vb: Public Shared Function WithHoursMinutes(timeSpan As TimeSpan, hours As Integer, minutes As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">minutes</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">hours</code> is outside the range [-23, 23] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithHoursMinutes(TimeSpan, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan, Integer, Integer)
+  name.vb: WithHoursMinutes(TimeSpan, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  id: WithHoursMinutesSeconds(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHoursMinutesSeconds(TimeSpan, int, int, int)
+  nameWithType: TimeSpanExtensions.WithHoursMinutesSeconds(TimeSpan, int, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds(System.TimeSpan, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHoursMinutesSeconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 633
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the hours,
+
+    minutes and seconds components of the copied value are set to a
+
+    specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithHoursMinutesSeconds(this TimeSpan timeSpan, int hours, int minutes, int seconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hours, minutes and seconds components.
+    - id: hours
+      type: System.Int32
+      description: >-
+        The value of the hours component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-23, 23] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: seconds
+      type: System.Int32
+      description: >-
+        The value of the seconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the hours,
+
+        minutes and seconds components set to the specified value.
+    content.vb: Public Shared Function WithHoursMinutesSeconds(timeSpan As TimeSpan, hours As Integer, minutes As Integer, seconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">seconds</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">minutes</code> is outside the range [-59, 59] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or-
+
+      the given value for <code class="paramref">hours</code> is outside the range [-23,
+
+      23] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithHoursMinutesSeconds(TimeSpan, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds(System.TimeSpan, Integer, Integer, Integer)
+  name.vb: WithHoursMinutesSeconds(TimeSpan, Integer, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: WithHoursMinutesSecondsMilliseconds(System.TimeSpan,System.Int32,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHoursMinutesSecondsMilliseconds(TimeSpan, int, int, int, int)
+  nameWithType: TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(TimeSpan, int, int, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(System.TimeSpan, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHoursMinutesSecondsMilliseconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 687
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the hours,
+
+    minutes and seconds components of the copied value are set to a
+
+    specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithHoursMinutesSecondsMilliseconds(this TimeSpan timeSpan, int hours, int minutes, int seconds, int milliseconds)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hours, minutes and seconds components.
+    - id: hours
+      type: System.Int32
+      description: >-
+        The value of the hours component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-23, 23] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: seconds
+      type: System.Int32
+      description: >-
+        The value of the seconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: milliseconds
+      type: System.Int32
+      description: >-
+        The value of the milliseconds component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-999, 999] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the hours,
+
+        minutes and seconds components set to the specified value.
+    content.vb: Public Shared Function WithHoursMinutesSecondsMilliseconds(timeSpan As TimeSpan, hours As Integer, minutes As Integer, seconds As Integer, milliseconds As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">milliseconds</code> is outside the range
+
+      [-999, 999] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">seconds</code> is outside the range [-59, 59] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or-
+
+      the given value for <code class="paramref">minutes</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">hours</code> is outside the range [-23, 23] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(TimeSpan, Integer, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds(System.TimeSpan, Integer, Integer, Integer, Integer)
+  name.vb: WithHoursMinutesSecondsMilliseconds(TimeSpan, Integer, Integer, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithDaysHours(System.TimeSpan,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithDaysHours(System.TimeSpan,System.Int32,System.Int32)
+  id: WithDaysHours(System.TimeSpan,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithDaysHours(TimeSpan, int, int)
+  nameWithType: TimeSpanExtensions.WithDaysHours(TimeSpan, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithDaysHours(System.TimeSpan, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithDaysHours
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 726
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the days and
+
+    hours components of the copied value are set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithDaysHours(this TimeSpan timeSpan, int days, int hours)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted days and hours components.
+    - id: days
+      type: System.Int32
+      description: >-
+        The value of the days component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must match the sign of the given
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: hours
+      type: System.Int32
+      description: >-
+        The value of the hours component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-23, 23] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the days and
+
+        hours components set to the specified value.
+    content.vb: Public Shared Function WithDaysHours(timeSpan As TimeSpan, days As Integer, hours As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithDaysHours*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">hours</code> is outside the range [-23,
+
+      23] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">days</code> does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithDaysHours(TimeSpan, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithDaysHours(System.TimeSpan, Integer, Integer)
+  name.vb: WithDaysHours(TimeSpan, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  id: WithDaysHoursMinutes(System.TimeSpan,System.Int32,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithDaysHoursMinutes(TimeSpan, int, int, int)
+  nameWithType: TimeSpanExtensions.WithDaysHoursMinutes(TimeSpan, int, int, int)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes(System.TimeSpan, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithDaysHoursMinutes
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 771
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the days,
+
+    hours and minutes components of the copied value are set to a specified
+
+    value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithDaysHoursMinutes(this TimeSpan timeSpan, int days, int hours, int minutes)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted days, hours and minutes components.
+    - id: days
+      type: System.Int32
+      description: >-
+        The value of the days component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must match the sign of the given
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: hours
+      type: System.Int32
+      description: >-
+        The value of the hours component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-23, 23] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    - id: minutes
+      type: System.Int32
+      description: >-
+        The value of the minutes component of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>. It must be within the range [-59, 59] and
+
+        match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the days, hours
+
+        and minutes components set to the specified value.
+    content.vb: Public Shared Function WithDaysHoursMinutes(timeSpan As TimeSpan, days As Integer, hours As Integer, minutes As Integer) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for <code class="paramref">minutes</code> is outside the range
+
+      [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or- the given value for
+
+      <code class="paramref">hours</code> is outside the range [-23, 23] -or- does not
+
+      match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero -or-
+
+      the given value for <code class="paramref">days</code> does not match the sign of
+
+      the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+  nameWithType.vb: TimeSpanExtensions.WithDaysHoursMinutes(TimeSpan, Integer, Integer, Integer)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes(System.TimeSpan, Integer, Integer, Integer)
+  name.vb: WithDaysHoursMinutes(TimeSpan, Integer, Integer, Integer)
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan,Garyon.Objects.MinuteSecond)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan,Garyon.Objects.MinuteSecond)
+  id: WithMinutesSeconds(System.TimeSpan,Garyon.Objects.MinuteSecond)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithMinutesSeconds(TimeSpan, MinuteSecond)
+  nameWithType: TimeSpanExtensions.WithMinutesSeconds(TimeSpan, MinuteSecond)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds(System.TimeSpan, Garyon.Objects.MinuteSecond)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithMinutesSeconds
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 804
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the minutes
+
+    and seconds components of the copied value are set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithMinutesSeconds(this TimeSpan timeSpan, MinuteSecond minuteSecond)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted minutes and seconds components.
+    - id: minuteSecond
+      type: Garyon.Objects.MinuteSecond
+      description: >-
+        The minutes and seconds components of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the minutes and
+
+        seconds components set to the specified value.
+    content.vb: Public Shared Function WithMinutesSeconds(timeSpan As TimeSpan, minuteSecond As MinuteSecond) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for the seconds component is outside the range [-59, 59]
+
+      -or- does not match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if
+
+      non-zero -or- the given value for the minutes component is outside the
+
+      range [-59, 59] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan,Garyon.Objects.HourMinute)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan,Garyon.Objects.HourMinute)
+  id: WithHoursMinutes(System.TimeSpan,Garyon.Objects.HourMinute)
+  isExtensionMethod: true
+  parent: Garyon.Extensions.TimeSpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithHoursMinutes(TimeSpan, HourMinute)
+  nameWithType: TimeSpanExtensions.WithHoursMinutes(TimeSpan, HourMinute)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes(System.TimeSpan, Garyon.Objects.HourMinute)
+  type: Method
+  source:
+    remote:
+      path: Garyon/Extensions/TimeSpanExtensions.cs
+      branch: dev/import-utils/a
+      repo: https://github.com/Rekkonnect/Garyon.git
+    id: WithHoursMinutes
+    path: ../Garyon/Extensions/TimeSpanExtensions.cs
+    startLine: 831
+  assemblies:
+  - Garyon
+  namespace: Garyon.Extensions
+  summary: >-
+    Creates a copy of a given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, where the hours
+
+    and minutes components of the copied value are set to a specified value.
+  example: []
+  syntax:
+    content: public static TimeSpan WithHoursMinutes(this TimeSpan timeSpan, HourMinute hourMinute)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: >-
+        The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> from which to create the copy with the
+
+        adjusted hours and minutes components.
+    - id: hourMinute
+      type: Garyon.Objects.HourMinute
+      description: >-
+        The hours and minutes components of the resulting copied
+
+        <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.TimeSpan
+      description: >-
+        A copy of the original <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> with the hours and
+
+        minutes components set to the specified value.
+    content.vb: Public Shared Function WithHoursMinutes(timeSpan As TimeSpan, hourMinute As HourMinute) As TimeSpan
+  overload: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      The given value for the minutes component is outside the range [-59, 59]
+
+      -or- does not match the sign of the given <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if
+
+      non-zero -or- the given value for the hours component is outside the
+
+      range [-23, 23] -or- does not match the sign of the given
+
+      <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>, if non-zero.
+references:
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Garyon.Extensions
+  commentId: N:Garyon.Extensions
+  href: Garyon.html
+  name: Garyon.Extensions
+  nameWithType: Garyon.Extensions
+  fullName: Garyon.Extensions
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Extensions
+    name: Extensions
+    href: Garyon.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.TimeSpan.Ticks
+  commentId: P:System.TimeSpan.Ticks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.ticks
+  name: Ticks
+  nameWithType: TimeSpan.Ticks
+  fullName: System.TimeSpan.Ticks
+- uid: System.Math.Sign(System.Int64)
+  commentId: M:System.Math.Sign(System.Int64)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.math.sign#system-math-sign(system-int64)
+  name: Sign(long)
+  nameWithType: Math.Sign(long)
+  fullName: System.Math.Sign(long)
+  nameWithType.vb: Math.Sign(Long)
+  fullName.vb: System.Math.Sign(Long)
+  name.vb: Sign(Long)
+  spec.csharp:
+  - uid: System.Math.Sign(System.Int64)
+    name: Sign
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.sign#system-math-sign(system-int64)
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  spec.vb:
+  - uid: System.Math.Sign(System.Int64)
+    name: Sign
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.math.sign#system-math-sign(system-int64)
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: Garyon.Extensions.TimeSpanExtensions.Sign*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.Sign
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_Sign_System_TimeSpan_
+  name: Sign
+  nameWithType: TimeSpanExtensions.Sign
+  fullName: Garyon.Extensions.TimeSpanExtensions.Sign
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Garyon.Extensions.TimeSpanExtensions.Absolute*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.Absolute
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_Absolute_System_TimeSpan_
+  name: Absolute
+  nameWithType: TimeSpanExtensions.Absolute
+  fullName: Garyon.Extensions.TimeSpanExtensions.Absolute
+- uid: Garyon.Extensions.TimeSpanComponent
+  commentId: T:Garyon.Extensions.TimeSpanComponent
+  parent: Garyon.Extensions
+  href: Garyon.Extensions.TimeSpanComponent.html
+  name: TimeSpanComponent
+  nameWithType: TimeSpanComponent
+  fullName: Garyon.Extensions.TimeSpanComponent
+- uid: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.GetComponentInt64
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_GetComponentInt64_System_TimeSpan_Garyon_Extensions_TimeSpanComponent_
+  name: GetComponentInt64
+  nameWithType: TimeSpanExtensions.GetComponentInt64
+  fullName: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Garyon.Extensions.TimeSpanComponent.Ticks
+  commentId: F:Garyon.Extensions.TimeSpanComponent.Ticks
+  href: Garyon.Extensions.TimeSpanComponent.html#Garyon_Extensions_TimeSpanComponent_Ticks
+  name: Ticks
+  nameWithType: TimeSpanComponent.Ticks
+  fullName: Garyon.Extensions.TimeSpanComponent.Ticks
+- uid: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+  isExternal: true
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_GetComponentInt64_System_TimeSpan_Garyon_Extensions_TimeSpanComponent_
+  name: GetComponentInt64(TimeSpan, TimeSpanComponent)
+  nameWithType: TimeSpanExtensions.GetComponentInt64(TimeSpan, TimeSpanComponent)
+  fullName: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan, Garyon.Extensions.TimeSpanComponent)
+  spec.csharp:
+  - uid: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+    name: GetComponentInt64
+    href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_GetComponentInt64_System_TimeSpan_Garyon_Extensions_TimeSpanComponent_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.TimeSpanComponent
+    name: TimeSpanComponent
+    href: Garyon.Extensions.TimeSpanComponent.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.TimeSpanExtensions.GetComponentInt64(System.TimeSpan,Garyon.Extensions.TimeSpanComponent)
+    name: GetComponentInt64
+    href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_GetComponentInt64_System_TimeSpan_Garyon_Extensions_TimeSpanComponent_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.TimeSpanComponent
+    name: TimeSpanComponent
+    href: Garyon.Extensions.TimeSpanComponent.html
+  - name: )
+- uid: Garyon.Extensions.TimeSpanExtensions.GetComponent*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.GetComponent
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_GetComponent_System_TimeSpan_Garyon_Extensions_TimeSpanComponent_
+  name: GetComponent
+  nameWithType: TimeSpanExtensions.GetComponent
+  fullName: Garyon.Extensions.TimeSpanExtensions.GetComponent
+- uid: System.TimeSpan.Days
+  commentId: P:System.TimeSpan.Days
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.days
+  name: Days
+  nameWithType: TimeSpan.Days
+  fullName: System.TimeSpan.Days
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinDay*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithinDay
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinDay_System_TimeSpan_
+  name: WithinDay
+  nameWithType: TimeSpanExtensions.WithinDay
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinDay
+- uid: System.TimeSpan.Hours
+  commentId: P:System.TimeSpan.Hours
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.hours
+  name: Hours
+  nameWithType: TimeSpan.Hours
+  fullName: System.TimeSpan.Hours
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinHour*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithinHour
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinHour_System_TimeSpan_
+  name: WithinHour
+  nameWithType: TimeSpanExtensions.WithinHour
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinHour
+- uid: System.TimeSpan.Minutes
+  commentId: P:System.TimeSpan.Minutes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.minutes
+  name: Minutes
+  nameWithType: TimeSpan.Minutes
+  fullName: System.TimeSpan.Minutes
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinMinute*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithinMinute
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinMinute_System_TimeSpan_
+  name: WithinMinute
+  nameWithType: TimeSpanExtensions.WithinMinute
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinMinute
+- uid: System.TimeSpan.Seconds
+  commentId: P:System.TimeSpan.Seconds
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.seconds
+  name: Seconds
+  nameWithType: TimeSpan.Seconds
+  fullName: System.TimeSpan.Seconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinSecond*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithinSecond
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinSecond_System_TimeSpan_
+  name: WithinSecond
+  nameWithType: TimeSpanExtensions.WithinSecond
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinSecond
+- uid: System.TimeSpan.Milliseconds
+  commentId: P:System.TimeSpan.Milliseconds
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.milliseconds
+  name: Milliseconds
+  nameWithType: TimeSpan.Milliseconds
+  fullName: System.TimeSpan.Milliseconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithinMillisecond*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithinMillisecond
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithinMillisecond_System_TimeSpan_
+  name: WithinMillisecond
+  nameWithType: TimeSpanExtensions.WithinMillisecond
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithinMillisecond
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: Garyon.Extensions.TimeSpanExtensions.WithDays*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithDays
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithDays_System_TimeSpan_System_Int32_
+  name: WithDays
+  nameWithType: TimeSpanExtensions.WithDays
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithDays
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHours*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithHours
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithHours_System_TimeSpan_System_Int32_
+  name: WithHours
+  nameWithType: TimeSpanExtensions.WithHours
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHours
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutes*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithMinutes
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithMinutes_System_TimeSpan_System_Int32_
+  name: WithMinutes
+  nameWithType: TimeSpanExtensions.WithMinutes
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutes
+- uid: Garyon.Extensions.TimeSpanExtensions.WithSeconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithSeconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithSeconds_System_TimeSpan_System_Int32_
+  name: WithSeconds
+  nameWithType: TimeSpanExtensions.WithSeconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithSeconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMilliseconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithMilliseconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithMilliseconds_System_TimeSpan_System_Int32_
+  name: WithMilliseconds
+  nameWithType: TimeSpanExtensions.WithMilliseconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMilliseconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+  commentId: M:Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+  isExternal: true
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithComponent_System_TimeSpan_System_Int64_Garyon_Extensions_TimeSpanComponent_
+  name: WithComponent(TimeSpan, long, TimeSpanComponent)
+  nameWithType: TimeSpanExtensions.WithComponent(TimeSpan, long, TimeSpanComponent)
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan, long, Garyon.Extensions.TimeSpanComponent)
+  nameWithType.vb: TimeSpanExtensions.WithComponent(TimeSpan, Long, TimeSpanComponent)
+  fullName.vb: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan, Long, Garyon.Extensions.TimeSpanComponent)
+  name.vb: WithComponent(TimeSpan, Long, TimeSpanComponent)
+  spec.csharp:
+  - uid: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+    name: WithComponent
+    href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithComponent_System_TimeSpan_System_Int64_Garyon_Extensions_TimeSpanComponent_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.TimeSpanComponent
+    name: TimeSpanComponent
+    href: Garyon.Extensions.TimeSpanComponent.html
+  - name: )
+  spec.vb:
+  - uid: Garyon.Extensions.TimeSpanExtensions.WithComponent(System.TimeSpan,System.Int64,Garyon.Extensions.TimeSpanComponent)
+    name: WithComponent
+    href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithComponent_System_TimeSpan_System_Int64_Garyon_Extensions_TimeSpanComponent_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: Garyon.Extensions.TimeSpanComponent
+    name: TimeSpanComponent
+    href: Garyon.Extensions.TimeSpanComponent.html
+  - name: )
+- uid: Garyon.Extensions.TimeSpanExtensions.WithComponent*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithComponent
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithComponent_System_TimeSpan_System_Int32_Garyon_Extensions_TimeSpanComponent_
+  name: WithComponent
+  nameWithType: TimeSpanExtensions.WithComponent
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithComponent
+- uid: Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithSecondsMilliseconds_System_TimeSpan_System_Int32_System_Int32_
+  name: WithSecondsMilliseconds
+  nameWithType: TimeSpanExtensions.WithSecondsMilliseconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithSecondsMilliseconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithMinutesSecondsMilliseconds_System_TimeSpan_System_Int32_System_Int32_System_Int32_
+  name: WithMinutesSecondsMilliseconds
+  nameWithType: TimeSpanExtensions.WithMinutesSecondsMilliseconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutesSecondsMilliseconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithMinutesSeconds_System_TimeSpan_System_Int32_System_Int32_
+  name: WithMinutesSeconds
+  nameWithType: TimeSpanExtensions.WithMinutesSeconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithMinutesSeconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithHoursMinutes_System_TimeSpan_System_Int32_System_Int32_
+  name: WithHoursMinutes
+  nameWithType: TimeSpanExtensions.WithHoursMinutes
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutes
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithHoursMinutesSeconds_System_TimeSpan_System_Int32_System_Int32_System_Int32_
+  name: WithHoursMinutesSeconds
+  nameWithType: TimeSpanExtensions.WithHoursMinutesSeconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSeconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithHoursMinutesSecondsMilliseconds_System_TimeSpan_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: WithHoursMinutesSecondsMilliseconds
+  nameWithType: TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithHoursMinutesSecondsMilliseconds
+- uid: Garyon.Extensions.TimeSpanExtensions.WithDaysHours*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithDaysHours
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithDaysHours_System_TimeSpan_System_Int32_System_Int32_
+  name: WithDaysHours
+  nameWithType: TimeSpanExtensions.WithDaysHours
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithDaysHours
+- uid: Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes*
+  commentId: Overload:Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes
+  href: Garyon.Extensions.TimeSpanExtensions.html#Garyon_Extensions_TimeSpanExtensions_WithDaysHoursMinutes_System_TimeSpan_System_Int32_System_Int32_System_Int32_
+  name: WithDaysHoursMinutes
+  nameWithType: TimeSpanExtensions.WithDaysHoursMinutes
+  fullName: Garyon.Extensions.TimeSpanExtensions.WithDaysHoursMinutes
+- uid: Garyon.Objects.MinuteSecond
+  commentId: T:Garyon.Objects.MinuteSecond
+  parent: Garyon.Objects
+  href: Garyon.Objects.MinuteSecond.html
+  name: MinuteSecond
+  nameWithType: MinuteSecond
+  fullName: Garyon.Objects.MinuteSecond
+- uid: Garyon.Objects
+  commentId: N:Garyon.Objects
+  href: Garyon.html
+  name: Garyon.Objects
+  nameWithType: Garyon.Objects
+  fullName: Garyon.Objects
+  spec.csharp:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+  spec.vb:
+  - uid: Garyon
+    name: Garyon
+    href: Garyon.html
+  - name: .
+  - uid: Garyon.Objects
+    name: Objects
+    href: Garyon.Objects.html
+- uid: Garyon.Objects.HourMinute
+  commentId: T:Garyon.Objects.HourMinute
+  parent: Garyon.Objects
+  href: Garyon.Objects.HourMinute.html
+  name: HourMinute
+  nameWithType: HourMinute
+  fullName: Garyon.Objects.HourMinute

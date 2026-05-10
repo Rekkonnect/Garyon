@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -7,6 +8,7 @@ namespace Garyon.QualityControl.Types;
 /// <summary>
 /// Provides definitions for example types.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public class ExampleTypes
 {
     /// <summary>
@@ -129,6 +131,36 @@ public class ExampleTypes
                 }
 
                 public static void Method<T9, T10>() { }
+            }
+        }
+    }
+
+    protected static class GenericWithNonGenericNested<T1, T2>
+    {
+        public static readonly Type Type = typeof(GenericWithNonGenericNested<,>);
+
+        public static class Nested
+        {
+            public static readonly Type Type = typeof(GenericWithNonGenericNested<,>.Nested);
+
+            public static class Nested2<T3>
+            {
+                public static readonly Type Type = typeof(GenericWithNonGenericNested<,>.Nested.Nested2<>);
+            }
+        }
+    }
+
+    protected static class GenericWithManyOuterParameters<T1, T2, T3, T4>
+    {
+        public static readonly Type Type = typeof(GenericWithManyOuterParameters<,,,>);
+
+        public static class Nested<T5>
+        {
+            public static readonly Type Type = typeof(GenericWithManyOuterParameters<,,,>.Nested<>);
+
+            public static class Nested2<T6>
+            {
+                public static readonly Type Type = typeof(GenericWithManyOuterParameters<,,,>.Nested<>.Nested2<>);
             }
         }
     }

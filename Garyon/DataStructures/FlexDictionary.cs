@@ -56,7 +56,6 @@ public class FlexDictionary<TKey, TValue>
         _defaultValue = initialValue;
     }
 
-#if HAS_DICTIONARY_KVPS_CTOR
     /// <summary>Initializes a new instance of the <seealso cref="FlexDictionary{TKey, TValue}"/> class.</summary>
     /// <param name="kvps">The collection of <seealso cref="KeyValuePair{TKey, TValue}"/> objects to initialize the dictionary from.</param>
     public FlexDictionary(IEnumerable<KeyValuePair<TKey, TValue>> kvps, TValue defaultValue)
@@ -64,7 +63,6 @@ public class FlexDictionary<TKey, TValue>
     {
         _defaultValue = defaultValue;
     }
-#endif
 
     /// <summary>
     /// Initializes a new instance of the

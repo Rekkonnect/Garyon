@@ -1,14 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-
-using UsableValueTask =
-#if HAS_VALUE_TASK
-    System.Threading.Tasks.ValueTask
-#else
-    System.Threading.Tasks.Task
-#endif
-    ;
 
 namespace Garyon.Extensions;
 
@@ -41,10 +34,31 @@ public static class CancellationTokenExtensions
         /// Yields execution with <see cref="Task.Yield"/> and checks for
         /// cancellation.
         /// </summary>
-        public async UsableValueTask YieldCancellable()
+        public async ValueTask YieldCancellable()
         {
             await Task.Yield();
             cancellationToken.ThrowIfCancellationRequested();
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="CancellationToken"/> that is linked to this token
+        /// and will be cancelled after the specified timeout duration.
+        /// </summary>
+        public CancellationToken WithTimeout(TimeSpan timeout)
+        {
+            return cancellationToken.WithTimeout((int)timeout.TotalMilliseconds);
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="CancellationToken"/> that is linked to this token
+        /// and will be cancelled after the specified timeout duration.
+        /// </summary>
+        public CancellationToken WithTimeout(int milliseconds)
+        {
+            var timeoutSource = new CancellationTokenSource(milliseconds);
+            var linkedSource = cancellationToken.CreateLinked(
+                cancellationToken, timeoutSource.Token);
+            return linkedSource.Token;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Garyon.Functions;
+﻿using System.Runtime.CompilerServices;
+
+namespace Garyon.Functions;
 
 /// <summary>
 /// Contains functions that cannot be categorized otherwise.
@@ -22,5 +24,12 @@ public static class Misc
         T t = a;
         a = b;
         b = t;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static T ValueIf<T>(T value, bool toggle)
+        where T : struct
+    {
+        return toggle ? value : default;
     }
 }

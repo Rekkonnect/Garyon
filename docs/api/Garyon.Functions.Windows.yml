@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Garyon.Functions.Windows
+  commentId: N:Garyon.Functions.Windows
+  id: Garyon.Functions.Windows
+  children:
+  - Garyon.Functions.Windows.FileExplorerUtilities
+  langs:
+  - csharp
+  - vb
+  name: Garyon.Functions.Windows
+  nameWithType: Garyon.Functions.Windows
+  fullName: Garyon.Functions.Windows
+  type: Namespace
+  assemblies:
+  - Garyon
+references:
+- uid: Garyon.Functions.Windows.FileExplorerUtilities
+  commentId: T:Garyon.Functions.Windows.FileExplorerUtilities
+  href: Garyon.Functions.Windows.FileExplorerUtilities.html
+  name: FileExplorerUtilities
+  nameWithType: FileExplorerUtilities
+  fullName: Garyon.Functions.Windows.FileExplorerUtilities

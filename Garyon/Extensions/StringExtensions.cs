@@ -7,6 +7,17 @@ using System.Text;
 namespace Garyon.Extensions;
 
 /// <summary>
+/// Specifies which affix should be ensured for a string.
+/// </summary>
+[Flags]
+public enum AffixType
+{
+    Prefix = 1,
+    Suffix = 2,
+    Both = Prefix | Suffix,
+}
+
+/// <summary>
 /// Provides extension methods for the <seealso cref="string"/> class.
 /// </summary>
 public static class StringExtensions
@@ -254,38 +265,36 @@ public static class StringExtensions
         if (oldString == newString)
             return originalString;
 
-        var builder = new StringBuilder(originalString);
+        if (string.IsNullOrEmpty(oldString))
+            return originalString;
+
+        var builder = new StringBuilder();
 
         int previousStart = 0;
         while (true)
         {
             int index = originalString.IndexOf(oldString, previousStart);
             if (index == -1)
+            {
+                builder.Append(originalString, previousStart, originalString.Length - previousStart);
                 return builder.ToString();
+            }
 
-            bool isWord = true;
-            if (originalString[index - 1].IsLetterOrDigit())
-            {
-                isWord = false;
-            }
-            else
-            {
-                if (index + oldString.Length < originalString.Length)
-                {
-                    if (originalString[index + oldString.Length].IsLetterOrDigit())
-                    {
-                        isWord = false;
-                    }
-                }
-            }
+            bool hasLeftBoundary = index == 0 || !originalString[index - 1].IsLetterOrDigit();
+            bool hasRightBoundary = index + oldString.Length >= originalString.Length
+                || !originalString[index + oldString.Length].IsLetterOrDigit();
+            bool isWord = hasLeftBoundary && hasRightBoundary;
 
             if (!isWord)
             {
-                previousStart = index;
+                builder.Append(originalString, previousStart, index + 1 - previousStart);
+                previousStart = index + 1;
                 continue;
             }
 
-            builder.Replace(newString, index, oldString.Length);
+            builder.Append(originalString, previousStart, index - previousStart);
+            builder.Append(newString);
+            previousStart = index + oldString.Length;
         }
     }
     /// <summary>
@@ -771,9 +780,80 @@ public static class StringExtensions
         return source ?? suffix;
     }
 
-    // TODO: Add EnsureStartsEndsWith(string prefix, string suffix)
-    // TODO: Add EnsureStartsEndsWith(string affix)
-    // TODO: Add EnsureAffix(string affix, AffixType affixType)
+    /// <summary>
+    /// Evaluates a string such that the returned result will begin with the
+    /// specified prefix and end with the specified suffix, without
+    /// concatenating either if it is already present.
+    /// </summary>
+    /// <param name="source">
+    /// The source string to which to guarantee a prefix and a suffix.
+    /// </param>
+    /// <param name="prefix">
+    /// The prefix that will be contained in the resulting string.
+    /// </param>
+    /// <param name="suffix">
+    /// The suffix that will be contained in the resulting string.
+    /// </param>
+    /// <returns>
+    /// A concatenation of the prefix and suffix if the source string is null or
+    /// empty, or the source string with the ensured prefix and suffix.
+    /// </returns>
+    public static string EnsureStartsEndsWith(this string? source, string prefix, string suffix)
+    {
+        if (string.IsNullOrEmpty(source))
+            return $"{prefix}{suffix}";
+
+        source = source.EnsureStartsWith(prefix);
+        source = source.EnsureEndsWith(suffix);
+        return source;
+    }
+
+    /// <summary>
+    /// Evaluates a string such that the returned result will begin and end with
+    /// the specified affix, without concatenating it if it is already present.
+    /// </summary>
+    /// <param name="source">
+    /// The source string to which to guarantee an affix at the start and the
+    /// end.
+    /// </param>
+    /// <param name="affix">
+    /// The affix that will be contained in the resulting string.
+    /// </param>
+    public static string EnsureStartsEndsWith(this string? source, string affix)
+    {
+        return source.EnsureAffix(affix, AffixType.Both);
+    }
+
+    /// <summary>
+    /// Evaluates a string such that the returned result will contain the
+    /// specified affix depending on the provided affix type, without
+    /// concatenating it if it is already present.
+    /// </summary>
+    /// <param name="source">
+    /// The source string to which to guarantee an affix.
+    /// </param>
+    /// <param name="affix">
+    /// The affix that will be contained in the resulting string.
+    /// </param>
+    /// <param name="affixType">
+    /// Determines whether to ensure the affix at the start, the end, or both.
+    /// </param>
+    /// <returns>
+    /// The affix itself if the source string is null or empty, or the source
+    /// string with the ensured affix.
+    /// </returns>
+    public static string EnsureAffix(this string? source, string affix, AffixType affixType)
+    {
+        if (string.IsNullOrEmpty(source))
+            return affix;
+
+        if ((affixType & AffixType.Prefix) != 0)
+            source = source.EnsureStartsWith(affix);
+        if ((affixType & AffixType.Suffix) != 0)
+            source = source.EnsureEndsWith(affix);
+
+        return source;
+    }
 
     public static string? NullIfEmpty(this string s)
     {
