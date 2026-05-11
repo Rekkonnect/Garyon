@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/HashCodeFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: HashCodeFactory
     path: ../Garyon/Functions/HashCodeFactory.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/HashCodeFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Combine
     path: ../Garyon/Functions/HashCodeFactory.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/HashCodeFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Combine
     path: ../Garyon/Functions/HashCodeFactory.cs

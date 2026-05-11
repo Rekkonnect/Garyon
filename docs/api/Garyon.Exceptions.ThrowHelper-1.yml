@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/ThrowHelper.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ThrowHelper
     path: ../Garyon/Exceptions/ThrowHelper.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/ThrowHelper.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Throw
     path: ../Garyon/Exceptions/ThrowHelper.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/ThrowHelper.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ThrowReturn
     path: ../Garyon/Exceptions/ThrowHelper.cs

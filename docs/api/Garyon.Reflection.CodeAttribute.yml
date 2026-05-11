@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CodeAttribute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CodeAttribute
     path: ../Garyon/Reflection/CodeAttribute.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CodeAttribute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Code
     path: ../Garyon/Reflection/CodeAttribute.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CodeAttribute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/CodeAttribute.cs

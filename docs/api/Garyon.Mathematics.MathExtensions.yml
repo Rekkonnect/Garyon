@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MathExtensions
     path: ../Garyon/Mathematics/MathExtensions.cs

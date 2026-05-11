@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MathConstants
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TwoPi
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sqrt2
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sqrt3
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sin30
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sin45
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sin60
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Tan30
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Tan45
     path: ../Garyon/Mathematics/MathConstants.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/MathConstants.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Tan60
     path: ../Garyon/Mathematics/MathConstants.cs

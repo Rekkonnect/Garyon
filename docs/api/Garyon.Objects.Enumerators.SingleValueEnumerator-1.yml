@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleValueEnumerator
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: State
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveNext
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reset
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs

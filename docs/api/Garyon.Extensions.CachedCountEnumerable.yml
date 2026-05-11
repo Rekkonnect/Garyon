@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CachedCountEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CachedCountEnumerable
     path: ../Garyon/Extensions/CachedCountEnumerable.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CachedCountEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Extensions/CachedCountEnumerable.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CachedCountEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CachedCount
     path: ../Garyon/Extensions/CachedCountEnumerable.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CachedCountEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MinCount
     path: ../Garyon/Extensions/CachedCountEnumerable.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CachedCountEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ForceCount
     path: ../Garyon/Extensions/CachedCountEnumerable.cs

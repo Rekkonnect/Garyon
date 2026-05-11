@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/ProcessUtilities.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProcessUtilities
     path: ../Garyon/Functions/ProcessUtilities.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/ProcessUtilities.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: OpenUrl
     path: ../Garyon/Functions/ProcessUtilities.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/ProcessUtilities.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ShowFileInFileViewer
     path: ../Garyon/Functions/ProcessUtilities.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/ProcessUtilities.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ShowDirectoryInFileViewer
     path: ../Garyon/Functions/ProcessUtilities.cs

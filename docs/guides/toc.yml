@@ -33,6 +33,12 @@
   items:
     - name: AppDomainCache
       href: appdomain-cache.md
+    - name: Timers and Delays
+      href: timers-and-delays.md
+    - name: SimpleProfiler
+      href: simple-profiler.md
+    - name: AsyncUsableLock
+      href: async-usable-lock.md
     - name: Math Utilities
       href: math.md
     - name: Comparison Patterns

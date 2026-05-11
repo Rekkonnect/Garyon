@@ -1,4 +1,4 @@
-#!/usr/bin/dotnet run --file
+﻿#!/usr/bin/dotnet run --file
 #:project ../../Garyon/Garyon.csproj
 #:package CliWrap@*
 
@@ -6,14 +6,6 @@ using CliWrap;
 using CliWrap.Buffered;
 using Garyon.Extensions;
 using Garyon.Functions;
-using Garyon.Functions.Windows;
-using Garyon.Objects.IO;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 var openBrowser = args.Contains("-i");
 
@@ -66,7 +58,7 @@ var mergeResult = await RunCommand(
         "-o", mergedCoverageFileName,
         "-f", "cobertura",
     ],
-    workingDirectory: artifactsOutputDirectory,
+    workingDirectory: solutionDirectory,
     timeout: null,
     cancellationToken: cancellationToken);
 
@@ -230,5 +222,5 @@ readonly record struct RunResult(int ExitCode, string StandardOutput, string Sta
         => new(-10931, string.Empty, $"Command cancelled: {fileName} {string.Join(' ', arguments)}");
 
     public static RunResult StartFailure(string fileName, IReadOnlyList<string> arguments, Exception ex)
-        => new(-10932, string.Empty, $"Failed to start command: {fileName} {string.Join(' ', arguments)}{Environment.NewLine}{ex}");
+        => new(-10932, string.Empty, $"Failed to start command: {fileName} {string.Join(' ', arguments)}{Environment.NewLine}{ex}\nInner exception: {ex.InnerException}");
 }

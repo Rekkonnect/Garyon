@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/Delayer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Delayer
     path: ../Garyon/Mechanisms/Delayer.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/Delayer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsWaiting
     path: ../Garyon/Mechanisms/Delayer.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/Delayer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SetFutureUnblock
     path: ../Garyon/Mechanisms/Delayer.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/Delayer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExtendNextUnblock
     path: ../Garyon/Mechanisms/Delayer.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/Delayer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CancelUnblock
     path: ../Garyon/Mechanisms/Delayer.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/Delayer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WaitUnblock
     path: ../Garyon/Mechanisms/Delayer.cs

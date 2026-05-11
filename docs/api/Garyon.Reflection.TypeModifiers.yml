@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TypeModifiers
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: None
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Public
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Internal
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternal
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Protected
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtected
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Private
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AllAccessibilities
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -346,7 +346,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Static
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Abstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -402,7 +402,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Readonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Ref
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -486,7 +486,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -515,7 +515,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: File
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -543,7 +543,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AllDefinitions
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AllModifiers
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -601,7 +601,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PublicStatic
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -630,7 +630,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InternalStatic
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -659,7 +659,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternalStatic
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -688,7 +688,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedStatic
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -717,7 +717,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtectedStatic
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -746,7 +746,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateStatic
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -775,7 +775,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PublicAbstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -804,7 +804,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InternalAbstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -833,7 +833,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternalAbstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -862,7 +862,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedAbstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -891,7 +891,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtectedAbstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -920,7 +920,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateAbstract
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -949,7 +949,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PublicSealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -978,7 +978,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InternalSealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1007,7 +1007,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternalSealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1036,7 +1036,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedSealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1065,7 +1065,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtectedSealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1094,7 +1094,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateSealed
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1123,7 +1123,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PublicReadonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1152,7 +1152,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InternalReadonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1181,7 +1181,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternalReadonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1210,7 +1210,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedReadonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1239,7 +1239,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtectedReadonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1268,7 +1268,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateReadonly
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1297,7 +1297,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PublicRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1326,7 +1326,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InternalRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1355,7 +1355,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternalRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1384,7 +1384,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1413,7 +1413,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtectedRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1442,7 +1442,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1471,7 +1471,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PublicReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1500,7 +1500,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InternalReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1529,7 +1529,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternalReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1561,7 +1561,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1590,7 +1590,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtectedReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs
@@ -1622,7 +1622,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateReadonlyRef
     path: ../Garyon/Reflection/TypeModifiers.cs

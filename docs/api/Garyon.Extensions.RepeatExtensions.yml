@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/RepeatExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RepeatExtensions
     path: ../Garyon/Extensions/RepeatExtensions.cs

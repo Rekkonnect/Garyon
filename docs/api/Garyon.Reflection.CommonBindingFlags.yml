@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CommonBindingFlags.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CommonBindingFlags
     path: ../Garyon/Reflection/CommonBindingFlags.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CommonBindingFlags.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyAccessibility
     path: ../Garyon/Reflection/CommonBindingFlags.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CommonBindingFlags.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyAccessibilityStatic
     path: ../Garyon/Reflection/CommonBindingFlags.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CommonBindingFlags.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyAccessibilityInstance
     path: ../Garyon/Reflection/CommonBindingFlags.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/CommonBindingFlags.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyAccessibilityStaticOrInstance
     path: ../Garyon/Reflection/CommonBindingFlags.cs

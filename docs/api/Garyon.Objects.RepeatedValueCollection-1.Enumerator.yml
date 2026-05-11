@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/RepeatedValueCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerator
     path: ../Garyon/Objects/RepeatedValueCollection.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/RepeatedValueCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Collection
     path: ../Garyon/Objects/RepeatedValueCollection.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/RepeatedValueCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Objects/RepeatedValueCollection.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/RepeatedValueCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/RepeatedValueCollection.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/RepeatedValueCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveNext
     path: ../Garyon/Objects/RepeatedValueCollection.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/RepeatedValueCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reset
     path: ../Garyon/Objects/RepeatedValueCollection.cs

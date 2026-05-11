@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/HashCodeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: HashCodeExtensions
     path: ../Garyon/Extensions/HashCodeExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/HashCodeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddRange
     path: ../Garyon/Extensions/HashCodeExtensions.cs

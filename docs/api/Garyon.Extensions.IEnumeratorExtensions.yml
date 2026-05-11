@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IEnumeratorExtensions
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithResetState
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToArray
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -332,7 +332,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToList
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs
@@ -371,7 +371,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumeratorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToImmutableArray
     path: ../Garyon/Extensions/IEnumeratorExtensions.cs

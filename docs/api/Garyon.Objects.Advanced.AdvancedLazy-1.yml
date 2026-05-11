@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AdvancedLazy
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsValueCreated
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueOrDefault
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetValue
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedLazy.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ClearValue
     path: ../Garyon/Objects/Advanced/AdvancedLazy.cs

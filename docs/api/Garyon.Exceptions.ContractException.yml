@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/ContractException.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ContractException
     path: ../Garyon/Exceptions/ContractException.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/ContractException.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Exceptions/ContractException.cs

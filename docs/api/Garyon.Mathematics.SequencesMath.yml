@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/SequencesMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SequencesMath
     path: ../Garyon/Mathematics/SequencesMath.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/SequencesMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Mathematics/SequencesMath.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/SequencesMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Mathematics/SequencesMath.cs

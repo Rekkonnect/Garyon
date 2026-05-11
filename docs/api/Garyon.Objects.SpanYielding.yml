@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SpanYielding
     path: ../Garyon/Objects/SpanYielding.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: For
     path: ../Garyon/Objects/SpanYielding.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: For
     path: ../Garyon/Objects/SpanYielding.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldOntoSpan
     path: ../Garyon/Objects/SpanYielding.cs
@@ -241,7 +241,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldOntoSpan
     path: ../Garyon/Objects/SpanYielding.cs
@@ -300,7 +300,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Yield
     path: ../Garyon/Objects/SpanYielding.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Yield
     path: ../Garyon/Objects/SpanYielding.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FillRest
     path: ../Garyon/Objects/SpanYielding.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FillRest
     path: ../Garyon/Objects/SpanYielding.cs

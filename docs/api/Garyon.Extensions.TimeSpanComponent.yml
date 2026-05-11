@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TimeSpanComponent
     path: ../Garyon/Extensions/TimeSpanExtensions.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Ticks
     path: ../Garyon/Extensions/TimeSpanExtensions.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Milliseconds
     path: ../Garyon/Extensions/TimeSpanExtensions.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Seconds
     path: ../Garyon/Extensions/TimeSpanExtensions.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Minutes
     path: ../Garyon/Extensions/TimeSpanExtensions.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Hours
     path: ../Garyon/Extensions/TimeSpanExtensions.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/TimeSpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Days
     path: ../Garyon/Extensions/TimeSpanExtensions.cs

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/MethodInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MethodInfoExtensions
     path: ../Garyon/Reflection/MethodInfoExtensions.cs

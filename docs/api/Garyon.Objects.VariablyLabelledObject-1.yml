@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/VariablyLabelledObject.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: VariablyLabelledObject
     path: ../Garyon/Objects/VariablyLabelledObject.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/VariablyLabelledObject.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Label
     path: ../Garyon/Objects/VariablyLabelledObject.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/VariablyLabelledObject.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: VariableLabel
     path: ../Garyon/Objects/VariablyLabelledObject.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/VariablyLabelledObject.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/VariablyLabelledObject.cs

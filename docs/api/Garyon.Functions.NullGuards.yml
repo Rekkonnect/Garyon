@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullGuards
     path: ../Garyon/Functions/NullGuards.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -445,7 +445,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNonNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -484,7 +484,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNonNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -526,7 +526,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNonNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -571,7 +571,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNonNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -610,7 +610,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNonNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -652,7 +652,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyNonNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -697,7 +697,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NoneNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -748,7 +748,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NoneNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -808,7 +808,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NoneNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -877,7 +877,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NoneNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -928,7 +928,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NoneNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -988,7 +988,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NoneNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -1057,7 +1057,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleNull
     path: ../Garyon/Functions/NullGuards.cs
@@ -1096,7 +1096,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/NullGuards.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleNull
     path: ../Garyon/Functions/NullGuards.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexedAsyncEnumerable
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerable.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerable.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAsyncEnumerator
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerable.cs

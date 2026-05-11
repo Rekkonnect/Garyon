@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ICopyable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ICopyable
     path: ../Garyon/Objects/ICopyable.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ICopyable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CopyTo
     path: ../Garyon/Objects/ICopyable.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DriveFormatType
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Unknown
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Fat
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Fat32
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Ntfs
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExFat
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ReFS
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Udf
     path: ../Garyon/Extensions/DriveFormatType.cs
@@ -332,7 +332,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveFormatType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Apfs
     path: ../Garyon/Extensions/DriveFormatType.cs

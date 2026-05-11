@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/IFileSystemPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IFileSystemPath
     path: ../Garyon/Objects/IO/IFileSystemPath.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/IFileSystemPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Path
     path: ../Garyon/Objects/IO/IFileSystemPath.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/IFileSystemPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FileSystemInfo
     path: ../Garyon/Objects/IO/IFileSystemPath.cs

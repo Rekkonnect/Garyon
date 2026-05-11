@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IndexExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexExtensions
     path: ../Garyon/Extensions/IndexExtensions.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IndexExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetOffset
     path: ../Garyon/Extensions/IndexExtensions.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IndexExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetOffset
     path: ../Garyon/Extensions/IndexExtensions.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IndexExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetOffset
     path: ../Garyon/Extensions/IndexExtensions.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IndexExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetOffset
     path: ../Garyon/Extensions/IndexExtensions.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IndexExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Invert
     path: ../Garyon/Extensions/IndexExtensions.cs

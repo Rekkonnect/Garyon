@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SpanStringExtensions
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Parse
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseByte
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseSByte
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseInt16
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseUInt16
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseUInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseUInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseSingle
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -446,7 +446,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseDouble
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -481,7 +481,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseDecimal
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -516,7 +516,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParse
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -557,7 +557,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -594,7 +594,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -631,7 +631,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -668,7 +668,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -705,7 +705,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseSingle
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -742,7 +742,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseDouble
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -779,7 +779,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseDecimal
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -816,7 +816,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -857,7 +857,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -898,7 +898,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -939,7 +939,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -980,7 +980,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseSingle
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1021,7 +1021,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseDouble
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1062,7 +1062,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseDecimal
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1103,7 +1103,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseFirstInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1142,7 +1142,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseFirstInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1183,7 +1183,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LastNumberStartIndex
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1218,7 +1218,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LastNumberSlice
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1253,7 +1253,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseLastInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1288,7 +1288,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseLastInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1323,7 +1323,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseLastUInt32
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1358,7 +1358,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseLastUInt64
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1393,7 +1393,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SplitToStrings
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1430,7 +1430,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SplitToStrings
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1467,7 +1467,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetLines
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -1502,7 +1502,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SelectLines
     path: ../Garyon/Extensions/SpanStringExtensions.cs

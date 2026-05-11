@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IHasMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IHasMinute
     path: ../Garyon/Objects/IHasMinute.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IHasMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Minute
     path: ../Garyon/Objects/IHasMinute.cs

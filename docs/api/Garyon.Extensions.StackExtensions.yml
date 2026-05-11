@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StackExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: StackExtensions
     path: ../Garyon/Extensions/StackExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StackExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PushRange
     path: ../Garyon/Extensions/StackExtensions.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StackExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PopRange
     path: ../Garyon/Extensions/StackExtensions.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StackExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PopAll
     path: ../Garyon/Extensions/StackExtensions.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StackExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Insert
     path: ../Garyon/Extensions/StackExtensions.cs

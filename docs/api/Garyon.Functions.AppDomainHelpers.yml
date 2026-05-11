@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/AppDomainHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AppDomainHelpers
     path: ../Garyon/Functions/AppDomainHelpers.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/AppDomainHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ForceLoadAllAssemblies
     path: ../Garyon/Functions/AppDomainHelpers.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/AppDomainHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ForceLoadAllAssembliesCurrent
     path: ../Garyon/Functions/AppDomainHelpers.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/AppDomainHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetStaticAssemblies
     path: ../Garyon/Functions/AppDomainHelpers.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/AppDomainHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDynamicAssemblies
     path: ../Garyon/Functions/AppDomainHelpers.cs

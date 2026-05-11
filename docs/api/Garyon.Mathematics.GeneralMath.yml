@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GeneralMath
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Power
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Power
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Factorial
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Factorial
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FactorialBigInteger
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -405,7 +405,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -449,7 +449,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -493,7 +493,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -537,7 +537,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -581,7 +581,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -625,7 +625,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -669,7 +669,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -713,7 +713,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -757,7 +757,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -801,7 +801,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -845,7 +845,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -889,7 +889,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -933,7 +933,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -977,7 +977,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1021,7 +1021,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1062,7 +1062,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1103,7 +1103,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1147,7 +1147,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1191,7 +1191,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1235,7 +1235,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1279,7 +1279,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1323,7 +1323,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1367,7 +1367,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1411,7 +1411,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1455,7 +1455,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1499,7 +1499,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1543,7 +1543,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1587,7 +1587,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1631,7 +1631,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1675,7 +1675,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1719,7 +1719,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1763,7 +1763,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1807,7 +1807,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs
@@ -1848,7 +1848,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/GeneralMath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Mathematics/GeneralMath.cs

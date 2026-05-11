@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AppVersionInfo
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Version
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PreviewIndicator
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CommitSha
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Parse
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Parse
     path: ../Garyon/Objects/AppVersionInfo.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AppVersionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InformationalVersionForAssembly
     path: ../Garyon/Objects/AppVersionInfo.cs

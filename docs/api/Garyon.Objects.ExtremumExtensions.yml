@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Extremum.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExtremumExtensions
     path: ../Garyon/Objects/Extremum.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Extremum.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TargetComparisonResult
     path: ../Garyon/Objects/Extremum.cs

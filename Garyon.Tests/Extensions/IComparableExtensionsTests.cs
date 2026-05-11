@@ -54,7 +54,7 @@ public class IComparableExtensionsTests
         await Assert.That(max).IsEqualTo(15);
 
         int extremum = 10;
-        extremum.AssignExtremum(20, ComparisonResult.Greater);
+        extremum.AssignExtremum(20, Extremum.Maximum);
         await Assert.That(extremum).IsEqualTo(20);
     }
 }

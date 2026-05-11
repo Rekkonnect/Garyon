@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TypeListCache
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Types
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -242,7 +242,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: this[]
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetClasses
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAbstractClasses
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNonAbstractClasses
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetStructs
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -400,7 +400,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetInterfaces
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetStaticClasses
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -460,7 +460,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetFilteredTypes
     path: ../Garyon/Reflection/TypeListCache.cs
@@ -497,7 +497,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeListCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Reflection/TypeListCache.cs

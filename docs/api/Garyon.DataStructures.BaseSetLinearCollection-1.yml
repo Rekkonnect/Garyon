@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BaseSetLinearCollection
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsEmpty
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -298,7 +298,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Contains
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -419,7 +419,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -464,7 +464,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Remove
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -500,7 +500,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Peek
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveFromLinearCollection
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -576,7 +576,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddToLinearCollection
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -614,7 +614,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddRange
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -654,7 +654,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveRange
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -703,7 +703,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -736,7 +736,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ClearLinearCollection
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -769,7 +769,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CopyTo
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs
@@ -816,7 +816,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseSetLinearCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/DataStructures/BaseSetLinearCollection.cs

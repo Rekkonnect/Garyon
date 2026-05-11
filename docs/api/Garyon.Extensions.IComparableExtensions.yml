@@ -36,7 +36,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IComparableExtensions
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessThan
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterThan
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessThanOrEqual
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterThanOrEqual
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EqualTo
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotEqualTo
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -365,7 +365,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SatisfiesComparison
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -418,7 +418,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MatchesComparisonResult
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -471,7 +471,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetComparisonResult
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -519,7 +519,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessThan
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -573,7 +573,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterThan
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -627,7 +627,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessThanOrEqual
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -681,7 +681,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterThanOrEqual
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -735,7 +735,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EqualTo
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -789,7 +789,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotEqualTo
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -843,7 +843,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SatisfiesComparison
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -902,7 +902,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MatchesComparisonResult
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -961,7 +961,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetComparisonResult
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -1015,7 +1015,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AssignMin
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -1066,7 +1066,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AssignMax
     path: ../Garyon/Extensions/IComparableExtensions.cs
@@ -1117,7 +1117,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IComparableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AssignExtremum
     path: ../Garyon/Extensions/IComparableExtensions.cs

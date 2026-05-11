@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DefaultInstanceContainer
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DefaultInstanceTypes
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDefaultInstanceArguments
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDefaultInstanceArgumentTypes
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsValidInstanceType
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDefaultInstance
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDefaultInstance
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs
@@ -365,7 +365,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DefaultInstanceContainer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDefaultInstance
     path: ../Garyon/Reflection/DefaultInstanceContainer.cs

@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: StringReplacement
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Start
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Length
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NewText
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SourceEnd
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NewLength
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NewEnd
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LengthDifference
     path: ../Garyon/Extensions/StringReplacement.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringReplacement.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Apply
     path: ../Garyon/Extensions/StringReplacement.cs

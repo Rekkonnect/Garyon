@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AppDomainCache
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllTypes
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllClasses
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllAbstractClasses
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllNonAbstractClasses
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllStructs
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllInterfaces
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllStaticClasses
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Domain
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -389,7 +389,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/AppDomainCache.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainCache.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EmptyAllTypesCache
     path: ../Garyon/Reflection/AppDomainCache.cs

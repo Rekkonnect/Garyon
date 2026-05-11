@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/FieldInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FieldInfoExtensions
     path: ../Garyon/Reflection/FieldInfoExtensions.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/FieldInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetFieldInvokableTypeKind
     path: ../Garyon/Reflection/FieldInfoExtensions.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/FieldInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAccessibilityModifiers
     path: ../Garyon/Reflection/FieldInfoExtensions.cs

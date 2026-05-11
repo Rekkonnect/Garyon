@@ -36,7 +36,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BaseFlexDictionary
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Dictionary
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -250,7 +250,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Keys
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Values
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -354,7 +354,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -388,7 +388,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -420,7 +420,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -501,7 +501,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -541,7 +541,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Remove
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -587,7 +587,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveKeys
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -630,7 +630,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveKeys
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -673,7 +673,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -709,7 +709,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -745,7 +745,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ContainsKey
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -788,7 +788,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryGetValue
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -841,7 +841,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -876,7 +876,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNewEntryInitializationValue
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -914,7 +914,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddWithInitializationValue
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs
@@ -945,7 +945,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/BaseFlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: this[]
     path: ../Garyon/DataStructures/BaseFlexDictionary.cs

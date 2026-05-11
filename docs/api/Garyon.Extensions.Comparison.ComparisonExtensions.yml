@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ComparisonExtensions
     path: ../Garyon/Extensions/Comparison/ComparisonExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BeginCompare
     path: ../Garyon/Extensions/Comparison/ComparisonExtensions.cs

@@ -2,6 +2,13 @@
 
 A C# library aiming to offer multi-dimensional functionality.
 
+<div style="text-align: center">
+
+![Line Coverage](.github/images/badge_linecoverage.svg)&nbsp;&nbsp;
+![Method Coverage](.github/images/badge_methodcoverage.svg)
+
+</div>
+
 ## Pre-Release Notice
 
 This project is not yet ready for an actual release. All the code is still in pre-release, thus it might contain bugs, some APIs might be
@@ -18,7 +25,7 @@ single area the standard library does not fully cover.
 
 ## Documentation
 
-Visit the [docs folder](docs/), or the webiste that mirrors 
+Visit the [website](https://rekkonnect.github.io/Garyon/) or the [docs folder](docs/) directly.
 
 ## Performance
 

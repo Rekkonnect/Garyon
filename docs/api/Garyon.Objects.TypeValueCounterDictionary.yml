@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/TypeValueCounterDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TypeValueCounterDictionary
     path: ../Garyon/Objects/TypeValueCounterDictionary.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/TypeValueCounterDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetValue
     path: ../Garyon/Objects/TypeValueCounterDictionary.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/TypeValueCounterDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SetValue
     path: ../Garyon/Objects/TypeValueCounterDictionary.cs

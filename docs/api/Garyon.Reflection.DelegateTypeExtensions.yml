@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DelegateTypeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DelegateTypeExtensions
     path: ../Garyon/Reflection/DelegateTypeExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DelegateTypeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDelegateParameterTypes
     path: ../Garyon/Reflection/DelegateTypeExtensions.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/DelegateTypeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDelegateParameterTypes
     path: ../Garyon/Reflection/DelegateTypeExtensions.cs

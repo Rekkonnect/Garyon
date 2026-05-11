@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IAsyncEnumerableExtensions
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlattenAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlattenAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlattenAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithIndex
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ForEachAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -273,7 +273,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ForEachAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToListAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs
@@ -359,7 +359,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IAsyncEnumerableExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToListAsync
     path: ../Garyon/Extensions/IAsyncEnumerableExtensions.cs

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PathItemType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PathItemType
     path: ../Garyon/Functions/PathItemType.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PathItemType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: File
     path: ../Garyon/Functions/PathItemType.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PathItemType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Directory
     path: ../Garyon/Functions/PathItemType.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PathItemType.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Volume
     path: ../Garyon/Functions/PathItemType.cs

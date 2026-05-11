@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ComparisonKinds
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: None
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Less
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equal
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Greater
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessOrEqual
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterOrEqual
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Different
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotEqual
     path: ../Garyon/Objects/ComparisonKinds.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonKinds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: All
     path: ../Garyon/Objects/ComparisonKinds.cs

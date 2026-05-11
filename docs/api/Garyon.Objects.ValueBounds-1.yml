@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ValueBounds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueBounds
     path: ../Garyon/Objects/ValueBounds.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ValueBounds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/ValueBounds.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ValueBounds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Min
     path: ../Garyon/Objects/ValueBounds.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ValueBounds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Max
     path: ../Garyon/Objects/ValueBounds.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ValueBounds.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Default
     path: ../Garyon/Objects/ValueBounds.cs

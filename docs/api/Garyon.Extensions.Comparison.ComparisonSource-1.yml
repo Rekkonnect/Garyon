@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ComparisonSource
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Left
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Right
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Self
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: By
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByAsync
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByAsync
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -334,7 +334,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: By
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -372,7 +372,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: By
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByDesc
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -451,7 +451,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByDescAsync
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -489,7 +489,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByDescAsync
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -527,7 +527,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByDesc
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs
@@ -565,7 +565,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Comparison/ComparisonSource.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByDesc
     path: ../Garyon/Extensions/Comparison/ComparisonSource.cs

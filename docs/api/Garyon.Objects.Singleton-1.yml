@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Singleton.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Singleton
     path: ../Garyon/Objects/Singleton.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Singleton.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Instance
     path: ../Garyon/Objects/Singleton.cs

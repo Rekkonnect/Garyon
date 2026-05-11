@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Initialization.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Initialization
     path: ../Garyon/Functions/Initialization.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Initialization.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryInitializeUpcast
     path: ../Garyon/Functions/Initialization.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Initialization.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TrySetUpcast
     path: ../Garyon/Functions/Initialization.cs

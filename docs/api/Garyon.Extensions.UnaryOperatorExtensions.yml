@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UnaryOperatorExtensions
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Negate
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -359,7 +359,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -399,7 +399,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -439,7 +439,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -519,7 +519,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -559,7 +559,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -599,7 +599,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -639,7 +639,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvertBitwise
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs
@@ -679,7 +679,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnaryOperatorExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Invert
     path: ../Garyon/Extensions/UnaryOperatorExtensions.cs

@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DirectoryInfoExtensions
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumerateParents
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Depth
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RecursiveParent
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BoundRecursiveParent
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveUpBound
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveUp
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveTo
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -406,7 +406,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TotalSizeDeep
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -450,7 +450,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TotalSize
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryGetSingleSubdirectory
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExploreDeepestSingleDirectory
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -600,7 +600,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryDelete
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -655,7 +655,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CombinePath
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -702,7 +702,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Subdirectory
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs
@@ -748,7 +748,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DirectoryInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: File
     path: ../Garyon/Extensions/DirectoryInfoExtensions.cs

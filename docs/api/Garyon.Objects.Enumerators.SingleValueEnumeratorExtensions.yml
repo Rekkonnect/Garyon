@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleValueEnumeratorExtensions
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleValueEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumerateSingle
     path: ../Garyon/Objects/Enumerators/SingleValueEnumerator.cs

@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CharExtensions
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsLowerCaseEnglishLetter
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsUpperCaseEnglishLetter
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsEnglishLetter
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsEnglishLetterOrDigit
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNumericValueInteger
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNumericalValue
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsValidHexCharacter
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -360,7 +360,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNumericValue
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetUnicodeCategory
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsControl
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -507,7 +507,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsDigit
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -556,7 +556,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsHighSurrogate
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -605,7 +605,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsLetter
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -654,7 +654,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsLetterOrDigit
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -703,7 +703,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsLower
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -752,7 +752,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsLowSurrogate
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -801,7 +801,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsNumber
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -850,7 +850,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsPunctuation
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -899,7 +899,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsSeparator
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -948,7 +948,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsSurrogate
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -997,7 +997,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsSymbol
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1046,7 +1046,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsUpper
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1095,7 +1095,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsWhiteSpace
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1144,7 +1144,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToLower
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1200,7 +1200,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToLower
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1249,7 +1249,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToLowerInvariant
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1298,7 +1298,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToUpper
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1347,7 +1347,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToUpper
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1403,7 +1403,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToUpperInvariant
     path: ../Garyon/Extensions/CharExtensions.cs
@@ -1452,7 +1452,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/CharExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsBase64Character
     path: ../Garyon/Extensions/CharExtensions.cs

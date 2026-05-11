@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Checks.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Checks
     path: ../Garyon/Functions/Checks.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Checks.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SafeEquals
     path: ../Garyon/Functions/Checks.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Checks.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SafeEqualsEquatable
     path: ../Garyon/Functions/Checks.cs

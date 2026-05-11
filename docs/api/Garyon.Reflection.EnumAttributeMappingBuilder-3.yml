@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AttributeMapping.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumAttributeMappingBuilder
     path: ../Garyon/Reflection/AttributeMapping.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AttributeMapping.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Where
     path: ../Garyon/Reflection/AttributeMapping.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AttributeMapping.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Build
     path: ../Garyon/Reflection/AttributeMapping.cs

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ReadOnlySpanSelector
     path: ../Garyon/Extensions/SpanExtensions.cs

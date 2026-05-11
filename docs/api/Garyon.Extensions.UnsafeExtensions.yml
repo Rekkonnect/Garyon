@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnsafeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UnsafeExtensions
     path: ../Garyon/Extensions/UnsafeExtensions.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnsafeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetBytes
     path: ../Garyon/Extensions/UnsafeExtensions.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnsafeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetValueFromSpan
     path: ../Garyon/Extensions/UnsafeExtensions.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/UnsafeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AsBytes
     path: ../Garyon/Extensions/UnsafeExtensions.cs

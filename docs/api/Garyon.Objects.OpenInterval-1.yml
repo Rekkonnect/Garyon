@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/OpenInterval.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: OpenInterval
     path: ../Garyon/Objects/OpenInterval.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/OpenInterval.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/OpenInterval.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/OpenInterval.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Value
     path: ../Garyon/Objects/OpenInterval.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/OpenInterval.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ComparisonKinds
     path: ../Garyon/Objects/OpenInterval.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/OpenInterval.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Contains
     path: ../Garyon/Objects/OpenInterval.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/OpenInterval.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/OpenInterval.cs

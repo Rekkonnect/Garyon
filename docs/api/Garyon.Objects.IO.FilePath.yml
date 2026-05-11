@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FilePath
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Path
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Directory
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FileName
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExtensionlessFileName
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extension
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FileInfo
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -353,7 +353,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtension
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithFileName
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/IO/FilePath.cs
@@ -466,7 +466,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/FilePath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/IO/FilePath.cs

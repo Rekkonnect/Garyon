@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlexDictionary
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/DataStructures/FlexDictionary.cs
@@ -427,7 +427,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/FlexDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNewEntryInitializationValue
     path: ../Garyon/DataStructures/FlexDictionary.cs

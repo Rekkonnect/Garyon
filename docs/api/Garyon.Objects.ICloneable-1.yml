@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ICloneable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ICloneable
     path: ../Garyon/Objects/ICloneable.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ICloneable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/Objects/ICloneable.cs

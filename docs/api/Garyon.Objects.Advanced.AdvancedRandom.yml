@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AdvancedRandom
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextByte
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextByte
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextByte
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextInt16
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextInt16
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextInt16
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSByte
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -407,7 +407,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSByte
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -451,7 +451,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSByte
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -498,7 +498,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt16
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -532,7 +532,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt16
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -576,7 +576,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt16
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -623,7 +623,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt32
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -657,7 +657,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt32
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -701,7 +701,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt32
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -748,7 +748,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt64
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -784,7 +784,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt64
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -830,7 +830,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextUInt64
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -881,7 +881,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSingle
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -925,7 +925,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSingle
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -972,7 +972,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextDouble
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1016,7 +1016,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextDouble
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1063,7 +1063,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextChar
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1097,7 +1097,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextChar
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1141,7 +1141,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextChar
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1188,7 +1188,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextBoolean
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1219,7 +1219,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1253,7 +1253,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1294,7 +1294,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1337,7 +1337,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1380,7 +1380,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1421,7 +1421,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1464,7 +1464,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1507,7 +1507,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1548,7 +1548,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1589,7 +1589,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1632,7 +1632,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1673,7 +1673,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExtendSample
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1707,7 +1707,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExtendSample
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1741,7 +1741,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sample
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs
@@ -1775,7 +1775,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Advanced/AdvancedRandom.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sample
     path: ../Garyon/Objects/Advanced/AdvancedRandom.cs

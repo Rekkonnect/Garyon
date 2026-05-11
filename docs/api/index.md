@@ -1,5 +1,7 @@
 # API Reference
 
+<!-- This page is generated from `docs/api/toc.yml` by the docs build scripts. -->
+
 Browse the generated Garyon API reference by namespace.
 
 Use the search box or the namespace list below to jump directly into the API surface.

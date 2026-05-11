@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: QueueSet
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enqueue
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Dequeue
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -384,7 +384,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Peek
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -424,7 +424,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddToLinearCollection
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -463,7 +463,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveFromLinearCollection
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -501,7 +501,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ClearLinearCollection
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -535,7 +535,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnqueueRange
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -575,7 +575,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DequeueRange
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -621,7 +621,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CopyTo
     path: ../Garyon/DataStructures/QueueSet.cs
@@ -669,7 +669,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/QueueSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/DataStructures/QueueSet.cs

@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: HourMinute
     path: ../Garyon/Objects/HourMinute.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Now
     path: ../Garyon/Objects/HourMinute.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextMinute
     path: ../Garyon/Objects/HourMinute.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextHour
     path: ../Garyon/Objects/HourMinute.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TotalHours
     path: ../Garyon/Objects/HourMinute.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TotalMinutes
     path: ../Garyon/Objects/HourMinute.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TotalSeconds
     path: ../Garyon/Objects/HourMinute.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Hour
     path: ../Garyon/Objects/HourMinute.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Minute
     path: ../Garyon/Objects/HourMinute.cs
@@ -352,7 +352,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/HourMinute.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/HourMinute.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/Objects/HourMinute.cs
@@ -466,7 +466,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/Objects/HourMinute.cs
@@ -504,7 +504,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Subtract
     path: ../Garyon/Objects/HourMinute.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Subtract
     path: ../Garyon/Objects/HourMinute.cs
@@ -577,7 +577,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Addition
     path: ../Garyon/Objects/HourMinute.cs
@@ -613,7 +613,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Addition
     path: ../Garyon/Objects/HourMinute.cs
@@ -649,7 +649,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Subtraction
     path: ../Garyon/Objects/HourMinute.cs
@@ -685,7 +685,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Subtraction
     path: ../Garyon/Objects/HourMinute.cs
@@ -721,7 +721,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_LessThan
     path: ../Garyon/Objects/HourMinute.cs
@@ -757,7 +757,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_LessThanOrEqual
     path: ../Garyon/Objects/HourMinute.cs
@@ -793,7 +793,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Equality
     path: ../Garyon/Objects/HourMinute.cs
@@ -829,7 +829,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_GreaterThanOrEqual
     path: ../Garyon/Objects/HourMinute.cs
@@ -865,7 +865,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_GreaterThan
     path: ../Garyon/Objects/HourMinute.cs
@@ -901,7 +901,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Inequality
     path: ../Garyon/Objects/HourMinute.cs
@@ -937,7 +937,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/HourMinute.cs
@@ -971,7 +971,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/HourMinute.cs
@@ -1005,7 +1005,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/HourMinute.cs
@@ -1039,7 +1039,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Explicit
     path: ../Garyon/Objects/HourMinute.cs
@@ -1073,7 +1073,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Explicit
     path: ../Garyon/Objects/HourMinute.cs
@@ -1107,7 +1107,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Explicit
     path: ../Garyon/Objects/HourMinute.cs
@@ -1141,7 +1141,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Parse
     path: ../Garyon/Objects/HourMinute.cs
@@ -1187,7 +1187,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equals
     path: ../Garyon/Objects/HourMinute.cs
@@ -1227,7 +1227,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equals
     path: ../Garyon/Objects/HourMinute.cs
@@ -1266,7 +1266,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetHashCode
     path: ../Garyon/Objects/HourMinute.cs
@@ -1298,7 +1298,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/HourMinute.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToString
     path: ../Garyon/Objects/HourMinute.cs

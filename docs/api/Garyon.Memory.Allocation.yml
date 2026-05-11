@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Allocation
     path: ../Garyon/Memory/Allocation.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Allocate
     path: ../Garyon/Memory/Allocation.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Allocate
     path: ../Garyon/Memory/Allocation.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AllocateClear
     path: ../Garyon/Memory/Allocation.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AllocateClear
     path: ../Garyon/Memory/Allocation.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reallocate
     path: ../Garyon/Memory/Allocation.cs
@@ -287,7 +287,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reallocate
     path: ../Garyon/Memory/Allocation.cs
@@ -335,7 +335,7 @@ items:
   source:
     remote:
       path: Garyon/Memory/Allocation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Free
     path: ../Garyon/Memory/Allocation.cs

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/InvokableTypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InvokableTypeKind
     path: ../Garyon/Reflection/InvokableTypeKind.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/InvokableTypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Invalid
     path: ../Garyon/Reflection/InvokableTypeKind.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/InvokableTypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Delegate
     path: ../Garyon/Reflection/InvokableTypeKind.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/InvokableTypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FunctionPointer
     path: ../Garyon/Reflection/InvokableTypeKind.cs

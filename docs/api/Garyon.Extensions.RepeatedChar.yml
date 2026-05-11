@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/RepeatedChar.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RepeatedChar
     path: ../Garyon/Extensions/RepeatedChar.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/RepeatedChar.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Extensions/RepeatedChar.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/RepeatedChar.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Character
     path: ../Garyon/Extensions/RepeatedChar.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/RepeatedChar.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/Extensions/RepeatedChar.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/RepeatedChar.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToString
     path: ../Garyon/Extensions/RepeatedChar.cs

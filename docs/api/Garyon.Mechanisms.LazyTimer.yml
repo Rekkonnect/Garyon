@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LazyTimer
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSignal
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SignalRaised
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ResetIfRaisedSignal
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reset
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ResetUnraisable
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -304,7 +304,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Initialize
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -354,7 +354,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InitializeRaised
     path: ../Garyon/Mechanisms/LazyTimer.cs
@@ -397,7 +397,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/LazyTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InitializeUnraised
     path: ../Garyon/Mechanisms/LazyTimer.cs

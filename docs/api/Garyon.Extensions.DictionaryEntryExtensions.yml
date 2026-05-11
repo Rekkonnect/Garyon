@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DictionaryEntryExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DictionaryEntryExtensions
     path: ../Garyon/Extensions/DictionaryEntryExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DictionaryEntryExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToKeyValuePair
     path: ../Garyon/Extensions/DictionaryEntryExtensions.cs

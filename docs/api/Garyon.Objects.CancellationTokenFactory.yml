@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CancellationTokenFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CancellationTokenFactory
     path: ../Garyon/Objects/CancellationTokenFactory.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CancellationTokenFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CurrentSource
     path: ../Garyon/Objects/CancellationTokenFactory.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CancellationTokenFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CurrentToken
     path: ../Garyon/Objects/CancellationTokenFactory.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CancellationTokenFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CreateSource
     path: ../Garyon/Objects/CancellationTokenFactory.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CancellationTokenFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Cancel
     path: ../Garyon/Objects/CancellationTokenFactory.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CancellationTokenFactory.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Dispose
     path: ../Garyon/Objects/CancellationTokenFactory.cs

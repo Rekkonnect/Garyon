@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Arrays/ArrayIdentification.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ArrayIdentification
     path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Arrays/ArrayIdentification.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsArrayOfType
     path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Arrays/ArrayIdentification.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsArrayOfType
     path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Arrays/ArrayIdentification.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsArrayOfType
     path: ../Garyon/Functions/Arrays/ArrayIdentification.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Arrays/ArrayIdentification.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsArrayOfType
     path: ../Garyon/Functions/Arrays/ArrayIdentification.cs

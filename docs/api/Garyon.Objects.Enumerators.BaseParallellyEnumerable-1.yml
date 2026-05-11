@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BaseParallellyEnumerable
     path: ../Garyon/Objects/Enumerators/BaseParallellyEnumerable.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Objects/Enumerators/BaseParallellyEnumerable.cs

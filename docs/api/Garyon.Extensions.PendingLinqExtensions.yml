@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PendingLinqExtensions
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -257,7 +257,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -377,7 +377,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs
@@ -437,7 +437,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/PendingLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Sum
     path: ../Garyon/Extensions/PendingLinqExtensions.cs

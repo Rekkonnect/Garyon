@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ITree
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Height
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Breadth
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveNode
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveNodes
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ClearChildren
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TraversePreOrder
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TraversePostOrder
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -394,7 +394,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TraverseLevelOrder
     path: ../Garyon/DataStructures/Trees/ITree.cs
@@ -427,7 +427,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/ITree.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetTreeView
     path: ../Garyon/DataStructures/Trees/ITree.cs

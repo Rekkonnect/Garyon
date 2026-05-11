@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IListExtensions
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Insert
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveAt
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveLast
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Swap
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Swap
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddRangeAsync
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddRangeAsync
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -385,7 +385,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveAtDecrement
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -433,7 +433,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Pop
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -475,7 +475,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AtIndexOrDefaultReadOnly
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -514,7 +514,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AtIndexOrDefault
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -553,7 +553,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryGetAtIndexReadOnly
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -594,7 +594,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryGetAtIndex
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -635,7 +635,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleOrDefaultReadOnly
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -672,7 +672,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleOrDefaultSafe
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -709,7 +709,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ClearSetRange
     path: ../Garyon/Extensions/IListExtensions.cs
@@ -745,7 +745,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IListExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddRange
     path: ../Garyon/Extensions/IListExtensions.cs

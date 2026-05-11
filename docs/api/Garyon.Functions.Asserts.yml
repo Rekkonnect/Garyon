@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Asserts
     path: ../Garyon/Functions/Asserts.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: "True"
     path: ../Garyon/Functions/Asserts.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: "False"
     path: ../Garyon/Functions/Asserts.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: OfType
     path: ../Garyon/Functions/Asserts.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: "Null"
     path: ../Garyon/Functions/Asserts.cs
@@ -241,7 +241,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotNull
     path: ../Garyon/Functions/Asserts.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Default
     path: ../Garyon/Functions/Asserts.cs
@@ -335,7 +335,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotDefault
     path: ../Garyon/Functions/Asserts.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equal
     path: ../Garyon/Functions/Asserts.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotEqual
     path: ../Garyon/Functions/Asserts.cs
@@ -482,7 +482,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessThan
     path: ../Garyon/Functions/Asserts.cs
@@ -533,7 +533,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LessThanOrEqual
     path: ../Garyon/Functions/Asserts.cs
@@ -584,7 +584,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterThan
     path: ../Garyon/Functions/Asserts.cs
@@ -635,7 +635,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Asserts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GreaterThanOrEqual
     path: ../Garyon/Functions/Asserts.cs

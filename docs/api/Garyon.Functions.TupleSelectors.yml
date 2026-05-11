@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/TupleSelectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TupleSelectors
     path: ../Garyon/Functions/TupleSelectors.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/TupleSelectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MakeTuple
     path: ../Garyon/Functions/TupleSelectors.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/TupleSelectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MakeTuple
     path: ../Garyon/Functions/TupleSelectors.cs

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TypePredicates
     path: ../Garyon/Reflection/TypePredicates.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsClass
     path: ../Garyon/Reflection/TypePredicates.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsAbstractClass
     path: ../Garyon/Reflection/TypePredicates.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsNonAbstractClass
     path: ../Garyon/Reflection/TypePredicates.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsValueType
     path: ../Garyon/Reflection/TypePredicates.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsInterface
     path: ../Garyon/Reflection/TypePredicates.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypePredicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsStatic
     path: ../Garyon/Reflection/TypePredicates.cs

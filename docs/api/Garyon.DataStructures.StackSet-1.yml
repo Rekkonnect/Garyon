@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: StackSet
     path: ../Garyon/DataStructures/StackSet.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/StackSet.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/StackSet.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/StackSet.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/StackSet.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Push
     path: ../Garyon/DataStructures/StackSet.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Pop
     path: ../Garyon/DataStructures/StackSet.cs
@@ -381,7 +381,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Peek
     path: ../Garyon/DataStructures/StackSet.cs
@@ -421,7 +421,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddToLinearCollection
     path: ../Garyon/DataStructures/StackSet.cs
@@ -460,7 +460,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveFromLinearCollection
     path: ../Garyon/DataStructures/StackSet.cs
@@ -498,7 +498,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ClearLinearCollection
     path: ../Garyon/DataStructures/StackSet.cs
@@ -532,7 +532,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PushRange
     path: ../Garyon/DataStructures/StackSet.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PopRange
     path: ../Garyon/DataStructures/StackSet.cs
@@ -618,7 +618,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CopyTo
     path: ../Garyon/DataStructures/StackSet.cs
@@ -666,7 +666,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/StackSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/DataStructures/StackSet.cs

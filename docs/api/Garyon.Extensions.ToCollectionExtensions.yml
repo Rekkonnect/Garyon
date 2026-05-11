@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToCollectionExtensions
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToDictionary
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSortedSet
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSortedList
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSortedDictionary
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToArrayOrEmpty
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -272,7 +272,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToListOrEmpty
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToHashSetOrEmpty
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSortedSetOrEmpty
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSortedListOrEmpty
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSortedDictionaryOrEmpty
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -551,7 +551,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToArrayOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -599,7 +599,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToListOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -647,7 +647,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToHashSetOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -695,7 +695,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToCollectionOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -750,7 +750,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToSetOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -802,7 +802,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToReadOnlyCollectionOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -859,7 +859,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToReadOnlyListOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -911,7 +911,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToReadOnlySetOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -970,7 +970,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToDictionaryOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs
@@ -1034,7 +1034,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/ToCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToReadOnlyDictionaryOrExisting
     path: ../Garyon/Extensions/ToCollectionExtensions.cs

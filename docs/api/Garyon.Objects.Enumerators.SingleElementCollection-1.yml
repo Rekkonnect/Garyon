@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleElementCollection
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithElement
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -304,7 +304,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equals
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equals
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -418,7 +418,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetHashCode
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Equality
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleElementCollection.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Inequality
     path: ../Garyon/Objects/Enumerators/SingleElementCollection.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableCartesianProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumerableCartesianProducts
     path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableCartesianProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CartesianProduct
     path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableCartesianProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MaterializedCartesianProduct
     path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableCartesianProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MaterializedCartesianProductExcludingSame
     path: ../Garyon/Extensions/EnumerableCartesianProducts.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableCartesianProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MaterializedHomogenousCartesianProduct
     path: ../Garyon/Extensions/EnumerableCartesianProducts.cs

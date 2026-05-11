@@ -86,6 +86,8 @@ function Set-ApiLandingPage {
     $content = @(
         '# API Reference'
         ''
+        '<!-- This page is generated from `docs/api/toc.yml` by the docs build scripts. -->'
+        ''
         'Browse the generated Garyon API reference by namespace.'
         ''
         'Use the search box or the namespace list below to jump directly into the API surface.'
@@ -102,6 +104,15 @@ function Set-ApiLandingPage {
     $content += 'The namespace pages include the local API table of contents for drilling into individual types.'
 
     Set-Content -Path $apiIndexPath -Value ($content -join "`r`n") -NoNewline
+}
+
+function Set-ConceptualLandingPages {
+    $scriptPath = Join-Path $PSScriptRoot 'generate-nav.py'
+    python $scriptPath
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "Conceptual landing page generation failed."
+    }
 }
 
 Push-Location $PSScriptRoot
@@ -134,6 +145,9 @@ try {
 
     Write-Host "Generating API landing page..." -ForegroundColor Cyan
     Set-ApiLandingPage
+
+    Write-Host "Generating conceptual landing pages..." -ForegroundColor Cyan
+    Set-ConceptualLandingPages
 
     Write-Host "Building documentation site..." -ForegroundColor Cyan
     docfx build docfx.json

@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AffixedEnumerable
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithPrefix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithPrefix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithPrefix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithSuffix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithSuffix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithSuffix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtraPrefix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -412,7 +412,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtraPrefix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -446,7 +446,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtraPrefix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -480,7 +480,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtraSuffix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -513,7 +513,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtraSuffix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -547,7 +547,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithExtraSuffix
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -581,7 +581,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Wrap
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs
@@ -611,7 +611,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/AffixedEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Objects/Enumerators/AffixedEnumerable.cs

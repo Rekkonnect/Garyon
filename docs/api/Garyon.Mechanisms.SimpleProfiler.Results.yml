@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/SimpleProfiler.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Results
     path: ../Garyon/Mechanisms/SimpleProfiler.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/SimpleProfiler.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Time
     path: ../Garyon/Mechanisms/SimpleProfiler.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/SimpleProfiler.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Memory
     path: ../Garyon/Mechanisms/SimpleProfiler.cs

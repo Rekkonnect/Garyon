@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/KeyValuePairExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: KeyValuePairExtensions
     path: ../Garyon/Extensions/KeyValuePairExtensions.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/KeyValuePairExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithKey
     path: ../Garyon/Extensions/KeyValuePairExtensions.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/KeyValuePairExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WithValue
     path: ../Garyon/Extensions/KeyValuePairExtensions.cs

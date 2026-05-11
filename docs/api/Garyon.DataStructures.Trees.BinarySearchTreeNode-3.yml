@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BinarySearchTreeNode
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Parent
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Children
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -391,7 +391,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -434,7 +434,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -483,7 +483,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetChild
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -527,7 +527,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddChild
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -562,7 +562,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddChildren
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -607,7 +607,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddNode
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -647,7 +647,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddNode
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -687,7 +687,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddNodes
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -722,7 +722,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddNodes
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -757,7 +757,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddNodes
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -792,7 +792,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddNodes
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -827,7 +827,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveNode
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -868,7 +868,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Find
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
@@ -908,7 +908,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/Trees/BinarySearchTreeNode.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddChildrenToClonedInstance
     path: ../Garyon/DataStructures/Trees/BinarySearchTreeNode.cs

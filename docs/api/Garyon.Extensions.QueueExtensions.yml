@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/QueueExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: QueueExtensions
     path: ../Garyon/Extensions/QueueExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/QueueExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnqueueRange
     path: ../Garyon/Extensions/QueueExtensions.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/QueueExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DequeueRange
     path: ../Garyon/Extensions/QueueExtensions.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/QueueExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DequeueAll
     path: ../Garyon/Extensions/QueueExtensions.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/QueueExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Insert
     path: ../Garyon/Extensions/QueueExtensions.cs

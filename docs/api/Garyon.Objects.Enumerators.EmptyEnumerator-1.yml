@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/EmptyEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EmptyEnumerator
     path: ../Garyon/Objects/Enumerators/EmptyEnumerator.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/EmptyEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Instance
     path: ../Garyon/Objects/Enumerators/EmptyEnumerator.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/EmptyEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Objects/Enumerators/EmptyEnumerator.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/EmptyEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveNext
     path: ../Garyon/Objects/Enumerators/EmptyEnumerator.cs

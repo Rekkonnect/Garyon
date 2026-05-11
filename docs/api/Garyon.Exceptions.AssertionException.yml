@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/AssertionException.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AssertionException
     path: ../Garyon/Exceptions/AssertionException.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/AssertionException.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Exceptions/AssertionException.cs

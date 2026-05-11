@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleOrEnumerableKind
     path: ../Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: None
     path: ../Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Single
     path: ../Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerable
     path: ../Garyon/Objects/Enumerators/SingleOrEnumerableKind.cs

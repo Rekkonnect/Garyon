@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/BitVector32Extensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BitVector32Extensions
     path: ../Garyon/Extensions/BitVector32Extensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/BitVector32Extensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Set
     path: ../Garyon/Extensions/BitVector32Extensions.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DateTimeComponent
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Ticks
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Millisecond
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Second
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Minute
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Hour
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Day
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Month
     path: ../Garyon/Extensions/DateTimeExtensions.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DateTimeExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Year
     path: ../Garyon/Extensions/DateTimeExtensions.cs

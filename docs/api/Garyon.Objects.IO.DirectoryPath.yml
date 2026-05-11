@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DirectoryPath
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Path
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DirectoryInfo
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Parent
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: File
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/IO/DirectoryPath.cs
@@ -332,7 +332,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/IO/DirectoryPath.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/IO/DirectoryPath.cs

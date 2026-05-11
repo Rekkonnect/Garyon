@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/UnmanagedHelpers/ValueManipulation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueManipulation
     path: ../Garyon/Functions/UnmanagedHelpers/ValueManipulation.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/UnmanagedHelpers/ValueManipulation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Rescale
     path: ../Garyon/Functions/UnmanagedHelpers/ValueManipulation.cs

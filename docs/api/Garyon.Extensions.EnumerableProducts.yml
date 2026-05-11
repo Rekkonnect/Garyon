@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumerableProducts
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Product
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Product
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Product
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Product
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProductInt64
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProductUInt64
     path: ../Garyon/Extensions/EnumerableProducts.cs
@@ -313,7 +313,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableProducts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProductUInt64
     path: ../Garyon/Extensions/EnumerableProducts.cs

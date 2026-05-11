@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TypeDefinitionInfo
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Kind
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Modifiers
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsClass
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsTrueClass
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsStruct
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsInterface
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsDelegate
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsException
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsAttribute
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -386,7 +386,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsEnum
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -417,7 +417,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsByRef
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -448,7 +448,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsArray
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsPointer
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -510,7 +510,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsVoid
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -541,7 +541,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsTuple
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsNullableStruct
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -603,7 +603,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsNullableTuple
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -634,7 +634,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsReferenceType
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsValueType
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -704,7 +704,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsNullableValueType
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -738,7 +738,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsNullableType
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -772,7 +772,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsPublic
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -803,7 +803,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsInternal
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -834,7 +834,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsProtectedInternal
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -865,7 +865,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsProtected
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -896,7 +896,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsPrivateProtected
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -927,7 +927,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsPrivate
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -958,7 +958,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsFile
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -989,7 +989,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsStatic
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1020,7 +1020,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsAbstract
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1051,7 +1051,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsSealed
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1082,7 +1082,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsRef
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1122,7 +1122,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsReadonly
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1158,7 +1158,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsReadonlyRef
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1194,7 +1194,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CanInherit
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1232,7 +1232,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CanInheritCustomTypes
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1272,7 +1272,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CanInheritInterfaces
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1309,7 +1309,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CanInheritClasses
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1346,7 +1346,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CanInheritCustomClasses
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1383,7 +1383,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CanBeInherited
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1420,7 +1420,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1454,7 +1454,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1492,7 +1492,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1533,7 +1533,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetTypeKind
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1571,7 +1571,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetTypeModifiers
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1612,7 +1612,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EqualsCore
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1645,7 +1645,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToString
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs
@@ -1677,7 +1677,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeDefinitionInfo.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetHashCode
     path: ../Garyon/Reflection/TypeDefinitionInfo.cs

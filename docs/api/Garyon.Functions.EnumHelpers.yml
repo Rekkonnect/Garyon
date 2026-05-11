@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumHelpers
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEntryCount
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEntryCount
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RegisterEntryCountsGlobally
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RegisterEntryCounts
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RegisterEntryCounts
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsDefined
     path: ../Garyon/Functions/EnumHelpers.cs
@@ -304,7 +304,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/EnumHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsEnumOfType
     path: ../Garyon/Functions/EnumHelpers.cs

@@ -61,6 +61,7 @@ set_api_landing_page() {
 
     {
         printf '# API Reference\n\n'
+        printf '<!-- This page is generated from `docs/api/toc.yml` by the docs build scripts. -->\n\n'
         printf 'Browse the generated Garyon API reference by namespace.\n\n'
         printf 'Use the search box or the namespace list below to jump directly into the API surface.\n\n'
         printf '## Namespaces\n\n'
@@ -98,6 +99,9 @@ set_api_toc_root
 
 echo "Generating API landing page..."
 set_api_landing_page
+
+echo "Generating conceptual landing pages..."
+python3 "$script_dir/generate-nav.py"
 
 echo "Building documentation site..."
 docfx build docfx.json

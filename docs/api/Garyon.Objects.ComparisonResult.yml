@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonResult.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ComparisonResult
     path: ../Garyon/Objects/ComparisonResult.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonResult.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Less
     path: ../Garyon/Objects/ComparisonResult.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonResult.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Equal
     path: ../Garyon/Objects/ComparisonResult.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/ComparisonResult.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Greater
     path: ../Garyon/Objects/ComparisonResult.cs

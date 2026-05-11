@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DriveInfoExtensions
     path: ../Garyon/Extensions/DriveInfoExtensions.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DriveInfoExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetDriveFormatType
     path: ../Garyon/Extensions/DriveInfoExtensions.cs

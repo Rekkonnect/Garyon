@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/ActionTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ActionTimer
     path: ../Garyon/Mechanisms/ActionTimer.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/ActionTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Mechanisms/ActionTimer.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/ActionTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LastExecutionTime
     path: ../Garyon/Mechanisms/ActionTimer.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/ActionTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MinOffset
     path: ../Garyon/Mechanisms/ActionTimer.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/ActionTimer.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Request
     path: ../Garyon/Mechanisms/ActionTimer.cs

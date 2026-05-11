@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerFunctions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PointerFunctions
     path: ../Garyon/Functions/PointerFunctions.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerFunctions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Fill
     path: ../Garyon/Functions/PointerFunctions.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerFunctions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/Functions/PointerFunctions.cs

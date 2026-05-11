@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Selectors
     path: ../Garyon/Functions/Selectors.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SelfObjectReturner
     path: ../Garyon/Functions/Selectors.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullReturner
     path: ../Garyon/Functions/Selectors.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DefaultValueReturner
     path: ../Garyon/Functions/Selectors.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueReturner
     path: ../Garyon/Functions/Selectors.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueOrDefaultReturner
     path: ../Garyon/Functions/Selectors.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: KeyReturner
     path: ../Garyon/Functions/Selectors.cs
@@ -331,7 +331,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Selectors.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueReturner
     path: ../Garyon/Functions/Selectors.cs

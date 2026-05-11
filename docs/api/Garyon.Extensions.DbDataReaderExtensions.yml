@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DbDataReaderExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DbDataReaderExtensions
     path: ../Garyon/Extensions/DbDataReaderExtensions.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DbDataReaderExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNullableString
     path: ../Garyon/Extensions/DbDataReaderExtensions.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DbDataReaderExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNullableInt64
     path: ../Garyon/Extensions/DbDataReaderExtensions.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DbDataReaderExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetNullableInt32
     path: ../Garyon/Extensions/DbDataReaderExtensions.cs

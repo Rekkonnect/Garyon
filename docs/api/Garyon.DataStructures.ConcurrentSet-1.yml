@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ConcurrentSet
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsEmpty
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -300,7 +300,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryRemove
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ExceptWith
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -449,7 +449,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IntersectWith
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsProperSubsetOf
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -534,7 +534,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsProperSupersetOf
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -578,7 +578,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsSubsetOf
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -622,7 +622,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsSupersetOf
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -666,7 +666,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Overlaps
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -710,7 +710,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SetEquals
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SymmetricExceptWith
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -795,7 +795,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UnionWith
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -836,7 +836,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Contains
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -875,7 +875,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Remove
     path: ../Garyon/DataStructures/ConcurrentSet.cs
@@ -918,7 +918,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/ConcurrentSet.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/DataStructures/ConcurrentSet.cs

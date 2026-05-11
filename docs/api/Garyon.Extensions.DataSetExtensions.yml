@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DataSetExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DataSetExtensions
     path: ../Garyon/Extensions/DataSetExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DataSetExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ReadField
     path: ../Garyon/Extensions/DataSetExtensions.cs

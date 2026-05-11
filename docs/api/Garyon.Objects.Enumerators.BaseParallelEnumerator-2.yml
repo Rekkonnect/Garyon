@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BaseParallelEnumerator
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerator1
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerator2
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerator1Alive
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerator2Alive
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetCurrentValue
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveNext
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reset
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Dispose
     path: ../Garyon/Objects/Enumerators/BaseParallelEnumerator`2.cs

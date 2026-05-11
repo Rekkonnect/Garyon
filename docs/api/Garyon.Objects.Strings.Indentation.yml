@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Indentation
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Character
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Width
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TwoSpaces
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FourSpaces
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EightSpaces
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SingleTab
     path: ../Garyon/Objects/Strings/Indentation.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/Indentation.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToString
     path: ../Garyon/Objects/Strings/Indentation.cs

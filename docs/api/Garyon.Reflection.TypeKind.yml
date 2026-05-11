@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TypeKind
     path: ../Garyon/Reflection/TypeKind.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: None
     path: ../Garyon/Reflection/TypeKind.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Void
     path: ../Garyon/Reflection/TypeKind.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Class
     path: ../Garyon/Reflection/TypeKind.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Struct
     path: ../Garyon/Reflection/TypeKind.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Interface
     path: ../Garyon/Reflection/TypeKind.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enum
     path: ../Garyon/Reflection/TypeKind.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Delegate
     path: ../Garyon/Reflection/TypeKind.cs
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Pointer
     path: ../Garyon/Reflection/TypeKind.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Array
     path: ../Garyon/Reflection/TypeKind.cs
@@ -336,7 +336,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ByRef
     path: ../Garyon/Reflection/TypeKind.cs
@@ -364,7 +364,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Exception
     path: ../Garyon/Reflection/TypeKind.cs
@@ -392,7 +392,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Attribute
     path: ../Garyon/Reflection/TypeKind.cs
@@ -420,7 +420,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Tuple
     path: ../Garyon/Reflection/TypeKind.cs
@@ -448,7 +448,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullableStruct
     path: ../Garyon/Reflection/TypeKind.cs
@@ -476,7 +476,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/TypeKind.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullableTuple
     path: ../Garyon/Reflection/TypeKind.cs

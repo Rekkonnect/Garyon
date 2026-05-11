@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SpanYielder
     path: ../Garyon/Objects/SpanYielder.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Span
     path: ../Garyon/Objects/SpanYielder.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Factory
     path: ../Garyon/Objects/SpanYielder.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NextSpanIndex
     path: ../Garyon/Objects/SpanYielder.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/SpanYielder.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/SpanYielder.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ResetNextIndex
     path: ../Garyon/Objects/SpanYielder.cs
@@ -309,7 +309,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/SpanYielder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ResetNextIndex
     path: ../Garyon/Objects/SpanYielder.cs

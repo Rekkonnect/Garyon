@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumerableExtremumExtensions
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -164,7 +164,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -272,7 +272,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -434,7 +434,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -488,7 +488,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -542,7 +542,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -596,7 +596,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs
@@ -650,7 +650,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/EnumerableExtremumExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Extremum
     path: ../Garyon/Extensions/EnumerableExtremumExtensions.cs

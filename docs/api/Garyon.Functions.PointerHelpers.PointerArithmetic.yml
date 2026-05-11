@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PointerArithmetic
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -164,7 +164,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -332,7 +332,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -469,7 +469,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -545,7 +545,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -591,7 +591,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -642,7 +642,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -698,7 +698,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -759,7 +759,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -825,7 +825,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -896,7 +896,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -972,7 +972,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1018,7 +1018,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1069,7 +1069,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1125,7 +1125,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1186,7 +1186,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1252,7 +1252,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1323,7 +1323,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1399,7 +1399,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1445,7 +1445,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1496,7 +1496,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1552,7 +1552,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1613,7 +1613,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1679,7 +1679,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1750,7 +1750,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Increment
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1826,7 +1826,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1872,7 +1872,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1923,7 +1923,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -1979,7 +1979,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2040,7 +2040,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2106,7 +2106,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2177,7 +2177,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2253,7 +2253,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2299,7 +2299,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2350,7 +2350,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2406,7 +2406,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2467,7 +2467,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2533,7 +2533,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2604,7 +2604,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2680,7 +2680,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2726,7 +2726,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2777,7 +2777,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2833,7 +2833,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2894,7 +2894,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -2960,7 +2960,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3031,7 +3031,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3107,7 +3107,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3153,7 +3153,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3204,7 +3204,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3260,7 +3260,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3321,7 +3321,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3387,7 +3387,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs
@@ -3458,7 +3458,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/PointerHelpers/PointerArithmetic.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Decrement
     path: ../Garyon/Functions/PointerHelpers/PointerArithmetic.cs

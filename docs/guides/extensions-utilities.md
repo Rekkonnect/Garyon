@@ -2,14 +2,17 @@
 
 These guides cover the extension APIs that are meant to be dropped directly into application code.
 
+<!-- BEGIN GENERATED: child-links -->
 - [Task Handling & .NoContext](task-handling.md)
 - [CancellationTokenFactory](cancellation-token-factory.md)
+- [Typed Paths (FilePath & DirectoryPath)](paths.md)
 - [Process Extensions](process-extensions.md)
 - [Enumerable & Enumerator Extensions](enumerable-extensions.md)
 - [Dictionary & Collection Helpers](collection-helpers.md)
 - [Upcasting](upcasting.md)
 - [DelegateHelpers](delegate-helpers.md)
 - [NullGuards](null-guards.md)
+<!-- END GENERATED: child-links -->
 
 ## Alternatives & Ecosystem
 

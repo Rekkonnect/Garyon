@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/EnumReflectionHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumReflectionHelpers
     path: ../Garyon/Reflection/EnumReflectionHelpers.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/EnumReflectionHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumFieldDescriptionDictionary
     path: ../Garyon/Reflection/EnumReflectionHelpers.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/EnumReflectionHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumFieldDictionary
     path: ../Garyon/Reflection/EnumReflectionHelpers.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/EnumReflectionHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumFieldDictionary
     path: ../Garyon/Reflection/EnumReflectionHelpers.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/EnumReflectionHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumFields
     path: ../Garyon/Reflection/EnumReflectionHelpers.cs

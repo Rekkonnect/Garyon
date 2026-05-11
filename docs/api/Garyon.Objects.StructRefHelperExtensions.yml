@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/StructRef.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: StructRefHelperExtensions
     path: ../Garyon/Objects/StructRef.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/StructRef.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CreateReference
     path: ../Garyon/Objects/StructRef.cs

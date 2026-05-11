@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/AsyncUsableLock.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LockReleaser
     path: ../Garyon/Mechanisms/AsyncUsableLock.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/AsyncUsableLock.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Mechanisms/AsyncUsableLock.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Garyon/Mechanisms/AsyncUsableLock.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AsyncLock
     path: ../Garyon/Mechanisms/AsyncUsableLock.cs

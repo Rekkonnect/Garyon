@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AsyncMemoizationDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AsyncMemoizationDictionary
     path: ../Garyon/Objects/AsyncMemoizationDictionary.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AsyncMemoizationDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/AsyncMemoizationDictionary.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AsyncMemoizationDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Get
     path: ../Garyon/Objects/AsyncMemoizationDictionary.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/AsyncMemoizationDictionary.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/Objects/AsyncMemoizationDictionary.cs

@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CacheableBigInteger
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Value
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Subtract
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Multiply
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Divide
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -393,7 +393,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Subtract
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -428,7 +428,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Multiply
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -460,7 +460,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Divide
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -492,7 +492,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -526,7 +526,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/CacheableBigInteger.cs
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/CacheableBigInteger.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: op_Implicit
     path: ../Garyon/Objects/CacheableBigInteger.cs

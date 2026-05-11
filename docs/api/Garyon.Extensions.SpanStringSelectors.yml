@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SpanStringSelectors
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToString
     path: ../Garyon/Extensions/SpanStringExtensions.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/SpanStringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToStringOrNull
     path: ../Garyon/Extensions/SpanStringExtensions.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LineStringBuilder
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LineCount
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddLine
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddRepeatedLine
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddLines
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AddLines
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToString
     path: ../Garyon/Objects/LineStringBuilder.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/LineStringBuilder.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: this[]
     path: ../Garyon/Objects/LineStringBuilder.cs

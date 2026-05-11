@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DayOfWeekExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DayOfWeekExtensions
     path: ../Garyon/Extensions/DayOfWeekExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DayOfWeekExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ShiftRegardingStartingWeekDay
     path: ../Garyon/Extensions/DayOfWeekExtensions.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DayOfWeekExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DaysSinceWeekStart
     path: ../Garyon/Extensions/DayOfWeekExtensions.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DayOfWeekExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsWeekday
     path: ../Garyon/Extensions/DayOfWeekExtensions.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/DayOfWeekExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsWeekend
     path: ../Garyon/Extensions/DayOfWeekExtensions.cs

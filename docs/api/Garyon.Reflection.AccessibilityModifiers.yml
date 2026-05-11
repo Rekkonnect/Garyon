@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AccessibilityModifiers
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: None
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Public
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Internal
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ProtectedInternal
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Protected
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: PrivateProtected
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -246,7 +246,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Private
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: File
     path: ../Garyon/Reflection/AccessibilityModifiers.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AccessibilityModifiers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AllAccessibilities
     path: ../Garyon/Reflection/AccessibilityModifiers.cs

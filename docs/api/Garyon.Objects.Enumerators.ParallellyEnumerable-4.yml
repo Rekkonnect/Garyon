@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParallellyEnumerable
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerable1
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerable2
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerable3
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Enumerable4
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallellyEnumerable.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Objects/Enumerators/ParallellyEnumerable.cs

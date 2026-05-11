@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallelEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParallelEnumerator
     path: ../Garyon/Objects/Enumerators/ParallelEnumerator.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallelEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Objects/Enumerators/ParallelEnumerator.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/ParallelEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/ParallelEnumerator.cs

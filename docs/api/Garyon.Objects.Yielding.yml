@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Yielding
     path: ../Garyon/Objects/Yielding.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: For
     path: ../Garyon/Objects/Yielding.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Yield
     path: ../Garyon/Objects/Yielding.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldImmutableArray
     path: ../Garyon/Objects/Yielding.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldArray
     path: ../Garyon/Objects/Yielding.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldList
     path: ../Garyon/Objects/Yielding.cs
@@ -307,7 +307,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldSet
     path: ../Garyon/Objects/Yielding.cs
@@ -360,7 +360,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldSortedSet
     path: ../Garyon/Objects/Yielding.cs
@@ -417,7 +417,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldInto
     path: ../Garyon/Objects/Yielding.cs
@@ -466,7 +466,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldInto
     path: ../Garyon/Objects/Yielding.cs
@@ -515,7 +515,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldInto
     path: ../Garyon/Objects/Yielding.cs
@@ -573,7 +573,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldOnto
     path: ../Garyon/Objects/Yielding.cs
@@ -623,7 +623,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldOnto
     path: ../Garyon/Objects/Yielding.cs
@@ -673,7 +673,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: YieldOnto
     path: ../Garyon/Objects/Yielding.cs
@@ -731,7 +731,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Fill
     path: ../Garyon/Objects/Yielding.cs
@@ -777,7 +777,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Fill
     path: ../Garyon/Objects/Yielding.cs
@@ -824,7 +824,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Yielding.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Fill
     path: ../Garyon/Objects/Yielding.cs

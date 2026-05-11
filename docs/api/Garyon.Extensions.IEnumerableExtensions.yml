@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.Pagination.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IEnumerableExtensions
     path: ../Garyon/Extensions/IEnumerableExtensions.Pagination.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.Equality.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EqualsUnordered
     path: ../Garyon/Extensions/IEnumerableExtensions.Equality.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.Equality.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EqualsUnordered
     path: ../Garyon/Extensions/IEnumerableExtensions.Equality.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.MinMaxINumber.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MinMax
     path: ../Garyon/Extensions/IEnumerableExtensions.MinMaxINumber.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ConcatMultiple
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ConcatMultiple
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ConcatMultiple
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
@@ -358,7 +358,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Flatten
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
@@ -405,7 +405,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Flatten
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlattenInstant
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
@@ -507,7 +507,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlattenInstant
     path: ../Garyon/Extensions/IEnumerableExtensions.NestedEnumerables.cs

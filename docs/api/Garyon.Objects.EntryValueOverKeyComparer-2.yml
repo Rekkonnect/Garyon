@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/EntryComparers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EntryValueOverKeyComparer
     path: ../Garyon/Objects/EntryComparers.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/EntryComparers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Default
     path: ../Garyon/Objects/EntryComparers.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/EntryComparers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Compare
     path: ../Garyon/Objects/EntryComparers.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/HashCodeHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: HashCodeHelpers
     path: ../Garyon/Functions/HashCodeHelpers.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/HashCodeHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Combine
     path: ../Garyon/Functions/HashCodeHelpers.cs

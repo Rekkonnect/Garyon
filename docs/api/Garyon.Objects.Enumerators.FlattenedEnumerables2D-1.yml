@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/FlattenedEnumerables2D.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FlattenedEnumerables2D
     path: ../Garyon/Objects/Enumerators/FlattenedEnumerables2D.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/FlattenedEnumerables2D.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/FlattenedEnumerables2D.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/FlattenedEnumerables2D.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetEnumerator
     path: ../Garyon/Objects/Enumerators/FlattenedEnumerables2D.cs

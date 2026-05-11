@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GeneralCollectionExtensions
     path: ../Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clone
     path: ../Garyon/Extensions/GeneralCollectionExtensions.Cloning.cs

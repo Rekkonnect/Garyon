@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastingCollectionExtensions
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastList
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastReadOnlyList
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastCollection
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastReadOnlyCollection
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastDictionary
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -332,7 +332,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastReadOnlyDictionary
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastSet
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: UpcastReadOnlySet
     path: ../Garyon/Extensions/Upcasting/UpcastingCollectionExtensions.cs

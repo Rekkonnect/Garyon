@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/WhitespaceFacts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WhitespaceFacts
     path: ../Garyon/Objects/Strings/WhitespaceFacts.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/WhitespaceFacts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Space
     path: ../Garyon/Objects/Strings/WhitespaceFacts.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/WhitespaceFacts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Tab
     path: ../Garyon/Objects/Strings/WhitespaceFacts.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/WhitespaceFacts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CarriageReturn
     path: ../Garyon/Objects/Strings/WhitespaceFacts.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/WhitespaceFacts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: LineFeed
     path: ../Garyon/Objects/Strings/WhitespaceFacts.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Strings/WhitespaceFacts.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CrLf
     path: ../Garyon/Objects/Strings/WhitespaceFacts.cs

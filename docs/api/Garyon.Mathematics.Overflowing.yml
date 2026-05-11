@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Overflowing
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfAdditionOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfAdditionOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfAdditionOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfAdditionOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfMultiplicationOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfMultiplicationOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfMultiplicationOverflows
     path: ../Garyon/Mathematics/Overflowing.cs
@@ -389,7 +389,7 @@ items:
   source:
     remote:
       path: Garyon/Mathematics/Overflowing.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CheckIfMultiplicationOverflows
     path: ../Garyon/Mathematics/Overflowing.cs

@@ -38,7 +38,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoreLinqExtensions
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WherePredicate
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WhereOrSource
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SelectOrDefault
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: OnlyOrDefault
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AnyDeep
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnumeratePerformAction
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -381,7 +381,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountAtLeast
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountAtMost
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountAtLeast
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -535,7 +535,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountAtMost
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -591,7 +591,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountExactly
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -640,7 +640,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountExactly
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -696,7 +696,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountBetween
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -750,7 +750,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: CountBetween
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -811,7 +811,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotNullCount
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -853,7 +853,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullCount
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -895,7 +895,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WhereNotNull
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -934,7 +934,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WhereNot
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -983,7 +983,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Apply
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -1033,7 +1033,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Apply
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -1078,7 +1078,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WhereNotNullKeys
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -1118,7 +1118,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Zip
     path: ../Garyon/Extensions/MoreLinqExtensions.cs
@@ -1160,7 +1160,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/MoreLinqExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ToListDictionary
     path: ../Garyon/Extensions/MoreLinqExtensions.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/BadServiceResponseException.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: BadServiceResponseException
     path: ../Garyon/Exceptions/BadServiceResponseException.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: Garyon/Exceptions/BadServiceResponseException.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Exceptions/BadServiceResponseException.cs

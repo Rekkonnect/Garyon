@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Predicates
     path: ../Garyon/Functions/Predicates.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: "True"
     path: ../Garyon/Functions/Predicates.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: "False"
     path: ../Garyon/Functions/Predicates.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotNull
     path: ../Garyon/Functions/Predicates.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: "Null"
     path: ../Garyon/Functions/Predicates.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: HasValue
     path: ../Garyon/Functions/Predicates.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DoesNotHaveValue
     path: ../Garyon/Functions/Predicates.cs
@@ -331,7 +331,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotEmpty
     path: ../Garyon/Functions/Predicates.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/Predicates.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NotEmptyOrWhitespace
     path: ../Garyon/Functions/Predicates.cs

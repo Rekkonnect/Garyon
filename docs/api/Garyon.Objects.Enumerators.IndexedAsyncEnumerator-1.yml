@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexedAsyncEnumerator
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Index
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: DisposeAsync
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
@@ -246,7 +246,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveNextAsync
     path: ../Garyon/Objects/Enumerators/IndexedAsyncEnumerator.cs

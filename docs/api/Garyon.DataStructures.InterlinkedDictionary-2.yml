@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: InterlinkedDictionary
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Count
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Values1
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Values2
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -188,7 +188,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValuePairs
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -305,7 +305,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Contains
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Contains
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Add
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -426,7 +426,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Remove
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -466,7 +466,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Remove
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Clear
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryGetValue
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -591,7 +591,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryGetValue
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -643,7 +643,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueOrDefault
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -686,7 +686,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ValueOrDefault
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -729,7 +729,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: this[]
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs
@@ -789,7 +789,7 @@ items:
   source:
     remote:
       path: Garyon/DataStructures/InterlinkedDictionary`2.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: this[]
     path: ../Garyon/DataStructures/InterlinkedDictionary`2.cs

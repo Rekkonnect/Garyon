@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/WorkspaceHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: WorkspaceHelpers
     path: ../Garyon/Functions/WorkspaceHelpers.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/WorkspaceHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetThisSolutionRoot
     path: ../Garyon/Functions/WorkspaceHelpers.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/WorkspaceHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetSolutionRoot
     path: ../Garyon/Functions/WorkspaceHelpers.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: Garyon/Functions/WorkspaceHelpers.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetGitRepositoryRoot
     path: ../Garyon/Functions/WorkspaceHelpers.cs

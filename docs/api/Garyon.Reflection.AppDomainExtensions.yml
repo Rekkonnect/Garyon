@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: AppDomainExtensions
     path: ../Garyon/Reflection/AppDomainExtensions.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllTypes
     path: ../Garyon/Reflection/AppDomainExtensions.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Garyon/Reflection/AppDomainExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: GetAllTypes
     path: ../Garyon/Reflection/AppDomainExtensions.cs

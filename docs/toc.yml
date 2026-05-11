@@ -38,6 +38,12 @@
       items:
         - name: AppDomainCache
           href: guides/appdomain-cache.md
+        - name: Timers and Delays
+          href: guides/timers-and-delays.md
+        - name: SimpleProfiler
+          href: guides/simple-profiler.md
+        - name: AsyncUsableLock
+          href: guides/async-usable-lock.md
         - name: Math Utilities
           href: guides/math.md
         - name: Comparison Patterns

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexedEnumerator
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Index
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Current
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: .ctor
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Dispose
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -276,7 +276,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: MoveNext
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: Garyon/Objects/Enumerators/IndexedEnumerator.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Reset
     path: ../Garyon/Objects/Enumerators/IndexedEnumerator.cs

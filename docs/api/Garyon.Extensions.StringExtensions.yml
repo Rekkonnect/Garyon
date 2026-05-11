@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: StringExtensions
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FindOccurrence
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: FindOccurrenceFromEnd
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexOfAfter
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexOfAfter
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IndexOfAfter
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -372,7 +372,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveLast
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveLast
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -453,7 +453,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: RemoveCharacterRepetitions
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -491,7 +491,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Substring
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -538,7 +538,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Replace
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -585,7 +585,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ReplaceWholeWord
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -632,7 +632,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NormalizeLineEndings
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -671,7 +671,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Repeat
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -722,7 +722,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: IsValidHexString
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -766,7 +766,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseByte
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -808,7 +808,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseSByte
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -850,7 +850,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseInt16
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -892,7 +892,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseUInt16
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -934,7 +934,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseInt32
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -976,7 +976,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseUInt32
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1018,7 +1018,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseInt64
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1060,7 +1060,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseUInt64
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1102,7 +1102,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseSingle
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1144,7 +1144,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseDouble
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1186,7 +1186,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseDecimal
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1228,7 +1228,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseByte
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1279,7 +1279,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseSByte
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1330,7 +1330,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt16
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1381,7 +1381,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt16
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1432,7 +1432,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt32
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1483,7 +1483,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt32
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1534,7 +1534,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseInt64
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1585,7 +1585,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseUInt64
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1636,7 +1636,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseSingle
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1687,7 +1687,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseDouble
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1738,7 +1738,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: TryParseDecimal
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1789,7 +1789,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseNullableInt32
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1824,7 +1824,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseNullableUInt32
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1859,7 +1859,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseNullableInt64
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1894,7 +1894,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseNullableUInt64
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1929,7 +1929,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseNullableSingle
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1964,7 +1964,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: ParseNullableDouble
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -1999,7 +1999,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SubstringUntilFirst
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2036,7 +2036,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SubstringUntilFirst
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2073,7 +2073,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SubstringUntilLast
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2110,7 +2110,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: SubstringUntilLast
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2147,7 +2147,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnsureStartsWith
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2197,7 +2197,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnsureEndsWith
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2247,7 +2247,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnsureStartsEndsWith
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2300,7 +2300,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnsureStartsEndsWith
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2347,7 +2347,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: EnsureAffix
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2400,7 +2400,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullIfEmpty
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2435,7 +2435,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NullIfEmptyOrWhitespace
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2470,7 +2470,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Combine
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2514,7 +2514,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Combine
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2558,7 +2558,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: Combine
     path: ../Garyon/Extensions/StringExtensions.cs
@@ -2596,7 +2596,7 @@ items:
   source:
     remote:
       path: Garyon/Extensions/StringExtensions.cs
-      branch: dev/import-utils/a
+      branch: master
       repo: https://github.com/Rekkonnect/Garyon.git
     id: NonEmpty
     path: ../Garyon/Extensions/StringExtensions.cs
